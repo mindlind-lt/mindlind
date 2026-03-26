@@ -17,6 +17,16 @@ import { ServicesScrollEffect } from "@/components/services-scroll-effect/servic
 export const metadata: Metadata = {
   title: "Mindlind – Webdesign & Entwicklung für digitale Produkte",
   description: "Mindlind begleitet Ihr Projekt von der Konzeption über Design bis zur Entwicklung. Webdesign, UI/UX, Full-Stack-Entwicklung und digitales Marketing aus einer Hand.",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
+  },
 };
 
 export default async function Home() {

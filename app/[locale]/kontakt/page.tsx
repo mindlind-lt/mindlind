@@ -6,8 +6,18 @@ import SocialIcons from "@/components/social-icons/social-icons";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Kontakt – Mindlind",
-  description: "Nehmen Sie Kontakt mit Mindlind auf. Wir freuen uns auf Ihr Projekt und beraten Sie gerne zu Webdesign, Entwicklung und digitalem Marketing.",
+    title: "Kontakt – Mindlind",
+    description: "Nehmen Sie Kontakt mit Mindlind auf. Wir freuen uns auf Ihr Projekt und beraten Sie gerne zu Webdesign, Entwicklung und digitalem Marketing.",
+    robots: {
+        index: false,
+        follow: false,
+        nocache: true,
+        googleBot: {
+            index: false,
+            follow: false,
+            noimageindex: true,
+        },
+    },
 };
 
 export default function Home() {

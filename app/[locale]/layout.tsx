@@ -25,6 +25,19 @@ const generalSans = localFont({
 });
 
 export const metadata: Metadata = {
+
+  // Disable indexing
+  robots: {
+      index: false,
+      follow: false,
+      nocache: true,
+      googleBot: {
+        index: false,
+        follow: false,
+        noimageindex: true,
+      },
+  },
+
   title: "Mindlind Werbeagentur",
   description: "Unser 360° Ansatz für Projektmanagement umfasst fünf Kernphasen, um herausragende Ergebnisse zu erzielen",
 };

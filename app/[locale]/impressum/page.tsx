@@ -3,8 +3,18 @@ import { Footer } from "@/components/footer/footer";
 import { Header } from "@/components/header/header";
 
 export const metadata: Metadata = {
-  title: "Impressum – Mindlind",
-  description: "Impressum der Mindlind MB gemäß § 5 TMG.",
+    title: "Impressum – Mindlind",
+    description: "Impressum der Mindlind MB gemäß § 5 TMG.",
+    robots: {
+        index: false,
+        follow: false,
+        nocache: true,
+        googleBot: {
+            index: false,
+            follow: false,
+            noimageindex: true,
+        },
+    },
 };
 
 export default function PageImpressum(){
