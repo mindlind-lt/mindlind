@@ -1,0 +1,21 @@
+{
+  "Hero": {
+    "title": "Das Bewusstsein ist nur die Stimme, die das Unterbewusstsein hörbar macht",
+    "cta": "Ich will mehr Kunden gewinnen",
+    "subtext": "Design Support and Development for Blockchain, DeFi, Web3, Crypto startups. From Low-code websites to Full-stack Dapps"
+  },
+  "Nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
+  "Footer": {
+    "about": "Über uns",
+    "services": "Leistungen",
+    "contact": "Kontakt",
+    "privacy": "Datenschutz",
+    "imprint": "Impressum"
+  }
+}

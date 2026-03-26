@@ -1,0 +1,21 @@
+{
+  "Hero": {
+    "title": "Apziņa ir tikai balss, kas padāra neapziņāto dzirdāmu",
+    "cta": "Es vēlos piesaistīt vairāk klientu",
+    "subtext": "Dizaina atbalsts un izstrāde Blockchain, DeFi, Web3 un Crypto startupiem. No Low-code vietnēm līdz Full-stack Dapps"
+  },
+  "Nav": {
+    "home": "Sākumlapa",
+    "about": "Par mums",
+    "services": "Pakalpojumi",
+    "portfolio": "Portfolio",
+    "contact": "Kontakti"
+  },
+  "Footer": {
+    "about": "Par mums",
+    "services": "Pakalpojumi",
+    "contact": "Kontakti",
+    "privacy": "Privātuma politika",
+    "imprint": "Impressum"
+  }
+}

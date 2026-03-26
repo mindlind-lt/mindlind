@@ -1,0 +1,13 @@
+.service-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+@media (max-width: 575px){
+    
+    .service-blocks {
+        gap: 48px;
+    }
+
+}
