@@ -485,19 +485,19 @@ a, button {
 
 .services-section::before {
   content: "";
-  background: linear-gradient(90deg, #BEFBDB 0%, #BED7FF 48.56%, #A7B2FF 100%);
+  background: linear-gradient(90deg, #9fffcd 0%, #a0c4ff 48.56%, #919eff 100%);
   border-radius: 50%;
-  filter: blur(100px);
+  filter: blur(80px);
   opacity: .25;
 
   display: block;
 
   position: absolute;
   z-index: 0;
-  top: 60px;
+  top: 300px;
   left: 10vw;
-  width: 40vh;
-  height: 200vh;
+  width: 60vh;
+  height: 1600vh;
 
   transform-origin: center;
   transform: translate3d(0, var(--services-translate-y, 0px), 0) rotate(var(--services-rotate, 0deg)) scale(var(--services-scale, 1));
