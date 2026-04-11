@@ -100,7 +100,7 @@ export function LogosCarousel({
         }
       `}</style>
       <div
-        className="max-w-[980px] grid place-items-start w-full"
+        className="grid place-items-start w-full"
       >
         {groups.map((group, groupIndex) => {
           const isCurrent = groupIndex === index;
@@ -111,7 +111,7 @@ export function LogosCarousel({
             <div
               key={groupIndex}
               className={cn(
-                "flex w-full justify-center gap-30",
+                "flex w-full justify-between gap-30",
                 className
               )}
               style={{ 

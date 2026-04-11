@@ -15,18 +15,20 @@ import { PortfolioSlider } from "@/components/portfolio-slider/portfolio-slider"
 import { ServicesScrollEffect } from "@/components/services-scroll-effect/services-scroll-effect";
 import LogosCarousel from "@/components/logos-carousel";
 
-const logoMua = "/images/logo-mua.svg";
+const logoMua = "/images/logo-mua.png";
 const logoFunky = "/images/logo-funky.png";
 const logoAutosl = "/images/logo-autosl.png";
 const logoFactorysl = "/images/logo-factorysl.webp";
+const logoPandaDrive = "/images/logo-panda-drive.svg";
+const logoPrince = "/images/logo-prince.png";
 
 const LogoImage = ({ src, alt }: { src: string; alt: string }) => (
   <Image
     src={src}
     alt={alt}
-    width={240}
-    height={180}
-    className={`h-[120px] w-[180px] object-contain opacity-70 pointer-events-none select-none`}
+    width={200}
+    height={80}
+    className={`h-[80px] w-[200px] object-contain opacity-70 pointer-events-none select-none`}
     unoptimized
   />
 );
@@ -132,12 +134,16 @@ export default async function Home() {
       </div>
 
 
-      <div className="flex flex-col items-center py-12">
-        <LogosCarousel count={3} stagger={0.2}>
+      <div className="container pt-[150px] pb-20">
+        <LogosCarousel count={4} stagger={0.2}>
           <LogoImage src={logoMua} alt="" />
           <LogoImage src={logoFunky} alt="" />
           <LogoImage src={logoAutosl} alt="" />
           <LogoImage src={logoFactorysl} alt="" />
+          <LogoImage src={logoPandaDrive} alt="" />
+          <LogoImage src={logoPrince} alt="" />
+          <LogoImage src={logoMua} alt="" />
+          <LogoImage src={logoFunky} alt="" />
         </LogosCarousel>
       </div>
 
