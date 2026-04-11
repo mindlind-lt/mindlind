@@ -26,9 +26,9 @@ const LogoImage = ({ src, alt }: { src: string; alt: string }) => (
   <Image
     src={src}
     alt={alt}
-    width={200}
-    height={80}
-    className={`h-[80px] w-[200px] object-contain opacity-70 pointer-events-none select-none`}
+    width={180}
+    height={100}
+    className={`h-[100px] w-[180px] object-contain opacity-70 pointer-events-none select-none`}
     unoptimized
   />
 );
@@ -134,7 +134,7 @@ export default async function Home() {
       </div>
 
 
-      <div className="container pt-[150px] pb-20">
+      <div className="container pt-20 md:pt-38 pb-15 md:pb-20">
         <LogosCarousel count={4} stagger={0.2}>
           <LogoImage src={logoMua} alt="" />
           <LogoImage src={logoFunky} alt="" />

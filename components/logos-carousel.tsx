@@ -111,7 +111,7 @@ export function LogosCarousel({
             <div
               key={groupIndex}
               className={cn(
-                "flex w-full justify-between gap-30",
+                "grid grid-cols-2 gap-6 md:flex md:w-full md:justify-between md:gap-0",
                 className
               )}
               style={{ 

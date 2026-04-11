@@ -483,7 +483,7 @@ a, button {
   overflow: hidden;
 }
 
-.services-section::before {
+/* .services-section::before {
   content: "";
   background: linear-gradient(90deg, #9fffcd 0%, #a0c4ff 48.56%, #919eff 100%);
   border-radius: 50%;
@@ -501,7 +501,7 @@ a, button {
 
   transform-origin: center;
   transform: translate3d(0, var(--services-translate-y, 0px), 0) rotate(var(--services-rotate, 0deg)) scale(var(--services-scale, 1));
-}
+} */
 
 .services-section * {
   position: relative;
@@ -524,10 +524,10 @@ a, button {
     padding-bottom: 60px;
   }
 
-  .services-section::before {
+  /* .services-section::before {
     width: 70vh;
     height: 300vh;
-  }
+  } */
 
   .services-section-title {
     font-size: 44px;
