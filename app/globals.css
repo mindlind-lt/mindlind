@@ -389,6 +389,7 @@ a, button {
 
   display: flex;
   align-items: flex-end;
+  transform-origin: center;
 }
 
 .intro-figure img {

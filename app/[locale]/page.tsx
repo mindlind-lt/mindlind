@@ -14,6 +14,7 @@ import Image from "next/image";
 import { PortfolioSlider } from "@/components/portfolio-slider/portfolio-slider";
 import { ServicesScrollEffect } from "@/components/services-scroll-effect/services-scroll-effect";
 import { HeroScrollEffect } from "@/components/hero-scroll-effect/hero-scroll-effect";
+import { IntroScrollEffect } from "@/components/intro-scroll-effect/intro-scroll-effect";
 import LogosCarousel from "@/components/logos-carousel";
 
 const logoMua = "/images/logo-mua.png";
@@ -56,6 +57,7 @@ export default async function Home() {
 
       <ServicesScrollEffect />
       <HeroScrollEffect />
+      <IntroScrollEffect />
 
 
       <Header colorTheme="white" position="absolute" />
