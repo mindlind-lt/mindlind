@@ -47,7 +47,7 @@ export function Preloader() {
       // Progress line grows from left
       .to(line, {
         scaleX: 1,
-        duration: 0.7,
+        duration: 1,
         ease: 'power2.inOut',
       }, '-=0.3')
 
