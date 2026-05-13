@@ -9,8 +9,12 @@ export function Preloader() {
   const overlayRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
+    if (hasAnimated.current) return;
+    hasAnimated.current = true;
+
     const overlay = overlayRef.current;
     const logo = logoRef.current;
     const line = lineRef.current;
@@ -30,8 +34,6 @@ export function Preloader() {
     tl
       // Set initial states
       .set(overlay, { yPercent: 0 })
-      .set(logo, { opacity: 0, y: 12 })
-      .set(line, { scaleX: 0, transformOrigin: 'left center' })
 
       // Logo glides up and fades in
       .to(logo, {
