@@ -4,7 +4,6 @@ import { Header } from "@/components/header/header";
 import { Footer } from "@/components/footer/footer";
 import { Button } from "@/components/button/button";
 import { ChevronRight } from "lucide-react";
-import { TypingText } from "@/components/typing-text/typing-text";
 import { ServiceBlocks } from "@/components/service-blocks/service-blocks";
 import { ServiceBlock } from "@/components/service-block/service-block";
 import { ServiceBlockItem } from "@/components/service-block-item/service-block-item";
@@ -16,6 +15,7 @@ import { ServicesScrollEffect } from "@/components/services-scroll-effect/servic
 import { HeroScrollEffect } from "@/components/hero-scroll-effect/hero-scroll-effect";
 import { IntroScrollEffect } from "@/components/intro-scroll-effect/intro-scroll-effect";
 import LogosCarousel from "@/components/logos-carousel";
+import SplitTextReveal from "@/components/split-text-reveal/split-text-reveal";
 
 const logoMua = "/images/logo-mua.png";
 const logoFunky = "/images/logo-funky.png";
@@ -116,10 +116,16 @@ export default async function Home() {
             <div className="intro-row">
 
               <div className="intro-content">
-                <TypingText
-                  className="intro-title"
-                  text="Von der Konzeption bis zur Entwicklung ganzheitlicher digitaler Lösungen zur Steigerung der Qualität Ihres Produkts"
-                />
+                <div className="intro-title">
+                  <SplitTextReveal
+                    lines={[
+                      "Von der Konzeption bis zur",
+                      "Entwicklung ganzheitlicher digitaler",
+                      "Lösungen zur Steigerung der Qualität",
+                      "Ihres Produkts",
+                    ]}
+                  />
+                </div>
                 <div className="intro-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa a error, quia minima nostrum esse dolorem quaerat eaque laudantium? Voluptate libero fugiat sint delectus officiis, perferendis dignissimos non ipsum maxime.</div>
               </div>
 
@@ -212,6 +218,17 @@ export default async function Home() {
           <PortfolioSlider />
         </div>
       </div>
+
+
+      <section style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#ffffff", padding: "2.5rem 2.5rem 2.5rem 4.1875rem", overflowX: "hidden" }}>
+        <SplitTextReveal
+          lines={["The needs of the many", "outweigh the needs of the", "few, or the one."]}
+          splitBy="characters"
+          staggerFrom="first"
+          staggerDelay={0.025}
+          reverse={false}
+        />
+      </section>
 
 
       <Footer />
