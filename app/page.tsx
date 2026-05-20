@@ -1,5 +1,4 @@
 // @ts-nocheck
-import Link from 'next/link';
 
 // Runtime helper: converts a CSS property string to a React style object.
 // Used where Framer generates inline style="…" attributes.
@@ -30,6 +29,7 @@ export default function HomePage() {
 
       <div
         id="main"
+        suppressHydrationWarning
         data-framer-hydrate-v2='{"routeId":"augiA20Il","localeId":"default","breakpoints":[{"hash":"72rtr7","mediaQuery":"(min-width: 1200px)"},{"hash":"7wmc59","mediaQuery":"(min-width: 810px) and (max-width: 1199.98px)"},{"hash":"iigsnu","mediaQuery":"(max-width: 809.98px)"},{"hash":"fvhyif","mediaQuery":"(min-width: 1200px)"},{"hash":"1viskko","mediaQuery":"(min-width: 810px) and (max-width: 1199.98px)"},{"hash":"14ep8n1","mediaQuery":"(max-width: 809.98px)"}]}'
         data-framer-ssr-released-at="2026-05-08T10:11:54.854Z"
         data-framer-page-optimized-at="2026-05-08T15:17:29.309Z"
@@ -51,7 +51,7 @@ export default function HomePage() {
             style={css('min-height:100vh;width:auto')}
           >
             {/* $ */}
-            <Link
+            <a
               className="framer-1n378p5 framer-1yelcx4"
               data-framer-name="Logo"
               href="/"
@@ -71,7 +71,7 @@ export default function HomePage() {
                   />
                 </div>
               </div>
-            </Link>
+            </a>
             {/* /$ */}
             {/* $ */}
             <div
@@ -85,7 +85,7 @@ export default function HomePage() {
               >
                 <div className="framer-23a9w0-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -129,12 +129,12 @@ export default function HomePage() {
                         Home
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-msyglx-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -177,12 +177,12 @@ export default function HomePage() {
                         Agency
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-10kh1uz-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -225,12 +225,12 @@ export default function HomePage() {
                         Projects
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-14258of-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -273,12 +273,12 @@ export default function HomePage() {
                         Blog
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-7qwocn-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -321,7 +321,7 @@ export default function HomePage() {
                         Contact
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
               </nav>
@@ -493,7 +493,7 @@ export default function HomePage() {
                                   <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                   <div className="framer-12iljpq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                       data-framer-name="Small White - Black Hover"
                                       data-highlight="true"
@@ -534,7 +534,7 @@ export default function HomePage() {
                                           Book Call
                                         </p>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                 </div>
@@ -899,7 +899,7 @@ export default function HomePage() {
                                   <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                   <div className="framer-12iljpq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                       data-framer-name="Small White - Black Hover"
                                       data-highlight="true"
@@ -940,7 +940,7 @@ export default function HomePage() {
                                           Book Call
                                         </p>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                 </div>
@@ -1305,7 +1305,7 @@ export default function HomePage() {
                                   <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                   <div className="framer-12iljpq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                       data-framer-name="Small White - Black Hover"
                                       data-highlight="true"
@@ -1346,7 +1346,7 @@ export default function HomePage() {
                                           Book Call
                                         </p>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                 </div>
@@ -4804,7 +4804,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -4972,7 +4972,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -4990,7 +4990,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -5158,7 +5158,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -5179,7 +5179,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -5321,7 +5321,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -5339,7 +5339,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -5481,7 +5481,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -5818,7 +5818,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -5986,7 +5986,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -6004,7 +6004,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -6172,7 +6172,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -6192,7 +6192,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -6334,7 +6334,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -6352,7 +6352,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -6494,7 +6494,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -6831,7 +6831,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -6999,7 +6999,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -7017,7 +7017,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -7185,7 +7185,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -7205,7 +7205,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -7347,7 +7347,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -7365,7 +7365,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -7507,7 +7507,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -8187,7 +8187,7 @@ export default function HomePage() {
                           {/* $ */}
                           <div className="framer-1e14a7l-container">
                             {/* $ */}
-                            <Link
+                            <a
                               className="framer-OuU1b framer-pZzzc framer-CwqPw framer-1lxb0kk framer-v-1lxb0kk framer-3zbxli"
                               data-framer-name="Desktop - 1200"
                               href="/contact"
@@ -8287,7 +8287,7 @@ export default function HomePage() {
                                   </div>
                                 </div>
                               </div>
-                            </Link>
+                            </a>
                             {/* /$ */}
                           </div>
                           {/* /$ */}
@@ -8955,7 +8955,7 @@ export default function HomePage() {
                           {/* $ */}
                           <div className="framer-1e14a7l-container">
                             {/* $ */}
-                            <Link
+                            <a
                               className="framer-OuU1b framer-pZzzc framer-CwqPw framer-1lxb0kk framer-v-eklj6q framer-3zbxli"
                               data-framer-name="Tablet"
                               href="/contact"
@@ -9051,7 +9051,7 @@ export default function HomePage() {
                                   </div>
                                 </div>
                               </div>
-                            </Link>
+                            </a>
                             {/* /$ */}
                           </div>
                           {/* /$ */}
@@ -9754,7 +9754,7 @@ export default function HomePage() {
                           {/* $ */}
                           <div className="framer-1e14a7l-container">
                             {/* $ */}
-                            <Link
+                            <a
                               className="framer-OuU1b framer-pZzzc framer-CwqPw framer-1lxb0kk framer-v-urdaix framer-3zbxli"
                               data-framer-name="Phone"
                               href="/contact"
@@ -9846,7 +9846,7 @@ export default function HomePage() {
                                   </div>
                                 </div>
                               </div>
-                            </Link>
+                            </a>
                             {/* /$ */}
                           </div>
                           {/* /$ */}
@@ -12455,13 +12455,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/projects/lementa"
                                       >
                                         Lementa
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </h6>
                                   </div>
@@ -12684,7 +12684,7 @@ export default function HomePage() {
                                 {/* $ */}
                                 <div className="framer-1to0l4r-container">
                                   {/* $ */}
-                                  <Link
+                                  <a
                                     className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1k1o3ww framer-1yzisao"
                                     data-framer-name="Big Black - White Hover"
                                     data-highlight="true"
@@ -12725,7 +12725,7 @@ export default function HomePage() {
                                         View Project
                                       </p>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                 </div>
                                 {/* /$ */}
@@ -12870,13 +12870,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/projects/lementa"
                                       >
                                         Lementa
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </h6>
                                   </div>
@@ -13099,7 +13099,7 @@ export default function HomePage() {
                                 {/* $ */}
                                 <div className="framer-1to0l4r-container">
                                   {/* $ */}
-                                  <Link
+                                  <a
                                     className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1k1o3ww framer-1yzisao"
                                     data-framer-name="Big Black - White Hover"
                                     data-highlight="true"
@@ -13140,7 +13140,7 @@ export default function HomePage() {
                                         View Project
                                       </p>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                 </div>
                                 {/* /$ */}
@@ -13285,13 +13285,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/projects/lementa"
                                       >
                                         Lementa
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </h6>
                                   </div>
@@ -13514,7 +13514,7 @@ export default function HomePage() {
                                 {/* $ */}
                                 <div className="framer-1to0l4r-container">
                                   {/* $ */}
-                                  <Link
+                                  <a
                                     className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1k1o3ww framer-1yzisao"
                                     data-framer-name="Big Black - White Hover"
                                     data-highlight="true"
@@ -13555,7 +13555,7 @@ export default function HomePage() {
                                         View Project
                                       </p>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                 </div>
                                 {/* /$ */}
@@ -13673,7 +13673,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -13701,7 +13701,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -13726,13 +13726,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/fresh-visual-trends-in-2026"
                                           >
                                             Fresh Visual Trends in 2026
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -13761,7 +13761,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/fresh-visual-trends-in-2026"
@@ -13799,7 +13799,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -13842,13 +13842,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/web-design-in-the-future"
                                           >
                                             Web Design in the Future
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -13874,7 +13874,7 @@ export default function HomePage() {
                                       </div>
                                     </div>
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-1b1rghs framer-1ul97yi"
                                       data-framer-name="Image"
@@ -13902,13 +13902,13 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* $ */}
                                   <div className="framer-1lay61e-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/web-design-in-the-future"
@@ -13946,7 +13946,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -13967,7 +13967,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -13995,7 +13995,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -14020,13 +14020,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/new-demensions-in-marketing"
                                           >
                                             New Demensions in Marketing
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -14055,7 +14055,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/new-demensions-in-marketing"
@@ -14093,7 +14093,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -14209,7 +14209,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -14237,7 +14237,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -14262,13 +14262,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/fresh-visual-trends-in-2026"
                                           >
                                             Fresh Visual Trends in 2026
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -14297,7 +14297,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/fresh-visual-trends-in-2026"
@@ -14335,7 +14335,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -14378,13 +14378,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/web-design-in-the-future"
                                           >
                                             Web Design in the Future
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -14410,7 +14410,7 @@ export default function HomePage() {
                                       </div>
                                     </div>
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-1b1rghs framer-1ul97yi"
                                       data-framer-name="Image"
@@ -14438,13 +14438,13 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* $ */}
                                   <div className="framer-1lay61e-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/web-design-in-the-future"
@@ -14482,7 +14482,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -14503,7 +14503,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -14531,7 +14531,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -14556,13 +14556,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/new-demensions-in-marketing"
                                           >
                                             New Demensions in Marketing
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -14591,7 +14591,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/new-demensions-in-marketing"
@@ -14629,7 +14629,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -14745,7 +14745,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -14773,7 +14773,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -14795,13 +14795,13 @@ export default function HomePage() {
                                           data-styles-preset="BaUGQBb6A"
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/fresh-visual-trends-in-2026"
                                           >
                                             Fresh Visual Trends in 2026
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h6>
                                       </div>
@@ -14830,7 +14830,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-q33iy6 framer-1n4dfmi"
                                       data-framer-name="Horizontal"
                                       href="/blog/fresh-visual-trends-in-2026"
@@ -14868,7 +14868,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -14908,13 +14908,13 @@ export default function HomePage() {
                                           data-styles-preset="BaUGQBb6A"
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/web-design-in-the-future"
                                           >
                                             Web Design in the Future
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h6>
                                       </div>
@@ -14940,7 +14940,7 @@ export default function HomePage() {
                                       </div>
                                     </div>
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-1b1rghs framer-1ul97yi"
                                       data-framer-name="Image"
@@ -14968,13 +14968,13 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* $ */}
                                   <div className="framer-1lay61e-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-q33iy6 framer-1n4dfmi"
                                       data-framer-name="Horizontal"
                                       href="/blog/web-design-in-the-future"
@@ -15012,7 +15012,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -15033,7 +15033,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -15061,7 +15061,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -15083,13 +15083,13 @@ export default function HomePage() {
                                           data-styles-preset="BaUGQBb6A"
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/new-demensions-in-marketing"
                                           >
                                             New Demensions in Marketing
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h6>
                                       </div>
@@ -15118,7 +15118,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-q33iy6 framer-1n4dfmi"
                                       data-framer-name="Horizontal"
                                       href="/blog/new-demensions-in-marketing"
@@ -15156,7 +15156,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -16222,13 +16222,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Terms
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -16264,13 +16264,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -17356,13 +17356,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Terms
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -17398,13 +17398,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -18490,13 +18490,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Terms
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -18532,13 +18532,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -18909,13 +18909,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-1s6undm"
                                         data-styles-preset="V0P3PRZvd"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -18988,7 +18988,7 @@ export default function HomePage() {
                                     <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                     <div className="framer-12iljpq-container">
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                         data-framer-name="Small White - Black Hover"
                                         data-highlight="true"
@@ -19029,7 +19029,7 @@ export default function HomePage() {
                                             Book Call
                                           </p>
                                         </div>
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </div>
                                   </div>
@@ -19098,7 +19098,7 @@ export default function HomePage() {
                             <div className="framer-1p3s8yl" data-framer-name="Links">
                               <div className="framer-p2icvw-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-jjtc78 framer-5ewpdz"
                                   data-framer-name="Normal"
                                   data-highlight="true"
@@ -19139,12 +19139,12 @@ export default function HomePage() {
                                       Home
                                     </h5>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-1wxa1es-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-jjtc78 framer-5ewpdz"
                                   data-framer-name="Normal"
                                   data-highlight="true"
@@ -19184,12 +19184,12 @@ export default function HomePage() {
                                       Agency
                                     </h5>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-1pwj694-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-jjtc78 framer-5ewpdz"
                                   data-framer-name="Normal"
                                   data-highlight="true"
@@ -19229,12 +19229,12 @@ export default function HomePage() {
                                       Projects
                                     </h5>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-15pmzia-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-jjtc78 framer-5ewpdz"
                                   data-framer-name="Normal"
                                   data-highlight="true"
@@ -19274,12 +19274,12 @@ export default function HomePage() {
                                       Blog
                                     </h5>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-10j2bvt-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-jjtc78 framer-5ewpdz"
                                   data-framer-name="Normal"
                                   data-highlight="true"
@@ -19319,7 +19319,7 @@ export default function HomePage() {
                                       Contact
                                     </h5>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                             </div>
@@ -19512,13 +19512,13 @@ export default function HomePage() {
                                 )}
                               >
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-text framer-styles-preset-1s6undm"
                                   data-styles-preset="V0P3PRZvd"
                                   href="/agency"
                                 >
                                   Terms
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </p>
                             </div>
@@ -19538,13 +19538,13 @@ export default function HomePage() {
                                 )}
                               >
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-text framer-styles-preset-1s6undm"
                                   data-styles-preset="V0P3PRZvd"
                                   href="/agency"
                                 >
                                   Privacy Policy
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </p>
                             </div>
@@ -19684,7 +19684,7 @@ export default function HomePage() {
             style={css('min-height:100vh;width:auto')}
           >
             {/* $ */}
-            <Link
+            <a
               className="framer-1n378p5 framer-1yelcx4"
               data-framer-name="Logo"
               href="/"
@@ -19704,7 +19704,7 @@ export default function HomePage() {
                   />
                 </div>
               </div>
-            </Link>
+            </a>
             {/* /$ */}
             {/* $ */}
             <div
@@ -19718,7 +19718,7 @@ export default function HomePage() {
               >
                 <div className="framer-23a9w0-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -19762,12 +19762,12 @@ export default function HomePage() {
                         Home
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-msyglx-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -19810,12 +19810,12 @@ export default function HomePage() {
                         Agency
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-10kh1uz-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -19858,12 +19858,12 @@ export default function HomePage() {
                         Projects
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-14258of-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -19906,12 +19906,12 @@ export default function HomePage() {
                         Blog
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-7qwocn-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -19954,7 +19954,7 @@ export default function HomePage() {
                         Contact
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
               </nav>
@@ -20126,7 +20126,7 @@ export default function HomePage() {
                                   <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                   <div className="framer-12iljpq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                       data-framer-name="Small White - Black Hover"
                                       data-highlight="true"
@@ -20167,7 +20167,7 @@ export default function HomePage() {
                                           Book Call
                                         </p>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                 </div>
@@ -20532,7 +20532,7 @@ export default function HomePage() {
                                   <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                   <div className="framer-12iljpq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                       data-framer-name="Small White - Black Hover"
                                       data-highlight="true"
@@ -20573,7 +20573,7 @@ export default function HomePage() {
                                           Book Call
                                         </p>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                 </div>
@@ -20938,7 +20938,7 @@ export default function HomePage() {
                                   <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                   <div className="framer-12iljpq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                       data-framer-name="Small White - Black Hover"
                                       data-highlight="true"
@@ -20979,7 +20979,7 @@ export default function HomePage() {
                                           Book Call
                                         </p>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                 </div>
@@ -24437,7 +24437,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -24605,7 +24605,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -24623,7 +24623,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -24791,7 +24791,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -24812,7 +24812,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -24954,7 +24954,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -24972,7 +24972,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -25114,7 +25114,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -25451,7 +25451,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -25619,7 +25619,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -25637,7 +25637,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -25805,7 +25805,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -25825,7 +25825,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -25967,7 +25967,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -25985,7 +25985,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -26127,7 +26127,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -26464,7 +26464,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -26632,7 +26632,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -26650,7 +26650,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -26818,7 +26818,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -26838,7 +26838,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -26980,7 +26980,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -26998,7 +26998,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -27140,7 +27140,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -27820,7 +27820,7 @@ export default function HomePage() {
                           {/* $ */}
                           <div className="framer-1e14a7l-container">
                             {/* $ */}
-                            <Link
+                            <a
                               className="framer-OuU1b framer-pZzzc framer-CwqPw framer-1lxb0kk framer-v-1lxb0kk framer-3zbxli"
                               data-framer-name="Desktop - 1200"
                               href="/contact"
@@ -27920,7 +27920,7 @@ export default function HomePage() {
                                   </div>
                                 </div>
                               </div>
-                            </Link>
+                            </a>
                             {/* /$ */}
                           </div>
                           {/* /$ */}
@@ -28588,7 +28588,7 @@ export default function HomePage() {
                           {/* $ */}
                           <div className="framer-1e14a7l-container">
                             {/* $ */}
-                            <Link
+                            <a
                               className="framer-OuU1b framer-pZzzc framer-CwqPw framer-1lxb0kk framer-v-eklj6q framer-3zbxli"
                               data-framer-name="Tablet"
                               href="/contact"
@@ -28684,7 +28684,7 @@ export default function HomePage() {
                                   </div>
                                 </div>
                               </div>
-                            </Link>
+                            </a>
                             {/* /$ */}
                           </div>
                           {/* /$ */}
@@ -29387,7 +29387,7 @@ export default function HomePage() {
                           {/* $ */}
                           <div className="framer-1e14a7l-container">
                             {/* $ */}
-                            <Link
+                            <a
                               className="framer-OuU1b framer-pZzzc framer-CwqPw framer-1lxb0kk framer-v-urdaix framer-3zbxli"
                               data-framer-name="Phone"
                               href="/contact"
@@ -29479,7 +29479,7 @@ export default function HomePage() {
                                   </div>
                                 </div>
                               </div>
-                            </Link>
+                            </a>
                             {/* /$ */}
                           </div>
                           {/* /$ */}
@@ -32088,13 +32088,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/projects/lementa"
                                       >
                                         Lementa
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </h6>
                                   </div>
@@ -32317,7 +32317,7 @@ export default function HomePage() {
                                 {/* $ */}
                                 <div className="framer-1to0l4r-container">
                                   {/* $ */}
-                                  <Link
+                                  <a
                                     className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1k1o3ww framer-1yzisao"
                                     data-framer-name="Big Black - White Hover"
                                     data-highlight="true"
@@ -32358,7 +32358,7 @@ export default function HomePage() {
                                         View Project
                                       </p>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                 </div>
                                 {/* /$ */}
@@ -32503,13 +32503,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/projects/lementa"
                                       >
                                         Lementa
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </h6>
                                   </div>
@@ -32732,7 +32732,7 @@ export default function HomePage() {
                                 {/* $ */}
                                 <div className="framer-1to0l4r-container">
                                   {/* $ */}
-                                  <Link
+                                  <a
                                     className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1k1o3ww framer-1yzisao"
                                     data-framer-name="Big Black - White Hover"
                                     data-highlight="true"
@@ -32773,7 +32773,7 @@ export default function HomePage() {
                                         View Project
                                       </p>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                 </div>
                                 {/* /$ */}
@@ -32918,13 +32918,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/projects/lementa"
                                       >
                                         Lementa
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </h6>
                                   </div>
@@ -33147,7 +33147,7 @@ export default function HomePage() {
                                 {/* $ */}
                                 <div className="framer-1to0l4r-container">
                                   {/* $ */}
-                                  <Link
+                                  <a
                                     className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1k1o3ww framer-1yzisao"
                                     data-framer-name="Big Black - White Hover"
                                     data-highlight="true"
@@ -33188,7 +33188,7 @@ export default function HomePage() {
                                         View Project
                                       </p>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                 </div>
                                 {/* /$ */}
@@ -33306,7 +33306,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -33334,7 +33334,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -33359,13 +33359,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/fresh-visual-trends-in-2026"
                                           >
                                             Fresh Visual Trends in 2026
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -33394,7 +33394,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/fresh-visual-trends-in-2026"
@@ -33432,7 +33432,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -33475,13 +33475,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/web-design-in-the-future"
                                           >
                                             Web Design in the Future
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -33507,7 +33507,7 @@ export default function HomePage() {
                                       </div>
                                     </div>
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-1b1rghs framer-1ul97yi"
                                       data-framer-name="Image"
@@ -33535,13 +33535,13 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* $ */}
                                   <div className="framer-1lay61e-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/web-design-in-the-future"
@@ -33579,7 +33579,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -33600,7 +33600,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -33628,7 +33628,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -33653,13 +33653,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/new-demensions-in-marketing"
                                           >
                                             New Demensions in Marketing
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -33688,7 +33688,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/new-demensions-in-marketing"
@@ -33726,7 +33726,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -33842,7 +33842,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -33870,7 +33870,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -33895,13 +33895,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/fresh-visual-trends-in-2026"
                                           >
                                             Fresh Visual Trends in 2026
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -33930,7 +33930,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/fresh-visual-trends-in-2026"
@@ -33968,7 +33968,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -34011,13 +34011,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/web-design-in-the-future"
                                           >
                                             Web Design in the Future
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -34043,7 +34043,7 @@ export default function HomePage() {
                                       </div>
                                     </div>
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-1b1rghs framer-1ul97yi"
                                       data-framer-name="Image"
@@ -34071,13 +34071,13 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* $ */}
                                   <div className="framer-1lay61e-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/web-design-in-the-future"
@@ -34115,7 +34115,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -34136,7 +34136,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -34164,7 +34164,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -34189,13 +34189,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/new-demensions-in-marketing"
                                           >
                                             New Demensions in Marketing
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -34224,7 +34224,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/new-demensions-in-marketing"
@@ -34262,7 +34262,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -34378,7 +34378,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -34406,7 +34406,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -34428,13 +34428,13 @@ export default function HomePage() {
                                           data-styles-preset="BaUGQBb6A"
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/fresh-visual-trends-in-2026"
                                           >
                                             Fresh Visual Trends in 2026
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h6>
                                       </div>
@@ -34463,7 +34463,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-q33iy6 framer-1n4dfmi"
                                       data-framer-name="Horizontal"
                                       href="/blog/fresh-visual-trends-in-2026"
@@ -34501,7 +34501,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -34541,13 +34541,13 @@ export default function HomePage() {
                                           data-styles-preset="BaUGQBb6A"
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/web-design-in-the-future"
                                           >
                                             Web Design in the Future
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h6>
                                       </div>
@@ -34573,7 +34573,7 @@ export default function HomePage() {
                                       </div>
                                     </div>
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-1b1rghs framer-1ul97yi"
                                       data-framer-name="Image"
@@ -34601,13 +34601,13 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* $ */}
                                   <div className="framer-1lay61e-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-q33iy6 framer-1n4dfmi"
                                       data-framer-name="Horizontal"
                                       href="/blog/web-design-in-the-future"
@@ -34645,7 +34645,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -34666,7 +34666,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -34694,7 +34694,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -34716,13 +34716,13 @@ export default function HomePage() {
                                           data-styles-preset="BaUGQBb6A"
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/new-demensions-in-marketing"
                                           >
                                             New Demensions in Marketing
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h6>
                                       </div>
@@ -34751,7 +34751,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-q33iy6 framer-1n4dfmi"
                                       data-framer-name="Horizontal"
                                       href="/blog/new-demensions-in-marketing"
@@ -34789,7 +34789,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -35855,13 +35855,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Terms
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -35897,13 +35897,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -36989,13 +36989,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Terms
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -37031,13 +37031,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -38123,13 +38123,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Terms
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -38165,13 +38165,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -38542,13 +38542,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-1s6undm"
                                         data-styles-preset="V0P3PRZvd"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -38621,7 +38621,7 @@ export default function HomePage() {
                                     <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                     <div className="framer-12iljpq-container">
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                         data-framer-name="Small White - Black Hover"
                                         data-highlight="true"
@@ -38662,7 +38662,7 @@ export default function HomePage() {
                                             Book Call
                                           </p>
                                         </div>
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </div>
                                   </div>
@@ -38722,7 +38722,7 @@ export default function HomePage() {
                             <div className="framer-1p3s8yl" data-framer-name="Links">
                               <div className="framer-p2icvw-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-1wuo1uu framer-5ewpdz"
                                   data-framer-name="Smaller"
                                   data-highlight="true"
@@ -38763,12 +38763,12 @@ export default function HomePage() {
                                       Home
                                     </h6>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-1wxa1es-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-1wuo1uu framer-5ewpdz"
                                   data-framer-name="Smaller"
                                   data-highlight="true"
@@ -38808,12 +38808,12 @@ export default function HomePage() {
                                       Agency
                                     </h6>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-1pwj694-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-1wuo1uu framer-5ewpdz"
                                   data-framer-name="Smaller"
                                   data-highlight="true"
@@ -38853,12 +38853,12 @@ export default function HomePage() {
                                       Projects
                                     </h6>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-15pmzia-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-1wuo1uu framer-5ewpdz"
                                   data-framer-name="Smaller"
                                   data-highlight="true"
@@ -38898,12 +38898,12 @@ export default function HomePage() {
                                       Blog
                                     </h6>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-10j2bvt-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-1wuo1uu framer-5ewpdz"
                                   data-framer-name="Smaller"
                                   data-highlight="true"
@@ -38943,7 +38943,7 @@ export default function HomePage() {
                                       Contact
                                     </h6>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                             </div>
@@ -39136,13 +39136,13 @@ export default function HomePage() {
                                 )}
                               >
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-text framer-styles-preset-1s6undm"
                                   data-styles-preset="V0P3PRZvd"
                                   href="/agency"
                                 >
                                   Terms
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </p>
                             </div>
@@ -39162,13 +39162,13 @@ export default function HomePage() {
                                 )}
                               >
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-text framer-styles-preset-1s6undm"
                                   data-styles-preset="V0P3PRZvd"
                                   href="/agency"
                                 >
                                   Privacy Policy
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </p>
                             </div>
@@ -39308,7 +39308,7 @@ export default function HomePage() {
             style={css('min-height:100vh;width:auto')}
           >
             {/* $ */}
-            <Link
+            <a
               className="framer-1n378p5 framer-1yelcx4"
               data-framer-name="Logo"
               href="/"
@@ -39328,7 +39328,7 @@ export default function HomePage() {
                   />
                 </div>
               </div>
-            </Link>
+            </a>
             {/* /$ */}
             {/* $ */}
             <div
@@ -39342,7 +39342,7 @@ export default function HomePage() {
               >
                 <div className="framer-23a9w0-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -39386,12 +39386,12 @@ export default function HomePage() {
                         Home
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-msyglx-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -39434,12 +39434,12 @@ export default function HomePage() {
                         Agency
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-10kh1uz-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -39482,12 +39482,12 @@ export default function HomePage() {
                         Projects
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-14258of-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -39530,12 +39530,12 @@ export default function HomePage() {
                         Blog
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
                 <div className="framer-7qwocn-container">
                   {/* $ */}
-                  <Link
+                  <a
                     className="framer-3ytSH framer-oi3Va framer-zeChO framer-1dqtob3 framer-v-1dqtob3 framer-y7m2kj"
                     data-framer-name="Normal"
                     data-highlight="true"
@@ -39578,7 +39578,7 @@ export default function HomePage() {
                         Contact
                       </p>
                     </div>
-                  </Link>
+                  </a>
                   {/* /$ */}
                 </div>
               </nav>
@@ -39750,7 +39750,7 @@ export default function HomePage() {
                                   <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                   <div className="framer-12iljpq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                       data-framer-name="Small White - Black Hover"
                                       data-highlight="true"
@@ -39791,7 +39791,7 @@ export default function HomePage() {
                                           Book Call
                                         </p>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                 </div>
@@ -40156,7 +40156,7 @@ export default function HomePage() {
                                   <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                   <div className="framer-12iljpq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                       data-framer-name="Small White - Black Hover"
                                       data-highlight="true"
@@ -40197,7 +40197,7 @@ export default function HomePage() {
                                           Book Call
                                         </p>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                 </div>
@@ -40562,7 +40562,7 @@ export default function HomePage() {
                                   <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                   <div className="framer-12iljpq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                       data-framer-name="Small White - Black Hover"
                                       data-highlight="true"
@@ -40603,7 +40603,7 @@ export default function HomePage() {
                                           Book Call
                                         </p>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                 </div>
@@ -44061,7 +44061,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -44229,7 +44229,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -44247,7 +44247,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -44415,7 +44415,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -44436,7 +44436,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -44578,7 +44578,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -44596,7 +44596,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -44738,7 +44738,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -45075,7 +45075,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -45243,7 +45243,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -45261,7 +45261,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -45429,7 +45429,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -45449,7 +45449,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -45591,7 +45591,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -45609,7 +45609,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -45751,7 +45751,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -46088,7 +46088,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/white-gate-hotel">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -46256,7 +46256,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -46274,7 +46274,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/fashionista">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -46442,7 +46442,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -46462,7 +46462,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/alta">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -46604,7 +46604,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -46622,7 +46622,7 @@ export default function HomePage() {
                                 <div className="framer-1o2kr22">
                                   {/* $ */}
                                   {/* $ */}
-                                  <Link className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
+                                  <a className="framer-wjqx8e framer-lwk1ry" href="/projects/lementa">
                                     <div
                                       className="framer-1016scr"
                                       data-framer-name="Card"
@@ -46764,7 +46764,7 @@ export default function HomePage() {
                                         </div>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                   {/* /$ */}
                                 </div>
@@ -47444,7 +47444,7 @@ export default function HomePage() {
                           {/* $ */}
                           <div className="framer-1e14a7l-container">
                             {/* $ */}
-                            <Link
+                            <a
                               className="framer-OuU1b framer-pZzzc framer-CwqPw framer-1lxb0kk framer-v-1lxb0kk framer-3zbxli"
                               data-framer-name="Desktop - 1200"
                               href="/contact"
@@ -47544,7 +47544,7 @@ export default function HomePage() {
                                   </div>
                                 </div>
                               </div>
-                            </Link>
+                            </a>
                             {/* /$ */}
                           </div>
                           {/* /$ */}
@@ -48212,7 +48212,7 @@ export default function HomePage() {
                           {/* $ */}
                           <div className="framer-1e14a7l-container">
                             {/* $ */}
-                            <Link
+                            <a
                               className="framer-OuU1b framer-pZzzc framer-CwqPw framer-1lxb0kk framer-v-eklj6q framer-3zbxli"
                               data-framer-name="Tablet"
                               href="/contact"
@@ -48308,7 +48308,7 @@ export default function HomePage() {
                                   </div>
                                 </div>
                               </div>
-                            </Link>
+                            </a>
                             {/* /$ */}
                           </div>
                           {/* /$ */}
@@ -49011,7 +49011,7 @@ export default function HomePage() {
                           {/* $ */}
                           <div className="framer-1e14a7l-container">
                             {/* $ */}
-                            <Link
+                            <a
                               className="framer-OuU1b framer-pZzzc framer-CwqPw framer-1lxb0kk framer-v-urdaix framer-3zbxli"
                               data-framer-name="Phone"
                               href="/contact"
@@ -49103,7 +49103,7 @@ export default function HomePage() {
                                   </div>
                                 </div>
                               </div>
-                            </Link>
+                            </a>
                             {/* /$ */}
                           </div>
                           {/* /$ */}
@@ -51712,13 +51712,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/projects/lementa"
                                       >
                                         Lementa
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </h6>
                                   </div>
@@ -51941,7 +51941,7 @@ export default function HomePage() {
                                 {/* $ */}
                                 <div className="framer-1to0l4r-container">
                                   {/* $ */}
-                                  <Link
+                                  <a
                                     className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1k1o3ww framer-1yzisao"
                                     data-framer-name="Big Black - White Hover"
                                     data-highlight="true"
@@ -51982,7 +51982,7 @@ export default function HomePage() {
                                         View Project
                                       </p>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                 </div>
                                 {/* /$ */}
@@ -52127,13 +52127,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/projects/lementa"
                                       >
                                         Lementa
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </h6>
                                   </div>
@@ -52356,7 +52356,7 @@ export default function HomePage() {
                                 {/* $ */}
                                 <div className="framer-1to0l4r-container">
                                   {/* $ */}
-                                  <Link
+                                  <a
                                     className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1k1o3ww framer-1yzisao"
                                     data-framer-name="Big Black - White Hover"
                                     data-highlight="true"
@@ -52397,7 +52397,7 @@ export default function HomePage() {
                                         View Project
                                       </p>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                 </div>
                                 {/* /$ */}
@@ -52542,13 +52542,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/projects/lementa"
                                       >
                                         Lementa
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </h6>
                                   </div>
@@ -52771,7 +52771,7 @@ export default function HomePage() {
                                 {/* $ */}
                                 <div className="framer-1to0l4r-container">
                                   {/* $ */}
-                                  <Link
+                                  <a
                                     className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1k1o3ww framer-1yzisao"
                                     data-framer-name="Big Black - White Hover"
                                     data-highlight="true"
@@ -52812,7 +52812,7 @@ export default function HomePage() {
                                         View Project
                                       </p>
                                     </div>
-                                  </Link>
+                                  </a>
                                   {/* /$ */}
                                 </div>
                                 {/* /$ */}
@@ -52930,7 +52930,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -52958,7 +52958,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -52983,13 +52983,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/fresh-visual-trends-in-2026"
                                           >
                                             Fresh Visual Trends in 2026
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -53018,7 +53018,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/fresh-visual-trends-in-2026"
@@ -53056,7 +53056,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -53099,13 +53099,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/web-design-in-the-future"
                                           >
                                             Web Design in the Future
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -53131,7 +53131,7 @@ export default function HomePage() {
                                       </div>
                                     </div>
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-1b1rghs framer-1ul97yi"
                                       data-framer-name="Image"
@@ -53159,13 +53159,13 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* $ */}
                                   <div className="framer-1lay61e-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/web-design-in-the-future"
@@ -53203,7 +53203,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -53224,7 +53224,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -53252,7 +53252,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -53277,13 +53277,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/new-demensions-in-marketing"
                                           >
                                             New Demensions in Marketing
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -53312,7 +53312,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/new-demensions-in-marketing"
@@ -53350,7 +53350,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -53466,7 +53466,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -53494,7 +53494,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -53519,13 +53519,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/fresh-visual-trends-in-2026"
                                           >
                                             Fresh Visual Trends in 2026
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -53554,7 +53554,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/fresh-visual-trends-in-2026"
@@ -53592,7 +53592,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -53635,13 +53635,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/web-design-in-the-future"
                                           >
                                             Web Design in the Future
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -53667,7 +53667,7 @@ export default function HomePage() {
                                       </div>
                                     </div>
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-1b1rghs framer-1ul97yi"
                                       data-framer-name="Image"
@@ -53695,13 +53695,13 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* $ */}
                                   <div className="framer-1lay61e-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/web-design-in-the-future"
@@ -53739,7 +53739,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -53760,7 +53760,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -53788,7 +53788,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -53813,13 +53813,13 @@ export default function HomePage() {
                                           )}
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/new-demensions-in-marketing"
                                           >
                                             New Demensions in Marketing
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h5>
                                       </div>
@@ -53848,7 +53848,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-1n7pgpj framer-1n4dfmi"
                                       data-framer-name="Vertical"
                                       href="/blog/new-demensions-in-marketing"
@@ -53886,7 +53886,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -54002,7 +54002,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -54030,7 +54030,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -54052,13 +54052,13 @@ export default function HomePage() {
                                           data-styles-preset="BaUGQBb6A"
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/fresh-visual-trends-in-2026"
                                           >
                                             Fresh Visual Trends in 2026
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h6>
                                       </div>
@@ -54087,7 +54087,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-q33iy6 framer-1n4dfmi"
                                       data-framer-name="Horizontal"
                                       href="/blog/fresh-visual-trends-in-2026"
@@ -54125,7 +54125,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -54165,13 +54165,13 @@ export default function HomePage() {
                                           data-styles-preset="BaUGQBb6A"
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/web-design-in-the-future"
                                           >
                                             Web Design in the Future
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h6>
                                       </div>
@@ -54197,7 +54197,7 @@ export default function HomePage() {
                                       </div>
                                     </div>
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-1b1rghs framer-1ul97yi"
                                       data-framer-name="Image"
@@ -54225,13 +54225,13 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* $ */}
                                   <div className="framer-1lay61e-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-q33iy6 framer-1n4dfmi"
                                       data-framer-name="Horizontal"
                                       href="/blog/web-design-in-the-future"
@@ -54269,7 +54269,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -54290,7 +54290,7 @@ export default function HomePage() {
                                     )}
                                   >
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       as="a"
                                       className="framer-ep6kc2 framer-1ul97yi"
                                       data-framer-name="Image"
@@ -54318,7 +54318,7 @@ export default function HomePage() {
                                           )}
                                         />
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                     <div
                                       className="framer-rfzun6"
@@ -54340,13 +54340,13 @@ export default function HomePage() {
                                           data-styles-preset="BaUGQBb6A"
                                         >
                                           {/* $ */}
-                                          <Link
+                                          <a
                                             className="framer-text framer-styles-preset-mgrqd0"
                                             data-styles-preset="q7NcKTKUL"
                                             href="/blog/new-demensions-in-marketing"
                                           >
                                             New Demensions in Marketing
-                                          </Link>
+                                          </a>
                                           {/* /$ */}
                                         </h6>
                                       </div>
@@ -54375,7 +54375,7 @@ export default function HomePage() {
                                   {/* $ */}
                                   <div className="framer-g7absq-container">
                                     {/* $ */}
-                                    <Link
+                                    <a
                                       className="framer-fLRsI framer-1n7pgpj framer-v-q33iy6 framer-1n4dfmi"
                                       data-framer-name="Horizontal"
                                       href="/blog/new-demensions-in-marketing"
@@ -54413,7 +54413,7 @@ export default function HomePage() {
                                           </div>
                                         </div>
                                       </div>
-                                    </Link>
+                                    </a>
                                     {/* /$ */}
                                   </div>
                                   {/* /$ */}
@@ -55479,13 +55479,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Terms
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -55521,13 +55521,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -56613,13 +56613,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Terms
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -56655,13 +56655,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -57747,13 +57747,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Terms
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -57789,13 +57789,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-mgrqd0"
                                         data-styles-preset="q7NcKTKUL"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -58166,13 +58166,13 @@ export default function HomePage() {
                                       )}
                                     >
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-text framer-styles-preset-1s6undm"
                                         data-styles-preset="V0P3PRZvd"
                                         href="/agency"
                                       >
                                         Privacy Policy.
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </p>
                                   </div>
@@ -58245,7 +58245,7 @@ export default function HomePage() {
                                     <div className="framer-13x3qa0" data-framer-name="Spacer"></div>
                                     <div className="framer-12iljpq-container">
                                       {/* $ */}
-                                      <Link
+                                      <a
                                         className="framer-K57oh framer-CwqPw framer-1om2a4x framer-v-1om2a4x framer-1yzisao"
                                         data-framer-name="Small White - Black Hover"
                                         data-highlight="true"
@@ -58286,7 +58286,7 @@ export default function HomePage() {
                                             Book Call
                                           </p>
                                         </div>
-                                      </Link>
+                                      </a>
                                       {/* /$ */}
                                     </div>
                                   </div>
@@ -58346,7 +58346,7 @@ export default function HomePage() {
                             <div className="framer-1p3s8yl" data-framer-name="Links">
                               <div className="framer-p2icvw-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-1wuo1uu framer-5ewpdz"
                                   data-framer-name="Smaller"
                                   data-highlight="true"
@@ -58387,12 +58387,12 @@ export default function HomePage() {
                                       Home
                                     </h6>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-1wxa1es-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-1wuo1uu framer-5ewpdz"
                                   data-framer-name="Smaller"
                                   data-highlight="true"
@@ -58432,12 +58432,12 @@ export default function HomePage() {
                                       Agency
                                     </h6>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-1pwj694-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-1wuo1uu framer-5ewpdz"
                                   data-framer-name="Smaller"
                                   data-highlight="true"
@@ -58477,12 +58477,12 @@ export default function HomePage() {
                                       Projects
                                     </h6>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-15pmzia-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-1wuo1uu framer-5ewpdz"
                                   data-framer-name="Smaller"
                                   data-highlight="true"
@@ -58522,12 +58522,12 @@ export default function HomePage() {
                                       Blog
                                     </h6>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                               <div className="framer-10j2bvt-container">
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-XbJ8X framer-yJFse framer-zeChO framer-jjtc78 framer-v-1wuo1uu framer-5ewpdz"
                                   data-framer-name="Smaller"
                                   data-highlight="true"
@@ -58567,7 +58567,7 @@ export default function HomePage() {
                                       Contact
                                     </h6>
                                   </div>
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </div>
                             </div>
@@ -58760,13 +58760,13 @@ export default function HomePage() {
                                 )}
                               >
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-text framer-styles-preset-1s6undm"
                                   data-styles-preset="V0P3PRZvd"
                                   href="/agency"
                                 >
                                   Terms
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </p>
                             </div>
@@ -58786,13 +58786,13 @@ export default function HomePage() {
                                 )}
                               >
                                 {/* $ */}
-                                <Link
+                                <a
                                   className="framer-text framer-styles-preset-1s6undm"
                                   data-styles-preset="V0P3PRZvd"
                                   href="/agency"
                                 >
                                   Privacy Policy
-                                </Link>
+                                </a>
                                 {/* /$ */}
                               </p>
                             </div>

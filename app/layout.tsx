@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
         {/* Module Preloads */}
         <link rel="modulepreload" href="/assets/react.CQg9dmOM.mjs" />
@@ -27,16 +27,10 @@ export default function RootLayout({
         <link rel="modulepreload" href="/assets/motion.VNkKVxJm.mjs" />
         <link rel="modulepreload" href="/assets/framer.CkI1Tnt1.mjs" />
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         {children}
-        
-        {/* SVG Templates */}
-        <div id="svg-templates" style={{ position: "absolute", overflow: "hidden", bottom: 0, left: 0, width: 0, height: 0, zIndex: 0, contain: "strict" }} aria-hidden="true" dangerouslySetInnerHTML={{ __html: `
-          <svg viewBox="0 0 8 4" overflow="visible" id="svg-712324052_315"><path d="M 0 0 L 4 4 L 8 0" fill="transparent" stroke-width="1.5" stroke="var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0))"/></svg>
-          <svg viewBox="0 0 8 4" overflow="visible" id="svg910750790_329"><path d="M 0 0 L 4 4 L 8 0" fill="transparent" stroke-width="1.5" stroke="var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0))" opacity="0.6"/></svg>
-        `}} />
 
-        {/* Framer Scripts */}
+        {/* Framer runtime (hydrates #main from page exports) */}
         <script type="module" async src="/assets/script_main.DJGiwIHr.mjs" />
       </body>
     </html>
