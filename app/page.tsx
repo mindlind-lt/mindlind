@@ -59021,7 +59021,7 @@ export default function HomePage() {
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/JFkcxmmKA.Dz3ed94J.mjs"
+        href="/assets/JFkcxmmKA.Dz3ed94J.mjs"
       />
       <link
         rel="modulepreload"
@@ -59036,7 +59036,7 @@ export default function HomePage() {
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/shared-lib.DlbRbta6.mjs"
+        href="/assets/shared-lib.DlbRbta6.mjs"
       />
       <link
         rel="modulepreload"
@@ -59051,12 +59051,12 @@ export default function HomePage() {
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/dBxplyp6M.Dq749cnw.mjs"
+        href="/assets/dBxplyp6M.Dq749cnw.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/zdF0WZXbC.Ph4o7JLT.mjs"
+        href="/assets/zdF0WZXbC.Ph4o7JLT.mjs"
       />
       <link
         rel="modulepreload"
@@ -59066,12 +59066,12 @@ export default function HomePage() {
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/gKHXfs5yP.DsZ691Ig.mjs"
+        href="/assets/gKHXfs5yP.DsZ691Ig.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/hmRgK3K6v.BU2UyluA.mjs"
+        href="/assets/hmRgK3K6v.BU2UyluA.mjs"
       />
       <link
         rel="modulepreload"
@@ -59086,117 +59086,117 @@ export default function HomePage() {
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/Vimeo.DPytTSdp.mjs"
+        href="/assets/Vimeo.DPytTSdp.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/IGVKsj4vh.DY6-kXxY.mjs"
+        href="/assets/IGVKsj4vh.DY6-kXxY.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/LuOKrK4j8.2kkJzgM8.mjs"
+        href="/assets/LuOKrK4j8.2kkJzgM8.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/eUQb69Kqx.NAKwb4XZ.mjs"
+        href="/assets/eUQb69Kqx.NAKwb4XZ.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/pPuowuywh.ClEevQMi.mjs"
+        href="/assets/pPuowuywh.ClEevQMi.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/OWqtFDncb.dk2v8tpu.mjs"
+        href="/assets/OWqtFDncb.dk2v8tpu.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/iOnt4WyqW.7Wks9zPB.mjs"
+        href="/assets/iOnt4WyqW.7Wks9zPB.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/Text_Hover_Random.Bmh6jXFy.mjs"
+        href="/assets/Text_Hover_Random.Bmh6jXFy.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/sxu281Tck.B3KxLllS.mjs"
+        href="/assets/sxu281Tck.B3KxLllS.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/BaUGQBb6A.FdZ1Q0vk.mjs"
+        href="/assets/BaUGQBb6A.FdZ1Q0vk.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/mDZy95zW1.Csm4GLW3.mjs"
+        href="/assets/mDZy95zW1.Csm4GLW3.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/zczqo4Z8y.C4goL9RT.mjs"
+        href="/assets/zczqo4Z8y.C4goL9RT.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/IGVKsj4vh.Cl5eDawJ.mjs"
+        href="/assets/IGVKsj4vh.Cl5eDawJ.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/NqfjhJTm6.DvM851Z5.mjs"
+        href="/assets/NqfjhJTm6.DvM851Z5.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/PxI14If8r.B9aAebzo.mjs"
+        href="/assets/PxI14If8r.B9aAebzo.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/LuOKrK4j8.BJ0BICw6.mjs"
+        href="/assets/LuOKrK4j8.BJ0BICw6.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/Rotor_Gallery.Ct8H7OcB.mjs"
+        href="/assets/Rotor_Gallery.Ct8H7OcB.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/zczqo4Z8y.DWxNHoZG.mjs"
+        href="/assets/zczqo4Z8y.DWxNHoZG.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/augiA20Il.DsXlpqiR.mjs"
+        href="/assets/augiA20Il.DsXlpqiR.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/tTTLfmF7I.C1MWuy8o.mjs"
+        href="/assets/tTTLfmF7I.C1MWuy8o.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/NqfjhJTm6.BkAmVSs8.mjs"
+        href="/assets/NqfjhJTm6.BkAmVSs8.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/TwistGallery.DvLylGRn.mjs"
+        href="/assets/TwistGallery.DvLylGRn.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/y9BUDaD1i.CB4Cct88.mjs"
+        href="/assets/y9BUDaD1i.CB4Cct88.mjs"
       />
       <div
         id="svg-templates"
