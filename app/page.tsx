@@ -58991,27 +58991,27 @@ export default function HomePage() {
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/react.CQg9dmOM.mjs"
+        href="/assets/react.CQg9dmOM.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/rolldown-runtime.DsXBSD_B.mjs"
+        href="/assets/rolldown-runtime.DsXBSD_B.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/motion.VNkKVxJm.mjs"
+        href="/assets/motion.VNkKVxJm.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/framer.CkI1Tnt1.mjs"
+        href="/assets/framer.CkI1Tnt1.mjs"
       />
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/q7NcKTKUL.CrB8eJGn.mjs"
+        href="/assets/q7NcKTKUL.CrB8eJGn.mjs"
       />
       <link
         rel="modulepreload"
