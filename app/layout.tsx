@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Mondragon – Digital Creative Agency – Framer Template",
@@ -12,12 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <head>
         <link href="https://framerusercontent.com/images/uGRAp8supPvhoUPaFg224ylEEs.png" rel="icon" media="(prefers-color-scheme: light)" />
         <link href="https://framerusercontent.com/images/uGRAp8supPvhoUPaFg224ylEEs.png" rel="icon" media="(prefers-color-scheme: dark)" />
         <link rel="apple-touch-icon" href="https://framerusercontent.com/images/nwfgiEpIhbccJoygH0ZGot5ZhQ.png" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Module Preloads */}
         <link rel="modulepreload" href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/react.CQg9dmOM.mjs" />
@@ -25,7 +31,7 @@ export default function RootLayout({
         <link rel="modulepreload" href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/motion.VNkKVxJm.mjs" />
         <link rel="modulepreload" href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/framer.CkI1Tnt1.mjs" />
       </head>
-      <body>
+      <body className={inter.className}>
         {children}
         
         {/* SVG Templates */}
