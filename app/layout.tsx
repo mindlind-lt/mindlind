@@ -22,10 +22,10 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <head>
         {/* Module Preloads */}
-        <link rel="modulepreload" href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/react.CQg9dmOM.mjs" />
-        <link rel="modulepreload" href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/rolldown-runtime.DsXBSD_B.mjs" />
-        <link rel="modulepreload" href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/motion.VNkKVxJm.mjs" />
-        <link rel="modulepreload" href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/framer.CkI1Tnt1.mjs" />
+        <link rel="modulepreload" href="/assets/react.CQg9dmOM.mjs" />
+        <link rel="modulepreload" href="/assets/rolldown-runtime.DsXBSD_B.mjs" />
+        <link rel="modulepreload" href="/assets/motion.VNkKVxJm.mjs" />
+        <link rel="modulepreload" href="/assets/framer.CkI1Tnt1.mjs" />
       </head>
       <body className={inter.className}>
         {children}
