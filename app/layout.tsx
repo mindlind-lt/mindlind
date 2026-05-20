@@ -21,10 +21,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        <link href="https://framerusercontent.com/images/uGRAp8supPvhoUPaFg224ylEEs.png" rel="icon" media="(prefers-color-scheme: light)" />
-        <link href="https://framerusercontent.com/images/uGRAp8supPvhoUPaFg224ylEEs.png" rel="icon" media="(prefers-color-scheme: dark)" />
-        <link rel="apple-touch-icon" href="https://framerusercontent.com/images/nwfgiEpIhbccJoygH0ZGot5ZhQ.png" />
-        
         {/* Module Preloads */}
         <link rel="modulepreload" href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/react.CQg9dmOM.mjs" />
         <link rel="modulepreload" href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/rolldown-runtime.DsXBSD_B.mjs" />
