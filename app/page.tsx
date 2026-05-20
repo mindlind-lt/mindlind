@@ -59026,7 +59026,7 @@ export default function HomePage() {
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/i_vIzrlMX.CGNR6h9K.mjs"
+        href="/assets/i_vIzrlMX.CGNR6h9K.mjs"
       />
       <link
         rel="modulepreload"
@@ -59046,7 +59046,7 @@ export default function HomePage() {
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/j9HsFBXUW.C6ohqox1.mjs"
+        href="/assets/j9HsFBXUW.C6ohqox1.mjs"
       />
       <link
         rel="modulepreload"
