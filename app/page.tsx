@@ -548,7 +548,7 @@ export default function HomePage() {
                                   <div className="framer-6m6suy-container">
                                     {/* $ */}
                                     <video
-                                      src="https://framerusercontent.com/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
+                                      src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
                                       poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
@@ -954,7 +954,7 @@ export default function HomePage() {
                                   <div className="framer-6m6suy-container">
                                     {/* $ */}
                                     <video
-                                      src="https://framerusercontent.com/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
+                                      src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
                                       poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
@@ -1360,7 +1360,7 @@ export default function HomePage() {
                                   <div className="framer-6m6suy-container">
                                     {/* $ */}
                                     <video
-                                      src="https://framerusercontent.com/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
+                                      src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
                                       poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
@@ -20181,7 +20181,7 @@ export default function HomePage() {
                                   <div className="framer-6m6suy-container">
                                     {/* $ */}
                                     <video
-                                      src="https://framerusercontent.com/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
+                                      src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
                                       poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
@@ -20587,7 +20587,7 @@ export default function HomePage() {
                                   <div className="framer-6m6suy-container">
                                     {/* $ */}
                                     <video
-                                      src="https://framerusercontent.com/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
+                                      src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
                                       poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
@@ -20993,7 +20993,7 @@ export default function HomePage() {
                                   <div className="framer-6m6suy-container">
                                     {/* $ */}
                                     <video
-                                      src="https://framerusercontent.com/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
+                                      src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
                                       poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
@@ -39805,7 +39805,7 @@ export default function HomePage() {
                                   <div className="framer-6m6suy-container">
                                     {/* $ */}
                                     <video
-                                      src="https://framerusercontent.com/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
+                                      src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
                                       poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
@@ -40211,7 +40211,7 @@ export default function HomePage() {
                                   <div className="framer-6m6suy-container">
                                     {/* $ */}
                                     <video
-                                      src="https://framerusercontent.com/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
+                                      src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
                                       poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
@@ -40617,7 +40617,7 @@ export default function HomePage() {
                                   <div className="framer-6m6suy-container">
                                     {/* $ */}
                                     <video
-                                      src="https://framerusercontent.com/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
+                                      src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
                                       poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
