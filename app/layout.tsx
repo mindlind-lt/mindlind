@@ -41,7 +41,6 @@ export default function RootLayout({
         `}} />
 
         {/* Framer Scripts */}
-        <script async src="https://events.framer.com/script?v=2" data-fid="1b527c7cd5644ea8fd7654dc05eeb777e00234fbdbb6da7395f442114667f932" data-no-nt />
         <script type="module" async src="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/script_main.DJGiwIHr.mjs" />
       </body>
     </html>
