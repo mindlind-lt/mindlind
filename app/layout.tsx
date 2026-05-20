@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./framer-generated.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,18 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <head>
-        {/* Module Preloads */}
-        <link rel="modulepreload" href="/assets/react.CQg9dmOM.mjs" />
-        <link rel="modulepreload" href="/assets/rolldown-runtime.DsXBSD_B.mjs" />
-        <link rel="modulepreload" href="/assets/motion.VNkKVxJm.mjs" />
-        <link rel="modulepreload" href="/assets/framer.CkI1Tnt1.mjs" />
-      </head>
       <body className={inter.className} suppressHydrationWarning>
         {children}
-
-        {/* Framer runtime (hydrates #main from page exports) */}
-        <script type="module" async src="/assets/script_main.DJGiwIHr.mjs" />
       </body>
     </html>
   );
