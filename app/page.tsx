@@ -551,7 +551,7 @@ export default function HomePage() {
                                       src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
-                                      poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
+                                      poster="/assets/mIWtzyau0sMyaJrDQmerbyy5A.png"
                                       muted
                                       playsInline
                                       style={css(
@@ -957,7 +957,7 @@ export default function HomePage() {
                                       src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
-                                      poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
+                                      poster="/assets/mIWtzyau0sMyaJrDQmerbyy5A.png"
                                       muted
                                       playsInline
                                       style={css(
@@ -1363,7 +1363,7 @@ export default function HomePage() {
                                       src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
-                                      poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
+                                      poster="/assets/mIWtzyau0sMyaJrDQmerbyy5A.png"
                                       muted
                                       playsInline
                                       style={css(
@@ -20184,7 +20184,7 @@ export default function HomePage() {
                                       src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
-                                      poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
+                                      poster="/assets/mIWtzyau0sMyaJrDQmerbyy5A.png"
                                       muted
                                       playsInline
                                       style={css(
@@ -20590,7 +20590,7 @@ export default function HomePage() {
                                       src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
-                                      poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
+                                      poster="/assets/mIWtzyau0sMyaJrDQmerbyy5A.png"
                                       muted
                                       playsInline
                                       style={css(
@@ -20996,7 +20996,7 @@ export default function HomePage() {
                                       src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
-                                      poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
+                                      poster="/assets/mIWtzyau0sMyaJrDQmerbyy5A.png"
                                       muted
                                       playsInline
                                       style={css(
@@ -39808,7 +39808,7 @@ export default function HomePage() {
                                       src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
-                                      poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
+                                      poster="/assets/mIWtzyau0sMyaJrDQmerbyy5A.png"
                                       muted
                                       playsInline
                                       style={css(
@@ -40214,7 +40214,7 @@ export default function HomePage() {
                                       src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
-                                      poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
+                                      poster="/assets/mIWtzyau0sMyaJrDQmerbyy5A.png"
                                       muted
                                       playsInline
                                       style={css(
@@ -40620,7 +40620,7 @@ export default function HomePage() {
                                       src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4"
                                       loop
                                       preload="none"
-                                      poster="https://framerusercontent.com/images/mIWtzyau0sMyaJrDQmerbyy5A.png?width=202&amp;height=400"
+                                      poster="/assets/mIWtzyau0sMyaJrDQmerbyy5A.png"
                                       muted
                                       playsInline
                                       style={css(
