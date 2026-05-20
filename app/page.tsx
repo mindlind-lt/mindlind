@@ -571,7 +571,7 @@ export default function HomePage() {
                                         decoding="async"
                                         width="404"
                                         height="800"
-                                        src="https://framerusercontent.com/images/F3t96ozC3GZuPhKwdm5VWtBIZwM.png?width=404&amp;height=800"
+                                        src="/assets/F3t96ozC3GZuPhKwdm5VWtBIZwM.png"
                                         alt=""
                                         style={css(
                                           'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:fill',
@@ -648,7 +648,7 @@ export default function HomePage() {
                                             decoding="async"
                                             width="80"
                                             height="80"
-                                            src="https://framerusercontent.com/images/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg?width=80&amp;height=80"
+                                            src="/assets/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg"
                                             alt=""
                                             style={css(
                                               'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover',
@@ -977,7 +977,7 @@ export default function HomePage() {
                                         decoding="async"
                                         width="404"
                                         height="800"
-                                        src="https://framerusercontent.com/images/F3t96ozC3GZuPhKwdm5VWtBIZwM.png?width=404&amp;height=800"
+                                        src="/assets/F3t96ozC3GZuPhKwdm5VWtBIZwM.png"
                                         alt=""
                                         style={css(
                                           'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:fill',
@@ -1054,7 +1054,7 @@ export default function HomePage() {
                                             decoding="async"
                                             width="80"
                                             height="80"
-                                            src="https://framerusercontent.com/images/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg?width=80&amp;height=80"
+                                            src="/assets/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg"
                                             alt=""
                                             style={css(
                                               'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover',
@@ -1383,7 +1383,7 @@ export default function HomePage() {
                                         decoding="async"
                                         width="404"
                                         height="800"
-                                        src="https://framerusercontent.com/images/F3t96ozC3GZuPhKwdm5VWtBIZwM.png?width=404&amp;height=800"
+                                        src="/assets/F3t96ozC3GZuPhKwdm5VWtBIZwM.png"
                                         alt=""
                                         style={css(
                                           'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:fill',
@@ -1460,7 +1460,7 @@ export default function HomePage() {
                                             decoding="async"
                                             width="80"
                                             height="80"
-                                            src="https://framerusercontent.com/images/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg?width=80&amp;height=80"
+                                            src="/assets/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg"
                                             alt=""
                                             style={css(
                                               'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover',
@@ -20204,7 +20204,7 @@ export default function HomePage() {
                                         decoding="async"
                                         width="404"
                                         height="800"
-                                        src="https://framerusercontent.com/images/F3t96ozC3GZuPhKwdm5VWtBIZwM.png?width=404&amp;height=800"
+                                        src="/assets/F3t96ozC3GZuPhKwdm5VWtBIZwM.png"
                                         alt=""
                                         style={css(
                                           'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:fill',
@@ -20281,7 +20281,7 @@ export default function HomePage() {
                                             decoding="async"
                                             width="80"
                                             height="80"
-                                            src="https://framerusercontent.com/images/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg?width=80&amp;height=80"
+                                            src="/assets/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg"
                                             alt=""
                                             style={css(
                                               'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover',
@@ -20610,7 +20610,7 @@ export default function HomePage() {
                                         decoding="async"
                                         width="404"
                                         height="800"
-                                        src="https://framerusercontent.com/images/F3t96ozC3GZuPhKwdm5VWtBIZwM.png?width=404&amp;height=800"
+                                        src="/assets/F3t96ozC3GZuPhKwdm5VWtBIZwM.png"
                                         alt=""
                                         style={css(
                                           'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:fill',
@@ -20687,7 +20687,7 @@ export default function HomePage() {
                                             decoding="async"
                                             width="80"
                                             height="80"
-                                            src="https://framerusercontent.com/images/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg?width=80&amp;height=80"
+                                            src="/assets/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg"
                                             alt=""
                                             style={css(
                                               'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover',
@@ -21016,7 +21016,7 @@ export default function HomePage() {
                                         decoding="async"
                                         width="404"
                                         height="800"
-                                        src="https://framerusercontent.com/images/F3t96ozC3GZuPhKwdm5VWtBIZwM.png?width=404&amp;height=800"
+                                        src="/assets/F3t96ozC3GZuPhKwdm5VWtBIZwM.png"
                                         alt=""
                                         style={css(
                                           'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:fill',
@@ -21093,7 +21093,7 @@ export default function HomePage() {
                                             decoding="async"
                                             width="80"
                                             height="80"
-                                            src="https://framerusercontent.com/images/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg?width=80&amp;height=80"
+                                            src="/assets/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg"
                                             alt=""
                                             style={css(
                                               'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover',
@@ -39828,7 +39828,7 @@ export default function HomePage() {
                                         decoding="async"
                                         width="404"
                                         height="800"
-                                        src="https://framerusercontent.com/images/F3t96ozC3GZuPhKwdm5VWtBIZwM.png?width=404&amp;height=800"
+                                        src="/assets/F3t96ozC3GZuPhKwdm5VWtBIZwM.png"
                                         alt=""
                                         style={css(
                                           'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:fill',
@@ -39905,7 +39905,7 @@ export default function HomePage() {
                                             decoding="async"
                                             width="80"
                                             height="80"
-                                            src="https://framerusercontent.com/images/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg?width=80&amp;height=80"
+                                            src="/assets/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg"
                                             alt=""
                                             style={css(
                                               'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover',
@@ -40234,7 +40234,7 @@ export default function HomePage() {
                                         decoding="async"
                                         width="404"
                                         height="800"
-                                        src="https://framerusercontent.com/images/F3t96ozC3GZuPhKwdm5VWtBIZwM.png?width=404&amp;height=800"
+                                        src="/assets/F3t96ozC3GZuPhKwdm5VWtBIZwM.png"
                                         alt=""
                                         style={css(
                                           'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:fill',
@@ -40311,7 +40311,7 @@ export default function HomePage() {
                                             decoding="async"
                                             width="80"
                                             height="80"
-                                            src="https://framerusercontent.com/images/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg?width=80&amp;height=80"
+                                            src="/assets/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg"
                                             alt=""
                                             style={css(
                                               'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover',
@@ -40640,7 +40640,7 @@ export default function HomePage() {
                                         decoding="async"
                                         width="404"
                                         height="800"
-                                        src="https://framerusercontent.com/images/F3t96ozC3GZuPhKwdm5VWtBIZwM.png?width=404&amp;height=800"
+                                        src="/assets/F3t96ozC3GZuPhKwdm5VWtBIZwM.png"
                                         alt=""
                                         style={css(
                                           'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:fill',
@@ -40717,7 +40717,7 @@ export default function HomePage() {
                                             decoding="async"
                                             width="80"
                                             height="80"
-                                            src="https://framerusercontent.com/images/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg?width=80&amp;height=80"
+                                            src="/assets/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg"
                                             alt=""
                                             style={css(
                                               'display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover',
