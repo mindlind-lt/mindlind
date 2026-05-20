@@ -37,7 +37,7 @@ export default function RootLayout({
         `}} />
 
         {/* Framer Scripts */}
-        <script type="module" async src="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/script_main.DJGiwIHr.mjs" />
+        <script type="module" async src="/assets/script_main.DJGiwIHr.mjs" />
       </body>
     </html>
   );
