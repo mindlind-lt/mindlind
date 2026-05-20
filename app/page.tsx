@@ -59081,7 +59081,7 @@ export default function HomePage() {
       <link
         rel="modulepreload"
         fetchPriority="low"
-        href="https://framerusercontent.com/sites/2ywEUwmRDo33r8wOKdPnrz/7AO7_qWIcH9MZWN-wQN_Zg7OKjMjiMI-UPMYZ6o6f7k.C6O0cuXa.mjs"
+        href="/assets/7AO7_qWIcH9MZWN-wQN_Zg7OKjMjiMI-UPMYZ6o6f7k.C6O0cuXa.mjs"
       />
       <link
         rel="modulepreload"
