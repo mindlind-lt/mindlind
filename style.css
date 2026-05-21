@@ -627,3 +627,25 @@
       line-gap-override: 0.00%;
       size-adjust: 98.29%
     }
+
+/* ===== Shared :root styles ===== */
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+:root {
+  --vimeo-background: var(--background-rgb)
+}
+
+@supports not (overflow:clip) {
+  :root {
+    --overflow-clip-fallback: hidden
+  }
+}
+
+@supports (corner-shape:superellipse(2)) {
+  :root {
+    --one-if-corner-shape-supported: 1
+  }
+}

@@ -61,10 +61,7 @@
       padding: 0
     }
 
-    :root {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale
-    }
+
 
     * {
       box-sizing: border-box;
@@ -280,11 +277,7 @@
       }
     }
 
-    @supports not (overflow:clip) {
-      :root {
-        --overflow-clip-fallback: hidden
-      }
-    }
+
 
     @supports (background:-webkit-named-image(i)) and (not (contain-intrinsic-size:inherit)) {
 
@@ -331,11 +324,7 @@
       }
     }
 
-    @supports (corner-shape:superellipse(2)) {
-      :root {
-        --one-if-corner-shape-supported: 1
-      }
-    }
+
 
     .framer-cursor-none,
     .framer-cursor-none * {
@@ -1657,11 +1646,7 @@
       scrollbar-width: none
     }
 
-    @supports not (overflow:clip) {
-      :root {
-        --overflow-clip-fallback: hidden
-      }
-    }
+
 
     .framer-lightbox-container {
       opacity: 1 !important;
@@ -1713,11 +1698,7 @@
       }
     }
 
-    @supports (corner-shape:superellipse(2)) {
-      :root {
-        --one-if-corner-shape-supported: 1
-      }
-    }
+
 
     @supports (aspect-ratio:1) {
       body {
@@ -3339,9 +3320,7 @@
     }
 
     @supports not (color:color(display-p3 1 1 1)) {
-      :root {
-        --vimeo-background: var(--background-rgb)
-      }
+
     }
 
     @supports (aspect-ratio:1) {
