@@ -60569,3 +60569,483 @@ html,
 			--framer-text-stroke-width: initial;
 			--framer-text-transform: uppercase
 		}
+
+
+/* === agency.html [attrs: data-framer-breakpoint-css] === */
+@media(min-width: 1200px) {
+            .hidden-1oqgkzr {
+                display: none !important
+            }
+        }
+
+        @media(min-width: 810px) and (max-width: 1199.98px) {
+            .hidden-13faj5l {
+                display: none !important
+            }
+        }
+
+        @media(max-width: 809.98px) {
+            .hidden-1g2g4bg {
+                display: none !important
+            }
+        }
+
+        @media(min-width: 1200px) {
+            .hidden-fvhyif {
+                display: none !important
+            }
+        }
+
+        @media(min-width: 810px) and (max-width: 1199.98px) {
+            .hidden-1viskko {
+                display: none !important
+            }
+        }
+
+        @media(max-width: 809.98px) {
+            .hidden-14ep8n1 {
+                display: none !important
+            }
+        }
+
+
+/* === agency.html [attrs: data-framer-html-style] === */
+:root body {
+                background: var(--token-8ad922bb-dfab-40e0-a635-5700a6b7bbd0, rgb(244, 244, 244));
+            }
+
+
+/* === agency.html [attrs: data-framer-html-style] === */
+html body {
+                        background: var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255));
+                    }
+
+
+/* === agency.html === */
+@media (pointer: fine) {
+                                                        .framer--carousel[data-show-scrollbar="false"]::-webkit-scrollbar {
+                                                            display: none;
+                                                            -webkit-appearance: none;
+                                                            width: 0;
+                                                            height: 0;
+                                                        }
+
+                                                        .framer--carousel[data-show-scrollbar="false"]::-webkit-scrollbar-thumb {
+                                                            display: none;
+                                                        }
+
+                                                        .framer--carousel[data-show-scrollbar="false"] {
+                                                            scrollbar-width: none;
+                                                            scrollbar-height: none;
+                                                        }
+                                                    }
+
+
+/* === blog.html [attrs: data-framer-breakpoint-css] === */
+@media(min-width: 1200px) {
+			.hidden-33dhgi {
+				display: none !important
+			}
+		}
+
+		@media(min-width: 810px) and (max-width: 1199.98px) {
+			.hidden-4dh54a {
+				display: none !important
+			}
+		}
+
+		@media(max-width: 809.98px) {
+			.hidden-1ket2x {
+				display: none !important
+			}
+		}
+
+		@media(min-width: 1200px) {
+			.hidden-fvhyif {
+				display: none !important
+			}
+		}
+
+		@media(min-width: 810px) and (max-width: 1199.98px) {
+			.hidden-1viskko {
+				display: none !important
+			}
+		}
+
+		@media(max-width: 809.98px) {
+			.hidden-14ep8n1 {
+				display: none !important
+			}
+		}
+
+
+/* === blog.html [attrs: data-framer-html-style] === */
+:root body {
+				background: var(--token-8ad922bb-dfab-40e0-a635-5700a6b7bbd0, rgb(244, 244, 244));
+			}
+
+
+/* === blog.html [attrs: data-framer-html-style] === */
+html body {
+						background: var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255));
+					}
+
+
+/* === blog/beyond-screens-and-interfaces.html [attrs: data-framer-breakpoint-css] === */
+@media(min-width: 1200px) {
+			.hidden-1bt0fe1 {
+				display: none !important
+			}
+		}
+
+		@media(min-width: 810px) and (max-width: 1199.98px) {
+			.hidden-1s4m657 {
+				display: none !important
+			}
+		}
+
+		@media(max-width: 809.98px) {
+			.hidden-11n9y1n {
+				display: none !important
+			}
+		}
+
+		@media(min-width: 1200px) {
+			.hidden-fvhyif {
+				display: none !important
+			}
+		}
+
+		@media(min-width: 810px) and (max-width: 1199.98px) {
+			.hidden-1viskko {
+				display: none !important
+			}
+		}
+
+		@media(max-width: 809.98px) {
+			.hidden-14ep8n1 {
+				display: none !important
+			}
+		}
+
+
+/* === contact.html [attrs: data-framer-breakpoint-css] === */
+@media(min-width: 1200px) {
+      .hidden-1mm9958 {
+        display: none !important
+      }
+    }
+
+    @media(min-width: 810px) and (max-width: 1199.98px) {
+      .hidden-mlap6i {
+        display: none !important
+      }
+    }
+
+    @media(max-width: 809.98px) {
+      .hidden-1mxonzb {
+        display: none !important
+      }
+    }
+
+    @media(min-width: 1200px) {
+      .hidden-fvhyif {
+        display: none !important
+      }
+    }
+
+    @media(min-width: 810px) and (max-width: 1199.98px) {
+      .hidden-1viskko {
+        display: none !important
+      }
+    }
+
+    @media(max-width: 809.98px) {
+      .hidden-14ep8n1 {
+        display: none !important
+      }
+    }
+
+
+/* === contact.html [attrs: data-framer-html-style] === */
+:root body {
+        background: var(--token-8ad922bb-dfab-40e0-a635-5700a6b7bbd0, rgb(244, 244, 244));
+      }
+
+
+/* === contact.html [attrs: data-framer-html-style] === */
+html body {
+            background: var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255));
+          }
+
+
+/* === contact.html === */
+.ffg-scene {
+                            position: relative;
+                            transform-style: preserve-3d
+                          }
+
+                          .ffg-ul {
+                            position: relative;
+                            transform-style: preserve-3d;
+                            list-style: none;
+                            padding: 0;
+                            margin: 0
+                          }
+
+                          .ffg-li {
+                            position: absolute;
+                            inset: 0;
+                            transform-style: preserve-3d;
+                            transform-origin: top center;
+                            will-change: transform;
+                          }
+
+                          .ffg-li.animating {
+                            animation: ffgTurn var(--dur) linear infinite;
+                          }
+
+                          .ffg-li::before,
+                          .ffg-li::after {
+                            content: &quot;
+                            &quot;
+                            ;
+                            position: absolute;
+                            inset: 0;
+                            border-radius: var(--radius);
+                            backface-visibility: hidden;
+                            -webkit-backface-visibility: hidden;
+                            overflow: hidden;
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            transform: rotate(var(--imgrot));
+                            background-image: var(--bg-img);
+                            background-color: var(--bg-col);
+                          }
+
+                          .ffg-li::after {
+                            transform: rotateX(180deg) rotate(var(--imgrot));
+                          }
+
+                          @keyframes ffgTurn {
+                            from {
+                              transform: rotateZ(90deg) rotateX(1turn);
+                            }
+
+                            to {
+                              transform: rotateZ(90deg) rotateX(0turn);
+                            }
+                          }
+
+
+/* === contact.html === */
+@keyframes spin {
+                                  to {
+                                    transform: rotate(360deg)
+                                  }
+                                }
+
+
+/* === index.html [attrs: data-framer-breakpoint-css] === */
+@media(min-width: 1200px) {
+      .hidden-72rtr7 {
+        display: none !important
+      }
+    }
+
+    @media(min-width: 810px) and (max-width: 1199.98px) {
+      .hidden-7wmc59 {
+        display: none !important
+      }
+    }
+
+    @media(max-width: 809.98px) {
+      .hidden-iigsnu {
+        display: none !important
+      }
+    }
+
+    @media(min-width: 1200px) {
+      .hidden-fvhyif {
+        display: none !important
+      }
+    }
+
+    @media(min-width: 810px) and (max-width: 1199.98px) {
+      .hidden-1viskko {
+        display: none !important
+      }
+    }
+
+    @media(max-width: 809.98px) {
+      .hidden-14ep8n1 {
+        display: none !important
+      }
+    }
+
+
+/* === index.html === */
+.texts-cloud-host {
+                              cursor: grab;
+                            }
+
+                            .texts-cloud-host.dragging {
+                              cursor: grabbing;
+                            }
+
+
+/* === index.html === */
+.ffg-scene {
+                                  position: relative;
+                                  transform-style: preserve-3d
+                                }
+
+                                .ffg-ul {
+                                  position: relative;
+                                  transform-style: preserve-3d;
+                                  list-style: none;
+                                  padding: 0;
+                                  margin: 0
+                                }
+
+                                .ffg-li {
+                                  position: absolute;
+                                  inset: 0;
+                                  transform-style: preserve-3d;
+                                  transform-origin: top center;
+                                  will-change: transform;
+                                }
+
+                                .ffg-li.animating {
+                                  animation: ffgTurn var(--dur) linear infinite;
+                                }
+
+                                .ffg-li::before,
+                                .ffg-li::after {
+                                  content: &quot;
+                                  &quot;
+                                  ;
+                                  position: absolute;
+                                  inset: 0;
+                                  border-radius: var(--radius);
+                                  backface-visibility: hidden;
+                                  -webkit-backface-visibility: hidden;
+                                  overflow: hidden;
+                                  background-position: center;
+                                  background-size: cover;
+                                  background-repeat: no-repeat;
+                                  transform: rotate(var(--imgrot));
+                                  background-image: var(--bg-img);
+                                  background-color: var(--bg-col);
+                                }
+
+                                .ffg-li::after {
+                                  transform: rotateX(180deg) rotate(var(--imgrot));
+                                }
+
+                                @keyframes ffgTurn {
+                                  from {
+                                    transform: rotateZ(90deg) rotateX(1turn);
+                                  }
+
+                                  to {
+                                    transform: rotateZ(90deg) rotateX(0turn);
+                                  }
+                                }
+
+
+/* === index.html === */
+@media (pointer: fine) {
+                                .framer--carousel[data-show-scrollbar="false"]::-webkit-scrollbar {
+                                  display: none;
+                                  -webkit-appearance: none;
+                                  width: 0;
+                                  height: 0;
+                                }
+
+                                .framer--carousel[data-show-scrollbar="false"]::-webkit-scrollbar-thumb {
+                                  display: none;
+                                }
+
+                                .framer--carousel[data-show-scrollbar="false"] {
+                                  scrollbar-width: none;
+                                  scrollbar-height: none;
+                                }
+                              }
+
+
+/* === projects.html [attrs: data-framer-breakpoint-css] === */
+@media(min-width: 1200px) {
+      .hidden-1anupbu {
+        display: none !important
+      }
+    }
+
+    @media(min-width: 810px) and (max-width: 1199.98px) {
+      .hidden-248fhn {
+        display: none !important
+      }
+    }
+
+    @media(max-width: 809.98px) {
+      .hidden-74tqiu {
+        display: none !important
+      }
+    }
+
+    @media(min-width: 1200px) {
+      .hidden-fvhyif {
+        display: none !important
+      }
+    }
+
+    @media(min-width: 810px) and (max-width: 1199.98px) {
+      .hidden-1viskko {
+        display: none !important
+      }
+    }
+
+    @media(max-width: 809.98px) {
+      .hidden-14ep8n1 {
+        display: none !important
+      }
+    }
+
+
+/* === projects/adamant-inc.html [attrs: data-framer-breakpoint-css] === */
+@media(min-width: 1200px) {
+			.hidden-17009su {
+				display: none !important
+			}
+		}
+
+		@media(min-width: 810px) and (max-width: 1199.98px) {
+			.hidden-1bg0chp {
+				display: none !important
+			}
+		}
+
+		@media(max-width: 809.98px) {
+			.hidden-qxlbtg {
+				display: none !important
+			}
+		}
+
+		@media(min-width: 1200px) {
+			.hidden-fvhyif {
+				display: none !important
+			}
+		}
+
+		@media(min-width: 810px) and (max-width: 1199.98px) {
+			.hidden-1viskko {
+				display: none !important
+			}
+		}
+
+		@media(max-width: 809.98px) {
+			.hidden-14ep8n1 {
+				display: none !important
+			}
+		}
