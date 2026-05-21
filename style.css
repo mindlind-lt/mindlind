@@ -702,23 +702,6 @@ html,
             --token-a1cc7f91-23b5-4601-9964-e95094747c32: #0003
         }
 
-        @supports (z-index:calc(infinity)) {
-            #__framer-badge-container {
-                --infinity: infinity
-            }
-        }
-
-        #__framer-badge-container {
-            pointer-events: none;
-            width: 100%;
-            z-index: calc(var(--infinity, 2147480000));
-            justify-content: flex-end;
-            padding: 20px;
-            display: flex;
-            position: fixed;
-            bottom: 0
-        }
-
         @supports (background:-webkit-named-image(i)) and (not (grid-template-rows:subgrid)) {
             body {
                 --framer-will-change-override: transform
@@ -7527,23 +7510,6 @@ html,
 			--token-a1cc7f91-23b5-4601-9964-e95094747c32: #0003
 		}
 
-		@supports (z-index:calc(infinity)) {
-			#__framer-badge-container {
-				--infinity: infinity
-			}
-		}
-
-		#__framer-badge-container {
-			pointer-events: none;
-			width: 100%;
-			z-index: calc(var(--infinity, 2147480000));
-			justify-content: flex-end;
-			padding: 20px;
-			display: flex;
-			position: fixed;
-			bottom: 0
-		}
-
 		@supports (background:-webkit-named-image(i)) and (not (grid-template-rows:subgrid)) {
 			body {
 				--framer-will-change-override: transform
@@ -12328,23 +12294,6 @@ html,
 			--token-6b3a7119-c62c-4cb8-bd78-a443b6f052a6: #fff3;
 			--token-d7269bca-97f8-4000-b143-5284031cccb5: #0006;
 			--token-a1cc7f91-23b5-4601-9964-e95094747c32: #0003
-		}
-
-		@supports (z-index:calc(infinity)) {
-			#__framer-badge-container {
-				--infinity: infinity
-			}
-		}
-
-		#__framer-badge-container {
-			pointer-events: none;
-			width: 100%;
-			z-index: calc(var(--infinity, 2147480000));
-			justify-content: flex-end;
-			padding: 20px;
-			display: flex;
-			position: fixed;
-			bottom: 0
 		}
 
 		@supports (background:-webkit-named-image(i)) and (not (grid-template-rows:subgrid)) {
@@ -17657,23 +17606,6 @@ html,
 			--token-a1cc7f91-23b5-4601-9964-e95094747c32: #0003
 		}
 
-		@supports (z-index:calc(infinity)) {
-			#__framer-badge-container {
-				--infinity: infinity
-			}
-		}
-
-		#__framer-badge-container {
-			pointer-events: none;
-			width: 100%;
-			z-index: calc(var(--infinity, 2147480000));
-			justify-content: flex-end;
-			padding: 20px;
-			display: flex;
-			position: fixed;
-			bottom: 0
-		}
-
 		@supports (background:-webkit-named-image(i)) and (not (grid-template-rows:subgrid)) {
 			body {
 				--framer-will-change-override: transform
@@ -22981,23 +22913,6 @@ html,
 			--token-6b3a7119-c62c-4cb8-bd78-a443b6f052a6: #fff3;
 			--token-d7269bca-97f8-4000-b143-5284031cccb5: #0006;
 			--token-a1cc7f91-23b5-4601-9964-e95094747c32: #0003
-		}
-
-		@supports (z-index:calc(infinity)) {
-			#__framer-badge-container {
-				--infinity: infinity
-			}
-		}
-
-		#__framer-badge-container {
-			pointer-events: none;
-			width: 100%;
-			z-index: calc(var(--infinity, 2147480000));
-			justify-content: flex-end;
-			padding: 20px;
-			display: flex;
-			position: fixed;
-			bottom: 0
 		}
 
 		@supports (background:-webkit-named-image(i)) and (not (grid-template-rows:subgrid)) {
@@ -28349,23 +28264,6 @@ html,
       --token-a1cc7f91-23b5-4601-9964-e95094747c32: #0003
     }
 
-    @supports (z-index:calc(infinity)) {
-      #__framer-badge-container {
-        --infinity: infinity
-      }
-    }
-
-    #__framer-badge-container {
-      pointer-events: none;
-      width: 100%;
-      z-index: calc(var(--infinity, 2147480000));
-      justify-content: flex-end;
-      padding: 20px;
-      display: flex;
-      position: fixed;
-      bottom: 0
-    }
-
     @supports (background:-webkit-named-image(i)) and (not (grid-template-rows:subgrid)) {
       body {
         --framer-will-change-override: transform
@@ -33514,23 +33412,6 @@ html,
       --token-6b3a7119-c62c-4cb8-bd78-a443b6f052a6: #fff3;
       --token-d7269bca-97f8-4000-b143-5284031cccb5: #0006;
       --token-a1cc7f91-23b5-4601-9964-e95094747c32: #0003
-    }
-
-    @supports (z-index:calc(infinity)) {
-      #__framer-badge-container {
-        --infinity: infinity
-      }
-    }
-
-    #__framer-badge-container {
-      pointer-events: none;
-      width: 100%;
-      z-index: calc(var(--infinity, 2147480000));
-      justify-content: flex-end;
-      padding: 20px;
-      display: flex;
-      position: fixed;
-      bottom: 0
     }
 
     @supports (background:-webkit-named-image(i)) and (not (grid-template-rows:subgrid)) {
@@ -43142,23 +43023,6 @@ html,
       --token-a1cc7f91-23b5-4601-9964-e95094747c32: #0003
     }
 
-    @supports (z-index:calc(infinity)) {
-      #__framer-badge-container {
-        --infinity: infinity
-      }
-    }
-
-    #__framer-badge-container {
-      pointer-events: none;
-      width: 100%;
-      z-index: calc(var(--infinity, 2147480000));
-      justify-content: flex-end;
-      padding: 20px;
-      display: flex;
-      position: fixed;
-      bottom: 0
-    }
-
     @supports (background:-webkit-named-image(i)) and (not (grid-template-rows:subgrid)) {
       body {
         --framer-will-change-override: transform
@@ -47828,23 +47692,6 @@ html,
 			--token-6b3a7119-c62c-4cb8-bd78-a443b6f052a6: #fff3;
 			--token-d7269bca-97f8-4000-b143-5284031cccb5: #0006;
 			--token-a1cc7f91-23b5-4601-9964-e95094747c32: #0003
-		}
-
-		@supports (z-index:calc(infinity)) {
-			#__framer-badge-container {
-				--infinity: infinity
-			}
-		}
-
-		#__framer-badge-container {
-			pointer-events: none;
-			width: 100%;
-			z-index: calc(var(--infinity, 2147480000));
-			justify-content: flex-end;
-			padding: 20px;
-			display: flex;
-			position: fixed;
-			bottom: 0
 		}
 
 		@supports (background:-webkit-named-image(i)) and (not (grid-template-rows:subgrid)) {
@@ -54222,23 +54069,6 @@ html,
 			--token-6b3a7119-c62c-4cb8-bd78-a443b6f052a6: #fff3;
 			--token-d7269bca-97f8-4000-b143-5284031cccb5: #0006;
 			--token-a1cc7f91-23b5-4601-9964-e95094747c32: #0003
-		}
-
-		@supports (z-index:calc(infinity)) {
-			#__framer-badge-container {
-				--infinity: infinity
-			}
-		}
-
-		#__framer-badge-container {
-			pointer-events: none;
-			width: 100%;
-			z-index: calc(var(--infinity, 2147480000));
-			justify-content: flex-end;
-			padding: 20px;
-			display: flex;
-			position: fixed;
-			bottom: 0
 		}
 
 		@supports (background:-webkit-named-image(i)) and (not (grid-template-rows:subgrid)) {
