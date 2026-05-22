@@ -204,7 +204,7 @@ var Te,
 			(function (e) {
 				((e.Video = `Upload`), (e.Url = `URL`));
 			})((Ee ||= {})),
-			(De = `https://framerusercontent.com/assets/MLWPbW1dUQawJLhhun3dBwpgJak.mp4`),
+			(De = `/assets/MLWPbW1dUQawJLhhun3dBwpgJak.mp4`),
 			(Oe = l(function (e) {
 				let {
 						srcType: t = `URL`,
@@ -338,7 +338,7 @@ var Te,
 									: `metadata`,
 						poster:
 							o && !i && n === De
-								? `https://framerusercontent.com/images/5ILRvlYXf72kHSVHqpa3snGzjU.jpg`
+								? `/assets/5ILRvlYXf72kHSVHqpa3snGzjU.jpg`
 								: o && b
 									? b
 									: void 0,
@@ -381,7 +381,7 @@ var Te,
 				srcUrl: {
 					type: j.String,
 					title: `URL`,
-					defaultValue: `https://framerusercontent.com/assets/MLWPbW1dUQawJLhhun3dBwpgJak.mp4`,
+					defaultValue: `/assets/MLWPbW1dUQawJLhhun3dBwpgJak.mp4`,
 					hidden(e) {
 						return e.srcType === `Upload`;
 					},
@@ -812,7 +812,7 @@ var Fe,
 						alt: ``,
 						pixelHeight: 800,
 						pixelWidth: 404,
-						src: `https://framerusercontent.com/images/F3t96ozC3GZuPhKwdm5VWtBIZwM.png?width=404&height=800`,
+						src: `/assets/images/F3t96ozC3GZuPhKwdm5VWtBIZwM.png?width=404&height=800`,
 					},
 				cEhJlWBK4: _ ?? v.cEhJlWBK4 ?? `Start a Project`,
 				GMQy3HIPj: p ?? v.GMQy3HIPj ?? !0,
@@ -825,13 +825,13 @@ var Fe,
 					v.HKlwjP8vx ?? {
 						pixelHeight: 80,
 						pixelWidth: 80,
-						src: `https://framerusercontent.com/images/Nr8WBl4pdjZi5MeNkf7kGHBknbU.jpg?width=80&height=80`,
+						src: `/assets/images/Nr8WBl4pdjZi5MeNkf7kGHBknbU.jpg`,
 					},
 				HsSgj7Fyw: l ??
 					v.HsSgj7Fyw ?? {
 						pixelHeight: 80,
 						pixelWidth: 80,
-						src: `https://framerusercontent.com/images/DblzQDsny541TSzeqAcowdaAXZk.jpg?width=80&height=80`,
+						src: `/assets/images/DblzQDsny541TSzeqAcowdaAXZk.jpg`,
 					},
 				IdibjBtEd: ee ?? v.IdibjBtEd,
 				IMKZ9o7BF:
@@ -844,7 +844,7 @@ var Fe,
 					v.oyIra8aSp ?? {
 						pixelHeight: 80,
 						pixelWidth: 80,
-						src: `https://framerusercontent.com/images/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg?width=80&height=80`,
+						src: `/assets/images/9GOx4VTT9JaOZMAJy4GdCXy3I.jpg`,
 					},
 				QaFXteMmg: s ?? v.QaFXteMmg ?? `Kate W.`,
 				rOuEaS47u: m ?? v.rOuEaS47u ?? !0,
@@ -854,7 +854,7 @@ var Fe,
 					v.xlBFJM_OF ?? {
 						pixelHeight: 80,
 						pixelWidth: 80,
-						src: `https://framerusercontent.com/images/rZeWINetTprjwMqCAeMugLOkjU.jpg?width=80&height=80`,
+						src: `/assets/images/rZeWINetTprjwMqCAeMugLOkjU.jpg`,
 					},
 			})),
 			(Ye = (e, t) =>
@@ -1285,7 +1285,7 @@ var Fe,
 																			srcFile:
 																				I,
 																			srcType: `Upload`,
-																			srcUrl: `https://framerusercontent.com/assets/MLWPbW1dUQawJLhhun3dBwpgJak.mp4`,
+																			srcUrl: `/assets/MLWPbW1dUQawJLhhun3dBwpgJak.mp4`,
 																			startTime: 0,
 																			style: {
 																				height: `100%`,

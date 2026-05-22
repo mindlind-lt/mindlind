@@ -1879,7 +1879,7 @@ var X,
 						chunks: [
 							new URL(
 								`./i1I6pp4ds-chunk-default-0.framercms`,
-								`https://framerusercontent.com/modules/59oV1j7R2SkdKqNrPl4p/rJdu82KM1UL0HfOnlmeh/i1I6pp4ds.js`,
+								`/assets/js/i1I6pp4ds.js`,
 							).href.replace(`/modules/`, `/cms/`),
 						],
 						indexes: [],
