@@ -1,4 +1,74 @@
-import{t as e}from"./rolldown-runtime.DsXBSD_B.mjs";import{I as t,P as n,T as r,V as i,c as a,k as o,l as s,o as c,z as l}from"./react.CQg9dmOM.mjs";import{A as u,X as d,a as f,w as p}from"./framer.OLO5kSrG.mjs";function m(e){let{images:r=[],count:c=Math.max(8,r.length||16),scrollSpeed:l=.8,spinDeg:u=24,phaseStepDeg:d=10,spacing:f=56,cardW:m=180,cardH:g=220,radius:_=18,curveAmp:v=120,angleDeg:y=-12,tiltYdeg:b=8,camYawDeg:x=12,camPitchDeg:S=-6,camRollDeg:C=0,camDist:w=900,camFovDeg:T=32,camTargetX:E=0,camTargetY:D=0,camTargetZ:O=0,stopMotionInEditor:k=!1}=e,A=o(null),j=o(null),M=o(null),[N,P]=t(r.length>0),[F,I]=t(r.length>0?1:100),L=o(null),R=o(0),z=()=>Math.min(i.devicePixelRatio||1,1.5),B=()=>{let e=!!k&&p.current()===p.canvas;return{count:c,scrollSpeed:e?0:l,spinDeg:e?0:u,phaseStepDeg:d,spacing:f,cardW:m,cardH:g,radius:_,curveAmp:v,angleDeg:y,tiltYdeg:b,camYawDeg:x,camPitchDeg:S,camRollDeg:C,camDist:w,camFovDeg:T,camTargetX:E,camTargetY:D,camTargetZ:O}},V=()=>{let e=String.raw`
+import { t as e } from "./rolldown-runtime.DsXBSD_B.mjs";
+import {
+	I as t,
+	P as n,
+	T as r,
+	V as i,
+	c as a,
+	k as o,
+	l as s,
+	o as c,
+	z as l,
+} from "./react.CQg9dmOM.mjs";
+import { A as u, X as d, a as f, w as p } from "./framer.OLO5kSrG.mjs";
+function m(e) {
+	let {
+			images: r = [],
+			count: c = Math.max(8, r.length || 16),
+			scrollSpeed: l = 0.8,
+			spinDeg: u = 24,
+			phaseStepDeg: d = 10,
+			spacing: f = 56,
+			cardW: m = 180,
+			cardH: g = 220,
+			radius: _ = 18,
+			curveAmp: v = 120,
+			angleDeg: y = -12,
+			tiltYdeg: b = 8,
+			camYawDeg: x = 12,
+			camPitchDeg: S = -6,
+			camRollDeg: C = 0,
+			camDist: w = 900,
+			camFovDeg: T = 32,
+			camTargetX: E = 0,
+			camTargetY: D = 0,
+			camTargetZ: O = 0,
+			stopMotionInEditor: k = !1,
+		} = e,
+		A = o(null),
+		j = o(null),
+		M = o(null),
+		[N, P] = t(r.length > 0),
+		[F, I] = t(r.length > 0 ? 1 : 100),
+		L = o(null),
+		R = o(0),
+		z = () => Math.min(i.devicePixelRatio || 1, 1.5),
+		B = () => {
+			let e = !!k && p.current() === p.canvas;
+			return {
+				count: c,
+				scrollSpeed: e ? 0 : l,
+				spinDeg: e ? 0 : u,
+				phaseStepDeg: d,
+				spacing: f,
+				cardW: m,
+				cardH: g,
+				radius: _,
+				curveAmp: v,
+				angleDeg: y,
+				tiltYdeg: b,
+				camYawDeg: x,
+				camPitchDeg: S,
+				camRollDeg: C,
+				camDist: w,
+				camFovDeg: T,
+				camTargetX: E,
+				camTargetY: D,
+				camTargetZ: O,
+			};
+		},
+		V = () => {
+			let e = String.raw`
       import * as THREE from ${JSON.stringify(h)}
 
       /** @typedef {{group:THREE.Group, front:THREE.Mesh, u:number, imgIdx:number}} Item */
@@ -366,5 +436,309 @@ import{t as e}from"./rolldown-runtime.DsXBSD_B.mjs";import{I as t,P as n,T as r,
           postReady()
         }
       }
-    `,t=new Blob([e],{type:`text/javascript`});return URL.createObjectURL(t)};return n(()=>{if(!N){L.current!=null&&cancelAnimationFrame(L.current),L.current=null;return}I(e=>Math.max(e,1)),R.current=performance.now();let e=t=>{let n=Math.min(.2,(t-R.current)/1e3);R.current=t,I(e=>Math.min(96,e+30*n)),L.current=requestAnimationFrame(e)};return L.current=requestAnimationFrame(e),()=>{L.current!=null&&cancelAnimationFrame(L.current),L.current=null}},[N]),n(()=>{let e=A.current;if(!e)return;j.current?.terminate(),j.current=null,M.current?.disconnect(),e.innerHTML=``;let t=document.createElement(`canvas`);if(t.style.width=`100%`,t.style.height=`100%`,e.appendChild(t),!(typeof t.transferControlToOffscreen==`function`&&typeof Worker<`u`)){let t=document.createElement(`div`);t.style.cssText=`position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#9aa0a6;font:12px system-ui`,t.textContent=`OffscreenCanvas not supported in this browser.`,e.appendChild(t),P(!1),I(100);return}r.length>0?(P(!0),I(1)):(P(!1),I(100));let n=t.transferControlToOffscreen(),i=V(),a=new Worker(i,{type:`module`});j.current=a;let o=e=>{let t=e.data;!t||!(`type`in t)||t.type!==`progress`&&t.type===`ready`&&(L.current!=null&&cancelAnimationFrame(L.current),L.current=null,I(100),P(!1))};a.addEventListener(`message`,o);let s={type:`init`,canvas:n,size:{w:Math.max(1,e.clientWidth||600),h:Math.max(1,e.clientHeight||400)},dpr:z(),props:B(),images:r||[]};a.postMessage(s,[n]);let c=new ResizeObserver(()=>{let t={type:`resize`,size:{w:Math.max(1,e.clientWidth||600),h:Math.max(1,e.clientHeight||400)},dpr:z()};a.postMessage(t)});return c.observe(e),M.current=c,()=>{c.disconnect(),a.removeEventListener(`message`,o),a.terminate(),URL.revokeObjectURL(i),e.innerHTML=``}},[]),n(()=>{let e=j.current;if(!e)return;let t={type:`props`,props:B()};e.postMessage(t)},[c,l,u,d,f,m,g,_,v,y,b,x,S,C,w,T,E,D,O,k]),n(()=>{let e=j.current;if(!e)return;r&&r.length>0?(P(!0),I(1)):(P(!1),I(100));let t={type:`images`,images:r||[]};e.postMessage(t)},[r]),s(`div`,{style:{width:`100%`,height:`100%`,position:`relative`,overflow:`visible`},children:[a(`div`,{ref:A,style:{position:`absolute`,inset:0}}),N&&a(`div`,{"aria-live":`polite`,style:{position:`absolute`,inset:0,display:`grid`,placeItems:`center`,pointerEvents:`none`,background:`transparent`,fontFamily:`Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif`,fontWeight:400,fontSize:12,color:`#262626`,lineHeight:1,userSelect:`none`,textRendering:`optimizeLegibility`},children:a(`span`,{children:`Loading: ${Math.max(0,Math.min(100,Math.round(F)))}%`})})]})}var h,g=e((()=>{l(),c(),r(),d(),h=`https://unpkg.com/three@0.160.0/build/three.module.js`,u(m,{stopMotionInEditor:{type:f.Boolean,title:`Stop Motion in Editor`,defaultValue:!1},images:{type:f.Array,title:`Images`,propertyControl:{type:f.Image}},count:{type:f.Number,title:`Count`,min:2,max:200,step:1},scrollSpeed:{type:f.Number,title:`Scroll`,min:-2,max:2,step:.01},spinDeg:{type:f.Number,title:`Spin °/s`,min:0,max:180,step:.5},phaseStepDeg:{type:f.Number,title:`Phase °`,min:0,max:90,step:.5},spacing:{type:f.Number,title:`Spacing`,min:24,max:300,step:1},cardW:{type:f.Number,title:`Card W`,min:40,max:600,step:1},cardH:{type:f.Number,title:`Card H`,min:40,max:800,step:1},radius:{type:f.Number,title:`Radius`,min:0,max:200,step:1},curveAmp:{type:f.Number,title:`Curve Amp`,min:0,max:400,step:1},angleDeg:{type:f.Number,title:`Angle°`,min:-45,max:45,step:1},tiltYdeg:{type:f.Number,title:`Tilt Y°`,min:-60,max:60,step:.5},camYawDeg:{type:f.Number,title:`Cam Yaw°`,min:-180,max:180,step:1},camPitchDeg:{type:f.Number,title:`Cam Pitch°`,min:-85,max:85,step:1},camRollDeg:{type:f.Number,title:`Cam Roll°`,min:-180,max:180,step:1},camDist:{type:f.Number,title:`Cam Dist`,min:200,max:3e3,step:10},camFovDeg:{type:f.Number,title:`Cam FOV°`,min:10,max:90,step:1},camTargetX:{type:f.Number,title:`Target X`,min:-2e3,max:2e3,step:1},camTargetY:{type:f.Number,title:`Target Y`,min:-2e3,max:2e3,step:1},camTargetZ:{type:f.Number,title:`Target Z`,min:-2e3,max:2e3,step:1}})}));export{g as n,m as t};
+    `,
+				t = new Blob([e], { type: `text/javascript` });
+			return URL.createObjectURL(t);
+		};
+	return (
+		n(() => {
+			if (!N) {
+				(L.current != null && cancelAnimationFrame(L.current),
+					(L.current = null));
+				return;
+			}
+			(I((e) => Math.max(e, 1)), (R.current = performance.now()));
+			let e = (t) => {
+				let n = Math.min(0.2, (t - R.current) / 1e3);
+				((R.current = t),
+					I((e) => Math.min(96, e + 30 * n)),
+					(L.current = requestAnimationFrame(e)));
+			};
+			return (
+				(L.current = requestAnimationFrame(e)),
+				() => {
+					(L.current != null && cancelAnimationFrame(L.current),
+						(L.current = null));
+				}
+			);
+		}, [N]),
+		n(() => {
+			let e = A.current;
+			if (!e) return;
+			(j.current?.terminate(),
+				(j.current = null),
+				M.current?.disconnect(),
+				(e.innerHTML = ``));
+			let t = document.createElement(`canvas`);
+			if (
+				((t.style.width = `100%`),
+				(t.style.height = `100%`),
+				e.appendChild(t),
+				!(
+					typeof t.transferControlToOffscreen == `function` &&
+					typeof Worker < `u`
+				))
+			) {
+				let t = document.createElement(`div`);
+				((t.style.cssText = `position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#9aa0a6;font:12px system-ui`),
+					(t.textContent = `OffscreenCanvas not supported in this browser.`),
+					e.appendChild(t),
+					P(!1),
+					I(100));
+				return;
+			}
+			r.length > 0 ? (P(!0), I(1)) : (P(!1), I(100));
+			let n = t.transferControlToOffscreen(),
+				i = V(),
+				a = new Worker(i, { type: `module` });
+			j.current = a;
+			let o = (e) => {
+				let t = e.data;
+				!t ||
+					!(`type` in t) ||
+					(t.type !== `progress` &&
+						t.type === `ready` &&
+						(L.current != null && cancelAnimationFrame(L.current),
+						(L.current = null),
+						I(100),
+						P(!1)));
+			};
+			a.addEventListener(`message`, o);
+			let s = {
+				type: `init`,
+				canvas: n,
+				size: {
+					w: Math.max(1, e.clientWidth || 600),
+					h: Math.max(1, e.clientHeight || 400),
+				},
+				dpr: z(),
+				props: B(),
+				images: r || [],
+			};
+			a.postMessage(s, [n]);
+			let c = new ResizeObserver(() => {
+				let t = {
+					type: `resize`,
+					size: {
+						w: Math.max(1, e.clientWidth || 600),
+						h: Math.max(1, e.clientHeight || 400),
+					},
+					dpr: z(),
+				};
+				a.postMessage(t);
+			});
+			return (
+				c.observe(e),
+				(M.current = c),
+				() => {
+					(c.disconnect(),
+						a.removeEventListener(`message`, o),
+						a.terminate(),
+						URL.revokeObjectURL(i),
+						(e.innerHTML = ``));
+				}
+			);
+		}, []),
+		n(() => {
+			let e = j.current;
+			if (!e) return;
+			let t = { type: `props`, props: B() };
+			e.postMessage(t);
+		}, [c, l, u, d, f, m, g, _, v, y, b, x, S, C, w, T, E, D, O, k]),
+		n(() => {
+			let e = j.current;
+			if (!e) return;
+			r && r.length > 0 ? (P(!0), I(1)) : (P(!1), I(100));
+			let t = { type: `images`, images: r || [] };
+			e.postMessage(t);
+		}, [r]),
+		s(`div`, {
+			style: {
+				width: `100%`,
+				height: `100%`,
+				position: `relative`,
+				overflow: `visible`,
+			},
+			children: [
+				a(`div`, { ref: A, style: { position: `absolute`, inset: 0 } }),
+				N &&
+					a(`div`, {
+						"aria-live": `polite`,
+						style: {
+							position: `absolute`,
+							inset: 0,
+							display: `grid`,
+							placeItems: `center`,
+							pointerEvents: `none`,
+							background: `transparent`,
+							fontFamily: `Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif`,
+							fontWeight: 400,
+							fontSize: 12,
+							color: `#262626`,
+							lineHeight: 1,
+							userSelect: `none`,
+							textRendering: `optimizeLegibility`,
+						},
+						children: a(`span`, {
+							children: `Loading: ${Math.max(0, Math.min(100, Math.round(F)))}%`,
+						}),
+					}),
+			],
+		})
+	);
+}
+var h,
+	g = e(() => {
+		(l(),
+			c(),
+			r(),
+			d(),
+			(h = `https://unpkg.com/three@0.160.0/build/three.module.js`),
+			u(m, {
+				stopMotionInEditor: {
+					type: f.Boolean,
+					title: `Stop Motion in Editor`,
+					defaultValue: !1,
+				},
+				images: {
+					type: f.Array,
+					title: `Images`,
+					propertyControl: { type: f.Image },
+				},
+				count: {
+					type: f.Number,
+					title: `Count`,
+					min: 2,
+					max: 200,
+					step: 1,
+				},
+				scrollSpeed: {
+					type: f.Number,
+					title: `Scroll`,
+					min: -2,
+					max: 2,
+					step: 0.01,
+				},
+				spinDeg: {
+					type: f.Number,
+					title: `Spin °/s`,
+					min: 0,
+					max: 180,
+					step: 0.5,
+				},
+				phaseStepDeg: {
+					type: f.Number,
+					title: `Phase °`,
+					min: 0,
+					max: 90,
+					step: 0.5,
+				},
+				spacing: {
+					type: f.Number,
+					title: `Spacing`,
+					min: 24,
+					max: 300,
+					step: 1,
+				},
+				cardW: {
+					type: f.Number,
+					title: `Card W`,
+					min: 40,
+					max: 600,
+					step: 1,
+				},
+				cardH: {
+					type: f.Number,
+					title: `Card H`,
+					min: 40,
+					max: 800,
+					step: 1,
+				},
+				radius: {
+					type: f.Number,
+					title: `Radius`,
+					min: 0,
+					max: 200,
+					step: 1,
+				},
+				curveAmp: {
+					type: f.Number,
+					title: `Curve Amp`,
+					min: 0,
+					max: 400,
+					step: 1,
+				},
+				angleDeg: {
+					type: f.Number,
+					title: `Angle°`,
+					min: -45,
+					max: 45,
+					step: 1,
+				},
+				tiltYdeg: {
+					type: f.Number,
+					title: `Tilt Y°`,
+					min: -60,
+					max: 60,
+					step: 0.5,
+				},
+				camYawDeg: {
+					type: f.Number,
+					title: `Cam Yaw°`,
+					min: -180,
+					max: 180,
+					step: 1,
+				},
+				camPitchDeg: {
+					type: f.Number,
+					title: `Cam Pitch°`,
+					min: -85,
+					max: 85,
+					step: 1,
+				},
+				camRollDeg: {
+					type: f.Number,
+					title: `Cam Roll°`,
+					min: -180,
+					max: 180,
+					step: 1,
+				},
+				camDist: {
+					type: f.Number,
+					title: `Cam Dist`,
+					min: 200,
+					max: 3e3,
+					step: 10,
+				},
+				camFovDeg: {
+					type: f.Number,
+					title: `Cam FOV°`,
+					min: 10,
+					max: 90,
+					step: 1,
+				},
+				camTargetX: {
+					type: f.Number,
+					title: `Target X`,
+					min: -2e3,
+					max: 2e3,
+					step: 1,
+				},
+				camTargetY: {
+					type: f.Number,
+					title: `Target Y`,
+					min: -2e3,
+					max: 2e3,
+					step: 1,
+				},
+				camTargetZ: {
+					type: f.Number,
+					title: `Target Z`,
+					min: -2e3,
+					max: 2e3,
+					step: 1,
+				},
+			}));
+	});
+export { g as n, m as t };
 //# sourceMappingURL=TwistGallery.BdHZOo8V.mjs.map
