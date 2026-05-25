@@ -1239,7 +1239,7 @@ var Ge,
 											layoutDependency: z,
 											layoutId: `NlRrfLDXm`,
 											children: i(ne, {
-												action: `https://api.framer.com/forms/v1/forms/1e80838a-39de-4cdc-9ed9-9df79a6e782b/submit`,
+												action: ``,
 												className: `framer-vm7dx1`,
 												layoutDependency: z,
 												layoutId: `wfo4RF9iU`,
