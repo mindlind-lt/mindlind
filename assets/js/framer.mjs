@@ -7431,8 +7431,9 @@ function Od() {
 				o = a && a.dataset[Ww] !== void 0;
 			if (i && o) return;
 			let { getSnippets: s, snippetsSorting: c } =
-					await e.readMaybeAsync(),
-				l = await s(t, n, r);
+					await e.readMaybeAsync();
+			if (typeof s !== 'function') return;
+			let l = await s(t, n, r);
 			for (let e in l) {
 				let t = e,
 					n = l[t],
