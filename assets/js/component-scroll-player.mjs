@@ -1174,10 +1174,10 @@ function Lt({
 	}
 	let Ye =
 			ke ||
-			`https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg`,
+			`/assets/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg`,
 		Xe =
 			Ae ||
-			`https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg`;
+			`/assets/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg`;
 	return h(`section`, {
 		style: Be,
 		...He,

@@ -141,8 +141,7 @@ var it,
 						alt: ``,
 						pixelHeight: 1e3,
 						pixelWidth: 1e3,
-						src: `https://framerusercontent.com/images/MUAILEacVzJgHCh4jb8TThY1HA.png?scale-down-to=512&width=1000&height=1000`,
-						srcSet: `https://framerusercontent.com/images/MUAILEacVzJgHCh4jb8TThY1HA.png?scale-down-to=512&width=1000&height=1000 512w,https://framerusercontent.com/images/MUAILEacVzJgHCh4jb8TThY1HA.png?width=1000&height=1000 1000w`,
+						src: `/assets/images/MUAILEacVzJgHCh4jb8TThY1HA.png`,
 					},
 				RqhoLhdJv:
 					e ?? o.RqhoLhdJv ?? `Scan QR-code on smartphone and check.`,
@@ -3349,24 +3348,20 @@ e(() => {
 													children: i(Xe, {
 														height: `100%`,
 														id: `os0ojwl0Y`,
-														j3RW8NS6C: `Start
-a Project`,
-														kZYrX9giG: `Tell to our manager about the goal.
-We’ll reply with scope and timeline.`,
+														j3RW8NS6C: `Start a Project`,
+														kZYrX9giG: `Tell to our manager about the goal. We’ll reply with scope and timeline.`,
 														layoutId: `os0ojwl0Y`,
 														style: {
 															width: `100%`,
 														},
 														variant: Q(`BKQiC5z2f`),
-														W6BjriyYG: `Kate
-Wilington`,
+														W6BjriyYG: `Kate Wilington`,
 														width: `100%`,
 														xPVCPlZSm: ln(
 															{
 																pixelHeight: 668,
 																pixelWidth: 612,
-																src: `https://framerusercontent.com/images/2YL516FViaQR5PQUdsoIvoMjdc.png?width=612&height=668`,
-																srcSet: `https://framerusercontent.com/images/2YL516FViaQR5PQUdsoIvoMjdc.png?width=612&height=668 612w`,
+																src: `/assets/images/2YL516FViaQR5PQUdsoIvoMjdc.png`,
 															},
 															``,
 														),
