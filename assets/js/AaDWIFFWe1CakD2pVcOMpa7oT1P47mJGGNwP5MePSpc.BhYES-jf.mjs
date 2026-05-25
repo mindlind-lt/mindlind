@@ -1685,10 +1685,7 @@ Values:
 				scanItems() {
 					return (
 						(this.itemsPromise ??= Fr(this.url).then(async (e) => {
-							if (!e.ok)
-								throw Error(
-									`Request failed: ${e.status} ${e.statusText}`,
-								);
+							if (!e.ok) { if (e.status === 404) return []; throw Error(`Request failed: ${e.status} ${e.statusText}`); }
 							let t = await e.arrayBuffer(),
 								n = new Or(new Uint8Array(t)),
 								r = [],
@@ -1879,7 +1876,7 @@ var X,
 						chunks: [
 							new URL(
 								`./i1I6pp4ds-chunk-default-0.framercms`,
-								`/assets/js/i1I6pp4ds.js`,
+								location.origin + `/assets/js/i1I6pp4ds.js`,
 							).href.replace(`/modules/`, `/cms/`),
 						],
 						indexes: [],
