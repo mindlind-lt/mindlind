@@ -1,0 +1,41 @@
+import { t as e } from "./rolldown-runtime.mjs";
+import { n as t, t as n } from "./shared-lib.mjs";
+function r(e, n) {
+	return {
+		breakpoints: [
+			{ hash: `1anupbu`, mediaQuery: `(min-width: 1200px)` },
+			{
+				hash: `248fhn`,
+				mediaQuery: `(min-width: 810px) and (max-width: 1199.98px)`,
+			},
+			{ hash: `74tqiu`, mediaQuery: `(max-width: 809.98px)` },
+		],
+		description: t(e, n).description,
+		elements: {},
+		robots: `max-image-preview:large`,
+		serializationId: `framer-Gcne3`,
+		title: t(e, n).title || `Projects`,
+		viewport: `width=device-width`,
+	};
+}
+var i,
+	a,
+	o = e(() => {
+		(n(),
+			(i = 1),
+			(a = {
+				exports: {
+					metadataVersion: {
+						type: `variable`,
+						annotations: { framerContractVersion: `1` },
+					},
+					default: {
+						type: `function`,
+						annotations: { framerContractVersion: `1` },
+					},
+					__FramerMetadata__: { type: `variable` },
+				},
+			}));
+	});
+export { i, o as n, r, a as t };
+//# sourceMappingURL=page-projects.mjs.map
