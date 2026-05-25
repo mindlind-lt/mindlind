@@ -60103,15 +60103,6 @@ e(() => {
 		let e = document.getElementById(`main`);
 		`framerHydrateV2` in e.dataset ? xV(!0, e) : xV(!1, e);
 	}
-	(function () {
-		EV &&
-			u(() => {
-				T(
-					document.getElementById(`__framer-badge-container`),
-					ee(y, {}, ee(S(() => import(`./PX9hIOIVM.DShlzKC5.mjs`)))),
-				);
-			});
-	})();
 })();
 export { vV as getLayoutTemplateBreakpoints, yV as getPageRoot };
 //# sourceMappingURL=script_main.BlVkdMv-.mjs.map
