@@ -2048,8 +2048,7 @@ var Wt,
 				mBMR2ZX6p:
 					e ??
 					C.mBMR2ZX6p ??
-					`United Kingdom
-27 Whitfield Yard, Shoreditch, London E2 7NX`,
+					`United Kingdom 27 Whitfield Yard, Shoreditch, London E2 7NX`,
 				mDq8aipvo: u ?? C.mDq8aipvo,
 				MGASvD8yt: f ?? C.MGASvD8yt,
 				p37vUF_Ml: p ?? C.p37vUF_Ml ?? !0,

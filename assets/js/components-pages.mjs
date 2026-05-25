@@ -23786,7 +23786,7 @@ var cp,
 																								{
 																									pixelHeight: 223,
 																									pixelWidth: 234,
-																									src: `https://framerusercontent.com/images/2LNXYiAniIfhsviVxeWmASxL8gs.png?width=234&height=223`,
+																									src: `/assets/images/2LNXYiAniIfhsviVxeWmASxL8gs.png`,
 																								},
 																								``,
 																							),
@@ -24370,8 +24370,7 @@ e(() => {
 															{
 																pixelHeight: 1672,
 																pixelWidth: 3032,
-																src: `https://framerusercontent.com/images/bkeTimPti7XlErXV4jwwjfiyBWM.jpg?width=3032&height=1672`,
-																srcSet: `https://framerusercontent.com/images/bkeTimPti7XlErXV4jwwjfiyBWM.jpg?scale-down-to=512&width=3032&height=1672 512w,https://framerusercontent.com/images/bkeTimPti7XlErXV4jwwjfiyBWM.jpg?scale-down-to=1024&width=3032&height=1672 1024w,https://framerusercontent.com/images/bkeTimPti7XlErXV4jwwjfiyBWM.jpg 2048w,https://framerusercontent.com/images/bkeTimPti7XlErXV4jwwjfiyBWM.jpg?width=3032&height=1672 3032w`,
+																src: `/assets/images/bkeTimPti7XlErXV4jwwjfiyBWM.jpg`,
 															},
 															``,
 														),
