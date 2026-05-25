@@ -50870,8 +50870,8 @@ var wL,
 												layoutDependency: T,
 												layoutId: `ELU0HoUVf`,
 												style: {
-													mask: `url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg?width=20&height=20') alpha no-repeat center / cover add`,
-													WebkitMask: `url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg?width=20&height=20') alpha no-repeat center / cover add`,
+													mask: `url('/assets/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add`,
+													WebkitMask: `url('/assets/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add`,
 												},
 												children: f(wL, {
 													__framer__loop: jL,
@@ -50895,8 +50895,8 @@ var wL,
 													},
 													variants: {
 														ioiy0PuTE: {
-															mask: `url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg?width=20&height=20') alpha no-repeat center / cover add`,
-															WebkitMask: `url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg?width=20&height=20') alpha no-repeat center / cover add`,
+															mask: `url('/assets/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add`,
+															WebkitMask: `url('/assets/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add`,
 														},
 													},
 													children: f(O.div, {

@@ -910,8 +910,8 @@ var ke,
 												layoutDependency: A,
 												layoutId: `MR7vzmaAV`,
 												style: {
-													mask: `url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg?width=20&height=20') alpha no-repeat center / cover add`,
-													WebkitMask: `url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg?width=20&height=20') alpha no-repeat center / cover add`,
+													mask: `url('/assets/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add`,
+													WebkitMask: `url('/assets/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add`,
 												},
 												children: i(ke, {
 													__framer__loop: Ie,
@@ -930,8 +930,8 @@ var ke,
 													layoutId: `PG7GVwyrV`,
 													style: {
 														background: `conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 7.208614864864882deg, rgb(255, 255, 255) 342deg)`,
-														mask: `url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg?width=20&height=20') alpha no-repeat center / cover add`,
-														WebkitMask: `url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg?width=20&height=20') alpha no-repeat center / cover add`,
+														mask: `url('/assets/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add`,
+														WebkitMask: `url('/assets/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add`,
 													},
 													children: i(d.div, {
 														className: `framer-z7attb`,
@@ -2143,7 +2143,7 @@ var rt,
 						alt: ``,
 						pixelHeight: 1252,
 						pixelWidth: 1200,
-						src: `https://framerusercontent.com/images/EA0iiZULX9XagfD5w4kqZSbyI.png?width=1200&height=1252`,
+						src: `/assets/images/EA0iiZULX9XagfD5w4kqZSbyI.png`,
 					},
 				K7wJlYzkm:
 					t ??

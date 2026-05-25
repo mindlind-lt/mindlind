@@ -370,9 +370,9 @@ var qe,
 																height: `100%`,
 																id: `lDwBqaCq4`,
 																images: [
-																	`https://framerusercontent.com/images/IzX1r5477UW6F4vikaIiAABdGmA.jpg?width=500&height=500`,
-																	`https://framerusercontent.com/images/A8LH07ZA2YBbI1jr4u0eeUKnWzQ.jpg?width=500&height=500`,
-																	`https://framerusercontent.com/images/ZOtqzD6rhDE2oD5RR5BQkEhs7E.jpg?width=500&height=500`,
+																	`/assets/images/IzX1r5477UW6F4vikaIiAABdGmA.jpg`,
+																	`/assets/images/A8LH07ZA2YBbI1jr4u0eeUKnWzQ.jpg`,
+																	`/assets/images/ZOtqzD6rhDE2oD5RR5BQkEhs7E.jpg`,
 																],
 																imgRotateDeg:
 																	-90,

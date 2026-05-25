@@ -2291,7 +2291,7 @@ Wilington`,
 					s.xPVCPlZSm ?? {
 						pixelHeight: 1252,
 						pixelWidth: 1200,
-						src: `https://framerusercontent.com/images/EA0iiZULX9XagfD5w4kqZSbyI.png?width=1200&height=1252`,
+						src: `/assets/images/EA0iiZULX9XagfD5w4kqZSbyI.png`,
 					},
 			})),
 			(Xe = (e, t) =>
