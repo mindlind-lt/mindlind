@@ -59733,7 +59733,7 @@ async function yV({
 						preserveQueryParams: void 0,
 						siteCanonicalURL: `https://mondragon.framer.website`,
 						EditorBar:
-							l === void 0
+							!0
 								? void 0
 								: (() => {
 										if (DV) {
