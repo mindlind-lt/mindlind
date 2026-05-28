@@ -37726,8 +37726,8 @@ var v_,
 																								{
 																									pixelHeight: 890,
 																									pixelWidth: 892,
-																									src: `https://framerusercontent.com/images/esSEEBplCKYZwBgLgqfDWceuFwc.jpg?lossless=1&width=892&height=890`,
-																									srcSet: `https://framerusercontent.com/images/esSEEBplCKYZwBgLgqfDWceuFwc.jpg?scale-down-to=512&lossless=1&width=892&height=890 512w,https://framerusercontent.com/images/esSEEBplCKYZwBgLgqfDWceuFwc.jpg?lossless=1&width=892&height=890 892w`,
+																									src: `/assets/images/esSEEBplCKYZwBgLgqfDWceuFwc.jpg`,
+																									srcSet: `/assets/images/esSEEBplCKYZwBgLgqfDWceuFwc.jpg 512w,/assets/images/esSEEBplCKYZwBgLgqfDWceuFwc.jpg 892w`,
 																								},
 																								``,
 																							),
@@ -78732,7 +78732,7 @@ var gL,
 				Kbbqc0ebV:
 					c ??
 					p.Kbbqc0ebV ??
-					`https://framerusercontent.com/assets/KGqyl41OOMGqNi05o7jK30kNuwo.txt`,
+					`/assets/KGqyl41OOMGqNi05o7jK30kNuwo.txt`,
 				LQEIPfxmO: i ?? p.LQEIPfxmO,
 				mzY9R3Fgu: l ?? p.mzY9R3Fgu ?? `[01]`,
 				RvaVSvzoj: r ?? p.RvaVSvzoj ?? `rgb(0, 0, 0)`,
