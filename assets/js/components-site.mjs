@@ -1111,7 +1111,7 @@ var Wt,
 										children: [
 											h(x.div, {
 												className: `framer-v6xtm6`,
-												// "data-framer-name": `Heading`,
+												
 												layoutDependency: j,
 												layoutId: `LWwgUetGG`,
 												children: [
@@ -1232,7 +1232,7 @@ var Wt,
 												children: [
 													h(x.div, {
 														className: `framer-eh4w4j`,
-														// "data-framer-name": `1`,
+														
 														layoutDependency: j,
 														layoutId: `QsN3naV68`,
 														children: [
@@ -37056,7 +37056,7 @@ var v_,
 										children: [
 											h(x.div, {
 												className: `framer-1ikvsfz`,
-												// "data-framer-name": `Heading`,
+												
 												layoutDependency: j,
 												layoutId: `ckYuqU7z5`,
 												children: [
@@ -37125,7 +37125,7 @@ var v_,
 													}),
 													d(x.div, {
 														className: `framer-l1l7u2`,
-														// "data-framer-name": `Heading`,
+														
 														layoutDependency: j,
 														layoutId: `ztPjywo1z`,
 														children: d(D, {

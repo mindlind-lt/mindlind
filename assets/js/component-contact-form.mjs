@@ -2591,7 +2591,7 @@ a Project`,
 													}),
 													c(d.div, {
 														className: `framer-1c49vtx`,
-														// "data-framer-name": `Image`,
+														
 														layoutDependency: z,
 														layoutId: `tvvc3VwLO`,
 														children: [
@@ -2675,7 +2675,7 @@ a Project`,
 																	positionY: `center`,
 																},
 																className: `framer-10rcgy`,
-																// "data-framer-name": `Image`,
+																
 																fitImageDimension: `height`,
 																layoutDependency:
 																	z,

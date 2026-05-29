@@ -1499,7 +1499,7 @@ var Ze,
 																																												),
 																																											},
 																																										className: `framer-1b1rghs framer-1ul97yi`,
-																																										// "data-framer-name": `Image`,
+																																										
 																																										layoutDependency:
 																																											W,
 																																										layoutId: `xF8c7T3gn`,
@@ -2095,7 +2095,7 @@ var Ze,
 																																												),
 																																											},
 																																										className: `framer-ep6kc2 framer-1ul97yi`,
-																																										// "data-framer-name": `Image`,
+																																										
 																																										layoutDependency:
 																																											W,
 																																										layoutId: `jBCDkaZUd`,
@@ -3624,13 +3624,13 @@ var Pt,
 											O &&
 												c(f.div, {
 													className: `framer-1aog0n9`,
-													// "data-framer-name": `Heading`,
+													
 													layoutDependency: U,
 													layoutId: `GeX1clO7y`,
 													children: [
 														c(f.div, {
 															className: `framer-1um0kcp`,
-															// "data-framer-name": `Heading`,
+															
 															layoutDependency: U,
 															layoutId: `BNctDMGLI`,
 															children: [

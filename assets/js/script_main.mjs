@@ -52280,7 +52280,7 @@ var mR,
 											},
 											children: f(O.div, {
 												className: `framer-pt8lu8`,
-												// "data-framer-name": `Content`,
+												
 												layoutDependency: j,
 												layoutId: `CRimpIXxM`,
 												style: {
@@ -52302,7 +52302,7 @@ var mR,
 															children: [
 																v(O.div, {
 																	className: `framer-1o09aak`,
-																	// "data-framer-name": `1`,
+																	
 																	layoutDependency:
 																		j,
 																	layoutId: `lX0JekJiP`,
@@ -52311,7 +52311,7 @@ var mR,
 																			O.div,
 																			{
 																				className: `framer-pqvr5c`,
-																				// "data-framer-name": `Heading`,
+																				
 																				layoutDependency:
 																					j,
 																				layoutId: `qhcHYHDFG`,

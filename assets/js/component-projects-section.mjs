@@ -1461,7 +1461,7 @@ e(() => {
 												children: [
 													c(`div`, {
 														className: `framer-x2jtaw`,
-														// "data-framer-name": `Heading`,
+														
 														children: [
 															i(w, {
 																links: [
@@ -1682,7 +1682,7 @@ e(() => {
 																															),
 																														},
 																													className: `framer-klkdly`,
-																													// "data-framer-name": `Image`,
+																													
 																													fitImageDimension: `height`,
 																													children:
 																														i(
@@ -1769,7 +1769,7 @@ e(() => {
 																															),
 																														},
 																													className: `framer-1l1kie`,
-																													// "data-framer-name": `Image`,
+																													
 																													fitImageDimension: `height`,
 																												},
 																											),
@@ -1790,7 +1790,7 @@ e(() => {
 																										`div`,
 																										{
 																											className: `framer-12f439j`,
-																											// "data-framer-name": `1`,
+																											
 																											children:
 																												i(
 																													L,
@@ -1850,7 +1850,7 @@ e(() => {
 																																			),
 																																		},
 																																	className: `framer-x2karc`,
-																																	// "data-framer-name": `Image`,
+																																	
 																																	fitImageDimension: `height`,
 																																},
 																															),
@@ -1922,7 +1922,7 @@ e(() => {
 																																			),
 																																		},
 																																	className: `framer-1osuayq`,
-																																	// "data-framer-name": `Image`,
+																																	
 																																	fitImageDimension: `height`,
 																																},
 																															),
@@ -2006,7 +2006,7 @@ e(() => {
 																																							),
 																																						},
 																																					className: `framer-k3znkc`,
-																																					// "data-framer-name": `Image`,
+																																					
 																																					fitImageDimension: `height`,
 																																				},
 																																			),
@@ -2296,7 +2296,7 @@ e(() => {
 																										`div`,
 																										{
 																											className: `framer-12kkedg`,
-																											// "data-framer-name": `1`,
+																											
 																											children:
 																												[
 																													i(
@@ -3141,7 +3141,7 @@ e(() => {
 												
 												children: c(`div`, {
 													className: `framer-l8ufmn`,
-													// "data-framer-name": `Heading`,
+													
 													children: [
 														i(L, {
 															breakpoint: U,

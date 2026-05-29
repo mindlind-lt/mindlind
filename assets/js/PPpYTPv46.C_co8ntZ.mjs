@@ -482,7 +482,7 @@ var ve,
 									children: [
 										c(d.div, {
 											className: `framer-1aifm41`,
-											// "data-framer-name": `Heading`,
+											
 											layoutDependency: B,
 											layoutId: `PWUVEiohm`,
 											style: {
@@ -1191,13 +1191,13 @@ var ke,
 										children: [
 											c(d.div, {
 												className: `framer-1ezpo8y`,
-												// "data-framer-name": `Heading`,
+												
 												layoutDependency: L,
 												layoutId: `iTnkZXxti`,
 												children: [
 													i(d.div, {
 														className: `framer-1uh93us`,
-														// "data-framer-name": `Heading`,
+														
 														layoutDependency: L,
 														layoutId: `HSIqdTEYp`,
 														children: i(g, {
@@ -1531,7 +1531,7 @@ var ke,
 											}),
 											c(d.div, {
 												className: `framer-1rj6wel`,
-												// "data-framer-name": `Content`,
+												
 												layoutDependency: L,
 												layoutId: `styJnD2MM`,
 												children: [

@@ -2638,7 +2638,7 @@ e(() => {
 													}),
 													a(`div`, {
 														className: `framer-fejqmp`,
-														// "data-framer-name": `Content`,
+														
 														children: a(b, {
 															__fromCanvasComponent:
 																!0,
@@ -2764,7 +2764,7 @@ e(() => {
 																										),
 																									},
 																								className: `framer-1v534zx`,
-																								// "data-framer-name": `Image`,
+																								
 																								fitImageDimension: `height`,
 																							},
 																						),

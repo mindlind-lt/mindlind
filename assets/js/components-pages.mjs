@@ -674,7 +674,7 @@ var er,
 											children: [
 												v(k.div, {
 													className: `framer-v22ng3`,
-													// "data-framer-name": `Heading`,
+													
 													layoutDependency: Y,
 													layoutId: `JKjX3LE0e`,
 													children: [
@@ -1046,7 +1046,7 @@ var er,
 																																			className: `framer-j39wdh`,
 																																			"data-framer-cursor":
 																																				E,
-																																			// "data-framer-name": `Image`,
+																																			
 																																			layoutDependency:
 																																				Y,
 																																			layoutId: `mW2yiVoh4`,
@@ -1510,7 +1510,7 @@ var er,
 																																													k.div,
 																																													{
 																																														className: `framer-127rs5n`,
-																																														// "data-framer-name": `1`,
+																																														
 																																														layoutDependency:
 																																															Y,
 																																														layoutId: `W7RsaSIl1`,
@@ -2332,7 +2332,7 @@ var xr,
 											src: `/assets/rfiMsTgUc9TD9Y241Co9J0g2VU.jpg`,
 										},
 										className: `framer-z129gk`,
-										// "data-framer-name": `Image`,
+										
 										layoutDependency: T,
 										layoutId: `cRTjdfu4W`,
 										...br(
@@ -6631,7 +6631,7 @@ var go,
 										children: [
 											v(k.div, {
 												className: `framer-ktwlxr`,
-												// "data-framer-name": `Heading`,
+												
 												layoutDependency: j,
 												layoutId: `SP3eqvBGU`,
 												children: [
@@ -6768,13 +6768,13 @@ var go,
 											}),
 											v(k.div, {
 												className: `framer-1a15rp2`,
-												// "data-framer-name": `Content`,
+												
 												layoutDependency: j,
 												layoutId: `C3ld_mEEY`,
 												children: [
 													v(k.div, {
 														className: `framer-ry0log`,
-														// "data-framer-name": `1`,
+														
 														layoutDependency: j,
 														layoutId: `ckOOy1qpJ`,
 														children: [
@@ -6821,7 +6821,7 @@ var go,
 																				),
 																			},
 																		className: `framer-y9bs89`,
-																		// "data-framer-name": `Image`,
+																		
 																		fitImageDimension: `height`,
 																		layoutDependency:
 																			j,
@@ -8094,7 +8094,7 @@ var go,
 																				),
 																			},
 																		className: `framer-1b0hv1d`,
-																		// "data-framer-name": `Image`,
+																		
 																		fitImageDimension: `height`,
 																		layoutDependency:
 																			j,
@@ -10735,7 +10735,7 @@ var _s,
 										children: [
 											v(k.div, {
 												className: `framer-1hjuqf3`,
-												// "data-framer-name": `Heading`,
+												
 												layoutDependency: L,
 												layoutId: `tnDC9SGKm`,
 												children: [
@@ -14090,7 +14090,7 @@ var cu,
 																																					),
 																																				},
 																																			className: `framer-1e6uyff`,
-																																			// "data-framer-name": `Image`,
+																																			
 																																			fitImageDimension: `height`,
 																																			layoutDependency:
 																																				B,
@@ -14119,7 +14119,7 @@ var cu,
 																																								),
 																																							},
 																																						className: `framer-zwjjy7`,
-																																						// "data-framer-name": `Image`,
+																																						
 																																						layoutDependency:
 																																							B,
 																																						layoutId: `gne__IKQI`,
@@ -14724,7 +14724,7 @@ var Cu,
 											ee(C) &&
 												v(k.div, {
 													className: `framer-fw9sbq`,
-													// "data-framer-name": `Heading`,
+													
 													layoutDependency: L,
 													layoutId: `bc0hrIdyN`,
 													children: [
@@ -15278,7 +15278,7 @@ var Cu,
 												}),
 											v(k.div, {
 												className: `framer-1nmehoo`,
-												// "data-framer-name": `Content`,
+												
 												layoutDependency: L,
 												layoutId: `p5NSYq4O2`,
 												children: [
@@ -18962,7 +18962,7 @@ Schnell. Klar. Effektiv.
 											}),
 											v(k.div, {
 												className: `framer-u75t1w`,
-												// "data-framer-name": `Content`,
+												
 												layoutDependency: I,
 												layoutId: `L09Gl4iwa`,
 												style: {
@@ -18976,7 +18976,7 @@ Schnell. Klar. Effektiv.
 														children: [
 															v(k.div, {
 																className: `framer-1si1syd`,
-																// "data-framer-name": `Image`,
+																
 																layoutDependency:
 																	I,
 																layoutId: `jWTCHvN7g`,
@@ -19016,7 +19016,7 @@ Schnell. Klar. Effektiv.
 																				),
 																			},
 																		className: `framer-o2dijj`,
-																		// "data-framer-name": `Image`,
+																		
 																		fitImageDimension: `height`,
 																		layoutDependency:
 																			I,
@@ -20144,7 +20144,7 @@ var nf,
 									children: [
 										v(k.div, {
 											className: `framer-1diubxh`,
-											// "data-framer-name": `Heading`,
+											
 											layoutDependency: A,
 											layoutId: `P_DAzpLVk`,
 											children: [
@@ -20245,7 +20245,7 @@ var nf,
 										}),
 										v(k.div, {
 											className: `framer-16czpw`,
-											// "data-framer-name": `Content`,
+											
 											layoutDependency: A,
 											layoutId: `QkbZKiUQb`,
 											children: [
@@ -22054,7 +22054,7 @@ var Yf,
 											}),
 										v(k.div, {
 											className: `framer-sspnfq`,
-											// "data-framer-name": `Heading`,
+											
 											layoutDependency: P,
 											layoutId: `ELtNLJjH6`,
 											children: [
@@ -22628,7 +22628,7 @@ var cp,
 												},
 												children: v(k.div, {
 													className: `framer-18karg7`,
-													// "data-framer-name": `Content`,
+													
 													layoutDependency: A,
 													layoutId: `ZjURA6x1s`,
 													style: {
@@ -22641,7 +22641,7 @@ var cp,
 													children: [
 														v(k.div, {
 															className: `framer-riq0zg`,
-															// "data-framer-name": `Heading`,
+															
 															layoutDependency: A,
 															layoutId: `kpctG8ynL`,
 															children: [

@@ -253,7 +253,7 @@ var Ce,
 													...W(b),
 												},
 												className: `framer-1lnsbo9`,
-												// "data-framer-name": `Image`,
+												
 												fitImageDimension: `height`,
 												layoutDependency: I,
 												layoutId: `jGPfM_pCF`,
@@ -275,7 +275,7 @@ var Ce,
 														...W(x),
 													},
 													className: `framer-1xsb0jz`,
-													// "data-framer-name": `Image`,
+													
 													layoutDependency: I,
 													layoutId: `v_jJEf299`,
 													style: {
@@ -1693,7 +1693,7 @@ var We,
 											V() &&
 												a(f.div, {
 													className: `framer-68957f`,
-													// "data-framer-name": `Categories`,
+													
 													layoutDependency: R,
 													layoutId: `kuYF4TKNh`,
 													children: a(f.div, {

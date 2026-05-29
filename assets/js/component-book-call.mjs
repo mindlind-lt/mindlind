@@ -1227,7 +1227,7 @@ var Fe,
 												}),
 												f(h.div, {
 													className: `framer-1o7qjjl`,
-													// "data-framer-name": `Image`,
+													
 													layoutDependency: G,
 													layoutId: `Aq6xwBMEv`,
 													style: {
