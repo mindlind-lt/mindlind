@@ -159,6 +159,34 @@ import { n as Fn, t as In } from "./Rotor_Gallery.mjs";
 import { i as Ln, n as Rn, r as zn, t as Bn } from "./y9BUDaD1i.51ShsoHU.mjs";
 import { i as Vn, n as Hn, r as Un, t as Wn } from "./LuOKrK4j8.gQvYT-9v.mjs";
 import { n as Gn, r as Kn } from "./page-home.mjs";
+
+/**
+ * Compiled page components bundle.
+ * Readability constants below are extracted for the Image Reveal section only.
+ */
+const IMAGE_REVEAL_DEFAULTS = {
+	direction: `ltr`,
+	softness: 22,
+	falloff: 1.4,
+	duration: 600,
+	easing: `cubic-bezier(.22,.61,.36,1)`,
+	borderRadius: 16,
+	objectFit: `cover`,
+	trigger: `hover`,
+	reverseOnLeave: !0,
+	followMouse: !1,
+	cursorHotspotX: 0,
+	cursorHotspotY: 0,
+	width: 800,
+	height: 600,
+};
+
+const IMAGE_REVEAL_DIRECTION_OPTIONS = [`ltr`, `rtl`, `ttb`, `btt`];
+const IMAGE_REVEAL_TRIGGER_OPTIONS = [`hover`, `tap`];
+
+/** @typedef {{ src?: string, url?: string, default?: { src?: string } }} ImageLikeSource */
+/** @typedef {{ imageA?: ImageLikeSource|string, imageB?: ImageLikeSource|string }} ImageRevealProps */
+
 function qn(e) {
 	if (!e) return ``;
 	if (typeof e == `string`) return e;
@@ -178,21 +206,21 @@ function Yn(e) {
 	let {
 			imageA: t = Xn,
 			imageB: n = Zn,
-			direction: r = `ltr`,
-			softness: i = 22,
-			falloff: s = 1.4,
-			duration: c = 600,
-			easing: l = `cubic-bezier(.22,.61,.36,1)`,
-			borderRadius: u = 16,
-			objectFit: d = `cover`,
-			trigger: f = `hover`,
-			reverseOnLeave: m = !0,
-			followMouse: h = !1,
+			direction: r = IMAGE_REVEAL_DEFAULTS.direction,
+			softness: i = IMAGE_REVEAL_DEFAULTS.softness,
+			falloff: s = IMAGE_REVEAL_DEFAULTS.falloff,
+			duration: c = IMAGE_REVEAL_DEFAULTS.duration,
+			easing: l = IMAGE_REVEAL_DEFAULTS.easing,
+			borderRadius: u = IMAGE_REVEAL_DEFAULTS.borderRadius,
+			objectFit: d = IMAGE_REVEAL_DEFAULTS.objectFit,
+			trigger: f = IMAGE_REVEAL_DEFAULTS.trigger,
+			reverseOnLeave: m = IMAGE_REVEAL_DEFAULTS.reverseOnLeave,
+			followMouse: h = IMAGE_REVEAL_DEFAULTS.followMouse,
 			cursorSvg: g,
-			cursorHotspotX: _ = 0,
-			cursorHotspotY: y = 0,
-			width: b = 800,
-			height: x = 600,
+			cursorHotspotX: _ = IMAGE_REVEAL_DEFAULTS.cursorHotspotX,
+			cursorHotspotY: y = IMAGE_REVEAL_DEFAULTS.cursorHotspotY,
+			width: b = IMAGE_REVEAL_DEFAULTS.width,
+			height: x = IMAGE_REVEAL_DEFAULTS.height,
 		} = e,
 		S = rUseMemo(() => qn(t) || Xn, [t]),
 		C = rUseMemo(() => qn(n) || Zn, [n]),
@@ -333,14 +361,17 @@ var Xn,
 			q(),
 			(Xn = `https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=1600&auto=format&fit=crop`),
 			(Zn = `https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop`),
-			(Yn.defaultProps = { width: 800, height: 600 }),
+			(Yn.defaultProps = {
+				width: IMAGE_REVEAL_DEFAULTS.width,
+				height: IMAGE_REVEAL_DEFAULTS.height,
+			}),
 			P(Yn, {
 				imageA: { type: J.Image, title: `Image 1` },
 				imageB: { type: J.Image, title: `Image 2` },
 				direction: {
 					type: J.Enum,
 					title: `Direction`,
-					options: [`ltr`, `rtl`, `ttb`, `btt`],
+					options: IMAGE_REVEAL_DIRECTION_OPTIONS,
 					optionTitles: [
 						`Right→Left`,
 						`Left→Right`,
@@ -352,7 +383,7 @@ var Xn,
 				softness: {
 					type: J.Number,
 					title: `Softness %`,
-					defaultValue: 22,
+					defaultValue: IMAGE_REVEAL_DEFAULTS.softness,
 					min: 0,
 					max: 60,
 					step: 0.5,
@@ -361,7 +392,7 @@ var Xn,
 				falloff: {
 					type: J.Number,
 					title: `Falloff`,
-					defaultValue: 1.4,
+					defaultValue: IMAGE_REVEAL_DEFAULTS.falloff,
 					min: 0.3,
 					max: 6,
 					step: 0.05,
@@ -370,7 +401,7 @@ var Xn,
 				duration: {
 					type: J.Number,
 					title: `Duration ms`,
-					defaultValue: 600,
+					defaultValue: IMAGE_REVEAL_DEFAULTS.duration,
 					min: 80,
 					max: 4e3,
 					step: 20,
@@ -393,18 +424,18 @@ var Xn,
 						`cubic-bezier (.22,.61,.36,1)`,
 						`Material`,
 					],
-					defaultValue: `cubic-bezier(.22,.61,.36,1)`,
+					defaultValue: IMAGE_REVEAL_DEFAULTS.easing,
 				},
 				objectFit: {
 					type: J.Enum,
 					title: `Object Fit`,
 					options: [`cover`, `contain`],
-					defaultValue: `cover`,
+					defaultValue: IMAGE_REVEAL_DEFAULTS.objectFit,
 				},
 				borderRadius: {
 					type: J.Number,
 					title: `Radius`,
-					defaultValue: 16,
+					defaultValue: IMAGE_REVEAL_DEFAULTS.borderRadius,
 					min: 0,
 					max: 80,
 					step: 1,
@@ -413,20 +444,20 @@ var Xn,
 				trigger: {
 					type: J.SegmentedEnum,
 					title: `Trigger`,
-					options: [`hover`, `tap`],
+					options: IMAGE_REVEAL_TRIGGER_OPTIONS,
 					optionTitles: [`Hover`, `Tap`],
-					defaultValue: `hover`,
+					defaultValue: IMAGE_REVEAL_DEFAULTS.trigger,
 				},
 				reverseOnLeave: {
 					type: J.Boolean,
 					title: `Reverse on Leave`,
-					defaultValue: !0,
+					defaultValue: IMAGE_REVEAL_DEFAULTS.reverseOnLeave,
 					hidden: (e) => e.trigger !== `hover`,
 				},
 				followMouse: {
 					type: J.Boolean,
 					title: `Follow Mouse`,
-					defaultValue: !1,
+					defaultValue: IMAGE_REVEAL_DEFAULTS.followMouse,
 				},
 				cursorSvg: {
 					type: J.File,
@@ -436,7 +467,7 @@ var Xn,
 				cursorHotspotX: {
 					type: J.Number,
 					title: `Cursor X`,
-					defaultValue: 0,
+					defaultValue: IMAGE_REVEAL_DEFAULTS.cursorHotspotX,
 					min: 0,
 					max: 128,
 					step: 1,
@@ -446,7 +477,7 @@ var Xn,
 				cursorHotspotY: {
 					type: J.Number,
 					title: `Cursor Y`,
-					defaultValue: 0,
+					defaultValue: IMAGE_REVEAL_DEFAULTS.cursorHotspotY,
 					min: 0,
 					max: 128,
 					step: 1,

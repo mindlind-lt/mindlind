@@ -64,3 +64,31 @@ This file tracks modules where React alias symbols were semantically renamed to 
 - Some React imports remain intentionally unchanged when API mapping confidence is low.
 - Runtime/vendor files (`react.mjs`, `framer.mjs`, `motion.mjs`, `script_main.mjs`) are intentionally not deobfuscated in this pass.
 - Some utility-heavy modules only receive partial alias renames when symbol mapping confidence is not absolute.
+
+## Readability Pass Checklist (No Behavior Changes)
+
+Use this checklist for readability-only passes on compiled modules:
+
+- add short module header comment
+- extract repeated magic defaults into named constants
+- add minimal JSDoc typedefs for key prop/data shapes
+- keep public exports and runtime behavior unchanged
+- validate no editor diagnostics after edits
+
+### Readability Pass Log
+
+- `assets/js/TwistGallery.mjs`
+	- completed: header comment
+	- completed: named defaults constants
+	- completed: JSDoc typedefs for props/image shape
+	- completed: diagnostics clean after edit
+- `assets/js/i_vIzrlMX.C1MfukuD.mjs`
+	- completed: header comment
+	- completed: named constants for variants/spring/default size
+	- completed: JSDoc typedefs for props/image shape
+	- completed: diagnostics clean after edit
+- `assets/js/components-pages.mjs` (partial section pass: Image Reveal block)
+	- completed: module-level readability comment for scoped pass
+	- completed: extracted Image Reveal defaults/options into named constants
+	- completed: added minimal JSDoc typedefs for image source/props
+	- completed: diagnostics clean after edit
