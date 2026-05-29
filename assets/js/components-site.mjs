@@ -3,19 +3,19 @@ import {
 	B as n,
 	E as r,
 	F as i,
-	I as a,
-	M as o,
+	I as rUseState,
+	M as rUseMemo,
 	N as s,
 	P as c,
 	T as l,
 	V as u,
-	c as d,
-	g as f,
-	j as p,
-	k as m,
-	l as h,
-	o as g,
-	y as _,
+	c as rJsx,
+	g as rForwardRef,
+	j as rUseContext,
+	k as rUseRef,
+	l as rJsxs,
+	o as rUseDeferredValue,
+	y as rUseId,
 	z as v,
 } from "./react.mjs";
 import {
@@ -100,7 +100,7 @@ var mt,
 	Ct,
 	wt,
 	Tt = t(() => {
-		(g(),
+		(rUseDeferredValue(),
 			L(),
 			w(),
 			l(),
@@ -114,10 +114,10 @@ var mt,
 			}),
 			(_t = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
 			(vt = ({ value: e, children: t }) => {
-				let n = p(S),
+				let n = rUseContext(S),
 					r = e ?? n.transition,
-					i = o(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
-				return d(S.Provider, { value: i, children: t });
+					i = rUseMemo(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
+				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(yt = x.create(i)),
 			(bt = {
@@ -135,10 +135,10 @@ var mt,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(Ct = O(
-				f(function (e, t) {
-					let n = m(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						i = _(),
+						i = rUseId(),
 						{ activeLocale: a, setLocale: o } = G();
 					H();
 					let {
@@ -170,14 +170,14 @@ var mt,
 						A = () => ![`C4ti1Zm4o`, `o1tTqkD7S`].includes(p),
 						j = () => p === `C4ti1Zm4o`,
 						M = () => p === `o1tTqkD7S`;
-					return d(C, {
+					return rJsx(C, {
 						id: l ?? i,
-						children: d(yt, {
+						children: rJsx(yt, {
 							animate: D,
 							initial: !1,
-							children: d(vt, {
+							children: rJsx(vt, {
 								value: _t,
-								children: h(x.div, {
+								children: rJsxs(x.div, {
 									...f,
 									...y,
 									className: N(k, `framer-133arvs`, c, g),
@@ -204,7 +204,7 @@ var mt,
 									),
 									children: [
 										A() &&
-											h(E, {
+											rJsxs(E, {
 												className: `framer-1k8tops`,
 												layoutDependency: O,
 												layoutId: `xB4zGfQmL`,
@@ -213,7 +213,7 @@ var mt,
 												svg: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.309 25.995" overflow="visible"><g><path d="M 24.115 13.177 L 24.113 13.192 C 24.108 13.216 24.098 13.237 24.092 13.26 C 24.085 13.284 24.08 13.309 24.071 13.332 C 24.034 13.419 23.983 13.499 23.918 13.568 L 23.891 13.597 L 19.586 17.902 C 19.281 18.186 18.806 18.178 18.511 17.883 C 18.216 17.588 18.208 17.113 18.492 16.808 L 21.483 13.816 L 8.615 13.816 L 11.605 16.807 C 11.889 17.112 11.881 17.587 11.586 17.882 C 11.291 18.177 10.816 18.185 10.511 17.901 L 6.207 13.596 C 6.197 13.588 6.189 13.578 6.181 13.568 C 6.116 13.499 6.064 13.42 6.028 13.333 C 6.018 13.31 6.013 13.288 6.007 13.264 C 6 13.24 5.991 13.217 5.986 13.192 C 5.984 13.188 5.984 13.182 5.983 13.177 C 5.975 13.133 5.97 13.088 5.969 13.042 L 5.97 13.04 L 5.97 13.037 C 5.97 12.833 6.051 12.637 6.196 12.493 L 10.511 8.178 C 10.816 7.894 11.291 7.902 11.586 8.197 C 11.881 8.492 11.889 8.967 11.605 9.272 L 8.612 12.268 L 21.487 12.268 L 18.491 9.272 C 18.207 8.967 18.215 8.492 18.51 8.197 C 18.805 7.902 19.28 7.894 19.585 8.178 L 23.9 12.493 C 24.08 12.672 24.16 12.928 24.115 13.177 Z" fill="var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255)) /* {&quot;name&quot;:&quot;White&quot;} */"></path><path d="M 30.309 12.998 C 30.309 20.177 24.49 25.995 17.311 25.995 L 12.996 25.995 C 5.819 25.996 0.001 20.177 0 12.999 C -0.001 5.82 5.819 0 12.997 0 L 17.312 0 C 24.49 0 30.309 5.819 30.309 12.998 Z M 28.761 12.998 C 28.761 6.675 23.635 1.548 17.311 1.548 L 12.996 1.548 C 6.674 1.548 1.547 6.675 1.547 12.998 C 1.547 19.321 6.674 24.447 12.997 24.447 L 17.312 24.447 C 23.635 24.447 28.76 19.321 28.761 12.998 Z" fill="var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255)) /* {&quot;name&quot;:&quot;White&quot;} */"></path></g></svg>`,
 												withExternalLayout: !0,
 												children: [
-													d(E, {
+													rJsx(E, {
 														className: `framer-1d7ffmm`,
 														layoutDependency: O,
 														layoutId: `KAfLGDjF5`,
@@ -223,7 +223,7 @@ var mt,
 														svg: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.158 10.139" overflow="visible"><path d="M 18.146 5.207 L 18.144 5.221 C 18.139 5.245 18.13 5.267 18.123 5.29 C 18.116 5.313 18.111 5.339 18.102 5.362 C 18.066 5.449 18.014 5.529 17.949 5.597 L 17.922 5.627 L 13.618 9.932 C 13.313 10.216 12.837 10.208 12.542 9.913 C 12.248 9.618 12.239 9.143 12.523 8.837 L 15.514 5.846 L 2.646 5.846 L 5.636 8.836 C 5.92 9.141 5.912 9.617 5.617 9.912 C 5.322 10.206 4.847 10.215 4.542 9.931 L 0.238 5.626 C 0.228 5.618 0.22 5.608 0.212 5.597 C 0.147 5.529 0.095 5.45 0.059 5.363 C 0.05 5.34 0.044 5.317 0.038 5.294 C 0.031 5.27 0.022 5.246 0.018 5.221 C 0.015 5.217 0.015 5.212 0.014 5.207 C 0.006 5.162 0.001 5.117 0 5.072 L 0.001 5.07 L 0.001 5.067 C 0.001 4.862 0.083 4.667 0.227 4.523 L 4.542 0.208 C 4.847 -0.076 5.322 -0.068 5.617 0.227 C 5.912 0.522 5.92 0.997 5.636 1.302 L 2.643 4.298 L 15.518 4.298 L 12.522 1.302 C 12.238 0.997 12.246 0.522 12.541 0.227 C 12.836 -0.068 13.311 -0.076 13.617 0.208 L 17.931 4.523 C 18.111 4.702 18.191 4.957 18.146 5.207 Z" fill="var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255)) /* {&quot;name&quot;:&quot;White&quot;} */"></path></svg>`,
 														withExternalLayout: !0,
 													}),
-													h(E, {
+													rJsxs(E, {
 														className: `framer-1iwbmds`,
 														layoutDependency: O,
 														layoutId: `bSxwJUPvX`,
@@ -233,7 +233,7 @@ var mt,
 														svg: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.309 25.995" overflow="visible"><path d="M 30.309 12.998 C 30.309 20.177 24.49 25.995 17.311 25.995 L 12.996 25.995 C 5.819 25.996 0.001 20.177 0 12.999 C -0.001 5.82 5.819 0 12.997 0 L 17.312 0 C 24.49 0 30.309 5.819 30.309 12.998 Z M 28.761 12.998 C 28.761 6.675 23.635 1.548 17.311 1.548 L 12.996 1.548 C 6.674 1.548 1.547 6.675 1.547 12.998 C 1.547 19.321 6.674 24.447 12.997 24.447 L 17.312 24.447 C 23.635 24.447 28.76 19.321 28.761 12.998 Z" fill="var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255)) /* {&quot;name&quot;:&quot;White&quot;} */"></path></svg>`,
 														withExternalLayout: !0,
 														children: [
-															d(E, {
+															rJsx(E, {
 																className: `framer-1s6d5ud`,
 																layoutDependency:
 																	O,
@@ -245,7 +245,7 @@ var mt,
 																withExternalLayout:
 																	!0,
 															}),
-															d(E, {
+															rJsx(E, {
 																className: `framer-x567ro`,
 																layoutDependency:
 																	O,
@@ -262,7 +262,7 @@ var mt,
 												],
 											}),
 										j() &&
-											h(E, {
+											rJsxs(E, {
 												className: `framer-19rqjzb`,
 												layoutDependency: O,
 												layoutId: `ZUZ5gXsCP`,
@@ -280,7 +280,7 @@ var mt,
 													b,
 												),
 												children: [
-													d(E, {
+													rJsx(E, {
 														className: `framer-1ithlkh`,
 														layoutDependency: O,
 														layoutId: `C54NQdA0F`,
@@ -290,7 +290,7 @@ var mt,
 														svg: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 11 11" overflow="visible"><path d="M 0 0 L 11 0 L 11 11" fill="transparent" stroke-width="2" stroke="var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0)) /* {&quot;name&quot;:&quot;Black&quot;} */"></path></svg>`,
 														withExternalLayout: !0,
 													}),
-													d(E, {
+													rJsx(E, {
 														className: `framer-1lxyrbc`,
 														layoutDependency: O,
 														layoutId: `zQl85_0dv`,
@@ -303,7 +303,7 @@ var mt,
 												],
 											}),
 										M() &&
-											h(E, {
+											rJsxs(E, {
 												className: `framer-izp4uj`,
 												layoutDependency: O,
 												layoutId: `MtZAjiotZ`,
@@ -321,7 +321,7 @@ var mt,
 													b,
 												),
 												children: [
-													d(E, {
+													rJsx(E, {
 														className: `framer-1azbzyh`,
 														layoutDependency: O,
 														layoutId: `EXxbCq2WD`,
@@ -331,7 +331,7 @@ var mt,
 														svg: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 9 9" overflow="visible"><path d="M 0 0 L 9 0 L 9 9" fill="transparent" stroke-width="2" stroke="var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0)) /* {&quot;name&quot;:&quot;Black&quot;} */"></path></svg>`,
 														withExternalLayout: !0,
 													}),
-													d(E, {
+													rJsx(E, {
 														className: `framer-18zsxm7`,
 														layoutDependency: O,
 														layoutId: `v1REvAIJD`,
@@ -415,7 +415,7 @@ var Dt,
 	Bt,
 	Vt,
 	Ht = t(() => {
-		(g(),
+		(rUseDeferredValue(),
 			L(),
 			w(),
 			l(),
@@ -444,10 +444,10 @@ var Dt,
 			(Pt = (e) =>
 				Array.isArray(e) ? e.length > 0 : e != null && e !== ``),
 			(Ft = ({ value: e, children: t }) => {
-				let n = p(S),
+				let n = rUseContext(S),
 					r = e ?? n.transition,
-					i = o(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
-				return d(S.Provider, { value: i, children: t });
+					i = rUseMemo(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
+				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(It = x.create(i)),
 			(Lt = {
@@ -481,10 +481,10 @@ var Dt,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(Bt = O(
-				f(function (e, t) {
-					let n = m(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = _(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: s } = G(),
 						c = H(),
 						{
@@ -524,20 +524,20 @@ var Dt,
 						B = Pt(b),
 						re = (e) =>
 							[`SGuZ5_fTX`, `LpJk8lyPd`].includes(E) ? e : !1;
-					return d(C, {
+					return rJsx(C, {
 						id: f ?? a,
-						children: d(It, {
+						children: rJsx(It, {
 							animate: R,
 							initial: !1,
-							children: d(Ft, {
+							children: rJsx(Ft, {
 								value: Mt,
-								children: d(ne, {
+								children: rJsx(ne, {
 									href: b,
 									motionChild: !0,
 									nodeId: `LPyBBWhbu`,
 									openInNewTab: S,
 									scopeId: `CFkNsh_8j`,
-									children: h(x.a, {
+									children: rJsxs(x.a, {
 										...T,
 										...A,
 										className: `${N(ee, `framer-1j38inb`, u, O)} framer-1m7k963`,
@@ -561,10 +561,10 @@ var Dt,
 											j,
 										),
 										children: [
-											d(D, {
+											rJsx(D, {
 												__fromCanvasComponent: !0,
-												children: d(i, {
-													children: d(x.h6, {
+												children: rJsx(i, {
+													children: rJsx(x.h6, {
 														className: `framer-styles-preset-f8hg8j`,
 														"data-styles-preset": `IGVKsj4vh`,
 														style: {
@@ -593,8 +593,8 @@ var Dt,
 												...Et(
 													{
 														LpJk8lyPd: {
-															children: d(i, {
-																children: d(
+															children: rJsx(i, {
+																children: rJsx(
 																	x.h6,
 																	{
 																		className: `framer-styles-preset-41ki07`,
@@ -608,8 +608,8 @@ var Dt,
 															}),
 														},
 														SGuZ5_fTX: {
-															children: d(i, {
-																children: d(
+															children: rJsx(i, {
+																children: rJsx(
 																	x.h6,
 																	{
 																		className: `framer-styles-preset-41ki07`,
@@ -627,17 +627,17 @@ var Dt,
 													j,
 												),
 											}),
-											h(x.div, {
+											rJsxs(x.div, {
 												className: `framer-6iw1x0`,
 												
 												layoutDependency: z,
 												layoutId: `ktee5DkBi`,
 												children: [
-													d(D, {
+													rJsx(D, {
 														__fromCanvasComponent:
 															!0,
-														children: d(i, {
-															children: d(x.h6, {
+														children: rJsx(i, {
+															children: rJsx(x.h6, {
 																className: `framer-styles-preset-f8hg8j`,
 																"data-styles-preset": `IGVKsj4vh`,
 																style: {
@@ -671,11 +671,11 @@ var Dt,
 																		text: te,
 																	},
 																LpJk8lyPd: {
-																	children: d(
+																	children: rJsx(
 																		i,
 																		{
 																			children:
-																				d(
+																				rJsx(
 																					x.h6,
 																					{
 																						className: `framer-styles-preset-41ki07`,
@@ -690,11 +690,11 @@ var Dt,
 																	),
 																},
 																SGuZ5_fTX: {
-																	children: d(
+																	children: rJsx(
 																		i,
 																		{
 																			children:
-																				d(
+																				rJsx(
 																					x.h6,
 																					{
 																						className: `framer-styles-preset-41ki07`,
@@ -713,13 +713,13 @@ var Dt,
 															j,
 														),
 													}),
-													h(x.div, {
+													rJsxs(x.div, {
 														className: `framer-1xfuiha`,
 														layoutDependency: z,
 														layoutId: `DTBcNpfR5`,
 														children: [
 															re(B) &&
-																d(U, {
+																rJsx(U, {
 																	...Et(
 																		{
 																			LpJk8lyPd:
@@ -752,7 +752,7 @@ var Dt,
 																		E,
 																		j,
 																	),
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-1kl3ez5-container`,
@@ -764,7 +764,7 @@ var Dt,
 																				!0,
 																			scopeId: `CFkNsh_8j`,
 																			children:
-																				d(
+																				rJsx(
 																					wt,
 																					{
 																						height: `100%`,
@@ -781,11 +781,11 @@ var Dt,
 																		},
 																	),
 																}),
-															d(D, {
+															rJsx(D, {
 																__fromCanvasComponent:
 																	!0,
-																children: d(i, {
-																	children: d(
+																children: rJsx(i, {
+																	children: rJsx(
 																		x.p,
 																		{
 																			className: `framer-styles-preset-11kcybb`,
@@ -824,7 +824,7 @@ var Dt,
 													}),
 												],
 											}),
-											d(x.div, {
+											rJsx(x.div, {
 												className: `framer-t3qp2s`,
 												layoutDependency: z,
 												layoutId: `JfJDdk1He`,
@@ -991,7 +991,7 @@ var Wt,
 	tn,
 	nn,
 	rn = t(() => {
-		(g(),
+		(rUseDeferredValue(),
 			L(),
 			w(),
 			l(),
@@ -1009,10 +1009,10 @@ var Wt,
 			(Jt = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
 			(Yt = (e, t) => `translateY(-50%) ${t}`),
 			(Xt = ({ value: e, children: t }) => {
-				let n = p(S),
+				let n = rUseContext(S),
 					r = e ?? n.transition,
-					i = o(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
-				return d(S.Provider, { value: i, children: t });
+					i = rUseMemo(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
+				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(Zt = x.create(i)),
 			(Qt = {
@@ -1030,10 +1030,10 @@ var Wt,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(tn = O(
-				f(function (e, t) {
-					let n = m(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = _(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: s } = G(),
 						c = H(),
 						{
@@ -1064,14 +1064,14 @@ var Wt,
 						j = en(e, A),
 						F = N(Kt, Ae, Pe),
 						I = () => y !== `pFt3J4MZE`;
-					return d(C, {
+					return rJsx(C, {
 						id: f ?? a,
-						children: d(Zt, {
+						children: rJsx(Zt, {
 							animate: A,
 							initial: !1,
-							children: d(Xt, {
+							children: rJsx(Xt, {
 								value: Jt,
-								children: d(x.section, {
+								children: rJsx(x.section, {
 									...v,
 									...w,
 									className: N(F, `framer-11pzxff`, u, b),
@@ -1089,23 +1089,23 @@ var Wt,
 										y,
 										T,
 									),
-									children: h(x.div, {
+									children: rJsxs(x.div, {
 										className: `framer-t6uue4`,
 										
 										layoutDependency: j,
 										layoutId: `FXknksiQa`,
 										children: [
-											h(x.div, {
+											rJsxs(x.div, {
 												className: `framer-v6xtm6`,
 												
 												layoutDependency: j,
 												layoutId: `LWwgUetGG`,
 												children: [
-													d(D, {
+													rJsx(D, {
 														__fromCanvasComponent:
 															!0,
-														children: d(i, {
-															children: d(x.h6, {
+														children: rJsx(i, {
+															children: rJsx(x.h6, {
 																className: `framer-styles-preset-nkm6se`,
 																"data-styles-preset": `BaUGQBb6A`,
 																style: {
@@ -1127,11 +1127,11 @@ var Wt,
 														...Ut(
 															{
 																pFt3J4MZE: {
-																	children: d(
+																	children: rJsx(
 																		i,
 																		{
 																			children:
-																				d(
+																				rJsx(
 																					x.h6,
 																					{
 																						className: `framer-styles-preset-f8hg8j`,
@@ -1151,11 +1151,11 @@ var Wt,
 															T,
 														),
 													}),
-													d(D, {
+													rJsx(D, {
 														__fromCanvasComponent:
 															!0,
-														children: d(i, {
-															children: d(x.h6, {
+														children: rJsx(i, {
+															children: rJsx(x.h6, {
 																className: `framer-styles-preset-nkm6se`,
 																"data-styles-preset": `BaUGQBb6A`,
 																style: {
@@ -1178,11 +1178,11 @@ var Wt,
 														...Ut(
 															{
 																pFt3J4MZE: {
-																	children: d(
+																	children: rJsx(
 																		i,
 																		{
 																			children:
-																				d(
+																				rJsx(
 																					x.h6,
 																					{
 																						className: `framer-styles-preset-f8hg8j`,
@@ -1204,24 +1204,24 @@ var Wt,
 													}),
 												],
 											}),
-											d(x.div, {
+											rJsx(x.div, {
 												className: `framer-136kycy`,
 												
 												layoutDependency: j,
 												layoutId: `lx8vChGBB`,
 											}),
-											h(x.div, {
+											rJsxs(x.div, {
 												className: `framer-1qnpcbx`,
 												layoutDependency: j,
 												layoutId: `D69r81a7J`,
 												children: [
-													h(x.div, {
+													rJsxs(x.div, {
 														className: `framer-eh4w4j`,
 														
 														layoutDependency: j,
 														layoutId: `QsN3naV68`,
 														children: [
-															d(x.div, {
+															rJsx(x.div, {
 																className: `framer-10udsyd`,
 																layoutDependency:
 																	j,
@@ -1230,7 +1230,7 @@ var Wt,
 																	backgroundColor: `rgb(0, 0, 0)`,
 																},
 															}),
-															d(U, {
+															rJsx(U, {
 																height: 155,
 																width: `max((min(${c?.width || `100vw`}, 1600px) - 105px) / 2, 1px)`,
 																y:
@@ -1296,7 +1296,7 @@ var Wt,
 																	y,
 																	T,
 																),
-																children: d(M, {
+																children: rJsx(M, {
 																	className: `framer-1i0ut5h-container`,
 																	layoutDependency:
 																		j,
@@ -1305,7 +1305,7 @@ var Wt,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `aANwKKq_y`,
-																	children: d(
+																	children: rJsx(
 																		Vt,
 																		{
 																			c9ZjsumRN:
@@ -1342,7 +1342,7 @@ var Wt,
 																	),
 																}),
 															}),
-															d(U, {
+															rJsx(U, {
 																height: 155,
 																width: `max((min(${c?.width || `100vw`}, 1600px) - 105px) / 2, 1px)`,
 																y:
@@ -1408,7 +1408,7 @@ var Wt,
 																	y,
 																	T,
 																),
-																children: d(M, {
+																children: rJsx(M, {
 																	className: `framer-6n3zgm-container`,
 																	layoutDependency:
 																		j,
@@ -1417,7 +1417,7 @@ var Wt,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `aANwKKq_y`,
-																	children: d(
+																	children: rJsx(
 																		Vt,
 																		{
 																			c9ZjsumRN:
@@ -1454,7 +1454,7 @@ var Wt,
 																	),
 																}),
 															}),
-															d(U, {
+															rJsx(U, {
 																height: 155,
 																width: `max((min(${c?.width || `100vw`}, 1600px) - 105px) / 2, 1px)`,
 																y:
@@ -1520,7 +1520,7 @@ var Wt,
 																	y,
 																	T,
 																),
-																children: d(M, {
+																children: rJsx(M, {
 																	className: `framer-7ymwhb-container`,
 																	layoutDependency:
 																		j,
@@ -1529,7 +1529,7 @@ var Wt,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `aANwKKq_y`,
-																	children: d(
+																	children: rJsx(
 																		Vt,
 																		{
 																			c9ZjsumRN:
@@ -1568,13 +1568,13 @@ var Wt,
 															}),
 														],
 													}),
-													h(x.div, {
+													rJsxs(x.div, {
 														className: `framer-5i04mq`,
 														layoutDependency: j,
 														layoutId: `ExNuWvFzo`,
 														children: [
 															I() &&
-																d(x.div, {
+																rJsx(x.div, {
 																	className: `framer-bj200o`,
 																	layoutDependency:
 																		j,
@@ -1583,7 +1583,7 @@ var Wt,
 																		backgroundColor: `rgb(0, 0, 0)`,
 																	},
 																}),
-															d(U, {
+															rJsx(U, {
 																height: 155,
 																width: `max((min(${c?.width || `100vw`}, 1600px) - 105px) / 2, 1px)`,
 																y:
@@ -1649,7 +1649,7 @@ var Wt,
 																	y,
 																	T,
 																),
-																children: d(M, {
+																children: rJsx(M, {
 																	className: `framer-1nhk3re-container`,
 																	layoutDependency:
 																		j,
@@ -1658,7 +1658,7 @@ var Wt,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `aANwKKq_y`,
-																	children: d(
+																	children: rJsx(
 																		Vt,
 																		{
 																			c9ZjsumRN:
@@ -1695,7 +1695,7 @@ var Wt,
 																	),
 																}),
 															}),
-															d(U, {
+															rJsx(U, {
 																height: 155,
 																width: `max((min(${c?.width || `100vw`}, 1600px) - 105px) / 2, 1px)`,
 																y:
@@ -1761,7 +1761,7 @@ var Wt,
 																	y,
 																	T,
 																),
-																children: d(M, {
+																children: rJsx(M, {
 																	className: `framer-113hbfw-container`,
 																	layoutDependency:
 																		j,
@@ -1770,7 +1770,7 @@ var Wt,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `aANwKKq_y`,
-																	children: d(
+																	children: rJsx(
 																		Vt,
 																		{
 																			c9ZjsumRN:
@@ -1807,7 +1807,7 @@ var Wt,
 																	),
 																}),
 															}),
-															d(U, {
+															rJsx(U, {
 																height: 155,
 																width: `max((min(${c?.width || `100vw`}, 1600px) - 105px) / 2, 1px)`,
 																y:
@@ -1873,7 +1873,7 @@ var Wt,
 																	y,
 																	T,
 																),
-																children: d(M, {
+																children: rJsx(M, {
 																	className: `framer-1n21k6g-container`,
 																	layoutDependency:
 																		j,
@@ -1882,7 +1882,7 @@ var Wt,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `aANwKKq_y`,
-																	children: d(
+																	children: rJsx(
 																		Vt,
 																		{
 																			c9ZjsumRN:
@@ -2129,24 +2129,24 @@ function cn(e) {
 			width: te = `100%`,
 			height: ne = `100%`,
 		} = e,
-		B = m(null),
-		re = m(null),
-		V = m(null),
-		ie = m(null),
-		H = m(null),
-		ae = m(null),
-		U = m(null),
-		W = m(null),
-		G = m([]),
-		se = m([]),
-		ce = m([]),
-		le = m([]),
-		ue = m(null),
-		de = m(null),
-		fe = m(null),
-		[pe, me] = a(!1),
-		he = m(!0),
-		ge = m(!!ee);
+		B = rUseRef(null),
+		re = rUseRef(null),
+		V = rUseRef(null),
+		ie = rUseRef(null),
+		H = rUseRef(null),
+		ae = rUseRef(null),
+		U = rUseRef(null),
+		W = rUseRef(null),
+		G = rUseRef([]),
+		se = rUseRef([]),
+		ce = rUseRef([]),
+		le = rUseRef([]),
+		ue = rUseRef(null),
+		de = rUseRef(null),
+		fe = rUseRef(null),
+		[pe, me] = rUseState(!1),
+		he = rUseRef(!0),
+		ge = rUseRef(!!ee);
 	(c(() => {
 		ge.current = !!ee;
 	}, [ee]),
@@ -2437,7 +2437,7 @@ function cn(e) {
 				H.current?.dispose());
 		} catch {}
 	}
-	return d(`div`, {
+	return rJsx(`div`, {
 		ref: B,
 		style: {
 			position: `relative`,
@@ -2446,7 +2446,7 @@ function cn(e) {
 			overflow: `hidden`,
 			background: n ? `transparent` : r,
 		},
-		children: d(`canvas`, {
+		children: rJsx(`canvas`, {
 			ref: re,
 			style: {
 				position: `absolute`,
@@ -2465,7 +2465,7 @@ var ln,
 	pn,
 	mn = t(() => {
 		(v(),
-			g(),
+			rUseDeferredValue(),
 			l(),
 			L(),
 			(ln = `https://esm.sh/three@0.160.0?bundle`),
@@ -2843,7 +2843,7 @@ var gn,
 	An,
 	jn,
 	Mn = t(() => {
-		(g(),
+		(rUseDeferredValue(),
 			L(),
 			w(),
 			l(),
@@ -2882,10 +2882,10 @@ var gn,
 			(Cn = (e, t) => `translate(-50%, -50%) ${t}`),
 			(wn = (e, t) => `translateY(-50%) ${t}`),
 			(Tn = ({ value: e, children: t }) => {
-				let n = p(S),
+				let n = rUseContext(S),
 					r = e ?? n.transition,
-					i = o(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
-				return d(S.Provider, { value: i, children: t });
+					i = rUseMemo(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
+				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(En = x.create(i)),
 			(Dn = {
@@ -2922,10 +2922,10 @@ vision`,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(An = O(
-				f(function (e, t) {
-					let n = m(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = _(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: s } = G(),
 						c = H(),
 						{
@@ -2977,14 +2977,14 @@ vision`,
 							![`yOO62Gdbi`, `JjSvs1LST`, `oZEjVbL3Z`].includes(
 								w,
 							);
-					return d(C, {
+					return rJsx(C, {
 						id: f ?? a,
-						children: d(En, {
+						children: rJsx(En, {
 							animate: I,
 							initial: !1,
-							children: d(Tn, {
+							children: rJsx(Tn, {
 								value: Sn,
-								children: d(x.section, {
+								children: rJsx(x.section, {
 									...S,
 									...O,
 									className: N(re, `framer-4do7jb`, u, T),
@@ -3008,7 +3008,7 @@ vision`,
 										w,
 										k,
 									),
-									children: h(x.div, {
+									children: rJsxs(x.div, {
 										className: `framer-7zzj4l`,
 										"data-framer-cursor": g,
 										
@@ -3048,7 +3048,7 @@ vision`,
 										),
 										children: [
 											V() &&
-												d(U, {
+												rJsx(U, {
 													...hn(
 														{
 															b3CeND2xU: {
@@ -3087,7 +3087,7 @@ vision`,
 														w,
 														k,
 													),
-													children: d(M, {
+													children: rJsx(M, {
 														className: `framer-k4wwiv-container`,
 														layoutDependency: L,
 														layoutId: `fCAUIe6Lr-container`,
@@ -3106,7 +3106,7 @@ vision`,
 															w,
 															k,
 														),
-														children: d(qe, {
+														children: rJsx(qe, {
 															height: `100%`,
 															id: `fCAUIe6Lr`,
 															layoutId: `fCAUIe6Lr`,
@@ -3121,8 +3121,8 @@ vision`,
 													}),
 												}),
 											ie() &&
-												d(U, {
-													children: d(M, {
+												rJsx(U, {
+													children: rJsx(M, {
 														className: `framer-qmp8ie-container`,
 														isAuthoredByUser: !0,
 														isModuleExternal: !0,
@@ -3143,7 +3143,7 @@ vision`,
 																opacity: 1,
 															},
 														},
-														children: d(We, {
+														children: rJsx(We, {
 															autoplay: !1,
 															backgroundColor: `rgba(0, 0, 0, 0)`,
 															borderRadius: 10,
@@ -3190,7 +3190,7 @@ vision`,
 													}),
 												}),
 											ae() &&
-												h(x.div, {
+												rJsxs(x.div, {
 													className: `framer-1f3hrwc`,
 													layoutDependency: L,
 													layoutId: `e25vkkGnB`,
@@ -3206,11 +3206,11 @@ vision`,
 														k,
 													),
 													children: [
-														d(D, {
+														rJsx(D, {
 															__fromCanvasComponent:
 																!0,
-															children: d(i, {
-																children: d(
+															children: rJsx(i, {
+																children: rJsx(
 																	x.h3,
 																	{
 																		className: `framer-styles-preset-1yuak3c`,
@@ -3243,11 +3243,11 @@ vision`,
 																{
 																	b3CeND2xU: {
 																		children:
-																			d(
+																			rJsx(
 																				i,
 																				{
 																					children:
-																						d(
+																						rJsx(
 																							x.h6,
 																							{
 																								className: `framer-styles-preset-nkm6se`,
@@ -3266,18 +3266,18 @@ vision`,
 																k,
 															),
 														}),
-														d(D, {
+														rJsx(D, {
 															__fromCanvasComponent:
 																!0,
-															children: d(i, {
-																children: h(
+															children: rJsx(i, {
+																children: rJsxs(
 																	x.h3,
 																	{
 																		className: `framer-styles-preset-1yuak3c`,
 																		"data-styles-preset": `zczqo4Z8y`,
 																		children:
 																			[
-																				d(
+																				rJsx(
 																					x.span,
 																					{
 																						style: {
@@ -3286,11 +3286,11 @@ vision`,
 																						children: `Our`,
 																					},
 																				),
-																				d(
+																				rJsx(
 																					x.br,
 																					{},
 																				),
-																				d(
+																				rJsx(
 																					x.span,
 																					{
 																						style: {
@@ -3330,18 +3330,18 @@ vision`,
 																{
 																	b3CeND2xU: {
 																		children:
-																			d(
+																			rJsx(
 																				i,
 																				{
 																					children:
-																						h(
+																						rJsxs(
 																							x.h6,
 																							{
 																								className: `framer-styles-preset-nkm6se`,
 																								"data-styles-preset": `BaUGQBb6A`,
 																								children:
 																									[
-																										d(
+																										rJsx(
 																											x.span,
 																											{
 																												style: {
@@ -3350,11 +3350,11 @@ vision`,
 																												children: `Our`,
 																											},
 																										),
-																										d(
+																										rJsx(
 																											x.br,
 																											{},
 																										),
-																										d(
+																										rJsx(
 																											x.span,
 																											{
 																												style: {
@@ -3371,18 +3371,18 @@ vision`,
 																	},
 																	z7KoYCuEx: {
 																		children:
-																			d(
+																			rJsx(
 																				i,
 																				{
 																					children:
-																						h(
+																						rJsxs(
 																							x.h4,
 																							{
 																								className: `framer-styles-preset-1ri87jd`,
 																								"data-styles-preset": `LuOKrK4j8`,
 																								children:
 																									[
-																										d(
+																										rJsx(
 																											x.span,
 																											{
 																												style: {
@@ -3391,11 +3391,11 @@ vision`,
 																												children: `Our`,
 																											},
 																										),
-																										d(
+																										rJsx(
 																											x.br,
 																											{},
 																										),
-																										d(
+																										rJsx(
 																											x.span,
 																											{
 																												style: {
@@ -3418,7 +3418,7 @@ vision`,
 													],
 												}),
 											ae() &&
-												d(x.div, {
+												rJsx(x.div, {
 													className: `framer-1myqteb`,
 													layoutDependency: L,
 													layoutId: `UWiI34WAW`,
@@ -3429,8 +3429,8 @@ vision`,
 														borderTopLeftRadius: 8,
 														borderTopRightRadius: 8,
 													},
-													children: d(U, {
-														children: d(M, {
+													children: rJsx(U, {
+														children: rJsx(M, {
 															className: `framer-1hbv8ho-container`,
 															isAuthoredByUser:
 																!0,
@@ -3440,7 +3440,7 @@ vision`,
 															rendersWithMotion:
 																!0,
 															scopeId: `jRZUBmyyd`,
-															children: d(cn, {
+															children: rJsx(cn, {
 																alphaTest: 0,
 																antialias: !1,
 																arcAmp: 31.7,
@@ -33981,27 +33981,27 @@ function xg(e) {
 			align: O,
 			stopMotionInEditor: k = !1,
 		} = e,
-		A = m(null),
-		j = m(null),
-		M = m(null),
-		N = m(null),
-		P = m(null),
-		F = m(null),
-		I = m(null),
-		L = m(null),
-		R = m([]),
-		z = m([]),
-		ee = m(0),
-		te = m(0),
-		ne = m(0),
-		B = m(!1),
-		re = m({ r: 8, theta: 0, phi: 0.9 }),
-		V = m(!1),
-		ie = m({ x: 0, y: 0 }),
-		H = m(t),
-		ae = m(v);
-	m(1);
-	let U = m(!!k);
+		A = rUseRef(null),
+		j = rUseRef(null),
+		M = rUseRef(null),
+		N = rUseRef(null),
+		P = rUseRef(null),
+		F = rUseRef(null),
+		I = rUseRef(null),
+		L = rUseRef(null),
+		R = rUseRef([]),
+		z = rUseRef([]),
+		ee = rUseRef(0),
+		te = rUseRef(0),
+		ne = rUseRef(0),
+		B = rUseRef(!1),
+		re = rUseRef({ r: 8, theta: 0, phi: 0.9 }),
+		V = rUseRef(!1),
+		ie = rUseRef({ x: 0, y: 0 }),
+		H = rUseRef(t),
+		ae = rUseRef(v);
+	rUseRef(1);
+	let U = rUseRef(!!k);
 	(c(() => {
 		((H.current = t), (B.current = Math.abs(t) > 0 || Math.abs(v) > 0));
 	}, [t, v]),
@@ -34050,7 +34050,7 @@ function xg(e) {
 				(this.cx = i));
 		}
 	}
-	let ue = o(() => {
+	let ue = rUseMemo(() => {
 		if (u === void 0) return Promise.resolve([]);
 		let e = (h || []).filter(Boolean);
 		if (e.length === 0) return Promise.resolve([]);
@@ -34360,7 +34360,7 @@ function xg(e) {
 				N.current &&
 				j.current.render(M.current, N.current);
 		}, [n, r, i, l, f, p, h, s]),
-		d(`div`, {
+		rJsx(`div`, {
 			ref: A,
 			style: {
 				width: `100%`,
@@ -34373,7 +34373,7 @@ function xg(e) {
 }
 var Sg = t(() => {
 	(v(),
-		g(),
+		rUseDeferredValue(),
 		l(),
 		L(),
 		yg(),
@@ -34568,7 +34568,7 @@ var wg,
 	Pg,
 	Fg,
 	Ig = t(() => {
-		(g(),
+		(rUseDeferredValue(),
 			L(),
 			w(),
 			l(),
@@ -34596,10 +34596,10 @@ var wg,
 			}),
 			(Og = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
 			(kg = ({ value: e, children: t }) => {
-				let n = p(S),
+				let n = rUseContext(S),
 					r = e ?? n.transition,
-					i = o(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
-				return d(S.Provider, { value: i, children: t });
+					i = rUseMemo(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
+				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(Ag = x.create(i)),
 			(jg = {
@@ -34633,10 +34633,10 @@ var wg,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(Pg = O(
-				f(function (e, t) {
-					let n = m(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = _(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: s } = G();
 					H();
 					let {
@@ -34668,14 +34668,14 @@ var wg,
 						}),
 						F = Ng(e, j),
 						I = N(Eg, Se, ge, at);
-					return d(C, {
+					return rJsx(C, {
 						id: u ?? a,
-						children: d(Ag, {
+						children: rJsx(Ag, {
 							animate: j,
 							initial: !1,
-							children: d(kg, {
+							children: rJsx(kg, {
 								value: Og,
-								children: h(x.div, {
+								children: rJsxs(x.div, {
 									...y,
 									...T,
 									className: N(I, `framer-1uykqma`, l, S),
@@ -34707,7 +34707,7 @@ var wg,
 										E,
 									),
 									children: [
-										h(x.div, {
+										rJsxs(x.div, {
 											className: `framer-1ympb1l`,
 											layoutDependency: F,
 											layoutId: `kSSfgU95c`,
@@ -34719,8 +34719,8 @@ var wg,
 												borderTopRightRadius: 8,
 											},
 											children: [
-												d(U, {
-													children: d(M, {
+												rJsx(U, {
+													children: rJsx(M, {
 														className: `framer-17y8pko-container`,
 														isAuthoredByUser: !0,
 														layoutDependency: F,
@@ -34728,7 +34728,7 @@ var wg,
 														nodeId: `rPiJF0deT`,
 														rendersWithMotion: !0,
 														scopeId: `gHCOGeDzM`,
-														children: d(nt, {
+														children: rJsx(nt, {
 															ariaLabel: `h1`,
 															charset: `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*`,
 															color: `var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0))`,
@@ -34820,10 +34820,10 @@ var wg,
 														}),
 													}),
 												}),
-												d(D, {
+												rJsx(D, {
 													__fromCanvasComponent: !0,
-													children: d(i, {
-														children: d(x.h6, {
+													children: rJsx(i, {
+														children: rJsx(x.h6, {
 															className: `framer-styles-preset-41ki07`,
 															"data-styles-preset": `hmRgK3K6v`,
 															style: {
@@ -34855,8 +34855,8 @@ var wg,
 													...Cg(
 														{
 															q9Bb4COCo: {
-																children: d(i, {
-																	children: d(
+																children: rJsx(i, {
+																	children: rJsx(
 																		x.h6,
 																		{
 																			className: `framer-styles-preset-41ki07`,
@@ -34871,8 +34871,8 @@ var wg,
 																}),
 															},
 															yBUvxDJLq: {
-																children: d(i, {
-																	children: d(
+																children: rJsx(i, {
+																	children: rJsx(
 																		x.p,
 																		{
 																			className: `framer-styles-preset-5fkg2j`,
@@ -34887,8 +34887,8 @@ var wg,
 																}),
 															},
 															Ygu9NAGvp: {
-																children: d(i, {
-																	children: d(
+																children: rJsx(i, {
+																	children: rJsx(
 																		x.h6,
 																		{
 																			className: `framer-styles-preset-41ki07`,
@@ -34903,8 +34903,8 @@ var wg,
 																}),
 															},
 															zcVFh3vye: {
-																children: d(i, {
-																	children: d(
+																children: rJsx(i, {
+																	children: rJsx(
 																		x.p,
 																		{
 																			className: `framer-styles-preset-5fkg2j`,
@@ -34925,7 +34925,7 @@ var wg,
 												}),
 											],
 										}),
-										d(x.div, {
+										rJsx(x.div, {
 											className: `framer-4gzr05`,
 											layoutDependency: F,
 											layoutId: `c1uOZFJ4F`,
@@ -34936,10 +34936,10 @@ var wg,
 												borderTopLeftRadius: 8,
 												borderTopRightRadius: 8,
 											},
-											children: d(D, {
+											children: rJsx(D, {
 												__fromCanvasComponent: !0,
-												children: d(i, {
-													children: d(x.p, {
+												children: rJsx(i, {
+													children: rJsx(x.p, {
 														className: `framer-styles-preset-11kcybb`,
 														"data-styles-preset": `pPuowuywh`,
 														style: {
@@ -34963,8 +34963,8 @@ var wg,
 												...Cg(
 													{
 														q9Bb4COCo: {
-															children: d(i, {
-																children: d(
+															children: rJsx(i, {
+																children: rJsx(
 																	x.p,
 																	{
 																		className: `framer-styles-preset-11kcybb`,
@@ -34979,8 +34979,8 @@ var wg,
 															}),
 														},
 														Ygu9NAGvp: {
-															children: d(i, {
-																children: d(
+															children: rJsx(i, {
+																children: rJsx(
 																	x.p,
 																	{
 																		className: `framer-styles-preset-11kcybb`,
@@ -34995,8 +34995,8 @@ var wg,
 															}),
 														},
 														zcVFh3vye: {
-															children: d(i, {
-																children: d(
+															children: rJsx(i, {
+																children: rJsx(
 																	x.p,
 																	{
 																		className: `framer-styles-preset-11kcybb`,
@@ -35180,7 +35180,7 @@ var Rg,
 	Zg,
 	Qg,
 	$g = t(() => {
-		(g(),
+		(rUseDeferredValue(),
 			L(),
 			w(),
 			l(),
@@ -35204,10 +35204,10 @@ var Rg,
 				if (!(!e || typeof e != `object`)) return { ...e, alt: t };
 			}),
 			(Kg = ({ value: e, children: t }) => {
-				let n = p(S),
+				let n = rUseContext(S),
 					r = e ?? n.transition,
-					i = o(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
-				return d(S.Provider, { value: i, children: t });
+					i = rUseMemo(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
+				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(qg = x.create(i)),
 			(Jg = {
@@ -35239,10 +35239,10 @@ Mondragon Agency`,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(Zg = O(
-				f(function (e, t) {
-					let n = m(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = _(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: s } = G(),
 						c = H(),
 						{
@@ -35275,14 +35275,14 @@ Mondragon Agency`,
 						I = Xg(e, F),
 						L = N(Hg, Pe, fe),
 						R = () => S === `HMhFkXrLe`;
-					return d(C, {
+					return rJsx(C, {
 						id: f ?? a,
-						children: d(qg, {
+						children: rJsx(qg, {
 							animate: F,
 							initial: !1,
-							children: d(Kg, {
+							children: rJsx(Kg, {
 								value: Wg,
-								children: h(x.section, {
+								children: rJsxs(x.section, {
 									...b,
 									...E,
 									className: N(L, `framer-1puf288`, u, w),
@@ -35304,13 +35304,13 @@ Mondragon Agency`,
 										O,
 									),
 									children: [
-										h(x.div, {
+										rJsxs(x.div, {
 											className: `framer-1pmvxg8`,
 											layoutDependency: I,
 											layoutId: `mJMnYj05Y`,
 											children: [
-												d(U, {
-													children: d(M, {
+												rJsx(U, {
+													children: rJsx(M, {
 														className: `framer-1pxk66e-container`,
 														isAuthoredByUser: !0,
 														layoutDependency: I,
@@ -35318,7 +35318,7 @@ Mondragon Agency`,
 														nodeId: `cQGBFxEzA`,
 														rendersWithMotion: !0,
 														scopeId: `PJQVxeJtX`,
-														children: d(xg, {
+														children: rJsx(xg, {
 															align: 0,
 															background: `rgb(244, 244, 244)`,
 															depth: 15,
@@ -35385,7 +35385,7 @@ Mondragon Agency`,
 														}),
 													}),
 												}),
-												d(x.div, {
+												rJsx(x.div, {
 													className: `framer-14ctymx`,
 													layoutDependency: I,
 													layoutId: `QFHaojqdd`,
@@ -35395,35 +35395,35 @@ Mondragon Agency`,
 												}),
 											],
 										}),
-										h(x.div, {
+										rJsxs(x.div, {
 											className: `framer-1ev506i`,
 											
 											layoutDependency: I,
 											layoutId: `h_gvExkNU`,
 											children: [
-												d(x.div, {
+												rJsx(x.div, {
 													className: `framer-10q3sr4`,
 													
 													layoutDependency: I,
 													layoutId: `M6JBatw5i`,
 												}),
 												R() &&
-													d(x.div, {
+													rJsx(x.div, {
 														className: `framer-5um84f`,
 														
 														layoutDependency: I,
 														layoutId: `h_5lfuVL3`,
 													}),
-												h(x.div, {
+												rJsxs(x.div, {
 													className: `framer-fd0999`,
 													layoutDependency: I,
 													layoutId: `eu5x30gGL`,
 													children: [
-														d(D, {
+														rJsx(D, {
 															__fromCanvasComponent:
 																!0,
-															children: d(i, {
-																children: d(
+															children: rJsx(i, {
+																children: rJsx(
 																	x.h6,
 																	{
 																		className: `framer-styles-preset-f8hg8j`,
@@ -35432,7 +35432,7 @@ Mondragon Agency`,
 																			"--framer-text-alignment": `left`,
 																		},
 																		children:
-																			h(
+																			rJsxs(
 																				x.span,
 																				{
 																					style: {
@@ -35441,7 +35441,7 @@ Mondragon Agency`,
 																					children:
 																						[
 																							`Welcome to`,
-																							d(
+																							rJsx(
 																								x.br,
 																								{},
 																							),
@@ -35468,11 +35468,11 @@ Mondragon Agency`,
 																{
 																	HMhFkXrLe: {
 																		children:
-																			d(
+																			rJsx(
 																				i,
 																				{
 																					children:
-																						d(
+																						rJsx(
 																							x.h6,
 																							{
 																								className: `framer-styles-preset-41ki07`,
@@ -35481,7 +35481,7 @@ Mondragon Agency`,
 																									"--framer-text-alignment": `left`,
 																								},
 																								children:
-																									h(
+																									rJsxs(
 																										x.span,
 																										{
 																											style: {
@@ -35490,7 +35490,7 @@ Mondragon Agency`,
 																											children:
 																												[
 																													`Welcome to`,
-																													d(
+																													rJsx(
 																														x.br,
 																														{},
 																													),
@@ -35505,11 +35505,11 @@ Mondragon Agency`,
 																	},
 																	zigsp3FnN: {
 																		children:
-																			d(
+																			rJsx(
 																				i,
 																				{
 																					children:
-																						d(
+																						rJsx(
 																							x.h6,
 																							{
 																								className: `framer-styles-preset-41ki07`,
@@ -35518,7 +35518,7 @@ Mondragon Agency`,
 																									"--framer-text-alignment": `left`,
 																								},
 																								children:
-																									h(
+																									rJsxs(
 																										x.span,
 																										{
 																											style: {
@@ -35527,7 +35527,7 @@ Mondragon Agency`,
 																											children:
 																												[
 																													`Welcome to`,
-																													d(
+																													rJsx(
 																														x.br,
 																														{},
 																													),
@@ -35545,12 +35545,12 @@ Mondragon Agency`,
 																O,
 															),
 														}),
-														h(x.div, {
+														rJsxs(x.div, {
 															className: `framer-137wlho`,
 															layoutDependency: I,
 															layoutId: `qYJ4p_10N`,
 															children: [
-																d(U, {
+																rJsx(U, {
 																	height: 90,
 																	width: `90px`,
 																	...Lg(
@@ -35569,7 +35569,7 @@ Mondragon Agency`,
 																		S,
 																		O,
 																	),
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-5zpw0s-container`,
@@ -35581,7 +35581,7 @@ Mondragon Agency`,
 																				!0,
 																			scopeId: `PJQVxeJtX`,
 																			children:
-																				d(
+																				rJsx(
 																					ve,
 																					{
 																						hcJOIuTE0:
@@ -35621,7 +35621,7 @@ Mondragon Agency`,
 																		},
 																	),
 																}),
-																d(U, {
+																rJsx(U, {
 																	height: 90,
 																	width: `90px`,
 																	...Lg(
@@ -35640,7 +35640,7 @@ Mondragon Agency`,
 																		S,
 																		O,
 																	),
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-1dr5sel-container`,
@@ -35652,7 +35652,7 @@ Mondragon Agency`,
 																				!0,
 																			scopeId: `PJQVxeJtX`,
 																			children:
-																				d(
+																				rJsx(
 																					ve,
 																					{
 																						hcJOIuTE0:
@@ -35692,7 +35692,7 @@ Mondragon Agency`,
 																		},
 																	),
 																}),
-																d(U, {
+																rJsx(U, {
 																	height: 90,
 																	width: `90px`,
 																	...Lg(
@@ -35711,7 +35711,7 @@ Mondragon Agency`,
 																		S,
 																		O,
 																	),
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-1vgww3c-container`,
@@ -35723,7 +35723,7 @@ Mondragon Agency`,
 																				!0,
 																			scopeId: `PJQVxeJtX`,
 																			children:
-																				d(
+																				rJsx(
 																					ve,
 																					{
 																						hcJOIuTE0:
@@ -35763,7 +35763,7 @@ Mondragon Agency`,
 																		},
 																	),
 																}),
-																d(U, {
+																rJsx(U, {
 																	height: 90,
 																	width: `90px`,
 																	...Lg(
@@ -35782,7 +35782,7 @@ Mondragon Agency`,
 																		S,
 																		O,
 																	),
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-1uhhrjl-container`,
@@ -35794,7 +35794,7 @@ Mondragon Agency`,
 																				!0,
 																			scopeId: `PJQVxeJtX`,
 																			children:
-																				d(
+																				rJsx(
 																					ve,
 																					{
 																						hcJOIuTE0:
@@ -35838,15 +35838,15 @@ Mondragon Agency`,
 														}),
 													],
 												}),
-												d(x.div, {
+												rJsx(x.div, {
 													className: `framer-1krmk82`,
 													layoutDependency: I,
 													layoutId: `E75hmQxJ5`,
-													children: d(D, {
+													children: rJsx(D, {
 														__fromCanvasComponent:
 															!0,
-														children: d(i, {
-															children: d(x.h1, {
+														children: rJsx(i, {
+															children: rJsx(x.h1, {
 																style: {
 																	"--font-selector": `R0Y7U3BhY2UgTW9uby1yZWd1bGFy`,
 																	"--framer-font-family": `"Space Mono", monospace`,
@@ -35876,11 +35876,11 @@ Mondragon Agency`,
 														...Lg(
 															{
 																HMhFkXrLe: {
-																	children: d(
+																	children: rJsx(
 																		i,
 																		{
 																			children:
-																				h(
+																				rJsxs(
 																					x.h1,
 																					{
 																						style: {
@@ -35895,7 +35895,7 @@ Mondragon Agency`,
 																						},
 																						children:
 																							[
-																								d(
+																								rJsx(
 																									x.span,
 																									{
 																										style: {
@@ -35904,20 +35904,20 @@ Mondragon Agency`,
 																										children: `About`,
 																									},
 																								),
-																								d(
+																								rJsx(
 																									x.span,
 																									{
 																										style: {
 																											"--framer-font-size": `100.58901593012037px`,
 																										},
 																										children:
-																											d(
+																											rJsx(
 																												x.br,
 																												{},
 																											),
 																									},
 																								),
-																								d(
+																								rJsx(
 																									x.span,
 																									{
 																										style: {
@@ -35939,19 +35939,19 @@ Mondragon Agency`,
 														),
 													}),
 												}),
-												d(x.div, {
+												rJsx(x.div, {
 													className: `framer-2qgoyb`,
 													
 													layoutDependency: I,
 													layoutId: `KIUpb6NEA`,
 												}),
-												h(x.div, {
+												rJsxs(x.div, {
 													className: `framer-fuyyu7`,
 													layoutDependency: I,
 													layoutId: `uyBfmRWTj`,
 													children: [
 														v &&
-															d(U, {
+															rJsx(U, {
 																height: 259,
 																width: `322px`,
 																...Lg(
@@ -35968,7 +35968,7 @@ Mondragon Agency`,
 																	S,
 																	O,
 																),
-																children: d(M, {
+																children: rJsx(M, {
 																	className: `framer-1543fhz-container`,
 																	layoutDependency:
 																		I,
@@ -35977,7 +35977,7 @@ Mondragon Agency`,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `PJQVxeJtX`,
-																	children: d(
+																	children: rJsx(
 																		Fg,
 																		{
 																			cSjC_PK6A: `Steigerung nach Relaunch und Optimierung der User Journey innerhalb von 90 Tagen.`,
@@ -36010,7 +36010,7 @@ Mondragon Agency`,
 																}),
 															}),
 														y &&
-															d(U, {
+															rJsx(U, {
 																height: 259,
 																width: `322px`,
 																...Lg(
@@ -36027,7 +36027,7 @@ Mondragon Agency`,
 																	S,
 																	O,
 																),
-																children: d(M, {
+																children: rJsx(M, {
 																	className: `framer-taoybx-container`,
 																	layoutDependency:
 																		I,
@@ -36036,7 +36036,7 @@ Mondragon Agency`,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `PJQVxeJtX`,
-																	children: d(
+																	children: rJsx(
 																		Fg,
 																		{
 																			cSjC_PK6A: `Mehr Anfragen durch bessere Struktur, schnellere Ladezeiten und klare Kommunikation.`,
@@ -36248,7 +36248,7 @@ Mondragon Agency`,
 	e_,
 	t_,
 	n_ = t(() => {
-		(g(),
+		(rUseDeferredValue(),
 			L(),
 			l(),
 			w(),
@@ -36260,10 +36260,10 @@ Mondragon Agency`,
 						gap: o = 0,
 						children: s,
 					} = e,
-					[l, u] = a(!1),
-					[f, p] = a(0),
+					[l, u] = rUseState(!1),
+					[f, p] = rUseState(0),
 					h = b(0),
-					g = m(null),
+					g = rUseRef(null),
 					_ = r.toArray(s).filter(Boolean),
 					v = [..._, ..._];
 				return (
@@ -36289,12 +36289,12 @@ Mondragon Agency`,
 						else for (; i > 0; ) i -= f;
 						h.set(i);
 					}),
-					d(ie, {
+					rJsx(ie, {
 						width: `fill`,
 						height: `fit`,
 						background: `transparent`,
 						overflow: `hidden`,
-						children: d(x.div, {
+						children: rJsx(x.div, {
 							ref: g,
 							style: {
 								display: `flex`,
@@ -36326,7 +36326,7 @@ Mondragon Agency`,
 							onDragEnd: () => u(!1),
 							onPointerUp: () => u(!1),
 							onPointerCancel: () => u(!1),
-							children: d(`div`, {
+							children: rJsx(`div`, {
 								style: {
 									display: `flex`,
 									flexDirection: `row`,
@@ -36402,7 +36402,7 @@ var i_,
 	m_,
 	h_,
 	g_ = t(() => {
-		(g(),
+		(rUseDeferredValue(),
 			L(),
 			w(),
 			l(),
@@ -36423,10 +36423,10 @@ var i_,
 						? { src: e }
 						: void 0),
 			(l_ = ({ value: e, children: t }) => {
-				let n = p(S),
+				let n = rUseContext(S),
 					r = e ?? n.transition,
-					i = o(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
-				return d(S.Provider, { value: i, children: t });
+					i = rUseMemo(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
+				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(u_ = x.create(i)),
 			(d_ = { "Tablet & Phone": `tTg0gB55I`, Desktop: `BzrXbqon1` }),
@@ -36462,10 +36462,10 @@ var i_,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(m_ = O(
-				f(function (e, t) {
-					let n = m(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = _(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: s } = G(),
 						c = H(),
 						{
@@ -36498,14 +36498,14 @@ var i_,
 						}),
 						L = p_(e, F),
 						R = N(a_, Se, Ce, at);
-					return d(C, {
+					return rJsx(C, {
 						id: f ?? a,
-						children: d(u_, {
+						children: rJsx(u_, {
 							animate: F,
 							initial: !1,
-							children: d(l_, {
+							children: rJsx(l_, {
 								value: s_,
-								children: h(x.div, {
+								children: rJsxs(x.div, {
 									...S,
 									...O,
 									className: N(R, `framer-1d4j8jp`, u, T),
@@ -36529,7 +36529,7 @@ var i_,
 										k,
 									),
 									children: [
-										h(x.div, {
+										rJsxs(x.div, {
 											className: `framer-10z3yuk`,
 											layoutDependency: L,
 											layoutId: `mPgf3IBUZ`,
@@ -36541,7 +36541,7 @@ var i_,
 												borderTopRightRadius: 8,
 											},
 											children: [
-												d(x.div, {
+												rJsx(x.div, {
 													className: `framer-1p30jaw`,
 													layoutDependency: L,
 													layoutId: `I9zFL_Y0l`,
@@ -36550,7 +36550,7 @@ var i_,
 														opacity: 0,
 													},
 												}),
-												d(ee, {
+												rJsx(ee, {
 													background: {
 														alt: ``,
 														fit: `fill`,
@@ -36619,7 +36619,7 @@ var i_,
 												}),
 											],
 										}),
-										h(x.div, {
+										rJsxs(x.div, {
 											className: `framer-1nzq6su`,
 											layoutDependency: L,
 											layoutId: `myVmNB4t5`,
@@ -36631,10 +36631,10 @@ var i_,
 												borderTopRightRadius: 8,
 											},
 											children: [
-												d(D, {
+												rJsx(D, {
 													__fromCanvasComponent: !0,
-													children: d(i, {
-														children: d(x.h6, {
+													children: rJsx(i, {
+														children: rJsx(x.h6, {
 															className: `framer-styles-preset-41ki07`,
 															"data-styles-preset": `hmRgK3K6v`,
 															style: {
@@ -36655,7 +36655,7 @@ var i_,
 													verticalAlignment: `top`,
 													withExternalLayout: !0,
 												}),
-												d(x.div, {
+												rJsx(x.div, {
 													className: `framer-1uaazw5`,
 													layoutDependency: L,
 													layoutId: `QQ89knGlv`,
@@ -36666,11 +36666,11 @@ var i_,
 														borderTopLeftRadius: 8,
 														borderTopRightRadius: 8,
 													},
-													children: d(D, {
+													children: rJsx(D, {
 														__fromCanvasComponent:
 															!0,
-														children: d(i, {
-															children: d(x.h6, {
+														children: rJsx(i, {
+															children: rJsx(x.h6, {
 																className: `framer-styles-preset-12tby5a`,
 																"data-styles-preset": `j9HsFBXUW`,
 																style: {
@@ -36692,10 +36692,10 @@ var i_,
 														withExternalLayout: !0,
 													}),
 												}),
-												d(D, {
+												rJsx(D, {
 													__fromCanvasComponent: !0,
-													children: d(i, {
-														children: d(x.p, {
+													children: rJsx(i, {
+														children: rJsx(x.p, {
 															className: `framer-styles-preset-11kcybb`,
 															"data-styles-preset": `pPuowuywh`,
 															style: {
@@ -36873,7 +36873,7 @@ var v_,
 	M_,
 	N_,
 	P_ = t(() => {
-		(g(),
+		(rUseDeferredValue(),
 			L(),
 			w(),
 			l(),
@@ -36898,10 +36898,10 @@ var v_,
 				if (!(!e || typeof e != `object`)) return { ...e, alt: t };
 			}),
 			(D_ = ({ value: e, children: t }) => {
-				let n = p(S),
+				let n = rUseContext(S),
 					r = e ?? n.transition,
-					i = o(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
-				return d(S.Provider, { value: i, children: t });
+					i = rUseMemo(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
+				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(O_ = x.create(i)),
 			(k_ = {
@@ -36927,10 +36927,10 @@ var v_,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(M_ = O(
-				f(function (e, t) {
-					let n = m(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = _(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: s } = G();
 					H();
 					let {
@@ -36964,14 +36964,14 @@ var v_,
 						I = () => y !== `O2wfs1LjN`,
 						L = () => !![`DDxBTVfl9`, `O2wfs1LjN`].includes(y),
 						R = () => ![`DDxBTVfl9`, `O2wfs1LjN`].includes(y);
-					return d(C, {
+					return rJsx(C, {
 						id: u ?? a,
-						children: d(O_, {
+						children: rJsx(O_, {
 							animate: A,
 							initial: !1,
-							children: d(D_, {
+							children: rJsx(D_, {
 								value: w_,
-								children: d(x.section, {
+								children: rJsx(x.section, {
 									...v,
 									...w,
 									className: N(F, `framer-1hk1w3o`, l, b),
@@ -36989,27 +36989,27 @@ var v_,
 										y,
 										T,
 									),
-									children: h(x.div, {
+									children: rJsxs(x.div, {
 										className: `framer-7vg0xd`,
 										
 										layoutDependency: j,
 										layoutId: `EoCrSja8J`,
 										children: [
-											h(x.div, {
+											rJsxs(x.div, {
 												className: `framer-1ikvsfz`,
 												
 												layoutDependency: j,
 												layoutId: `ckYuqU7z5`,
 												children: [
-													d(x.div, {
+													rJsx(x.div, {
 														className: `framer-y3ib4k`,
 														layoutDependency: j,
 														layoutId: `ciCRDnTN9`,
-														children: d(D, {
+														children: rJsx(D, {
 															__fromCanvasComponent:
 																!0,
-															children: d(i, {
-																children: d(
+															children: rJsx(i, {
+																children: rJsx(
 																	x.h6,
 																	{
 																		className: `framer-styles-preset-nkm6se`,
@@ -37039,11 +37039,11 @@ var v_,
 																{
 																	O2wfs1LjN: {
 																		children:
-																			d(
+																			rJsx(
 																				i,
 																				{
 																					children:
-																						d(
+																						rJsx(
 																							x.h6,
 																							{
 																								className: `framer-styles-preset-f8hg8j`,
@@ -37063,16 +37063,16 @@ var v_,
 															),
 														}),
 													}),
-													d(x.div, {
+													rJsx(x.div, {
 														className: `framer-l1l7u2`,
 														
 														layoutDependency: j,
 														layoutId: `ztPjywo1z`,
-														children: d(D, {
+														children: rJsx(D, {
 															__fromCanvasComponent:
 																!0,
-															children: d(i, {
-																children: d(
+															children: rJsx(i, {
+																children: rJsx(
 																	x.h6,
 																	{
 																		className: `framer-styles-preset-nkm6se`,
@@ -37100,11 +37100,11 @@ var v_,
 																{
 																	O2wfs1LjN: {
 																		children:
-																			d(
+																			rJsx(
 																				i,
 																				{
 																					children:
-																						d(
+																						rJsx(
 																							x.h6,
 																							{
 																								className: `framer-styles-preset-f8hg8j`,
@@ -37125,7 +37125,7 @@ var v_,
 														}),
 													}),
 													I() &&
-														d(x.div, {
+														rJsx(x.div, {
 															className: `framer-1ldegzk`,
 															layoutDependency: j,
 															layoutId: `lhZ8AoVCL`,
@@ -37133,8 +37133,8 @@ var v_,
 												],
 											}),
 											L() &&
-												d(U, {
-													children: d(M, {
+												rJsx(U, {
+													children: rJsx(M, {
 														className: `framer-1xfhh8n-container`,
 														isAuthoredByUser: !0,
 														isModuleExternal: !0,
@@ -37143,7 +37143,7 @@ var v_,
 														nodeId: `zAn6vscUk`,
 														rendersWithMotion: !0,
 														scopeId: `PYY9ZYp2R`,
-														children: d($e, {
+														children: rJsx($e, {
 															align: `flex-start`,
 															ariaLabel: ``,
 															arrowObject: {
@@ -37205,10 +37205,10 @@ var v_,
 																widthType: `stretch`,
 															},
 															slots: [
-																d(U, {
+																rJsx(U, {
 																	height: 601,
 																	width: `320px`,
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-meyigf-container`,
@@ -37222,7 +37222,7 @@ var v_,
 																				!0,
 																			scopeId: `PYY9ZYp2R`,
 																			children:
-																				d(
+																				rJsx(
 																					h_,
 																					{
 																						BPe0DlJJw: `Jonas Meyer`,
@@ -37241,10 +37241,10 @@ var v_,
 																		},
 																	),
 																}),
-																d(U, {
+																rJsx(U, {
 																	height: 601,
 																	width: `320px`,
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-tgalxe-container`,
@@ -37258,7 +37258,7 @@ var v_,
 																				!0,
 																			scopeId: `PYY9ZYp2R`,
 																			children:
-																				d(
+																				rJsx(
 																					h_,
 																					{
 																						BPe0DlJJw: `Margaret Reed`,
@@ -37287,10 +37287,10 @@ var v_,
 																		},
 																	),
 																}),
-																d(U, {
+																rJsx(U, {
 																	height: 601,
 																	width: `320px`,
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-4hyjwu-container`,
@@ -37304,7 +37304,7 @@ var v_,
 																				!0,
 																			scopeId: `PYY9ZYp2R`,
 																			children:
-																				d(
+																				rJsx(
 																					h_,
 																					{
 																						BPe0DlJJw: `David Gibson`,
@@ -37333,10 +37333,10 @@ var v_,
 																		},
 																	),
 																}),
-																d(U, {
+																rJsx(U, {
 																	height: 601,
 																	width: `320px`,
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-1qnv8hc-container`,
@@ -37350,7 +37350,7 @@ var v_,
 																				!0,
 																			scopeId: `PYY9ZYp2R`,
 																			children:
-																				d(
+																				rJsx(
 																					h_,
 																					{
 																						BPe0DlJJw: `Maya Singh`,
@@ -37379,10 +37379,10 @@ var v_,
 																		},
 																	),
 																}),
-																d(U, {
+																rJsx(U, {
 																	height: 601,
 																	width: `320px`,
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-1ah63jq-container`,
@@ -37396,7 +37396,7 @@ var v_,
 																				!0,
 																			scopeId: `PYY9ZYp2R`,
 																			children:
-																				d(
+																				rJsx(
 																					h_,
 																					{
 																						BPe0DlJJw: `Kate Wilington`,
@@ -37456,8 +37456,8 @@ var v_,
 													}),
 												}),
 											R() &&
-												d(U, {
-													children: d(M, {
+												rJsx(U, {
+													children: rJsx(M, {
 														className: `framer-c8x2s8-container`,
 														isAuthoredByUser: !0,
 														layoutDependency: j,
@@ -37465,7 +37465,7 @@ var v_,
 														nodeId: `ti1DrbOwU`,
 														rendersWithMotion: !0,
 														scopeId: `PYY9ZYp2R`,
-														children: h(t_, {
+														children: rJsxs(t_, {
 															direction: `left`,
 															enableDrag: !0,
 															gap: 20,
@@ -37479,9 +37479,9 @@ var v_,
 															},
 															width: `100%`,
 															children: [
-																d(U, {
+																rJsx(U, {
 																	height: 601,
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-1jhinbq-container`,
@@ -37495,7 +37495,7 @@ var v_,
 																				!0,
 																			scopeId: `PYY9ZYp2R`,
 																			children:
-																				d(
+																				rJsx(
 																					h_,
 																					{
 																						BPe0DlJJw: `Jonas Meyer`,
@@ -37511,9 +37511,9 @@ var v_,
 																		},
 																	),
 																}),
-																d(U, {
+																rJsx(U, {
 																	height: 601,
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-mevo7n-container`,
@@ -37527,7 +37527,7 @@ var v_,
 																				!0,
 																			scopeId: `PYY9ZYp2R`,
 																			children:
-																				d(
+																				rJsx(
 																					h_,
 																					{
 																						BPe0DlJJw: `Margaret Reed`,
@@ -37553,9 +37553,9 @@ var v_,
 																		},
 																	),
 																}),
-																d(U, {
+																rJsx(U, {
 																	height: 601,
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-1o9du0w-container`,
@@ -37569,7 +37569,7 @@ var v_,
 																				!0,
 																			scopeId: `PYY9ZYp2R`,
 																			children:
-																				d(
+																				rJsx(
 																					h_,
 																					{
 																						BPe0DlJJw: `David Gibson`,
@@ -37595,9 +37595,9 @@ var v_,
 																		},
 																	),
 																}),
-																d(U, {
+																rJsx(U, {
 																	height: 601,
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-140d20d-container`,
@@ -37611,7 +37611,7 @@ var v_,
 																				!0,
 																			scopeId: `PYY9ZYp2R`,
 																			children:
-																				d(
+																				rJsx(
 																					h_,
 																					{
 																						BPe0DlJJw: `Maya Singh`,
@@ -37637,9 +37637,9 @@ var v_,
 																		},
 																	),
 																}),
-																d(U, {
+																rJsx(U, {
 																	height: 601,
-																	children: d(
+																	children: rJsx(
 																		M,
 																		{
 																			className: `framer-qama0z-container`,
@@ -37653,7 +37653,7 @@ var v_,
 																				!0,
 																			scopeId: `PYY9ZYp2R`,
 																			children:
-																				d(
+																				rJsx(
 																					h_,
 																					{
 																						BPe0DlJJw: `Kate Wilington`,
@@ -77802,13 +77802,13 @@ function GI(e) {
 			fitSize: l = 1,
 			wireframe: f = !1,
 		} = e,
-		p = m(null),
-		g = m(null),
-		_ = m(0),
-		v = m(null),
-		y = m(null),
-		[b, x] = a(``),
-		S = m({
+		p = rUseRef(null),
+		g = rUseRef(null),
+		_ = rUseRef(0),
+		v = rUseRef(null),
+		y = rUseRef(null),
+		[b, x] = rUseState(``),
+		S = rUseRef({
 			renderer: null,
 			gl: null,
 			camera: null,
@@ -77831,7 +77831,7 @@ function GI(e) {
 			needsRefit: !1,
 			active: !0,
 		}),
-		C = m({
+		C = rUseRef({
 			autoRotate: r,
 			rotateSpeed: i,
 			rotateAxis: o,
@@ -78222,7 +78222,7 @@ function GI(e) {
 					e.renderer.render({ scene: t, camera: e.camera }));
 			}
 		}, [s, f]),
-		h(`div`, {
+		rJsxs(`div`, {
 			ref: p,
 			style: {
 				width: `100%`,
@@ -78231,7 +78231,7 @@ function GI(e) {
 				cursor: `grab`,
 			},
 			children: [
-				d(`canvas`, {
+				rJsx(`canvas`, {
 					ref: g,
 					style: {
 						display: `block`,
@@ -78241,7 +78241,7 @@ function GI(e) {
 					},
 				}),
 				b &&
-					d(`div`, {
+					rJsx(`div`, {
 						style: {
 							position: `absolute`,
 							left: 8,
@@ -78488,7 +78488,7 @@ var rL,
 	pL,
 	mL = t(() => {
 		(v(),
-			g(),
+			rUseDeferredValue(),
 			VS(),
 			jF(),
 			WI(),
@@ -78613,7 +78613,7 @@ var gL,
 	OL,
 	kL,
 	AL = t(() => {
-		(g(),
+		(rUseDeferredValue(),
 			L(),
 			w(),
 			l(),
@@ -78633,10 +78633,10 @@ var gL,
 			}),
 			(xL = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
 			(SL = ({ value: e, children: t }) => {
-				let n = p(S),
+				let n = rUseContext(S),
 					r = e ?? n.transition,
-					i = o(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
-				return d(S.Provider, { value: i, children: t });
+					i = rUseMemo(() => ({ ...n, transition: r }), [JSON.stringify(r)]);
+				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(CL = x.create(i)),
 			(wL = { X: `X`, Y: `Y`, Z: `Z` }),
@@ -78685,10 +78685,10 @@ var gL,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(OL = O(
-				f(function (e, t) {
-					let n = m(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = _(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: s } = G();
 					H();
 					let {
@@ -78727,14 +78727,14 @@ var gL,
 						}),
 						ne = DL(e, te),
 						B = N(yL, Ae, Pe, He, Re);
-					return d(C, {
+					return rJsx(C, {
 						id: u ?? a,
-						children: d(CL, {
+						children: rJsx(CL, {
 							animate: te,
 							initial: !1,
-							children: d(SL, {
+							children: rJsx(SL, {
 								value: xL,
-								children: d(x.section, {
+								children: rJsx(x.section, {
 									...k,
 									...I,
 									className: N(B, `framer-ojtbpq`, l, j),
@@ -78752,16 +78752,16 @@ var gL,
 										A,
 										L,
 									),
-									children: h(x.div, {
+									children: rJsxs(x.div, {
 										className: `framer-eotnsd`,
 										
 										layoutDependency: ne,
 										layoutId: `DrXCGppJq`,
 										children: [
-											d(D, {
+											rJsx(D, {
 												__fromCanvasComponent: !0,
-												children: d(i, {
-													children: d(x.h6, {
+												children: rJsx(i, {
+													children: rJsx(x.h6, {
 														className: `framer-styles-preset-nkm6se`,
 														"data-styles-preset": `BaUGQBb6A`,
 														style: {
@@ -78784,8 +78784,8 @@ var gL,
 												...hL(
 													{
 														cnMKZnYTb: {
-															children: d(i, {
-																children: d(
+															children: rJsx(i, {
+																children: rJsx(
 																	x.h6,
 																	{
 																		className: `framer-styles-preset-f8hg8j`,
@@ -78803,22 +78803,22 @@ var gL,
 													L,
 												),
 											}),
-											d(D, {
+											rJsx(D, {
 												__fromCanvasComponent: !0,
-												children: d(i, {
-													children: h(x.h3, {
+												children: rJsx(i, {
+													children: rJsxs(x.h3, {
 														className: `framer-styles-preset-1yuak3c`,
 														"data-styles-preset": `zczqo4Z8y`,
 														children: [
-															d(x.span, {
+															rJsx(x.span, {
 																style: {
 																	"--framer-text-color": `var(--extracted-1k2zljd, var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0)))`,
 																},
 																children: `       From strategy to launch, we plan, design  and build end-to-end – aligning positioning, content, and modular UI into websites that load fast, meet AA accessibility and are easy to edit.\u2028\u2028`,
 															}),
-															d(x.br, {}),
-															d(x.br, {}),
-															d(x.span, {
+															rJsx(x.br, {}),
+															rJsx(x.br, {}),
+															rJsx(x.span, {
 																style: {
 																	"--framer-text-color": `var(--extracted-1ij5xuf, var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0)))`,
 																},
@@ -78852,15 +78852,15 @@ var gL,
 												...hL(
 													{
 														cnMKZnYTb: {
-															children: d(i, {
-																children: h(
+															children: rJsx(i, {
+																children: rJsxs(
 																	x.h6,
 																	{
 																		className: `framer-styles-preset-nkm6se`,
 																		"data-styles-preset": `BaUGQBb6A`,
 																		children:
 																			[
-																				d(
+																				rJsx(
 																					x.span,
 																					{
 																						style: {
@@ -78869,15 +78869,15 @@ var gL,
 																						children: `       From strategy to launch, we plan, design  and build end-to-end – aligning positioning, content, and modular UI into websites that load fast, meet AA accessibility and are easy to edit.\u2028\u2028`,
 																					},
 																				),
-																				d(
+																				rJsx(
 																					x.br,
 																					{},
 																				),
-																				d(
+																				rJsx(
 																					x.br,
 																					{},
 																				),
-																				d(
+																				rJsx(
 																					x.span,
 																					{
 																						style: {
@@ -78892,15 +78892,15 @@ var gL,
 															}),
 														},
 														JEWKItX5x: {
-															children: d(i, {
-																children: h(
+															children: rJsx(i, {
+																children: rJsxs(
 																	x.h4,
 																	{
 																		className: `framer-styles-preset-1ri87jd`,
 																		"data-styles-preset": `LuOKrK4j8`,
 																		children:
 																			[
-																				d(
+																				rJsx(
 																					x.span,
 																					{
 																						style: {
@@ -78909,15 +78909,15 @@ var gL,
 																						children: `       From strategy to launch, we plan, design  and build end-to-end – aligning positioning, content, and modular UI into websites that load fast, meet AA accessibility and are easy to edit.\u2028\u2028`,
 																					},
 																				),
-																				d(
+																				rJsx(
 																					x.br,
 																					{},
 																				),
-																				d(
+																				rJsx(
 																					x.br,
 																					{},
 																				),
-																				d(
+																				rJsx(
 																					x.span,
 																					{
 																						style: {
@@ -78936,8 +78936,8 @@ var gL,
 													L,
 												),
 											}),
-											d(U, {
-												children: d(M, {
+											rJsx(U, {
+												children: rJsx(M, {
 													className: `framer-174u471-container`,
 													isAuthoredByUser: !0,
 													layoutDependency: ne,
@@ -78946,7 +78946,7 @@ var gL,
 													rendersWithMotion: !0,
 													scopeId: `uSevmUYHa`,
 													style: { opacity: 0.49 },
-													children: d(GI, {
+													children: rJsx(GI, {
 														autoRotate: b,
 														color: T,
 														fbxFile: y,
@@ -79189,7 +79189,7 @@ var gL,
 	QL,
 	$L;
 t(() => {
-	(g(),
+	(rUseDeferredValue(),
 		L(),
 		w(),
 		l(),
@@ -79236,7 +79236,7 @@ t(() => {
 		(qL = ({ value: e }) =>
 			B()
 				? null
-				: d(`style`, {
+				: rJsx(`style`, {
 						dangerouslySetInnerHTML: { __html: e },
 						"data-framer-html-style": ``,
 					})),
@@ -79267,10 +79267,10 @@ t(() => {
 			variant: `dAo9ApRb4`,
 		}),
 		(ZL = O(
-			f(function (e, t) {
-				let n = m(null),
+			rForwardRef(function (e, t) {
+				let n = rUseRef(null),
 					r = t ?? n,
-					i = _(),
+					i = rUseId(),
 					{ activeLocale: a, setLocale: s } = G(),
 					c = H(),
 					{
@@ -79280,42 +79280,42 @@ t(() => {
 						variant: g,
 						...v
 					} = JL(e);
-				ce(o(() => ft({}, a), [a]));
+				ce(rUseMemo(() => ft({}, a), [a]));
 				let [y, b] = ae(g, BL, !1),
 					w = N(HL),
-					T = p(W)?.isLayoutTemplate,
-					E = WL(T, !!p(S)?.transition?.layout);
+					T = rUseContext(W)?.isLayoutTemplate,
+					E = WL(T, !!rUseContext(S)?.transition?.layout);
 				return (
 					te({ "1392l07": XL, "1q31jf5": YL }),
-					d(W.Provider, {
+					rJsx(W.Provider, {
 						value: {
 							activeVariantId: y,
 							humanReadableVariantMap: KL,
 							primaryVariantId: `cTFmDve4R`,
 							variantClassNames: UL,
 						},
-						children: h(C, {
+						children: rJsxs(C, {
 							id: f ?? i,
 							children: [
-								d(qL, {
+								rJsx(qL, {
 									value: `html body { background: var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255)); }`,
 								}),
-								h(x.div, {
+								rJsxs(x.div, {
 									...v,
 									className: N(w, `framer-1oqgkzr`, u),
 									ref: r,
 									style: { ...l },
 									children: [
-										d(U, {
+										rJsx(U, {
 											height: 800,
 											width: c?.width || `100vw`,
 											y: (c?.y || 0) + 0 + 0,
-											children: d(re, {
+											children: rJsx(re, {
 												className: `framer-1pdp1e5-container`,
 												layout: E,
 												nodeId: `KvnX8f1E7`,
 												scopeId: `rfr9bsCxq`,
-												children: d(se, {
+												children: rJsx(se, {
 													breakpoint: y,
 													overrides: {
 														kA1ay4BFk: {
@@ -79327,7 +79327,7 @@ t(() => {
 																GL(`zigsp3FnN`),
 														},
 													},
-													children: d(Qg, {
+													children: rJsx(Qg, {
 														height: `100%`,
 														id: `KvnX8f1E7`,
 														layoutId: `KvnX8f1E7`,
@@ -79345,16 +79345,16 @@ Mondragon Agency`,
 												}),
 											}),
 										}),
-										d(U, {
+										rJsx(U, {
 											height: 1069,
 											width: c?.width || `100vw`,
 											y: (c?.y || 0) + 0 + 800,
-											children: d(re, {
+											children: rJsx(re, {
 												className: `framer-1hyeg0b-container`,
 												layout: E,
 												nodeId: `JkZwZtw2V`,
 												scopeId: `rfr9bsCxq`,
-												children: d(se, {
+												children: rJsx(se, {
 													breakpoint: y,
 													overrides: {
 														kA1ay4BFk: {
@@ -79366,7 +79366,7 @@ Mondragon Agency`,
 																GL(`JEWKItX5x`),
 														},
 													},
-													children: d(kL, {
+													children: rJsx(kL, {
 														cJi3NJKEi: 17,
 														eIuvFnHP4: !0,
 														Hdc8iQLTT: `       From strategy to launch, we plan, design  and build end-to-end – aligning positioning, content, and modular UI into websites that load fast, meet AA accessibility and are easy to edit.\u2028
@@ -79390,16 +79390,16 @@ Our DNA: clarity over noise, systems over one-offs, speed with accountability.`,
 												}),
 											}),
 										}),
-										d(U, {
+										rJsx(U, {
 											height: 765,
 											width: c?.width || `100vw`,
 											y: (c?.y || 0) + 0 + 1869,
-											children: d(re, {
+											children: rJsx(re, {
 												className: `framer-1vom5cm-container`,
 												layout: E,
 												nodeId: `eQBH6nZif`,
 												scopeId: `rfr9bsCxq`,
-												children: d(se, {
+												children: rJsx(se, {
 													breakpoint: y,
 													overrides: {
 														kA1ay4BFk: {
@@ -79413,7 +79413,7 @@ Our DNA: clarity over noise, systems over one-offs, speed with accountability.`,
 																GL(`tHC0JlV00`),
 														},
 													},
-													children: d(nn, {
+													children: rJsx(nn, {
 														dIsPnTg3K: `1q31jf5`,
 														height: `100%`,
 														id: `eQBH6nZif`,
@@ -79428,16 +79428,16 @@ Our DNA: clarity over noise, systems over one-offs, speed with accountability.`,
 												}),
 											}),
 										}),
-										d(U, {
+										rJsx(U, {
 											height: 903,
 											width: c?.width || `100vw`,
 											y: (c?.y || 0) + 0 + 2634,
-											children: d(re, {
+											children: rJsx(re, {
 												className: `framer-7c4ou-container`,
 												layout: E,
 												nodeId: `pfDFyapkK`,
 												scopeId: `rfr9bsCxq`,
-												children: d(se, {
+												children: rJsx(se, {
 													breakpoint: y,
 													overrides: {
 														kA1ay4BFk: {
@@ -79449,7 +79449,7 @@ Our DNA: clarity over noise, systems over one-offs, speed with accountability.`,
 																GL(`DDxBTVfl9`),
 														},
 													},
-													children: d(N_, {
+													children: rJsx(N_, {
 														FgjXD3FHu: `Our Team`,
 														height: `100%`,
 														id: `pfDFyapkK`,
@@ -79465,16 +79465,16 @@ Our DNA: clarity over noise, systems over one-offs, speed with accountability.`,
 												}),
 											}),
 										}),
-										d(U, {
+										rJsx(U, {
 											height: 809,
 											width: c?.width || `100vw`,
 											y: (c?.y || 0) + 0 + 3537,
-											children: d(re, {
+											children: rJsx(re, {
 												className: `framer-1rwdyv8-container`,
 												layout: E,
 												nodeId: `hgs33zs_w`,
 												scopeId: `rfr9bsCxq`,
-												children: d(se, {
+												children: rJsx(se, {
 													breakpoint: y,
 													overrides: {
 														kA1ay4BFk: {
@@ -79486,7 +79486,7 @@ Our DNA: clarity over noise, systems over one-offs, speed with accountability.`,
 																GL(`z7KoYCuEx`),
 														},
 													},
-													children: d(jn, {
+													children: rJsx(jn, {
 														egsxiSW9J: `Our
 Vision`,
 														height: `100%`,
@@ -79505,16 +79505,16 @@ Vision`,
 												}),
 											}),
 										}),
-										d(U, {
+										rJsx(U, {
 											height: 845,
 											width: c?.width || `100vw`,
 											y: (c?.y || 0) + 0 + 4346,
-											children: d(re, {
+											children: rJsx(re, {
 												className: `framer-vo590y-container`,
 												layout: E,
 												nodeId: `vwj8IdgBF`,
 												scopeId: `rfr9bsCxq`,
-												children: d(se, {
+												children: rJsx(se, {
 													breakpoint: y,
 													overrides: {
 														kA1ay4BFk: {
@@ -79526,7 +79526,7 @@ Vision`,
 																GL(`yhiDoP7Ob`),
 														},
 													},
-													children: d(st, {
+													children: rJsx(st, {
 														height: `100%`,
 														id: `vwj8IdgBF`,
 														layoutId: `vwj8IdgBF`,
@@ -79542,16 +79542,16 @@ Vision`,
 												}),
 											}),
 										}),
-										d(U, {
+										rJsx(U, {
 											height: 945,
 											width: c?.width || `100vw`,
 											y: (c?.y || 0) + 0 + 5191,
-											children: d(re, {
+											children: rJsx(re, {
 												className: `framer-g7ti1t-container`,
 												layout: E,
 												nodeId: `FBTsRdUwR`,
 												scopeId: `rfr9bsCxq`,
-												children: d(se, {
+												children: rJsx(se, {
 													breakpoint: y,
 													overrides: {
 														kA1ay4BFk: {
@@ -79563,7 +79563,7 @@ Vision`,
 																GL(`Tv_osDAig`),
 														},
 													},
-													children: d(ut, {
+													children: rJsx(ut, {
 														height: `100%`,
 														id: `FBTsRdUwR`,
 														j3RW8NS6C: `Start
@@ -79585,7 +79585,7 @@ Wilington`,
 										}),
 									],
 								}),
-								d(`div`, { id: `overlay` }),
+								rJsx(`div`, { id: `overlay` }),
 							],
 						}),
 					})

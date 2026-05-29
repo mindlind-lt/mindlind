@@ -1,18 +1,18 @@
 import { t as e } from "./rolldown-runtime.mjs";
 import {
 	F as t,
-	I as n,
-	M as r,
+	I as rUseState,
+	M as rUseMemo,
 	P as i,
 	T as a,
 	V as o,
-	c as s,
-	g as c,
-	j as l,
-	k as u,
-	l as d,
-	o as f,
-	y as p,
+	c as rJsx,
+	g as rForwardRef,
+	j as rUseContext,
+	k as rUseRef,
+	l as rJsxs,
+	o as rUseDeferredValue,
+	y as rUseId,
 	z as m,
 } from "./react.mjs";
 import { S as h, a as g, r as _, t as v } from "./motion.mjs";
@@ -97,7 +97,7 @@ var qe,
 	J,
 	it,
 	at = e(() => {
-		(f(),
+		(rUseDeferredValue(),
 			k(),
 			v(),
 			a(),
@@ -113,10 +113,10 @@ var qe,
 			}),
 			(Qe = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
 			($e = ({ value: e, children: t }) => {
-				let n = l(g),
+				let n = rUseContext(g),
 					i = e ?? n.transition,
-					a = r(() => ({ ...n, transition: i }), [JSON.stringify(i)]);
-				return s(g.Provider, { value: a, children: t });
+					a = rUseMemo(() => ({ ...n, transition: i }), [JSON.stringify(i)]);
+				return rJsx(g.Provider, { value: a, children: t });
 			}),
 			(et = h.create(t)),
 			(tt = {
@@ -133,10 +133,10 @@ var qe,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(J = x(
-				c(function (e, n) {
-					let r = u(null),
+				rForwardRef(function (e, n) {
+					let r = rUseRef(null),
 						i = n ?? r,
-						a = p(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: c } = ie();
 					N();
 					let {
@@ -165,14 +165,14 @@ var qe,
 						}),
 						A = rt(e, k),
 						te = D(Xe);
-					return s(_, {
+					return rJsx(_, {
 						id: m ?? a,
-						children: s(et, {
+						children: rJsx(et, {
 							animate: k,
 							initial: !1,
-							children: s($e, {
+							children: rJsx($e, {
 								value: Qe,
-								children: s(h.div, {
+								children: rJsx(h.div, {
 									...v,
 									...S,
 									className: D(te, `framer-1rmbsm8`, f, b),
@@ -190,24 +190,24 @@ var qe,
 										y,
 										C,
 									),
-									children: d(h.div, {
+									children: rJsxs(h.div, {
 										className: `framer-1x2rraq`,
 										
 										layoutDependency: A,
 										layoutId: `e8uHpMq9q`,
 										children: [
-											s(h.div, {
+											rJsx(h.div, {
 												className: `framer-giljom`,
 												
 												layoutDependency: A,
 												layoutId: `FSDiyGkAR`,
 											}),
-											d(h.div, {
+											rJsxs(h.div, {
 												className: `framer-1gsl0iv`,
 												layoutDependency: A,
 												layoutId: `E2OOkwiCu`,
 												children: [
-													s(qe, {
+													rJsx(qe, {
 														__framer__styleTransformEffectEnabled:
 															!0,
 														__framer__transformTargets:
@@ -245,8 +245,8 @@ var qe,
 														__perspectiveFX: !1,
 														__smartComponentFX: !0,
 														__targetOpacity: 1,
-														children: s(t, {
-															children: s(h.h1, {
+														children: rJsx(t, {
+															children: rJsx(h.h1, {
 																style: {
 																	"--font-selector": `R0Y7U3BhY2UgTW9uby1yZWd1bGFy`,
 																	"--framer-font-family": `"Space Mono", monospace`,
@@ -342,8 +342,8 @@ var qe,
 															C,
 														),
 													}),
-													s(F, {
-														children: s(T, {
+													rJsx(F, {
+														children: rJsx(T, {
 															className: `framer-1b5no8l-container`,
 															isAuthoredByUser:
 																!0,
@@ -353,7 +353,7 @@ var qe,
 															rendersWithMotion:
 																!0,
 															scopeId: `c2cHODrNG`,
-															children: s(Ue, {
+															children: rJsx(Ue, {
 																borderRadius: 500,
 																camX: 90,
 																camY: 90,
@@ -405,7 +405,7 @@ var qe,
 													}),
 												],
 											}),
-											s(h.div, {
+											rJsx(h.div, {
 												className: `framer-16xrj1i`,
 												
 												layoutDependency: A,
@@ -507,7 +507,7 @@ function st(e) {
 			if (!r) return;
 			let e = { order: r.alignment === `start` ? 0 : 2, flexShrink: 0 };
 			return r.type === `Custom` && r.image?.src
-				? s(`img`, {
+				? rJsx(`img`, {
 						style: e,
 						alt:
 							r.image?.alt && r.image.alt.length > 0
@@ -517,14 +517,14 @@ function st(e) {
 						width: r.size,
 						height: r.size,
 					})
-				: s(`svg`, {
+				: rJsx(`svg`, {
 						style: e,
 						xmlns: `http://www.w3.org/2000/svg`,
 						width: r.size,
 						height: r.size,
 						fill: r.color,
 						viewBox: `0 0 256 256`,
-						children: s(`path`, {
+						children: rJsx(`path`, {
 							d: `M228 152v56a20 20 0 0 1-20 20H48a20 20 0 0 1-20-20v-56a12 12 0 0 1 24 0v52h152v-52a12 12 0 0 1 24 0Zm-108.49 8.49a12 12 0 0 0 17 0l40-40a12 12 0 0 0-17-17L140 123V40a12 12 0 0 0-24 0v83l-19.51-19.49a12 12 0 0 0-17 17Z`,
 						}),
 					});
@@ -538,7 +538,7 @@ function st(e) {
 		E = (e) => {
 			(i && y(i), a?.(e));
 		};
-	return d(h.a, {
+	return rJsxs(h.a, {
 		target: `_blank`,
 		href: x,
 		download: e.downloadName ?? `file.txt`,
@@ -574,7 +574,7 @@ var ct,
 	dt,
 	ft,
 	pt = e(() => {
-		(f(),
+		(rUseDeferredValue(),
 			k(),
 			v(),
 			(function (e) {
@@ -755,7 +755,7 @@ var ct,
 					: `left`));
 	});
 function mt({ progress: e }) {
-	return d(`div`, {
+	return rJsxs(`div`, {
 		style: {
 			position: `absolute`,
 			inset: 0,
@@ -768,9 +768,9 @@ function mt({ progress: e }) {
 			fontSize: 10,
 		},
 		children: [
-			d(`div`, {
+			rJsxs(`div`, {
 				children: [
-					s(`div`, {
+					rJsx(`div`, {
 						style: {
 							width: 36,
 							height: 36,
@@ -780,13 +780,13 @@ function mt({ progress: e }) {
 							animation: `spin .8s linear infinite`,
 						},
 					}),
-					d(`div`, {
+					rJsxs(`div`, {
 						style: { marginTop: 8, textAlign: `center` },
 						children: [Math.round(e), `%`],
 					}),
 				],
 			}),
-			s(`style`, {
+			rJsx(`style`, {
 				children: `@keyframes spin{to{transform:rotate(360deg)}}`,
 			}),
 		],
@@ -794,12 +794,12 @@ function mt({ progress: e }) {
 }
 function ht(e) {
 	let t = { ...X, ...e },
-		r = u(null),
-		a = u(0),
-		c = u(!1),
-		[l, f] = n(!0),
-		[p, m] = n(0),
-		h = u(!!t.stopMotionInEditor);
+		r = rUseRef(null),
+		a = rUseRef(0),
+		c = rUseRef(!1),
+		[l, f] = rUseState(!0),
+		[p, m] = rUseState(0),
+		h = rUseRef(!!t.stopMotionInEditor);
 	return (
 		i(() => {
 			h.current = !!t.stopMotionInEditor;
@@ -1223,7 +1223,7 @@ function ht(e) {
 			JSON.stringify(e.labelFont),
 			e.labelFontSize,
 		]),
-		d(`div`, {
+		rJsxs(`div`, {
 			style: {
 				width: `100%`,
 				height: `100%`,
@@ -1231,8 +1231,8 @@ function ht(e) {
 				overflow: `visible`,
 			},
 			children: [
-				l && s(mt, { progress: p }),
-				s(`div`, {
+				l && rJsx(mt, { progress: p }),
+				rJsx(`div`, {
 					ref: r,
 					style: {
 						width: `100%`,
@@ -1745,7 +1745,7 @@ var Mt,
 	Ht,
 	Ut = e(() => {
 		(m(),
-			f(),
+			rUseDeferredValue(),
 			a(),
 			k(),
 			(Mt = `https://esm.sh/three@0.157?bundle`),
@@ -1956,7 +1956,7 @@ var Wt,
 	Q,
 	cn,
 	ln = e(() => {
-		(f(),
+		(rUseDeferredValue(),
 			k(),
 			v(),
 			a(),
@@ -1996,10 +1996,10 @@ var Wt,
 			(tn = (e) =>
 				Array.isArray(e) ? e.length > 0 : e != null && e !== ``),
 			(nn = ({ value: e, children: t }) => {
-				let n = l(g),
+				let n = rUseContext(g),
 					i = e ?? n.transition,
-					a = r(() => ({ ...n, transition: i }), [JSON.stringify(i)]);
-				return s(g.Provider, { value: a, children: t });
+					a = rUseMemo(() => ({ ...n, transition: i }), [JSON.stringify(i)]);
+				return rJsx(g.Provider, { value: a, children: t });
 			}),
 			(rn = h.create(t)),
 			(an = {
@@ -2075,10 +2075,10 @@ Beverly Hills 55a`,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(Q = x(
-				c(function (e, n) {
-					let r = u(null),
+				rForwardRef(function (e, n) {
+					let r = rUseRef(null),
 						i = n ?? r,
-						a = p(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: c } = ie(),
 						l = N(),
 						{
@@ -2129,14 +2129,14 @@ Beverly Hills 55a`,
 						_e = D(Zt, je, Fe, ye, H, se, we, Ce, ze),
 						ve = tn(P),
 						be = tn(ae);
-					return s(_, {
+					return rJsx(_, {
 						id: g ?? a,
-						children: s(rn, {
+						children: rJsx(rn, {
 							animate: K,
 							initial: !1,
-							children: s(nn, {
+							children: rJsx(nn, {
 								value: $t,
-								children: s(h.div, {
+								children: rJsx(h.div, {
 									...B,
 									...fe,
 									className: D(_e, `framer-n4libs`, m, le),
@@ -2154,24 +2154,24 @@ Beverly Hills 55a`,
 										V,
 										G,
 									),
-									children: s(h.div, {
+									children: rJsx(h.div, {
 										className: `framer-1kjhgix`,
 										
 										layoutDependency: q,
 										layoutId: `siz1wrhtg`,
-										children: d(h.div, {
+										children: rJsxs(h.div, {
 											className: `framer-u2dxip`,
 											
 											layoutDependency: q,
 											layoutId: `fNCaVjnan`,
 											children: [
-												d(h.div, {
+												rJsxs(h.div, {
 													className: `framer-ymnuw5`,
 													layoutDependency: q,
 													layoutId: `KCcw0UlwH`,
 													children: [
-														s(F, {
-															children: s(Gt, {
+														rJsx(F, {
+															children: rJsx(Gt, {
 																__framer__styleTransformEffectEnabled:
 																	!0,
 																__framer__transformTargets:
@@ -2264,7 +2264,7 @@ Beverly Hills 55a`,
 																	V,
 																	G,
 																),
-																children: s(
+																children: rJsx(
 																	st,
 																	{
 																		fontControl:
@@ -2398,21 +2398,21 @@ Beverly Hills 55a`,
 															}),
 														}),
 														L &&
-															d(h.div, {
+															rJsxs(h.div, {
 																className: `framer-1981dwa`,
 																layoutDependency:
 																	q,
 																layoutId: `rIK15r1s_`,
 																children: [
-																	s(b, {
+																	rJsx(b, {
 																		__fromCanvasComponent:
 																			!0,
 																		children:
-																			s(
+																			rJsx(
 																				t,
 																				{
 																					children:
-																						s(
+																						rJsx(
 																							h.p,
 																							{
 																								className: `framer-styles-preset-11kcybb`,
@@ -2440,21 +2440,21 @@ Beverly Hills 55a`,
 																		withExternalLayout:
 																			!0,
 																	}),
-																	s(b, {
+																	rJsx(b, {
 																		__fromCanvasComponent:
 																			!0,
 																		children:
-																			s(
+																			rJsx(
 																				t,
 																				{
 																					children:
-																						s(
+																						rJsx(
 																							h.h6,
 																							{
 																								className: `framer-styles-preset-f8hg8j`,
 																								"data-styles-preset": `IGVKsj4vh`,
 																								children:
-																									s(
+																									rJsx(
 																										j,
 																										{
 																											href: E,
@@ -2469,7 +2469,7 @@ Beverly Hills 55a`,
 																											smoothScroll:
 																												!1,
 																											children:
-																												s(
+																												rJsx(
 																													h.a,
 																													{
 																														className: `framer-styles-preset-mgrqd0`,
@@ -2502,17 +2502,17 @@ Beverly Hills 55a`,
 																				FndEef2iH:
 																					{
 																						children:
-																							s(
+																							rJsx(
 																								t,
 																								{
 																									children:
-																										s(
+																										rJsx(
 																											h.p,
 																											{
 																												className: `framer-styles-preset-5fkg2j`,
 																												"data-styles-preset": `JFkcxmmKA`,
 																												children:
-																													s(
+																													rJsx(
 																														j,
 																														{
 																															href: E,
@@ -2527,7 +2527,7 @@ Beverly Hills 55a`,
 																															smoothScroll:
 																																!1,
 																															children:
-																																s(
+																																rJsx(
 																																	h.a,
 																																	{
 																																		className: `framer-styles-preset-mgrqd0`,
@@ -2545,17 +2545,17 @@ Beverly Hills 55a`,
 																				scq1czhhz:
 																					{
 																						children:
-																							s(
+																							rJsx(
 																								t,
 																								{
 																									children:
-																										s(
+																										rJsx(
 																											h.h6,
 																											{
 																												className: `framer-styles-preset-41ki07`,
 																												"data-styles-preset": `hmRgK3K6v`,
 																												children:
-																													s(
+																													rJsx(
 																														j,
 																														{
 																															href: E,
@@ -2570,7 +2570,7 @@ Beverly Hills 55a`,
 																															smoothScroll:
 																																!1,
 																															children:
-																																s(
+																																rJsx(
 																																	h.a,
 																																	{
 																																		className: `framer-styles-preset-mgrqd0`,
@@ -2593,26 +2593,26 @@ Beverly Hills 55a`,
 																],
 															}),
 														R &&
-															s(h.div, {
+															rJsx(h.div, {
 																className: `framer-1r2uu7o`,
 																
 																layoutDependency:
 																	q,
 																layoutId: `BSGj4Pz7S`,
 															}),
-														d(h.div, {
+														rJsxs(h.div, {
 															className: `framer-7218di`,
 															layoutDependency: q,
 															layoutId: `JNBzV6cg6`,
 															children: [
-																s(b, {
+																rJsx(b, {
 																	__fromCanvasComponent:
 																		!0,
-																	children: s(
+																	children: rJsx(
 																		t,
 																		{
 																			children:
-																				s(
+																				rJsx(
 																					h.h5,
 																					{
 																						className: `framer-styles-preset-h6j8it`,
@@ -2654,11 +2654,11 @@ Beverly Hills 55a`,
 																			FndEef2iH:
 																				{
 																					children:
-																						s(
+																						rJsx(
 																							t,
 																							{
 																								children:
-																									s(
+																									rJsx(
 																										h.h6,
 																										{
 																											className: `framer-styles-preset-nkm6se`,
@@ -2675,11 +2675,11 @@ Beverly Hills 55a`,
 																			scq1czhhz:
 																				{
 																					children:
-																						s(
+																						rJsx(
 																							t,
 																							{
 																								children:
-																									s(
+																									rJsx(
 																										h.h6,
 																										{
 																											className: `framer-styles-preset-nkm6se`,
@@ -2698,7 +2698,7 @@ Beverly Hills 55a`,
 																		G,
 																	),
 																}),
-																s(F, {
+																rJsx(F, {
 																	height: 0,
 																	width: `calc(max((max(min(${l?.width || `100vw`}, 1600px) - 80px, 1px) - 70px) / 8, 50px) * 3 - 40px)`,
 																	y:
@@ -2769,7 +2769,7 @@ Beverly Hills 55a`,
 																		V,
 																		G,
 																	),
-																	children: s(
+																	children: rJsx(
 																		T,
 																		{
 																			className: `framer-1or1wtu-container`,
@@ -2781,7 +2781,7 @@ Beverly Hills 55a`,
 																				!0,
 																			scopeId: `xKgtfqhor`,
 																			children:
-																				s(
+																				rJsx(
 																					W,
 																					{
 																						BpZuAjo8u:
@@ -2827,20 +2827,20 @@ Beverly Hills 55a`,
 															],
 														}),
 														R &&
-															s(h.div, {
+															rJsx(h.div, {
 																className: `framer-a96spj`,
 																
 																layoutDependency:
 																	q,
 																layoutId: `T3Pc9ToPh`,
 															}),
-														d(h.div, {
+														rJsxs(h.div, {
 															className: `framer-1h6auop`,
 															layoutDependency: q,
 															layoutId: `PuFB8FBIu`,
 															children: [
-																s(F, {
-																	children: s(
+																rJsx(F, {
+																	children: rJsx(
 																		T,
 																		{
 																			className: `framer-e8k41j-container`,
@@ -2854,7 +2854,7 @@ Beverly Hills 55a`,
 																				!0,
 																			scopeId: `xKgtfqhor`,
 																			children:
-																				s(
+																				rJsx(
 																					ht,
 																					{
 																						autoRotateSpeed: 0.1,
@@ -2930,21 +2930,21 @@ LONDON E2 7NX`,
 																		},
 																	),
 																}),
-																d(h.div, {
+																rJsxs(h.div, {
 																	className: `framer-1y15zn1`,
 																	layoutDependency:
 																		q,
 																	layoutId: `pnE5dELcn`,
 																	children: [
-																		s(b, {
+																		rJsx(b, {
 																			__fromCanvasComponent:
 																				!0,
 																			children:
-																				s(
+																				rJsx(
 																					t,
 																					{
 																						children:
-																							d(
+																							rJsxs(
 																								h.p,
 																								{
 																									style: {
@@ -2958,7 +2958,7 @@ LONDON E2 7NX`,
 																									},
 																									children:
 																										[
-																											s(
+																											rJsx(
 																												j,
 																												{
 																													href: k,
@@ -2973,7 +2973,7 @@ LONDON E2 7NX`,
 																													smoothScroll:
 																														!1,
 																													children:
-																														s(
+																														rJsx(
 																															h.a,
 																															{
 																																className: `framer-styles-preset-mgrqd0`,
@@ -2983,7 +2983,7 @@ LONDON E2 7NX`,
 																														),
 																												},
 																											),
-																											s(
+																											rJsx(
 																												j,
 																												{
 																													href: k,
@@ -2998,13 +2998,13 @@ LONDON E2 7NX`,
 																													smoothScroll:
 																														!1,
 																													children:
-																														s(
+																														rJsx(
 																															h.a,
 																															{
 																																className: `framer-styles-preset-mgrqd0`,
 																																"data-styles-preset": `q7NcKTKUL`,
 																																children:
-																																	s(
+																																	rJsx(
 																																		h.br,
 																																		{},
 																																	),
@@ -3012,7 +3012,7 @@ LONDON E2 7NX`,
 																														),
 																												},
 																											),
-																											s(
+																											rJsx(
 																												j,
 																												{
 																													href: k,
@@ -3027,7 +3027,7 @@ LONDON E2 7NX`,
 																													smoothScroll:
 																														!1,
 																													children:
-																														s(
+																														rJsx(
 																															h.a,
 																															{
 																																className: `framer-styles-preset-mgrqd0`,
@@ -3060,7 +3060,7 @@ LONDON E2 7NX`,
 																			withExternalLayout:
 																				!0,
 																		}),
-																		d(
+																		rJsxs(
 																			h.div,
 																			{
 																				className: `framer-vj2voa`,
@@ -3069,17 +3069,17 @@ LONDON E2 7NX`,
 																				layoutId: `nBN9z2TZk`,
 																				children:
 																					[
-																						s(
+																						rJsx(
 																							b,
 																							{
 																								__fromCanvasComponent:
 																									!0,
 																								children:
-																									s(
+																									rJsx(
 																										t,
 																										{
 																											children:
-																												s(
+																												rJsx(
 																													h.p,
 																													{
 																														style: {
@@ -3092,7 +3092,7 @@ LONDON E2 7NX`,
 																															"--framer-text-transform": `uppercase`,
 																														},
 																														children:
-																															s(
+																															rJsx(
 																																j,
 																																{
 																																	href: te,
@@ -3107,7 +3107,7 @@ LONDON E2 7NX`,
 																																	smoothScroll:
 																																		!1,
 																																	children:
-																																		s(
+																																		rJsx(
 																																			h.a,
 																																			{
 																																				className: `framer-styles-preset-mgrqd0`,
@@ -3139,17 +3139,17 @@ LONDON E2 7NX`,
 																							},
 																						),
 																						ne &&
-																							s(
+																							rJsx(
 																								b,
 																								{
 																									__fromCanvasComponent:
 																										!0,
 																									children:
-																										s(
+																										rJsx(
 																											t,
 																											{
 																												children:
-																													s(
+																													rJsx(
 																														h.p,
 																														{
 																															style: {
@@ -3162,7 +3162,7 @@ LONDON E2 7NX`,
 																																"--framer-text-transform": `uppercase`,
 																															},
 																															children:
-																																s(
+																																rJsx(
 																																	j,
 																																	{
 																																		href: M,
@@ -3177,7 +3177,7 @@ LONDON E2 7NX`,
 																																		smoothScroll:
 																																			!1,
 																																		children:
-																																			s(
+																																			rJsx(
 																																				h.a,
 																																				{
 																																					className: `framer-styles-preset-mgrqd0`,
@@ -3213,24 +3213,24 @@ LONDON E2 7NX`,
 																		),
 																	],
 																}),
-																d(h.div, {
+																rJsxs(h.div, {
 																	className: `framer-158hnfg`,
 																	layoutDependency:
 																		q,
 																	layoutId: `QXFd8Ismn`,
 																	children: [
 																		ve &&
-																			s(
+																			rJsx(
 																				b,
 																				{
 																					__fromCanvasComponent:
 																						!0,
 																					children:
-																						s(
+																						rJsx(
 																							t,
 																							{
 																								children:
-																									d(
+																									rJsxs(
 																										h.p,
 																										{
 																											style: {
@@ -3244,7 +3244,7 @@ LONDON E2 7NX`,
 																											},
 																											children:
 																												[
-																													s(
+																													rJsx(
 																														j,
 																														{
 																															href: I,
@@ -3259,7 +3259,7 @@ LONDON E2 7NX`,
 																															smoothScroll:
 																																!1,
 																															children:
-																																s(
+																																rJsx(
 																																	h.a,
 																																	{
 																																		className: `framer-styles-preset-mgrqd0`,
@@ -3269,7 +3269,7 @@ LONDON E2 7NX`,
 																																),
 																														},
 																													),
-																													s(
+																													rJsx(
 																														j,
 																														{
 																															href: I,
@@ -3284,13 +3284,13 @@ LONDON E2 7NX`,
 																															smoothScroll:
 																																!1,
 																															children:
-																																s(
+																																rJsx(
 																																	h.a,
 																																	{
 																																		className: `framer-styles-preset-mgrqd0`,
 																																		"data-styles-preset": `q7NcKTKUL`,
 																																		children:
-																																			s(
+																																			rJsx(
 																																				h.br,
 																																				{},
 																																			),
@@ -3298,7 +3298,7 @@ LONDON E2 7NX`,
 																																),
 																														},
 																													),
-																													s(
+																													rJsx(
 																														j,
 																														{
 																															href: I,
@@ -3313,7 +3313,7 @@ LONDON E2 7NX`,
 																															smoothScroll:
 																																!1,
 																															children:
-																																s(
+																																rJsx(
 																																	h.a,
 																																	{
 																																		className: `framer-styles-preset-mgrqd0`,
@@ -3323,7 +3323,7 @@ LONDON E2 7NX`,
 																																),
 																														},
 																													),
-																													s(
+																													rJsx(
 																														j,
 																														{
 																															href: I,
@@ -3338,13 +3338,13 @@ LONDON E2 7NX`,
 																															smoothScroll:
 																																!1,
 																															children:
-																																s(
+																																rJsx(
 																																	h.a,
 																																	{
 																																		className: `framer-styles-preset-mgrqd0`,
 																																		"data-styles-preset": `q7NcKTKUL`,
 																																		children:
-																																			s(
+																																			rJsx(
 																																				h.br,
 																																				{},
 																																			),
@@ -3352,7 +3352,7 @@ LONDON E2 7NX`,
 																																),
 																														},
 																													),
-																													s(
+																													rJsx(
 																														j,
 																														{
 																															href: I,
@@ -3367,7 +3367,7 @@ LONDON E2 7NX`,
 																															smoothScroll:
 																																!1,
 																															children:
-																																s(
+																																rJsx(
 																																	h.a,
 																																	{
 																																		className: `framer-styles-preset-mgrqd0`,
@@ -3401,7 +3401,7 @@ LONDON E2 7NX`,
 																						!0,
 																				},
 																			),
-																		s(
+																		rJsx(
 																			h.div,
 																			{
 																				className: `framer-1wf50o2`,
@@ -3410,17 +3410,17 @@ LONDON E2 7NX`,
 																				layoutId: `WR1CVmfl9`,
 																				children:
 																					be &&
-																					s(
+																					rJsx(
 																						b,
 																						{
 																							__fromCanvasComponent:
 																								!0,
 																							children:
-																								s(
+																								rJsx(
 																									t,
 																									{
 																										children:
-																											s(
+																											rJsx(
 																												h.p,
 																												{
 																													style: {
@@ -3433,7 +3433,7 @@ LONDON E2 7NX`,
 																														"--framer-text-transform": `uppercase`,
 																													},
 																													children:
-																														s(
+																														rJsx(
 																															j,
 																															{
 																																href: oe,
@@ -3448,7 +3448,7 @@ LONDON E2 7NX`,
 																																smoothScroll:
 																																	!1,
 																																children:
-																																	s(
+																																	rJsx(
 																																		h.a,
 																																		{
 																																			className: `framer-styles-preset-mgrqd0`,
@@ -3487,24 +3487,24 @@ LONDON E2 7NX`,
 														}),
 													],
 												}),
-												d(h.div, {
+												rJsxs(h.div, {
 													className: `framer-n8fmaa`,
 													layoutDependency: q,
 													layoutId: `WawPk0DLE`,
 													children: [
-														d(h.div, {
+														rJsxs(h.div, {
 															className: `framer-18xbwe5`,
 															layoutDependency: q,
 															layoutId: `GhHzhLdrw`,
 															children: [
-																s(b, {
+																rJsx(b, {
 																	__fromCanvasComponent:
 																		!0,
-																	children: s(
+																	children: rJsx(
 																		t,
 																		{
 																			children:
-																				s(
+																				rJsx(
 																					h.h4,
 																					{
 																						className: `framer-styles-preset-1ri87jd`,
@@ -3548,11 +3548,11 @@ LONDON E2 7NX`,
 																			FndEef2iH:
 																				{
 																					children:
-																						s(
+																						rJsx(
 																							t,
 																							{
 																								children:
-																									s(
+																									rJsx(
 																										h.h5,
 																										{
 																											className: `framer-styles-preset-h6j8it`,
@@ -3570,11 +3570,11 @@ LONDON E2 7NX`,
 																			scq1czhhz:
 																				{
 																					children:
-																						s(
+																						rJsx(
 																							t,
 																							{
 																								children:
-																									s(
+																									rJsx(
 																										h.h6,
 																										{
 																											className: `framer-styles-preset-nkm6se`,
@@ -3594,14 +3594,14 @@ LONDON E2 7NX`,
 																		G,
 																	),
 																}),
-																s(b, {
+																rJsx(b, {
 																	__fromCanvasComponent:
 																		!0,
-																	children: s(
+																	children: rJsx(
 																		t,
 																		{
 																			children:
-																				s(
+																				rJsx(
 																					h.h6,
 																					{
 																						className: `framer-styles-preset-nkm6se`,
@@ -3633,11 +3633,11 @@ LONDON E2 7NX`,
 																			scq1czhhz:
 																				{
 																					children:
-																						s(
+																						rJsx(
 																							t,
 																							{
 																								children:
-																									s(
+																									rJsx(
 																										h.h6,
 																										{
 																											className: `framer-styles-preset-f8hg8j`,
@@ -3658,7 +3658,7 @@ LONDON E2 7NX`,
 																}),
 															],
 														}),
-														s(F, {
+														rJsx(F, {
 															height: 696,
 															width: `min(max((max(min(${l?.width || `100vw`}, 1600px) - 80px, 1px) - 70px) / 8, 50px) * 5 + 40px, 700px)`,
 															y:
@@ -3720,7 +3720,7 @@ LONDON E2 7NX`,
 																V,
 																G,
 															),
-															children: s(T, {
+															children: rJsx(T, {
 																className: `framer-1t3k01l-container`,
 																layoutDependency:
 																	q,
@@ -3729,7 +3729,7 @@ LONDON E2 7NX`,
 																rendersWithMotion:
 																	!0,
 																scopeId: `xKgtfqhor`,
-																children: s(
+																children: rJsx(
 																	Be,
 																	{
 																		cc8E3AgTV:
@@ -4058,7 +4058,7 @@ Beverly Hills 55a`,
 	xn,
 	Sn;
 e(() => {
-	(f(),
+	(rUseDeferredValue(),
 		k(),
 		v(),
 		a(),
@@ -4091,7 +4091,7 @@ e(() => {
 		(vn = ({ value: e }) =>
 			ne()
 				? null
-				: s(`style`, {
+				: rJsx(`style`, {
 						dangerouslySetInnerHTML: { __html: e },
 						"data-framer-html-style": ``,
 					})),
@@ -4100,10 +4100,10 @@ e(() => {
 			variant: _n[r.variant] ?? r.variant ?? `byM02ZR3A`,
 		})),
 		(bn = x(
-			c(function (e, t) {
-				let n = u(null),
+			rForwardRef(function (e, t) {
+				let n = rUseRef(null),
 					i = t ?? n,
-					a = p(),
+					a = rUseId(),
 					{ activeLocale: o, setLocale: c } = ie(),
 					f = N(),
 					{
@@ -4113,42 +4113,42 @@ e(() => {
 						variant: b,
 						...x
 					} = yn(e);
-				R(r(() => Ge({}, o), [o]));
+				R(rUseMemo(() => Ge({}, o), [o]));
 				let [S, C] = P(b, fn, !1),
 					w = D(mn),
-					T = l(I)?.isLayoutTemplate,
-					E = gn(T, !!l(g)?.transition?.layout);
+					T = rUseContext(I)?.isLayoutTemplate,
+					E = gn(T, !!rUseContext(g)?.transition?.layout);
 				return (
 					te({}),
-					s(I.Provider, {
+					rJsx(I.Provider, {
 						value: {
 							activeVariantId: S,
 							humanReadableVariantMap: _n,
 							primaryVariantId: `byM02ZR3A`,
 							variantClassNames: hn,
 						},
-						children: d(_, {
+						children: rJsxs(_, {
 							id: y ?? a,
 							children: [
-								s(vn, {
+								rJsx(vn, {
 									value: `html body { background: var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255)); }`,
 								}),
-								d(h.div, {
+								rJsxs(h.div, {
 									...x,
 									className: D(w, `framer-1mm9958`, v),
 									ref: i,
 									style: { ...m },
 									children: [
-										s(F, {
+										rJsx(F, {
 											height: 490,
 											width: f?.width || `100vw`,
 											y: (f?.y || 0) + 0 + 0,
-											children: s(re, {
+											children: rJsx(re, {
 												className: `framer-1ot8nsi-container`,
 												layout: E,
 												nodeId: `s1rCYwLMg`,
 												scopeId: `BCJD0WnMV`,
-												children: s(L, {
+												children: rJsx(L, {
 													breakpoint: S,
 													overrides: {
 														Y46BmMzV1: {
@@ -4160,7 +4160,7 @@ e(() => {
 																$(`QrmbrSoVs`),
 														},
 													},
-													children: s(it, {
+													children: rJsx(it, {
 														height: `100%`,
 														id: `s1rCYwLMg`,
 														layoutId: `s1rCYwLMg`,
@@ -4173,16 +4173,16 @@ e(() => {
 												}),
 											}),
 										}),
-										s(F, {
+										rJsx(F, {
 											height: 1275,
 											width: f?.width || `100vw`,
 											y: (f?.y || 0) + 0 + 490,
-											children: s(re, {
+											children: rJsx(re, {
 												className: `framer-wcqa3w-container`,
 												layout: E,
 												nodeId: `VBZGeHrsL`,
 												scopeId: `BCJD0WnMV`,
-												children: s(L, {
+												children: rJsx(L, {
 													breakpoint: S,
 													overrides: {
 														Y46BmMzV1: {
@@ -4194,7 +4194,7 @@ e(() => {
 																$(`scq1czhhz`),
 														},
 													},
-													children: s(cn, {
+													children: rJsx(cn, {
 														cZliJr1fY: `https://maps.app.goo.gl/mFzHrdjVoW5kQEgB6`,
 														G76JEsByQ: `mailto:project@mondragon-template.com`,
 														gzrTq0KBM: `Upload`,
@@ -4231,7 +4231,7 @@ Beverly Hills 55a`,
 										}),
 									],
 								}),
-								s(`div`, { id: `overlay` }),
+								rJsx(`div`, { id: `overlay` }),
 							],
 						}),
 					})
