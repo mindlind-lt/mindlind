@@ -3,10 +3,10 @@ import {
 	F as t,
 	T as n,
 	V as r,
-	c as i,
-	f as a,
+	c as rJsx,
+	f as rIsValidElement,
 	o,
-	u as s,
+	u as rCreateElement,
 	z as c,
 } from "./react.mjs";
 import { S as l } from "./motion.mjs";
@@ -1630,7 +1630,7 @@ Values:
 			}));
 	});
 function rt(e) {
-	return typeof e == `object` && !!e && !a(e) && ot in e;
+	return typeof e == `object` && !!e && !rIsValidElement(e) && ot in e;
 }
 function it(e, ...t) {
 	if (!e)
@@ -1647,11 +1647,11 @@ function at(e) {
 			switch (r[0]) {
 				case 1: {
 					let [, ...e] = r;
-					return s(t, void 0, ...e.map(n));
+					return rCreateElement(t, void 0, ...e.map(n));
 				}
 				case 2: {
 					let [, e, ...t] = r;
-					return s(te, e, ...t.map(n));
+					return rCreateElement(te, e, ...t.map(n));
 				}
 				case 3: {
 					let [, t, n] = r,
@@ -1659,16 +1659,16 @@ function at(e) {
 					return (
 						it(a, `Module not found`),
 						rt(a) && a.preload(),
-						i(ne, {
+						rJsx(ne, {
 							componentIdentifier: t,
-							children: (e) => i(a, { ...e, ...n }),
+							children: (e) => rJsx(a, { ...e, ...n }),
 						})
 					);
 				}
 				case 4: {
 					let [, e, t, ...i] = r,
 						a = i.map(n);
-					return s(e === `a` ? l.a : e, t, ...a);
+					return rCreateElement(e === `a` ? l.a : e, t, ...a);
 				}
 				case 5: {
 					let [, e] = r;

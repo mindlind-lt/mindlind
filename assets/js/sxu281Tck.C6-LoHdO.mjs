@@ -1,12 +1,12 @@
 import { t as e } from "./rolldown-runtime.mjs";
 import {
 	F as t,
-	T as n,
-	c as r,
-	g as i,
-	k as a,
-	l as o,
-	o as s,
+	T as rUseUnknownT,
+	c as rJsx,
+	g as rForwardRef,
+	k as rUseRef,
+	l as rJsxs,
+	o as rInternalReactHelper,
 	y as c,
 } from "./react.mjs";
 import { S as l, r as u, t as d } from "./motion.mjs";
@@ -48,10 +48,10 @@ var j,
 	G,
 	K,
 	q = e(() => {
-		(s(),
+		(rInternalReactHelper(),
 			b(),
 			d(),
-			n(),
+			rUseUnknownT(),
 			O(),
 			(j = g(l.div)),
 			(M = p(g(l.div))),
@@ -119,8 +119,8 @@ var j,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(G = h(
-				i(function (e, n) {
-					let i = a(null),
+				rForwardRef(function (e, n) {
+					let i = rUseRef(null),
 						s = n ?? i,
 						d = c(),
 						{ activeLocale: f, setLocale: p } = T();
@@ -165,14 +165,14 @@ var j,
 						ne = _(F, ...Q),
 						re = () => E !== `MnozbBE93`,
 						ie = () => E === `MnozbBE93`;
-					return r(u, {
+					return rJsx(u, {
 						id: y ?? d,
-						children: r(V, {
+						children: rJsx(V, {
 							animate: J,
 							initial: !1,
 							children:
 								$() &&
-								o(l.button, {
+								rJsxs(l.button, {
 									...C,
 									...H,
 									className: _(ne, `framer-40o873`, g, D),
@@ -203,10 +203,10 @@ var j,
 									),
 									children: [
 										re() &&
-											r(m, {
+											rJsx(m, {
 												__fromCanvasComponent: !0,
-												children: r(t, {
-													children: r(l.p, {
+												children: rJsx(t, {
+													children: rJsx(l.p, {
 														className: `framer-styles-preset-mga0mf`,
 														"data-styles-preset": `Xrt2y4jBe`,
 														style: {
@@ -233,8 +233,8 @@ var j,
 												...A(
 													{
 														"D3N7gFuhz-hover": {
-															children: r(t, {
-																children: r(
+															children: rJsx(t, {
+																children: rJsx(
 																	l.p,
 																	{
 																		className: `framer-styles-preset-mga0mf`,
@@ -253,7 +253,7 @@ var j,
 												),
 											}),
 										ie() &&
-											r(M, {
+											rJsx(M, {
 												__perspectiveFX: !1,
 												__smartComponentFX: !0,
 												__targetOpacity: 1,
@@ -268,7 +268,7 @@ var j,
 													mask: `url('/assets/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add`,
 													WebkitMask: `url('/assets/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add`,
 												},
-												children: r(j, {
+												children: rJsx(j, {
 													__framer__loop: B,
 													__framer__loopEffectEnabled:
 														!0,
@@ -284,7 +284,7 @@ var j,
 													style: {
 														background: `conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 0deg, rgb(255, 255, 255) 342deg)`,
 													},
-													children: r(l.div, {
+													children: rJsx(l.div, {
 														className: `framer-1fncieu`,
 														layoutDependency: Y,
 														layoutId: `uGcgzawYE`,
@@ -298,7 +298,7 @@ var j,
 													}),
 												}),
 											}),
-										r(l.div, {
+										rJsx(l.div, {
 											className: `framer-lu2xsl`,
 											layoutDependency: Y,
 											layoutId: `ftClNyYoj`,
@@ -306,7 +306,7 @@ var j,
 												backgroundColor: `var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255))`,
 											},
 										}),
-										r(l.div, {
+										rJsx(l.div, {
 											className: `framer-zvmp5m`,
 											layoutDependency: Y,
 											layoutId: `yYAhxji9B`,

@@ -1,5 +1,5 @@
 import { t as e } from "./rolldown-runtime.mjs";
-import { B as t, M as n, P as r, T as i, z as a } from "./react.mjs";
+import { B as t, M as rUseMemo, P as rUseEffect, T as i, z as a } from "./react.mjs";
 import { F as o, X as s, a as c, mt as l, w as u } from "./framer.mjs";
 var d,
 	f,
@@ -32,7 +32,7 @@ function h(e, t) {
 }
 function g(e, t, n = !0) {
 	let i = l();
-	r(() => {
+	rUseEffect(() => {
 		n && i === e && t();
 	}, [i]);
 }
@@ -70,7 +70,7 @@ var _ = e(() => {
 					);
 				} else return !1;
 			}),
-			(w = () => n(() => C(), [])));
+			(w = () => rUseMemo(() => C(), [])));
 	}),
 	E = e(() => {
 		(i(), b());
@@ -82,10 +82,10 @@ var _ = e(() => {
 		(s(), i(), p());
 	});
 function k() {
-	return n(() => u.current(), []);
+	return rUseMemo(() => u.current(), []);
 }
 function A() {
-	return n(() => u.current() === u.canvas, []);
+	return rUseMemo(() => u.current() === u.canvas, []);
 }
 var j = e(() => {
 		(i(), s());
@@ -102,7 +102,7 @@ function N(e) {
 		bottomRightRadius: o,
 		bottomLeftRadius: s,
 	} = e;
-	return n(
+	return rUseMemo(
 		() => (r ? `${i}px ${a}px ${o}px ${s}px` : `${t}px`),
 		[t, r, i, a, o, s],
 	);
@@ -116,7 +116,7 @@ function P(e) {
 		paddingBottom: o,
 		paddingLeft: s,
 	} = e;
-	return n(() => (r ? `${i}px ${a}px ${o}px ${s}px` : t), [t, r, i, a, o, s]);
+	return rUseMemo(() => (r ? `${i}px ${a}px ${o}px ${s}px` : t), [t, r, i, a, o, s]);
 }
 var F,
 	I,

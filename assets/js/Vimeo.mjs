@@ -2,12 +2,12 @@ import { t as e } from "./rolldown-runtime.mjs";
 import {
 	B as t,
 	I as n,
-	P as r,
+	P as rUseEffect,
 	R as i,
 	T as a,
 	V as o,
-	c as s,
-	k as c,
+	c as rJsx,
+	k as rUseRef,
 	o as l,
 	z as u,
 } from "./react.mjs";
@@ -1442,10 +1442,10 @@ var R,
 					...h
 				}) {
 					let [g, v] = n(0),
-						y = c(),
+						y = rUseRef(),
 						b = te(h);
 					return (
-						r(() => {
+						rUseEffect(() => {
 							if (!y.current) return;
 							let [, n] = e.match(Z) ? e.match(Z) : [null, 0],
 								r = new J(y.current, {
@@ -1461,10 +1461,10 @@ var R,
 								});
 							(r.on(`play`, f), r.on(`ended`, p));
 						}, [y, g]),
-						r(() => {
+						rUseEffect(() => {
 							v((e) => e + 1);
 						}, [e, t, i, a, o, l]),
-						s(d.div, {
+						rJsx(d.div, {
 							style: {
 								"--background-rgb": ee(u),
 								background: `var(--vimeo-background, ${u})`,
@@ -1479,7 +1479,7 @@ var R,
 								overflow: `hidden`,
 							},
 							...h,
-							children: s(
+							children: rJsx(
 								`div`,
 								{
 									className: `framer-vimeo`,

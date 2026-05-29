@@ -1,12 +1,12 @@
 import { t as e } from "./rolldown-runtime.mjs";
 import {
-	C as t,
-	M as n,
+	C as rUseLayoutEffect,
+	M as rUseMemo,
 	T as r,
-	c as i,
-	k as a,
-	l as o,
-	o as s,
+	c as rJsx,
+	k as rUseRef,
+	l as rJsxs,
+	o as rInternalReactHelper,
 } from "./react.mjs";
 import { A as c, X as l, a as u } from "./framer.mjs";
 function d(e) {
@@ -29,15 +29,15 @@ function d(e) {
 			width: x = `100%`,
 			height: S = `100%`,
 		} = e,
-		C = n(() => {
+		C = rUseMemo(() => {
 			let e = [];
 			for (let t = 0; t < Math.max(0, Math.floor(s)); t++)
 				e.push(r[t] || ``);
 			return e;
 		}, [r, s]),
-		w = a(null),
-		T = a({ w: Number(l) || 620, h: Number(u) || 400 });
-	t(() => {
+		w = rUseRef(null),
+		T = rUseRef({ w: Number(l) || 620, h: Number(u) || 400 });
+	rUseLayoutEffect(() => {
 		let e = w.current;
 		if (!e) return;
 		let t = Number(l),
@@ -52,7 +52,7 @@ function d(e) {
 				((e.style.height = `${n}px`), (T.current.h = n)));
 	}, [l, u]);
 	let E = f > 0;
-	return o(`div`, {
+	return rJsxs(`div`, {
 		style: {
 			width: x,
 			height: S,
@@ -62,7 +62,7 @@ function d(e) {
 			overflow: `visible`,
 		},
 		children: [
-			i(`style`, {
+			rJsx(`style`, {
 				children: `
         .ffg-scene{position:relative; transform-style:preserve-3d}
         .ffg-ul{position:relative; transform-style:preserve-3d; list-style:none; padding:0; margin:0}
@@ -89,7 +89,7 @@ function d(e) {
         }
       `,
 			}),
-			i(`div`, {
+			rJsx(`div`, {
 				ref: w,
 				className: `ffg-scene`,
 				style: {
@@ -97,12 +97,12 @@ function d(e) {
 					height: `${T.current.h}px`,
 					transform: `translate3d(${v}px, ${y}px, 0) rotateX(${h}deg) rotateY(${g}deg) rotateZ(${_}deg)`,
 				},
-				children: i(`ul`, {
+				children: rJsx(`ul`, {
 					className: `ffg-ul`,
 					style: { width: `100%`, height: `100%` },
 					children: C.map((e, t) => {
 						let n = `${t * -p}ms`;
-						return i(
+						return rJsx(
 							`li`,
 							{
 								className: `ffg-li ${E ? `animating` : ``}`,
@@ -124,7 +124,7 @@ function d(e) {
 	});
 }
 var f = e(() => {
-	(s(),
+	(rInternalReactHelper(),
 		r(),
 		l(),
 		c(d, {

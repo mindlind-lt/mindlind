@@ -1,19 +1,19 @@
 import { t as e } from "./rolldown-runtime.mjs";
 import {
 	F as t,
-	I as n,
-	M as r,
+	I as rUseState,
+	M as rUseMemo,
 	N as i,
-	P as a,
+	P as rUseEffect,
 	T as o,
-	c as s,
-	g as c,
-	h as l,
-	j as u,
-	k as d,
-	l as f,
-	o as p,
-	y as ee,
+	c as rJsx,
+	g as rForwardRef,
+	h as rMemo,
+	j as rUseContext,
+	k as rUseRef,
+	l as rJsxs,
+	o as rUseDeferredValue,
+	y as rUseId,
 } from "./react.mjs";
 import {
 	F as m,
@@ -67,19 +67,19 @@ var he,
 	J,
 	ve,
 	ye = e(() => {
-		(p(),
+		(rUseDeferredValue(),
 			A(),
 			o(),
 			(he = `var(--framer-icon-mask)`),
-			(ge = c((e, t) => {
+			(ge = rForwardRef((e, t) => {
 				let { animated: n, layoutId: r, children: i, ...a } = e;
 				return n
-					? s(h.img, { ...a, layoutId: r, ref: t })
-					: s(`img`, { ...a, ref: t });
+					? rJsx(h.img, { ...a, layoutId: r, ref: t })
+					: rJsx(`img`, { ...a, ref: t });
 			})),
 			(_e = ({ height: e, id: t, width: n, ...r }) => ({ ...r })),
 			(J = x(
-				c(function (e, t) {
+				rForwardRef(function (e, t) {
 					let {
 						style: n,
 						className: r,
@@ -87,7 +87,7 @@ var he,
 						variant: a,
 						...o
 					} = _e(e);
-					return s(ge, {
+					return rJsx(ge, {
 						...o,
 						alt: ``,
 						className: D(`huge-logo`, r),
@@ -120,12 +120,12 @@ function be(e) {
 	return l;
 }
 function Y(e) {
-	return s(Oe, { ...be(e) });
+	return rJsx(Oe, { ...be(e) });
 }
 function xe(e) {
 	let t = N(),
-		n = d(!1),
-		r = d(!1),
+		n = rUseRef(!1),
+		r = rUseRef(!1),
 		a = i((t) => {
 			if (!e.current) return;
 			let n = (t === 1 ? 0.999 : t) * e.current.duration,
@@ -168,8 +168,8 @@ function Se({
 	playsinline: i,
 	controls: a,
 }) {
-	let [o] = n(e),
-		[s, c] = n(!1);
+	let [o] = rUseState(e),
+		[s, c] = rUseState(!1);
 	e !== o && !s && c(!0);
 	let l = o && t && r && i && !a && !s,
 		u;
@@ -189,7 +189,7 @@ var Te,
 	Oe,
 	ke,
 	Ae = e(() => {
-		(p(),
+		(rUseDeferredValue(),
 			A(),
 			v(),
 			I(),
@@ -205,7 +205,7 @@ var Te,
 				((e.Video = `Upload`), (e.Url = `URL`));
 			})((Ee ||= {})),
 			(De = `/assets/MLWPbW1dUQawJLhhun3dBwpgJak.mp4`),
-			(Oe = l(function (e) {
+			(Oe = rMemo(function (e) {
 				let {
 						srcType: t = `URL`,
 						srcUrl: n,
@@ -235,10 +235,10 @@ var Te,
 						onMouseDown: k,
 						onMouseUp: A,
 					} = e,
-					j = d(),
+					j = rUseRef(),
 					re = se(),
-					M = d(null),
-					ie = d(null),
+					M = rUseRef(null),
+					ie = rUseRef(null),
 					N = B(),
 					P = oe(),
 					F = N || P === ae.export,
@@ -256,15 +256,15 @@ var Te,
 					ue = F ? !1 : m(j, { margin: `10%`, once: !0 }),
 					V = y === 100 ? 99.9 : y,
 					{ play: H, pause: U, setProgress: W, isPlaying: G } = xe(j);
-				(a(() => {
+				(rUseEffect(() => {
 					F || (L !== `on-viewport` && (x ? H() : U()));
 				}, [L, x]),
-					a(() => {
+					rUseEffect(() => {
 						F ||
 							(z && x && L !== `no-autoplay` && H(),
 							L === `on-viewport` && U());
 					}, [L, z, x]),
-					a(() => {
+					rUseEffect(() => {
 						!N ||
 							b ||
 							o ||
@@ -272,8 +272,8 @@ var Te,
 							!j.current ||
 							(j.current.currentTime = 0.01);
 					}, [o, b, V]));
-				let K = d(!1);
-				(a(() => {
+				let K = rUseRef(!1);
+				(rUseEffect(() => {
 					if (!K.current) {
 						K.current = !0;
 						return;
@@ -283,7 +283,7 @@ var Te,
 							(V ?? 0) / 100,
 					);
 				}, [V, i, n, S]),
-					a(() => {
+					rUseEffect(() => {
 						if (_(S)) return S.on(`change`, (e) => W(e));
 					}, [S]),
 					le(() => {
@@ -298,21 +298,21 @@ var Te,
 							(M.current = j.current.paused),
 							U());
 					}));
-				let de = r(() => {
+				let de = rUseMemo(() => {
 					if (t === `URL`) return n + ``;
 					if (t === `Upload`) return i + ``;
 				}, [t, i, n, V]);
 				return (
-					a(() => {
+					rUseEffect(() => {
 						re &&
 							j.current &&
 							L === `on-mount` &&
 							setTimeout(() => H(), 50);
 					}, []),
-					a(() => {
+					rUseEffect(() => {
 						j.current && !f && (j.current.volume = (v ?? 0) / 100);
 					}, [v]),
-					s(`video`, {
+					rJsx(`video`, {
 						onClick: D,
 						onMouseEnter: ne,
 						onMouseLeave: O,
@@ -738,7 +738,7 @@ var Fe,
 	$,
 	Xe,
 	Ze = e(() => {
-		(p(),
+		(rUseDeferredValue(),
 			A(),
 			v(),
 			o(),
@@ -776,10 +776,10 @@ var Fe,
 						: void 0),
 			(We = (e, t) => `translateX(-50%) ${t}`),
 			(Ge = ({ value: e, children: t }) => {
-				let n = u(g),
+				let n = rUseContext(g),
 					i = e ?? n.transition,
-					a = r(() => ({ ...n, transition: i }), [JSON.stringify(i)]);
-				return s(g.Provider, { value: a, children: t });
+					a = rUseMemo(() => ({ ...n, transition: i }), [JSON.stringify(i)]);
+				return rJsx(g.Provider, { value: a, children: t });
 			}),
 			(Ke = { "Dark - Left": `QiQAzkW2U`, "Light - Right": `H9MtNDY8s` }),
 			(qe = h.create(t)),
@@ -862,10 +862,10 @@ var Fe,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			($ = x(
-				c(function (e, n) {
-					let r = d(null),
+				rForwardRef(function (e, n) {
+					let r = rUseRef(null),
 						i = n ?? r,
-						a = ee(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: c } = F(),
 						l = ie(),
 						{
@@ -912,14 +912,14 @@ var Fe,
 						G = Ye(e, W),
 						K = D(Be, U, Ne, de),
 						fe = (e) => (R === `QiQAzkW2U` ? e : !0);
-					return s(te, {
+					return rJsx(te, {
 						id: m ?? a,
-						children: s(qe, {
+						children: rJsx(qe, {
 							animate: W,
 							initial: !1,
-							children: s(Ge, {
+							children: rJsx(Ge, {
 								value: He,
-								children: f(h.div, {
+								children: rJsxs(h.div, {
 									...L,
 									...le,
 									className: D(K, `framer-mwlaz1`, p, ce),
@@ -936,7 +936,7 @@ var Fe,
 										B,
 									),
 									children: [
-										f(h.div, {
+										rJsxs(h.div, {
 											className: `framer-1oi9aob`,
 											layoutDependency: G,
 											layoutId: `MHtV20YD5`,
@@ -948,7 +948,7 @@ var Fe,
 												borderTopRightRadius: 10,
 											},
 											children: [
-												f(h.div, {
+												rJsxs(h.div, {
 													className: `framer-kf2yor`,
 													layoutDependency: G,
 													layoutId: `iU4nyVn00`,
@@ -965,18 +965,18 @@ var Fe,
 														},
 													},
 													children: [
-														s(b, {
+														rJsx(b, {
 															__fromCanvasComponent:
 																!0,
-															children: s(t, {
-																children: f(
+															children: rJsx(t, {
+																children: rJsxs(
 																	h.h6,
 																	{
 																		className: `framer-styles-preset-17vg3ju`,
 																		"data-styles-preset": `CD6KIdx_H`,
 																		children:
 																			[
-																				s(
+																				rJsx(
 																					h.span,
 																					{
 																						style: {
@@ -985,11 +985,11 @@ var Fe,
 																						children: `Start`,
 																					},
 																				),
-																				s(
+																				rJsx(
 																					h.br,
 																					{},
 																				),
-																				s(
+																				rJsx(
 																					h.span,
 																					{
 																						style: {
@@ -1025,18 +1025,18 @@ var Fe,
 																{
 																	QiQAzkW2U: {
 																		children:
-																			s(
+																			rJsx(
 																				t,
 																				{
 																					children:
-																						f(
+																						rJsxs(
 																							h.h6,
 																							{
 																								className: `framer-styles-preset-17vg3ju`,
 																								"data-styles-preset": `CD6KIdx_H`,
 																								children:
 																									[
-																										s(
+																										rJsx(
 																											h.span,
 																											{
 																												style: {
@@ -1045,11 +1045,11 @@ var Fe,
 																												children: `Start`,
 																											},
 																										),
-																										s(
+																										rJsx(
 																											h.br,
 																											{},
 																										),
-																										s(
+																										rJsx(
 																											h.span,
 																											{
 																												style: {
@@ -1069,23 +1069,23 @@ var Fe,
 																B,
 															),
 														}),
-														s(h.div, {
+														rJsx(h.div, {
 															className: `framer-18qh9d1`,
 															
 															layoutDependency: G,
 															layoutId: `P95EtcLj1`,
 														}),
-														s(b, {
+														rJsx(b, {
 															__fromCanvasComponent:
 																!0,
-															children: s(t, {
-																children: s(
+															children: rJsx(t, {
+																children: rJsx(
 																	h.p,
 																	{
 																		className: `framer-styles-preset-1sb62jp`,
 																		"data-styles-preset": `H4UJEYSZN`,
 																		children:
-																			s(
+																			rJsx(
 																				h.span,
 																				{
 																					style: {
@@ -1118,11 +1118,11 @@ var Fe,
 																{
 																	QiQAzkW2U: {
 																		children:
-																			s(
+																			rJsx(
 																				t,
 																				{
 																					children:
-																						s(
+																						rJsx(
 																							h.p,
 																							{
 																								className: `framer-styles-preset-1sb62jp`,
@@ -1141,13 +1141,13 @@ var Fe,
 																B,
 															),
 														}),
-														s(h.div, {
+														rJsx(h.div, {
 															className: `framer-13x3qa0`,
 															
 															layoutDependency: G,
 															layoutId: `f6WryI9Hr`,
 														}),
-														s(P, {
+														rJsx(P, {
 															height: 40,
 															width: `calc(max(${l?.width || `100vw`} - 107px, 1px) - 60px)`,
 															y:
@@ -1185,7 +1185,7 @@ var Fe,
 																R,
 																B,
 															),
-															children: s(E, {
+															children: rJsx(E, {
 																className: `framer-12iljpq-container`,
 																layoutDependency:
 																	G,
@@ -1194,7 +1194,7 @@ var Fe,
 																rendersWithMotion:
 																	!0,
 																scopeId: `B5N76fW9S`,
-																children: s(
+																children: rJsx(
 																	pe,
 																	{
 																		CKFVUbPix:
@@ -1219,7 +1219,7 @@ var Fe,
 														}),
 													],
 												}),
-												f(h.div, {
+												rJsxs(h.div, {
 													className: `framer-1o7qjjl`,
 													
 													layoutDependency: G,
@@ -1238,8 +1238,8 @@ var Fe,
 													},
 													children: [
 														ae !== !1 &&
-															s(P, {
-																children: s(E, {
+															rJsx(P, {
+																children: rJsx(E, {
 																	className: `framer-6m6suy-container`,
 																	isAuthoredByUser:
 																		!0,
@@ -1252,7 +1252,7 @@ var Fe,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `B5N76fW9S`,
-																	children: s(
+																	children: rJsx(
 																		Y,
 																		{
 																			backgroundColor: `rgba(0, 0, 0, 0)`,
@@ -1294,7 +1294,7 @@ var Fe,
 																}),
 															}),
 														N !== !1 &&
-															s(re, {
+															rJsx(re, {
 																background: {
 																	alt: ``,
 																	fit: `stretch`,
@@ -1363,11 +1363,11 @@ var Fe,
 																	B,
 																),
 															}),
-														s(b, {
+														rJsx(b, {
 															__fromCanvasComponent:
 																!0,
-															children: s(t, {
-																children: s(
+															children: rJsx(t, {
+																children: rJsx(
 																	h.h6,
 																	{
 																		className: `framer-styles-preset-12tby5a`,
@@ -1398,11 +1398,11 @@ var Fe,
 																{
 																	QiQAzkW2U: {
 																		children:
-																			s(
+																			rJsx(
 																				t,
 																				{
 																					children:
-																						s(
+																						rJsx(
 																							h.h6,
 																							{
 																								className: `framer-styles-preset-12tby5a`,
@@ -1427,7 +1427,7 @@ var Fe,
 											],
 										}),
 										fe(w !== !1) &&
-											f(h.div, {
+											rJsxs(h.div, {
 												className: `framer-1ozcg6v`,
 												layoutDependency: G,
 												layoutId: `RQZDJYrjq`,
@@ -1439,11 +1439,11 @@ var Fe,
 													borderTopRightRadius: 10,
 												},
 												children: [
-													s(b, {
+													rJsx(b, {
 														__fromCanvasComponent:
 															!0,
-														children: s(t, {
-															children: f(h.h6, {
+														children: rJsx(t, {
+															children: rJsxs(h.h6, {
 																className: `framer-styles-preset-12tby5a`,
 																"data-styles-preset": `j9HsFBXUW`,
 																style: {
@@ -1451,7 +1451,7 @@ var Fe,
 																},
 																children: [
 																	`Love by `,
-																	s(h.br, {}),
+																	rJsx(h.br, {}),
 																	`50+ founders`,
 																],
 															}),
@@ -1468,12 +1468,12 @@ var Fe,
 														verticalAlignment: `top`,
 														withExternalLayout: !0,
 													}),
-													f(h.div, {
+													rJsxs(h.div, {
 														className: `framer-1dmx3mh`,
 														layoutDependency: G,
 														layoutId: `Scdhsd_NS`,
 														children: [
-															s(P, {
+															rJsx(P, {
 																height: 0,
 																width: `40px`,
 																y:
@@ -1511,7 +1511,7 @@ var Fe,
 																	R,
 																	B,
 																),
-																children: s(E, {
+																children: rJsx(E, {
 																	className: `framer-o80hab-container`,
 																	layoutDependency:
 																		G,
@@ -1520,7 +1520,7 @@ var Fe,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `B5N76fW9S`,
-																	children: s(
+																	children: rJsx(
 																		q,
 																		{
 																			hcJOIuTE0:
@@ -1543,7 +1543,7 @@ var Fe,
 																	),
 																}),
 															}),
-															s(P, {
+															rJsx(P, {
 																height: 0,
 																width: `40px`,
 																y:
@@ -1581,7 +1581,7 @@ var Fe,
 																	R,
 																	B,
 																),
-																children: s(E, {
+																children: rJsx(E, {
 																	className: `framer-jcdzoc-container`,
 																	layoutDependency:
 																		G,
@@ -1590,7 +1590,7 @@ var Fe,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `B5N76fW9S`,
-																	children: s(
+																	children: rJsx(
 																		q,
 																		{
 																			hcJOIuTE0:
@@ -1613,7 +1613,7 @@ var Fe,
 																	),
 																}),
 															}),
-															s(P, {
+															rJsx(P, {
 																height: 0,
 																width: `40px`,
 																y:
@@ -1651,7 +1651,7 @@ var Fe,
 																	R,
 																	B,
 																),
-																children: s(E, {
+																children: rJsx(E, {
 																	className: `framer-1495g0q-container`,
 																	layoutDependency:
 																		G,
@@ -1660,7 +1660,7 @@ var Fe,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `B5N76fW9S`,
-																	children: s(
+																	children: rJsx(
 																		q,
 																		{
 																			hcJOIuTE0:
@@ -1683,7 +1683,7 @@ var Fe,
 																	),
 																}),
 															}),
-															s(P, {
+															rJsx(P, {
 																height: 0,
 																width: `40px`,
 																y:
@@ -1721,7 +1721,7 @@ var Fe,
 																	R,
 																	B,
 																),
-																children: s(E, {
+																children: rJsx(E, {
 																	className: `framer-1v3gc9c-container`,
 																	layoutDependency:
 																		G,
@@ -1730,7 +1730,7 @@ var Fe,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `B5N76fW9S`,
-																	children: s(
+																	children: rJsx(
 																		q,
 																		{
 																			hcJOIuTE0:
