@@ -34,11 +34,11 @@ var r,
 	});
 function s(e, t) {
 	return {
-		description: `Framer Template for Digital Creative Agency with Future Design`,
-		favicon: `../images/uGRAp8supPvhoUPaFg224ylEEs.png`,
-		robots: `max-image-preview:large`,
-		socialImage: `../images/T8IXg2Azyj5ZDOkMUn1tw6Q2zy4.jpg`,
-		title: `Mondragon –\xA0Digital Creative Agency – Framer Template`,
+		// description: `Framer Template for Digital Creative Agency with Future Design`,
+		// favicon: `../images/uGRAp8supPvhoUPaFg224ylEEs.png`,
+		// robots: `max-image-preview:large`,
+		// socialImage: `../images/T8IXg2Azyj5ZDOkMUn1tw6Q2zy4.jpg`,
+		title: `Mindlind Agency`,
 	};
 }
 var c = e(() => {});
