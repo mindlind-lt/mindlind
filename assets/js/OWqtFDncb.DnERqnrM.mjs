@@ -1,16 +1,16 @@
 import { t as e } from "./rolldown-runtime.mjs";
 import {
 	F as t,
-	M as n,
+	M as rUseMemo,
 	T as r,
-	c as i,
-	g as a,
-	j as o,
-	k as s,
-	l as c,
-	o as l,
+	c as rJsx,
+	g as rForwardRef,
+	j as rUseContext,
+	k as rUseRef,
+	l as rJsxs,
+	o as rUseDeferredValue,
 	s as u,
-	y as d,
+	y as rUseId,
 } from "./react.mjs";
 import { S as f, a as p, r as m, t as h } from "./motion.mjs";
 import {
@@ -76,7 +76,7 @@ var we,
 	K,
 	Fe,
 	Ie = e(() => {
-		(l(),
+		(rUseDeferredValue(),
 			A(),
 			h(),
 			r(),
@@ -94,10 +94,10 @@ var we,
 			}),
 			(ke = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
 			(Ae = ({ value: e, children: t }) => {
-				let r = o(p),
+				let r = rUseContext(p),
 					a = e ?? r.transition,
-					s = n(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
-				return i(p.Provider, { value: s, children: t });
+					s = rUseMemo(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
+				return rJsx(p.Provider, { value: s, children: t });
 			}),
 			(je = f.create(t)),
 			(Me = { Normal: `UnuGN3X_1`, Vertical: `X8hKcyMev` }),
@@ -134,10 +134,10 @@ var we,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(K = y(
-				a(function (e, t) {
-					let n = s(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = d(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: c } = z();
 					I();
 					let {
@@ -174,14 +174,14 @@ var we,
 						}),
 						F = Pe(e, P),
 						R = w(Ee);
-					return i(m, {
+					return rJsx(m, {
 						id: p ?? a,
-						children: i(je, {
+						children: rJsx(je, {
 							animate: P,
 							initial: !1,
-							children: i(Ae, {
+							children: rJsx(Ae, {
 								value: ke,
-								children: i(f.div, {
+								children: rJsx(f.div, {
 									...E,
 									...j,
 									className: w(R, `framer-1enx3dv`, u, k),
@@ -202,8 +202,8 @@ var we,
 										O,
 										M,
 									),
-									children: i(L, {
-										children: i(S, {
+									children: rJsx(L, {
+										children: rJsx(S, {
 											className: `framer-1xi5k3-container`,
 											isAuthoredByUser: !0,
 											layoutDependency: F,
@@ -211,7 +211,7 @@ var we,
 											nodeId: `xZfo8S9Ac`,
 											rendersWithMotion: !0,
 											scopeId: `dw6Y8o7e5`,
-											children: i(G, {
+											children: rJsx(G, {
 												ariaLabel: `h1`,
 												charset: `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*`,
 												color: g,
@@ -340,7 +340,7 @@ var Re,
 	q,
 	Ye,
 	Xe = e(() => {
-		(l(),
+		(rUseDeferredValue(),
 			A(),
 			h(),
 			r(),
@@ -360,10 +360,10 @@ var Re,
 				type: `tween`,
 			}),
 			(We = ({ value: e, children: t }) => {
-				let r = o(p),
+				let r = rUseContext(p),
 					a = e ?? r.transition,
-					s = n(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
-				return i(p.Provider, { value: s, children: t });
+					s = rUseMemo(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
+				return rJsx(p.Provider, { value: s, children: t });
 			}),
 			(Ge = f.create(t)),
 			(Ke = { Horizontal: `X3qFlTbTF`, Vertical: `vKKbtDO1N` }),
@@ -385,10 +385,10 @@ var Re,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(q = y(
-				a(function (e, t) {
-					let n = s(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = d(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: c } = z(),
 						l = I(),
 						{
@@ -420,21 +420,21 @@ var Re,
 						}),
 						M = Je(e, j),
 						ee = w(Ve);
-					return i(m, {
+					return rJsx(m, {
 						id: h ?? a,
-						children: i(Ge, {
+						children: rJsx(Ge, {
 							animate: j,
 							initial: !1,
-							children: i(We, {
+							children: rJsx(We, {
 								value: Ue,
-								children: i(N, {
+								children: rJsx(N, {
 									href: v,
 									motionChild: !0,
 									nodeId: `vKKbtDO1N`,
 									openInNewTab: !1,
 									scopeId: `quc6LB8jz`,
 									smoothScroll: !0,
-									children: i(f.a, {
+									children: rJsx(f.a, {
 										...y,
 										...T,
 										className: `${w(ee, `framer-1n7pgpj`, p, x)} framer-1n4dfmi`,
@@ -465,7 +465,7 @@ var Re,
 											b,
 											E,
 										),
-										children: i(L, {
+										children: rJsx(L, {
 											height:
 												Math.max(
 													0,
@@ -512,14 +512,14 @@ var Re,
 												b,
 												E,
 											),
-											children: i(S, {
+											children: rJsx(S, {
 												className: `framer-9ix7ur-container`,
 												layoutDependency: M,
 												layoutId: `Ao_gCu6n6-container`,
 												nodeId: `Ao_gCu6n6`,
 												rendersWithMotion: !0,
 												scopeId: `quc6LB8jz`,
-												children: i(Fe, {
+												children: rJsx(Fe, {
 													a10ufliJT: _,
 													FnHJ3auI6: v,
 													GvlBMQefU: !1,
@@ -621,7 +621,7 @@ var Ze,
 	X,
 	vt,
 	yt = e(() => {
-		(l(),
+		(rUseDeferredValue(),
 			A(),
 			h(),
 			r(),
@@ -714,10 +714,10 @@ var Ze,
 				return n(B(r), i, a);
 			}),
 			(pt = ({ value: e, children: t }) => {
-				let r = o(p),
+				let r = rUseContext(p),
 					a = e ?? r.transition,
-					s = n(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
-				return i(p.Provider, { value: s, children: t });
+					s = rUseMemo(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
+				return rJsx(p.Provider, { value: s, children: t });
 			}),
 			(mt = f.create(t)),
 			(ht = {
@@ -748,10 +748,10 @@ var Ze,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(X = y(
-				a(function (e, n) {
-					let r = s(null),
+				rForwardRef(function (e, n) {
+					let r = rUseRef(null),
 						a = n ?? r,
-						o = d(),
+						o = rUseId(),
 						{ activeLocale: l, setLocale: p } = z(),
 						h = I(),
 						{
@@ -796,14 +796,14 @@ var Ze,
 						_e = w(tt, ce, H, se, pe);
 					return (
 						T(),
-						i(m, {
+						rJsx(m, {
 							id: y ?? o,
-							children: i(mt, {
+							children: rJsx(mt, {
 								animate: fe,
 								initial: !1,
-								children: i(pt, {
+								children: rJsx(pt, {
 									value: rt,
-									children: i(f.div, {
+									children: rJsx(f.div, {
 										...re,
 										...oe,
 										className: w(
@@ -832,12 +832,12 @@ var Ze,
 											V,
 											U,
 										),
-										children: i(f.div, {
+										children: rJsx(f.div, {
 											className: `framer-5nkas6`,
 											layoutDependency: W,
 											layoutId: `fLhiRBExr`,
-											children: i(R, {
-												children: i(ft, {
+											children: rJsx(R, {
+												children: rJsx(ft, {
 													pageSize: 3,
 													query: {
 														from: {
@@ -1079,7 +1079,7 @@ var Ze,
 														U,
 													),
 													children: (e, n, r) =>
-														c(u, {
+														rJsxs(u, {
 															children: [
 																e?.map(
 																	(
@@ -1107,12 +1107,12 @@ var Ze,
 																			it(
 																				o,
 																			);
-																		return i(
+																		return rJsx(
 																			m,
 																			{
 																				id: `fLhiRBExr-${n}`,
 																				children:
-																					i(
+																					rJsx(
 																						M.Provider,
 																						{
 																							value: {
@@ -1120,7 +1120,7 @@ var Ze,
 																									r,
 																							},
 																							children:
-																								c(
+																								rJsxs(
 																									f.div,
 																									{
 																										className: `framer-6t1xi5`,
@@ -1130,7 +1130,7 @@ var Ze,
 																										children:
 																											[
 																												u &&
-																													c(
+																													rJsxs(
 																														Qe,
 																														{
 																															className: `framer-1lzrxid`,
@@ -1177,7 +1177,7 @@ var Ze,
 																															),
 																															children:
 																																[
-																																	c(
+																																	rJsxs(
 																																		f.div,
 																																		{
 																																			className: `framer-1tr3203`,
@@ -1193,7 +1193,7 @@ var Ze,
 																																			},
 																																			children:
 																																				[
-																																					c(
+																																					rJsxs(
 																																						f.div,
 																																						{
 																																							className: `framer-7pv3ri`,
@@ -1209,17 +1209,17 @@ var Ze,
 																																							},
 																																							children:
 																																								[
-																																									i(
+																																									rJsx(
 																																										v,
 																																										{
 																																											__fromCanvasComponent:
 																																												!0,
 																																											children:
-																																												i(
+																																												rJsx(
 																																													t,
 																																													{
 																																														children:
-																																															i(
+																																															rJsx(
 																																																f.h5,
 																																																{
 																																																	className: `framer-styles-preset-h6j8it`,
@@ -1229,7 +1229,7 @@ var Ze,
 																																																		"--framer-text-color": `var(--extracted-1lwpl3i, var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0)))`,
 																																																	},
 																																																	children:
-																																																		i(
+																																																		rJsx(
 																																																			N,
 																																																			{
 																																																				href: {
@@ -1251,7 +1251,7 @@ var Ze,
 																																																				smoothScroll:
 																																																					!1,
 																																																				children:
-																																																					i(
+																																																					rJsx(
 																																																						f.a,
 																																																						{
 																																																							className: `framer-styles-preset-mgrqd0`,
@@ -1288,17 +1288,17 @@ var Ze,
 																																													e_indrHZ3:
 																																														{
 																																															children:
-																																																i(
+																																																rJsx(
 																																																	t,
 																																																	{
 																																																		children:
-																																																			i(
+																																																			rJsx(
 																																																				f.h6,
 																																																				{
 																																																					className: `framer-styles-preset-nkm6se`,
 																																																					"data-styles-preset": `BaUGQBb6A`,
 																																																					children:
-																																																						i(
+																																																						rJsx(
 																																																							N,
 																																																							{
 																																																								href: {
@@ -1320,7 +1320,7 @@ var Ze,
 																																																								smoothScroll:
 																																																									!1,
 																																																								children:
-																																																									i(
+																																																									rJsx(
 																																																										f.a,
 																																																										{
 																																																											className: `framer-styles-preset-mgrqd0`,
@@ -1338,17 +1338,17 @@ var Ze,
 																																													oB1JgoU9o:
 																																														{
 																																															children:
-																																																i(
+																																																rJsx(
 																																																	t,
 																																																	{
 																																																		children:
-																																																			i(
+																																																			rJsx(
 																																																				f.h6,
 																																																				{
 																																																					className: `framer-styles-preset-nkm6se`,
 																																																					"data-styles-preset": `BaUGQBb6A`,
 																																																					children:
-																																																						i(
+																																																						rJsx(
 																																																							N,
 																																																							{
 																																																								href: {
@@ -1370,7 +1370,7 @@ var Ze,
 																																																								smoothScroll:
 																																																									!1,
 																																																								children:
-																																																									i(
+																																																									rJsx(
 																																																										f.a,
 																																																										{
 																																																											className: `framer-styles-preset-mgrqd0`,
@@ -1391,17 +1391,17 @@ var Ze,
 																																											),
 																																										},
 																																									),
-																																									i(
+																																									rJsx(
 																																										v,
 																																										{
 																																											__fromCanvasComponent:
 																																												!0,
 																																											children:
-																																												i(
+																																												rJsx(
 																																													t,
 																																													{
 																																														children:
-																																															i(
+																																															rJsx(
 																																																f.p,
 																																																{
 																																																	className: `framer-styles-preset-11kcybb`,
@@ -1434,7 +1434,7 @@ var Ze,
 																																								],
 																																						},
 																																					),
-																																					i(
+																																					rJsx(
 																																						N,
 																																						{
 																																							href: {
@@ -1452,7 +1452,7 @@ var Ze,
 																																								!1,
 																																							scopeId: `BhIrHMnrg`,
 																																							children:
-																																								i(
+																																								rJsx(
 																																									te,
 																																									{
 																																										as: `a`,
@@ -1679,7 +1679,7 @@ var Ze,
 																																				],
 																																		},
 																																	),
-																																	i(
+																																	rJsx(
 																																		E,
 																																		{
 																																			links: [
@@ -1760,7 +1760,7 @@ var Ze,
 																																				(
 																																					e,
 																																				) =>
-																																					i(
+																																					rJsx(
 																																						L,
 																																						{
 																																							height: 314,
@@ -1887,7 +1887,7 @@ var Ze,
 																																								U,
 																																							),
 																																							children:
-																																								i(
+																																								rJsx(
 																																									S,
 																																									{
 																																										className: `framer-1lay61e-container`,
@@ -1899,7 +1899,7 @@ var Ze,
 																																											!0,
 																																										scopeId: `BhIrHMnrg`,
 																																										children:
-																																											i(
+																																											rJsx(
 																																												Ye,
 																																												{
 																																													aNcBB1l2I: `[READ MORE]`,
@@ -1965,7 +1965,7 @@ var Ze,
 																														},
 																													),
 																												o &&
-																													c(
+																													rJsxs(
 																														Qe,
 																														{
 																															className: `framer-1q1cjus`,
@@ -2012,7 +2012,7 @@ var Ze,
 																															),
 																															children:
 																																[
-																																	c(
+																																	rJsxs(
 																																		f.div,
 																																		{
 																																			className: `framer-vajzqs`,
@@ -2028,7 +2028,7 @@ var Ze,
 																																			},
 																																			children:
 																																				[
-																																					i(
+																																					rJsx(
 																																						N,
 																																						{
 																																							href: {
@@ -2046,7 +2046,7 @@ var Ze,
 																																								!1,
 																																							scopeId: `BhIrHMnrg`,
 																																							children:
-																																								i(
+																																								rJsx(
 																																									te,
 																																									{
 																																										as: `a`,
@@ -2270,7 +2270,7 @@ var Ze,
 																																								),
 																																						},
 																																					),
-																																					c(
+																																					rJsxs(
 																																						f.div,
 																																						{
 																																							className: `framer-rfzun6`,
@@ -2286,17 +2286,17 @@ var Ze,
 																																							},
 																																							children:
 																																								[
-																																									i(
+																																									rJsx(
 																																										v,
 																																										{
 																																											__fromCanvasComponent:
 																																												!0,
 																																											children:
-																																												i(
+																																												rJsx(
 																																													t,
 																																													{
 																																														children:
-																																															i(
+																																															rJsx(
 																																																f.h5,
 																																																{
 																																																	className: `framer-styles-preset-h6j8it`,
@@ -2306,7 +2306,7 @@ var Ze,
 																																																		"--framer-text-color": `var(--extracted-1lwpl3i, var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0)))`,
 																																																	},
 																																																	children:
-																																																		i(
+																																																		rJsx(
 																																																			N,
 																																																			{
 																																																				href: {
@@ -2328,7 +2328,7 @@ var Ze,
 																																																				smoothScroll:
 																																																					!1,
 																																																				children:
-																																																					i(
+																																																					rJsx(
 																																																						f.a,
 																																																						{
 																																																							className: `framer-styles-preset-mgrqd0`,
@@ -2365,17 +2365,17 @@ var Ze,
 																																													e_indrHZ3:
 																																														{
 																																															children:
-																																																i(
+																																																rJsx(
 																																																	t,
 																																																	{
 																																																		children:
-																																																			i(
+																																																			rJsx(
 																																																				f.h6,
 																																																				{
 																																																					className: `framer-styles-preset-nkm6se`,
 																																																					"data-styles-preset": `BaUGQBb6A`,
 																																																					children:
-																																																						i(
+																																																						rJsx(
 																																																							N,
 																																																							{
 																																																								href: {
@@ -2397,7 +2397,7 @@ var Ze,
 																																																								smoothScroll:
 																																																									!1,
 																																																								children:
-																																																									i(
+																																																									rJsx(
 																																																										f.a,
 																																																										{
 																																																											className: `framer-styles-preset-mgrqd0`,
@@ -2415,17 +2415,17 @@ var Ze,
 																																													oB1JgoU9o:
 																																														{
 																																															children:
-																																																i(
+																																																rJsx(
 																																																	t,
 																																																	{
 																																																		children:
-																																																			i(
+																																																			rJsx(
 																																																				f.h6,
 																																																				{
 																																																					className: `framer-styles-preset-nkm6se`,
 																																																					"data-styles-preset": `BaUGQBb6A`,
 																																																					children:
-																																																						i(
+																																																						rJsx(
 																																																							N,
 																																																							{
 																																																								href: {
@@ -2447,7 +2447,7 @@ var Ze,
 																																																								smoothScroll:
 																																																									!1,
 																																																								children:
-																																																									i(
+																																																									rJsx(
 																																																										f.a,
 																																																										{
 																																																											className: `framer-styles-preset-mgrqd0`,
@@ -2468,17 +2468,17 @@ var Ze,
 																																											),
 																																										},
 																																									),
-																																									i(
+																																									rJsx(
 																																										v,
 																																										{
 																																											__fromCanvasComponent:
 																																												!0,
 																																											children:
-																																												i(
+																																												rJsx(
 																																													t,
 																																													{
 																																														children:
-																																															i(
+																																															rJsx(
 																																																f.p,
 																																																{
 																																																	className: `framer-styles-preset-11kcybb`,
@@ -2514,7 +2514,7 @@ var Ze,
 																																				],
 																																		},
 																																	),
-																																	i(
+																																	rJsx(
 																																		E,
 																																		{
 																																			links: [
@@ -2595,7 +2595,7 @@ var Ze,
 																																				(
 																																					e,
 																																				) =>
-																																					i(
+																																					rJsx(
 																																						L,
 																																						{
 																																							height: 314,
@@ -2722,7 +2722,7 @@ var Ze,
 																																								U,
 																																							),
 																																							children:
-																																								i(
+																																								rJsx(
 																																									S,
 																																									{
 																																										className: `framer-g7absq-container`,
@@ -2734,7 +2734,7 @@ var Ze,
 																																											!0,
 																																										scopeId: `BhIrHMnrg`,
 																																										children:
-																																											i(
+																																											rJsx(
 																																												Ye,
 																																												{
 																																													aNcBB1l2I: `[READ MORE]`,
@@ -2810,7 +2810,7 @@ var Ze,
 																	},
 																),
 																x &&
-																	i(f.div, {
+																	rJsx(f.div, {
 																		className: `framer-2ck25m`,
 																		
 																		layoutDependency:
@@ -2818,7 +2818,7 @@ var Ze,
 																		layoutId: `CNynIs6uR`,
 																	}),
 																C &&
-																	i(L, {
+																	rJsx(L, {
 																		height: 50,
 																		y:
 																			(h?.y ||
@@ -2918,7 +2918,7 @@ var Ze,
 																			U,
 																		),
 																		children:
-																			i(
+																			rJsx(
 																				S,
 																				{
 																					className: `framer-1lxueen-container`,
@@ -2930,7 +2930,7 @@ var Ze,
 																						!0,
 																					scopeId: `BhIrHMnrg`,
 																					children:
-																						i(
+																						rJsx(
 																							xe,
 																							{
 																								height: `100%`,
@@ -3162,7 +3162,7 @@ var xt,
 	Z,
 	Q,
 	Mt = e(() => {
-		(l(),
+		(rUseDeferredValue(),
 			A(),
 			h(),
 			r(),
@@ -3180,10 +3180,10 @@ var xt,
 			}),
 			(Et = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
 			(Dt = ({ value: e, children: t }) => {
-				let r = o(p),
+				let r = rUseContext(p),
 					a = e ?? r.transition,
-					s = n(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
-				return i(p.Provider, { value: s, children: t });
+					s = rUseMemo(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
+				return rJsx(p.Provider, { value: s, children: t });
 			}),
 			(Ot = f.create(t)),
 			(kt = { Normal: `UnuGN3X_1`, Vertical: `X8hKcyMev` }),
@@ -3220,10 +3220,10 @@ var xt,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(Z = y(
-				a(function (e, t) {
-					let n = s(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = d(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: c } = z();
 					I();
 					let {
@@ -3260,14 +3260,14 @@ var xt,
 						}),
 						F = jt(e, P),
 						R = w(Ct);
-					return i(m, {
+					return rJsx(m, {
 						id: p ?? a,
-						children: i(Ot, {
+						children: rJsx(Ot, {
 							animate: P,
 							initial: !1,
-							children: i(Dt, {
+							children: rJsx(Dt, {
 								value: Et,
-								children: i(f.div, {
+								children: rJsx(f.div, {
 									...E,
 									...j,
 									className: w(R, `framer-1enx3dv`, u, k),
@@ -3288,8 +3288,8 @@ var xt,
 										O,
 										M,
 									),
-									children: i(L, {
-										children: i(S, {
+									children: rJsx(L, {
+										children: rJsx(S, {
 											className: `framer-1xi5k3-container`,
 											isAuthoredByUser: !0,
 											layoutDependency: F,
@@ -3297,7 +3297,7 @@ var xt,
 											nodeId: `xZfo8S9Ac`,
 											rendersWithMotion: !0,
 											scopeId: `dw6Y8o7e5`,
-											children: i(G, {
+											children: rJsx(G, {
 												ariaLabel: `h1`,
 												charset: `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*`,
 												color: g,
@@ -3430,7 +3430,7 @@ var Pt,
 	$,
 	Yt,
 	Xt = e(() => {
-		(l(),
+		(rUseDeferredValue(),
 			A(),
 			h(),
 			r(),
@@ -3455,10 +3455,10 @@ var Pt,
 			}),
 			(Ht = (e, t) => `translateY(-50%) ${t}`),
 			(Ut = ({ value: e, children: t }) => {
-				let r = o(p),
+				let r = rUseContext(p),
 					a = e ?? r.transition,
-					s = n(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
-				return i(p.Provider, { value: s, children: t });
+					s = rUseMemo(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
+				return rJsx(p.Provider, { value: s, children: t });
 			}),
 			(Wt = f.create(t)),
 			(Gt = {
@@ -3518,10 +3518,10 @@ var Pt,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			($ = y(
-				a(function (e, n) {
-					let r = s(null),
+				rForwardRef(function (e, n) {
+					let r = rUseRef(null),
 						a = n ?? r,
-						o = d(),
+						o = rUseId(),
 						{ activeLocale: l, setLocale: u } = z(),
 						p = I(),
 						{
@@ -3566,14 +3566,14 @@ var Pt,
 						U = Jt(e, ce),
 						le = w(Rt, se, _e),
 						ue = (e) => (B === `MpacA_qwI` ? e : !1);
-					return i(m, {
+					return rJsx(m, {
 						id: _ ?? o,
-						children: i(Wt, {
+						children: rJsx(Wt, {
 							animate: ce,
 							initial: !1,
-							children: i(Ut, {
+							children: rJsx(Ut, {
 								value: Bt,
-								children: i(f.section, {
+								children: rJsx(f.section, {
 									...R,
 									...V,
 									className: w(le, `framer-rpnakr`, g, ne),
@@ -3591,7 +3591,7 @@ var Pt,
 										B,
 										H,
 									),
-									children: c(f.div, {
+									children: rJsxs(f.div, {
 										className: `framer-1vky8zs`,
 										
 										layoutDependency: U,
@@ -3599,28 +3599,28 @@ var Pt,
 										style: { "--1po8p6w": Vt(te) },
 										children: [
 											O &&
-												c(f.div, {
+												rJsxs(f.div, {
 													className: `framer-1aog0n9`,
 													
 													layoutDependency: U,
 													layoutId: `GeX1clO7y`,
 													children: [
-														c(f.div, {
+														rJsxs(f.div, {
 															className: `framer-1um0kcp`,
 															
 															layoutDependency: U,
 															layoutId: `BNctDMGLI`,
 															children: [
 																A &&
-																	i(v, {
+																	rJsx(v, {
 																		__fromCanvasComponent:
 																			!0,
 																		children:
-																			i(
+																			rJsx(
 																				t,
 																				{
 																					children:
-																						i(
+																						rJsx(
 																							f.h6,
 																							{
 																								className: `framer-styles-preset-nkm6se`,
@@ -3655,11 +3655,11 @@ var Pt,
 																				MpacA_qwI:
 																					{
 																						children:
-																							i(
+																							rJsx(
 																								t,
 																								{
 																									children:
-																										i(
+																										rJsx(
 																											f.h6,
 																											{
 																												className: `framer-styles-preset-f8hg8j`,
@@ -3681,7 +3681,7 @@ var Pt,
 																		),
 																	}),
 																ue(F) &&
-																	i(L, {
+																	rJsx(L, {
 																		...Nt(
 																			{
 																				MpacA_qwI:
@@ -3693,7 +3693,7 @@ var Pt,
 																			H,
 																		),
 																		children:
-																			i(
+																			rJsx(
 																				S,
 																				{
 																					className: `framer-1dyytny-container`,
@@ -3705,7 +3705,7 @@ var Pt,
 																						!0,
 																					scopeId: `OWqtFDncb`,
 																					children:
-																						i(
+																						rJsx(
 																							Q,
 																							{
 																								a10ufliJT:
@@ -3735,14 +3735,14 @@ var Pt,
 																				},
 																			),
 																	}),
-																i(v, {
+																rJsx(v, {
 																	__fromCanvasComponent:
 																		!0,
-																	children: i(
+																	children: rJsx(
 																		t,
 																		{
 																			children:
-																				i(
+																				rJsx(
 																					f.h6,
 																					{
 																						className: `framer-styles-preset-nkm6se`,
@@ -3775,11 +3775,11 @@ var Pt,
 																			MpacA_qwI:
 																				{
 																					children:
-																						i(
+																						rJsx(
 																							t,
 																							{
 																								children:
-																									i(
+																									rJsx(
 																										f.h6,
 																										{
 																											className: `framer-styles-preset-f8hg8j`,
@@ -3801,9 +3801,9 @@ var Pt,
 															],
 														}),
 														P &&
-															i(L, {
+															rJsx(L, {
 																height: 48,
-																children: i(S, {
+																children: rJsx(S, {
 																	className: `framer-9zgw36-container`,
 																	layoutDependency:
 																		U,
@@ -3812,7 +3812,7 @@ var Pt,
 																	rendersWithMotion:
 																		!0,
 																	scopeId: `OWqtFDncb`,
-																	children: i(
+																	children: rJsx(
 																		Q,
 																		{
 																			a10ufliJT:
@@ -3847,27 +3847,27 @@ var Pt,
 													],
 												}),
 											k &&
-												i(f.div, {
+												rJsx(f.div, {
 													className: `framer-1i1n185`,
 													
 													layoutDependency: U,
 													layoutId: `W6xhhEAhP`,
 												}),
-											i(f.div, {
+											rJsx(f.div, {
 												className: `framer-1s28jwd`,
 												layoutDependency: U,
 												layoutId: `x9qk1avyx`,
-												children: i(L, {
+												children: rJsx(L, {
 													height: 1052,
 													width: `calc(min(${p?.width || `100vw`}, 1600px) - ${te * 2}px)`,
-													children: i(S, {
+													children: rJsx(S, {
 														className: `framer-e0lr2o-container`,
 														layoutDependency: U,
 														layoutId: `lQoRGCESx-container`,
 														nodeId: `lQoRGCESx`,
 														rendersWithMotion: !0,
 														scopeId: `OWqtFDncb`,
-														children: i(vt, {
+														children: rJsx(vt, {
 															bjjrUBwdp: j,
 															DO8XpcJMl: N,
 															height: `100%`,

@@ -1,15 +1,15 @@
 import { t as e } from "./rolldown-runtime.mjs";
 import {
 	F as t,
-	M as n,
+	M as rUseMemo,
 	T as r,
-	c as i,
-	g as a,
-	j as o,
-	k as s,
-	l as c,
-	o as l,
-	y as u,
+	c as rJsx,
+	g as rForwardRef,
+	j as rUseContext,
+	k as rUseRef,
+	l as rJsxs,
+	o as rUseDeferredValue,
+	y as rUseId,
 } from "./react.mjs";
 import { S as d, a as f, r as p, t as m } from "./motion.mjs";
 import {
@@ -34,19 +34,19 @@ var M,
 	F,
 	I,
 	L = e(() => {
-		(l(),
+		(rUseDeferredValue(),
 			x(),
 			r(),
 			(M = `url('data:image/svg+xml,<svg display="block" role="presentation" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg"><g d="M 12 0 L 12 2.673 L 0.861 6.809 L 0.861 7.191 L 12 11.327 L 12 14 L 0 9.418 L 0 4.582 Z" fill="transparent" height="14px" id="JTYRgPDoI" transform="translate(6 6)" width="12px"><path d="M 12 0 L 12 2.673 L 0.861 6.809 L 0.861 7.191 L 12 11.327 L 12 14 L 0 9.418 L 0 4.582 Z" fill="var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255))" height="14px" id="UGfEzvvn2" width="12px"/></g></svg>') alpha no-repeat center / auto var(--framer-icon-mask-mode, add), var(--framer-icon-mask, none)`),
-			(N = a((e, t) => {
+			(N = rForwardRef((e, t) => {
 				let { animated: n, layoutId: r, children: a, ...o } = e;
 				return n
-					? i(d.div, { ...o, layoutId: r, ref: t })
-					: i(`div`, { ...o, ref: t });
+					? rJsx(d.div, { ...o, layoutId: r, ref: t })
+					: rJsx(`div`, { ...o, ref: t });
 			})),
 			(P = ({ height: e, id: t, width: n, ...r }) => ({ ...r })),
 			(F = _(
-				a(function (e, t) {
+				rForwardRef(function (e, t) {
 					let {
 						style: n,
 						className: r,
@@ -54,7 +54,7 @@ var M,
 						variant: o,
 						...s
 					} = P(e);
-					return i(N, {
+					return rJsx(N, {
 						...s,
 						className: v(`framer-UX8Zr`, r),
 						layoutId: a,
@@ -80,7 +80,7 @@ var M,
 	G,
 	K,
 	q = e(() => {
-		(l(),
+		(rUseDeferredValue(),
 			x(),
 			m(),
 			r(),
@@ -90,10 +90,10 @@ var M,
 			(z = { L7j75_085: `framer-v-f48u4i` }),
 			(B = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
 			(V = ({ value: e, children: t }) => {
-				let r = o(f),
+				let r = rUseContext(f),
 					a = e ?? r.transition,
-					s = n(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
-				return i(f.Provider, { value: s, children: t });
+					s = rUseMemo(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
+				return rJsx(f.Provider, { value: s, children: t });
 			}),
 			(H = d.create(t)),
 			(U = ({
@@ -120,10 +120,10 @@ var M,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(G = _(
-				a(function (e, n) {
-					let r = s(null),
+				rForwardRef(function (e, n) {
+					let r = rUseRef(null),
 						a = n ?? r,
-						o = u(),
+						o = rUseId(),
 						{ activeLocale: l, setLocale: f } = D();
 					T();
 					let {
@@ -155,20 +155,20 @@ var M,
 						}),
 						q = W(e, K),
 						J = v(R, j);
-					return i(p, {
+					return rJsx(p, {
 						id: _ ?? o,
-						children: i(H, {
+						children: rJsx(H, {
 							animate: K,
 							initial: !1,
-							children: i(V, {
+							children: rJsx(V, {
 								value: B,
-								children: i(C, {
+								children: rJsx(C, {
 									href: S,
 									motionChild: !0,
 									nodeId: `L7j75_085`,
 									openInNewTab: !1,
 									scopeId: `lJIHQ29dZ`,
-									children: c(d.a, {
+									children: rJsxs(d.a, {
 										...k,
 										...P,
 										className: `${v(J, `framer-f48u4i`, h, M)} framer-1l2ul8j`,
@@ -177,17 +177,17 @@ var M,
 										ref: a,
 										style: { ...m },
 										children: [
-											i(E, {
+											rJsx(E, {
 												animated: !0,
 												className: `framer-1fol01y`,
 												Component: O,
 												layoutDependency: q,
 												layoutId: `kUqZ5nGFM`,
 											}),
-											i(g, {
+											rJsx(g, {
 												__fromCanvasComponent: !0,
-												children: i(t, {
-													children: i(d.h6, {
+												children: rJsx(t, {
+													children: rJsx(d.h6, {
 														className: `framer-styles-preset-8moxfa`,
 														"data-styles-preset": `NqfjhJTm6`,
 														style: {
