@@ -18565,7 +18565,7 @@ var wd,
 				...u
 			}) => ({
 				...u,
-				ax9UfBvMl: i ?? u.ax9UfBvMl ?? `[01]`,
+				ax9UfBvMl: i ?? u.ax9UfBvMl ?? `[01 GGG]`,
 				DAAG0VqYR:
 					a ??
 					u.DAAG0VqYR ??
@@ -18757,13 +18757,13 @@ var wd,
 																className: `framer-styles-preset-nkm6se`,
 																"data-styles-preset": `BaUGQBb6A`,
 																style: {
-																	"--framer-text-color": `var(--extracted-1w1cjl5, var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0)))`,
+																	"--framer-text-color": `#03d83d`,
 																},
 																children: `[01]`,
 															}),
 														}),
 														className: `framer-1y3gofu`,
-														"data-framer-name": `[01]`,
+														// "data-framer-name": `[01]`,
 														fonts: [`Inter`],
 														layoutDependency: I,
 														layoutId: `scpmoryz7`,
@@ -18789,7 +18789,7 @@ var wd,
 																						style: {
 																							"--framer-text-color": `var(--extracted-1w1cjl5, var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0)))`,
 																						},
-																						children: `[01]`,
+																						children: `[01 BBB]`,
 																					},
 																				),
 																		},
@@ -18931,7 +18931,7 @@ var wd,
 																uziNdYDRk: !0,
 																variant: `UnuGN3X_1`,
 																width: `100%`,
-																xuXj4zldx: `var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0))`,
+																xuXj4zldx: `#03d83d`,
 																...Cd(
 																	{
 																		tVhqx8SVi:
@@ -19386,7 +19386,7 @@ var wd,
 				},
 				EvIF7w2AA: { title: `Vertical Link URL`, type: J.Link },
 				ax9UfBvMl: {
-					defaultValue: `[01]`,
+					defaultValue: `[01 HHH]`,
 					displayTextArea: !1,
 					title: `Section Number`,
 					type: J.String,
