@@ -92,3 +92,18 @@ Use this checklist for readability-only passes on compiled modules:
 	- completed: extracted Image Reveal defaults/options into named constants
 	- completed: added minimal JSDoc typedefs for image source/props
 	- completed: diagnostics clean after edit
+- `assets/js/components-site.mjs` (partial section pass: Small Cursors block)
+	- completed: extracted variant/class/default/spring literals into named constants
+	- completed: rewired initializer/defaultProps/control options to constants
+	- completed: added minimal JSDoc typedef for small cursors props
+	- completed: diagnostics clean after edit
+- `assets/js/components-site.mjs` (partial section pass: Award Card block)
+	- completed: extracted variant/class/default/gesture/spring literals into named constants
+	- completed: rewired initializer, fallbacks, defaultProps, and control defaults to constants
+	- completed: added minimal JSDoc typedef for award card props
+	- completed: diagnostics clean after edit
+- `assets/js/components-site.mjs` (partial section pass: Awards Section block)
+	- completed: extracted variant/class/default/spring literals into named constants
+	- completed: rewired initializer, variant fallback/defaultVariant, defaultProps, and control options to constants
+	- completed: added minimal JSDoc typedef for awards section props
+	- completed: diagnostics clean after edit

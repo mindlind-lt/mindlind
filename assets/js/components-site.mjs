@@ -84,6 +84,131 @@ import { n as tt, t as nt } from "./Text_Hover_Random.mjs";
 import { c as rt, l as it, s as at, u as ot } from "./component-contact-form.mjs";
 import { i as st, n as ct, r as lt, t as ut } from "./PPpYTPv46.C_co8ntZ.mjs";
 import { n as dt, r as ft } from "./page-agency.mjs";
+
+/**
+ * Compiled site components bundle.
+ * Readability constants below are scoped to the Small Cursors block.
+ */
+const SMALL_CURSORS_VARIANTS = {
+	ScrollHorizontal: `MSDybJ82G`,
+	ScrollVertical: `oZBUbuNQW`,
+	ArrowUpRight: `C4ti1Zm4o`,
+	ArrowUpRightSmall: `o1tTqkD7S`,
+};
+
+const SMALL_CURSORS_VARIANT_ORDER = [
+	SMALL_CURSORS_VARIANTS.ScrollHorizontal,
+	SMALL_CURSORS_VARIANTS.ScrollVertical,
+	SMALL_CURSORS_VARIANTS.ArrowUpRight,
+	SMALL_CURSORS_VARIANTS.ArrowUpRightSmall,
+];
+
+const SMALL_CURSORS_VARIANT_TITLES = [
+	`Scroll - Horizontal`,
+	`Scroll - Vertical`,
+	`Arrow - Up Right`,
+	`Arrow - Up Right - Small`,
+];
+
+const SMALL_CURSORS_COMPONENT_CLASS = `framer-2pLhZ`;
+const SMALL_CURSORS_VARIANT_CLASSES = {
+	[SMALL_CURSORS_VARIANTS.ArrowUpRight]: `framer-v-qdw09p`,
+	[SMALL_CURSORS_VARIANTS.ScrollHorizontal]: `framer-v-133arvs`,
+	[SMALL_CURSORS_VARIANTS.ArrowUpRightSmall]: `framer-v-1uzsk5e`,
+	[SMALL_CURSORS_VARIANTS.ScrollVertical]: `framer-v-1awf2lm`,
+};
+
+const SMALL_CURSORS_SPRING = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` };
+const SMALL_CURSORS_VARIANT_MAP = {
+	"Arrow - Up Right - Small": SMALL_CURSORS_VARIANTS.ArrowUpRightSmall,
+	"Arrow - Up Right": SMALL_CURSORS_VARIANTS.ArrowUpRight,
+	"Scroll - Horizontal": SMALL_CURSORS_VARIANTS.ScrollHorizontal,
+	"Scroll - Vertical": SMALL_CURSORS_VARIANTS.ScrollVertical,
+};
+const SMALL_CURSORS_DEFAULT_VARIANT = SMALL_CURSORS_VARIANTS.ScrollHorizontal;
+const SMALL_CURSORS_DEFAULT_SIZE = 32;
+
+/** @typedef {{ variant?: string, height?: number, width?: number }} SmallCursorsProps */
+
+const AWARD_CARD_VARIANTS = {
+	Desktop: `LPyBBWhbu`,
+	Tablet: `SGuZ5_fTX`,
+	Phone: `LpJk8lyPd`,
+};
+
+const AWARD_CARD_VARIANT_ORDER = [
+	AWARD_CARD_VARIANTS.Desktop,
+	AWARD_CARD_VARIANTS.Tablet,
+	AWARD_CARD_VARIANTS.Phone,
+];
+
+const AWARD_CARD_VARIANT_TITLES = [`Desktop`, `Tablet`, `Phone`];
+const AWARD_CARD_COMPONENT_CLASS = `framer-MW3mS`;
+const AWARD_CARD_VARIANT_CLASSES = {
+	[AWARD_CARD_VARIANTS.Phone]: `framer-v-1fdmv0e`,
+	[AWARD_CARD_VARIANTS.Desktop]: `framer-v-1j38inb`,
+	[AWARD_CARD_VARIANTS.Tablet]: `framer-v-hqdmqb`,
+};
+
+const AWARD_CARD_SPRING = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` };
+const AWARD_CARD_ENABLED_GESTURES = { [AWARD_CARD_VARIANTS.Desktop]: { hover: !0 } };
+const AWARD_CARD_VARIANT_MAP = {
+	Desktop: AWARD_CARD_VARIANTS.Desktop,
+	Phone: AWARD_CARD_VARIANTS.Phone,
+	Tablet: AWARD_CARD_VARIANTS.Tablet,
+};
+
+const AWARD_CARD_DEFAULTS = {
+	awardType: `Awwwards — Site of the Day`,
+	project: `Lementa`,
+	year: `2025`,
+	variant: AWARD_CARD_VARIANTS.Desktop,
+	height: 155,
+	width: 548,
+};
+
+const AWARD_CARD_STACKED_VARIANTS = [
+	AWARD_CARD_VARIANTS.Tablet,
+	AWARD_CARD_VARIANTS.Phone,
+];
+
+/** @typedef {{ variant?: string, project?: string, year?: string, nameOfAwardType?: string }} AwardCardProps */
+
+const AWARDS_SECTION_VARIANTS = {
+	Desktop: `eBaLFQ_jk`,
+	Tablet: `tHC0JlV00`,
+	Phone: `pFt3J4MZE`,
+};
+
+const AWARDS_SECTION_VARIANT_ORDER = [
+	AWARDS_SECTION_VARIANTS.Desktop,
+	AWARDS_SECTION_VARIANTS.Tablet,
+	AWARDS_SECTION_VARIANTS.Phone,
+];
+
+const AWARDS_SECTION_VARIANT_TITLES = [`Desktop`, `Tablet`, `Phone`];
+const AWARDS_SECTION_COMPONENT_CLASS = `framer-XSS9u`;
+const AWARDS_SECTION_VARIANT_CLASSES = {
+	[AWARDS_SECTION_VARIANTS.Desktop]: `framer-v-11pzxff`,
+	[AWARDS_SECTION_VARIANTS.Phone]: `framer-v-1aifcr1`,
+	[AWARDS_SECTION_VARIANTS.Tablet]: `framer-v-fj87y2`,
+};
+
+const AWARDS_SECTION_SPRING = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` };
+const AWARDS_SECTION_VARIANT_MAP = {
+	Desktop: AWARDS_SECTION_VARIANTS.Desktop,
+	Phone: AWARDS_SECTION_VARIANTS.Phone,
+	Tablet: AWARDS_SECTION_VARIANTS.Tablet,
+};
+
+const AWARDS_SECTION_DEFAULTS = {
+	variant: AWARDS_SECTION_VARIANTS.Desktop,
+	height: 765,
+	width: 1200,
+};
+
+/** @typedef {{ variant?: string, cursor?: string, height?: number, width?: number }} AwardsSectionProps */
+
 function pt(e, ...t) {
 	let n = {};
 	return (t?.forEach((t) => t && Object.assign(n, e[t])), n);
@@ -104,15 +229,10 @@ var mt,
 			L(),
 			w(),
 			l(),
-			(mt = [`MSDybJ82G`, `oZBUbuNQW`, `C4ti1Zm4o`, `o1tTqkD7S`]),
-			(ht = `framer-2pLhZ`),
-			(gt = {
-				C4ti1Zm4o: `framer-v-qdw09p`,
-				MSDybJ82G: `framer-v-133arvs`,
-				o1tTqkD7S: `framer-v-1uzsk5e`,
-				oZBUbuNQW: `framer-v-1awf2lm`,
-			}),
-			(_t = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
+			(mt = SMALL_CURSORS_VARIANT_ORDER),
+			(ht = SMALL_CURSORS_COMPONENT_CLASS),
+			(gt = SMALL_CURSORS_VARIANT_CLASSES),
+			(_t = SMALL_CURSORS_SPRING),
 			(vt = ({ value: e, children: t }) => {
 				let n = rUseContext(S),
 					r = e ?? n.transition,
@@ -120,15 +240,12 @@ var mt,
 				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(yt = x.create(i)),
-			(bt = {
-				"Arrow - Up Right - Small": `o1tTqkD7S`,
-				"Arrow - Up Right": `C4ti1Zm4o`,
-				"Scroll - Horizontal": `MSDybJ82G`,
-				"Scroll - Vertical": `oZBUbuNQW`,
-			}),
-			(xt = ({ height: e, id: t, width: n, ...r }) => ({
+			(bt = SMALL_CURSORS_VARIANT_MAP),
+			(xt =
+				/** @param {SmallCursorsProps} e */
+				({ height: e, id: t, width: n, ...r }) => ({
 				...r,
-				variant: bt[r.variant] ?? r.variant ?? `MSDybJ82G`,
+				variant: bt[r.variant] ?? r.variant ?? SMALL_CURSORS_DEFAULT_VARIANT,
 			})),
 			(St = (e, t) =>
 				e.layoutDependency
@@ -160,7 +277,7 @@ var mt,
 							variants: D,
 						} = P({
 							cycleOrder: mt,
-							defaultVariant: `MSDybJ82G`,
+							defaultVariant: SMALL_CURSORS_DEFAULT_VARIANT,
 							ref: r,
 							variant: u,
 							variantClassNames: gt,
@@ -372,21 +489,14 @@ var mt,
 			)),
 			(wt = Ct),
 			(Ct.displayName = `Small - Cursors`),
-			(Ct.defaultProps = { height: 32, width: 32 }),
+			(Ct.defaultProps = {
+				height: SMALL_CURSORS_DEFAULT_SIZE,
+				width: SMALL_CURSORS_DEFAULT_SIZE,
+			}),
 			T(Ct, {
 				variant: {
-					options: [
-						`MSDybJ82G`,
-						`oZBUbuNQW`,
-						`C4ti1Zm4o`,
-						`o1tTqkD7S`,
-					],
-					optionTitles: [
-						`Scroll - Horizontal`,
-						`Scroll - Vertical`,
-						`Arrow - Up Right`,
-						`Arrow - Up Right - Small`,
-					],
+					options: SMALL_CURSORS_VARIANT_ORDER,
+					optionTitles: SMALL_CURSORS_VARIANT_TITLES,
 					title: `Variant`,
 					type: R.Enum,
 				},
@@ -424,15 +534,11 @@ var Dt,
 			ot(),
 			Tt(),
 			(Dt = A(wt)),
-			(Ot = { LPyBBWhbu: { hover: !0 } }),
-			(kt = [`LPyBBWhbu`, `SGuZ5_fTX`, `LpJk8lyPd`]),
-			(At = `framer-MW3mS`),
-			(jt = {
-				LpJk8lyPd: `framer-v-1fdmv0e`,
-				LPyBBWhbu: `framer-v-1j38inb`,
-				SGuZ5_fTX: `framer-v-hqdmqb`,
-			}),
-			(Mt = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
+			(Ot = AWARD_CARD_ENABLED_GESTURES),
+			(kt = AWARD_CARD_VARIANT_ORDER),
+			(At = AWARD_CARD_COMPONENT_CLASS),
+			(jt = AWARD_CARD_VARIANT_CLASSES),
+			(Mt = AWARD_CARD_SPRING),
 			(Nt = (e, t) =>
 				typeof e == `string` && typeof t == `string`
 					? t + e
@@ -450,12 +556,10 @@ var Dt,
 				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(It = x.create(i)),
-			(Lt = {
-				Desktop: `LPyBBWhbu`,
-				Phone: `LpJk8lyPd`,
-				Tablet: `SGuZ5_fTX`,
-			}),
-			(Rt = ({
+			(Lt = AWARD_CARD_VARIANT_MAP),
+			(Rt =
+				/** @param {AwardCardProps} e */
+				({
 				cursor: e,
 				height: t,
 				id: n,
@@ -469,12 +573,12 @@ var Dt,
 			}) => ({
 				...l,
 				c9ZjsumRN: e ?? l.c9ZjsumRN,
-				n3iCW6bqy: o ?? l.n3iCW6bqy ?? `Lementa`,
+				n3iCW6bqy: o ?? l.n3iCW6bqy ?? AWARD_CARD_DEFAULTS.project,
 				RP4DHh3lz: a ?? l.RP4DHh3lz,
-				STSNrBs1n: i ?? l.STSNrBs1n ?? `Awwwards — Site of the Day`,
+				STSNrBs1n: i ?? l.STSNrBs1n ?? AWARD_CARD_DEFAULTS.awardType,
 				uyQXR_llk: r ?? l.uyQXR_llk,
-				variant: Lt[l.variant] ?? l.variant ?? `LPyBBWhbu`,
-				W22u_5GAO: c ?? l.W22u_5GAO ?? `2025`,
+				variant: Lt[l.variant] ?? l.variant ?? AWARD_CARD_DEFAULTS.variant,
+				W22u_5GAO: c ?? l.W22u_5GAO ?? AWARD_CARD_DEFAULTS.year,
 			})),
 			(zt = (e, t) =>
 				e.layoutDependency
@@ -512,7 +616,7 @@ var Dt,
 							variants: R,
 						} = P({
 							cycleOrder: kt,
-							defaultVariant: `LPyBBWhbu`,
+							defaultVariant: AWARD_CARD_DEFAULTS.variant,
 							enabledGestures: Ot,
 							ref: r,
 							variant: p,
@@ -523,7 +627,7 @@ var Dt,
 						te = Nt(g, ``),
 						B = Pt(b),
 						re = (e) =>
-							[`SGuZ5_fTX`, `LpJk8lyPd`].includes(E) ? e : !1;
+							AWARD_CARD_STACKED_VARIANTS.includes(E) ? e : !1;
 					return rJsx(C, {
 						id: f ?? a,
 						children: rJsx(It, {
@@ -867,28 +971,31 @@ var Dt,
 			)),
 			(Vt = Bt),
 			(Bt.displayName = `Award - Card`),
-			(Bt.defaultProps = { height: 155, width: 548 }),
+			(Bt.defaultProps = {
+				height: AWARD_CARD_DEFAULTS.height,
+				width: AWARD_CARD_DEFAULTS.width,
+			}),
 			T(Bt, {
 				variant: {
-					options: [`LPyBBWhbu`, `SGuZ5_fTX`, `LpJk8lyPd`],
-					optionTitles: [`Desktop`, `Tablet`, `Phone`],
+					options: AWARD_CARD_VARIANT_ORDER,
+					optionTitles: AWARD_CARD_VARIANT_TITLES,
 					title: `Variant`,
 					type: R.Enum,
 				},
 				STSNrBs1n: {
-					defaultValue: `Awwwards — Site of the Day`,
+					defaultValue: AWARD_CARD_DEFAULTS.awardType,
 					displayTextArea: !1,
 					title: `Name of Award / Type`,
 					type: R.String,
 				},
 				W22u_5GAO: {
-					defaultValue: `2025`,
+					defaultValue: AWARD_CARD_DEFAULTS.year,
 					displayTextArea: !1,
 					title: `Year`,
 					type: R.String,
 				},
 				n3iCW6bqy: {
-					defaultValue: `Lementa`,
+					defaultValue: AWARD_CARD_DEFAULTS.project,
 					displayTextArea: !1,
 					title: `Project`,
 					type: R.String,
@@ -999,14 +1106,10 @@ var Wt,
 			je(),
 			Ht(),
 			(Wt = A(Vt)),
-			(Gt = [`eBaLFQ_jk`, `tHC0JlV00`, `pFt3J4MZE`]),
-			(Kt = `framer-XSS9u`),
-			(qt = {
-				eBaLFQ_jk: `framer-v-11pzxff`,
-				pFt3J4MZE: `framer-v-1aifcr1`,
-				tHC0JlV00: `framer-v-fj87y2`,
-			}),
-			(Jt = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
+			(Gt = AWARDS_SECTION_VARIANT_ORDER),
+			(Kt = AWARDS_SECTION_COMPONENT_CLASS),
+			(qt = AWARDS_SECTION_VARIANT_CLASSES),
+			(Jt = AWARDS_SECTION_SPRING),
 			(Yt = (e, t) => `translateY(-50%) ${t}`),
 			(Xt = ({ value: e, children: t }) => {
 				let n = rUseContext(S),
@@ -1015,15 +1118,13 @@ var Wt,
 				return rJsx(S.Provider, { value: i, children: t });
 			}),
 			(Zt = x.create(i)),
-			(Qt = {
-				Desktop: `eBaLFQ_jk`,
-				Phone: `pFt3J4MZE`,
-				Tablet: `tHC0JlV00`,
-			}),
-			($t = ({ cursor: e, height: t, id: n, width: r, ...i }) => ({
+			(Qt = AWARDS_SECTION_VARIANT_MAP),
+			($t =
+				/** @param {AwardsSectionProps} e */
+				({ cursor: e, height: t, id: n, width: r, ...i }) => ({
 				...i,
 				dIsPnTg3K: e ?? i.dIsPnTg3K,
-				variant: Qt[i.variant] ?? i.variant ?? `eBaLFQ_jk`,
+				variant: Qt[i.variant] ?? i.variant ?? AWARDS_SECTION_DEFAULTS.variant,
 			})),
 			(en = (e, t) =>
 				e.layoutDependency
@@ -1056,14 +1157,14 @@ var Wt,
 							variants: A,
 						} = P({
 							cycleOrder: Gt,
-							defaultVariant: `eBaLFQ_jk`,
+							defaultVariant: AWARDS_SECTION_DEFAULTS.variant,
 							ref: r,
 							variant: p,
 							variantClassNames: qt,
 						}),
 						j = en(e, A),
 						F = N(Kt, Ae, Pe),
-						I = () => y !== `pFt3J4MZE`;
+						I = () => y !== AWARDS_SECTION_VARIANTS.Phone;
 					return rJsx(C, {
 						id: f ?? a,
 						children: rJsx(Zt, {
@@ -1957,11 +2058,14 @@ var Wt,
 			)),
 			(nn = tn),
 			(tn.displayName = `Awards - Section`),
-			(tn.defaultProps = { height: 765, width: 1200 }),
+			(tn.defaultProps = {
+				height: AWARDS_SECTION_DEFAULTS.height,
+				width: AWARDS_SECTION_DEFAULTS.width,
+			}),
 			T(tn, {
 				variant: {
-					options: [`eBaLFQ_jk`, `tHC0JlV00`, `pFt3J4MZE`],
-					optionTitles: [`Desktop`, `Tablet`, `Phone`],
+					options: AWARDS_SECTION_VARIANT_ORDER,
+					optionTitles: AWARDS_SECTION_VARIANT_TITLES,
 					title: `Variant`,
 					type: R.Enum,
 				},
