@@ -13856,7 +13856,7 @@ var cu,
 												__perspectiveFX: !1,
 												__smartComponentFX: !0,
 												__targetOpacity: 1,
-												// "data-framer-name": void 0,
+												
 											},
 										},
 										A,
@@ -18771,7 +18771,6 @@ Schnell. Klar. Effektiv.
 															}),
 														}),
 														className: `framer-1y3gofu`,
-														// // "data-framer-name": `[01]`,
 														fonts: [`Inter`],
 														layoutDependency: I,
 														layoutId: `scpmoryz7`,
@@ -19647,7 +19646,7 @@ var Hd,
 									...Vd(
 										{
 											"gS5VzDuOb-hover": {
-												// "data-framer-name": void 0,
+												
 											},
 											De4Ri6k8c: {
 												// "data-framer-name": `Open - Tablet & Phone`,
@@ -21374,7 +21373,7 @@ var Nf,
 										...Mf(
 											{
 												"td0vABXtP-hover": {
-													// "data-framer-name": void 0,
+													
 												},
 												sgY9pM7ej: {
 													// "data-framer-name": `Tablet`,

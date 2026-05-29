@@ -287,7 +287,6 @@ var Bt,
 										...h,
 										...y,
 										className: `${T(ne, `framer-lpzpfr`, u, _)} framer-vpz6iu`,
-										// // "data-framer-name": `Variant 1`,
 										layoutDependency: E,
 										layoutId: `Yy1Q_F10S`,
 										ref: r,
@@ -295,7 +294,6 @@ var Bt,
 										...zt(
 											{
 												"Yy1Q_F10S-hover": {
-													// // "data-framer-name": void 0,
 												},
 											},
 											g,
@@ -538,7 +536,6 @@ var gn,
 										...h,
 										...y,
 										className: `${T(ne, `framer-zqadfu`, u, _)} framer-nyeh8p`,
-										// // "data-framer-name": `Variant 1`,
 										layoutDependency: E,
 										layoutId: `TTIdOjeaA`,
 										ref: r,
@@ -546,7 +543,7 @@ var gn,
 										...hn(
 											{
 												"TTIdOjeaA-hover": {
-													// "data-framer-name": void 0,
+													
 												},
 											},
 											g,

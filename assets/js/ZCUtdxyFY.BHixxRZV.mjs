@@ -222,7 +222,7 @@ var Ce,
 												__perspectiveFX: !1,
 												__smartComponentFX: !0,
 												__targetOpacity: 1,
-												// "data-framer-name": void 0,
+												
 											},
 										},
 										k,
