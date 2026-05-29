@@ -187,6 +187,88 @@ const IMAGE_REVEAL_TRIGGER_OPTIONS = [`hover`, `tap`];
 /** @typedef {{ src?: string, url?: string, default?: { src?: string } }} ImageLikeSource */
 /** @typedef {{ imageA?: ImageLikeSource|string, imageB?: ImageLikeSource|string }} ImageRevealProps */
 
+const PROJECT_CARD_VARIANTS = {
+	Desktop1200: `sERzTRNgP`,
+	Tablet: `eO6Qopa_m`,
+	Phone: `hgNV3iX_3`,
+};
+
+const PROJECT_CARD_VARIANT_ORDER = [
+	PROJECT_CARD_VARIANTS.Desktop1200,
+	PROJECT_CARD_VARIANTS.Tablet,
+	PROJECT_CARD_VARIANTS.Phone,
+];
+
+const PROJECT_CARD_COMPONENT_CLASS = `framer-qhcmX`;
+const PROJECT_CARD_VARIANT_CLASSES = {
+	[PROJECT_CARD_VARIANTS.Tablet]: `framer-v-yb9gfw`,
+	[PROJECT_CARD_VARIANTS.Phone]: `framer-v-26aqdx`,
+	[PROJECT_CARD_VARIANTS.Desktop1200]: `framer-v-1vcyd0t`,
+};
+
+const PROJECT_CARD_SPRING = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` };
+
+const mapProjectCardDirection = (value) => {
+	if (value === `Bottom→Top`) return `btt`;
+	if (value === `Left→Right`) return `rtl`;
+	if (value === `Right→Left`) return `ltr`;
+	if (value === `Top→Bottom`) return `ttb`;
+	return value;
+};
+
+const mapProjectCardVariant = (value) => {
+	if (value === `Desktop - 1200`) return PROJECT_CARD_VARIANTS.Desktop1200;
+	if (value === `Phone`) return PROJECT_CARD_VARIANTS.Phone;
+	if (value === `Tablet`) return PROJECT_CARD_VARIANTS.Tablet;
+	return value;
+};
+
+const PROJECT_CARD_DEFAULTS = {
+	sectionNumber: `[06]`,
+	description: `Brand transformation end to end: positioning → identity → web`,
+	heading: `Before & After`,
+	projectSlug: `GwbipauMe`,
+	imageBig: {
+		pixelHeight: 1670,
+		pixelWidth: 2016,
+		src: `/assets/images/RXynWiEpbvkpuUiRSkSxE6yz4.jpg`,
+	},
+	imageHover: {
+		pixelHeight: 1670,
+		pixelWidth: 2016,
+		src: `/assets/images/GhqKSdFgiwq6ix3LGBGpGbgWwaw.jpg`,
+	},
+	radius: 8,
+	variant: PROJECT_CARD_VARIANTS.Desktop1200,
+	direction: `rtl`,
+};
+
+const PROJECT_CARD_IMAGE_REVEAL_PROPS = {
+	cursorHotspotX: 0,
+	cursorHotspotY: 0,
+	duration: 2200,
+	easing: `ease`,
+	falloff: 3,
+	followMouse: !0,
+	height: `100%`,
+	id: `dVxcuMbWe`,
+	layoutId: `dVxcuMbWe`,
+	objectFit: `cover`,
+	reverseOnLeave: !0,
+	softness: 32,
+	style: { height: `100%`, width: `100%` },
+	trigger: `hover`,
+	width: `100%`,
+};
+
+const PROJECT_CARD_IMAGE_REVEAL_TRIGGER_OVERRIDES = {
+	[PROJECT_CARD_VARIANTS.Tablet]: { trigger: `tap` },
+	[PROJECT_CARD_VARIANTS.Phone]: { trigger: `tap` },
+};
+
+/** @typedef {{ src?: string, pixelHeight?: number, pixelWidth?: number }} ProjectCardImage */
+/** @typedef {{ variant?: string, directionHover?: string, sectionNumber?: string, headingOfSection?: string }} ProjectCardProps */
+
 function qn(e) {
 	if (!e) return ``;
 	if (typeof e == `string`) return e;
@@ -530,14 +612,10 @@ var er,
 			(er = B(Yn)),
 			(tr = B(Ke)),
 			(nr = ee(Yn)),
-			(rr = [`sERzTRNgP`, `eO6Qopa_m`, `hgNV3iX_3`]),
-			(ir = `framer-qhcmX`),
-			(ar = {
-				eO6Qopa_m: `framer-v-yb9gfw`,
-				hgNV3iX_3: `framer-v-26aqdx`,
-				sERzTRNgP: `framer-v-1vcyd0t`,
-			}),
-			(or = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
+			(rr = PROJECT_CARD_VARIANT_ORDER),
+			(ir = PROJECT_CARD_COMPONENT_CLASS),
+			(ar = PROJECT_CARD_VARIANT_CLASSES),
+			(or = PROJECT_CARD_SPRING),
 			(sr = (e, t) => `translateY(-50%) ${t}`),
 			(cr = (e) =>
 				typeof e == `object` && e && typeof e.src == `string`
@@ -554,17 +632,8 @@ var er,
 				return rJsx(A.Provider, { value: i, children: t });
 			}),
 			(fr = k.create(i)),
-			(pr = {
-				"Bottom→Top": `btt`,
-				"Left→Right": `rtl`,
-				"Right→Left": `ltr`,
-				"Top→Bottom": `ttb`,
-			}),
-			(mr = {
-				"Desktop - 1200": `sERzTRNgP`,
-				Phone: `hgNV3iX_3`,
-				Tablet: `eO6Qopa_m`,
-			}),
+			(pr = mapProjectCardDirection),
+			(mr = mapProjectCardVariant),
 			(hr = ({
 				cursor: e,
 				directionHover: t,
@@ -581,29 +650,22 @@ var er,
 				...f
 			}) => ({
 				...f,
-				DGmW4oqjG: c ?? f.DGmW4oqjG ?? `[06]`,
+				DGmW4oqjG: c ?? f.DGmW4oqjG ?? PROJECT_CARD_DEFAULTS.sectionNumber,
 				f9CT4tTM8:
 					u ??
 					f.f9CT4tTM8 ??
-					`Brand transformation end to end: positioning → identity → web`,
+					PROJECT_CARD_DEFAULTS.description,
 				KMJpy91_d: a ??
-					f.KMJpy91_d ?? {
-						pixelHeight: 1670,
-						pixelWidth: 2016,
-						src: `/assets/images/RXynWiEpbvkpuUiRSkSxE6yz4.jpg`,
-					},
-				koa73A7YO: l ?? f.koa73A7YO ?? `GwbipauMe`,
-				QCmtIhV_V: n ?? f.QCmtIhV_V ?? `Before & After`,
+					f.KMJpy91_d ?? PROJECT_CARD_DEFAULTS.imageBig,
+				koa73A7YO: l ?? f.koa73A7YO ?? PROJECT_CARD_DEFAULTS.projectSlug,
+				QCmtIhV_V: n ?? f.QCmtIhV_V ?? PROJECT_CARD_DEFAULTS.heading,
 				rRGxmCCi3: e ?? f.rRGxmCCi3,
 				tku_ZUakr: o ??
-					f.tku_ZUakr ?? {
-						pixelHeight: 1670,
-						pixelWidth: 2016,
-						src: `/assets/images/GhqKSdFgiwq6ix3LGBGpGbgWwaw.jpg`,
-					},
-				variant: mr[f.variant] ?? f.variant ?? `sERzTRNgP`,
-				WiMqvlQNF: pr[t] ?? t ?? f.WiMqvlQNF ?? `rtl`,
-				WS1SWhlH_: s ?? f.WS1SWhlH_ ?? 8,
+					f.tku_ZUakr ?? PROJECT_CARD_DEFAULTS.imageHover,
+				variant: mr(f.variant) ?? f.variant ?? PROJECT_CARD_DEFAULTS.variant,
+				WiMqvlQNF:
+					pr(t) ?? t ?? f.WiMqvlQNF ?? PROJECT_CARD_DEFAULTS.direction,
+				WS1SWhlH_: s ?? f.WS1SWhlH_ ?? PROJECT_CARD_DEFAULTS.radius,
 			})),
 			(gr = (e, t) =>
 				e.layoutDependency
@@ -655,7 +717,7 @@ var er,
 							variants: se,
 						} = W({
 							cycleOrder: rr,
-							defaultVariant: `sERzTRNgP`,
+							defaultVariant: PROJECT_CARD_VARIANTS.Desktop1200,
 							ref: r,
 							variant: f,
 							variantClassNames: ar,
@@ -1118,47 +1180,19 @@ var er,
 																																														rJsx(
 																																															Yn,
 																																															{
+																																																...PROJECT_CARD_IMAGE_REVEAL_PROPS,
 																																																borderRadius:
 																																																	T,
-																																																cursorHotspotX: 0,
-																																																cursorHotspotY: 0,
 																																																direction:
 																																																	w,
-																																																duration: 2200,
-																																																easing: `ease`,
-																																																falloff: 3,
-																																																followMouse:
-																																																	!0,
-																																																height: `100%`,
-																																																id: `dVxcuMbWe`,
 																																																imageA: cr(
 																																																	x,
 																																																),
 																																																imageB: cr(
 																																																	C,
 																																																),
-																																																layoutId: `dVxcuMbWe`,
-																																																objectFit: `cover`,
-																																																reverseOnLeave:
-																																																	!0,
-																																																softness: 32,
-																																																style: {
-																																																	height: `100%`,
-																																																	width: `100%`,
-																																																},
-																																																trigger: `hover`,
-																																																width: `100%`,
 																																																...$n(
-																																																	{
-																																																		eO6Qopa_m:
-																																																			{
-																																																				trigger: `tap`,
-																																																			},
-																																																		hgNV3iX_3:
-																																																			{
-																																																				trigger: `tap`,
-																																																			},
-																																																	},
+																																																	PROJECT_CARD_IMAGE_REVEAL_TRIGGER_OVERRIDES,
 																																																	V,
 																																																	K,
 																																																),
