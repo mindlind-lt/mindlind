@@ -11,29 +11,89 @@ import {
 	z as l,
 } from "./react.mjs";
 import { A as u, X as d, a as f, w as p } from "./framer.mjs";
+
+/**
+ * TwistGallery renders a worker-driven OffscreenCanvas 3D image ribbon.
+ * This module keeps runtime behavior intact and only improves readability.
+ */
+const TWIST_GALLERY_DEFAULTS = {
+	minCount: 8,
+	fallbackImageCount: 16,
+	scrollSpeed: 0.8,
+	spinDeg: 24,
+	phaseStepDeg: 10,
+	spacing: 56,
+	cardW: 180,
+	cardH: 220,
+	radius: 18,
+	curveAmp: 120,
+	angleDeg: -12,
+	tiltYdeg: 8,
+	camYawDeg: 12,
+	camPitchDeg: -6,
+	camRollDeg: 0,
+	camDist: 900,
+	camFovDeg: 32,
+	camTargetX: 0,
+	camTargetY: 0,
+	camTargetZ: 0,
+	stopMotionInEditor: !1,
+};
+
+/** @typedef {{ src: string }} TwistGalleryImageAsset */
+/** @typedef {string | TwistGalleryImageAsset} TwistGalleryImage */
+/**
+ * @typedef {object} TwistGalleryProps
+ * @property {TwistGalleryImage[]=} images
+ * @property {number=} count
+ * @property {number=} scrollSpeed
+ * @property {number=} spinDeg
+ * @property {number=} phaseStepDeg
+ * @property {number=} spacing
+ * @property {number=} cardW
+ * @property {number=} cardH
+ * @property {number=} radius
+ * @property {number=} curveAmp
+ * @property {number=} angleDeg
+ * @property {number=} tiltYdeg
+ * @property {number=} camYawDeg
+ * @property {number=} camPitchDeg
+ * @property {number=} camRollDeg
+ * @property {number=} camDist
+ * @property {number=} camFovDeg
+ * @property {number=} camTargetX
+ * @property {number=} camTargetY
+ * @property {number=} camTargetZ
+ * @property {boolean=} stopMotionInEditor
+ */
+
+/** @param {TwistGalleryProps} e */
 function m(e) {
 	let {
 			images: r = [],
-			count: c = Math.max(8, r.length || 16),
-			scrollSpeed: l = 0.8,
-			spinDeg: u = 24,
-			phaseStepDeg: d = 10,
-			spacing: f = 56,
-			cardW: m = 180,
-			cardH: g = 220,
-			radius: _ = 18,
-			curveAmp: v = 120,
-			angleDeg: y = -12,
-			tiltYdeg: b = 8,
-			camYawDeg: x = 12,
-			camPitchDeg: S = -6,
-			camRollDeg: C = 0,
-			camDist: w = 900,
-			camFovDeg: T = 32,
-			camTargetX: E = 0,
-			camTargetY: D = 0,
-			camTargetZ: O = 0,
-			stopMotionInEditor: k = !1,
+			count: c = Math.max(
+				TWIST_GALLERY_DEFAULTS.minCount,
+				r.length || TWIST_GALLERY_DEFAULTS.fallbackImageCount
+			),
+			scrollSpeed: l = TWIST_GALLERY_DEFAULTS.scrollSpeed,
+			spinDeg: u = TWIST_GALLERY_DEFAULTS.spinDeg,
+			phaseStepDeg: d = TWIST_GALLERY_DEFAULTS.phaseStepDeg,
+			spacing: f = TWIST_GALLERY_DEFAULTS.spacing,
+			cardW: m = TWIST_GALLERY_DEFAULTS.cardW,
+			cardH: g = TWIST_GALLERY_DEFAULTS.cardH,
+			radius: _ = TWIST_GALLERY_DEFAULTS.radius,
+			curveAmp: v = TWIST_GALLERY_DEFAULTS.curveAmp,
+			angleDeg: y = TWIST_GALLERY_DEFAULTS.angleDeg,
+			tiltYdeg: b = TWIST_GALLERY_DEFAULTS.tiltYdeg,
+			camYawDeg: x = TWIST_GALLERY_DEFAULTS.camYawDeg,
+			camPitchDeg: S = TWIST_GALLERY_DEFAULTS.camPitchDeg,
+			camRollDeg: C = TWIST_GALLERY_DEFAULTS.camRollDeg,
+			camDist: w = TWIST_GALLERY_DEFAULTS.camDist,
+			camFovDeg: T = TWIST_GALLERY_DEFAULTS.camFovDeg,
+			camTargetX: E = TWIST_GALLERY_DEFAULTS.camTargetX,
+			camTargetY: D = TWIST_GALLERY_DEFAULTS.camTargetY,
+			camTargetZ: O = TWIST_GALLERY_DEFAULTS.camTargetZ,
+			stopMotionInEditor: k = TWIST_GALLERY_DEFAULTS.stopMotionInEditor,
 		} = e,
 		A = rUseRef(null),
 		j = rUseRef(null),

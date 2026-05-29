@@ -24,6 +24,51 @@ import {
 	lt as C,
 	vt as w,
 } from "./framer.mjs";
+
+/**
+ * Small Photo component variants and defaults.
+ * Constants are extracted only for readability; runtime behavior is unchanged.
+ */
+const SMALL_PHOTO_VARIANTS = {
+	Small: `It_U6dSzO`,
+	Medium: `pI7Yj7FYQ`,
+	Big: `GRhQUdS7Z`,
+};
+
+const SMALL_PHOTO_VARIANT_ORDER = [
+	SMALL_PHOTO_VARIANTS.Small,
+	SMALL_PHOTO_VARIANTS.Medium,
+	SMALL_PHOTO_VARIANTS.Big,
+];
+
+const SMALL_PHOTO_COMPONENT_CLASS = `framer-WiMpr`;
+const SMALL_PHOTO_VARIANT_CLASSES = {
+	[SMALL_PHOTO_VARIANTS.Big]: `framer-v-23fi3s`,
+	[SMALL_PHOTO_VARIANTS.Small]: `framer-v-18dzq2`,
+	[SMALL_PHOTO_VARIANTS.Medium]: `framer-v-8n0bxv`,
+};
+
+const SMALL_PHOTO_SPRING = {
+	bounce: 0.2,
+	delay: 0,
+	duration: 0.4,
+	type: `spring`,
+};
+
+const SMALL_PHOTO_DEFAULT_SIZE = 40;
+
+/** @typedef {{ src: string }} SmallPhotoImageAsset */
+/** @typedef {string | SmallPhotoImageAsset | undefined} SmallPhotoImage */
+
+/**
+ * @typedef {object} SmallPhotoProps
+ * @property {number=} height
+ * @property {string=} id
+ * @property {SmallPhotoImage=} photo
+ * @property {number=} width
+ * @property {string=} variant
+ */
+
 function T(e, ...t) {
 	let n = {};
 	return (t?.forEach((t) => t && Object.assign(n, e[t])), n);
@@ -45,14 +90,10 @@ var E,
 			y(),
 			p(),
 			r(),
-			(E = [`It_U6dSzO`, `pI7Yj7FYQ`, `GRhQUdS7Z`]),
-			(D = `framer-WiMpr`),
-			(O = {
-				GRhQUdS7Z: `framer-v-23fi3s`,
-				It_U6dSzO: `framer-v-18dzq2`,
-				pI7Yj7FYQ: `framer-v-8n0bxv`,
-			}),
-			(k = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
+			(E = SMALL_PHOTO_VARIANT_ORDER),
+			(D = SMALL_PHOTO_COMPONENT_CLASS),
+			(O = SMALL_PHOTO_VARIANT_CLASSES),
+			(k = SMALL_PHOTO_SPRING),
 			(A = (e) =>
 				typeof e == `object` && e && typeof e.src == `string`
 					? e
@@ -66,11 +107,13 @@ var E,
 				return rJsx(d.Provider, { value: s, children: t });
 			}),
 			(M = u.create(t)),
-			(N = { Big: `GRhQUdS7Z`, Medium: `pI7Yj7FYQ`, Small: `It_U6dSzO` }),
-			(P = ({ height: e, id: t, photo: n, width: r, ...i }) => ({
+			(N = SMALL_PHOTO_VARIANTS),
+			(P =
+				/** @param {SmallPhotoProps} e */
+				({ height: e, id: t, photo: n, width: r, ...i }) => ({
 				...i,
 				hcJOIuTE0: n ?? i.hcJOIuTE0,
-				variant: N[i.variant] ?? i.variant ?? `It_U6dSzO`,
+				variant: N[i.variant] ?? i.variant ?? SMALL_PHOTO_VARIANTS.Small,
 			})),
 			(F = (e, t) =>
 				e.layoutDependency
@@ -103,7 +146,7 @@ var E,
 							variants: U,
 						} = _({
 							cycleOrder: E,
-							defaultVariant: `It_U6dSzO`,
+							defaultVariant: SMALL_PHOTO_VARIANTS.Small,
 							ref: r,
 							variant: y,
 							variantClassNames: O,
@@ -240,10 +283,13 @@ var E,
 			)),
 			(L = I),
 			(I.displayName = `Small Photo`),
-			(I.defaultProps = { height: 40, width: 40 }),
+			(I.defaultProps = {
+				height: SMALL_PHOTO_DEFAULT_SIZE,
+				width: SMALL_PHOTO_DEFAULT_SIZE,
+			}),
 			m(I, {
 				variant: {
-					options: [`It_U6dSzO`, `pI7Yj7FYQ`, `GRhQUdS7Z`],
+					options: SMALL_PHOTO_VARIANT_ORDER,
 					optionTitles: [`Small`, `Medium`, `Big`],
 					title: `Variant`,
 					type: b.Enum,
