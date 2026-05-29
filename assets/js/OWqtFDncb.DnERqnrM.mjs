@@ -1279,7 +1279,7 @@ var Ze,
 																																													},
 																																												),
 																																											className: `framer-39vir8`,
-																																											// "data-framer-name": `Title`,
+																																											
 																																											fonts: [
 																																												`Inter`,
 																																											],
@@ -2360,7 +2360,7 @@ var Ze,
 																																													},
 																																												),
 																																											className: `framer-blvxw9`,
-																																											// "data-framer-name": `Title`,
+																																											
 																																											fonts: [
 																																												`Inter`,
 																																											],
@@ -2830,7 +2830,7 @@ var Ze,
 																x &&
 																	i(f.div, {
 																		className: `framer-2ck25m`,
-																		// "data-framer-name": `Spacer`,
+																		
 																		layoutDependency:
 																			W,
 																		layoutId: `CNynIs6uR`,
@@ -3616,7 +3616,7 @@ var Pt,
 									),
 									children: c(f.div, {
 										className: `framer-1vky8zs`,
-										// "data-framer-name": `Container`,
+										
 										layoutDependency: U,
 										layoutId: `vvGCIIPhr`,
 										style: { "--1po8p6w": Vt(te) },
@@ -3872,7 +3872,7 @@ var Pt,
 											k &&
 												i(f.div, {
 													className: `framer-1i1n185`,
-													// "data-framer-name": `Spacer`,
+													
 													layoutDependency: U,
 													layoutId: `W6xhhEAhP`,
 												}),

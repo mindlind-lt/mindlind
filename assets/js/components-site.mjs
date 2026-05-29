@@ -638,7 +638,7 @@ var Dt,
 											}),
 											h(x.div, {
 												className: `framer-6iw1x0`,
-												// "data-framer-name": `Name`,
+												
 												layoutDependency: z,
 												layoutId: `ktee5DkBi`,
 												children: [
@@ -656,7 +656,7 @@ var Dt,
 															}),
 														}),
 														className: `framer-1buru8e`,
-														// "data-framer-name": `Name`,
+														
 														fonts: [`Inter`],
 														layoutDependency: z,
 														layoutId: `kOU5PucKw`,
@@ -1105,7 +1105,7 @@ var Wt,
 									),
 									children: h(x.div, {
 										className: `framer-t6uue4`,
-										// "data-framer-name": `Container`,
+										
 										layoutDependency: j,
 										layoutId: `FXknksiQa`,
 										children: [
@@ -1220,7 +1220,7 @@ var Wt,
 											}),
 											d(x.div, {
 												className: `framer-136kycy`,
-												// "data-framer-name": `Spacer`,
+												
 												layoutDependency: j,
 												layoutId: `lx8vChGBB`,
 											}),
@@ -3035,7 +3035,7 @@ vision`,
 									children: h(x.div, {
 										className: `framer-7zzj4l`,
 										"data-framer-cursor": g,
-										// "data-framer-name": `Container`,
+										
 										"data-highlight": !0,
 										layoutDependency: L,
 										layoutId: `c4fr5YYMV`,
@@ -35437,20 +35437,20 @@ Mondragon Agency`,
 										}),
 										h(x.div, {
 											className: `framer-1ev506i`,
-											// "data-framer-name": `Container`,
+											
 											layoutDependency: I,
 											layoutId: `h_gvExkNU`,
 											children: [
 												d(x.div, {
 													className: `framer-10q3sr4`,
-													// "data-framer-name": `Spacer`,
+													
 													layoutDependency: I,
 													layoutId: `M6JBatw5i`,
 												}),
 												R() &&
 													d(x.div, {
 														className: `framer-5um84f`,
-														// "data-framer-name": `Spacer`,
+														
 														layoutDependency: I,
 														layoutId: `h_5lfuVL3`,
 													}),
@@ -35986,7 +35986,7 @@ Mondragon Agency`,
 												}),
 												d(x.div, {
 													className: `framer-2qgoyb`,
-													// "data-framer-name": `Spacer`,
+													
 													layoutDependency: I,
 													layoutId: `KIUpb6NEA`,
 												}),
@@ -37050,7 +37050,7 @@ var v_,
 									),
 									children: h(x.div, {
 										className: `framer-7vg0xd`,
-										// "data-framer-name": `Container`,
+										
 										layoutDependency: j,
 										layoutId: `EoCrSja8J`,
 										children: [
@@ -78818,7 +78818,7 @@ var gL,
 									),
 									children: h(x.div, {
 										className: `framer-eotnsd`,
-										// "data-framer-name": `Container`,
+										
 										layoutDependency: ne,
 										layoutId: `DrXCGppJq`,
 										children: [

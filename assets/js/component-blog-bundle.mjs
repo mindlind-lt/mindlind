@@ -2311,11 +2311,11 @@ e(() => {
 											layout: ke,
 											children: u(`div`, {
 												className: `framer-1dsol52`,
-												// "data-framer-name": `Container`,
+												
 												children: [
 													a(`div`, {
 														className: `framer-13voud4`,
-														// "data-framer-name": `Spacer`,
+														
 													}),
 													a(I, {
 														breakpoint: R,
@@ -2579,7 +2579,7 @@ e(() => {
 																					},
 																				),
 																			className: `framer-mg9868`,
-																			// "data-framer-name": `Title`,
+																			
 																			fonts: [
 																				`Inter`,
 																			],
@@ -2634,7 +2634,7 @@ e(() => {
 													}),
 													a(`div`, {
 														className: `framer-ilxppo`,
-														// "data-framer-name": `Spacer`,
+														
 													}),
 													a(`div`, {
 														className: `framer-fejqmp`,
@@ -2664,7 +2664,7 @@ e(() => {
 													}),
 													a(`div`, {
 														className: `framer-qhwvnb`,
-														// "data-framer-name": `Spacer`,
+														
 													}),
 													a(`div`, {
 														className: `framer-60fp0y`,
@@ -2780,7 +2780,7 @@ e(() => {
 														children: [
 															a(`div`, {
 																className: `framer-1duemje`,
-																// "data-framer-name": `Spacer`,
+																
 															}),
 															u(`div`, {
 																className: `framer-1l85j7x`,
@@ -2895,7 +2895,7 @@ e(() => {
 																					`div`,
 																					{
 																						className: `framer-mxqmc5`,
-																						// "data-framer-name": `Spacer`,
+																						
 																					},
 																				),
 																				a(
@@ -3010,7 +3010,7 @@ e(() => {
 															}),
 															a(`div`, {
 																className: `framer-twwqpn`,
-																// "data-framer-name": `Spacer`,
+																
 															}),
 															u(`div`, {
 																className: `framer-zepmgc`,
@@ -3020,7 +3020,7 @@ e(() => {
 																			`div`,
 																			{
 																				className: `framer-13lqs0q hidden-11n9y1n`,
-																				// "data-framer-name": `Spacer`,
+																				
 																			},
 																		),
 																	u(`div`, {
@@ -3275,7 +3275,7 @@ e(() => {
 																					`div`,
 																					{
 																						className: `framer-1i304bx`,
-																						// "data-framer-name": `Spacer`,
+																						
 																					},
 																				),
 																				u(
@@ -3526,7 +3526,7 @@ e(() => {
 																	}),
 																	a(`div`, {
 																		className: `framer-1ootmnk`,
-																		// "data-framer-name": `Spacer`,
+																		
 																	}),
 																],
 															}),

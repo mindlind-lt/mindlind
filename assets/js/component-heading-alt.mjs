@@ -156,13 +156,13 @@ var F,
 									children: [
 										c(d.div, {
 											className: `framer-12j6zf1`,
-											// "data-framer-name": `Container`,
+											
 											layoutDependency: A,
 											layoutId: `hrI1_Z_NW`,
 											children: [
 												i(d.div, {
 													className: `framer-1dq7hqo`,
-													// "data-framer-name": `Spacer`,
+													
 													layoutDependency: A,
 													layoutId: `jQv3L8FgC`,
 												}),
@@ -315,7 +315,7 @@ var F,
 														}),
 														i(d.div, {
 															className: `framer-301cph`,
-															// "data-framer-name": `Spacer`,
+															
 															layoutDependency: A,
 															layoutId: `v7_AF0y37`,
 														}),

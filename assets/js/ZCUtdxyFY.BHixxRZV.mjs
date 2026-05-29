@@ -294,7 +294,7 @@ var Ce,
 											}),
 											l(f.div, {
 												className: `framer-1ccrhgi`,
-												// "data-framer-name": `Name`,
+												
 												layoutDependency: I,
 												layoutId: `UuYknjNBK`,
 												style: {
@@ -768,7 +768,7 @@ var Ie,
 										}),
 									}),
 									className: `framer-1wbd5yc`,
-									// "data-framer-name": `Title`,
+									
 									fonts: [`Inter`],
 									layoutDependency: k,
 									layoutId: `oX9BN6kiO`,
@@ -1685,7 +1685,7 @@ var We,
 									),
 									children: l(f.div, {
 										className: `framer-m0f260`,
-										// "data-framer-name": `Container`,
+										
 										layoutDependency: R,
 										layoutId: `TEyHSanci`,
 										style: { "--stg8u9": Y(E) },
@@ -1698,7 +1698,7 @@ var We,
 													layoutId: `kuYF4TKNh`,
 													children: a(f.div, {
 														className: `framer-2ysavs`,
-														// "data-framer-name": `Container`,
+														
 														layoutDependency: R,
 														layoutId: `whfOXWobF`,
 														style: {
@@ -1961,7 +1961,7 @@ var We,
 																			f.div,
 																			{
 																				className: `framer-lp3l4d`,
-																				// "data-framer-name": `Spacer`,
+																				
 																				layoutDependency:
 																					R,
 																				layoutId: `I_r_nsOac`,
@@ -2179,7 +2179,7 @@ var We,
 																			f.div,
 																			{
 																				className: `framer-bs1tvw`,
-																				// "data-framer-name": `Spacer`,
+																				
 																				layoutDependency:
 																					R,
 																				layoutId: `QcV3UZRKJ`,

@@ -1076,7 +1076,7 @@ var Fe,
 														}),
 														s(h.div, {
 															className: `framer-18qh9d1`,
-															// "data-framer-name": `Spacer`,
+															
 															layoutDependency: G,
 															layoutId: `P95EtcLj1`,
 														}),
@@ -1149,7 +1149,7 @@ var Fe,
 														}),
 														s(h.div, {
 															className: `framer-13x3qa0`,
-															// "data-framer-name": `Spacer`,
+															
 															layoutDependency: G,
 															layoutId: `f6WryI9Hr`,
 														}),
@@ -1387,7 +1387,7 @@ var Fe,
 																),
 															}),
 															className: `framer-1odrz3y`,
-															// "data-framer-name": `Name`,
+															
 															fonts: [`Inter`],
 															layoutDependency: G,
 															layoutId: `xm4mIfC1o`,
