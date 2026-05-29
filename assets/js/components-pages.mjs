@@ -8529,7 +8529,9 @@ var Io,
 				CbPs4xTeB:
 					r ??
 					l.CbPs4xTeB ??
-					`We’re a senior creative digital agency focused on clarity and performance. We align strategy, brand, and web into modular systems that ship on time and scale. Our values are simplicity, accountability and measurable impact. The team is small and senior; every project has a lead for strategy, design and build.`,
+					`Wir sind eine kreative Digitalagentur mit Fokus auf Klarheit, Performance und Wachstum. Wir verbinden Strategie, Branding und Webentwicklung zu modernen Systemen, die skalieren und nachhaltig funktionieren. Unser Ansatz ist einfach: weniger Komplexität, mehr Wirkung. Jedes Projekt wird mit Präzision gestaltet — von der ersten Idee bis zum finalen Produkt.
+Schnell. Klar. Effektiv.
+`,
 				FCTykdhGu: s ?? l.FCTykdhGu ?? `Web Design`,
 				NKbehdgZd: t ?? l.NKbehdgZd,
 				variant: Xo[l.variant] ?? l.variant ?? `ipJnjQMme`,
@@ -9396,7 +9398,9 @@ var Io,
 																						style: {
 																							"--framer-text-color": `var(--extracted-r6o4lv, var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255)))`,
 																						},
-																						children: `We’re a senior creative digital agency focused on clarity and performance. We align strategy, brand, and web into modular systems that ship on time and scale. Our values are simplicity, accountability and measurable impact. The team is small and senior; every project has a lead for strategy, design and build.`,
+																						children: `Wir sind eine kreative Digitalagentur mit Fokus auf Klarheit, Performance und Wachstum.  Wir verbinden Strategie, Branding und Webentwicklung zu modernen Systemen, die skalieren und nachhaltig funktionieren. Unser Ansatz ist einfach: weniger Komplexität, mehr Wirkung. Jedes Projekt wird mit Präzision gestaltet — von der ersten Idee bis zum finalen Produkt.
+Schnell. Klar. Effektiv.
+`,
 																					},
 																				),
 																		},
@@ -9805,7 +9809,9 @@ var Io,
 					type: J.String,
 				},
 				CbPs4xTeB: {
-					defaultValue: `We’re a senior creative digital agency focused on clarity and performance. We align strategy, brand, and web into modular systems that ship on time and scale. Our values are simplicity, accountability and measurable impact. The team is small and senior; every project has a lead for strategy, design and build.`,
+					defaultValue: `Wir sind eine kreative Digitalagentur mit Fokus auf Klarheit, Performance und Wachstum. Wir verbinden Strategie, Branding und Webentwicklung zu modernen Systemen, die skalieren und nachhaltig funktionieren. Unser Ansatz ist einfach: weniger Komplexität, mehr Wirkung. Jedes Projekt wird mit Präzision gestaltet — von der ersten Idee bis zum finalen Produkt.
+Schnell. Klar. Effektiv.
+`,
 					displayTextArea: !0,
 					title: `Full Description`,
 					type: J.String,
@@ -18569,7 +18575,9 @@ var wd,
 				DAAG0VqYR:
 					a ??
 					u.DAAG0VqYR ??
-					`         We’re a senior creative digital agency focused on clarity and performance. We align strategy, brand, and web into modular systems that ship on time and scale. Our values are simplicity, accountability and measurable impact. The team is small and senior; every project has a lead for strategy, design and build. `,
+					`         Wir sind eine kreative Digitalagentur mit Fokus auf Klarheit, Performance und Wachstum. Wir verbinden Strategie, Branding und Webentwicklung zu modernen Systemen, die skalieren und nachhaltig funktionieren. Unser Ansatz ist einfach: weniger Komplexität, mehr Wirkung. Jedes Projekt wird mit Präzision gestaltet — von der ersten Idee bis zum finalen Produkt.
+Schnell. Klar. Effektiv.
+ `,
 				dGuW_vCBk: e ?? u.dGuW_vCBk ?? `Our Stack`,
 				EvIF7w2AA: s ?? u.EvIF7w2AA,
 				H5WebbGbQ: o ?? u.H5WebbGbQ ?? `[MORE ABOUT]`,
@@ -18584,7 +18592,7 @@ var wd,
 				rJHb064PE:
 					c ??
 					u.rJHb064PE ??
-					`       From strategy to launch we deliver fast, accessible sites and clear brands with Growth-driven results`,
+					`       Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen`,
 				variant: Fd[u.variant] ?? u.variant ?? `yDsUBoQFy`,
 			})),
 			(Ld = (e, t) =>
@@ -18681,7 +18689,7 @@ var wd,
 																style: {
 																	"--framer-text-color": `var(--extracted-gdpscs, var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0)))`,
 																},
-																children: `       From strategy to launch we deliver fast, accessible sites and clear brands with Growth-driven results`,
+																children: `       Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen`,
 															}),
 														}),
 														className: `framer-13q9l6d`,
@@ -18719,7 +18727,7 @@ var wd,
 																						style: {
 																							"--framer-text-color": `var(--extracted-1eung3n, var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0)))`,
 																						},
-																						children: `       From strategy to launch we deliver fast, accessible sites and clear brands with Growth-driven results`,
+																						children: `       Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen`,
 																					},
 																				),
 																		},
@@ -18738,7 +18746,7 @@ var wd,
 																						style: {
 																							"--framer-text-color": `var(--extracted-1w1cjl5, var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0)))`,
 																						},
-																						children: `       From strategy to launch we deliver fast, accessible sites and clear brands with Growth-driven results`,
+																						children: `       Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen`,
 																					},
 																				),
 																		},
@@ -19361,13 +19369,15 @@ var wd,
 					type: J.Enum,
 				},
 				rJHb064PE: {
-					defaultValue: `       From strategy to launch we deliver fast, accessible sites and clear brands with Growth-driven results`,
+					defaultValue: `       Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen`,
 					displayTextArea: !0,
 					title: `Welcome Text`,
 					type: J.String,
 				},
 				DAAG0VqYR: {
-					defaultValue: `         We’re a senior creative digital agency focused on clarity and performance. We align strategy, brand, and web into modular systems that ship on time and scale. Our values are simplicity, accountability and measurable impact. The team is small and senior; every project has a lead for strategy, design and build. `,
+					defaultValue: `         Wir sind eine kreative Digitalagentur mit Fokus auf Klarheit, Performance und Wachstum. Wir verbinden Strategie, Branding und Webentwicklung zu modernen Systemen, die skalieren und nachhaltig funktionieren. Unser Ansatz ist einfach: weniger Komplexität, mehr Wirkung. Jedes Projekt wird mit Präzision gestaltet — von der ersten Idee bis zum finalen Produkt.
+Schnell. Klar. Effektiv.
+ `,
 					displayTextArea: !0,
 					title: `Short About`,
 					type: J.String,
@@ -24311,14 +24321,15 @@ e(() => {
 															},
 															children: p(zd, {
 																ax9UfBvMl: `[01]`,
-																DAAG0VqYR: `         We’re a senior creative digital agency focused on clarity and performance. We align strategy, brand, and web into modular systems that ship on time and scale. Our values are simplicity, accountability and measurable impact. The team is small and senior; every project has a lead for strategy, design and build. We partner long-term, iterating with data to keep products fast. `,
+																DAAG0VqYR: `         Wir sind eine kreative Digitalagentur mit Fokus auf Klarheit, Performance und Wachstum. Wir verbinden Strategie, Branding und Webentwicklung zu modernen Systemen, die skalieren und nachhaltig funktionieren. Unser Ansatz ist einfach: weniger Komplexität, mehr Wirkung. Jedes Projekt wird mit Präzision gestaltet — von der ersten Idee bis zum finalen Produkt.
+Schnell. Klar. Effektiv.`,
 																dGuW_vCBk: `Our Stack`,
 																EvIF7w2AA: e[0],
 																H5WebbGbQ: `[MORE ABOUT]`,
 																height: `100%`,
 																id: `QuBhvkSAZ`,
 																layoutId: `QuBhvkSAZ`,
-																rJHb064PE: `       From strategy to launch we deliver fast, accessible sites and clear brands with Growth-driven results`,
+																rJHb064PE: `       Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen`,
 																style: {
 																	width: `100%`,
 																},
