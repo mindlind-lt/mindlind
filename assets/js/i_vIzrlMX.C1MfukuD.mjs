@@ -1,14 +1,14 @@
 import { t as e } from "./rolldown-runtime.mjs";
 import {
 	F as t,
-	M as n,
+	M as rUseMemo,
 	T as r,
-	c as i,
-	g as a,
-	j as o,
-	k as s,
+	c as rJsx,
+	g as rForwardRef,
+	j as rUseContext,
+	k as rUseRef,
 	o as c,
-	y as l,
+	y as rUseId,
 } from "./react.mjs";
 import { S as u, a as d, r as f, t as p } from "./motion.mjs";
 import {
@@ -60,10 +60,10 @@ var E,
 						? { src: e }
 						: void 0),
 			(j = ({ value: e, children: t }) => {
-				let r = o(d),
+				let r = rUseContext(d),
 					a = e ?? r.transition,
-					s = n(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
-				return i(d.Provider, { value: s, children: t });
+					s = rUseMemo(() => ({ ...r, transition: a }), [JSON.stringify(a)]);
+				return rJsx(d.Provider, { value: s, children: t });
 			}),
 			(M = u.create(t)),
 			(N = { Big: `GRhQUdS7Z`, Medium: `pI7Yj7FYQ`, Small: `It_U6dSzO` }),
@@ -77,10 +77,10 @@ var E,
 					? t.join(`-`) + e.layoutDependency
 					: t.join(`-`)),
 			(I = h(
-				a(function (e, t) {
-					let n = s(null),
+				rForwardRef(function (e, t) {
+					let n = rUseRef(null),
 						r = t ?? n,
-						a = l(),
+						a = rUseId(),
 						{ activeLocale: o, setLocale: c } = w(),
 						d = C(),
 						{
@@ -110,14 +110,14 @@ var E,
 						}),
 						W = F(e, U),
 						G = g(D);
-					return i(f, {
+					return rJsx(f, {
 						id: h ?? a,
-						children: i(M, {
+						children: rJsx(M, {
 							animate: U,
 							initial: !1,
-							children: i(j, {
+							children: rJsx(j, {
 								value: k,
-								children: i(u.div, {
+								children: rJsx(u.div, {
 									...S,
 									...R,
 									className: g(G, `framer-18dzq2`, m, I),
@@ -156,7 +156,7 @@ var E,
 										N,
 										z,
 									),
-									children: i(x, {
+									children: rJsx(x, {
 										background: {
 											alt: ``,
 											fit: `fill`,

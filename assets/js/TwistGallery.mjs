@@ -1,12 +1,12 @@
 import { t as e } from "./rolldown-runtime.mjs";
 import {
-	I as t,
+	I as rUseState,
 	P as n,
 	T as r,
 	V as i,
-	c as a,
-	k as o,
-	l as s,
+	c as rJsx,
+	k as rUseRef,
+	l as rJsxs,
 	o as c,
 	z as l,
 } from "./react.mjs";
@@ -35,13 +35,13 @@ function m(e) {
 			camTargetZ: O = 0,
 			stopMotionInEditor: k = !1,
 		} = e,
-		A = o(null),
-		j = o(null),
-		M = o(null),
-		[N, P] = t(r.length > 0),
-		[F, I] = t(r.length > 0 ? 1 : 100),
-		L = o(null),
-		R = o(0),
+		A = rUseRef(null),
+		j = rUseRef(null),
+		M = rUseRef(null),
+		[N, P] = rUseState(r.length > 0),
+		[F, I] = rUseState(r.length > 0 ? 1 : 100),
+		L = rUseRef(null),
+		R = rUseRef(0),
 		z = () => Math.min(i.devicePixelRatio || 1, 1.5),
 		B = () => {
 			let e = !!k && p.current() === p.canvas;
@@ -552,7 +552,7 @@ function m(e) {
 			let t = { type: `images`, images: r || [] };
 			e.postMessage(t);
 		}, [r]),
-		s(`div`, {
+		rJsxs(`div`, {
 			style: {
 				width: `100%`,
 				height: `100%`,
@@ -560,9 +560,9 @@ function m(e) {
 				overflow: `visible`,
 			},
 			children: [
-				a(`div`, { ref: A, style: { position: `absolute`, inset: 0 } }),
+				rJsx(`div`, { ref: A, style: { position: `absolute`, inset: 0 } }),
 				N &&
-					a(`div`, {
+					rJsx(`div`, {
 						"aria-live": `polite`,
 						style: {
 							position: `absolute`,
@@ -579,7 +579,7 @@ function m(e) {
 							userSelect: `none`,
 							textRendering: `optimizeLegibility`,
 						},
-						children: a(`span`, {
+						children: rJsx(`span`, {
 							children: `Loading: ${Math.max(0, Math.min(100, Math.round(F)))}%`,
 						}),
 					}),

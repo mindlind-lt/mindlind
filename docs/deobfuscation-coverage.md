@@ -38,6 +38,11 @@ This file tracks modules where React alias symbols were semantically renamed to 
 - `assets/js/Vimeo.mjs` (partial conservative pass)
 - `assets/js/sxu281Tck.C6-LoHdO.mjs` (partial conservative pass)
 - `assets/js/Rotor_Gallery-shared.mjs` (partial conservative pass)
+- `assets/js/Rotor_Gallery.mjs` (partial conservative pass)
+- `assets/js/Text_Hover_Random.mjs` (partial conservative pass)
+- `assets/js/psqHvE_iQ.DFa3l-m-.mjs` (partial conservative pass)
+- `assets/js/TwistGallery.mjs` (partial conservative pass)
+- `assets/js/i_vIzrlMX.C1MfukuD.mjs` (partial conservative pass)
 
 ## Reviewed as style/font-only (no meaningful React deobfuscation target)
 

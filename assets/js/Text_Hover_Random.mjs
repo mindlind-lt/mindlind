@@ -1,13 +1,13 @@
 import { t as e } from "./rolldown-runtime.mjs";
 import {
-	I as t,
-	M as n,
-	N as r,
-	P as i,
+	I as rUseState,
+	M as rUseMemo,
+	N as rUseCallback,
+	P as rUseEffect,
 	T as a,
 	V as o,
-	c as s,
-	k as c,
+	c as rJsx,
+	k as rUseRef,
 	o as l,
 	z as u,
 } from "./react.mjs";
@@ -90,7 +90,7 @@ function E(e) {
 			repeatOnEnter: M = !1,
 			style: te = {},
 		} = e,
-		N = n(
+		N = rUseMemo(
 			() =>
 				x(
 					l,
@@ -98,25 +98,25 @@ function E(e) {
 				),
 			[l],
 		),
-		P = n(() => S(l, 600), [l]),
-		F = n(() => w(l, `fontSize`, `18px`), [l]),
-		I = n(() => w(l, `lineHeight`, `1.1`), [l]),
-		L = n(() => w(l, `letterSpacing`, `0px`), [l]),
-		R = n(() => C(l, `left`), [l]),
-		z = n(() => ee(p), [p]),
-		[B, V] = t(a),
+		P = rUseMemo(() => S(l, 600), [l]),
+		F = rUseMemo(() => w(l, `fontSize`, `18px`), [l]),
+		I = rUseMemo(() => w(l, `lineHeight`, `1.1`), [l]),
+		L = rUseMemo(() => w(l, `letterSpacing`, `0px`), [l]),
+		R = rUseMemo(() => C(l, `left`), [l]),
+		z = rUseMemo(() => ee(p), [p]),
+		[B, V] = rUseState(a),
 		H = d(),
-		U = n(() => a, [a]),
-		W = n(() => U.length, [U]),
-		G = n(() => v(W), [W]),
-		K = n(() => k.split(``), [k]);
-	i(() => {
+		U = rUseMemo(() => a, [a]),
+		W = rUseMemo(() => U.length, [U]),
+		G = rUseMemo(() => v(W), [W]),
+		K = rUseMemo(() => k.split(``), [k]);
+	rUseEffect(() => {
 		J.current || V(U);
 	}, [U]);
 	let q = _.current() === _.canvas,
-		J = c(!1),
-		Y = c(null),
-		X = r(() => {
+		J = rUseRef(!1),
+		Y = rUseRef(null),
+		X = rUseCallback(() => {
 			if (J.current) return;
 			J.current = !0;
 			let e = Math.max(1, Math.round((g / 1e3) * E)),
@@ -153,15 +153,15 @@ function E(e) {
 				};
 			Y.current = requestAnimationFrame(o);
 		}, [U, W, G, K, g, E, D, O]),
-		Z = r(() => {
+		Z = rUseCallback(() => {
 			A && ((j || (!j && !J.current)) && X(), H.start({ opacity: 1 }));
 		}, [A, j, X, H]),
-		ne = r(() => {
+		ne = rUseCallback(() => {
 			H.start({ opacity: 1 });
 		}, [H]),
-		Q = c(null),
-		$ = c(!1);
-	(i(() => {
+		Q = rUseRef(null),
+		$ = rUseRef(!1);
+	(rUseEffect(() => {
 		if (A || q || o === void 0 || !Q.current) return;
 		let e = Q.current,
 			t = new IntersectionObserver(
@@ -184,7 +184,7 @@ function E(e) {
 			);
 		return (t.observe(e), () => t.disconnect());
 	}, [A, q, M, X]),
-		i(
+		rUseEffect(
 			() => () => {
 				Y.current != null && cancelAnimationFrame(Y.current);
 			},
@@ -193,7 +193,7 @@ function E(e) {
 	let re = z ? `link` : void 0,
 		ie = z ? 0 : void 0,
 		ae = h || (z ? `Open link: ${U}` : void 0);
-	return s(f.div, {
+	return rJsx(f.div, {
 		ref: Q,
 		role: re,
 		tabIndex: ie,
@@ -222,7 +222,7 @@ function E(e) {
 			cursor: z ? `pointer` : `default`,
 			...te,
 		},
-		children: s(`div`, {
+		children: rJsx(`div`, {
 			style: {
 				width: `100%`,
 				textAlign: R,
