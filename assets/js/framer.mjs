@@ -25502,7 +25502,7 @@ ${_p(e)}`);
 							...ce,
 							style: Se,
 							layoutId: ue,
-							"data-framer-name": r,
+							// "data-framer-name": r,
 							"data-framer-component-type": `DeprecatedRichText`,
 							"data-center": v,
 							className: Uc(y, b, sO),
@@ -25663,7 +25663,7 @@ ${_p(e)}`);
 								viewBox: ae,
 								viewBoxScale: oe,
 								transformTemplate: be,
-								"data-framer-name": Se,
+								// "data-framer-name": Se,
 								"data-framer-component-type": hO,
 								children: he,
 							})
@@ -25673,7 +25673,7 @@ ${_p(e)}`);
 								style: P,
 								layoutId: fe,
 								transformTemplate: be,
-								"data-framer-name": Se,
+								// "data-framer-name": Se,
 								"data-framer-component-type": hO,
 								children: _(pO, {
 									viewBox: ae,
@@ -25688,7 +25688,7 @@ ${_p(e)}`);
 							style: P,
 							layoutId: fe,
 							transformTemplate: be,
-							"data-framer-name": Se,
+							// "data-framer-name": Se,
 							"data-framer-component-type": hO,
 							children: he,
 						});

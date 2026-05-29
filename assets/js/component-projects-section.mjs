@@ -198,7 +198,7 @@ var it,
 									...x,
 									...D,
 									className: S(ae, `framer-144f5fo`, m, w),
-									"data-framer-name": `Desktop`,
+									// "data-framer-name": `Desktop`,
 									layoutDependency: M,
 									layoutId: `WtpbfKxMy`,
 									ref: a,
@@ -206,10 +206,10 @@ var it,
 									...rt(
 										{
 											eiFIzOFII: {
-												"data-framer-name": `Tablet`,
+												// "data-framer-name": `Tablet`,
 											},
 											vAPv2qbmb: {
-												"data-framer-name": `Phone`,
+												// "data-framer-name": `Phone`,
 											},
 										},
 										C,
@@ -217,7 +217,7 @@ var it,
 									),
 									children: c(u.div, {
 										className: `framer-1u9njy5`,
-										"data-framer-name": `Block`,
+										// "data-framer-name": `Block`,
 										layoutDependency: M,
 										layoutId: `iFMRpLB03`,
 										style: {
@@ -230,7 +230,7 @@ var it,
 										children: [
 											i(u.div, {
 												className: `framer-jbgk7v`,
-												"data-framer-name": `QR`,
+												// "data-framer-name": `QR`,
 												layoutDependency: M,
 												layoutId: `FbsWVcIIH`,
 												style: {
@@ -264,7 +264,7 @@ var it,
 														...K(v),
 													},
 													className: `framer-1tvivlu`,
-													"data-framer-name": `qr`,
+													// "data-framer-name": `qr`,
 													layoutDependency: M,
 													layoutId: `kShcxmh5T`,
 													...rt(
@@ -328,7 +328,7 @@ var it,
 											}),
 											c(u.div, {
 												className: `framer-wg6b2a`,
-												"data-framer-name": `Text`,
+												// "data-framer-name": `Text`,
 												layoutDependency: M,
 												layoutId: `nGrMs0ffF`,
 												style: {
@@ -354,7 +354,7 @@ var it,
 															}),
 														}),
 														className: `framer-36xczs`,
-														"data-framer-name": `Check mobile\u2028version`,
+														// "data-framer-name": `Check mobile\u2028version`,
 														fonts: [`Inter`],
 														layoutDependency: M,
 														layoutId: `UgQm_1745`,
@@ -368,7 +368,7 @@ var it,
 													}),
 													i(u.div, {
 														className: `framer-w9pfqr`,
-														"data-framer-name": `Spacer`,
+														// "data-framer-name": `Spacer`,
 														layoutDependency: M,
 														layoutId: `IgBj6_esC`,
 													}),
@@ -386,7 +386,7 @@ var it,
 															}),
 														}),
 														className: `framer-hxq9sn`,
-														"data-framer-name": `Let's talk & book \u2028with our manager`,
+														// "data-framer-name": `Let's talk & book \u2028with our manager`,
 														fonts: [`Inter`],
 														layoutDependency: M,
 														layoutId: `oIZcbKLSb`,
@@ -635,7 +635,7 @@ var gt,
 									...g,
 									...b,
 									className: S(re, `framer-eajeud`, d, v),
-									"data-framer-name": `Animation`,
+									// "data-framer-name": `Animation`,
 									"data-highlight": !0,
 									layoutDependency: D,
 									layoutId: `mkWQJv0fv`,
@@ -644,11 +644,11 @@ var gt,
 									...ht(
 										{
 											i7ki4MlBU: {
-												"data-framer-name": `Normal`,
+												// "data-framer-name": `Normal`,
 												"data-highlight": void 0,
 											},
 											IHRQEa0sQ: {
-												"data-framer-name": `Next State`,
+												// "data-framer-name": `Next State`,
 											},
 										},
 										_,
@@ -835,7 +835,7 @@ var Ot,
 										...C,
 										...D,
 										className: `${S(M, `framer-6id3vt`, m, T)} framer-yjny53`,
-										"data-framer-name": `Normal`,
+										// "data-framer-name": `Normal`,
 										layoutDependency: j,
 										layoutId: `hDKrQIe5u`,
 										ref: a,
@@ -855,7 +855,7 @@ var Ot,
 										...Dt(
 											{
 												"hDKrQIe5u-hover": {
-													"data-framer-name": void 0,
+													// "data-framer-name": void 0,
 												},
 											},
 											w,
@@ -875,7 +875,7 @@ var Ot,
 													}),
 												}),
 												className: `framer-1465n6v`,
-												"data-framer-name": `Open website`,
+												// "data-framer-name": `Open website`,
 												fonts: [`Inter`],
 												layoutDependency: j,
 												layoutId: `nSIYWMcwU`,
@@ -1453,15 +1453,15 @@ e(() => {
 									children: [
 										i(u.div, {
 											className: `framer-kucupd`,
-											"data-framer-name": `Project - Section`,
+											// "data-framer-name": `Project - Section`,
 											layout: W,
 											children: c(`div`, {
 												className: `framer-170vse4`,
-												"data-framer-name": `Container`,
+												// "data-framer-name": `Container`,
 												children: [
 													c(`div`, {
 														className: `framer-x2jtaw`,
-														"data-framer-name": `Heading`,
+														// "data-framer-name": `Heading`,
 														children: [
 															i(w, {
 																links: [
@@ -1608,12 +1608,12 @@ e(() => {
 														children: [
 															i(`div`, {
 																className: `framer-15yb2lp`,
-																"data-framer-name": `Gallery`,
+																// "data-framer-name": `Gallery`,
 																children: c(
 																	`div`,
 																	{
 																		className: `framer-xk4c75`,
-																		"data-framer-name": `Images`,
+																		// "data-framer-name": `Images`,
 																		children:
 																			[
 																				De !==
@@ -1622,7 +1622,7 @@ e(() => {
 																						`div`,
 																						{
 																							className: `framer-1n5one1`,
-																							"data-framer-name": `Main Image`,
+																							// "data-framer-name": `Main Image`,
 																							children:
 																								i(
 																									L,
@@ -1682,7 +1682,7 @@ e(() => {
 																															),
 																														},
 																													className: `framer-klkdly`,
-																													"data-framer-name": `Image`,
+																													// "data-framer-name": `Image`,
 																													fitImageDimension: `height`,
 																													children:
 																														i(
@@ -1693,7 +1693,7 @@ e(() => {
 																																className: `framer-1vdkiai`,
 																																Component:
 																																	ye,
-																																"data-framer-name": `Logo`,
+																																// "data-framer-name": `Logo`,
 																																layoutId: `g6H0pQrhW`,
 																															},
 																														),
@@ -1709,7 +1709,7 @@ e(() => {
 																						`div`,
 																						{
 																							className: `framer-j764vd`,
-																							"data-framer-name": `Hover`,
+																							// "data-framer-name": `Hover`,
 																							children:
 																								i(
 																									L,
@@ -1769,7 +1769,7 @@ e(() => {
 																															),
 																														},
 																													className: `framer-1l1kie`,
-																													"data-framer-name": `Image`,
+																													// "data-framer-name": `Image`,
 																													fitImageDimension: `height`,
 																												},
 																											),
@@ -1783,14 +1783,14 @@ e(() => {
 																						`div`,
 																						{
 																							className: `framer-3x8cxm`,
-																							"data-framer-name": `2 Verical Images`,
+																							// "data-framer-name": `2 Verical Images`,
 																							children:
 																								[
 																									i(
 																										`div`,
 																										{
 																											className: `framer-12f439j`,
-																											"data-framer-name": `1`,
+																											// "data-framer-name": `1`,
 																											children:
 																												i(
 																													L,
@@ -1850,7 +1850,7 @@ e(() => {
 																																			),
 																																		},
 																																	className: `framer-x2karc`,
-																																	"data-framer-name": `Image`,
+																																	// "data-framer-name": `Image`,
 																																	fitImageDimension: `height`,
 																																},
 																															),
@@ -1862,7 +1862,7 @@ e(() => {
 																										`div`,
 																										{
 																											className: `framer-dh7kld`,
-																											"data-framer-name": `2`,
+																											// "data-framer-name": `2`,
 																											children:
 																												i(
 																													L,
@@ -1922,7 +1922,7 @@ e(() => {
 																																			),
 																																		},
 																																	className: `framer-1osuayq`,
-																																	"data-framer-name": `Image`,
+																																	// "data-framer-name": `Image`,
 																																	fitImageDimension: `height`,
 																																},
 																															),
@@ -1939,7 +1939,7 @@ e(() => {
 																						`div`,
 																						{
 																							className: `framer-1904zut`,
-																							"data-framer-name": `Gallery`,
+																							// "data-framer-name": `Gallery`,
 																							children:
 																								i(
 																									`div`,
@@ -2006,7 +2006,7 @@ e(() => {
 																																							),
 																																						},
 																																					className: `framer-k3znkc`,
-																																					"data-framer-name": `Image`,
+																																					// "data-framer-name": `Image`,
 																																					fitImageDimension: `height`,
 																																				},
 																																			),
@@ -2027,7 +2027,7 @@ e(() => {
 																						`div`,
 																						{
 																							className: `framer-rix1aa`,
-																							"data-framer-name": `Video`,
+																							// "data-framer-name": `Video`,
 																							children:
 																								i(
 																									I,
@@ -2084,12 +2084,12 @@ e(() => {
 															}),
 															i(`div`, {
 																className: `framer-qzwaoa`,
-																"data-framer-name": `Info`,
+																// "data-framer-name": `Info`,
 																children: c(
 																	`div`,
 																	{
 																		className: `framer-o475f0`,
-																		"data-framer-name": `Stack`,
+																		// "data-framer-name": `Stack`,
 																		children:
 																			[
 																				c(
@@ -2122,7 +2122,7 @@ e(() => {
 																												},
 																											),
 																										className: `framer-s722ob`,
-																										"data-framer-name": `Name of Project`,
+																										// "data-framer-name": `Name of Project`,
 																										fonts: [
 																											`Inter`,
 																										],
@@ -2187,7 +2187,7 @@ e(() => {
 																																														`div`,
 																																														{
 																																															className: `framer-mfvmk2`,
-																																															"data-framer-name": `Category`,
+																																															// "data-framer-name": `Category`,
 																																															children:
 																																																i(
 																																																	g,
@@ -2210,7 +2210,7 @@ e(() => {
 																																																				},
 																																																			),
 																																																		className: `framer-upgovp`,
-																																																		"data-framer-name": `Name of Category`,
+																																																		// "data-framer-name": `Name of Category`,
 																																																		fonts: [
 																																																			`Inter`,
 																																																		],
@@ -2264,7 +2264,7 @@ e(() => {
 																								},
 																							),
 																						className: `framer-1nxen2r`,
-																						"data-framer-name": `Lementa’s brand was rebuilt end to end: clearer positioning, a modular visual identity, and a streamlined e-commerce UX with faster pages and AA accessibility. Unified content (photo, copy, size/fit notes) and optimized checkout drive conversion and repeat purchase — cleaner story, smoother shopping, better results.`,
+																						// "data-framer-name": `Lementa’s brand was rebuilt end to end: clearer positioning, a modular visual identity, and a streamlined e-commerce UX with faster pages and AA accessibility. Unified content (photo, copy, size/fit notes) and optimized checkout drive conversion and repeat purchase — cleaner story, smoother shopping, better results.`,
 																						fonts: [
 																							`Inter`,
 																						],
@@ -2278,7 +2278,7 @@ e(() => {
 																					`div`,
 																					{
 																						className: `framer-1jb6pjo`,
-																						"data-framer-name": `Info`,
+																						// "data-framer-name": `Info`,
 																						children:
 																							[
 																								Pe !==
@@ -2287,7 +2287,7 @@ e(() => {
 																										`div`,
 																										{
 																											className: `framer-gchtux`,
-																											"data-framer-name": `Top Line`,
+																											// "data-framer-name": `Top Line`,
 																										},
 																									),
 																								Pe !==
@@ -2296,7 +2296,7 @@ e(() => {
 																										`div`,
 																										{
 																											className: `framer-12kkedg`,
-																											"data-framer-name": `1`,
+																											// "data-framer-name": `1`,
 																											children:
 																												[
 																													i(
@@ -2324,7 +2324,7 @@ e(() => {
 																																	},
 																																),
 																															className: `framer-1b31kny`,
-																															"data-framer-name": `2025`,
+																															// "data-framer-name": `2025`,
 																															fonts: [
 																																`Inter`,
 																															],
@@ -2390,7 +2390,7 @@ e(() => {
 																																				},
 																																			),
 																																		className: `framer-1ulwsu6`,
-																																		"data-framer-name": `Year`,
+																																		// "data-framer-name": `Year`,
 																																		fonts: [
 																																			`Inter`,
 																																		],
@@ -2405,7 +2405,7 @@ e(() => {
 																														`div`,
 																														{
 																															className: `framer-1kdzhw8`,
-																															"data-framer-name": `Line`,
+																															// "data-framer-name": `Line`,
 																														},
 																													),
 																												],
@@ -2417,7 +2417,7 @@ e(() => {
 																										`div`,
 																										{
 																											className: `framer-s8rrnw`,
-																											"data-framer-name": `2`,
+																											// "data-framer-name": `2`,
 																											children:
 																												[
 																													i(
@@ -2524,7 +2524,7 @@ e(() => {
 																														`div`,
 																														{
 																															className: `framer-t3jk6d`,
-																															"data-framer-name": `Line`,
+																															// "data-framer-name": `Line`,
 																														},
 																													),
 																												],
@@ -2536,7 +2536,7 @@ e(() => {
 																										`div`,
 																										{
 																											className: `framer-10mrayy`,
-																											"data-framer-name": `3`,
+																											// "data-framer-name": `3`,
 																											children:
 																												[
 																													i(
@@ -2643,7 +2643,7 @@ e(() => {
 																														`div`,
 																														{
 																															className: `framer-o3ff3`,
-																															"data-framer-name": `Line`,
+																															// "data-framer-name": `Line`,
 																														},
 																													),
 																												],
@@ -2655,7 +2655,7 @@ e(() => {
 																										`div`,
 																										{
 																											className: `framer-ulgnz7`,
-																											"data-framer-name": `4`,
+																											// "data-framer-name": `4`,
 																											children:
 																												[
 																													i(
@@ -2762,7 +2762,7 @@ e(() => {
 																														`div`,
 																														{
 																															className: `framer-1onel1i`,
-																															"data-framer-name": `Line`,
+																															// "data-framer-name": `Line`,
 																														},
 																													),
 																												],
@@ -2774,7 +2774,7 @@ e(() => {
 																										`div`,
 																										{
 																											className: `framer-1o8zyk1`,
-																											"data-framer-name": `5`,
+																											// "data-framer-name": `5`,
 																											children:
 																												[
 																													i(
@@ -2913,7 +2913,7 @@ e(() => {
 																														`div`,
 																														{
 																															className: `framer-ar6c0s`,
-																															"data-framer-name": `Line`,
+																															// "data-framer-name": `Line`,
 																														},
 																													),
 																												],
@@ -2926,7 +2926,7 @@ e(() => {
 																					`div`,
 																					{
 																						className: `framer-2s6kax`,
-																						"data-framer-name": `Button Website & QR`,
+																						// "data-framer-name": `Button Website & QR`,
 																						children:
 																							[
 																								He !==
@@ -3134,14 +3134,14 @@ e(() => {
 										}),
 										i(u.div, {
 											className: `framer-1lpf79x`,
-											"data-framer-name": `Other Projects - Heading`,
+											// "data-framer-name": `Other Projects - Heading`,
 											layout: W,
 											children: i(`div`, {
 												className: `framer-196dyeq`,
-												"data-framer-name": `Container`,
+												// "data-framer-name": `Container`,
 												children: c(`div`, {
 													className: `framer-l8ufmn`,
-													"data-framer-name": `Heading`,
+													// "data-framer-name": `Heading`,
 													children: [
 														i(L, {
 															breakpoint: U,

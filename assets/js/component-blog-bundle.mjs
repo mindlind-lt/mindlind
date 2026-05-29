@@ -287,7 +287,7 @@ var Bt,
 										...h,
 										...y,
 										className: `${T(ne, `framer-lpzpfr`, u, _)} framer-vpz6iu`,
-										"data-framer-name": `Variant 1`,
+										// // "data-framer-name": `Variant 1`,
 										layoutDependency: E,
 										layoutId: `Yy1Q_F10S`,
 										ref: r,
@@ -295,7 +295,7 @@ var Bt,
 										...zt(
 											{
 												"Yy1Q_F10S-hover": {
-													"data-framer-name": void 0,
+													// // "data-framer-name": void 0,
 												},
 											},
 											g,
@@ -538,7 +538,7 @@ var gn,
 										...h,
 										...y,
 										className: `${T(ne, `framer-zqadfu`, u, _)} framer-nyeh8p`,
-										"data-framer-name": `Variant 1`,
+										// // "data-framer-name": `Variant 1`,
 										layoutDependency: E,
 										layoutId: `TTIdOjeaA`,
 										ref: r,
@@ -546,7 +546,7 @@ var gn,
 										...hn(
 											{
 												"TTIdOjeaA-hover": {
-													"data-framer-name": void 0,
+													// "data-framer-name": void 0,
 												},
 											},
 											g,
@@ -2310,15 +2310,15 @@ e(() => {
 									children: [
 										a(m.section, {
 											className: `framer-13iovet`,
-											"data-framer-name": `Post - Section`,
+											// "data-framer-name": `Post - Section`,
 											layout: ke,
 											children: u(`div`, {
 												className: `framer-1dsol52`,
-												"data-framer-name": `Container`,
+												// "data-framer-name": `Container`,
 												children: [
 													a(`div`, {
 														className: `framer-13voud4`,
-														"data-framer-name": `Spacer`,
+														// "data-framer-name": `Spacer`,
 													}),
 													a(I, {
 														breakpoint: R,
@@ -2384,11 +2384,11 @@ e(() => {
 																...Z(A),
 															},
 															className: `framer-4xw0m1`,
-															"data-framer-name": `Main Image of Post`,
+															// "data-framer-name": `Main Image of Post`,
 															children: [
 																a(`div`, {
 																	className: `framer-1bnqxlz`,
-																	"data-framer-name": `Dark Fade`,
+																	// "data-framer-name": `Dark Fade`,
 																}),
 																a(re, {
 																	links: [
@@ -2456,7 +2456,7 @@ e(() => {
 																								N,
 																								{
 																									className: `framer-1ipbzst-container`,
-																									"data-framer-name": `Back Link`,
+																									// "data-framer-name": `Back Link`,
 																									name: `Back Link`,
 																									nodeId: `jP7cysE1m`,
 																									rendersWithMotion:
@@ -2582,7 +2582,7 @@ e(() => {
 																					},
 																				),
 																			className: `framer-mg9868`,
-																			"data-framer-name": `Title`,
+																			// "data-framer-name": `Title`,
 																			fonts: [
 																				`Inter`,
 																			],
@@ -2615,7 +2615,7 @@ e(() => {
 																		},
 																	),
 																	className: `framer-xxpuv`,
-																	"data-framer-name": `Date`,
+																	// "data-framer-name": `Date`,
 																	fonts: [
 																		`Inter`,
 																	],
@@ -2637,17 +2637,17 @@ e(() => {
 													}),
 													a(`div`, {
 														className: `framer-ilxppo`,
-														"data-framer-name": `Spacer`,
+														// "data-framer-name": `Spacer`,
 													}),
 													a(`div`, {
 														className: `framer-fejqmp`,
-														"data-framer-name": `Content`,
+														// "data-framer-name": `Content`,
 														children: a(b, {
 															__fromCanvasComponent:
 																!0,
 															children: O,
 															className: `framer-3bo595`,
-															"data-framer-name": `Design Systems That Ship Most design systems never leave Figma. They overreach, stall, and become museums. This playbook keeps scope lean, aligns with a near-term launch, and lands in production in 30 days or less. Principles Ship > scope. Start with the next release, not the perfect library. Evidence > taste. Decisions tie to KPIs, constraints, and usage data. Tokens first. Components inherit from tokens to stay consistent. One source of truth. The code library is canonical; Figma mirrors it. Accessible by default. AA contrast, focus states, motion alternatives. Delete to scale. Remove low-usage parts; entropy kills speed. Day 0–2: Define the smallest viable system (SVS) Inputs: product goals, target pages, content samples, brand constraints, tech stack.\u2028Outputs: scope doc and success metrics. Scope SVS: Tokens: color, type scale, spacing, radius, shadow, motion (dur/ease), z-index. Components (8–12 max): Button, Link, Input, Select, Checkbox, Radio, Tag/Badge, Card, Modal/Sheet, Navbar, Footer. Patterns (2–3): Page header, Form group, Empty state. KPIs to watch: LCP ≤2.0s mobile, CLS ≤0.05, conversion or task success +X%. Day 3–7: Tokens and anatomy Design tokens (names map to intent, not hex or pixels): -color-fg/fg-muted/bg/bg-elevated/brand/brand-contrast -radius-xs/s/m/l -space-2/4/8/12/16/24/32 -font-s/m/l/xl/2xl with line-height and letter-spacing pairs Motion: --ease-standard, --dur-150/200/300 Anatomy docs per component: Slots, states, size variants, min hit areas, error/help text rules. Accessibility notes: roles, labels, focus order, ARIA where needed. Day 8–14: Build the code library Tech: React/Next + CSS variables. Export tokens as CSS and JSON. Avoid runtime theming complexity at v1. Component rules: Only transform/opacity for animations; respect prefers-reduced-motion. Keyboard support: Tab, Shift+Tab, Space/Enter, Arrow keys where relevant. Variants via class names, not prop explosions. Zero magic margins. Spacing comes from layout components or utilities.`,
+															// "data-framer-name": `Design Systems That Ship Most design systems never leave Figma. They overreach, stall, and become museums. This playbook keeps scope lean, aligns with a near-term launch, and lands in production in 30 days or less. Principles Ship > scope. Start with the next release, not the perfect library. Evidence > taste. Decisions tie to KPIs, constraints, and usage data. Tokens first. Components inherit from tokens to stay consistent. One source of truth. The code library is canonical; Figma mirrors it. Accessible by default. AA contrast, focus states, motion alternatives. Delete to scale. Remove low-usage parts; entropy kills speed. Day 0–2: Define the smallest viable system (SVS) Inputs: product goals, target pages, content samples, brand constraints, tech stack.\u2028Outputs: scope doc and success metrics. Scope SVS: Tokens: color, type scale, spacing, radius, shadow, motion (dur/ease), z-index. Components (8–12 max): Button, Link, Input, Select, Checkbox, Radio, Tag/Badge, Card, Modal/Sheet, Navbar, Footer. Patterns (2–3): Page header, Form group, Empty state. KPIs to watch: LCP ≤2.0s mobile, CLS ≤0.05, conversion or task success +X%. Day 3–7: Tokens and anatomy Design tokens (names map to intent, not hex or pixels): -color-fg/fg-muted/bg/bg-elevated/brand/brand-contrast -radius-xs/s/m/l -space-2/4/8/12/16/24/32 -font-s/m/l/xl/2xl with line-height and letter-spacing pairs Motion: --ease-standard, --dur-150/200/300 Anatomy docs per component: Slots, states, size variants, min hit areas, error/help text rules. Accessibility notes: roles, labels, focus order, ARIA where needed. Day 8–14: Build the code library Tech: React/Next + CSS variables. Export tokens as CSS and JSON. Avoid runtime theming complexity at v1. Component rules: Only transform/opacity for animations; respect prefers-reduced-motion. Keyboard support: Tab, Shift+Tab, Space/Enter, Arrow keys where relevant. Variants via class names, not prop explosions. Zero magic margins. Spacing comes from layout components or utilities.`,
 															fonts: [`Inter`],
 															stylesPresetsClassNames:
 																{
@@ -2667,7 +2667,7 @@ e(() => {
 													}),
 													a(`div`, {
 														className: `framer-qhwvnb`,
-														"data-framer-name": `Spacer`,
+														// "data-framer-name": `Spacer`,
 													}),
 													a(`div`, {
 														className: `framer-60fp0y`,
@@ -2767,7 +2767,7 @@ e(() => {
 																										),
 																									},
 																								className: `framer-1v534zx`,
-																								"data-framer-name": `Image`,
+																								// "data-framer-name": `Image`,
 																								fitImageDimension: `height`,
 																							},
 																						),
@@ -2783,15 +2783,15 @@ e(() => {
 														children: [
 															a(`div`, {
 																className: `framer-1duemje`,
-																"data-framer-name": `Spacer`,
+																// "data-framer-name": `Spacer`,
 															}),
 															u(`div`, {
 																className: `framer-1l85j7x`,
-																"data-framer-name": `Creator`,
+																// "data-framer-name": `Creator`,
 																children: [
 																	u(`div`, {
 																		className: `framer-1usmbvg`,
-																		"data-framer-name": `Info`,
+																		// "data-framer-name": `Info`,
 																		children:
 																			[
 																				a(
@@ -2898,7 +2898,7 @@ e(() => {
 																					`div`,
 																					{
 																						className: `framer-mxqmc5`,
-																						"data-framer-name": `Spacer`,
+																						// "data-framer-name": `Spacer`,
 																					},
 																				),
 																				a(
@@ -2972,7 +2972,7 @@ e(() => {
 																	}),
 																	a(`div`, {
 																		className: `framer-j6ybrd`,
-																		"data-framer-name": `Position`,
+																		// "data-framer-name": `Position`,
 																		children:
 																			a(
 																				b,
@@ -2998,7 +2998,7 @@ e(() => {
 																							},
 																						),
 																					className: `framer-1m4uxbm`,
-																					"data-framer-name": `Design Director`,
+																					// "data-framer-name": `Design Director`,
 																					fonts: [
 																						`Inter`,
 																					],
@@ -3013,7 +3013,7 @@ e(() => {
 															}),
 															a(`div`, {
 																className: `framer-twwqpn`,
-																"data-framer-name": `Spacer`,
+																// "data-framer-name": `Spacer`,
 															}),
 															u(`div`, {
 																className: `framer-zepmgc`,
@@ -3023,7 +3023,7 @@ e(() => {
 																			`div`,
 																			{
 																				className: `framer-13lqs0q hidden-11n9y1n`,
-																				"data-framer-name": `Spacer`,
+																				// "data-framer-name": `Spacer`,
 																			},
 																		),
 																	u(`div`, {
@@ -3034,7 +3034,7 @@ e(() => {
 																					`div`,
 																					{
 																						className: `framer-iv97xk`,
-																						"data-framer-name": `Prev`,
+																						// "data-framer-name": `Prev`,
 																						children:
 																							[
 																								Ne !==
@@ -3261,7 +3261,7 @@ e(() => {
 																													},
 																												),
 																											className: `framer-1bio65p`,
-																											"data-framer-name": `Previous`,
+																											// "data-framer-name": `Previous`,
 																											fonts: [
 																												`Inter`,
 																											],
@@ -3278,14 +3278,14 @@ e(() => {
 																					`div`,
 																					{
 																						className: `framer-1i304bx`,
-																						"data-framer-name": `Spacer`,
+																						// "data-framer-name": `Spacer`,
 																					},
 																				),
 																				u(
 																					`div`,
 																					{
 																						className: `framer-23qc56`,
-																						"data-framer-name": `Next`,
+																						// "data-framer-name": `Next`,
 																						children:
 																							[
 																								Fe !==
@@ -3347,7 +3347,7 @@ e(() => {
 																													},
 																												),
 																											className: `framer-nx7g1l`,
-																											"data-framer-name": `Next`,
+																											// "data-framer-name": `Next`,
 																											fonts: [
 																												`Inter`,
 																											],
@@ -3529,7 +3529,7 @@ e(() => {
 																	}),
 																	a(`div`, {
 																		className: `framer-1ootmnk`,
-																		"data-framer-name": `Spacer`,
+																		// "data-framer-name": `Spacer`,
 																	}),
 																],
 															}),

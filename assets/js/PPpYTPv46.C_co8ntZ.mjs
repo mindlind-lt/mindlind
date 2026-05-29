@@ -435,7 +435,7 @@ var ve,
 									...D,
 									...te,
 									className: x(V, `framer-1ot11qg`, h, M),
-									"data-framer-name": `Dark Border - Desktop`,
+									// "data-framer-name": `Dark Border - Desktop`,
 									layoutDependency: B,
 									layoutId: `n14O8t7TK`,
 									ref: a,
@@ -461,19 +461,19 @@ var ve,
 									...G(
 										{
 											E9gyfPzSJ: {
-												"data-framer-name": `White Border - Desktop`,
+												// "data-framer-name": `White Border - Desktop`,
 											},
 											rCe_DJ9uh: {
-												"data-framer-name": `White Border - Phone`,
+												// "data-framer-name": `White Border - Phone`,
 											},
 											rNDttW5PL: {
-												"data-framer-name": `Dark Border - Tablet`,
+												// "data-framer-name": `Dark Border - Tablet`,
 											},
 											UgG_8L33x: {
-												"data-framer-name": `White Border - Tablet`,
+												// "data-framer-name": `White Border - Tablet`,
 											},
 											VEDk8Ll1g: {
-												"data-framer-name": `Dark Border - Phone`,
+												// "data-framer-name": `Dark Border - Phone`,
 											},
 										},
 										j,
@@ -482,7 +482,7 @@ var ve,
 									children: [
 										c(d.div, {
 											className: `framer-1aifm41`,
-											"data-framer-name": `Heading`,
+											// "data-framer-name": `Heading`,
 											layoutDependency: B,
 											layoutId: `PWUVEiohm`,
 											style: {
@@ -517,7 +517,7 @@ var ve,
 														}),
 													}),
 													className: `framer-1suog99`,
-													"data-framer-name": `Starting from`,
+													// "data-framer-name": `Starting from`,
 													fonts: [`Inter`],
 													layoutDependency: B,
 													layoutId: `tvD6ewEXZ`,
@@ -629,7 +629,7 @@ var ve,
 										}),
 										c(d.div, {
 											className: `framer-1y6qf5h`,
-											"data-framer-name": `Text`,
+											// "data-framer-name": `Text`,
 											layoutDependency: B,
 											layoutId: `dpdbR4agx`,
 											style: {
@@ -724,7 +724,7 @@ var ve,
 														}),
 													}),
 													className: `framer-1uckzub`,
-													"data-framer-name": `Increase in registrations from organic/paid.`,
+													// "data-framer-name": `Increase in registrations from organic/paid.`,
 													fonts: [`Inter`],
 													layoutDependency: B,
 													layoutId: `tVw6dIucd`,
@@ -746,7 +746,7 @@ var ve,
 												}),
 												i(d.div, {
 													className: `framer-dt32tj`,
-													"data-framer-name": `Spacer`,
+													// "data-framer-name": `Spacer`,
 													layoutDependency: B,
 													layoutId: `vayBXyjEz`,
 												}),
@@ -1157,7 +1157,7 @@ var ke,
 									...T,
 									...ee,
 									className: x(se, `framer-10z091v`, _, j),
-									"data-framer-name": `Monthly - Desktop`,
+									// "data-framer-name": `Monthly - Desktop`,
 									layoutDependency: L,
 									layoutId: `UUBCRSHpV`,
 									ref: a,
@@ -1165,19 +1165,19 @@ var ke,
 									...J(
 										{
 											E_rrapOFs: {
-												"data-framer-name": `Per Project - Desktop`,
+												// "data-framer-name": `Per Project - Desktop`,
 											},
 											rnIHYMaiS: {
-												"data-framer-name": `Per Project - Tablet`,
+												// "data-framer-name": `Per Project - Tablet`,
 											},
 											t19QzsBBr: {
-												"data-framer-name": `Monthly - Phone`,
+												// "data-framer-name": `Monthly - Phone`,
 											},
 											tnv4M10ue: {
-												"data-framer-name": `Per Project - Phone`,
+												// "data-framer-name": `Per Project - Phone`,
 											},
 											yhiDoP7Ob: {
-												"data-framer-name": `Monthly - Tablet`,
+												// "data-framer-name": `Monthly - Tablet`,
 											},
 										},
 										D,
@@ -1185,19 +1185,19 @@ var ke,
 									),
 									children: c(d.div, {
 										className: `framer-14owium`,
-										"data-framer-name": `Container`,
+										// "data-framer-name": `Container`,
 										layoutDependency: L,
 										layoutId: `HY7wgGuMu`,
 										children: [
 											c(d.div, {
 												className: `framer-1ezpo8y`,
-												"data-framer-name": `Heading`,
+												// "data-framer-name": `Heading`,
 												layoutDependency: L,
 												layoutId: `iTnkZXxti`,
 												children: [
 													i(d.div, {
 														className: `framer-1uh93us`,
-														"data-framer-name": `Heading`,
+														// "data-framer-name": `Heading`,
 														layoutDependency: L,
 														layoutId: `HSIqdTEYp`,
 														children: i(g, {
@@ -1232,13 +1232,13 @@ var ke,
 													}),
 													c(d.div, {
 														className: `framer-uqsj38`,
-														"data-framer-name": `Tabs`,
+														// "data-framer-name": `Tabs`,
 														layoutDependency: L,
 														layoutId: `pLdGk5uMZ`,
 														children: [
 															c(d.div, {
 																className: `framer-anz8ki`,
-																"data-framer-name": `Monthly`,
+																// "data-framer-name": `Monthly`,
 																layoutDependency:
 																	L,
 																layoutId: `J2u2rP4ot`,
@@ -1307,7 +1307,7 @@ var ke,
 																	}),
 																	i(d.div, {
 																		className: `framer-12cts6b`,
-																		"data-framer-name": `Line`,
+																		// "data-framer-name": `Line`,
 																		layoutDependency:
 																			L,
 																		layoutId: `KkA5Ejwny`,
@@ -1335,7 +1335,7 @@ var ke,
 															}),
 															c(d.div, {
 																className: `framer-uybf0e`,
-																"data-framer-name": `Per Project`,
+																// "data-framer-name": `Per Project`,
 																"data-highlight":
 																	!0,
 																layoutDependency:
@@ -1415,7 +1415,7 @@ var ke,
 																	}),
 																	i(d.div, {
 																		className: `framer-1nvyrxf`,
-																		"data-framer-name": `Line`,
+																		// "data-framer-name": `Line`,
 																		layoutDependency:
 																			L,
 																		layoutId: `BvV77m4Ev`,
@@ -1445,7 +1445,7 @@ var ke,
 													}),
 													i(d.div, {
 														className: `framer-13ht3rd`,
-														"data-framer-name": `Section Number`,
+														// "data-framer-name": `Section Number`,
 														layoutDependency: L,
 														layoutId: `q2lQ4X5RJ`,
 														children: i(g, {
@@ -1531,7 +1531,7 @@ var ke,
 											}),
 											c(d.div, {
 												className: `framer-1rj6wel`,
-												"data-framer-name": `Content`,
+												// "data-framer-name": `Content`,
 												layoutDependency: L,
 												layoutId: `styJnD2MM`,
 												children: [
@@ -2346,7 +2346,7 @@ Wilington`,
 									...w,
 									...j,
 									className: x(I, `framer-170utch`, m, E),
-									"data-framer-name": `Desktop`,
+									// "data-framer-name": `Desktop`,
 									layoutDependency: F,
 									layoutId: `BKQiC5z2f`,
 									ref: r,
@@ -2354,10 +2354,10 @@ Wilington`,
 									...Z(
 										{
 											Tv_osDAig: {
-												"data-framer-name": `Tablet`,
+												// "data-framer-name": `Tablet`,
 											},
 											z_2AweZZU: {
-												"data-framer-name": `Phone`,
+												// "data-framer-name": `Phone`,
 											},
 										},
 										T,
@@ -2365,7 +2365,7 @@ Wilington`,
 									),
 									children: i(d.div, {
 										className: `framer-1mio2kf`,
-										"data-framer-name": `Container`,
+										// "data-framer-name": `Container`,
 										layoutDependency: F,
 										layoutId: `Ej6JqepS3`,
 										children: i(k, {

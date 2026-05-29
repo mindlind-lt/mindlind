@@ -741,7 +741,7 @@ var ke,
 									...y,
 									...C,
 									className: S(j, `framer-drhhqo`, m, x),
-									"data-framer-name": `Default`,
+									// "data-framer-name": `Default`,
 									"data-reset": `button`,
 									layoutDependency: A,
 									layoutId: `fTMKyUkx3`,
@@ -762,19 +762,19 @@ var ke,
 									...Oe(
 										{
 											"fTMKyUkx3-hover": {
-												"data-framer-name": void 0,
+												// "data-framer-name": void 0,
 											},
 											BARC7s0O3: {
-												"data-framer-name": `Success`,
+												// "data-framer-name": `Success`,
 											},
 											fOqHfFw57: {
-												"data-framer-name": `Disabled`,
+												// "data-framer-name": `Disabled`,
 											},
 											oOFlFJAlU: {
-												"data-framer-name": `Error`,
+												// "data-framer-name": `Error`,
 											},
 											QZfS3eLdX: {
-												"data-framer-name": `Loading`,
+												// "data-framer-name": `Loading`,
 											},
 										},
 										b,
@@ -887,7 +887,7 @@ var ke,
 											}),
 										i(d.div, {
 											className: `framer-1oei8tb`,
-											"data-framer-name": `Fill`,
+											// "data-framer-name": `Fill`,
 											layoutDependency: A,
 											layoutId: `FXHd4cMDW`,
 											style: {
@@ -896,7 +896,7 @@ var ke,
 										}),
 										i(d.div, {
 											className: `framer-3wdpza`,
-											"data-framer-name": `Fill`,
+											// "data-framer-name": `Fill`,
 											layoutDependency: A,
 											layoutId: `uWgBLsxY0`,
 											style: {
@@ -906,7 +906,7 @@ var ke,
 										P() &&
 											i(d.div, {
 												className: `framer-2zymhe`,
-												"data-framer-name": `Spinner`,
+												// "data-framer-name": `Spinner`,
 												layoutDependency: A,
 												layoutId: `MR7vzmaAV`,
 												style: {
@@ -925,7 +925,7 @@ var ke,
 													__smartComponentFX: !0,
 													__targetOpacity: 1,
 													className: `framer-1tera51`,
-													"data-framer-name": `Conic`,
+													// "data-framer-name": `Conic`,
 													layoutDependency: A,
 													layoutId: `PG7GVwyrV`,
 													style: {
@@ -935,7 +935,7 @@ var ke,
 													},
 													children: i(d.div, {
 														className: `framer-z7attb`,
-														"data-framer-name": `Rounding`,
+														// "data-framer-name": `Rounding`,
 														layoutDependency: A,
 														layoutId: `gZgpnBNSM`,
 														style: {
@@ -1208,7 +1208,7 @@ var Ge,
 									...D,
 									...I,
 									className: S(B, `framer-1dl0qsi`, _, A),
-									"data-framer-name": `Form - Desktop`,
+									// "data-framer-name": `Form - Desktop`,
 									layoutDependency: z,
 									layoutId: `uhJRkpKT1`,
 									ref: a,
@@ -1223,10 +1223,10 @@ var Ge,
 									...We(
 										{
 											A_n3qxlua: {
-												"data-framer-name": `Form - Phone`,
+												// "data-framer-name": `Form - Phone`,
 											},
 											znr8CKZKK: {
-												"data-framer-name": `Form - Tablet`,
+												// "data-framer-name": `Form - Tablet`,
 											},
 										},
 										O,
@@ -1235,7 +1235,7 @@ var Ge,
 									children: [
 										i(d.div, {
 											className: `framer-1ffeqgg`,
-											"data-framer-name": `Form`,
+											// "data-framer-name": `Form`,
 											layoutDependency: z,
 											layoutId: `NlRrfLDXm`,
 											children: i(ne, {
@@ -1403,7 +1403,7 @@ var Ge,
 															}),
 															i(d.div, {
 																className: `framer-di9trs`,
-																"data-framer-name": `Spacer`,
+																// "data-framer-name": `Spacer`,
 																layoutDependency:
 																	z,
 																layoutId: `Efnrn2G7V`,
@@ -1572,7 +1572,7 @@ var Ge,
 															x &&
 																i(d.div, {
 																	className: `framer-1uvlnu7`,
-																	"data-framer-name": `Spacer`,
+																	// "data-framer-name": `Spacer`,
 																	layoutDependency:
 																		z,
 																	layoutId: `BgDPm9bGx`,
@@ -1645,7 +1645,7 @@ var Ge,
 															}),
 															i(d.div, {
 																className: `framer-7e5nw1`,
-																"data-framer-name": `Spacer`,
+																// "data-framer-name": `Spacer`,
 																layoutDependency:
 																	z,
 																layoutId: `HABgzKaFl`,
@@ -1710,7 +1710,7 @@ var Ge,
 										}),
 										c(d.div, {
 											className: `framer-gg4wvz`,
-											"data-framer-name": `Terms & Policy`,
+											// "data-framer-name": `Terms & Policy`,
 											layoutDependency: z,
 											layoutId: `pO_IIvaeV`,
 											style: {
@@ -2216,7 +2216,7 @@ a Project`,
 										...k,
 										...I,
 										className: S(oe, `framer-m2xmnp`, h, M),
-										"data-framer-name": `Desktop`,
+										// "data-framer-name": `Desktop`,
 										layoutDependency: z,
 										layoutId: `eYkSQJiay`,
 										ref: a,
@@ -2224,13 +2224,13 @@ a Project`,
 										...Z(
 											{
 												kke4loMus: {
-													"data-framer-name": `Tablet`,
+													// "data-framer-name": `Tablet`,
 												},
 												lJBiFmrj6: {
-													"data-framer-name": `Desktop Big`,
+													// "data-framer-name": `Desktop Big`,
 												},
 												qjW9xYlwK: {
-													"data-framer-name": `Phone`,
+													// "data-framer-name": `Phone`,
 												},
 											},
 											j,
@@ -2239,7 +2239,7 @@ a Project`,
 										children: [
 											c(d.div, {
 												className: `framer-1flv6ov`,
-												"data-framer-name": `Heading & Image`,
+												// "data-framer-name": `Heading & Image`,
 												layoutDependency: z,
 												layoutId: `thPS3HLks`,
 												children: [
@@ -2461,7 +2461,7 @@ a Project`,
 																	),
 																}),
 																className: `framer-ymhz03`,
-																"data-framer-name": `Tell to our manager about the goal.\u2028We’ll reply with scope and timeline.`,
+																// "data-framer-name": `Tell to our manager about the goal.\u2028We’ll reply with scope and timeline.`,
 																fonts: [
 																	`Inter`,
 																],
@@ -2591,7 +2591,7 @@ a Project`,
 													}),
 													c(d.div, {
 														className: `framer-1c49vtx`,
-														"data-framer-name": `Image`,
+														// "data-framer-name": `Image`,
 														layoutDependency: z,
 														layoutId: `tvvc3VwLO`,
 														children: [
@@ -2636,7 +2636,7 @@ a Project`,
 																	),
 																}),
 																className: `framer-1a0u2y0`,
-																"data-framer-name": `Kate\u2028Wilington`,
+																// "data-framer-name": `Kate\u2028Wilington`,
 																fonts: [
 																	`Inter`,
 																],
@@ -2675,7 +2675,7 @@ a Project`,
 																	positionY: `center`,
 																},
 																className: `framer-10rcgy`,
-																"data-framer-name": `Image`,
+																// "data-framer-name": `Image`,
 																fitImageDimension: `height`,
 																layoutDependency:
 																	z,

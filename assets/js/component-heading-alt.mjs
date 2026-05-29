@@ -136,7 +136,7 @@ var F,
 									..._,
 									...S,
 									className: b(j, `framer-it1vf6`, m, y),
-									"data-framer-name": `Desktop`,
+									// "data-framer-name": `Desktop`,
 									layoutDependency: A,
 									layoutId: `F25usRD5T`,
 									ref: a,
@@ -144,10 +144,10 @@ var F,
 									...P(
 										{
 											AlghAwUC2: {
-												"data-framer-name": `Phone`,
+												// "data-framer-name": `Phone`,
 											},
 											uT8G9AAwR: {
-												"data-framer-name": `Tablet`,
+												// "data-framer-name": `Tablet`,
 											},
 										},
 										v,
@@ -156,19 +156,19 @@ var F,
 									children: [
 										c(d.div, {
 											className: `framer-12j6zf1`,
-											"data-framer-name": `Container`,
+											// "data-framer-name": `Container`,
 											layoutDependency: A,
 											layoutId: `hrI1_Z_NW`,
 											children: [
 												i(d.div, {
 													className: `framer-1dq7hqo`,
-													"data-framer-name": `Spacer`,
+													// "data-framer-name": `Spacer`,
 													layoutDependency: A,
 													layoutId: `jQv3L8FgC`,
 												}),
 												c(d.div, {
 													className: `framer-iwzlxf`,
-													"data-framer-name": `Big Heading`,
+													// "data-framer-name": `Big Heading`,
 													layoutDependency: A,
 													layoutId: `GbpOjiomY`,
 													children: [
@@ -230,7 +230,7 @@ var F,
 																),
 															}),
 															className: `framer-44boz3`,
-															"data-framer-name": `Fit Heading`,
+															// "data-framer-name": `Fit Heading`,
 															fonts: [
 																`GF;Space Mono-regular`,
 															],
@@ -315,7 +315,7 @@ var F,
 														}),
 														i(d.div, {
 															className: `framer-301cph`,
-															"data-framer-name": `Spacer`,
+															// "data-framer-name": `Spacer`,
 															layoutDependency: A,
 															layoutId: `v7_AF0y37`,
 														}),
