@@ -52,4 +52,3 @@ var r,
 			(a = `framer-wMbOK`));
 	});
 export { o as i, i as n, r, a as t };
-//# sourceMappingURL=hmRgK3K6v.Bb8FQ5b1.mjs.map

@@ -172,7 +172,6 @@ var M,
 										...k,
 										...P,
 										className: `${v(J, `framer-f48u4i`, h, M)} framer-1l2ul8j`,
-										// "data-framer-name": `Normal`,
 										layoutDependency: q,
 										layoutId: `L7j75_085`,
 										ref: a,
@@ -198,7 +197,6 @@ var M,
 													}),
 												}),
 												className: `framer-x5sk78`,
-												// "data-framer-name": `Back to Blog`,
 												fonts: [`Inter`],
 												layoutDependency: q,
 												layoutId: `ppE_0KrG9`,
@@ -325,4 +323,3 @@ var M,
 			));
 	});
 export { K as n, q as t };
-//# sourceMappingURL=lJIHQ29dZ.B2AWu9Us.mjs.map

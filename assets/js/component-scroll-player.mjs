@@ -143,7 +143,6 @@ var he,
 									...p,
 									...y,
 									className: O(D, `framer-w7ykn8`, l, v),
-									// "data-framer-name": `Play`,
 									layoutDependency: T,
 									layoutId: `dAo9ApRb4`,
 									ref: i,
@@ -151,10 +150,8 @@ var he,
 									...me(
 										{
 											dlI3XgZzv: {
-												// "data-framer-name": `Play Mobile`,
 											},
 											ohrw2fwzF: {
-												// "data-framer-name": `View`,
 											},
 										},
 										g,
@@ -163,7 +160,6 @@ var he,
 									children: [
 										d(x.div, {
 											className: `framer-tnhzud`,
-											// "data-framer-name": `Ellipse 1`,
 											layoutDependency: T,
 											layoutId: `k5hBx1QO5`,
 											style: {
@@ -188,7 +184,6 @@ var he,
 												}),
 											}),
 											className: `framer-1wi0lgo`,
-											// "data-framer-name": `[Play]`,
 											fonts: [`Inter`],
 											layoutDependency: T,
 											layoutId: `MCUDimx56`,
@@ -1919,7 +1914,6 @@ var tn,
 									...f,
 									...ee,
 									className: O(E, `framer-133arvs`, c, g),
-									// "data-framer-name": `Scroll - Horizontal`,
 									layoutDependency: w,
 									layoutId: `MSDybJ82G`,
 									ref: r,
@@ -1932,13 +1926,10 @@ var tn,
 									...en(
 										{
 											C4ti1Zm4o: {
-												// "data-framer-name": `Arrow - Up Right`,
 											},
 											o1tTqkD7S: {
-												// "data-framer-name": `Arrow - Up Right - Small`,
 											},
 											oZBUbuNQW: {
-												// "data-framer-name": `Scroll - Vertical`,
 											},
 										},
 										p,
@@ -1948,7 +1939,6 @@ var tn,
 										D() &&
 											h(T, {
 												className: `framer-1k8tops`,
-												// "data-framer-name": `Scroll`,
 												layoutDependency: w,
 												layoutId: `xB4zGfQmL`,
 												opacity: 1,
@@ -2203,4 +2193,3 @@ export {
 	hn as t,
 	Ge as u,
 };
-//# sourceMappingURL=component-scroll-player.mjs.map

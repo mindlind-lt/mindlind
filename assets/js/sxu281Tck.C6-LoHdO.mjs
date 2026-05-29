@@ -176,7 +176,6 @@ var j,
 									...C,
 									...H,
 									className: _(ne, `framer-40o873`, g, D),
-									// "data-framer-name": `Default`,
 									"data-highlight": !0,
 									"data-reset": `button`,
 									layoutDependency: Y,
@@ -197,7 +196,6 @@ var j,
 												
 											},
 											MnozbBE93: {
-												// "data-framer-name": `Loading`,
 											},
 										},
 										E,
@@ -262,7 +260,6 @@ var j,
 												animate: L,
 												className: `framer-1hjvj8k`,
 												"data-framer-appear-id": `1hjvj8k`,
-												// "data-framer-name": `Spinner`,
 												initial: R,
 												layoutDependency: Y,
 												layoutId: `MKg9WEnzI`,
@@ -282,7 +279,6 @@ var j,
 													__smartComponentFX: !0,
 													__targetOpacity: 1,
 													className: `framer-3awrmc`,
-													// "data-framer-name": `Conic`,
 													layoutDependency: Y,
 													layoutId: `K46IWOAyl`,
 													style: {
@@ -290,7 +286,6 @@ var j,
 													},
 													children: r(l.div, {
 														className: `framer-1fncieu`,
-														// "data-framer-name": `Round`,
 														layoutDependency: Y,
 														layoutId: `uGcgzawYE`,
 														style: {
@@ -305,7 +300,6 @@ var j,
 											}),
 										r(l.div, {
 											className: `framer-lu2xsl`,
-											// "data-framer-name": `Fill`,
 											layoutDependency: Y,
 											layoutId: `ftClNyYoj`,
 											style: {
@@ -314,7 +308,6 @@ var j,
 										}),
 										r(l.div, {
 											className: `framer-zvmp5m`,
-											// "data-framer-name": `Fill`,
 											layoutDependency: Y,
 											layoutId: `yYAhxji9B`,
 											style: {
@@ -425,4 +418,3 @@ var j,
 			));
 	});
 export { K as n, q as t };
-//# sourceMappingURL=sxu281Tck.C6-LoHdO.mjs.map

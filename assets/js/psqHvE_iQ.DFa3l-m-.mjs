@@ -188,7 +188,6 @@ var N,
 										...T,
 										...z,
 										className: `${v(ie, `framer-1om2a4x`, h, k)} framer-1yzisao`,
-										// "data-framer-name": `Small White - Black Hover`,
 										"data-highlight": !0,
 										layoutDependency: q,
 										layoutId: `kcJJ02qzX`,
@@ -219,34 +218,27 @@ var N,
 										...M(
 											{
 												at4YNX0WJ: {
-													// "data-framer-name": `Big Black - White Hover`,
 													onMouseEnter: Z,
 												},
 												bCt4mW7uC: {
-													// "data-framer-name": `Small White - Black Hover - Hover`,
 													onMouseLeave: X,
 												},
 												Jl_4swOLq: {
-													// "data-framer-name": `Big Black - White Hover - Hover`,
 													onMouseEnter: void 0,
 													onMouseLeave: Q,
 												},
 												qN8QLXSxT: {
-													// "data-framer-name": `Big - White - Black Hover`,
 													onMouseEnter: ne,
 												},
 												U5SDJ0jGi: {
-													// "data-framer-name": `Big Black - Light Gray Hover - Hover`,
 													onMouseEnter: void 0,
 													onMouseLeave: te,
 												},
 												U8nPMjAS0: {
-													// "data-framer-name": `Big - White - Black Hover - Hover`,
 													onMouseEnter: void 0,
 													onMouseLeave: re,
 												},
 												uKZaL51cy: {
-													// "data-framer-name": `Big Black - Light Gray Hover`,
 													onMouseEnter: $,
 												},
 											},
@@ -256,7 +248,6 @@ var N,
 										children: [
 											i(d.div, {
 												className: `framer-b596st`,
-												// "data-framer-name": `Fill`,
 												layoutDependency: q,
 												layoutId: `zj9X59pvE`,
 												style: {
@@ -279,7 +270,6 @@ var N,
 											}),
 											i(d.div, {
 												className: `framer-avw3zv`,
-												// "data-framer-name": `Fill`,
 												layoutDependency: q,
 												layoutId: `YHNqCB25G`,
 												style: {
@@ -313,7 +303,6 @@ var N,
 													}),
 												}),
 												className: `framer-ua84l1`,
-												// "data-framer-name": `Book call`,
 												fonts: [`Inter`],
 												layoutDependency: q,
 												layoutId: `TMvgg6zat`,
@@ -576,4 +565,3 @@ var N,
 			));
 	});
 export { U as n, W as t };
-//# sourceMappingURL=psqHvE_iQ.DFa3l-m-.mjs.map

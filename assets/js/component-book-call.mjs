@@ -923,7 +923,6 @@ var Fe,
 									...L,
 									...le,
 									className: D(K, `framer-mwlaz1`, p, ce),
-									// "data-framer-name": `Light - Right`,
 									layoutDependency: G,
 									layoutId: `H9MtNDY8s`,
 									ref: i,
@@ -931,7 +930,6 @@ var Fe,
 									...X(
 										{
 											QiQAzkW2U: {
-												// "data-framer-name": `Dark - Left`,
 											},
 										},
 										R,
@@ -940,7 +938,6 @@ var Fe,
 									children: [
 										f(h.div, {
 											className: `framer-1oi9aob`,
-											// "data-framer-name": `Book Call`,
 											layoutDependency: G,
 											layoutId: `MHtV20YD5`,
 											style: {
@@ -953,7 +950,6 @@ var Fe,
 											children: [
 												f(h.div, {
 													className: `framer-kf2yor`,
-													// "data-framer-name": `Frame 98`,
 													layoutDependency: G,
 													layoutId: `iU4nyVn00`,
 													style: {
@@ -1007,7 +1003,6 @@ var Fe,
 																),
 															}),
 															className: `framer-j3be5b`,
-															// "data-framer-name": `Start\u2028a Project`,
 															fonts: [`Inter`],
 															layoutDependency: G,
 															layoutId: `J7XTrOqXB`,
@@ -1103,7 +1098,6 @@ var Fe,
 																),
 															}),
 															className: `framer-1q6rsk7`,
-															// "data-framer-name": `Let's talk & book \u2028with our manager`,
 															fonts: [`Inter`],
 															layoutDependency: G,
 															layoutId: `Ff71mqFmO`,
@@ -1327,7 +1321,6 @@ var Fe,
 																	positionY: `center`,
 																},
 																className: `framer-fu5pzn`,
-																// "data-framer-name": `Manager`,
 																layoutDependency:
 																	G,
 																layoutId: `qy3MZHoLd`,
@@ -1436,7 +1429,6 @@ var Fe,
 										fe(w !== !1) &&
 											f(h.div, {
 												className: `framer-1ozcg6v`,
-												// "data-framer-name": `Founders`,
 												layoutDependency: G,
 												layoutId: `RQZDJYrjq`,
 												style: {
@@ -1478,7 +1470,6 @@ var Fe,
 													}),
 													f(h.div, {
 														className: `framer-1dmx3mh`,
-														// "data-framer-name": `Founders`,
 														layoutDependency: G,
 														layoutId: `Scdhsd_NS`,
 														children: [
@@ -2090,4 +2081,3 @@ export {
 	ve as s,
 	et as t,
 };
-//# sourceMappingURL=component-book-call.mjs.map

@@ -185,7 +185,6 @@ var we,
 									...E,
 									...j,
 									className: w(R, `framer-1enx3dv`, u, k),
-									// "data-framer-name": `Normal`,
 									layoutDependency: F,
 									layoutId: `UnuGN3X_1`,
 									ref: r,
@@ -198,7 +197,6 @@ var we,
 									...Ce(
 										{
 											X8hKcyMev: {
-												// "data-framer-name": `Vertical`,
 											},
 										},
 										O,
@@ -440,7 +438,6 @@ var Re,
 										...y,
 										...T,
 										className: `${w(ee, `framer-1n7pgpj`, p, x)} framer-1n4dfmi`,
-										// "data-framer-name": `Vertical`,
 										layoutDependency: M,
 										layoutId: `vKKbtDO1N`,
 										ref: r,
@@ -463,7 +460,6 @@ var Re,
 													
 												},
 												X3qFlTbTF: {
-													// "data-framer-name": `Horizontal`,
 												},
 											},
 											b,
@@ -816,7 +812,6 @@ var Ze,
 											_,
 											ie,
 										),
-										// "data-framer-name": `3 Posts - Desktop`,
 										layoutDependency: W,
 										layoutId: `Hy5imaqGv`,
 										ref: a,
@@ -824,19 +819,14 @@ var Ze,
 										...J(
 											{
 												e_indrHZ3: {
-													// "data-framer-name": `10 Posts - Phone`,
 												},
 												GWdkepxAn: {
-													// "data-framer-name": `10 Posts - Desktop`,
 												},
 												hW1S5f5S1: {
-													// "data-framer-name": `3 Posts - Tablet`,
 												},
 												Ke3Z8JMZB: {
-													// "data-framer-name": `10 Posts - Tablet`,
 												},
 												oB1JgoU9o: {
-													// "data-framer-name": `3 Posts - Phone`,
 												},
 											},
 											V,
@@ -1145,7 +1135,6 @@ var Ze,
 																														{
 																															className: `framer-1lzrxid`,
 																															"data-framer-appear-id": `1lzrxid-${l}`,
-																															// "data-framer-name": `Right`,
 																															layoutDependency:
 																																W,
 																															layoutId: `I0Jm29vwp`,
@@ -1192,7 +1181,6 @@ var Ze,
 																																		f.div,
 																																		{
 																																			className: `framer-1tr3203`,
-																																			// "data-framer-name": `Text & Image`,
 																																			layoutDependency:
 																																				W,
 																																			layoutId: `r_ojdbPam`,
@@ -1209,7 +1197,6 @@ var Ze,
 																																						f.div,
 																																						{
 																																							className: `framer-7pv3ri`,
-																																							// "data-framer-name": `Text`,
 																																							layoutDependency:
 																																								W,
 																																							layoutId: `LW5YqIv3m`,
@@ -1428,7 +1415,6 @@ var Ze,
 																																													},
 																																												),
 																																											className: `framer-5sg2a3`,
-																																											// "data-framer-name": `Short Text`,
 																																											fonts: [
 																																												`Inter`,
 																																											],
@@ -1984,7 +1970,6 @@ var Ze,
 																														{
 																															className: `framer-1q1cjus`,
 																															"data-framer-appear-id": `1q1cjus-${l}`,
-																															// "data-framer-name": `Left`,
 																															layoutDependency:
 																																W,
 																															layoutId: `CzB2HUMNs`,
@@ -2031,7 +2016,6 @@ var Ze,
 																																		f.div,
 																																		{
 																																			className: `framer-vajzqs`,
-																																			// "data-framer-name": `Text & Image`,
 																																			layoutDependency:
 																																				W,
 																																			layoutId: `Z7poyxi9E`,
@@ -2290,7 +2274,6 @@ var Ze,
 																																						f.div,
 																																						{
 																																							className: `framer-rfzun6`,
-																																							// "data-framer-name": `Text`,
 																																							layoutDependency:
 																																								W,
 																																							layoutId: `rQp8rvlRs`,
@@ -2509,7 +2492,6 @@ var Ze,
 																																													},
 																																												),
 																																											className: `framer-137g36m`,
-																																											// "data-framer-name": `Short Text`,
 																																											fonts: [
 																																												`Inter`,
 																																											],
@@ -3289,7 +3271,6 @@ var xt,
 									...E,
 									...j,
 									className: w(R, `framer-1enx3dv`, u, k),
-									// "data-framer-name": `Normal`,
 									layoutDependency: F,
 									layoutId: `UnuGN3X_1`,
 									ref: r,
@@ -3302,7 +3283,6 @@ var xt,
 									...bt(
 										{
 											X8hKcyMev: {
-												// "data-framer-name": `Vertical`,
 											},
 										},
 										O,
@@ -3597,7 +3577,6 @@ var Pt,
 									...R,
 									...V,
 									className: w(le, `framer-rpnakr`, g, ne),
-									// "data-framer-name": `Desktop - 1200`,
 									layoutDependency: U,
 									layoutId: `mVhPZw3IV`,
 									ref: a,
@@ -3605,10 +3584,8 @@ var Pt,
 									...Nt(
 										{
 											kSC4wNpBu: {
-												// "data-framer-name": `Tablet`,
 											},
 											MpacA_qwI: {
-												// "data-framer-name": `Phone`,
 											},
 										},
 										B,
@@ -3878,7 +3855,6 @@ var Pt,
 												}),
 											i(f.div, {
 												className: `framer-1s28jwd`,
-												// "data-framer-name": `All`,
 												layoutDependency: U,
 												layoutId: `x9qk1avyx`,
 												children: i(L, {
@@ -4113,4 +4089,3 @@ var Pt,
 			));
 	});
 export { Mt as i, Xt as n, Q as r, Yt as t };
-//# sourceMappingURL=OWqtFDncb.DnERqnrM.mjs.map

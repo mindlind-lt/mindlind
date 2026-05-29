@@ -649,7 +649,6 @@ var er,
 											u,
 											te,
 										),
-										// "data-framer-name": `Desktop - 1200`,
 										layoutDependency: Y,
 										layoutId: `sERzTRNgP`,
 										ref: r,
@@ -657,10 +656,8 @@ var er,
 										...$n(
 											{
 												eO6Qopa_m: {
-													// "data-framer-name": `Tablet`,
 												},
 												hgNV3iX_3: {
-													// "data-framer-name": `Phone`,
 												},
 											},
 											V,
@@ -1150,7 +1147,6 @@ var er,
 																																							className: `framer-encc9g`,
 																																							Component:
 																																								o,
-																																							// "data-framer-name": `Logo`,
 																																							layoutDependency:
 																																								Y,
 																																							layoutId: `XdhxckwO4`,
@@ -1165,7 +1161,6 @@ var er,
 																																		k.div,
 																																		{
 																																			className: `framer-1i5hyqj`,
-																																			// "data-framer-name": `About Project`,
 																																			layoutDependency:
 																																				Y,
 																																			layoutId: `zeEe5RPsa`,
@@ -1174,7 +1169,6 @@ var er,
 																																					k.div,
 																																					{
 																																						className: `framer-1o4lrgr`,
-																																						// "data-framer-name": `Stack`,
 																																						layoutDependency:
 																																							Y,
 																																						layoutId: `QzwdFNJAR`,
@@ -1204,7 +1198,6 @@ var er,
 																																												},
 																																											),
 																																										className: `framer-qotke6`,
-																																										// "data-framer-name": `Brand transformation end to end: positioning → identity → web.`,
 																																										fonts: [
 																																											`Inter`,
 																																										],
@@ -1320,7 +1313,6 @@ var er,
 																																																},
 																																															),
 																																														className: `framer-t53dew`,
-																																														// "data-framer-name": `LEmenta`,
 																																														fonts: [
 																																															`Inter`,
 																																														],
@@ -1375,7 +1367,6 @@ var er,
 																																																								k.div,
 																																																								{
 																																																									className: `framer-1l8wzdx`,
-																																																									// "data-framer-name": `Category`,
 																																																									layoutDependency:
 																																																										Y,
 																																																									layoutId: `Qm57xmwhJ`,
@@ -1411,7 +1402,6 @@ var er,
 																																																														},
 																																																													),
 																																																												className: `framer-1ikic2i`,
-																																																												// "data-framer-name": `Name of Category`,
 																																																												fonts: [
 																																																													`Inter`,
 																																																												],
@@ -1466,7 +1456,6 @@ var er,
 																																												},
 																																											),
 																																										className: `framer-tc442k`,
-																																										// "data-framer-name": `Lementa’s brand was rebuilt end to end: clearer positioning, a modular visual identity, and a streamlined e-commerce UX with faster pages and AA accessibility. Unified content (photo, copy, size/fit notes) and optimized checkout drive conversion and repeat purchase — cleaner story, smoother shopping, better results.`,
 																																										fonts: [
 																																											`Inter`,
 																																										],
@@ -1487,7 +1476,6 @@ var er,
 																																									k.div,
 																																									{
 																																										className: `framer-10qze72`,
-																																										// "data-framer-name": `Info`,
 																																										layoutDependency:
 																																											Y,
 																																										layoutId: `sDy1pKSqR`,
@@ -1497,7 +1485,6 @@ var er,
 																																													k.div,
 																																													{
 																																														className: `framer-z9vrz7`,
-																																														// "data-framer-name": `Top Line`,
 																																														layoutDependency:
 																																															Y,
 																																														layoutId: `LT8pPNZ0L`,
@@ -1540,7 +1527,6 @@ var er,
 																																																				},
 																																																			),
 																																																		className: `framer-1go9lmj`,
-																																																		// "data-framer-name": `2025`,
 																																																		fonts: [
 																																																			`Inter`,
 																																																		],
@@ -1581,7 +1567,6 @@ var er,
 																																																				},
 																																																			),
 																																																		className: `framer-3gn1vx`,
-																																																		// "data-framer-name": `Year`,
 																																																		fonts: [
 																																																			`Inter`,
 																																																		],
@@ -1601,7 +1586,6 @@ var er,
 																																																	k.div,
 																																																	{
 																																																		className: `framer-xfnc06`,
-																																																		// "data-framer-name": `Line`,
 																																																		layoutDependency:
 																																																			Y,
 																																																		layoutId: `SVs83PDAe`,
@@ -1618,7 +1602,6 @@ var er,
 																																													k.div,
 																																													{
 																																														className: `framer-1p424m4`,
-																																														// "data-framer-name": `2`,
 																																														layoutDependency:
 																																															Y,
 																																														layoutId: `EThqXuFMb`,
@@ -1707,7 +1690,6 @@ var er,
 																																																	k.div,
 																																																	{
 																																																		className: `framer-tc9wev`,
-																																																		// "data-framer-name": `Line`,
 																																																		layoutDependency:
 																																																			Y,
 																																																		layoutId: `F2Z73hGVB`,
@@ -1724,7 +1706,6 @@ var er,
 																																													k.div,
 																																													{
 																																														className: `framer-q6fw3l`,
-																																														// "data-framer-name": `3`,
 																																														layoutDependency:
 																																															Y,
 																																														layoutId: `runpFqyzq`,
@@ -1813,7 +1794,6 @@ var er,
 																																																	k.div,
 																																																	{
 																																																		className: `framer-3p3fyd`,
-																																																		// "data-framer-name": `Line`,
 																																																		layoutDependency:
 																																																			Y,
 																																																		layoutId: `TLmFt3GUg`,
@@ -2288,7 +2268,6 @@ var xr,
 									...f,
 									...v,
 									className: U(E, `framer-c8kp1x`, l, h),
-									// "data-framer-name": `Brand Strategy`,
 									layoutDependency: T,
 									layoutId: `SP7XAEd6j`,
 									ref: r,
@@ -2302,19 +2281,14 @@ var xr,
 									...br(
 										{
 											b9Wyp8VLX: {
-												// "data-framer-name": `Web Dev`,
 											},
 											KP_2YTyir: {
-												// "data-framer-name": `Visual Identity`,
 											},
 											KvncGGvMK: {
-												// "data-framer-name": `Content & Art`,
 											},
 											Vc8J_9MHY: {
-												// "data-framer-name": `Motion & 3D`,
 											},
 											wE1xRBhw2: {
-												// "data-framer-name": `Web Design`,
 											},
 										},
 										m,
@@ -3213,7 +3187,6 @@ var Ir,
 									...w,
 									...O,
 									className: U(te, `framer-48q2no`, u, E),
-									// "data-framer-name": `Desktop - 1200`,
 									layoutDependency: I,
 									layoutId: `q3tvGsm_J`,
 									ref: r,
@@ -3221,23 +3194,18 @@ var Ir,
 									...Fr(
 										{
 											c8SrvHYF9: {
-												// "data-framer-name": `Phone`,
 												"data-highlight": !0,
 												onTap: B,
 											},
 											HYDMSB1QK: {
-												// "data-framer-name": `Play Video - Phone`,
 											},
 											plIr2m6l7: {
-												// "data-framer-name": `Play Video - Desktop`,
 											},
 											Q8rDTe15S: {
-												// "data-framer-name": `Tablet`,
 												"data-highlight": !0,
 												onTap: ee,
 											},
 											VjyEGkyWs: {
-												// "data-framer-name": `Play Video - Tablet`,
 											},
 										},
 										T,
@@ -3330,7 +3298,6 @@ var Ir,
 													),
 													children: p(H, {
 														className: `framer-13v8m7x-container`,
-														// "data-framer-name": `Play`,
 														layoutDependency: I,
 														layoutId: `JzE5F_0Wn-container`,
 														name: `Play`,
@@ -3436,7 +3403,6 @@ var Ir,
 											re() &&
 												v(k.div, {
 													className: `framer-19kjlvo`,
-													// "data-framer-name": `Morph`,
 													layoutDependency: I,
 													layoutId: `SnN3SjnSe`,
 													style: {
@@ -3589,7 +3555,6 @@ var Ir,
 																),
 															}),
 															className: `framer-sphilo`,
-															// "data-framer-name": `⧖⧎⟡`,
 															fonts: [`Inter`],
 															layoutDependency: I,
 															layoutId: `iaZYd_Q8c`,
@@ -3673,7 +3638,6 @@ var Ir,
 																),
 															}),
 															className: `framer-16wec4f`,
-															// "data-framer-name": `Showreel`,
 															fonts: [`Inter`],
 															layoutDependency: I,
 															layoutId: `ypKoVunAn`,
@@ -5201,7 +5165,6 @@ var Pi,
 									...d,
 									...g,
 									className: U(E, `framer-l6vzul`, c, m),
-									// "data-framer-name": `Ticker Logotypes`,
 									layoutDependency: T,
 									layoutId: `OkLXuOcbp`,
 									ref: r,
@@ -5252,13 +5215,11 @@ var Pi,
 													slots: [
 														p(k.div, {
 															className: `framer-134xv2x`,
-															// "data-framer-name": `Logo`,
 															layoutDependency: T,
 															layoutId: `vegcdlROl-Ko5i1yllX-0`,
 															children: p(Ci, {
 																animated: !0,
 																className: `framer-sfvv57`,
-																// "data-framer-name": `Logo`,
 																layoutDependency:
 																	T,
 																layoutId: `vegcdlROl-Ko5i1yllX-0`,
@@ -5266,13 +5227,11 @@ var Pi,
 														}),
 														p(k.div, {
 															className: `framer-ggphfz`,
-															// "data-framer-name": `Logo`,
 															layoutDependency: T,
 															layoutId: `S4xDLdn5y-uF_dxlerC-1`,
 															children: p(_i, {
 																animated: !0,
 																className: `framer-2x8n9z`,
-																// "data-framer-name": `Logo`,
 																layoutDependency:
 																	T,
 																layoutId: `S4xDLdn5y-uF_dxlerC-1`,
@@ -5280,13 +5239,11 @@ var Pi,
 														}),
 														p(k.div, {
 															className: `framer-pvpt4o`,
-															// "data-framer-name": `Logo`,
 															layoutDependency: T,
 															layoutId: `Tyq1qSl3N-xJMcdT68T-2`,
 															children: p(ki, {
 																animated: !0,
 																className: `framer-866nug`,
-																// "data-framer-name": `Logo`,
 																layoutDependency:
 																	T,
 																layoutId: `Tyq1qSl3N-xJMcdT68T-2`,
@@ -5294,13 +5251,11 @@ var Pi,
 														}),
 														p(k.div, {
 															className: `framer-1b0qi2g`,
-															// "data-framer-name": `Logo`,
 															layoutDependency: T,
 															layoutId: `Lr9TRiREP-nZBQJ3CeH-3`,
 															children: p(di, {
 																animated: !0,
 																className: `framer-ij5aeb`,
-																// "data-framer-name": `Logo`,
 																layoutDependency:
 																	T,
 																layoutId: `Lr9TRiREP-nZBQJ3CeH-3`,
@@ -5354,7 +5309,6 @@ var Pi,
 													slots: [
 														p(k.div, {
 															className: `framer-e139ye`,
-															// "data-framer-name": `Logo`,
 															layoutDependency: T,
 															layoutId: `tjFcN_Ldf-La3YgQKJv-0`,
 															children: p(pa, {
@@ -5367,7 +5321,6 @@ var Pi,
 														}),
 														p(k.div, {
 															className: `framer-g5meg7`,
-															// "data-framer-name": `Logo`,
 															layoutDependency: T,
 															layoutId: `PlkBCKABb-XYcFcD1h7-1`,
 															children: p(Yi, {
@@ -5380,7 +5333,6 @@ var Pi,
 														}),
 														p(k.div, {
 															className: `framer-1e3uq9i`,
-															// "data-framer-name": `Logo`,
 															layoutDependency: T,
 															layoutId: `TbR7eR_48-PYGmlbHWZ-2`,
 															children: p(sa, {
@@ -5393,7 +5345,6 @@ var Pi,
 														}),
 														p(k.div, {
 															className: `framer-6wuc1j`,
-															// "data-framer-name": `Logo`,
 															layoutDependency: T,
 															layoutId: `QRWt5WHqL-OGlwO9zxS-3`,
 															children: p(ta, {
@@ -5573,7 +5524,6 @@ var Fa,
 									...h,
 									...x,
 									className: U(A, `framer-1hb1e72`, l, y),
-									// "data-framer-name": `Left - Desktop`,
 									layoutDependency: O,
 									layoutId: `DzHMWmjh1`,
 									ref: r,
@@ -5588,19 +5538,14 @@ var Fa,
 									...Pa(
 										{
 											DJYa0xN6I: {
-												// "data-framer-name": `Right - Tablet`,
 											},
 											Klu5O27zL: {
-												// "data-framer-name": `Right - Desktop`,
 											},
 											KN8HBoXiR: {
-												// "data-framer-name": `Left - Phone`,
 											},
 											vrTXDncJ7: {
-												// "data-framer-name": `Left - Tablet`,
 											},
 											yDrvcuK2u: {
-												// "data-framer-name": `Right - Phone`,
 											},
 										},
 										g,
@@ -6092,7 +6037,6 @@ var to,
 									...b,
 									...T,
 									className: U(P, `framer-1wxtkvu`, l, C),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: N,
 									layoutId: `NhGgdAV1p`,
 									ref: r,
@@ -6100,7 +6044,6 @@ var to,
 									...eo(
 										{
 											jlNxyOn5d: {
-												// "data-framer-name": `Tabelt & Phone`,
 											},
 										},
 										x,
@@ -6116,7 +6059,6 @@ var to,
 											}),
 										v(k.div, {
 											className: `framer-caytni`,
-											// "data-framer-name": `Block`,
 											layoutDependency: N,
 											layoutId: `PyPePcEUe`,
 											style: {
@@ -6129,7 +6071,6 @@ var to,
 											children: [
 												p(k.div, {
 													className: `framer-yl0ssn`,
-													// "data-framer-name": `Text`,
 													layoutDependency: N,
 													layoutId: `qusV_jGS_`,
 													style: {
@@ -6154,7 +6095,6 @@ var to,
 															}),
 														}),
 														className: `framer-1cg5ynl`,
-														// "data-framer-name": `The team challenged our assumptions, simplified the story, and shipped a modular site our marketers can actually edit. Performance, accessibility, analytics—nothing was an afterthought.`,
 														fonts: [`Inter`],
 														layoutDependency: N,
 														layoutId: `wqsD4X2Pg`,
@@ -6169,7 +6109,6 @@ var to,
 												}),
 												v(k.div, {
 													className: `framer-92dbjc`,
-													// "data-framer-name": `From`,
 													layoutDependency: N,
 													layoutId: `mdEaJIIEo`,
 													style: {
@@ -6182,7 +6121,6 @@ var to,
 													children: [
 														p(k.div, {
 															className: `framer-kpgljw`,
-															// "data-framer-name": `Logo`,
 															layoutDependency: N,
 															layoutId: `tRrS17bBw`,
 															style: {
@@ -6265,7 +6203,6 @@ var to,
 														}),
 														p(k.div, {
 															className: `framer-12xovgh`,
-															// "data-framer-name": `Category`,
 															layoutDependency: N,
 															layoutId: `OeGuRaoC3`,
 															style: {
@@ -6606,7 +6543,6 @@ var go,
 									...y,
 									...w,
 									className: U(N, `framer-iskzm6`, u, x),
-									// "data-framer-name": `Desktop - 1200`,
 									layoutDependency: j,
 									layoutId: `bYW4OT3Nj`,
 									ref: r,
@@ -6614,10 +6550,8 @@ var go,
 									...ho(
 										{
 											Sj2Lti1nD: {
-												// "data-framer-name": `Tablet`,
 											},
 											yhXwf1ILE: {
-												// "data-framer-name": `Phone`,
 											},
 										},
 										b,
@@ -6637,7 +6571,6 @@ var go,
 												children: [
 													p(k.div, {
 														className: `framer-lglisk`,
-														// "data-framer-name": `Number of Block`,
 														layoutDependency: j,
 														layoutId: `JPTCvUOse`,
 														children: p(R, {
@@ -6760,7 +6693,6 @@ var go,
 													P() &&
 														p(k.div, {
 															className: `framer-8xt1wi`,
-															// "data-framer-name": `Space`,
 															layoutDependency: j,
 															layoutId: `f6PhG0U14`,
 														}),
@@ -6780,7 +6712,6 @@ var go,
 														children: [
 															v(k.div, {
 																className: `framer-1gp7eec`,
-																// "data-framer-name": `Clients`,
 																layoutDependency:
 																	j,
 																layoutId: `ilJBMI5ji`,
@@ -7236,7 +7167,6 @@ var go,
 													}),
 													v(k.div, {
 														className: `framer-wza2tk`,
-														// "data-framer-name": `2`,
 														layoutDependency: j,
 														layoutId: `ZbZ1sDYCb`,
 														children: [
@@ -7711,7 +7641,6 @@ var go,
 													}),
 													v(k.div, {
 														className: `framer-3qdvbm`,
-														// "data-framer-name": `3`,
 														layoutDependency: j,
 														layoutId: `J9URtqrEb`,
 														children: [
@@ -7817,7 +7746,6 @@ var go,
 																}),
 															v(k.div, {
 																className: `framer-1yw39j4`,
-																// "data-framer-name": `Clients`,
 																layoutDependency:
 																	j,
 																layoutId: `n5enGaSMb`,
@@ -8679,7 +8607,6 @@ Schnell. Klar. Effektiv.
 									...C,
 									...D,
 									className: U(ue, `framer-1r93okk`, u, T),
-									// "data-framer-name": `Left`,
 									layoutDependency: F,
 									layoutId: `ipJnjQMme`,
 									ref: r,
@@ -8687,48 +8614,36 @@ Schnell. Klar. Effektiv.
 									...Fo(
 										{
 											a29KvRO3R: {
-												// "data-framer-name": `Center - Hover`,
 											},
 											bNsjfSikG: {
-												// "data-framer-name": `Center - Expand`,
 											},
 											cw8cZIAQT: {
-												// "data-framer-name": `Tablet`,
 												"data-highlight": !0,
 												onTap: ee,
 											},
 											dRvWEwRlb: {
-												// "data-framer-name": `Left - Hover`,
 											},
 											gtj_ShKNk: {
-												// "data-framer-name": `Phone`,
 												"data-highlight": !0,
 												onTap: V,
 											},
 											HzVeCwGkF: {
-												// "data-framer-name": `Tablet - Expand`,
 												"data-highlight": !0,
 												onTap: B,
 											},
 											ItUJOTNSa: {
-												// "data-framer-name": `Right`,
 											},
 											nCZKaHek2: {
-												// "data-framer-name": `Right - Expand`,
 											},
 											NsNLyvBWj: {
-												// "data-framer-name": `Right - Hover`,
 											},
 											th8xp_CDP: {
-												// "data-framer-name": `Phone - Expand`,
 												"data-highlight": !0,
 												onTap: te,
 											},
 											wPEgEVXSR: {
-												// "data-framer-name": `Center`,
 											},
 											xFImwaHDH: {
-												// "data-framer-name": `Left - Expand`,
 											},
 										},
 										w,
@@ -8742,7 +8657,6 @@ Schnell. Klar. Effektiv.
 										children: v(k.div, {
 											className: `framer-cotk17`,
 											"data-framer-cursor": x,
-											// "data-framer-name": `Card`,
 											"data-highlight": !0,
 											layoutDependency: F,
 											layoutId: `aAYNkb34_`,
@@ -8857,7 +8771,6 @@ Schnell. Klar. Effektiv.
 														fe() &&
 															p(k.div, {
 																className: `framer-1pjswn8`,
-																// "data-framer-name": `Arrow`,
 																layoutDependency:
 																	F,
 																layoutId: `AkzmNojM6`,
@@ -8919,7 +8832,6 @@ Schnell. Klar. Effektiv.
 																),
 															}),
 															className: `framer-cw6b12`,
-															// "data-framer-name": `Web Design`,
 															fonts: [`Inter`],
 															layoutDependency: F,
 															layoutId: `ub4WxA0q_`,
@@ -10050,7 +9962,6 @@ var rs,
 									...x,
 									...E,
 									className: U(F, `framer-16u3uhn`, l, w),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: P,
 									layoutId: `QChA3vInH`,
 									ref: r,
@@ -10065,10 +9976,8 @@ var rs,
 									...ns(
 										{
 											Ed8SL43KI: {
-												// "data-framer-name": `Tablet`,
 											},
 											KAum8NtpX: {
-												// "data-framer-name": `Phone`,
 											},
 										},
 										C,
@@ -10710,7 +10619,6 @@ var _s,
 									...T,
 									...A,
 									className: U(z, `framer-6v1ltp`, u, D),
-									// "data-framer-name": `Desktop - 1200`,
 									layoutDependency: L,
 									layoutId: `E9BtmEr1x`,
 									ref: r,
@@ -10718,10 +10626,8 @@ var _s,
 									...gs(
 										{
 											CxxMae0C0: {
-												// "data-framer-name": `Phone`,
 											},
 											SRe8kAlSA: {
-												// "data-framer-name": `Tablet`,
 											},
 										},
 										E,
@@ -10803,7 +10709,6 @@ var _s,
 															}),
 														}),
 														className: `framer-1bs00o4`,
-														// "data-framer-name": `[02]`,
 														fonts: [`Inter`],
 														layoutDependency: L,
 														layoutId: `j0RaP7Uyb`,
@@ -11213,7 +11118,6 @@ var Ms,
 									...g,
 									...C,
 									className: U(j, `framer-t56bmb`, l, b),
-									// "data-framer-name": `Variant 1 - Desktop`,
 									layoutDependency: A,
 									layoutId: `EZxrKSuSz`,
 									ref: r,
@@ -11221,10 +11125,8 @@ var Ms,
 									...js(
 										{
 											aCmhujSns: {
-												// "data-framer-name": `Variant 1 - Phone`,
 											},
 											Je4Dkk4Gd: {
-												// "data-framer-name": `Variant 1 - Tablet`,
 											},
 										},
 										y,
@@ -11312,7 +11214,6 @@ var Ms,
 												}),
 											}),
 											className: `framer-17q8g5o`,
-											// "data-framer-name": `Text`,
 											fonts: [`Inter`],
 											layoutDependency: A,
 											layoutId: `R0mjLXRz8`,
@@ -13801,7 +13702,6 @@ var cu,
 									...O,
 									...P,
 									className: U(V, `framer-1mgwu4q`, u, j),
-									// "data-framer-name": `Card`,
 									layoutDependency: B,
 									layoutId: `NB2goFkO3`,
 									ref: r,
@@ -14059,7 +13959,6 @@ var cu,
 																														k.div,
 																														{
 																															className: `framer-1016scr`,
-																															// "data-framer-name": `Card`,
 																															layoutDependency:
 																																B,
 																															layoutId: `xuOCkyLt2`,
@@ -14256,7 +14155,6 @@ var cu,
 																																																	k.div,
 																																																	{
 																																																		className: `framer-1ibws8z`,
-																																																		// "data-framer-name": `Category`,
 																																																		layoutDependency:
 																																																			B,
 																																																		layoutId: `md4Z61sY4`,
@@ -14292,7 +14190,6 @@ var cu,
 																																																							},
 																																																						),
 																																																					className: `framer-xpcnyv`,
-																																																					// "data-framer-name": `Name of Category`,
 																																																					fonts: [
 																																																						`Inter`,
 																																																					],
@@ -14672,7 +14569,6 @@ var Cu,
 									...T,
 									...A,
 									className: U(z, `framer-xemiho`, u, D),
-									// "data-framer-name": `Variant 1 - Desktop`,
 									layoutDependency: L,
 									layoutId: `camO0iR5M`,
 									ref: r,
@@ -14680,28 +14576,20 @@ var Cu,
 									...Su(
 										{
 											CP8Wi04KU: {
-												// "data-framer-name": `Variant 2 - Desktop`,
 											},
 											fokodO6Yd: {
-												// "data-framer-name": `Variant 4 - Desktop`,
 											},
 											klSVgkPCI: {
-												// "data-framer-name": `Variant 4 - Tablet`,
 											},
 											Mw72qruSr: {
-												// "data-framer-name": `Variant 2 - Tablet`,
 											},
 											nWu67d1C9: {
-												// "data-framer-name": `Variant 2 - Phone`,
 											},
 											rWN7ullcS: {
-												// "data-framer-name": `Variant 1 - Phone`,
 											},
 											VEvPF1ITZ: {
-												// "data-framer-name": `Variant 3 - Desktop`,
 											},
 											Y3MInZ9G7: {
-												// "data-framer-name": `Variant 1 - Tablet`,
 											},
 										},
 										E,
@@ -14729,7 +14617,6 @@ var Cu,
 													children: [
 														p(k.div, {
 															className: `framer-8holjj`,
-															// "data-framer-name": `Number of Block`,
 															layoutDependency: L,
 															layoutId: `M34Rj6L7E`,
 															children: p(R, {
@@ -14904,7 +14791,6 @@ var Cu,
 														}),
 														v(k.div, {
 															className: `framer-hybll`,
-															// "data-framer-name": `Count Works`,
 															layoutDependency: L,
 															layoutId: `H97U2Jw3f`,
 															children: [
@@ -14930,7 +14816,6 @@ var Cu,
 																		},
 																	),
 																	className: `framer-70ffel`,
-																	// "data-framer-name": `12`,
 																	fonts: [
 																		`Inter`,
 																	],
@@ -15284,7 +15169,6 @@ var Cu,
 													B() &&
 														v(k.div, {
 															className: `framer-fwcio`,
-															// "data-framer-name": `Text and Metrics`,
 															layoutDependency: L,
 															layoutId: `wB67Tma9J`,
 															children: [
@@ -15322,7 +15206,6 @@ var Cu,
 																		},
 																	),
 																	className: `framer-1rk3n29`,
-																	// "data-framer-name": `Digitale Produkte mit messbarer Wirkung. Jedes Projekt verbindet Strategie, Design und Entwicklung zu klaren Ergebnissen — mit Fokus auf Performance, Nutzererlebnis und Wachstum. Every case lists scope, timeline, stack and KPI movement with before and after.`,
 																	fonts: [
 																		`Inter`,
 																	],
@@ -15348,7 +15231,6 @@ var Cu,
 																}),
 																v(k.div, {
 																	className: `framer-ykzhgf`,
-																	// "data-framer-name": `Metrics`,
 																	layoutDependency:
 																		L,
 																	layoutId: `z2yrGiuad`,
@@ -17645,7 +17527,6 @@ var rd,
 										...h,
 										...x,
 										className: U(A, `framer-10gfi13`, l, y),
-										// "data-framer-name": `Desktop - 1200`,
 										layoutDependency: O,
 										layoutId: `ssk3UDGEg`,
 										ref: r,
@@ -17656,10 +17537,8 @@ var rd,
 										...nd(
 											{
 												H7foNv_Ti: {
-													// "data-framer-name": `Phone`,
 												},
 												Yqp02agwX: {
-													// "data-framer-name": `Tablet`,
 												},
 											},
 											g,
@@ -17691,7 +17570,6 @@ var rd,
 														src: `/assets/images/yhlV6BFO3bhzXeyZiXDsNwf6E.svg`,
 													},
 													className: `framer-1akijo1`,
-													// "data-framer-name": `White Dots Background`,
 													layoutDependency: O,
 													layoutId: `BcPatyCJ2`,
 													...nd(
@@ -17813,7 +17691,6 @@ var rd,
 													children: [
 														v(k.div, {
 															className: `framer-hl1zq3`,
-															// "data-framer-name": `Book and Founders`,
 															layoutDependency: O,
 															layoutId: `rnn7BKQAN`,
 															children: [
@@ -17983,7 +17860,6 @@ a Project`,
 														}),
 														v(k.div, {
 															className: `framer-nit37j`,
-															// "data-framer-name": `Full Wide Logo`,
 															layoutDependency: O,
 															layoutId: `ezjNJWtOw`,
 															children: [
@@ -18649,7 +18525,6 @@ Schnell. Klar. Effektiv.
 									...w,
 									...O,
 									className: U(L, `framer-1uquttl`, u, E),
-									// "data-framer-name": `Desktop - 1200`,
 									layoutDependency: I,
 									layoutId: `yDsUBoQFy`,
 									ref: r,
@@ -18657,10 +18532,8 @@ Schnell. Klar. Effektiv.
 									...Cd(
 										{
 											LBb1scSzl: {
-												// "data-framer-name": `Tablet`,
 											},
 											tVhqx8SVi: {
-												// "data-framer-name": `Phone`,
 											},
 										},
 										T,
@@ -18674,7 +18547,6 @@ Schnell. Klar. Effektiv.
 										children: [
 											v(k.div, {
 												className: `framer-1ggv7xe`,
-												// "data-framer-name": `Welcome Text`,
 												layoutDependency: I,
 												layoutId: `I5XNW0TKp`,
 												children: [
@@ -18692,7 +18564,6 @@ Schnell. Klar. Effektiv.
 															}),
 														}),
 														className: `framer-13q9l6d`,
-														// "data-framer-name": `Heading Welcome`,
 														fonts: [`Inter`],
 														layoutDependency: I,
 														layoutId: `DL251TzzV`,
@@ -19105,7 +18976,6 @@ Schnell. Klar. Effektiv.
 																	}),
 																	p(k.div, {
 																		className: `framer-a6u6x`,
-																		// "data-framer-name": `Back`,
 																		layoutDependency:
 																			I,
 																		layoutId: `oAFKJjBRi`,
@@ -19121,7 +18991,6 @@ Schnell. Klar. Effektiv.
 															}),
 															p(k.div, {
 																className: `framer-qlaxu0`,
-																// "data-framer-name": `Text`,
 																layoutDependency:
 																	I,
 																layoutId: `CjYd3Js02`,
@@ -19167,7 +19036,6 @@ Schnell. Klar. Effektiv.
 																		},
 																	),
 																	className: `framer-1679kgq`,
-																	// "data-framer-name": `Text`,
 																	fonts: [
 																		`Inter`,
 																	],
@@ -19189,7 +19057,6 @@ Schnell. Klar. Effektiv.
 													}),
 													v(k.div, {
 														className: `framer-1rc9j14`,
-														// "data-framer-name": `Stack - JS`,
 														layoutDependency: I,
 														layoutId: `IGmb2H77o`,
 														children: [
@@ -19635,7 +19502,6 @@ var Hd,
 									...h,
 									...x,
 									className: U(z, `framer-1x1nhym`, l, y),
-									// "data-framer-name": `Closed - Dektop`,
 									"data-highlight": !0,
 									layoutDependency: O,
 									layoutId: `gS5VzDuOb`,
@@ -19648,15 +19514,12 @@ var Hd,
 												
 											},
 											De4Ri6k8c: {
-												// "data-framer-name": `Open - Tablet & Phone`,
 												onTap: I,
 											},
 											NPW5ss4Tj: {
-												// "data-framer-name": `Closed - Tablet & Phone`,
 												onTap: F,
 											},
 											sLaFe1zrq: {
-												// "data-framer-name": `Open - Dektop`,
 												onTap: P,
 											},
 										},
@@ -19732,7 +19595,6 @@ var Hd,
 												ee() &&
 													p(k.div, {
 														className: `framer-g6en2c`,
-														// "data-framer-name": `Arrow`,
 														layoutDependency: O,
 														layoutId: `N79ElAIeu`,
 														style: { rotate: 0 },
@@ -19758,7 +19620,6 @@ var Hd,
 										B() &&
 											p(k.div, {
 												className: `framer-1f60i6l`,
-												// "data-framer-name": `Arrow`,
 												layoutDependency: O,
 												layoutId: `nEumlIc2T`,
 												style: { opacity: 0 },
@@ -19848,7 +19709,6 @@ var Hd,
 											}),
 										p(k.div, {
 											className: `framer-xsa57j`,
-											// "data-framer-name": `Line`,
 											layoutDependency: O,
 											layoutId: `sEYBHFvFn`,
 											style: {
@@ -20123,7 +19983,6 @@ var nf,
 									...g,
 									...C,
 									className: U(j, `framer-1cpe7iw`, u, b),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: A,
 									layoutId: `DbNLhiD8V`,
 									ref: r,
@@ -20131,10 +19990,8 @@ var nf,
 									...tf(
 										{
 											clN00I6D9: {
-												// "data-framer-name": `Tablet`,
 											},
 											tM7AN0qXX: {
-												// "data-framer-name": `Phone`,
 											},
 										},
 										y,
@@ -20250,7 +20107,6 @@ var nf,
 											children: [
 												p(k.div, {
 													className: `framer-i5n8wz`,
-													// "data-framer-name": `Top Line`,
 													layoutDependency: A,
 													layoutId: `nerL1Cpmj`,
 													style: {
@@ -20942,7 +20798,6 @@ var vf,
 									...f,
 									...y,
 									className: U(D, `framer-1jprlzd`, l, h),
-									// "data-framer-name": `Desktop - 1200`,
 									layoutDependency: E,
 									layoutId: `XOO4g1eJ2`,
 									ref: r,
@@ -20950,10 +20805,8 @@ var vf,
 									..._f(
 										{
 											p916nDvLq: {
-												// "data-framer-name": `Phone`,
 											},
 											ptktdtr8e: {
-												// "data-framer-name": `Tablet`,
 											},
 										},
 										m,
@@ -21352,7 +21205,6 @@ var Nf,
 										...x,
 										...E,
 										className: `${U(F, `framer-1lxb0kk`, u, w)} framer-3zbxli`,
-										// "data-framer-name": `Desktop - 1200`,
 										layoutDependency: P,
 										layoutId: `td0vABXtP`,
 										ref: r,
@@ -21375,10 +21227,8 @@ var Nf,
 													
 												},
 												sgY9pM7ej: {
-													// "data-framer-name": `Tablet`,
 												},
 												zPFlJlWOv: {
-													// "data-framer-name": `Phone`,
 												},
 											},
 											C,
@@ -21398,7 +21248,6 @@ var Nf,
 													}),
 												}),
 												className: `framer-1of1xsj`,
-												// "data-framer-name": `Contact our manager`,
 												fonts: [`Inter`],
 												layoutDependency: P,
 												layoutId: `T9qsUu7bE`,
@@ -21449,7 +21298,6 @@ var Nf,
 											}),
 											v(k.div, {
 												className: `framer-cbfy0m`,
-												// "data-framer-name": `Images`,
 												layoutDependency: P,
 												layoutId: `wqjbCkgx6`,
 												children: [
@@ -21470,7 +21318,6 @@ var Nf,
 															positionY: `center`,
 														},
 														className: `framer-103s5gp`,
-														// "data-framer-name": `Phone`,
 														layoutDependency: P,
 														layoutId: `QfkQMrHSo`,
 														transformTemplate: zf,
@@ -21574,7 +21421,6 @@ var Nf,
 															positionY: `center`,
 														},
 														className: `framer-d2fngp`,
-														// "data-framer-name": `Manager`,
 														fitImageDimension: `width`,
 														layoutDependency: P,
 														layoutId: `twiKj4ban`,
@@ -21658,7 +21504,6 @@ var Nf,
 															positionY: `center`,
 														},
 														className: `framer-wjhhfl`,
-														// "data-framer-name": `Email`,
 														layoutDependency: P,
 														layoutId: `HHBAIp9oe`,
 														transformTemplate: zf,
@@ -22023,7 +21868,6 @@ var Yf,
 									...x,
 									...E,
 									className: U(F, `framer-ooz597`, l, w),
-									// "data-framer-name": `Left - Desktop `,
 									layoutDependency: P,
 									layoutId: `HIBZ9_8Rt`,
 									ref: r,
@@ -22031,13 +21875,10 @@ var Yf,
 									...Jf(
 										{
 											dYYpyaADt: {
-												// "data-framer-name": `Right - Desktop `,
 											},
 											LBDK0yOcv: {
-												// "data-framer-name": `Left - Phone`,
 											},
 											vaZPvQuoW: {
-												// "data-framer-name": `Left - Tablet`,
 											},
 										},
 										C,
@@ -22071,7 +21912,6 @@ var Yf,
 														}),
 													}),
 													className: `framer-gtz929`,
-													// "data-framer-name": `[001]`,
 													fonts: [`Inter`],
 													layoutDependency: P,
 													layoutId: `yx7Yg8Vjp`,
@@ -22119,7 +21959,6 @@ var Yf,
 														}),
 													}),
 													className: `framer-xn020h`,
-													// "data-framer-name": `Discover`,
 													fonts: [`Inter`],
 													layoutDependency: P,
 													layoutId: `lNtX0V9aH`,
@@ -22201,7 +22040,6 @@ var Yf,
 										}),
 										v(k.div, {
 											className: `framer-1af8dsx`,
-											// "data-framer-name": `Text`,
 											layoutDependency: P,
 											layoutId: `ux4HT7hjO`,
 											children: [
@@ -22218,7 +22056,6 @@ var Yf,
 														}),
 													}),
 													className: `framer-1njzv24`,
-													// "data-framer-name": `We align on goals, audience, and constraints. We review analytics and current assets, run stakeholder interviews, and map risks and assumptions. The outcome is shared clarity on what success looks like.`,
 													fonts: [`Inter`],
 													layoutDependency: P,
 													layoutId: `oqGklutyU`,
@@ -22266,7 +22103,6 @@ var Yf,
 														}),
 													}),
 													className: `framer-f472zj`,
-													// "data-framer-name": `2–4 days`,
 													fonts: [`Inter`],
 													layoutDependency: P,
 													layoutId: `jx6DiviUh`,
@@ -22591,7 +22427,6 @@ var cp,
 										...g,
 										...C,
 										className: U(j, `framer-mrlkn7`, u, b),
-										// "data-framer-name": `Desktop - 1200`,
 										layoutDependency: A,
 										layoutId: `tjnyEoAIU`,
 										ref: r,
@@ -22599,10 +22434,8 @@ var cp,
 										...sp(
 											{
 												jbmHX5nok: {
-													// "data-framer-name": `Tablet`,
 												},
 												UVQ9QPaeD: {
-													// "data-framer-name": `Phone`,
 												},
 											},
 											y,
@@ -22615,7 +22448,6 @@ var cp,
 											layoutId: `p2_bg2N8J`,
 											children: p(k.div, {
 												className: `framer-offvkk`,
-												// "data-framer-name": `Dark Block`,
 												layoutDependency: A,
 												layoutId: `Jpv0fpfSp`,
 												style: {
@@ -22728,7 +22560,6 @@ var cp,
 																		},
 																	),
 																	className: `framer-101p2du`,
-																	// "data-framer-name": `[02]`,
 																	fonts: [
 																		`Inter`,
 																	],
@@ -22783,7 +22614,6 @@ var cp,
 															children: [
 																p(k.div, {
 																	className: `framer-14n49c6`,
-																	// "data-framer-name": `3D Rotor`,
 																	layoutDependency:
 																		A,
 																	layoutId: `Se383yVZL`,
@@ -22985,7 +22815,6 @@ var cp,
 																N() &&
 																	p(k.div, {
 																		className: `framer-1y94dwt`,
-																		// "data-framer-name": `Line`,
 																		layoutDependency:
 																			A,
 																		layoutId: `xAZkYHy2f`,
@@ -22997,7 +22826,6 @@ var cp,
 																N() &&
 																	p(k.div, {
 																		className: `framer-1ch87p8`,
-																		// "data-framer-name": `Line`,
 																		layoutDependency:
 																			A,
 																		layoutId: `t9ZTXjN1E`,
@@ -23138,7 +22966,6 @@ var cp,
 																N() &&
 																	p(k.div, {
 																		className: `framer-1cyzi0h`,
-																		// "data-framer-name": `Line`,
 																		layoutDependency:
 																			A,
 																		layoutId: `YUFTBD1GB`,
@@ -23271,7 +23098,6 @@ var cp,
 																N() &&
 																	p(k.div, {
 																		className: `framer-17wmt9r`,
-																		// "data-framer-name": `Line`,
 																		layoutDependency:
 																			A,
 																		layoutId: `yMG4dcNKw`,
@@ -23412,7 +23238,6 @@ var cp,
 																N() &&
 																	p(k.div, {
 																		className: `framer-mek5ub`,
-																		// "data-framer-name": `Line`,
 																		layoutDependency:
 																			A,
 																		layoutId: `IF5D0uxEJ`,
@@ -24849,4 +24674,3 @@ Schnell. Klar. Effektiv.`,
 		}));
 })();
 export { am as __FramerMetadata__, im as default, zp as queryParamNames };
-//# sourceMappingURL=components-pages.mjs.map

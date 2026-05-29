@@ -13,4 +13,3 @@ var r,
 			(a = `framer-njEjc`));
 	});
 export { o as i, i as n, r, a as t };
-//# sourceMappingURL=q7NcKTKUL.DsgFejH8.mjs.map

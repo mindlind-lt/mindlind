@@ -168,7 +168,6 @@ var Ce,
 									...O,
 									...M,
 									className: C(L, `framer-1tcauyl`, g, A),
-									// "data-framer-name": `Variant 1`,
 									layoutDependency: I,
 									layoutId: `MZhRx4v9y`,
 									ref: i,
@@ -230,7 +229,6 @@ var Ce,
 									),
 									children: l(f.div, {
 										className: `framer-9haah5`,
-										// "data-framer-name": `Card`,
 										layoutDependency: I,
 										layoutId: `KrLCqZFZW`,
 										style: {
@@ -430,7 +428,6 @@ var Ce,
 																												f.div,
 																												{
 																													className: `framer-ielyc9`,
-																													// "data-framer-name": `Category`,
 																													layoutDependency:
 																														I,
 																													layoutId: `bwxSXivjf`,
@@ -466,7 +463,6 @@ var Ce,
 																																		},
 																																	),
 																																className: `framer-3d2c3y`,
-																																// "data-framer-name": `Name of Category`,
 																																fonts: [
 																																	`Inter`,
 																																],
@@ -720,7 +716,6 @@ var Ie,
 								...y,
 								...w,
 								className: C(N, `framer-nowrxt`, d, x),
-								// "data-framer-name": `Default`,
 								"data-highlight": !0,
 								layoutDependency: k,
 								layoutId: `vdPuGcDle`,
@@ -745,13 +740,10 @@ var Ie,
 								...Fe(
 									{
 										GY4BTMz7_: {
-											// "data-framer-name": `Active - Phone`,
 										},
 										j8e4C3z9s: {
-											// "data-framer-name": `Active`,
 										},
 										VBBSOhe5L: {
-											// "data-framer-name": `Default - Phone`,
 										},
 									},
 									b,
@@ -1660,7 +1652,6 @@ var We,
 									...A,
 									...I,
 									className: C(ge, `framer-c9eh0d`, h, se),
-									// "data-framer-name": `All - Desktop`,
 									layoutDependency: R,
 									layoutId: `J7DS_HoSO`,
 									ref: r,
@@ -1668,16 +1659,12 @@ var We,
 									...J(
 										{
 											eALG5uHM4: {
-												// "data-framer-name": `Limited to 3 - Phone`,
 											},
 											GLMFLpW43: {
-												// "data-framer-name": `Limited to 3 - Tablet`,
 											},
 											PFQfmNptX: {
-												// "data-framer-name": `All - Phone`,
 											},
 											xD2gGXCuN: {
-												// "data-framer-name": `Limited to 3 - Desktop`,
 											},
 										},
 										F,
@@ -2393,4 +2380,3 @@ var We,
 			}));
 	});
 export { xt as n, bt as t };
-//# sourceMappingURL=ZCUtdxyFY.BHixxRZV.mjs.map

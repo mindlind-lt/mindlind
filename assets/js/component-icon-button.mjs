@@ -421,7 +421,6 @@ var _e,
 										...v,
 										...T,
 										className: `${y(L, `framer-gaqzk1`, p, x)} framer-f16gsk`,
-										// "data-framer-name": `Variant 1`,
 										"data-highlight": !0,
 										layoutDependency: j,
 										layoutId: `SojIkM7y_`,
@@ -431,16 +430,13 @@ var _e,
 										...ge(
 											{
 												jfDccm5D1: {
-													// "data-framer-name": `Variant 1 - Hover`,
 													onMouseLeave: P,
 												},
 												KcF5q6tQW: {
-													// "data-framer-name": `Variant 2 - Hover`,
 													onMouseEnter: void 0,
 													onMouseLeave: I,
 												},
 												RXAfMhx00: {
-													// "data-framer-name": `Variant 2`,
 													onMouseEnter: F,
 												},
 											},
@@ -475,7 +471,6 @@ var _e,
 												animated: !0,
 												className: `framer-jq73x8`,
 												Component: g,
-												// "data-framer-name": `Icon`,
 												layoutDependency: j,
 												layoutId: `KWEs8z2x_`,
 											}),
@@ -670,7 +665,6 @@ var De,
 									...D,
 									...j,
 									className: y(L, `framer-173n7xw`, p, k),
-									// "data-framer-name": `Variant 1`,
 									layoutDependency: I,
 									layoutId: `p_hW1uUUY`,
 									ref: r,
@@ -678,7 +672,6 @@ var De,
 									...Z(
 										{
 											skpqRIFOX: {
-												// "data-framer-name": `Variant 2`,
 											},
 										},
 										O,
@@ -915,4 +908,3 @@ export {
 	ze as t,
 	P as u,
 };
-//# sourceMappingURL=component-icon-button.mjs.map

@@ -741,4 +741,3 @@ var h,
 			}));
 	});
 export { g as n, m as t };
-//# sourceMappingURL=TwistGallery.mjs.map

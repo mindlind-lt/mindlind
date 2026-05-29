@@ -2307,7 +2307,6 @@ e(() => {
 									children: [
 										a(m.section, {
 											className: `framer-13iovet`,
-											// "data-framer-name": `Post - Section`,
 											layout: ke,
 											children: u(`div`, {
 												className: `framer-1dsol52`,
@@ -2381,11 +2380,9 @@ e(() => {
 																...Z(A),
 															},
 															className: `framer-4xw0m1`,
-															// "data-framer-name": `Main Image of Post`,
 															children: [
 																a(`div`, {
 																	className: `framer-1bnqxlz`,
-																	// "data-framer-name": `Dark Fade`,
 																}),
 																a(re, {
 																	links: [
@@ -2453,7 +2450,6 @@ e(() => {
 																								N,
 																								{
 																									className: `framer-1ipbzst-container`,
-																									// "data-framer-name": `Back Link`,
 																									name: `Back Link`,
 																									nodeId: `jP7cysE1m`,
 																									rendersWithMotion:
@@ -2612,7 +2608,6 @@ e(() => {
 																		},
 																	),
 																	className: `framer-xxpuv`,
-																	// "data-framer-name": `Date`,
 																	fonts: [
 																		`Inter`,
 																	],
@@ -2644,7 +2639,6 @@ e(() => {
 																!0,
 															children: O,
 															className: `framer-3bo595`,
-															// "data-framer-name": `Design Systems That Ship Most design systems never leave Figma. They overreach, stall, and become museums. This playbook keeps scope lean, aligns with a near-term launch, and lands in production in 30 days or less. Principles Ship > scope. Start with the next release, not the perfect library. Evidence > taste. Decisions tie to KPIs, constraints, and usage data. Tokens first. Components inherit from tokens to stay consistent. One source of truth. The code library is canonical; Figma mirrors it. Accessible by default. AA contrast, focus states, motion alternatives. Delete to scale. Remove low-usage parts; entropy kills speed. Day 0–2: Define the smallest viable system (SVS) Inputs: product goals, target pages, content samples, brand constraints, tech stack.\u2028Outputs: scope doc and success metrics. Scope SVS: Tokens: color, type scale, spacing, radius, shadow, motion (dur/ease), z-index. Components (8–12 max): Button, Link, Input, Select, Checkbox, Radio, Tag/Badge, Card, Modal/Sheet, Navbar, Footer. Patterns (2–3): Page header, Form group, Empty state. KPIs to watch: LCP ≤2.0s mobile, CLS ≤0.05, conversion or task success +X%. Day 3–7: Tokens and anatomy Design tokens (names map to intent, not hex or pixels): -color-fg/fg-muted/bg/bg-elevated/brand/brand-contrast -radius-xs/s/m/l -space-2/4/8/12/16/24/32 -font-s/m/l/xl/2xl with line-height and letter-spacing pairs Motion: --ease-standard, --dur-150/200/300 Anatomy docs per component: Slots, states, size variants, min hit areas, error/help text rules. Accessibility notes: roles, labels, focus order, ARIA where needed. Day 8–14: Build the code library Tech: React/Next + CSS variables. Export tokens as CSS and JSON. Avoid runtime theming complexity at v1. Component rules: Only transform/opacity for animations; respect prefers-reduced-motion. Keyboard support: Tab, Shift+Tab, Space/Enter, Arrow keys where relevant. Variants via class names, not prop explosions. Zero magic margins. Spacing comes from layout components or utilities.`,
 															fonts: [`Inter`],
 															stylesPresetsClassNames:
 																{
@@ -2784,11 +2778,9 @@ e(() => {
 															}),
 															u(`div`, {
 																className: `framer-1l85j7x`,
-																// "data-framer-name": `Creator`,
 																children: [
 																	u(`div`, {
 																		className: `framer-1usmbvg`,
-																		// "data-framer-name": `Info`,
 																		children:
 																			[
 																				a(
@@ -2969,7 +2961,6 @@ e(() => {
 																	}),
 																	a(`div`, {
 																		className: `framer-j6ybrd`,
-																		// "data-framer-name": `Position`,
 																		children:
 																			a(
 																				b,
@@ -2995,7 +2986,6 @@ e(() => {
 																							},
 																						),
 																					className: `framer-1m4uxbm`,
-																					// "data-framer-name": `Design Director`,
 																					fonts: [
 																						`Inter`,
 																					],
@@ -3031,7 +3021,6 @@ e(() => {
 																					`div`,
 																					{
 																						className: `framer-iv97xk`,
-																						// "data-framer-name": `Prev`,
 																						children:
 																							[
 																								Ne !==
@@ -3258,7 +3247,6 @@ e(() => {
 																													},
 																												),
 																											className: `framer-1bio65p`,
-																											// "data-framer-name": `Previous`,
 																											fonts: [
 																												`Inter`,
 																											],
@@ -3282,7 +3270,6 @@ e(() => {
 																					`div`,
 																					{
 																						className: `framer-23qc56`,
-																						// "data-framer-name": `Next`,
 																						children:
 																							[
 																								Fe !==
@@ -3344,7 +3331,6 @@ e(() => {
 																													},
 																												),
 																											className: `framer-nx7g1l`,
-																											// "data-framer-name": `Next`,
 																											fonts: [
 																												`Inter`,
 																											],
@@ -3860,4 +3846,3 @@ e(() => {
 		}));
 })();
 export { Di as __FramerMetadata__, Ei as default, pi as queryParamNames };
-//# sourceMappingURL=component-blog-bundle.mjs.map

@@ -176,7 +176,6 @@ var qe,
 									...v,
 									...S,
 									className: D(te, `framer-1rmbsm8`, f, b),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: A,
 									layoutId: `kyFKAMX03`,
 									ref: i,
@@ -184,10 +183,8 @@ var qe,
 									...Ke(
 										{
 											QrmbrSoVs: {
-												// "data-framer-name": `Phone`,
 											},
 											wPg_bfYE3: {
-												// "data-framer-name": `Tablet`,
 											},
 										},
 										y,
@@ -207,7 +204,6 @@ var qe,
 											}),
 											d(h.div, {
 												className: `framer-1gsl0iv`,
-												// "data-framer-name": `Big Heading`,
 												layoutDependency: A,
 												layoutId: `E2OOkwiCu`,
 												children: [
@@ -265,7 +261,6 @@ var qe,
 															}),
 														}),
 														className: `framer-1deab4i`,
-														// "data-framer-name": `Fit Heading`,
 														fonts: [
 															`GF;Space Mono-regular`,
 														],
@@ -2145,7 +2140,6 @@ Beverly Hills 55a`,
 									...B,
 									...fe,
 									className: D(_e, `framer-n4libs`, m, le),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: q,
 									layoutId: `xBwdZ2302`,
 									ref: i,
@@ -2153,10 +2147,8 @@ Beverly Hills 55a`,
 									...Z(
 										{
 											FndEef2iH: {
-												// "data-framer-name": `Tablet`,
 											},
 											scq1czhhz: {
-												// "data-framer-name": `Phone`,
 											},
 										},
 										V,
@@ -2175,7 +2167,6 @@ Beverly Hills 55a`,
 											children: [
 												d(h.div, {
 													className: `framer-ymnuw5`,
-													// "data-framer-name": `Left`,
 													layoutDependency: q,
 													layoutId: `KCcw0UlwH`,
 													children: [
@@ -2409,7 +2400,6 @@ Beverly Hills 55a`,
 														L &&
 															d(h.div, {
 																className: `framer-1981dwa`,
-																// "data-framer-name": `Email`,
 																layoutDependency:
 																	q,
 																layoutId: `rIK15r1s_`,
@@ -2436,7 +2426,6 @@ Beverly Hills 55a`,
 																				},
 																			),
 																		className: `framer-1ln6nqs`,
-																		// "data-framer-name": `Please tell us about your project and brief to:`,
 																		fonts: [
 																			`Inter`,
 																		],
@@ -2495,7 +2484,6 @@ Beverly Hills 55a`,
 																				},
 																			),
 																		className: `framer-120nkbp`,
-																		// "data-framer-name": `project@mondragon.com`,
 																		fonts: [
 																			`Inter`,
 																		],
@@ -2614,7 +2602,6 @@ Beverly Hills 55a`,
 															}),
 														d(h.div, {
 															className: `framer-7218di`,
-															// "data-framer-name": `Follow Us`,
 															layoutDependency: q,
 															layoutId: `JNBzV6cg6`,
 															children: [
@@ -2849,7 +2836,6 @@ Beverly Hills 55a`,
 															}),
 														d(h.div, {
 															className: `framer-1h6auop`,
-															// "data-framer-name": `Address & Phone`,
 															layoutDependency: q,
 															layoutId: `PuFB8FBIu`,
 															children: [
@@ -2946,7 +2932,6 @@ LONDON E2 7NX`,
 																}),
 																d(h.div, {
 																	className: `framer-1y15zn1`,
-																	// "data-framer-name": `Address & Phone 1`,
 																	layoutDependency:
 																		q,
 																	layoutId: `pnE5dELcn`,
@@ -3058,7 +3043,6 @@ LONDON E2 7NX`,
 																					},
 																				),
 																			className: `framer-d88h2l`,
-																			// "data-framer-name": `27 Whitfield Yard, \u2028Shoreditch, London E2 7NX`,
 																			fonts: [
 																				`GF;Space Mono-regular`,
 																			],
@@ -3138,7 +3122,6 @@ LONDON E2 7NX`,
 																										},
 																									),
 																								className: `framer-v9xz0e`,
-																								// "data-framer-name": `+44 20 3999 1245`,
 																								fonts: [
 																									`GF;Space Mono-regular`,
 																								],
@@ -3209,7 +3192,6 @@ LONDON E2 7NX`,
 																											},
 																										),
 																									className: `framer-crijmw`,
-																									// "data-framer-name": `+44 20 3999 1245`,
 																									fonts: [
 																										`GF;Space Mono-regular`,
 																									],
@@ -3233,7 +3215,6 @@ LONDON E2 7NX`,
 																}),
 																d(h.div, {
 																	className: `framer-158hnfg`,
-																	// "data-framer-name": `Address & Phone 2`,
 																	layoutDependency:
 																		q,
 																	layoutId: `QXFd8Ismn`,
@@ -3402,7 +3383,6 @@ LONDON E2 7NX`,
 																							},
 																						),
 																					className: `framer-tes8qb`,
-																					// "data-framer-name": `27 Whitfield Yard, \u2028Shoreditch, London E2 7NX`,
 																					fonts: [
 																						`GF;Space Mono-regular`,
 																					],
@@ -3509,13 +3489,11 @@ LONDON E2 7NX`,
 												}),
 												d(h.div, {
 													className: `framer-n8fmaa`,
-													// "data-framer-name": `Right`,
 													layoutDependency: q,
 													layoutId: `WawPk0DLE`,
 													children: [
 														d(h.div, {
 															className: `framer-18xbwe5`,
-															// "data-framer-name": `Text`,
 															layoutDependency: q,
 															layoutId: `GhHzhLdrw`,
 															children: [
@@ -3637,7 +3615,6 @@ LONDON E2 7NX`,
 																		},
 																	),
 																	className: `framer-168m9mv`,
-																	// "data-framer-name": `[01 DDD]`,
 																	fonts: [
 																		`Inter`,
 																	],
@@ -4317,4 +4294,3 @@ Beverly Hills 55a`,
 		}));
 })();
 export { Sn as __FramerMetadata__, xn as default, pn as queryParamNames };
-//# sourceMappingURL=component-contact-page.mjs.map

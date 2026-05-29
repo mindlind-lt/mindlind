@@ -121,7 +121,6 @@ var E,
 									...S,
 									...R,
 									className: g(G, `framer-18dzq2`, m, I),
-									// "data-framer-name": `Small`,
 									layoutDependency: W,
 									layoutId: `It_U6dSzO`,
 									ref: r,
@@ -150,10 +149,8 @@ var E,
 									...T(
 										{
 											GRhQUdS7Z: {
-												// "data-framer-name": `Big`,
 											},
 											pI7Yj7FYQ: {
-												// "data-framer-name": `Medium`,
 											},
 										},
 										N,
@@ -258,4 +255,3 @@ var E,
 			}));
 	});
 export { R as n, L as t };
-//# sourceMappingURL=i_vIzrlMX.C1MfukuD.mjs.map

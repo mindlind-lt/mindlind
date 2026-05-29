@@ -52,4 +52,3 @@ var r,
 			(a = `framer-50Zsm`));
 	});
 export { o as i, i as n, r, a as t };
-//# sourceMappingURL=IGVKsj4vh.GXVwIVTj.mjs.map

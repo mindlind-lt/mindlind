@@ -1543,4 +1543,3 @@ var R,
 			($ = Q));
 	});
 export { se as n, X as r, $ as t };
-//# sourceMappingURL=Vimeo.mjs.map

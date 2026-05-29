@@ -181,7 +181,6 @@ var mt,
 									...f,
 									...y,
 									className: N(k, `framer-133arvs`, c, g),
-									// "data-framer-name": `Scroll - Horizontal`,
 									layoutDependency: O,
 									layoutId: `MSDybJ82G`,
 									ref: r,
@@ -194,13 +193,10 @@ var mt,
 									...pt(
 										{
 											C4ti1Zm4o: {
-												// "data-framer-name": `Arrow - Up Right`,
 											},
 											o1tTqkD7S: {
-												// "data-framer-name": `Arrow - Up Right - Small`,
 											},
 											oZBUbuNQW: {
-												// "data-framer-name": `Scroll - Vertical`,
 											},
 										},
 										p,
@@ -210,7 +206,6 @@ var mt,
 										A() &&
 											h(E, {
 												className: `framer-1k8tops`,
-												// "data-framer-name": `Scroll`,
 												layoutDependency: O,
 												layoutId: `xB4zGfQmL`,
 												opacity: 1,
@@ -547,7 +542,6 @@ var Dt,
 										...A,
 										className: `${N(ee, `framer-1j38inb`, u, O)} framer-1m7k963`,
 										"data-framer-cursor": w,
-										// "data-framer-name": `Desktop`,
 										"data-selection": !0,
 										layoutDependency: z,
 										layoutId: `LPyBBWhbu`,
@@ -559,10 +553,8 @@ var Dt,
 													
 												},
 												LpJk8lyPd: {
-													// "data-framer-name": `Phone`,
 												},
 												SGuZ5_fTX: {
-													// "data-framer-name": `Tablet`,
 												},
 											},
 											E,
@@ -582,7 +574,6 @@ var Dt,
 													}),
 												}),
 												className: `framer-c9xr2r`,
-												// "data-framer-name": `2025`,
 												fonts: [`Inter`],
 												layoutDependency: z,
 												layoutId: `wAp4FhReL`,
@@ -807,7 +798,6 @@ var Dt,
 																	),
 																}),
 																className: `framer-w00qnr`,
-																// "data-framer-name": `Project`,
 																fonts: [
 																	`Inter`,
 																],
@@ -836,7 +826,6 @@ var Dt,
 											}),
 											d(x.div, {
 												className: `framer-t3qp2s`,
-												// "data-framer-name": `Line`,
 												layoutDependency: z,
 												layoutId: `JfJDdk1He`,
 												style: {
@@ -1086,7 +1075,6 @@ var Wt,
 									...v,
 									...w,
 									className: N(F, `framer-11pzxff`, u, b),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: j,
 									layoutId: `eBaLFQ_jk`,
 									ref: r,
@@ -1094,10 +1082,8 @@ var Wt,
 									...Ut(
 										{
 											pFt3J4MZE: {
-												// "data-framer-name": `Phone`,
 											},
 											tHC0JlV00: {
-												// "data-framer-name": `Tablet`,
 											},
 										},
 										y,
@@ -1226,7 +1212,6 @@ var Wt,
 											}),
 											h(x.div, {
 												className: `framer-1qnpcbx`,
-												// "data-framer-name": `Awards`,
 												layoutDependency: j,
 												layoutId: `D69r81a7J`,
 												children: [
@@ -1238,7 +1223,6 @@ var Wt,
 														children: [
 															d(x.div, {
 																className: `framer-10udsyd`,
-																// "data-framer-name": `Top Line`,
 																layoutDependency:
 																	j,
 																layoutId: `jLPvY3dto`,
@@ -1586,14 +1570,12 @@ var Wt,
 													}),
 													h(x.div, {
 														className: `framer-5i04mq`,
-														// "data-framer-name": `2`,
 														layoutDependency: j,
 														layoutId: `ExNuWvFzo`,
 														children: [
 															I() &&
 																d(x.div, {
 																	className: `framer-bj200o`,
-																	// "data-framer-name": `Top Line`,
 																	layoutDependency:
 																		j,
 																	layoutId: `GS18Y_jyd`,
@@ -3006,7 +2988,6 @@ vision`,
 									...S,
 									...O,
 									className: N(re, `framer-4do7jb`, u, T),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: L,
 									layoutId: `ynvjubWEb`,
 									ref: r,
@@ -3014,19 +2995,14 @@ vision`,
 									...hn(
 										{
 											b3CeND2xU: {
-												// "data-framer-name": `Phone`,
 											},
 											JjSvs1LST: {
-												// "data-framer-name": `Play Video - Tablet`,
 											},
 											oZEjVbL3Z: {
-												// "data-framer-name": `Play Video - Phone`,
 											},
 											yOO62Gdbi: {
-												// "data-framer-name": `Play Video - Desktop`,
 											},
 											z7KoYCuEx: {
-												// "data-framer-name": `Tablet`,
 											},
 										},
 										w,
@@ -3113,7 +3089,6 @@ vision`,
 													),
 													children: d(M, {
 														className: `framer-k4wwiv-container`,
-														// "data-framer-name": `Button Play`,
 														layoutDependency: L,
 														layoutId: `fCAUIe6Lr-container`,
 														name: `Button Play`,
@@ -3248,7 +3223,6 @@ vision`,
 																),
 															}),
 															className: `framer-1sdlj1l`,
-															// "data-framer-name": `⧖⧎⟡`,
 															fonts: [`Inter`],
 															layoutDependency: L,
 															layoutId: `AeuB5uHPS`,
@@ -34705,7 +34679,6 @@ var wg,
 									...y,
 									...T,
 									className: N(I, `framer-1uykqma`, l, S),
-									// "data-framer-name": `Right - Desktop`,
 									layoutDependency: F,
 									layoutId: `vIMdWjrgU`,
 									ref: r,
@@ -34720,19 +34693,14 @@ var wg,
 									...Cg(
 										{
 											OtuR92fjG: {
-												// "data-framer-name": `Right - Tablet`,
 											},
 											q9Bb4COCo: {
-												// "data-framer-name": `Left - Desktop`,
 											},
 											yBUvxDJLq: {
-												// "data-framer-name": `Right - Phone`,
 											},
 											Ygu9NAGvp: {
-												// "data-framer-name": `Left - Tablet`,
 											},
 											zcVFh3vye: {
-												// "data-framer-name": `Left - Phone`,
 											},
 										},
 										b,
@@ -34741,7 +34709,6 @@ var wg,
 									children: [
 										h(x.div, {
 											className: `framer-1ympb1l`,
-											// "data-framer-name": `Frame 98`,
 											layoutDependency: F,
 											layoutId: `kSSfgU95c`,
 											style: {
@@ -34867,7 +34834,6 @@ var wg,
 														}),
 													}),
 													className: `framer-1h699io`,
-													// "data-framer-name": `Sign-ups`,
 													fonts: [`Inter`],
 													layoutDependency: F,
 													layoutId: `vo49muxFh`,
@@ -34961,7 +34927,6 @@ var wg,
 										}),
 										d(x.div, {
 											className: `framer-4gzr05`,
-											// "data-framer-name": `Frame 99`,
 											layoutDependency: F,
 											layoutId: `c1uOZFJ4F`,
 											style: {
@@ -34985,7 +34950,6 @@ var wg,
 													}),
 												}),
 												className: `framer-ubxq5f`,
-												// "data-framer-name": `Mehr Anfragen durch bessere Struktur, schnellere Ladezeiten und klare Kommunikation.`,
 												fonts: [`Inter`],
 												layoutDependency: F,
 												layoutId: `FfiUjJOcv`,
@@ -35322,7 +35286,6 @@ Mondragon Agency`,
 									...b,
 									...E,
 									className: N(L, `framer-1puf288`, u, w),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: I,
 									layoutId: `Yf1sKkzAx`,
 									ref: r,
@@ -35333,10 +35296,8 @@ Mondragon Agency`,
 									...Lg(
 										{
 											HMhFkXrLe: {
-												// "data-framer-name": `Phone`,
 											},
 											zigsp3FnN: {
-												// "data-framer-name": `Tablet`,
 											},
 										},
 										S,
@@ -35426,7 +35387,6 @@ Mondragon Agency`,
 												}),
 												d(x.div, {
 													className: `framer-14ctymx`,
-													// "data-framer-name": `Fade`,
 													layoutDependency: I,
 													layoutId: `QFHaojqdd`,
 													style: {
@@ -35456,7 +35416,6 @@ Mondragon Agency`,
 													}),
 												h(x.div, {
 													className: `framer-fd0999`,
-													// "data-framer-name": `Welcome`,
 													layoutDependency: I,
 													layoutId: `eu5x30gGL`,
 													children: [
@@ -35494,7 +35453,6 @@ Mondragon Agency`,
 																),
 															}),
 															className: `framer-1gd2kw1`,
-															// "data-framer-name": `Welcome to\u2028mondragon agency`,
 															fonts: [`Inter`],
 															layoutDependency: I,
 															layoutId: `yiQHJPpT7`,
@@ -35589,7 +35547,6 @@ Mondragon Agency`,
 														}),
 														h(x.div, {
 															className: `framer-137wlho`,
-															// "data-framer-name": `Team Photos`,
 															layoutDependency: I,
 															layoutId: `qYJ4p_10N`,
 															children: [
@@ -35883,7 +35840,6 @@ Mondragon Agency`,
 												}),
 												d(x.div, {
 													className: `framer-1krmk82`,
-													// "data-framer-name": `Big Heading`,
 													layoutDependency: I,
 													layoutId: `E75hmQxJ5`,
 													children: d(D, {
@@ -35905,7 +35861,6 @@ Mondragon Agency`,
 															}),
 														}),
 														className: `framer-1uaczry`,
-														// "data-framer-name": `Fit Heading`,
 														fonts: [
 															`GF;Space Mono-regular`,
 														],
@@ -35992,7 +35947,6 @@ Mondragon Agency`,
 												}),
 												h(x.div, {
 													className: `framer-fuyyu7`,
-													// "data-framer-name": `Metrics`,
 													layoutDependency: I,
 													layoutId: `uyBfmRWTj`,
 													children: [
@@ -36555,7 +36509,6 @@ var i_,
 									...S,
 									...O,
 									className: N(R, `framer-1d4j8jp`, u, T),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: L,
 									layoutId: `BzrXbqon1`,
 									ref: r,
@@ -36570,7 +36523,6 @@ var i_,
 									...r_(
 										{
 											tTg0gB55I: {
-												// "data-framer-name": `Tablet & Phone`,
 											},
 										},
 										w,
@@ -36579,7 +36531,6 @@ var i_,
 									children: [
 										h(x.div, {
 											className: `framer-10z3yuk`,
-											// "data-framer-name": `Photo`,
 											layoutDependency: L,
 											layoutId: `mPgf3IBUZ`,
 											style: {
@@ -36592,7 +36543,6 @@ var i_,
 											children: [
 												d(x.div, {
 													className: `framer-1p30jaw`,
-													// "data-framer-name": `Tool for Drag`,
 													layoutDependency: L,
 													layoutId: `I9zFL_Y0l`,
 													style: {
@@ -36625,7 +36575,6 @@ var i_,
 														...c_(g),
 													},
 													className: `framer-to9uco`,
-													// "data-framer-name": `1@2x`,
 													fitImageDimension: `height`,
 													layoutDependency: L,
 													layoutId: `F5r3JcMtl`,
@@ -36672,7 +36621,6 @@ var i_,
 										}),
 										h(x.div, {
 											className: `framer-1nzq6su`,
-											// "data-framer-name": `Info`,
 											layoutDependency: L,
 											layoutId: `myVmNB4t5`,
 											style: {
@@ -36696,7 +36644,6 @@ var i_,
 														}),
 													}),
 													className: `framer-o1vpn2`,
-													// "data-framer-name": `Jonas Meyer`,
 													fonts: [`Inter`],
 													layoutDependency: L,
 													layoutId: `Ynb5OhQG7`,
@@ -36710,7 +36657,6 @@ var i_,
 												}),
 												d(x.div, {
 													className: `framer-1uaazw5`,
-													// "data-framer-name": `Position`,
 													layoutDependency: L,
 													layoutId: `QQ89knGlv`,
 													style: {
@@ -36734,7 +36680,6 @@ var i_,
 															}),
 														}),
 														className: `framer-16c40ae`,
-														// "data-framer-name": `Position`,
 														fonts: [`Inter`],
 														layoutDependency: L,
 														layoutId: `WooxwyNpD`,
@@ -36760,7 +36705,6 @@ var i_,
 														}),
 													}),
 													className: `framer-1mfe4k3`,
-													// "data-framer-name": `Brand positioning, messaging, roadmaps.`,
 													fonts: [`Inter`],
 													layoutDependency: L,
 													layoutId: `Ggt2I2brv`,
@@ -37031,7 +36975,6 @@ var v_,
 									...v,
 									...w,
 									className: N(F, `framer-1hk1w3o`, l, b),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: j,
 									layoutId: `XSJzq2axh`,
 									ref: r,
@@ -37039,10 +36982,8 @@ var v_,
 									...__(
 										{
 											DDxBTVfl9: {
-												// "data-framer-name": `Tablet`,
 											},
 											O2wfs1LjN: {
-												// "data-framer-name": `Phone`,
 											},
 										},
 										y,
@@ -37062,7 +37003,6 @@ var v_,
 												children: [
 													d(x.div, {
 														className: `framer-y3ib4k`,
-														// "data-framer-name": `Section Number`,
 														layoutDependency: j,
 														layoutId: `ciCRDnTN9`,
 														children: d(D, {
@@ -37187,7 +37127,6 @@ var v_,
 													I() &&
 														d(x.div, {
 															className: `framer-1ldegzk`,
-															// "data-framer-name": `Space`,
 															layoutDependency: j,
 															layoutId: `lhZ8AoVCL`,
 														}),
@@ -78799,7 +78738,6 @@ var gL,
 									...k,
 									...I,
 									className: N(B, `framer-ojtbpq`, l, j),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: ne,
 									layoutId: `aY29jvSUQ`,
 									ref: r,
@@ -78807,10 +78745,8 @@ var gL,
 									...hL(
 										{
 											cnMKZnYTb: {
-												// "data-framer-name": `Phone`,
 											},
 											JEWKItX5x: {
-												// "data-framer-name": `Tablet`,
 											},
 										},
 										A,
@@ -78835,7 +78771,6 @@ var gL,
 													}),
 												}),
 												className: `framer-1ugvx6b`,
-												// "data-framer-name": `[01]`,
 												fonts: [`Inter`],
 												layoutDependency: ne,
 												layoutId: `BEYGWDtGI`,
@@ -78893,7 +78828,6 @@ var gL,
 													}),
 												}),
 												className: `framer-15ymiux`,
-												// "data-framer-name": `Heading Welcome`,
 												fonts: [`Inter`],
 												layoutDependency: ne,
 												layoutId: `hnrKCU7xC`,
@@ -79735,4 +79669,3 @@ Wilington`,
 		}));
 })();
 export { $L as __FramerMetadata__, QL as default, VL as queryParamNames };
-//# sourceMappingURL=components-site.mjs.map

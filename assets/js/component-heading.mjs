@@ -151,7 +151,6 @@ var L,
 									...y,
 									...T,
 									className: b(N, `framer-1hogso5`, m, C),
-									// "data-framer-name": `Desktop`,
 									layoutDependency: M,
 									layoutId: `imDIvYLrr`,
 									ref: a,
@@ -159,10 +158,8 @@ var L,
 									...I(
 										{
 											kVQEtsfWh: {
-												// "data-framer-name": `Tablet`,
 											},
 											ZeHzZctht: {
-												// "data-framer-name": `Phone`,
 											},
 										},
 										S,
@@ -182,7 +179,6 @@ var L,
 											}),
 											c(u.div, {
 												className: `framer-1rmnsc7`,
-												// "data-framer-name": `Big Heading`,
 												layoutDependency: M,
 												layoutId: `hvmnggjc0`,
 												children: [
@@ -250,7 +246,6 @@ var L,
 																	),
 																}),
 																className: `framer-16nb5r5`,
-																// "data-framer-name": `Fit Heading`,
 																fonts: [
 																	`GF;Space Mono-regular`,
 																],
@@ -353,7 +348,6 @@ var L,
 																	),
 																}),
 																className: `framer-17vmv3q`,
-																// "data-framer-name": `12`,
 																fonts: [
 																	`Inter`,
 																],
@@ -891,4 +885,3 @@ e(() => {
 		}));
 })();
 export { Ae as __FramerMetadata__, ke as default, X as queryParamNames };
-//# sourceMappingURL=component-heading.mjs.map
