@@ -24202,7 +24202,7 @@ Schnell. Klar. Effektiv.`,
 											width: c?.width || `100vw`,
 											y: (c?.y || 0) + 0 + 1552,
 											children: rJsx(ue, {
-												className: `framer-1ctdcfb-container`,
+												className: `framer-1ctdcfb-container section-video`,
 												layout: C,
 												nodeId: `UvOy1WM6j`,
 												scopeId: `augiA20Il`,
