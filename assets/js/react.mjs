@@ -29,7 +29,7 @@ var n,
 		createElement: () => Me,
 		createFactory: () => Ne,
 		createRef: () => Pe,
-		default: () => y,
+		default: () => React,
 		forwardRef: () => Fe,
 		isValidElement: () => Ie,
 		lazy: () => Le,
@@ -59,17 +59,17 @@ function s(e) {
 		: ((e = (ue && e[ue]) || e[`@@iterator`]),
 			typeof e == `function` ? e : null);
 }
-function c(e, t, n) {
+function Component(e, t, n) {
 	((this.props = e),
 		(this.context = t),
-		(this.refs = pe),
+		(this.refs = emptyRefs),
 		(this.updater = n || de));
 }
 function l() {}
 function u(e, t, n) {
 	((this.props = e),
 		(this.context = t),
-		(this.refs = pe),
+		(this.refs = emptyRefs),
 		(this.updater = n || de));
 }
 function d(e, t, n) {
@@ -81,7 +81,7 @@ function d(e, t, n) {
 		for (r in (t.ref !== void 0 && (o = t.ref),
 		t.key !== void 0 && (a = `` + t.key),
 		t))
-			ge.call(t, r) && !ve.hasOwnProperty(r) && (i[r] = t[r]);
+			ge.call(t, r) && !reservedProps.hasOwnProperty(r) && (i[r] = t[r]);
 	var s = arguments.length - 2;
 	if (s === 1) i.children = n;
 	else if (1 < s) {
@@ -91,17 +91,17 @@ function d(e, t, n) {
 	if (e && e.defaultProps)
 		for (r in ((s = e.defaultProps), s)) i[r] === void 0 && (i[r] = s[r]);
 	return {
-		$$typeof: b,
+		$$typeof: REACT_ELEMENT_TYPE,
 		type: e,
 		key: a,
 		ref: o,
 		props: i,
-		_owner: _e.current,
+		_owner: ReactCurrentOwner.current,
 	};
 }
 function f(e, t) {
 	return {
-		$$typeof: b,
+		$$typeof: REACT_ELEMENT_TYPE,
 		type: e.type,
 		key: t,
 		ref: e.ref,
@@ -110,7 +110,7 @@ function f(e, t) {
 	};
 }
 function p(e) {
-	return typeof e == `object` && !!e && e.$$typeof === b;
+	return typeof e == `object` && !!e && e.$$typeof === REACT_ELEMENT_TYPE;
 }
 function m(e) {
 	var t = { "=": `=0`, ":": `=2` };
@@ -139,8 +139,8 @@ function g(e, t, n, r, i) {
 				break;
 			case `object`:
 				switch (e.$$typeof) {
-					case b:
-					case ee:
+					case REACT_ELEMENT_TYPE:
+					case REACT_PORTAL_TYPE:
 						o = !0;
 				}
 		}
@@ -151,7 +151,7 @@ function g(e, t, n, r, i) {
 			(e = r === `` ? `.` + h(o, 0) : r),
 			he(i)
 				? ((n = ``),
-					e != null && (n = e.replace(ye, `$&/`) + `/`),
+					e != null && (n = e.replace(multipleSlashesRegex, `$&/`) + `/`),
 					g(i, t, n, ``, function (e) {
 						return e;
 					}))
@@ -162,7 +162,7 @@ function g(e, t, n, r, i) {
 							n +
 								(!i.key || (o && o.key === i.key)
 									? ``
-									: (`` + i.key).replace(ye, `$&/`) + `/`) +
+									: (`` + i.key).replace(multipleSlashesRegex, `$&/`) + `/`) +
 								e,
 						)),
 					t.push(i)),
@@ -220,31 +220,31 @@ function v(e) {
 	if (e._status === 1) return e._result.default;
 	throw e._result;
 }
-var y,
-	b,
-	ee,
-	te,
-	ne,
-	re,
-	ie,
-	ae,
-	oe,
-	se,
-	ce,
-	le,
+var React,
+	REACT_ELEMENT_TYPE,
+	REACT_PORTAL_TYPE,
+	REACT_FRAGMENT_TYPE,
+	REACT_STRICT_MODE_TYPE,
+	REACT_PROFILER_TYPE,
+	REACT_PROVIDER_TYPE,
+	REACT_CONTEXT_TYPE,
+	REACT_FORWARD_REF_TYPE,
+	REACT_SUSPENSE_TYPE,
+	REACT_MEMO_TYPE,
+	REACT_LAZY_TYPE,
 	ue,
 	de,
 	fe,
-	pe,
-	me,
+	emptyRefs,
+	pureComponentPrototype,
 	he,
 	ge,
-	_e,
-	ve,
-	ye,
+	ReactCurrentOwner,
+	reservedProps,
+	multipleSlashesRegex,
 	x,
-	be,
-	xe,
+	ReactCurrentBatchConfig,
+	ReactInternals,
 	Se,
 	Ce,
 	we,
@@ -281,18 +281,18 @@ var y,
 	tt,
 	nt,
 	rt = lazyInit(() => {
-		((y = {}),
-			(b = Symbol.for(`react.element`)),
-			(ee = Symbol.for(`react.portal`)),
-			(te = Symbol.for(`react.fragment`)),
-			(ne = Symbol.for(`react.strict_mode`)),
-			(re = Symbol.for(`react.profiler`)),
-			(ie = Symbol.for(`react.provider`)),
-			(ae = Symbol.for(`react.context`)),
-			(oe = Symbol.for(`react.forward_ref`)),
-			(se = Symbol.for(`react.suspense`)),
-			(ce = Symbol.for(`react.memo`)),
-			(le = Symbol.for(`react.lazy`)),
+		((React = {}),
+			(REACT_ELEMENT_TYPE = Symbol.for(`react.element`)),
+			(REACT_PORTAL_TYPE = Symbol.for(`react.portal`)),
+			(REACT_FRAGMENT_TYPE = Symbol.for(`react.fragment`)),
+			(REACT_STRICT_MODE_TYPE = Symbol.for(`react.strict_mode`)),
+			(REACT_PROFILER_TYPE = Symbol.for(`react.profiler`)),
+			(REACT_PROVIDER_TYPE = Symbol.for(`react.provider`)),
+			(REACT_CONTEXT_TYPE = Symbol.for(`react.context`)),
+			(REACT_FORWARD_REF_TYPE = Symbol.for(`react.forward_ref`)),
+			(REACT_SUSPENSE_TYPE = Symbol.for(`react.suspense`)),
+			(REACT_MEMO_TYPE = Symbol.for(`react.memo`)),
+			(REACT_LAZY_TYPE = Symbol.for(`react.lazy`)),
 			(ue = Symbol.iterator),
 			(de = {
 				isMounted: function () {
@@ -303,36 +303,36 @@ var y,
 				enqueueSetState: function () {},
 			}),
 			(fe = Object.assign),
-			(pe = {}),
-			(c.prototype.isReactComponent = {}),
-			(c.prototype.setState = function (e, t) {
+			(emptyRefs = {}),
+			(Component.prototype.isReactComponent = {}),
+			(Component.prototype.setState = function (e, t) {
 				if (typeof e != `object` && typeof e != `function` && e != null)
 					throw Error(
 						`setState(...): takes an object of state variables to update or a function which returns an object of state variables.`,
 					);
 				this.updater.enqueueSetState(this, e, t, `setState`);
 			}),
-			(c.prototype.forceUpdate = function (e) {
+			(Component.prototype.forceUpdate = function (e) {
 				this.updater.enqueueForceUpdate(this, e, `forceUpdate`);
 			}),
-			(l.prototype = c.prototype),
-			(me = u.prototype = new l()),
-			(me.constructor = u),
-			fe(me, c.prototype),
-			(me.isPureReactComponent = !0),
+			(l.prototype = Component.prototype),
+			(pureComponentPrototype = u.prototype = new l()),
+			(pureComponentPrototype.constructor = u),
+			fe(pureComponentPrototype, Component.prototype),
+			(pureComponentPrototype.isPureReactComponent = !0),
 			(he = Array.isArray),
 			(ge = Object.prototype.hasOwnProperty),
-			(_e = { current: null }),
-			(ve = { key: !0, ref: !0, __self: !0, __source: !0 }),
-			(ye = /\/+/g),
+			(ReactCurrentOwner = { current: null }),
+			(reservedProps = { key: !0, ref: !0, __self: !0, __source: !0 }),
+			(multipleSlashesRegex = /\/+/g),
 			(x = { current: null }),
-			(be = { transition: null }),
-			(xe = {
+			(ReactCurrentBatchConfig = { transition: null }),
+			(ReactInternals = {
 				ReactCurrentDispatcher: x,
-				ReactCurrentBatchConfig: be,
-				ReactCurrentOwner: _e,
+				ReactCurrentBatchConfig: ReactCurrentBatchConfig,
+				ReactCurrentOwner: ReactCurrentOwner,
 			}),
-			(y.Children = {
+			(React.Children = {
 				map: _,
 				forEach: function (e, t, n) {
 					_(
@@ -367,14 +367,14 @@ var y,
 					return e;
 				},
 			}),
-			(y.Component = c),
-			(y.Fragment = te),
-			(y.Profiler = re),
-			(y.PureComponent = u),
-			(y.StrictMode = ne),
-			(y.Suspense = se),
-			(y.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = xe),
-			(y.cloneElement = function (e, t, n) {
+			(React.Component = Component),
+			(React.Fragment = REACT_FRAGMENT_TYPE),
+			(React.Profiler = REACT_PROFILER_TYPE),
+			(React.PureComponent = u),
+			(React.StrictMode = REACT_STRICT_MODE_TYPE),
+			(React.Suspense = REACT_SUSPENSE_TYPE),
+			(React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactInternals),
+			(React.cloneElement = function (e, t, n) {
 				if (e == null)
 					throw Error(
 						`React.cloneElement(...): The argument must be a React element, but you passed ` +
@@ -387,14 +387,14 @@ var y,
 					o = e._owner;
 				if (t != null) {
 					if (
-						(t.ref !== void 0 && ((a = t.ref), (o = _e.current)),
+						(t.ref !== void 0 && ((a = t.ref), (o = ReactCurrentOwner.current)),
 						t.key !== void 0 && (i = `` + t.key),
 						e.type && e.type.defaultProps)
 					)
 						var s = e.type.defaultProps;
 					for (c in t)
 						ge.call(t, c) &&
-							!ve.hasOwnProperty(c) &&
+							!reservedProps.hasOwnProperty(c) &&
 							(r[c] =
 								t[c] === void 0 && s !== void 0 ? s[c] : t[c]);
 				}
@@ -406,7 +406,7 @@ var y,
 					r.children = s;
 				}
 				return {
-					$$typeof: b,
+					$$typeof: REACT_ELEMENT_TYPE,
 					type: e.type,
 					key: i,
 					ref: a,
@@ -414,10 +414,10 @@ var y,
 					_owner: o,
 				};
 			}),
-			(y.createContext = function (e) {
+			(React.createContext = function (e) {
 				return (
 					(e = {
-						$$typeof: ae,
+						$$typeof: REACT_CONTEXT_TYPE,
 						_currentValue: e,
 						_currentValue2: e,
 						_threadCount: 0,
@@ -426,129 +426,129 @@ var y,
 						_defaultValue: null,
 						_globalName: null,
 					}),
-					(e.Provider = { $$typeof: ie, _context: e }),
+					(e.Provider = { $$typeof: REACT_PROVIDER_TYPE, _context: e }),
 					(e.Consumer = e)
 				);
 			}),
-			(y.createElement = d),
-			(y.createFactory = function (e) {
+			(React.createElement = d),
+			(React.createFactory = function (e) {
 				var t = d.bind(null, e);
 				return ((t.type = e), t);
 			}),
-			(y.createRef = function () {
+			(React.createRef = function () {
 				return { current: null };
 			}),
-			(y.forwardRef = function (e) {
-				return { $$typeof: oe, render: e };
+			(React.forwardRef = function (e) {
+				return { $$typeof: REACT_FORWARD_REF_TYPE, render: e };
 			}),
-			(y.isValidElement = p),
-			(y.lazy = function (e) {
+			(React.isValidElement = p),
+			(React.lazy = function (e) {
 				return {
-					$$typeof: le,
+					$$typeof: REACT_LAZY_TYPE,
 					_payload: { _status: -1, _result: e },
 					_init: v,
 				};
 			}),
-			(y.memo = function (e, t) {
+			(React.memo = function (e, t) {
 				return {
-					$$typeof: ce,
+					$$typeof: REACT_MEMO_TYPE,
 					type: e,
 					compare: t === void 0 ? null : t,
 				};
 			}),
-			(y.startTransition = function (e) {
-				var t = be.transition;
-				be.transition = {};
+			(React.startTransition = function (e) {
+				var t = ReactCurrentBatchConfig.transition;
+				ReactCurrentBatchConfig.transition = {};
 				try {
 					e();
 				} finally {
-					be.transition = t;
+					ReactCurrentBatchConfig.transition = t;
 				}
 			}),
-			(y.unstable_act = function () {
+			(React.unstable_act = function () {
 				throw Error(
 					`act(...) is not supported in production builds of React.`,
 				);
 			}),
-			(y.useCallback = function (e, t) {
+			(React.useCallback = function (e, t) {
 				return x.current.useCallback(e, t);
 			}),
-			(y.useContext = function (e) {
+			(React.useContext = function (e) {
 				return x.current.useContext(e);
 			}),
-			(y.useDebugValue = function () {}),
-			(y.useDeferredValue = function (e) {
+			(React.useDebugValue = function () {}),
+			(React.useDeferredValue = function (e) {
 				return x.current.useDeferredValue(e);
 			}),
-			(y.useEffect = function (e, t) {
+			(React.useEffect = function (e, t) {
 				return x.current.useEffect(e, t);
 			}),
-			(y.useId = function () {
+			(React.useId = function () {
 				return x.current.useId();
 			}),
-			(y.useImperativeHandle = function (e, t, n) {
+			(React.useImperativeHandle = function (e, t, n) {
 				return x.current.useImperativeHandle(e, t, n);
 			}),
-			(y.useInsertionEffect = function (e, t) {
+			(React.useInsertionEffect = function (e, t) {
 				return x.current.useInsertionEffect(e, t);
 			}),
-			(y.useLayoutEffect = function (e, t) {
+			(React.useLayoutEffect = function (e, t) {
 				return x.current.useLayoutEffect(e, t);
 			}),
-			(y.useMemo = function (e, t) {
+			(React.useMemo = function (e, t) {
 				return x.current.useMemo(e, t);
 			}),
-			(y.useReducer = function (e, t, n) {
+			(React.useReducer = function (e, t, n) {
 				return x.current.useReducer(e, t, n);
 			}),
-			(y.useRef = function (e) {
+			(React.useRef = function (e) {
 				return x.current.useRef(e);
 			}),
-			(y.useState = function (e) {
+			(React.useState = function (e) {
 				return x.current.useState(e);
 			}),
-			(y.useSyncExternalStore = function (e, t, n) {
+			(React.useSyncExternalStore = function (e, t, n) {
 				return x.current.useSyncExternalStore(e, t, n);
 			}),
-			(y.useTransition = function () {
+			(React.useTransition = function () {
 				return x.current.useTransition();
 			}),
-			(y.version = `18.2.0`),
-			(Se = y.Children),
-			(Ce = y.Component),
-			(we = y.Fragment),
-			(Te = y.Profiler),
-			(Ee = y.PureComponent),
-			(De = y.StrictMode),
-			(Oe = y.Suspense),
-			(ke = y.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED),
-			(Ae = y.cloneElement),
-			(je = y.createContext),
-			(Me = y.createElement),
-			(Ne = y.createFactory),
-			(Pe = y.createRef),
-			(Fe = y.forwardRef),
-			(Ie = y.isValidElement),
-			(Le = y.lazy),
-			(Re = y.memo),
-			(ze = y.startTransition),
-			(Be = y.unstable_act),
-			(Ve = y.useCallback),
-			(He = y.useContext),
-			(Ue = y.useDebugValue),
-			(We = y.useDeferredValue),
-			(Ge = y.useEffect),
-			(Ke = y.useId),
-			(qe = y.useImperativeHandle),
-			(Je = y.useInsertionEffect),
-			(Ye = y.useLayoutEffect),
-			(Xe = y.useMemo),
-			(Ze = y.useReducer),
-			(Qe = y.useRef),
-			($e = y.useState),
-			(et = y.useSyncExternalStore),
-			(tt = y.useTransition),
-			(nt = y.version));
+			(React.version = `18.2.0`),
+			(Se = React.Children),
+			(Ce = React.Component),
+			(we = React.Fragment),
+			(Te = React.Profiler),
+			(Ee = React.PureComponent),
+			(De = React.StrictMode),
+			(Oe = React.Suspense),
+			(ke = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED),
+			(Ae = React.cloneElement),
+			(je = React.createContext),
+			(Me = React.createElement),
+			(Ne = React.createFactory),
+			(Pe = React.createRef),
+			(Fe = React.forwardRef),
+			(Ie = React.isValidElement),
+			(Le = React.lazy),
+			(Re = React.memo),
+			(ze = React.startTransition),
+			(Be = React.unstable_act),
+			(Ve = React.useCallback),
+			(He = React.useContext),
+			(Ue = React.useDebugValue),
+			(We = React.useDeferredValue),
+			(Ge = React.useEffect),
+			(Ke = React.useId),
+			(qe = React.useImperativeHandle),
+			(Je = React.useInsertionEffect),
+			(Ye = React.useLayoutEffect),
+			(Xe = React.useMemo),
+			(Ze = React.useReducer),
+			(Qe = React.useRef),
+			($e = React.useState),
+			(et = React.useSyncExternalStore),
+			(tt = React.useTransition),
+			(nt = React.version));
 	});
 function it(e, t, n) {
 	var r,
@@ -584,7 +584,7 @@ var at,
 	ht,
 	gt = lazyInit(() => {
 		(rt(),
-			(at = `default` in o ? y : o),
+			(at = `default` in o ? React : o),
 			(ot = {}),
 			(st = at),
 			(ct = Symbol.for(`react.element`)),
@@ -8249,7 +8249,7 @@ var Rc,
 			(a(),
 			rt(),
 			gn(),
-			(Rc = `default` in o ? y : o),
+			(Rc = `default` in o ? React : o),
 			(zc = `default` in _t ? S : _t),
 			(Bc = {}),
 			(Vc = Rc),
@@ -9961,7 +9961,7 @@ export {
 	We as O,
 	Ge as P,
 	i as R,
-	y as S,
+	React as S,
 	rt as T,
 	r as V,
 	ze as _,
