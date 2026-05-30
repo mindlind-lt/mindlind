@@ -1,4 +1,4 @@
-import { n as e, t } from "./rolldown-runtime.mjs";
+import { createEsModule as e, lazyInit as t } from "./rolldown-runtime.mjs";
 import {
 	B as n,
 	E as r,

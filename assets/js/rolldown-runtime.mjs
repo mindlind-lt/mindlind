@@ -1,23 +1,23 @@
-var e = Object.defineProperty,
-	t = (e, t) => () => (e && (t = e((e = 0))), t),
-	n = (t, n) => {
-		let r = {};
-		for (var i in t) e(r, i, { get: t[i], enumerable: !0 });
-		return (n && e(r, Symbol.toStringTag, { value: `Module` }), r);
+var defineProperty = Object.defineProperty,
+	lazyInit = (factory, initialValue) => () => (factory && (initialValue = factory((factory = 0))), initialValue),
+	createEsModule = (getters, addModuleTag) => {
+		let moduleObj = {};
+		for (var key in getters) defineProperty(moduleObj, key, { get: getters[key], enumerable: !0 });
+		return (addModuleTag && defineProperty(moduleObj, Symbol.toStringTag, { value: `Module` }), moduleObj);
 	},
-	r = ((e) =>
+	requireCompat = ((requireFunc) =>
 		typeof require < `u`
 			? require
 			: typeof Proxy < `u`
-				? new Proxy(e, {
-						get: (e, t) => (typeof require < `u` ? require : e)[t],
+				? new Proxy(requireFunc, {
+						get: (target, prop) => (typeof require < `u` ? require : target)[prop],
 					})
-				: e)(function (e) {
+				: requireFunc)(function (id) {
 		if (typeof require < `u`) return require.apply(this, arguments);
 		throw Error(
 			'Calling `require` for "' +
-				e +
+				id +
 				"\" in an environment that doesn't expose the `require` function.",
 		);
 	});
-export { n, r, t };
+export { createEsModule, requireCompat, lazyInit };

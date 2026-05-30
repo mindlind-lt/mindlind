@@ -1,4 +1,4 @@
-import { r as e, t } from "./rolldown-runtime.mjs";
+import { requireCompat as e, lazyInit as t } from "./rolldown-runtime.mjs";
 import {
 	A as n,
 	B as r,

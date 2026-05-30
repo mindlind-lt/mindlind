@@ -1,4 +1,4 @@
-import { t as e } from "./rolldown-runtime.mjs";
+import { lazyInit as e } from "./rolldown-runtime.mjs";
 import { n as t, t as n } from "./shared-lib.mjs";
 function r(e, n) {
 	return {
