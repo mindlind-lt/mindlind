@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	B as t,
 	C as n,
@@ -134,7 +134,7 @@ var on,
 	cn,
 	ln,
 	un,
-	dn = e(() => {
+	dn = lazyInit(() => {
 		(x(),
 			Se(),
 			c(),
@@ -1808,7 +1808,7 @@ var Qr,
 	uf,
 	df,
 	ff,
-	pf = e(() => {
+	pf = lazyInit(() => {
 		(D(),
 		/*! Bundled license information:
 
@@ -19081,7 +19081,7 @@ var Rp,
 	wI,
 	TI,
 	EI,
-	DI = e(() => {
+	DI = lazyInit(() => {
 		(D(),
 		/*! Bundled license information:
 
@@ -49585,7 +49585,7 @@ var<${n}> ${e} : ${a};`;
 				}
 			}));
 	}),
-	OI = e(() => {
+	OI = lazyInit(() => {
 		(pf(), DI());
 	});
 function kI(e) {
@@ -49957,7 +49957,7 @@ function FI(e) {
 		})
 	);
 }
-var II = e(() => {
+var II = lazyInit(() => {
 		(D(),
 			x(),
 			c(),
@@ -50101,7 +50101,7 @@ var II = e(() => {
 	LI,
 	RI,
 	zI,
-	BI = e(() => {
+	BI = lazyInit(() => {
 		(Se(),
 			ce.loadFonts([
 				`FR;InterDisplay`,
@@ -50376,7 +50376,7 @@ var II = e(() => {
 	VI,
 	HI,
 	UI,
-	WI = e(() => {
+	WI = lazyInit(() => {
 		(Se(),
 			ce.loadFonts([]),
 			(VI = [{ explicitInter: !0, fonts: [] }]),
@@ -50388,7 +50388,7 @@ var II = e(() => {
 	GI,
 	KI,
 	qI,
-	JI = e(() => {
+	JI = lazyInit(() => {
 		(Se(),
 			ce.loadFonts([]),
 			(GI = [{ explicitInter: !0, fonts: [] }]),
@@ -50402,7 +50402,7 @@ var II = e(() => {
 	ZI,
 	QI,
 	$I,
-	eL = e(() => {
+	eL = lazyInit(() => {
 		(x(),
 			Se(),
 			c(),
@@ -50446,7 +50446,7 @@ var II = e(() => {
 	rL,
 	iL,
 	aL,
-	oL = e(() => {
+	oL = lazyInit(() => {
 		(x(),
 			Se(),
 			c(),
@@ -50490,7 +50490,7 @@ var II = e(() => {
 	lL,
 	uL,
 	dL,
-	fL = e(() => {
+	fL = lazyInit(() => {
 		(x(),
 			Se(),
 			c(),
@@ -50534,7 +50534,7 @@ var II = e(() => {
 	hL,
 	gL,
 	_L,
-	vL = e(() => {
+	vL = lazyInit(() => {
 		(x(),
 			Se(),
 			c(),
@@ -50576,7 +50576,7 @@ var II = e(() => {
 	yL,
 	bL,
 	xL,
-	SL = e(() => {
+	SL = lazyInit(() => {
 		(Se(),
 			ce.loadFonts([]),
 			(yL = [{ explicitInter: !0, fonts: [] }]),
@@ -50605,7 +50605,7 @@ var wL,
 	LL,
 	RL,
 	zL,
-	BL = e(() => {
+	BL = lazyInit(() => {
 		(x(),
 			Se(),
 			re(),
@@ -51033,7 +51033,7 @@ var wL,
 	YL,
 	XL,
 	ZL,
-	QL = e(() => {
+	QL = lazyInit(() => {
 		(x(),
 			Se(),
 			re(),
@@ -51564,7 +51564,7 @@ var eR,
 	lR,
 	uR,
 	dR,
-	fR = e(() => {
+	fR = lazyInit(() => {
 		(x(),
 			Se(),
 			re(),
@@ -52005,7 +52005,7 @@ var mR,
 	AR,
 	jR,
 	MR,
-	NR = e(() => {
+	NR = lazyInit(() => {
 		(x(),
 			Se(),
 			re(),
@@ -54782,13 +54782,13 @@ var FR,
 	UR,
 	WR,
 	GR,
-	KR = e(() => {}),
+	KR = lazyInit(() => {}),
 	qR,
 	JR,
 	YR,
 	XR,
 	ZR,
-	QR = e(() => {
+	QR = lazyInit(() => {
 		(x(),
 			Se(),
 			c(),
@@ -54836,7 +54836,7 @@ var FR,
 	az,
 	oz,
 	sz,
-	cz = e(() => {
+	cz = lazyInit(() => {
 		(x(),
 			Se(),
 			re(),
@@ -54964,7 +54964,7 @@ var uz,
 	xz,
 	Sz,
 	Cz,
-	wz = e(() => {
+	wz = lazyInit(() => {
 		(x(),
 			Se(),
 			re(),
@@ -55425,7 +55425,7 @@ var uz,
 	Nz,
 	Pz,
 	Fz,
-	Iz = e(() => {
+	Iz = lazyInit(() => {
 		(x(),
 			Se(),
 			re(),
@@ -55798,7 +55798,7 @@ var uz,
 	zz,
 	Bz,
 	Vz,
-	Hz = e(() => {
+	Hz = lazyInit(() => {
 		(x(),
 			Se(),
 			c(),
@@ -55853,7 +55853,7 @@ var Wz,
 	$z,
 	eB,
 	tB,
-	nB = e(() => {
+	nB = lazyInit(() => {
 		(x(),
 			Se(),
 			re(),
@@ -56166,7 +56166,7 @@ var iB,
 	SB,
 	CB,
 	wB,
-	TB = e(() => {
+	TB = lazyInit(() => {
 		(x(),
 			Se(),
 			re(),
@@ -58091,7 +58091,7 @@ var DB,
 	FB,
 	IB,
 	LB,
-	RB = e(() => {
+	RB = lazyInit(() => {
 		(x(),
 			Se(),
 			re(),
@@ -58267,7 +58267,7 @@ var DB,
 	pV,
 	mV,
 	hV,
-	gV = e(() => {
+	gV = lazyInit(() => {
 		(x(),
 			Se(),
 			re(),
@@ -59503,7 +59503,7 @@ async function xV(e, t) {
 	}
 }
 var SV, CV, wV, TV, EV, DV;
-e(() => {
+lazyInit(() => {
 	if (
 		(D(),
 		Se(),

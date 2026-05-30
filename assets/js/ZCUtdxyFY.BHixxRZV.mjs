@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	F as t,
 	I as n,
@@ -65,7 +65,7 @@ var Ce,
 	Me,
 	G,
 	Ne,
-	Pe = e(() => {
+	Pe = lazyInit(() => {
 		(rUseDeferredValue(),
 			T(),
 			h(),
@@ -625,7 +625,7 @@ var Ie,
 	He,
 	K,
 	q,
-	Ue = e(() => {
+	Ue = lazyInit(() => {
 		(rUseDeferredValue(),
 			T(),
 			h(),
@@ -984,7 +984,7 @@ var We,
 	yt,
 	$,
 	bt,
-	xt = e(() => {
+	xt = lazyInit(() => {
 		(rUseDeferredValue(),
 			T(),
 			h(),

@@ -1,8 +1,8 @@
-import { createEsModule as e, lazyInit as t } from "./rolldown-runtime.mjs";
+import { createEsModule as createEsModule, lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 var n,
 	r,
 	i,
-	a = t(() => {
+	a = lazyInit(() => {
 		if (
 			((n = typeof document < `u` ? globalThis.navigator : void 0),
 			(r = typeof document < `u` ? globalThis.window : void 0),
@@ -15,7 +15,7 @@ var n,
 			};
 		}
 	}),
-	o = e({
+	o = createEsModule({
 		Children: () => Se,
 		Component: () => Ce,
 		Fragment: () => we,
@@ -280,7 +280,7 @@ var y,
 	et,
 	tt,
 	nt,
-	rt = t(() => {
+	rt = lazyInit(() => {
 		((y = {}),
 			(b = Symbol.for(`react.element`)),
 			(ee = Symbol.for(`react.portal`)),
@@ -582,7 +582,7 @@ var at,
 	pt,
 	mt,
 	ht,
-	gt = t(() => {
+	gt = lazyInit(() => {
 		(rt(),
 			(at = `default` in o ? y : o),
 			(ot = {}),
@@ -601,7 +601,7 @@ var at,
 			(mt = ot.jsx),
 			(ht = ot.jsxs));
 	}),
-	_t = e({
+	_t = createEsModule({
 		default: () => S,
 		unstable_IdlePriority: () => Zt,
 		unstable_ImmediatePriority: () => Qt,
@@ -776,7 +776,7 @@ var S,
 	pn,
 	mn,
 	hn,
-	gn = t(() => {
+	gn = lazyInit(() => {
 		(a(),
 			(S = {}),
 			typeof performance == `object` &&
@@ -968,7 +968,7 @@ var S,
 			(mn = S.unstable_shouldYield),
 			(hn = S.unstable_wrapCallback));
 	}),
-	_n = e({
+	_n = createEsModule({
 		__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: () => gp,
 		createPortal: () => _p,
 		createRoot: () => vp,
@@ -8244,7 +8244,7 @@ var Rc,
 	Tp,
 	Ep,
 	Dp,
-	Op = t(() => {
+	Op = lazyInit(() => {
 		if (
 			(a(),
 			rt(),
@@ -9937,7 +9937,7 @@ var Rc,
 	jp,
 	Mp,
 	Np,
-	Pp = t(() => {
+	Pp = lazyInit(() => {
 		(Op(),
 			(kp = `default` in _n ? hp : _n),
 			(Ap = {}),

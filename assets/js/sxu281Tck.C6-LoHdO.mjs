@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	F as t,
 	T as rUseUnknownT,
@@ -47,7 +47,7 @@ var j,
 	W,
 	G,
 	K,
-	q = e(() => {
+	q = lazyInit(() => {
 		(rInternalReactHelper(),
 			b(),
 			d(),

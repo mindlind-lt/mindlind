@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	C as rUseLayoutEffect,
 	M as rUseMemo,
@@ -123,7 +123,7 @@ function d(e) {
 		],
 	});
 }
-var f = e(() => {
+var f = lazyInit(() => {
 	(rInternalReactHelper(),
 		r(),
 		l(),
