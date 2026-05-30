@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	F as t,
 	M as rUseMemo,
@@ -96,7 +96,7 @@ var xt,
 	Et,
 	Dt,
 	Ot,
-	kt = e(() => {
+	kt = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			r(),
@@ -150,7 +150,7 @@ var xt,
 	Ft,
 	It,
 	Lt,
-	Rt = e(() => {
+	Rt = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			r(),
@@ -210,7 +210,7 @@ var Bt,
 	qt,
 	z,
 	Jt,
-	Yt = e(() => {
+	Yt = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			g(),
@@ -345,7 +345,7 @@ var Bt,
 	tn,
 	nn,
 	rn,
-	an = e(() => {
+	an = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			r(),
@@ -399,7 +399,7 @@ var Bt,
 	dn,
 	fn,
 	pn,
-	mn = e(() => {
+	mn = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			r(),
@@ -459,7 +459,7 @@ var gn,
 	Cn,
 	B,
 	wn,
-	Tn = e(() => {
+	Tn = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			g(),
@@ -903,7 +903,7 @@ var G,
 	Lr,
 	Rr,
 	zr,
-	Br = e(() => {
+	Br = lazyInit(() => {
 		(p(),
 			A(),
 			(vr = Object.create),
@@ -1826,7 +1826,7 @@ function Ur(e) {
 var X,
 	Wr,
 	Gr,
-	Kr = e(() => {
+	Kr = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			r(),
@@ -1845,7 +1845,7 @@ var X,
 	Xr,
 	Zr,
 	Qr,
-	$r = e(() => {
+	$r = lazyInit(() => {
 		(A(),
 			Br(),
 			Kr(),
@@ -1917,7 +1917,7 @@ var X,
 	ni,
 	ri,
 	ii,
-	ai = e(() => {
+	ai = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			r(),
@@ -1979,7 +1979,7 @@ var X,
 	$,
 	Ei,
 	Di;
-e(() => {
+lazyInit(() => {
 	(rUseDeferredValue(),
 		A(),
 		g(),

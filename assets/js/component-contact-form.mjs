@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	F as t,
 	M as rUseMemo,
@@ -54,7 +54,7 @@ import { i as me, n as he, r as ge, t as _e } from "./zczqo4Z8y.BKvtHDpT.mjs";
 var V,
 	H,
 	U,
-	ve = e(() => {
+	ve = lazyInit(() => {
 		(D(),
 			v.loadFonts([
 				`FR;InterDisplay`,
@@ -301,7 +301,7 @@ var V,
 	W,
 	G,
 	K,
-	ye = e(() => {
+	ye = lazyInit(() => {
 		(D(),
 			v.loadFonts([
 				`GF;Space Mono-regular`,
@@ -352,7 +352,7 @@ var V,
 	be,
 	xe,
 	Se,
-	Ce = e(() => {
+	Ce = lazyInit(() => {
 		(D(),
 			v.loadFonts([
 				`FR;InterDisplay`,
@@ -599,7 +599,7 @@ var V,
 	we,
 	Te,
 	Ee,
-	De = e(() => {
+	De = lazyInit(() => {
 		(D(),
 			v.loadFonts([]),
 			(we = [{ explicitInter: !0, fonts: [] }]),
@@ -628,7 +628,7 @@ var ke,
 	He,
 	q,
 	J,
-	Ue = e(() => {
+	Ue = lazyInit(() => {
 		(rUseDeferredValue(),
 			D(),
 			m(),
@@ -1084,7 +1084,7 @@ var Ge,
 	tt,
 	Y,
 	X,
-	nt = e(() => {
+	nt = lazyInit(() => {
 		(rUseDeferredValue(),
 			D(),
 			m(),
@@ -2069,7 +2069,7 @@ var rt,
 	ft,
 	$,
 	pt,
-	mt = e(() => {
+	mt = lazyInit(() => {
 		(rUseDeferredValue(),
 			D(),
 			m(),

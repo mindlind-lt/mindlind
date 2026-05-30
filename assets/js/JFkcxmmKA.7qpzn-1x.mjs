@@ -1,9 +1,9 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import { B as t, M as rUseMemo, P as rUseEffect, T as i, z as a } from "./react.mjs";
 import { F as o, X as s, a as c, mt as l, w as u } from "./framer.mjs";
 var d,
 	f,
-	p = e(() => {
+	p = lazyInit(() => {
 		(s(),
 			(d = {
 				position: `relative`,
@@ -36,27 +36,27 @@ function g(e, t, n = !0) {
 		n && i === e && t();
 	}, [i]);
 }
-var _ = e(() => {
+var _ = lazyInit(() => {
 		(s(), i());
 	}),
-	v = e(() => {
+	v = lazyInit(() => {
 		i();
 	}),
-	y = e(() => {
+	y = lazyInit(() => {
 		s();
 	}),
-	b = e(() => {
+	b = lazyInit(() => {
 		s();
 	}),
-	x = e(() => {
+	x = lazyInit(() => {
 		i();
 	}),
-	S = e(() => {
+	S = lazyInit(() => {
 		s();
 	}),
 	C,
 	w,
-	T = e(() => {
+	T = lazyInit(() => {
 		(a(),
 			i(),
 			(C = () => {
@@ -72,13 +72,13 @@ var _ = e(() => {
 			}),
 			(w = () => rUseMemo(() => C(), [])));
 	}),
-	E = e(() => {
+	E = lazyInit(() => {
 		(i(), b());
 	}),
-	D = e(() => {
+	D = lazyInit(() => {
 		(i(), s(), b(), v());
 	}),
-	O = e(() => {
+	O = lazyInit(() => {
 		(s(), i(), p());
 	});
 function k() {
@@ -87,10 +87,10 @@ function k() {
 function A() {
 	return rUseMemo(() => u.current() === u.canvas, []);
 }
-var j = e(() => {
+var j = lazyInit(() => {
 		(i(), s());
 	}),
-	M = e(() => {
+	M = lazyInit(() => {
 		i();
 	});
 function N(e) {
@@ -120,7 +120,7 @@ function P(e) {
 }
 var F,
 	I,
-	L = e(() => {
+	L = lazyInit(() => {
 		(i(),
 			s(),
 			(F = {
@@ -156,13 +156,13 @@ var F,
 				},
 			}));
 	}),
-	R = e(() => {
+	R = lazyInit(() => {
 		(p(), _(), v(), y(), b(), x(), S(), T(), E(), D(), O(), j(), M(), L());
 	}),
 	z,
 	B,
 	V,
-	H = e(() => {
+	H = lazyInit(() => {
 		(s(),
 			o.loadFonts([
 				`GF;Space Mono-regular`,

@@ -1,4 +1,4 @@
-import { requireCompat as e, lazyInit as t } from "./rolldown-runtime.mjs";
+import { requireCompat as requireCompat, lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	A as n,
 	B as r,
@@ -55,7 +55,7 @@ var ee,
 	Te,
 	Ee,
 	De,
-	Oe = t(() => {
+	Oe = lazyInit(() => {
 		((ee = Object.create),
 			(D = Object.defineProperty),
 			(te = Object.getOwnPropertyDescriptor),
@@ -77,14 +77,14 @@ var ee,
 					: (e[t] = n)),
 			(ce = (e, t) => D(e, `name`, { value: t, configurable: !0 })),
 			(le = ((t) =>
-				e === void 0
+				requireCompat === void 0
 					? typeof Proxy < `u`
 						? new Proxy(t, {
-								get: (t, n) => (e === void 0 ? t : e)[n],
+								get: (t, n) => (requireCompat === void 0 ? t : requireCompat)[n],
 							})
 						: t
-					: e)(function (t) {
-				if (e !== void 0) return e.apply(this, arguments);
+					: requireCompat)(function (t) {
+				if (requireCompat !== void 0) return requireCompat.apply(this, arguments);
 				throw Error(`Dynamic require of "` + t + `" is not supported`);
 			})),
 			(ue = (e, t) =>
@@ -5611,7 +5611,7 @@ var js,
 	Lp,
 	Rp,
 	zp,
-	Bp = t(() => {
+	Bp = lazyInit(() => {
 		(E(),
 			Oe(),
 			f(),
@@ -9430,7 +9430,7 @@ var js,
 			(Rp = null),
 			(zp = _(As)));
 	}),
-	Vp = t(() => {
+	Vp = lazyInit(() => {
 		Bp();
 	});
 export {

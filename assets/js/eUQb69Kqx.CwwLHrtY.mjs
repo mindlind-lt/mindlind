@@ -1,9 +1,9 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import { F as t, X as n } from "./framer.mjs";
 var r,
 	i,
 	a,
-	o = e(() => {
+	o = lazyInit(() => {
 		(n(),
 			t.loadFonts([
 				`GF;Space Mono-regular`,
@@ -54,7 +54,7 @@ var r,
 	s,
 	c,
 	l,
-	u = e(() => {
+	u = lazyInit(() => {
 		(n(),
 			t.loadFonts([
 				`GF;Space Mono-regular`,

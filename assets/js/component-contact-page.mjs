@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	F as t,
 	I as rUseState,
@@ -96,7 +96,7 @@ var qe,
 	rt,
 	J,
 	it,
-	at = e(() => {
+	at = lazyInit(() => {
 		(rUseDeferredValue(),
 			k(),
 			v(),
@@ -573,7 +573,7 @@ var ct,
 	ut,
 	dt,
 	ft,
-	pt = e(() => {
+	pt = lazyInit(() => {
 		(rUseDeferredValue(),
 			k(),
 			v(),
@@ -1743,7 +1743,7 @@ var Mt,
 	Bt,
 	Vt,
 	Ht,
-	Ut = e(() => {
+	Ut = lazyInit(() => {
 		(m(),
 			rUseDeferredValue(),
 			a(),
@@ -1955,7 +1955,7 @@ var Wt,
 	sn,
 	Q,
 	cn,
-	ln = e(() => {
+	ln = lazyInit(() => {
 		(rUseDeferredValue(),
 			k(),
 			v(),
@@ -4057,7 +4057,7 @@ Beverly Hills 55a`,
 	bn,
 	xn,
 	Sn;
-e(() => {
+lazyInit(() => {
 	(rUseDeferredValue(),
 		k(),
 		v(),

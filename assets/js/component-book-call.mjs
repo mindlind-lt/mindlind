@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	F as t,
 	I as rUseState,
@@ -66,7 +66,7 @@ var he,
 	_e,
 	J,
 	ve,
-	ye = e(() => {
+	ye = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			o(),
@@ -188,7 +188,7 @@ var Te,
 	De,
 	Oe,
 	ke,
-	Ae = e(() => {
+	Ae = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			v(),
@@ -470,7 +470,7 @@ var Te,
 	je,
 	Me,
 	Ne,
-	Pe = e(() => {
+	Pe = lazyInit(() => {
 		(A(),
 			S.loadFonts([
 				`FR;InterDisplay`,
@@ -737,7 +737,7 @@ var Fe,
 	Ye,
 	$,
 	Xe,
-	Ze = e(() => {
+	Ze = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			v(),
@@ -2023,7 +2023,7 @@ var Fe,
 	Qe,
 	$e,
 	et,
-	tt = e(() => {
+	tt = lazyInit(() => {
 		(A(),
 			S.loadFonts([
 				`GF;Space Mono-regular`,

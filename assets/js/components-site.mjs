@@ -1,4 +1,4 @@
-import { createEsModule as e, lazyInit as t } from "./rolldown-runtime.mjs";
+import { createEsModule as createEsModule, lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	B as n,
 	E as r,
@@ -224,7 +224,7 @@ var mt,
 	St,
 	Ct,
 	wt,
-	Tt = t(() => {
+	Tt = lazyInit(() => {
 		(rUseDeferredValue(),
 			L(),
 			w(),
@@ -524,7 +524,7 @@ var Dt,
 	zt,
 	Bt,
 	Vt,
-	Ht = t(() => {
+	Ht = lazyInit(() => {
 		(rUseDeferredValue(),
 			L(),
 			w(),
@@ -1097,7 +1097,7 @@ var Wt,
 	en,
 	tn,
 	nn,
-	rn = t(() => {
+	rn = lazyInit(() => {
 		(rUseDeferredValue(),
 			L(),
 			w(),
@@ -2567,7 +2567,7 @@ var ln,
 	dn,
 	fn,
 	pn,
-	mn = t(() => {
+	mn = lazyInit(() => {
 		(v(),
 			rUseDeferredValue(),
 			l(),
@@ -2946,7 +2946,7 @@ var gn,
 	kn,
 	An,
 	jn,
-	Mn = t(() => {
+	Mn = lazyInit(() => {
 		(rUseDeferredValue(),
 			L(),
 			w(),
@@ -11825,7 +11825,7 @@ var bo,
 	gg,
 	_g,
 	vg,
-	yg = t(() => {
+	yg = lazyInit(() => {
 		(v(),
 			(bo = `136`),
 			(xo = 0),
@@ -34475,7 +34475,7 @@ function xg(e) {
 		})
 	);
 }
-var Sg = t(() => {
+var Sg = lazyInit(() => {
 	(v(),
 		rUseDeferredValue(),
 		l(),
@@ -34671,7 +34671,7 @@ var wg,
 	Ng,
 	Pg,
 	Fg,
-	Ig = t(() => {
+	Ig = lazyInit(() => {
 		(rUseDeferredValue(),
 			L(),
 			w(),
@@ -35283,7 +35283,7 @@ var Rg,
 	Xg,
 	Zg,
 	Qg,
-	$g = t(() => {
+	$g = lazyInit(() => {
 		(rUseDeferredValue(),
 			L(),
 			w(),
@@ -36351,7 +36351,7 @@ Mondragon Agency`,
 	}),
 	e_,
 	t_,
-	n_ = t(() => {
+	n_ = lazyInit(() => {
 		(rUseDeferredValue(),
 			L(),
 			l(),
@@ -36505,7 +36505,7 @@ var i_,
 	p_,
 	m_,
 	h_,
-	g_ = t(() => {
+	g_ = lazyInit(() => {
 		(rUseDeferredValue(),
 			L(),
 			w(),
@@ -36976,7 +36976,7 @@ var v_,
 	j_,
 	M_,
 	N_,
-	P_ = t(() => {
+	P_ = lazyInit(() => {
 		(rUseDeferredValue(),
 			L(),
 			w(),
@@ -40134,7 +40134,7 @@ var Hy,
 	IS,
 	LS,
 	RS,
-	zS = t(() => {
+	zS = lazyInit(() => {
 		(v(),
 			(Hy = (function () {
 				let e = [0, 0, 0],
@@ -46251,7 +46251,7 @@ void main() {
 }
 `));
 	}),
-	BS = e({
+	BS = createEsModule({
 		Animation: () => Ax,
 		AxesHelper: () => SS,
 		BasisManager: () => vS,
@@ -46299,7 +46299,7 @@ void main() {
 		VertexNormalsHelper: () => OS,
 		WireMesh: () => yS,
 	}),
-	VS = t(() => {
+	VS = lazyInit(() => {
 		zS();
 	});
 function HS() {
@@ -54571,7 +54571,7 @@ var ME,
 	DF,
 	OF,
 	kF,
-	AF = t(() => {
+	AF = lazyInit(() => {
 		(v(),
 		/*! Bundled license information:
 
@@ -75029,7 +75029,7 @@ void main() {
 						)
 					: (u.__THREE__ = `160`)));
 	}),
-	jF = t(() => {
+	jF = lazyInit(() => {
 		AF();
 	});
 function MF(e, t) {
@@ -75405,7 +75405,7 @@ var QF,
 	BI,
 	VI,
 	HI,
-	UI = t(() => {
+	UI = lazyInit(() => {
 		(v(),
 		/*! Bundled license information:
 
@@ -77892,7 +77892,7 @@ version 0.6.9
 			(VI = new BA()),
 			(HI = new Z()));
 	}),
-	WI = t(() => {
+	WI = lazyInit(() => {
 		(AF(), UI());
 	});
 function GI(e) {
@@ -78590,7 +78590,7 @@ var rL,
 	dL,
 	fL,
 	pL,
-	mL = t(() => {
+	mL = lazyInit(() => {
 		(v(),
 			rUseDeferredValue(),
 			VS(),
@@ -78716,7 +78716,7 @@ var gL,
 	DL,
 	OL,
 	kL,
-	AL = t(() => {
+	AL = lazyInit(() => {
 		(rUseDeferredValue(),
 			L(),
 			w(),
@@ -79292,7 +79292,7 @@ var gL,
 	ZL,
 	QL,
 	$L;
-t(() => {
+lazyInit(() => {
 	(rUseDeferredValue(),
 		L(),
 		w(),

@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	A as t,
 	B as n,
@@ -11432,7 +11432,7 @@ var mg,
 	kO,
 	AO,
 	jO,
-	MO = e(() => {
+	MO = lazyInit(() => {
 		(ne(),
 		//! Credit to Astro | MIT License
 		/**

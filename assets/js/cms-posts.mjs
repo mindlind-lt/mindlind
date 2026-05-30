@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	F as t,
 	T as n,
@@ -346,7 +346,7 @@ var w,
 	G,
 	et,
 	tt,
-	nt = e(() => {
+	nt = lazyInit(() => {
 		(c(),
 			f(),
 			(T = Object.create),
@@ -1682,7 +1682,7 @@ function at(e) {
 var K,
 	ot,
 	st,
-	ct = e(() => {
+	ct = lazyInit(() => {
 		(o(),
 			f(),
 			n(),
@@ -1731,7 +1731,7 @@ var K,
 	It,
 	Lt,
 	$,
-	Rt = e(() => {
+	Rt = lazyInit(() => {
 		(f(),
 			nt(),
 			ct(),

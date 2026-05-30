@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	A as t,
 	C as n,
@@ -355,7 +355,7 @@ function Yn(e) {
 }
 var Xn,
 	Zn,
-	Qn = e(() => {
+	Qn = lazyInit(() => {
 		(y(),
 			l(),
 			q(),
@@ -509,7 +509,7 @@ var er,
 	gr,
 	_r,
 	vr,
-	yr = e(() => {
+	yr = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -2209,7 +2209,7 @@ var xr,
 	kr,
 	Ar,
 	jr,
-	Mr = e(() => {
+	Mr = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -2965,7 +2965,7 @@ self.onmessage = (e) => {
 		})
 	);
 }
-var Pr = e(() => {
+var Pr = lazyInit(() => {
 	(C(),
 		y(),
 		l(),
@@ -3047,7 +3047,7 @@ var Ir,
 	Qr,
 	$r,
 	ei,
-	ti = e(() => {
+	ti = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -4124,7 +4124,7 @@ function ri(e) {
 }
 var ii,
 	ai,
-	oi = e(() => {
+	oi = lazyInit(() => {
 		(y(),
 			l(),
 			q(),
@@ -4218,7 +4218,7 @@ var ii,
 	li,
 	ui,
 	di,
-	fi = e(() => {
+	fi = lazyInit(() => {
 		(y(),
 			q(),
 			l(),
@@ -4260,7 +4260,7 @@ var ii,
 	hi,
 	gi,
 	_i,
-	vi = e(() => {
+	vi = lazyInit(() => {
 		(y(),
 			q(),
 			l(),
@@ -4302,7 +4302,7 @@ var ii,
 	xi,
 	Si,
 	Ci,
-	wi = e(() => {
+	wi = lazyInit(() => {
 		(y(),
 			q(),
 			l(),
@@ -4344,7 +4344,7 @@ var ii,
 	Di,
 	Oi,
 	ki,
-	Ai = e(() => {
+	Ai = lazyInit(() => {
 		(y(),
 			q(),
 			l(),
@@ -4678,7 +4678,7 @@ var Pi,
 	Vi,
 	Hi,
 	Ui,
-	Wi = e(() => {
+	Wi = lazyInit(() => {
 		(C(),
 			y(),
 			l(),
@@ -4934,7 +4934,7 @@ var Pi,
 	qi,
 	Ji,
 	Yi,
-	Xi = e(() => {
+	Xi = lazyInit(() => {
 		(y(),
 			q(),
 			l(),
@@ -4976,7 +4976,7 @@ var Pi,
 	$i,
 	ea,
 	ta,
-	na = e(() => {
+	na = lazyInit(() => {
 		(y(),
 			q(),
 			l(),
@@ -5018,7 +5018,7 @@ var Pi,
 	aa,
 	oa,
 	sa,
-	ca = e(() => {
+	ca = lazyInit(() => {
 		(y(),
 			q(),
 			l(),
@@ -5060,7 +5060,7 @@ var Pi,
 	da,
 	fa,
 	pa,
-	ma = e(() => {
+	ma = lazyInit(() => {
 		(y(),
 			q(),
 			l(),
@@ -5115,7 +5115,7 @@ var Pi,
 	Aa,
 	ja,
 	Ma,
-	Na = e(() => {
+	Na = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -5450,7 +5450,7 @@ var Fa,
 	Wa,
 	Ga,
 	Ka,
-	qa = e(() => {
+	qa = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -5914,7 +5914,7 @@ var Fa,
 	Xa,
 	Za,
 	Qa,
-	$a = e(() => {
+	$a = lazyInit(() => {
 		(y(),
 			q(),
 			l(),
@@ -5967,7 +5967,7 @@ var to,
 	uo,
 	fo,
 	po,
-	mo = e(() => {
+	mo = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -6445,7 +6445,7 @@ var go,
 	jo,
 	Mo,
 	No,
-	Po = e(() => {
+	Po = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -8349,7 +8349,7 @@ var Io,
 	Qo,
 	$o,
 	es,
-	ts = e(() => {
+	ts = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -9886,7 +9886,7 @@ var rs,
 	fs,
 	ps,
 	ms,
-	hs = e(() => {
+	hs = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -10539,7 +10539,7 @@ var _s,
 	Ds,
 	Os,
 	ks,
-	As = e(() => {
+	As = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -11050,7 +11050,7 @@ var Ms,
 	Vs,
 	Hs,
 	Us,
-	Ws = e(() => {
+	Ws = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -11770,7 +11770,7 @@ var Vc,
 	vl,
 	yl,
 	bl,
-	xl = e(() => {
+	xl = lazyInit(() => {
 		(C(),
 			q(),
 			(Hc = Object.create),
@@ -13106,7 +13106,7 @@ function wl(e) {
 var Tl,
 	El,
 	Dl,
-	Ol = e(() => {
+	Ol = lazyInit(() => {
 		(y(),
 			q(),
 			l(),
@@ -13150,7 +13150,7 @@ var Tl,
 	ru,
 	iu,
 	au,
-	ou = e(() => {
+	ou = lazyInit(() => {
 		(q(),
 			xl(),
 			Ol(),
@@ -13630,7 +13630,7 @@ var cu,
 	vu,
 	yu,
 	bu,
-	xu = e(() => {
+	xu = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -14407,7 +14407,7 @@ var Cu,
 	Vu,
 	Hu,
 	Uu,
-	Wu = e(() => {
+	Wu = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -17344,7 +17344,7 @@ function ed(e) {
 		}),
 	});
 }
-var td = e(() => {
+var td = lazyInit(() => {
 	(C(),
 		y(),
 		l(),
@@ -17458,7 +17458,7 @@ var rd,
 	hd,
 	gd,
 	_d,
-	vd = e(() => {
+	vd = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -18315,7 +18315,7 @@ function xd(e) {
 				}
 		: { fontFamily: `Inter`, fontWeight: 700, fontStyle: `normal` };
 }
-var Sd = e(() => {
+var Sd = lazyInit(() => {
 	(C(),
 		y(),
 		l(),
@@ -18420,7 +18420,7 @@ var wd,
 	Ld,
 	Rd,
 	zd,
-	Bd = e(() => {
+	Bd = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -19414,7 +19414,7 @@ var Hd,
 	Zd,
 	Qd,
 	$d,
-	ef = e(() => {
+	ef = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -19916,7 +19916,7 @@ var nf,
 	pf,
 	mf,
 	hf,
-	gf = e(() => {
+	gf = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -20743,7 +20743,7 @@ var vf,
 	Of,
 	kf,
 	Af,
-	jf = e(() => {
+	jf = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -21098,7 +21098,7 @@ var Nf,
 	Wf,
 	Gf,
 	Kf,
-	qf = e(() => {
+	qf = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -21788,7 +21788,7 @@ var Yf,
 	rp,
 	ip,
 	ap,
-	op = e(() => {
+	op = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -22355,7 +22355,7 @@ var cp,
 	xp,
 	Sp,
 	Cp,
-	wp = e(() => {
+	wp = lazyInit(() => {
 		(y(),
 			q(),
 			N(),
@@ -23886,7 +23886,7 @@ var cp,
 	rm,
 	im,
 	am;
-e(() => {
+lazyInit(() => {
 	(y(),
 		q(),
 		N(),

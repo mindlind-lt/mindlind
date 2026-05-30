@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	A as t,
 	E as n,
@@ -64,7 +64,7 @@ var he,
 	we,
 	P,
 	Te,
-	Ee = e(() => {
+	Ee = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			C(),
@@ -351,7 +351,7 @@ var je,
 	z,
 	B,
 	V,
-	Ne = e(() => {
+	Ne = lazyInit(() => {
 		((je = (e, t, n) => Math.min(Math.max(n, e), t)),
 			(I = (e) => typeof e == `number`),
 			(L = (e) => Array.isArray(e) && !I(e[0])),
@@ -364,10 +364,10 @@ var je,
 			(B = (e, t, n) => (t - e === 0 ? 1 : (n - e) / (t - e))),
 			(V = (e) => typeof e == `string`));
 	}),
-	Pe = e(() => {
+	Pe = lazyInit(() => {
 		Ne();
 	}),
-	Fe = e(() => {
+	Fe = lazyInit(() => {
 		Pe();
 	});
 function Ie(e, t) {
@@ -385,9 +385,9 @@ function Ie(e, t) {
 	}
 	return n;
 }
-var Le = e(() => {}),
+var Le = lazyInit(() => {}),
 	H,
-	U = e(() => {
+	U = lazyInit(() => {
 		((H = {}),
 			Object.defineProperty(H, `__esModule`, { value: !0 }),
 			(H.warning = function () {}),
@@ -396,7 +396,7 @@ var Le = e(() => {}),
 			H.warning,
 			H.invariant);
 	}),
-	W = e(() => {
+	W = lazyInit(() => {
 		Ne();
 	});
 function Re(e, t) {
@@ -696,7 +696,7 @@ var rt,
 	Et,
 	Dt,
 	Ot,
-	kt = e(() => {
+	kt = lazyInit(() => {
 		for (let e in (v(),
 		Ne(),
 		Fe(),
@@ -862,7 +862,7 @@ var rt,
 			[...Object.keys(Ot)]);
 	}),
 	At,
-	jt = e(() => {
+	jt = lazyInit(() => {
 		At = (e, t, n) => Math.min(Math.max(n, e), t);
 	});
 function Mt([e, t]) {
@@ -1378,7 +1378,7 @@ var Ut,
 	Xt,
 	Zt,
 	Qt,
-	$t = e(() => {
+	$t = lazyInit(() => {
 		(v(),
 			rUseDeferredValue(),
 			c(),
@@ -1832,7 +1832,7 @@ var tn,
 	un,
 	$,
 	dn,
-	fn = e(() => {
+	fn = lazyInit(() => {
 		(rUseDeferredValue(),
 			A(),
 			C(),
@@ -2131,7 +2131,7 @@ var tn,
 	pn,
 	mn,
 	hn,
-	gn = e(() => {
+	gn = lazyInit(() => {
 		(A(),
 			re.loadFonts([
 				`GF;Space Mono-regular`,

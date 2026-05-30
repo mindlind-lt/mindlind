@@ -1,4 +1,4 @@
-import { lazyInit as e } from "./rolldown-runtime.mjs";
+import { lazyInit as lazyInit } from "./rolldown-runtime.mjs";
 import {
 	F as t,
 	M as rUseMemo,
@@ -56,7 +56,7 @@ var F,
 	W,
 	G,
 	K,
-	ue = e(() => {
+	ue = lazyInit(() => {
 		(rUseDeferredValue(),
 			ne(),
 			p(),
@@ -466,7 +466,7 @@ var F,
 	Q,
 	_e,
 	$;
-e(() => {
+lazyInit(() => {
 	(rUseDeferredValue(),
 		ne(),
 		p(),
