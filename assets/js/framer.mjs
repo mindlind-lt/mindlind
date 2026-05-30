@@ -181,7 +181,7 @@ function pt(e, t) {
 	if (t in e) return e[t];
 	throw Error(`Module does not contain export '${t}'`);
 }
-function mt(e, t = `default`, n) {
+function lazyComponent(e, t = `default`, n) {
 	let r,
 		i,
 		a,
@@ -3446,7 +3446,7 @@ function Qa(e, t) {
 	return `${e} > ${t}, ${e} > .ssr-variant > ${t}`;
 }
 function $a() {
-	return J.current() === J.preview ? Kb : Gb;
+	return FramerEnvironment.current() === FramerEnvironment.preview ? Kb : Gb;
 }
 function eo(e) {
 	return jy(e, $a, `framer-lib-combinedCSSRules`);
@@ -3539,15 +3539,15 @@ function ao(e) {
 function oo(e, t) {
 	to(e) && io(ao(e), t);
 }
-function so(e, t) {
+function addPropertyControls(e, t) {
 	(Object.assign(e, { propertyControls: t }), oo(e, t));
 }
 function co(e) {
 	return e.propertyControls;
 }
 function lo() {
-	let e = J.current();
-	return e === J.canvas || e === J.export;
+	let e = FramerEnvironment.current();
+	return e === FramerEnvironment.canvas || e === FramerEnvironment.export;
 }
 function uo() {
 	let [e] = o(() => lo());
@@ -3761,13 +3761,13 @@ function Eo({ layoutId: e, image: t, ...n }) {
 				(i = !0));
 		} else
 			a =
-				J.current() === J.canvas
+				FramerEnvironment.current() === FramerEnvironment.canvas
 					? tx.canRenderOptimizedCanvasImage(tx.useImageSource(t))
 						? _(To, { image: t, ...n })
 						: _(wo, { image: t, ...n })
 					: _(Co, {
 							image: t,
-							avoidAsyncDecoding: J.current() === J.export,
+							avoidAsyncDecoding: FramerEnvironment.current() === FramerEnvironment.export,
 							...n,
 						});
 	let o = a ? ox : (r ?? { ...ox, ...vo() });
@@ -3861,7 +3861,7 @@ function No(e, t) {
 }
 function Po(e) {
 	let t = {};
-	return (!e || !lx || J.current() !== J.canvas || No(t, e), t);
+	return (!e || !lx || FramerEnvironment.current() !== FramerEnvironment.canvas || No(t, e), t);
 }
 function Fo(e) {
 	return e.replace(/^id_/u, ``).replace(/\\/gu, ``);
@@ -3957,7 +3957,7 @@ function Wo(e, t, n = () => [], r = {}) {
 	let { id: i, visible: a, _needsMeasure: o } = e,
 		{ skipHook: s = !1 } = r,
 		c = C(dx),
-		l = J.current() === J.canvas;
+		l = FramerEnvironment.current() === FramerEnvironment.canvas;
 	ux(() => {
 		!l ||
 			c ||
@@ -3975,14 +3975,14 @@ function Go(e) {
 }
 function Ko(e) {
 	e.willChange = `transform`;
-	let t = J.current() === J.canvas;
+	let t = FramerEnvironment.current() === FramerEnvironment.canvas;
 	_x && t && (e.translateZ = hx);
 }
 function qo(e) {
 	((e.willChange = `transform`), Jo(e, !0));
 }
 function Jo(e, t) {
-	let n = J.current() === J.canvas;
+	let n = FramerEnvironment.current() === FramerEnvironment.canvas;
 	if (!_x || !n) return;
 	let r = (L(e.transform) && e.transform) || ``;
 	t
@@ -4206,7 +4206,7 @@ function ps(e) {
 		c = {
 			display: `block`,
 			flex: n?.flex ?? `0 0 auto`,
-			userSelect: J.current() === J.preview ? void 0 : `none`,
+			userSelect: FramerEnvironment.current() === FramerEnvironment.preview ? void 0 : `none`,
 		};
 	e.__fromCanvasComponent ||
 		(c.backgroundColor =
@@ -5107,7 +5107,7 @@ function Nc(e, t, n) {
 		g = wS(e.skewX),
 		_ = wS(e.skewY),
 		v = Mc(e.rotation, F(r.rotate));
-	Yv.target === J.export ||
+	Yv.target === FramerEnvironment.export ||
 	o !== 0 ||
 	s !== 1 ||
 	c !== 0 ||
@@ -6097,7 +6097,7 @@ function Il(...e) {
 	console.error(...e);
 }
 function Ll() {
-	return J.current() !== J.canvas;
+	return FramerEnvironment.current() !== FramerEnvironment.canvas;
 }
 function Rl({ getErrorMessage: e, fallback: t, children: n }) {
 	return Ll()
@@ -6254,7 +6254,7 @@ function iu(e) {
 	return `${e.scopeId}:${e.nodeId}:${e.furthestExternalComponent?.scopeId}:${e.furthestExternalComponent?.nodeId}`;
 }
 function au() {
-	return J.current() === J.canvas;
+	return FramerEnvironment.current() === FramerEnvironment.canvas;
 }
 function ou(e) {
 	return e === void 0
@@ -7935,7 +7935,7 @@ function Gd(e, t) {
 	return n;
 }
 function Kd(e, t) {
-	if (J.current() === J.canvas) return !1;
+	if (FramerEnvironment.current() === FramerEnvironment.canvas) return !1;
 	let n = Math.max(t * 1e3, iT);
 	return Date.now() >= e + n;
 }
@@ -8620,7 +8620,7 @@ function xp(e) {
 function Sp(e) {
 	return xp({ ...e, select: [] }).length;
 }
-function Cp(e, t) {
+function createFilterQuery(e, t) {
 	let n = Object.entries(e ?? {})
 		.filter(([, e]) => !(tt(e) || z(e)))
 		.map(([e, n]) => ({
@@ -10000,7 +10000,7 @@ function fh(e, t, n) {
 	let r = w([]);
 	uh(r.current, e) ||
 		((r.current = e),
-		BD.loadFonts(e).then(({ newlyLoadedFontCount: e }) => {
+		FontLoader.loadFonts(e).then(({ newlyLoadedFontCount: e }) => {
 			!t ||
 				!n.current ||
 				J.current() !== J.canvas ||
@@ -10590,7 +10590,7 @@ function Vh(e, t) {
 						? 2048
 						: 4096
 			: void 0;
-	let n = J.current() === J.export;
+	let n = FramerEnvironment.current() === FramerEnvironment.export;
 	return tx.assetResolver(e, { pixelSize: t, isExport: n }) ?? ``;
 }
 function Hh(e, t) {
@@ -10904,7 +10904,7 @@ var mg,
 	qv,
 	Jv,
 	Yv,
-	J,
+	FramerEnvironment,
 	Xv,
 	Zv,
 	Qv,
@@ -10922,7 +10922,7 @@ var mg,
 	ly,
 	uy,
 	dy,
-	fy,
+	PropertyControlTypes,
 	py,
 	my,
 	hy,
@@ -11336,7 +11336,7 @@ var mg,
 	VE,
 	HE,
 	UE,
-	WE,
+	QueryEngine,
 	GE,
 	KE,
 	qE,
@@ -11386,7 +11386,7 @@ var mg,
 	LD,
 	RD,
 	zD,
-	BD,
+	FontLoader,
 	VD,
 	HD,
 	UD,
@@ -11432,7 +11432,7 @@ var mg,
 	kO,
 	AO,
 	jO,
-	MO = lazyInit(() => {
+	FramerUtils = lazyInit(() => {
 		(ne(),
 		//! Credit to Astro | MIT License
 		/**
@@ -14365,7 +14365,7 @@ react-is/cjs/react-is.production.min.js:
 						: `PREVIEW`,
 				zoom: 1,
 			}),
-			(J = {
+			(FramerEnvironment = {
 				canvas: `CANVAS`,
 				export: `EXPORT`,
 				thumbnail: `THUMBNAIL`,
@@ -15114,7 +15114,7 @@ react-is/cjs/react-is.production.min.js:
 						: null
 					: _(uy.Provider, { value: i, children: r });
 			}),
-			(fy = ((e) => (
+			(PropertyControlTypes = ((e) => (
 				(e.Boolean = `boolean`),
 				(e.Number = `number`),
 				(e.String = `string`),
@@ -15152,7 +15152,7 @@ react-is/cjs/react-is.production.min.js:
 				(e.LinkRelValues = `linkrelvalues`),
 				(e.Location = `location`),
 				e
-			))(fy || {})),
+			))(PropertyControlTypes || {})),
 			(py = /Mac/u),
 			(my = /iPhone|iPod|iPad/iu),
 			(hy = /MacIntel/iu),
@@ -15181,7 +15181,7 @@ react-is/cjs/react-is.production.min.js:
 					let { sheet: a, cache: o } = f.useContext(Ty) ?? {},
 						s = n;
 					if (!La()) {
-						Ze(t) && (t = t(J.current(), r));
+						Ze(t) && (t = t(FramerEnvironment.current(), r));
 						let e = Array.isArray(t)
 							? t.join(`
 `)
@@ -15192,7 +15192,7 @@ react-is/cjs/react-is.production.min.js:
 						j(() => {
 							(s && ky.has(s)) ||
 								(Ze(t)
-									? t(J.current(), r)
+									? t(FramerEnvironment.current(), r)
 									: Array.isArray(t)
 										? t
 										: t.split(`
@@ -17949,7 +17949,7 @@ NavigationContainer
 							t.background.src
 							? { size: r }
 							: n.size &&
-								  (i === J.preview ||
+								  (i === FramerEnvironment.preview ||
 										(n.size.width === r.width &&
 											n.size.height === r.height))
 								? null
@@ -17966,7 +17966,7 @@ NavigationContainer
 									? (i.width.set(a.width),
 										i.height.set(a.height))
 									: (i = a)
-								: (i = o === J.preview ? _S(a, !0) : a),
+								: (i = o === FramerEnvironment.preview ? _S(a, !0) : a),
 							i
 						);
 					}
@@ -18040,7 +18040,7 @@ NavigationContainer
 					}
 					componentDidMount() {
 						let { target: e } = Yv;
-						e === J.preview &&
+						e === FramerEnvironment.preview &&
 							((this.propsObserver = _S(this.props, !0)),
 							(this.propsObserverCancel = _S.addObserver(
 								this.propsObserver,
@@ -18063,7 +18063,7 @@ NavigationContainer
 						(this.propsObserverCancel && this.propsObserverCancel(),
 							this.sizeObserverCancel &&
 								this.sizeObserverCancel(),
-							e === J.preview &&
+							e === FramerEnvironment.preview &&
 								((this.propsObserver = _S(this.props, !0)),
 								(this.propsObserverCancel = _S.addObserver(
 									this.propsObserver,
@@ -23233,7 +23233,7 @@ This error indicates a state update wasn’t wrapped with \`startTransition\`. S
 				}
 			}),
 			(UE = Jd(`query-engine`)),
-			(WE = class {
+			(QueryEngine = class {
 				async evalQuery(e, t, n, r = {}) {
 					UE.enabled &&
 						UE.debug(`Query:
@@ -23348,7 +23348,7 @@ ${_p(e)}`);
 					return (this.cache.set(n, i), this.prune(), i);
 				}
 			}),
-			(qE = new KE(new WE())),
+			(qE = new KE(new QueryEngine())),
 			(JE = `style[data-framer-breakpoint-css]`),
 			(YE = `page`),
 			(XE = Symbol(`cycle`)),
@@ -24954,10 +24954,10 @@ ${_p(e)}`);
 					};
 				}
 				async loadMissingFonts(e, t) {
-					let n = e.filter((e) => !BD.loadedSelectors.has(e));
+					let n = e.filter((e) => !FontLoader.loadedSelectors.has(e));
 					n.length !== 0 &&
-						(await BD.loadWebFontsFromSelectors(n),
-						n.every((e) => BD.loadedSelectors.has(e)) && t && t());
+						(await FontLoader.loadWebFontsFromSelectors(n),
+						n.every((e) => FontLoader.loadedSelectors.has(e)) && t && t());
 				}
 				async loadWebFontsFromSelectors(e) {
 					return this.loadFontsFromSelectors(e);
@@ -24967,7 +24967,7 @@ ${_p(e)}`);
 					return (B(e, `Can’t find Inter font`), e);
 				}
 			}),
-			(BD = new zD()),
+			(FontLoader = new zD()),
 			(VD = (e) => e.target.value),
 			(HD = {
 				"data-1p-ignore": !0,
@@ -25382,7 +25382,7 @@ ${_p(e)}`);
 							rotation: T = 0,
 							verticalAlignment: E = `top`,
 							isEditable: D = !1,
-							environment: O = J.current,
+							environment: O = FramerEnvironment.current,
 							withExternalLayout: k = !1,
 							positionSticky: A,
 							positionStickyTop: j,
@@ -25449,7 +25449,7 @@ ${_p(e)}`);
 						!x)
 					)
 						return null;
-					let xe = D && O() === J.canvas,
+					let xe = D && O() === FramerEnvironment.canvas,
 						Se = {
 							outline: `none`,
 							display: `flex`,
@@ -25458,7 +25458,7 @@ ${_p(e)}`);
 							opacity: xe ? 0 : S,
 							flexShrink: 0,
 						},
-						Ce = J.hasRestrictions(),
+						Ce = FramerEnvironment.hasRestrictions(),
 						we = va(e, le || 0, !1),
 						Te = oe && (u === `auto` || f === `auto`),
 						Ee =
@@ -25566,7 +25566,7 @@ ${_p(e)}`);
 						bottom: l,
 						center: u,
 						children: d,
-						environment: f = J.current,
+						environment: f = FramerEnvironment.current,
 						fonts: p = mO,
 						height: m,
 						isEditable: h = !1,
@@ -25595,7 +25595,7 @@ ${_p(e)}`);
 						...ce
 					} = e,
 					le = xa(),
-					ue = f() === J.canvas,
+					ue = f() === FramerEnvironment.canvas,
 					de = C(dx),
 					fe = Ro(e),
 					pe = w(null),
@@ -25610,7 +25610,7 @@ ${_p(e)}`);
 					F = dh(ne);
 				F !== eb.justifyContent && (P.justifyContent = F);
 				let ge = {},
-					_e = J.hasRestrictions(),
+					_e = FramerEnvironment.hasRestrictions(),
 					ve = va(e, le || 0, !1),
 					ye = a && (re === `auto` || m === `auto`),
 					be =
@@ -26006,7 +26006,7 @@ ${_p(e)}`);
 								((e.opacity = H(this.props.opacity)
 									? this.props.opacity
 									: 1),
-								J.hasRestrictions() && n)
+								FramerEnvironment.hasRestrictions() && n)
 							) {
 								(Object.assign(e, {
 									transform: `translate(${n.x}px, ${n.y}px) rotate(${c.toFixed(4)}deg)`,
@@ -26019,7 +26019,7 @@ ${_p(e)}`);
 									o = n.height / (a || 1);
 								t.transformOrigin = `top left`;
 								let { zoom: s, target: l } = Yv;
-								if (l === J.export) {
+								if (l === FramerEnvironment.export) {
 									let e = s > 1 ? s : 1;
 									((t.transform = `scale(${r * e}, ${o * e})`),
 										(t.zoom = 1 / e));
@@ -26283,21 +26283,21 @@ ${_p(e)}`);
 	});
 export {
 	kg as $,
-	so as A,
+	addPropertyControls as A,
 	tl as At,
 	JS as B,
-	WE as C,
+	QueryEngine as C,
 	Hh as Ct,
 	kO as D,
 	rm as Dt,
 	_O as E,
 	jy as Et,
-	BD as F,
+	FontLoader as F,
 	co as G,
 	ng as H,
 	pg as I,
 	Gr as J,
-	Cp as K,
+	createFilterQuery as K,
 	XS as L,
 	Kb as M,
 	_n as Mt,
@@ -26305,7 +26305,7 @@ export {
 	LC as O,
 	xC as Ot,
 	Uc as P,
-	mt as Q,
+	lazyComponent as Q,
 	qS as R,
 	KE as S,
 	kt as St,
@@ -26314,12 +26314,12 @@ export {
 	rg as U,
 	Ay as V,
 	eg as W,
-	MO as X,
+	FramerUtils as X,
 	dt as Y,
 	Ka as Z,
 	xv as _,
 	br as _t,
-	fy as a,
+	PropertyControlTypes as a,
 	Fp as at,
 	ow as b,
 	zp as bt,
@@ -26361,7 +26361,7 @@ export {
 	It as ut,
 	Mn as v,
 	yr as vt,
-	J as w,
+	FramerEnvironment as w,
 	pr as wt,
 	HS as x,
 	xp as xt,
