@@ -1,9 +1,12 @@
+import Burger from "./burger";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import "./header.css";
 
 export default function Header() {
+
   return (
     <header className="hdr">
 
@@ -24,15 +27,8 @@ export default function Header() {
         <Link href="/contact">Contact</Link>
       </nav>
 
-      <div>
-        <button className="burger">
-          <div className="burger-label">Menu</div>
-          <div className="burger-lines">
-            <div className="burger-line"></div>
-            <div className="burger-line"></div>
-            <div className="burger-line"></div>
-          </div>
-        </button>
+      <div className="hdr-burger">
+        <Burger />
       </div>
 
     </header>
