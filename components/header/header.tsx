@@ -17,14 +17,23 @@ export default function Header() {
       </Link>
 
       <nav className="hdr-menu">
-        <a href="/">Home</a>
-        <a href="/agency">Agency</a>
-        <a href="/projects">Projects</a>
-        <a href="/blog">Blog</a>
-        <a href="/contact">Contact</a>
+        <Link href="/">Home</Link>
+        <Link href="/agency">Agency</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/blog">Blog</Link>
+        <Link href="/contact">Contact</Link>
       </nav>
 
-      <div>Burger</div>
+      <div>
+        <button className="burger">
+          <div className="burger-label">Menu</div>
+          <div className="burger-lines">
+            <div className="burger-line"></div>
+            <div className="burger-line"></div>
+            <div className="burger-line"></div>
+          </div>
+        </button>
+      </div>
 
     </header>
   );
