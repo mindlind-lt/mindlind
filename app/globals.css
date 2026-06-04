@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: rgb(244, 244, 244);
+    --foreground: #000;
 }
 
 @theme inline {
@@ -30,5 +30,194 @@ body {
 
 
 
-
 /* COPY */
+
+
+/* Burger */
+
+
+.framer-GPpH2 .drawer-burger {
+    z-index: 3;
+    flex: none;
+    width: 85px;
+    height: 60px;
+    position: relative
+}
+
+.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
+.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
+.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
+    order: 1
+}
+
+.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
+.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
+.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
+    order: 1
+}
+
+.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
+.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
+.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
+    order: 1
+}
+
+.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
+.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
+.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
+    order: 1
+}
+
+.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
+.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
+.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
+    order: 1
+}
+
+.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
+.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
+.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
+    order: 1
+}
+
+.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
+.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
+.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
+    order: 1
+}
+
+
+.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
+.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
+.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
+    order: 1
+}
+
+.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
+.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
+.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
+    order: 1
+}
+
+.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
+.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
+.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
+    order: 1
+}
+
+.drawer-burger-inner.framer-9qjqih,
+.drawer-burger-inner .framer-9qjqih {
+    display: block
+}
+
+.drawer-burger-inner.framer-1s7c67u {
+    cursor: pointer;
+    mix-blend-mode: difference;
+    flex-flow: column;
+    place-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 85px;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    position: relative;
+    overflow: hidden
+}
+
+.drawer-burger-inner .framer-tig9p8 {
+    flex: none;
+    width: 46px;
+    height: 26px;
+    position: relative;
+    overflow: hidden
+}
+
+.drawer-burger-inner .framer-1lh8ck8 {
+    z-index: 1;
+    flex: none;
+    width: 45px;
+    height: 2px;
+    position: absolute;
+    top: 2px;
+    left: calc(50% - 22.5px)
+}
+
+.drawer-burger-inner .framer-xvj3te {
+    z-index: 1;
+    flex: none;
+    width: 31px;
+    height: 2px;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 1px
+}
+
+.drawer-burger-inner .framer-99r2te {
+    z-index: 1;
+    flex: none;
+    width: 45px;
+    height: 2px;
+    position: absolute;
+    bottom: 2px;
+    left: calc(50% - 22.5px)
+}
+
+.drawer-burger-inner.framer-v-1lrgknm .framer-1lh8ck8 {
+    width: 29px;
+    left: 0
+}
+
+.drawer-burger-inner.framer-v-1lrgknm .framer-xvj3te {
+    width: 29px;
+    left: calc(51.1111% - 14.5px)
+}
+
+.drawer-burger-inner.framer-v-1lrgknm .framer-99r2te {
+    left: unset;
+    width: 29px;
+    right: 0
+}
+
+.drawer-burger-inner.framer-v-1fu7lbd .framer-1lh8ck8,
+.drawer-burger-inner.framer-v-1qx4i6j .framer-1lh8ck8 {
+    top: calc(50% - 1px);
+    left: calc(51.1111% - 22.5px)
+}
+
+.drawer-burger-inner.framer-v-1fu7lbd .framer-xvj3te,
+.drawer-burger-inner.framer-v-1qx4i6j .framer-xvj3te {
+    left: unset;
+    right: -35px
+}
+
+.drawer-burger-inner.framer-v-1fu7lbd .framer-99r2te,
+.drawer-burger-inner.framer-v-1qx4i6j .framer-99r2te {
+    bottom: unset;
+    top: calc(50% - 1px);
+    left: calc(51.1111% - 22.5px)
+}
+
+.drawer-burger-inner.framer-v-1fu7lbd.hover .framer-xvj3te {
+    left: unset
+}
+
+.drawer-burger-inner.framer-v-1fu7lbd.hover .framer-99r2te {
+    bottom: unset
+}
+
+.drawer-burger-inner.framer-v-1s7c67u.hover .framer-1lh8ck8 {
+    width: 30px;
+    left: calc(31.1111% - 15px)
+}
+
+.drawer-burger-inner.framer-v-1s7c67u.hover .framer-xvj3te {
+    width: 28px;
+    left: calc(48.8889% - 14px)
+}
+
+.drawer-burger-inner.framer-v-1s7c67u.hover .framer-99r2te {
+    left: unset;
+    width: 30px;
+    right: 0
+}

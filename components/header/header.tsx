@@ -22,16 +22,14 @@ export default function Header() {
         <a href="/contact">Contact</a>
       </nav>
 
-      <div className="framer-18332zm-container">
+      <div className="drawer-container">
         <nav
           className="framer-GPpH2 framer-wMbOK framer-njEjc framer-jzp9vj framer-v-13f1p5r"
-          data-framer-name="Open"
-          style={{ transform: "none", transformOrigin: "50% 50% 0px" }}
         >
           <div
             className="framer-14vltbg"
             style={{
-              backgroundColor: "var(--token-eb75cce0-dceb-4fad-8933-456b75a9eda5, rgb(255, 255, 255))",
+              backgroundColor: "rgb(255, 255, 255)",
               borderRadius: "8px 0px 0px 8px",
               boxShadow: "rgba(0, 0, 0, 0.03) 0px 0px 50px 0px",
               transform: "none",
@@ -130,9 +128,9 @@ export default function Header() {
 
           </div>
 
-          {/* Toggle Button */}
-          <div className="framer-1qtuawa-container" style={{ transform: "none", transformOrigin: "50% 50% 0px" }}>
-            <div className="framer-5K80K framer-1s7c67u framer-v-1fu7lbd" data-highlight="true" tabIndex={0} style={{ height: "100%", width: "100%", transform: "none", transformOrigin: "50% 50% 0px", opacity: 1 }} data-framer-name="Open - Close">
+          {/* Burger Button */}
+          <div className="drawer-burger" style={{ background: "#fff", transform: "none", transformOrigin: "50% 50% 0px" }}>
+            <div className="drawer-burger-inner framer-1s7c67u framer-v-1fu7lbd" data-highlight="true" tabIndex={0} style={{ height: "100%", width: "100%", transform: "none", transformOrigin: "50% 50% 0px", opacity: 1 }} data-framer-name="Open - Close">
               <div className="framer-tig9p8" style={{ transform: "none", transformOrigin: "50% 50% 0px", opacity: 1 }}>
                 <div className="framer-1lh8ck8" data-framer-name="Rectangle 4" style={{ backgroundColor: "var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0))", transform: "rotate(30deg)", transformOrigin: "50% 50% 0px", willChange: "transform", opacity: 1 }} />
                 <div className="framer-xvj3te" data-framer-name="Rectangle 5" style={{ backgroundColor: "var(--token-3cdc6fa6-d3d3-48ad-b744-7855447ef4d2, rgb(0, 0, 0))", opacity: 0, transform: "none", transformOrigin: "50% 50% 0px", willChange: "transform" }} />
@@ -140,6 +138,7 @@ export default function Header() {
               </div>
             </div>
           </div>
+
         </nav>
       </div>
 
