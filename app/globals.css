@@ -110,7 +110,7 @@ body {
     display: block
 }
 
-.drawer-burger-inner.framer-1s7c67u {
+.drawer-burger-inner.drawer-burger-inner {
     cursor: pointer;
     mix-blend-mode: difference;
     flex-flow: column;
@@ -125,7 +125,7 @@ body {
     overflow: hidden
 }
 
-.drawer-burger-inner .framer-tig9p8 {
+.drawer-burger-inner .drawer-burger-lines {
     flex: none;
     width: 46px;
     height: 26px;
@@ -133,7 +133,7 @@ body {
     overflow: hidden
 }
 
-.drawer-burger-inner .framer-1lh8ck8 {
+.drawer-burger-inner .drawer-burger-bread-1 {
     z-index: 1;
     flex: none;
     width: 45px;
@@ -143,7 +143,7 @@ body {
     left: calc(50% - 22.5px)
 }
 
-.drawer-burger-inner .framer-xvj3te {
+.drawer-burger-inner .drawer-burger-bread-2 {
     z-index: 1;
     flex: none;
     width: 31px;
@@ -153,7 +153,7 @@ body {
     left: 1px
 }
 
-.drawer-burger-inner .framer-99r2te {
+.drawer-burger-inner .drawer-burger-bread-3 {
     z-index: 1;
     flex: none;
     width: 45px;
@@ -163,60 +163,60 @@ body {
     left: calc(50% - 22.5px)
 }
 
-.drawer-burger-inner.framer-v-1lrgknm .framer-1lh8ck8 {
+.drawer-burger-inner.framer-v-1lrgknm .drawer-burger-bread-1 {
     width: 29px;
     left: 0
 }
 
-.drawer-burger-inner.framer-v-1lrgknm .framer-xvj3te {
+.drawer-burger-inner.framer-v-1lrgknm .drawer-burger-bread-2 {
     width: 29px;
     left: calc(51.1111% - 14.5px)
 }
 
-.drawer-burger-inner.framer-v-1lrgknm .framer-99r2te {
+.drawer-burger-inner.framer-v-1lrgknm .drawer-burger-bread-3 {
     left: unset;
     width: 29px;
     right: 0
 }
 
-.drawer-burger-inner.framer-v-1fu7lbd .framer-1lh8ck8,
-.drawer-burger-inner.framer-v-1qx4i6j .framer-1lh8ck8 {
+.drawer-burger-inner.drawer-burger-inner .drawer-burger-bread-1,
+.drawer-burger-inner.framer-v-1qx4i6j .drawer-burger-bread-1 {
     top: calc(50% - 1px);
     left: calc(51.1111% - 22.5px)
 }
 
-.drawer-burger-inner.framer-v-1fu7lbd .framer-xvj3te,
-.drawer-burger-inner.framer-v-1qx4i6j .framer-xvj3te {
+.drawer-burger-inner.drawer-burger-inner .drawer-burger-bread-2,
+.drawer-burger-inner.framer-v-1qx4i6j .drawer-burger-bread-2 {
     left: unset;
     right: -35px
 }
 
-.drawer-burger-inner.framer-v-1fu7lbd .framer-99r2te,
-.drawer-burger-inner.framer-v-1qx4i6j .framer-99r2te {
+.drawer-burger-inner.drawer-burger-inner .drawer-burger-bread-3,
+.drawer-burger-inner.framer-v-1qx4i6j .drawer-burger-bread-3 {
     bottom: unset;
     top: calc(50% - 1px);
     left: calc(51.1111% - 22.5px)
 }
 
-.drawer-burger-inner.framer-v-1fu7lbd.hover .framer-xvj3te {
+.drawer-burger-inner.drawer-burger-inner.hover .drawer-burger-bread-2 {
     left: unset
 }
 
-.drawer-burger-inner.framer-v-1fu7lbd.hover .framer-99r2te {
+.drawer-burger-inner.drawer-burger-inner.hover .drawer-burger-bread-3 {
     bottom: unset
 }
 
-.drawer-burger-inner.framer-v-1s7c67u.hover .framer-1lh8ck8 {
+.drawer-burger-inner.framer-v-1s7c67u.hover .drawer-burger-bread-1 {
     width: 30px;
     left: calc(31.1111% - 15px)
 }
 
-.drawer-burger-inner.framer-v-1s7c67u.hover .framer-xvj3te {
+.drawer-burger-inner.framer-v-1s7c67u.hover .drawer-burger-bread-2 {
     width: 28px;
     left: calc(48.8889% - 14px)
 }
 
-.drawer-burger-inner.framer-v-1s7c67u.hover .framer-99r2te {
+.drawer-burger-inner.framer-v-1s7c67u.hover .drawer-burger-bread-3 {
     left: unset;
     width: 30px;
     right: 0

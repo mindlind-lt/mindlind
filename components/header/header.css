@@ -1,0 +1,29 @@
+
+
+/* Header */
+
+.hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+
+
+.hdr-menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.hdr-menu a {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
