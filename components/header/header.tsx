@@ -20,11 +20,11 @@ export default function Header() {
       </Link>
 
       <nav className="hdr-menu">
-        <Link href="/">Home</Link>
-        <Link href="/agency">Agency</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/contact">Contact</Link>
+        <Link data-label="Home" href="/">Home</Link>
+        <Link data-label="Agency" href="/agency">Agency</Link>
+        <Link data-label="Projects" href="/projects">Projects</Link>
+        <Link data-label="Blog" href="/blog">Blog</Link>
+        <Link data-label="Contact" href="/contact">Contact</Link>
       </nav>
 
       <div className="hdr-burger">
