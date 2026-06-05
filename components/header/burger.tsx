@@ -1,16 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 export default function Burger() {
-  const [drawerExpanded, setDrawerExpanded] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  const [isReady, setIsReady] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsActive(true);
+      timeoutRef.current = setTimeout(() => {
+        setIsReady(true);
+      }, 100);
+    } else {
+      setIsReady(false);
+      timeoutRef.current = setTimeout(() => {
+        setIsActive(false);
+      }, 300);
+    }
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [isOpen]);
 
   return (
     <>
       <button
-        className={`burger ${drawerExpanded ? "burger-active" : ""}`}
-        onClick={() => setDrawerExpanded(!drawerExpanded)}
+        className={`burger ${isActive ? "burger-active" : ""}`}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <div className="burger-label">Menu</div>
         <div className="burger-lines">
@@ -21,7 +44,7 @@ export default function Burger() {
       </button>
 
       <div 
-        className={`drawer ${drawerExpanded ? "drawer-active" : ""}`}
+        className={`drawer ${isActive ? "drawer-active" : ""} ${isReady ? "drawer-active-ready" : ""}`}
     >
 
         <nav className="drawer-menu">

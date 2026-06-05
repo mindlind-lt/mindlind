@@ -181,8 +181,7 @@
 
     transform: translateX(50%);
 
-    transition: 0.75s;
-    transition-delay: 0.2s;
+    transition: 0.2s;
 
   a {
     font-family: var(--font-mono);
@@ -192,16 +191,10 @@
   }
 }
 
-.drawer-active .drawer-menu {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 .drawer-contact {
     opacity: 0;
     transform: translateX(50%);
-    transition: 0.75s;
-    transition-delay: 0.4s;
+    transition: 0.2s;
 
     font-size: 18px;
     font-family: var(--font-mono);
@@ -212,25 +205,14 @@
     gap: 12px;
 }
 
-.drawer-active .drawer-contact {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 .drawer-socials {
     opacity: 0;
     transform: translateX(50%);
-    transition: 0.75s;
-    transition-delay: 0.5s;
+    transition: 0.2s;
 
     font-family: var(--font-mono);
     text-transform: uppercase;
     line-height: 1;
-}
-
-.drawer-active .drawer-socials {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .drawer-socials-icons {
@@ -243,4 +225,28 @@
     margin: 0;
     height: 30px;
     width: auto;
+}
+
+
+
+
+.drawer-active-ready .drawer-menu {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: 0.2s;
+}
+
+.drawer-active-ready .drawer-contact {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: 0.4s;
+}
+
+.drawer-active-ready .drawer-socials {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: 0.5s;
 }
