@@ -33,11 +33,13 @@ export default function ServiceDropdown({
 
   return (
     <div className={className} onClick={() => setExpanded(!expanded)}>
-      <button className="service-dropdown-header">
-        <div className="service-dropdown-title">{title}</div>
-        <div className="service-dropdown-label">{label}</div>
-      </button>
-      <div className="service-dropdown-text">{text}</div>
+      <div className="service-dropdown-content">
+        <button className="service-dropdown-header">
+          <div className="service-dropdown-title">{title}</div>
+          <div className="service-dropdown-label">{label}</div>
+        </button>
+        <div className="service-dropdown-text">{text}</div>
+      </div>
     </div>
   );
 }
