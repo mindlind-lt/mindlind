@@ -34,8 +34,13 @@ body {
 
 .hero-cta {
     position: absolute;
-    top:60px;
-    right: 60px;
+    top: 150px;
+    right: 110px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 340px;
 }
 
 .hero-cta-box {
@@ -43,6 +48,7 @@ body {
     border-radius: 8px;
     
     display: flex;
+    gap: 2px;
     padding: 2px;
 }
 
@@ -55,5 +61,21 @@ body {
 }
 
 .hero-cta-box-media {
+    background: #F4F4F4;
+    border-radius: 8px;
+
     flex: 1;
+
+    overflow: hidden;
+
+    video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hero-cta-footer {
+    background: #fff;
+    border-radius: 8px;
 }

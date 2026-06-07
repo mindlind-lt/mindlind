@@ -1,0 +1,80 @@
+.door-button {
+    --text-color: #fff;
+    --bg-color: #000;
+
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.1;
+    border-radius: 6px;
+    color: var(--text-color);
+    background: var(--bg-color);
+    text-transform: uppercase;
+    text-align: center;
+
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+
+    height: 40px;
+    padding: 11px 22px;
+    
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.door-button-content {
+    position: relative;
+    z-index: 2;
+}
+
+.door-button::before {
+    content: "";
+
+    background: #fff;
+
+    display: block;
+    width: 100%;
+    height: 0;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    transition: 0.6s;
+}
+
+.door-button::after {
+    content: "";
+
+    background: #fff;
+
+    display: block;
+    width: 100%;
+    height: 0;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    transition: 0.6s;
+}
+
+.door-button:hover, .door-button:focus {
+    color: #000;
+}
+
+.door-button:hover::before, .door-button:hover::after {
+    height: 100%;
+}
+
+
+
+
+.door-button-white {
+    --text-color: #000;
+    --bg-color: #fff;
+}
