@@ -12,7 +12,7 @@ export default function Home() {
 
       <div className="hero">
 
-        <ThreeDScene />
+        {/* <ThreeDScene /> */}
 
         <div className="container mx-auto px-5 relative">
           <div className="hero-cta">
@@ -73,7 +73,6 @@ export default function Home() {
           </div>
         </div>
 
-
         <h1 className="hero-title">
             <div className="container mx-auto px-5">
               <div className="hero-title-content">
@@ -96,6 +95,7 @@ export default function Home() {
 
       </div>
 
+
       <div className="intro py-20">
         <div className="container mx-auto px-5">
 
@@ -104,6 +104,35 @@ export default function Home() {
             <ScrambledText text="[ More about ] " as="a" href="#" className="intro-link" />
           </div>
 
+
+        </div>
+      </div>
+
+
+      <div className="container mx-auto px-5 py-15">
+        <div className="flex gap-24">
+
+          <div>
+            <Image 
+              src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
+              alt=""
+              width={380}
+              height={150}
+              className="rounded-md"
+            />
+          </div>
+
+          <div className="flex-1 text-md leading-[1.6]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We’re a senior creative digital agency focused on clarity and performance. We align strategy, brand, and web into modular systems that ship on time and scale. Our values are simplicity, accountability and measurable impact. The team is small and senior; every project has a lead for strategy, design and build. We partner long-term, iterating with data to keep products fast.</div>
+
+          <div>
+            <Image 
+              src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
+              alt=""
+              width={380}
+              height={150}
+              className="rounded-md"
+            />
+          </div>
 
         </div>
       </div>
