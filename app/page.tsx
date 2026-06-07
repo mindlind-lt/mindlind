@@ -1,4 +1,4 @@
-// import Image from "next/image";
+import Image from "next/image";
 import ThreeDScene from "@/components/hero-3d";
 import DoorButton from "@/components/door-button/door-button";
 
@@ -36,8 +36,37 @@ export default function Home() {
             </div>
 
             <div className="hero-cta-footer">
-              <div>Liked by 50+ founders</div>
-              <div>Photos</div>
+              <div>Liked by 50+&nbsp;founders</div>
+              <div className="flex">
+                <Image 
+                  src="/assets/pic-1.jpg"
+                  alt="Photos"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-1 border-white w-10 h-10 -ml-2"
+                />
+                <Image 
+                  src="/assets/pic-2.jpg"
+                  alt="Photos"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-1 border-white w-10 h-10 -ml-2"
+                />
+                <Image 
+                  src="/assets/pic-3.jpg"
+                  alt="Photos"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-1 border-white w-10 h-10 -ml-2"
+                />
+                <Image 
+                  src="/assets/pic-4.jpg"
+                  alt="Photos"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-1 border-white w-10 h-10 -ml-2"
+                />
+              </div>
             </div>
 
           </div>
