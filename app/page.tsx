@@ -13,7 +13,7 @@ export default function Home() {
 
       <div className="hero">
 
-        <ThreeDScene />
+        {/* <ThreeDScene /> */}
 
         <div className="container mx-auto px-5 relative">
           <div className="hero-cta">
@@ -145,7 +145,7 @@ export default function Home() {
 
         <div className="font-mono text-3xl uppercase pb-15 flex justify-between items-center">
           <h2 className="">Leisungen</h2>
-          <div className="">[02]</div>
+          <div className="text-primary-500">[02]</div>
         </div>
 
         <div className="services">
