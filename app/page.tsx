@@ -99,18 +99,15 @@ export default function Home() {
 
       <div className="intro py-20">
         <div className="container mx-auto px-5">
-
           <div className="intro-row">
             <div className="text-5xl text-justify font-mono font-medium uppercase leading-[1.4]"><span className="text-3xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;From strategy to launch we deliver fast, accessible sites and clear brands with Growth-driven results</div>
             <ScrambledText text="[ More about ] " as="a" href="#" className="intro-link" />
           </div>
-
-
         </div>
       </div>
 
 
-      <div className="container mx-auto px-5 py-15">
+      <div className="container mx-auto px-5 py-20">
         <div className="flex gap-24">
 
           <div>
@@ -139,8 +136,46 @@ export default function Home() {
       </div>
 
 
-      <div className="container mx-auto px-5 py-15">
+      <div className="container mx-auto px-5 py-20">
         <Showreel />
+      </div>
+
+
+      <div className="container mx-auto px-5 py-20">
+
+        <div className="font-mono text-3xl uppercase pb-15 flex justify-between items-center">
+          <h2 className="">Leisungen</h2>
+          <div className="">[02]</div>
+        </div>
+
+        <div className="services">
+
+          <div className="services-item services-item-align-left">
+            <div className="services-item-header">
+              <div className="services-item-title">Web Design</div>
+              <div>UX/UI, design systems, prototypes.</div>
+            </div>
+            <div className="services-item-text">We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates.</div>
+          </div>
+
+          <div className="services-item services-item-align-center">
+            <div className="services-item-header">
+              <div className="services-item-title">Web Development</div>
+              <div>Framer/Next.js, CMS, analytics.</div>
+            </div>
+            <div className="services-item-text">We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates.</div>
+          </div>
+
+          <div className="services-item services-item-align-right">
+            <div className="services-item-header">
+              <div className="services-item-title">Brand Strategy</div>
+              <div>Create history and values.</div>
+            </div>
+            <div className="services-item-text">We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates.</div>
+          </div>
+
+        </div>
+
       </div>
 
 

@@ -189,3 +189,43 @@ body {
     top: 62px;
     right: -67px;
 }
+
+
+.services {
+    background: #fff;
+    border-radius: 12px;
+
+    padding: 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2px;
+
+}
+
+.services-item {
+    background: var(--background);
+    border-radius: 12px;
+
+    padding: 35px 50px;
+}
+
+.services-item-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.services-item-title {
+    font-family: var(--font-mono);
+    font-size: 84px;
+    text-transform: uppercase;
+
+    text-wrap: nowrap;
+}
+
+.services-item-text {
+    display: none;
+}
