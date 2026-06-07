@@ -7,7 +7,7 @@ const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false })
 
 export default function ThreeDScene() {
   return (
-    <div style={{ width: '100%', height: '100vh' }}>
+    <div style={{ width: '100%', height: '100%' }}>
       <Spline scene="https://prod.spline.design/j8hzrzWHjluuunyI/scene.splinecode" />
     </div>
   );

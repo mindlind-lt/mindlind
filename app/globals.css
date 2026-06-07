@@ -27,197 +27,33 @@ body {
 
 
 
-
-
-
-/* COPY */
-
-
-/* Burger */
-
-
-.framer-GPpH2 .drawer-burger {
-    z-index: 3;
-    flex: none;
-    width: 85px;
-    height: 60px;
-    position: relative
+.hero {
+    position: relative;
+    height: 100vh;
 }
 
-.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
-.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
-.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
-    order: 1
+.hero-cta {
+    position: absolute;
+    top:60px;
+    right: 60px;
 }
 
-.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
-.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
-.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
-    order: 1
-}
-
-.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
-.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
-.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
-    order: 1
-}
-
-.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
-.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
-.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
-    order: 1
-}
-
-.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
-.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
-.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
-    order: 1
-}
-
-.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
-.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
-.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
-    order: 1
-}
-
-.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
-.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
-.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
-    order: 1
-}
-
-
-.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
-.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
-.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
-    order: 1
-}
-
-.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
-.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
-.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
-    order: 1
-}
-
-.framer-GPpH2.framer-v-13f1p5r .framer-19n19x6,
-.framer-GPpH2.framer-v-19u2fw4 .drawer-burger,
-.framer-GPpH2.framer-v-1i46s9c .framer-19n19x6 {
-    order: 1
-}
-
-.drawer-burger-inner.framer-9qjqih,
-.drawer-burger-inner .framer-9qjqih {
-    display: block
-}
-
-.drawer-burger-inner.drawer-burger-inner {
-    cursor: pointer;
-    mix-blend-mode: difference;
-    flex-flow: column;
-    place-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 85px;
-    height: 60px;
-    padding: 0;
+.hero-cta-box {
+    background: #fff;
+    border-radius: 8px;
+    
     display: flex;
-    position: relative;
-    overflow: hidden
+    padding: 2px;
 }
 
-.drawer-burger-inner .drawer-burger-lines {
-    flex: none;
-    width: 46px;
-    height: 26px;
-    position: relative;
-    overflow: hidden
+.hero-cta-box-content {
+    background: #F4F4F4;
+    border-radius: 8px;
+
+    flex: 2;
+    padding: 25px 30px;
 }
 
-.drawer-burger-inner .drawer-burger-bread-1 {
-    z-index: 1;
-    flex: none;
-    width: 45px;
-    height: 2px;
-    position: absolute;
-    top: 2px;
-    left: calc(50% - 22.5px)
-}
-
-.drawer-burger-inner .drawer-burger-bread-2 {
-    z-index: 1;
-    flex: none;
-    width: 31px;
-    height: 2px;
-    position: absolute;
-    top: calc(50% - 1px);
-    left: 1px
-}
-
-.drawer-burger-inner .drawer-burger-bread-3 {
-    z-index: 1;
-    flex: none;
-    width: 45px;
-    height: 2px;
-    position: absolute;
-    bottom: 2px;
-    left: calc(50% - 22.5px)
-}
-
-.drawer-burger-inner.framer-v-1lrgknm .drawer-burger-bread-1 {
-    width: 29px;
-    left: 0
-}
-
-.drawer-burger-inner.framer-v-1lrgknm .drawer-burger-bread-2 {
-    width: 29px;
-    left: calc(51.1111% - 14.5px)
-}
-
-.drawer-burger-inner.framer-v-1lrgknm .drawer-burger-bread-3 {
-    left: unset;
-    width: 29px;
-    right: 0
-}
-
-.drawer-burger-inner.drawer-burger-inner .drawer-burger-bread-1,
-.drawer-burger-inner.framer-v-1qx4i6j .drawer-burger-bread-1 {
-    top: calc(50% - 1px);
-    left: calc(51.1111% - 22.5px)
-}
-
-.drawer-burger-inner.drawer-burger-inner .drawer-burger-bread-2,
-.drawer-burger-inner.framer-v-1qx4i6j .drawer-burger-bread-2 {
-    left: unset;
-    right: -35px
-}
-
-.drawer-burger-inner.drawer-burger-inner .drawer-burger-bread-3,
-.drawer-burger-inner.framer-v-1qx4i6j .drawer-burger-bread-3 {
-    bottom: unset;
-    top: calc(50% - 1px);
-    left: calc(51.1111% - 22.5px)
-}
-
-.drawer-burger-inner.drawer-burger-inner.hover .drawer-burger-bread-2 {
-    left: unset
-}
-
-.drawer-burger-inner.drawer-burger-inner.hover .drawer-burger-bread-3 {
-    bottom: unset
-}
-
-.drawer-burger-inner.framer-v-1s7c67u.hover .drawer-burger-bread-1 {
-    width: 30px;
-    left: calc(31.1111% - 15px)
-}
-
-.drawer-burger-inner.framer-v-1s7c67u.hover .drawer-burger-bread-2 {
-    width: 28px;
-    left: calc(48.8889% - 14px)
-}
-
-.drawer-burger-inner.framer-v-1s7c67u.hover .drawer-burger-bread-3 {
-    left: unset;
-    width: 30px;
-    right: 0
+.hero-cta-box-media {
+    flex: 1;
 }

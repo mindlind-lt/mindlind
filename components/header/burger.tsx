@@ -31,6 +31,7 @@ export default function Burger() {
 
   return (
     <>
+
       <button
         className={`burger ${isActive ? "burger-active" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
@@ -43,9 +44,7 @@ export default function Burger() {
         </div>
       </button>
 
-      <div 
-        className={`drawer ${isActive ? "drawer-active" : ""} ${isReady ? "drawer-active-ready" : ""}`}
-    >
+      <div className={`drawer ${isActive ? "drawer-active" : ""} ${isReady ? "drawer-active-ready" : ""}`}>
 
         <nav className="drawer-menu">
           <Link href="/">Home</Link>
@@ -95,6 +94,7 @@ export default function Burger() {
         </div>
 
       </div>
+
     </>
   );
 }
