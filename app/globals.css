@@ -35,12 +35,13 @@ body {
 .hero-cta {
     position: absolute;
     top: 150px;
-    right: 110px;
+    right: 10px;
 
     display: flex;
     flex-direction: column;
     gap: 4px;
     width: 340px;
+
 }
 
 .hero-cta-box {
@@ -88,3 +89,36 @@ body {
 
     padding: 20px 30px;
 }
+
+
+
+.hero-title {
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-transform: uppercase;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+
+.hero-title-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.hero-title-lead {
+    font-size: 28px;
+}
+
+.hero-title-main svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
