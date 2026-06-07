@@ -21,7 +21,7 @@
     
     overflow: hidden;
 
-    transition: 0.3s;
+    transition: 0.3s linear;
 }
 
 .door-button-content {
@@ -32,7 +32,7 @@
 .door-button::before {
     content: "";
 
-    background: #fff;
+    background: var(--text-color);
 
     display: block;
     width: 100%;
@@ -43,13 +43,13 @@
     right: 0;
     left: 0;
 
-    transition: 0.6s;
+    transition: 0.45s linear;
 }
 
 .door-button::after {
     content: "";
 
-    background: #fff;
+    background: var(--text-color);
 
     display: block;
     width: 100%;
@@ -60,11 +60,11 @@
     left: 0;
     bottom: 0;
 
-    transition: 0.6s;
+    transition: 0.45s linear;
 }
 
 .door-button:hover, .door-button:focus {
-    color: #000;
+    color: var(--bg-color);
 }
 
 .door-button:hover::before, .door-button:hover::after {

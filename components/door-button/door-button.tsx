@@ -19,7 +19,7 @@ export default function DoorButton({
   onClick,
   className: additionalClassName,
 }: DoorButtonProps) {
-  const className = ["door-button", size && `door-button--${size}`, color && `door-button--${color}`, additionalClassName]
+  const className = ["door-button", size && `door-button-${size}`, color && `door-button-${color}`, additionalClassName]
     .filter(Boolean)
     .join(" ");
 

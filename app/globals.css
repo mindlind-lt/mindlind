@@ -3,11 +3,33 @@
 :root {
     --background: rgb(244, 244, 244);
     --foreground: #000;
+    /* --primary-50: #f0f9ff;
+    --primary-100: #e0f2fe;
+    --primary-200: #bae6fd;
+    --primary-300: #7dd3fc;
+    --primary-400: #38bdf8; */
+    --primary-500: #0fd680;
+    /* --primary-600: #0284c7;
+    --primary-700: #0369a1;
+    --primary-800: #075985;
+    --primary-900: #0c4a6e;
+    --primary-950: #082f49; */
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+    --color-primary-50: var(--primary-50);
+    --color-primary-100: var(--primary-100);
+    --color-primary-200: var(--primary-200);
+    --color-primary-300: var(--primary-300);
+    --color-primary-400: var(--primary-400);
+    --color-primary-500: var(--primary-500);
+    --color-primary-600: var(--primary-600);
+    --color-primary-700: var(--primary-700);
+    --color-primary-800: var(--primary-800);
+    --color-primary-900: var(--primary-900);
+    --color-primary-950: var(--primary-950);
     --font-sans: var(--font-inter);
     --font-mono: var(--font-space-mono);
 }
@@ -97,9 +119,10 @@ body {
     line-height: 1;
     text-transform: uppercase;
 
+    /* mix-blend-mode: difference; */
     position: absolute;
-    z-index: 1;
-    bottom: 0;
+    z-index: 2;
+    bottom: 80px;
     right: 0;
     left: 0;
 }
@@ -122,3 +145,21 @@ body {
     margin: 0;
 }
 
+
+/* Intro section */
+
+.intro-row {
+    position: relative;
+    padding-right: 120px;
+}
+
+.intro-link {
+    font-weight: bold;
+    transform: rotate(-90deg);
+    text-wrap: nowrap;
+
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    right: -67px;
+}

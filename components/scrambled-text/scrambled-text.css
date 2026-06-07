@@ -1,0 +1,5 @@
+.scrambled-text {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-weight: bold;
+}
