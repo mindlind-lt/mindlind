@@ -2,6 +2,7 @@ import Image from "next/image";
 import ThreeDScene from "@/components/hero-3d";
 import DoorButton from "@/components/door-button/door-button";
 import ScrambledText from "@/components/scrambled-text/scrambled-text";
+import Showreel from "@/components/showreel/showreel";
 
 
 
@@ -135,6 +136,11 @@ export default function Home() {
           </div>
 
         </div>
+      </div>
+
+
+      <div className="container mx-auto px-5 py-15">
+        <Showreel />
       </div>
 
 
