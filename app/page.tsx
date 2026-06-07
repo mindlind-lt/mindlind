@@ -9,7 +9,7 @@ export default function Home() {
 
         <div className="hero">
 
-          {/* <ThreeDScene /> */}
+          <ThreeDScene />
 
           <div className="hero-cta">
 
