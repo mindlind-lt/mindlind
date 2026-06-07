@@ -3,6 +3,7 @@ import ThreeDScene from "@/components/hero-3d";
 import DoorButton from "@/components/door-button/door-button";
 import ScrambledText from "@/components/scrambled-text/scrambled-text";
 import Showreel from "@/components/showreel/showreel";
+import ServiceDropdown from "@/components/service-dropdown/service-dropdown";
 
 
 
@@ -149,31 +150,24 @@ export default function Home() {
         </div>
 
         <div className="services">
-
-          <div className="services-item services-item-align-left">
-            <div className="services-item-header">
-              <div className="services-item-title">Web Design</div>
-              <div>UX/UI, design systems, prototypes.</div>
-            </div>
-            <div className="services-item-text">We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates.</div>
-          </div>
-
-          <div className="services-item services-item-align-center">
-            <div className="services-item-header">
-              <div className="services-item-title">Web Development</div>
-              <div>Framer/Next.js, CMS, analytics.</div>
-            </div>
-            <div className="services-item-text">We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates.</div>
-          </div>
-
-          <div className="services-item services-item-align-right">
-            <div className="services-item-header">
-              <div className="services-item-title">Brand Strategy</div>
-              <div>Create history and values.</div>
-            </div>
-            <div className="services-item-text">We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates.</div>
-          </div>
-
+          <ServiceDropdown
+            align="left"
+            title="Web Design"
+            label="UX/UI, design systems, prototypes."
+            text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
+          />
+          <ServiceDropdown
+            align="center"
+            title="Web Development"
+            label="Framer/Next.js, CMS, analytics."
+            text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
+          />
+          <ServiceDropdown
+            align="right"
+            title="Brand Strategy"
+            label="Create history and values."
+            text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
+          />
         </div>
 
       </div>
