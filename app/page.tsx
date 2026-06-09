@@ -14,7 +14,7 @@ export default function Home() {
 
       <div className="hero">
 
-        <ThreeDScene />
+        {/* <ThreeDScene /> */}
 
         <div className="container mx-auto px-5 relative">
           <div className="hero-cta">
@@ -155,18 +155,21 @@ export default function Home() {
             title="Web Design"
             label="UX/UI, design systems, prototypes."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
+            image="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
           />
           <ServiceDropdown
             align="center"
             title="Web Development"
             label="Framer/Next.js, CMS, analytics."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
+            image="/assets/images/6W0vasxI6uWP2E6mj82VIXCUA.jpg"
           />
           <ServiceDropdown
             align="right"
             title="Brand Strategy"
             label="Create history and values."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
+            image="/assets/images/CA217Cc8CFDUqJ2Da783rGz8u3w.jpg"
           />
         </div>
 

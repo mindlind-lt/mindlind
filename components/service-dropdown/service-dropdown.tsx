@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
+import { createPortal } from "react-dom";
 
 import "./service-dropdown.css";
 
@@ -10,6 +12,7 @@ interface ServiceDropdownProps {
   label: string;
   text: string;
   className?: string;
+  image?: string;
 }
 
 export default function ServiceDropdown({
@@ -18,9 +21,14 @@ export default function ServiceDropdown({
   label,
   text,
   className: additionalClassName,
+  image,
 }: ServiceDropdownProps) {
-
   const [expanded, setExpanded] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [imagePos, setImagePos] = useState({ x: 0, y: 0 });
+  const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
+  const animationRef = useRef<number | null>(null);
 
   const className = [
     "service-dropdown",
@@ -31,15 +39,86 @@ export default function ServiceDropdown({
     .filter(Boolean)
     .join(" ");
 
+  // Initialize portal root
+  useEffect(() => {
+    let root = document.getElementById("service-dropdown-portal-root");
+    if (!root) {
+      root = document.createElement("div");
+      root.id = "service-dropdown-portal-root";
+      document.body.appendChild(root);
+    }
+    setPortalRoot(root);
+  }, []);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    setCursorPos({
+      x: e.clientX,
+      y: e.clientY,
+    });
+  };
+
+  useEffect(() => {
+    const animate = () => {
+      setImagePos((prev) => {
+        const ease = 0.1;
+        const newX = prev.x + (cursorPos.x - prev.x) * ease;
+        const newY = prev.y + (cursorPos.y - prev.y) * ease;
+        return { x: newX, y: newY };
+      });
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    if (isHovering) {
+      animationRef.current = requestAnimationFrame(animate);
+    }
+
+    return () => {
+      if (animationRef.current !== null) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [isHovering, cursorPos]);
+
   return (
-    <div className={className} onClick={() => setExpanded(!expanded)}>
-      <div className="service-dropdown-content">
-        <button className="service-dropdown-header">
-          <div className="service-dropdown-title">{title}</div>
-          <div className="service-dropdown-label">{label}</div>
-        </button>
-        <div className="service-dropdown-text">{text}</div>
+    <>
+      <div
+        className={className}
+        onClick={() => setExpanded(!expanded)}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        onMouseMove={handleMouseMove}
+      >
+        <div className="service-dropdown-content">
+          <button className="service-dropdown-header">
+            <div className="service-dropdown-title">{title}</div>
+            <div className="service-dropdown-label">{label}</div>
+          </button>
+          <div className="service-dropdown-text">{text}</div>
+        </div>
       </div>
-    </div>
+
+      {image && isHovering && portalRoot
+        ? createPortal(
+            <div
+              className="service-dropdown-image"
+              style={{
+                left: imagePos.x,
+                top: imagePos.y,
+                transform: "translate(-50%, -50%)",
+                position: "fixed",
+              }}
+            >
+              <Image
+                src={image}
+                alt=""
+                width={300}
+                height={200}
+                className="rounded-md object-cover"
+              />
+            </div>,
+            portalRoot
+          )
+        : null}
+    </>
   );
 }

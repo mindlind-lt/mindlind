@@ -67,6 +67,11 @@
     transition: 0.5s;
 }
 
+.service-dropdown-image {
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
 
 
 .service-dropdown:hover,
