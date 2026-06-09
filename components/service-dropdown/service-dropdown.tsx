@@ -50,6 +50,12 @@ export default function ServiceDropdown({
     setPortalRoot(root);
   }, []);
 
+  const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+    setCursorPos({ x: e.clientX, y: e.clientY });
+    setImagePos({ x: e.clientX, y: e.clientY });
+    setIsHovering(true);
+  };
+
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     setCursorPos({
       x: e.clientX,
@@ -84,7 +90,7 @@ export default function ServiceDropdown({
       <div
         className={className}
         onClick={() => setExpanded(!expanded)}
-        onMouseEnter={() => setIsHovering(true)}
+        onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setIsHovering(false)}
         onMouseMove={handleMouseMove}
       >
@@ -97,14 +103,13 @@ export default function ServiceDropdown({
         </div>
       </div>
 
-      {image && isHovering && portalRoot
+      {image && portalRoot
         ? createPortal(
             <div
-              className="service-dropdown-image"
+              className={`service-dropdown-image ${isHovering ? "visible" : ""}`}
               style={{
                 left: imagePos.x,
                 top: imagePos.y,
-                transform: "translate(-50%, -50%)",
                 position: "fixed",
               }}
             >
