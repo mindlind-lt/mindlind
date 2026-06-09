@@ -14,6 +14,7 @@ export default function Home() {
 
       <div className="hero">
 
+
         <ThreeDScene />
 
         <div className="container mx-auto px-5 relative">
