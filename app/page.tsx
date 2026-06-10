@@ -15,7 +15,7 @@ export default function Home() {
       <div className="hero">
 
 
-        <ThreeDScene />
+        {/* <ThreeDScene /> */}
 
         <div className="container mx-auto px-5 relative">
           <div className="hero-cta">
@@ -143,6 +143,8 @@ export default function Home() {
       </div>
 
 
+      {/* Services section */}
+
       <div className="container mx-auto px-5 py-20">
 
         <div className="font-mono text-3xl uppercase pb-15 flex justify-between items-center">
@@ -172,9 +174,72 @@ export default function Home() {
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
             image="/assets/images/CA217Cc8CFDUqJ2Da783rGz8u3w.jpg"
           />
+          <ServiceDropdown
+            align="center"
+            title="Brand Strategy"
+            label="Create history and values."
+            text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
+            image="/assets/images/CA217Cc8CFDUqJ2Da783rGz8u3w.jpg"
+          />
+          <ServiceDropdown
+            align="left"
+            title="Brand Strategy"
+            label="Create history and values."
+            text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
+            image="/assets/images/CA217Cc8CFDUqJ2Da783rGz8u3w.jpg"
+          />
         </div>
 
       </div>
+
+
+      {/* Featured works section */}
+
+      <div className="section-works">
+        <div className="container mx-auto px-5 py-20">
+          <div className="grid grid-cols-3 gap-30">
+
+            <div className="col-span-1">
+
+              <div className="text-primary-500 font-mono text-3xl uppercase mb-15">[02]</div>
+              <div className="mb-15">Recent launches with real outcomes. Explore the brief, the system we built, and the impact — each case shows problem → approach → result. Every case lists scope, timeline, stack and KPI movement with before and after.</div>
+
+              <div className="brag mt-10">
+                <div className="font-mono uppercase text-8xl tracking-tight">+34%</div>
+                <div className="font-mono uppercase text-lg mt-1">Conversion</div>
+                <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
+              </div>
+
+              <div className="brag mt-10">
+                <div className="font-mono uppercase text-8xl tracking-tight">+41%</div>
+                <div className="font-mono uppercase text-lg mt-1">Conversion</div>
+                <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
+              </div>
+
+              <div className="brag mt-10">
+                <div className="font-mono uppercase text-8xl tracking-tight">3.8&times;</div>
+                <div className="font-mono uppercase text-lg mt-1">Conversion</div>
+                <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
+              </div>
+
+            </div>
+
+            <div className="col-span-2">
+
+              <div className="font-mono text-3xl uppercase pb-15 mb-15">
+                <h2 className="">Featured Works</h2>
+              </div>
+
+              <div className="text-red-500">Works masonry</div>
+              <div className="text-red-500">View all</div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
 
 
     </>
