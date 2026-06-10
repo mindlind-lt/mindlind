@@ -4,6 +4,7 @@ import DoorButton from "@/components/door-button/door-button";
 import ScrambledText from "@/components/scrambled-text/scrambled-text";
 import Showreel from "@/components/showreel/showreel";
 import ServiceDropdown from "@/components/service-dropdown/service-dropdown";
+import CountUpOnView from "@/components/count-up-on-view";
 
 
 
@@ -15,7 +16,7 @@ export default function Home() {
       <div className="hero">
 
 
-        {/* <ThreeDScene /> */}
+        <ThreeDScene />
 
         <div className="container mx-auto px-5 relative">
           <div className="hero-cta">
@@ -205,19 +206,34 @@ export default function Home() {
               <div className="mb-15">Recent launches with real outcomes. Explore the brief, the system we built, and the impact — each case shows problem → approach → result. Every case lists scope, timeline, stack and KPI movement with before and after.</div>
 
               <div className="brag mt-10">
-                <div className="font-mono uppercase text-8xl tracking-tight">+34%</div>
+                <CountUpOnView
+                  value={34}
+                  prefix="+"
+                  suffix="%"
+                  className="font-mono uppercase text-8xl tracking-tight"
+                />
                 <div className="font-mono uppercase text-lg mt-1">Conversion</div>
                 <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
               </div>
 
               <div className="brag mt-10">
-                <div className="font-mono uppercase text-8xl tracking-tight">+41%</div>
+                <CountUpOnView
+                  value={41}
+                  prefix="+"
+                  suffix="%"
+                  className="font-mono uppercase text-8xl tracking-tight"
+                />
                 <div className="font-mono uppercase text-lg mt-1">Conversion</div>
                 <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
               </div>
 
               <div className="brag mt-10">
-                <div className="font-mono uppercase text-8xl tracking-tight">3.8&times;</div>
+                <CountUpOnView
+                  value={3.8}
+                  decimals={1}
+                  suffix="×"
+                  className="font-mono uppercase text-8xl tracking-tight"
+                />
                 <div className="font-mono uppercase text-lg mt-1">Conversion</div>
                 <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
               </div>
