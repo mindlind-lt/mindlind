@@ -1,13 +1,13 @@
 import Image from "next/image";
-import ThreeDScene from "@/components/hero-3d";
 import DoorButton from "@/components/door-button/door-button";
 import ScrambledText from "@/components/scrambled-text/scrambled-text";
 import Showreel from "@/components/showreel/showreel";
 import ServiceDropdown from "@/components/service-dropdown/service-dropdown";
 import CountUpOnView from "@/components/count-up-on-view";
 import WorkThumb from "@/components/work-thumb/work-thumb";
-import HowWeWork3d from "@/components/3d-how-we-work";
 
+import SplineMedusa from "@/components/spline-medusa";
+import SplineTorus from "@/components/spline-torus";
 
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className="hero">
 
-        {/* <ThreeDScene /> */}
+        <SplineMedusa />
 
         <div className="container mx-auto px-5 relative">
           <div className="hero-cta">
@@ -299,7 +299,7 @@ export default function Home() {
         <div className="container mx-auto px-5 py-20 max-w-[1720px]">
           <div className="bg-neutral-900 text-white py-[160px] px-[100px] rounded-xl relative overflow-visible">
 
-            <HowWeWork3d />
+            <SplineTorus />
             
             <div className="font-mono text-3xl uppercase mb-60 mt-[-75vh] flex justify-between relative z-2">
               <div>How We Work</div>
