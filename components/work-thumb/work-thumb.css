@@ -1,3 +1,18 @@
+.work-thumb {
+    background: #fff;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    padding: 2px;
+
+    overflow: hidden;
+    break-inside: avoid;
+    margin-bottom: 30px;
+}
+
 .work-thumb-figure img {
     object-fit: cover;
     border-radius: 9px;

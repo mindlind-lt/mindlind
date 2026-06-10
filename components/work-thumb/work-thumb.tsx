@@ -1,30 +1,31 @@
 import './work-thumb.css'
 
-export default function WorkThumb(){
-    return (
-        <a className="work-thumb" href="#">
+interface WorkThumbProps {
+  href: string
+  imageSrc: string
+  imageAlt?: string
+  title: string
+  pills: string[]
+}
 
+export default function WorkThumb({ href, imageSrc, imageAlt = '', title, pills }: WorkThumbProps) {
+    return (
+        <a className="work-thumb" href={href}>
             <div className="work-thumb-figure">
                 <img
-                src="https://framerusercontent.com/images/sGS84bWyltfeRQTkd9e954KItjQ.jpg"
-                alt=""
-                className="work-thumb-pic"
+                    src={imageSrc}
+                    alt={imageAlt}
+                    className="work-thumb-pic"
                 />
-                {/* <img
-                src="https://framerusercontent.com/images/Gp71a55WWD0asrAvP4akufH6S4c.jpg"
-                alt=""
-                /> */}
             </div>
-
             <div className="work-thumb-content">
-                <h6 className="work-thumb-title">White Gate Hotel</h6>
+                <h6 className="work-thumb-title">{title}</h6>
                 <div className="pills">
-                    <div className="pills-item">Website</div>
-                    <div className="pills-item">Content</div>
-                    <div className="pills-item">Mobile App</div>
+                    {pills.map((pill, index) => (
+                        <div key={index} className="pills-item">{pill}</div>
+                    ))}
                 </div>
             </div>
-
         </a>
     )
 }

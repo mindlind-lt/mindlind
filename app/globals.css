@@ -209,24 +209,12 @@ body {
 
 
 .works-masonry {
-    position: relative;
+    column-count: 2;
+    column-gap: 30px;
 }
 
-/* .works-masonry-col {
-    position: relative;
-} */
-
 .works-masonry-item {
-    background: #fff;
-    border-radius: 10px;
 
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    
-    padding: 2px;
-
-    overflow: hidden;
 }
 
 

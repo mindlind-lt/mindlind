@@ -248,19 +248,39 @@ export default function Home() {
               <div className="works-masonry">
 
                 <div className="works-masonry-item">
-                  <WorkThumb />
+                  <WorkThumb
+                    href="/work/white-gate-hotel"
+                    imageSrc="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
+                    title="White Gate Hotel"
+                    pills={["Website", "Content", "Mobile App"]}
+                  />
                 </div>
 
                 <div className="works-masonry-item">
-                  <WorkThumb />
+                  <WorkThumb
+                    href="/work/urban-outfitters"
+                    imageSrc="/assets/images/6W0vasxI6uWP2E6mj82VIXCUA.jpg"
+                    title="Urban Outfitters"
+                    pills={["E-commerce", "Brand Strategy", "UX/UI"]}
+                  />
+                </div>
+
+                <div className="works-masonry-item pt-10">
+                  <WorkThumb
+                    href="/work/coffee-co"
+                    imageSrc="/assets/images/Ca217Cc8CFDUqJ2Da783rGz8u3w.jpg"
+                    title="Coffee Co."
+                    pills={["Brand Identity", "Website", "Social Media"]}
+                  />
                 </div>
 
                 <div className="works-masonry-item">
-                  <WorkThumb />
-                </div>
-
-                <div className="works-masonry-item">
-                  <WorkThumb />
+                  <WorkThumb
+                    href="/work/green-planet"
+                    imageSrc="/assets/images/0rQcwwPuaGhpoRqfnGDg7Thk.jpg"
+                    title="Green Planet"
+                    pills={["Sustainability", "Web Design", "SEO"]}
+                  />
                 </div>
 
               </div>
