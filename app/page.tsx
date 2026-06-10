@@ -201,41 +201,40 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-30">
 
             <div className="col-span-1">
-
-              <div className="text-primary-500 font-mono text-3xl uppercase mb-15">[02]</div>
-              <div className="mb-15">Recent launches with real outcomes. Explore the brief, the system we built, and the impact — each case shows problem → approach → result. Every case lists scope, timeline, stack and KPI movement with before and after.</div>
-
-              <div className="brag mt-10">
-                <CountUpOnView
-                  value={34}
-                  prefix="+"
-                  suffix="%"
-                  className="font-mono uppercase text-8xl tracking-tight"
-                />
-                <div className="font-mono uppercase text-lg mt-1">Conversion</div>
-                <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
+              <div className="sticky top-6">
+                <div className="text-primary-500 font-mono text-3xl uppercase mb-15">[02]</div>
+                <div className="mb-15">Recent launches with real outcomes. Explore the brief, the system we built, and the impact — each case shows problem → approach → result. Every case lists scope, timeline, stack and KPI movement with before and after.</div>
+                <div className="brag mt-10">
+                  <CountUpOnView
+                    value={34}
+                    prefix="+"
+                    suffix="%"
+                    className="font-mono uppercase text-8xl tracking-tight"
+                  />
+                  <div className="font-mono uppercase text-lg mt-1">Conversion</div>
+                  <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
+                </div>
+                <div className="brag mt-10">
+                  <CountUpOnView
+                    value={41}
+                    prefix="+"
+                    suffix="%"
+                    className="font-mono uppercase text-8xl tracking-tight"
+                  />
+                  <div className="font-mono uppercase text-lg mt-1">Conversion</div>
+                  <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
+                </div>
+                <div className="brag mt-10">
+                  <CountUpOnView
+                    value={3.8}
+                    decimals={1}
+                    suffix="×"
+                    className="font-mono uppercase text-8xl tracking-tight"
+                  />
+                  <div className="font-mono uppercase text-lg mt-1">Conversion</div>
+                  <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
+                </div>
               </div>
-              <div className="brag mt-10">
-                <CountUpOnView
-                  value={41}
-                  prefix="+"
-                  suffix="%"
-                  className="font-mono uppercase text-8xl tracking-tight"
-                />
-                <div className="font-mono uppercase text-lg mt-1">Conversion</div>
-                <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
-              </div>
-              <div className="brag mt-10">
-                <CountUpOnView
-                  value={3.8}
-                  decimals={1}
-                  suffix="×"
-                  className="font-mono uppercase text-8xl tracking-tight"
-                />
-                <div className="font-mono uppercase text-lg mt-1">Conversion</div>
-                <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
-              </div>
-
             </div>
 
             <div className="col-span-2">
@@ -249,8 +248,8 @@ export default function Home() {
 
                 <div className="works-masonry-item">
                   <WorkThumb
-                    href="/work/white-gate-hotel"
-                    imageSrc="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
+                    href="#"
+                    imageSrc="/assets/images/DAjLnXaG8IFvDuszXELpqrUw.jpg"
                     title="White Gate Hotel"
                     pills={["Website", "Content", "Mobile App"]}
                   />
@@ -258,17 +257,17 @@ export default function Home() {
 
                 <div className="works-masonry-item">
                   <WorkThumb
-                    href="/work/urban-outfitters"
-                    imageSrc="/assets/images/6W0vasxI6uWP2E6mj82VIXCUA.jpg"
+                    href="#"
+                    imageSrc="/assets/images/fiU9sXRKivF0zCNWzaj9LiysgsE.jpg"
                     title="Urban Outfitters"
                     pills={["E-commerce", "Brand Strategy", "UX/UI"]}
                   />
                 </div>
 
-                <div className="works-masonry-item pt-10">
+                <div className="works-masonry-item pt-30">
                   <WorkThumb
-                    href="/work/coffee-co"
-                    imageSrc="/assets/images/Ca217Cc8CFDUqJ2Da783rGz8u3w.jpg"
+                    href="#"
+                    imageSrc="/assets/images/InPA0zF2DdxpZ1VYRLmFHFucyI.jpg"
                     title="Coffee Co."
                     pills={["Brand Identity", "Website", "Social Media"]}
                   />
@@ -276,8 +275,8 @@ export default function Home() {
 
                 <div className="works-masonry-item">
                   <WorkThumb
-                    href="/work/green-planet"
-                    imageSrc="/assets/images/0rQcwwPuaGhpoRqfnGDg7Thk.jpg"
+                    href="#"
+                    imageSrc="/assets/images/LCtRY0s4liCVk8BVWfpiJA3ROzo.jpg"
                     title="Green Planet"
                     pills={["Sustainability", "Web Design", "SEO"]}
                   />

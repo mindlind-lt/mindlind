@@ -210,11 +210,11 @@ body {
 
 .works-masonry {
     column-count: 2;
-    column-gap: 30px;
+    column-gap: 80px;
 }
 
 .works-masonry-item {
-
+    margin-bottom: 80px;
 }
 
 
