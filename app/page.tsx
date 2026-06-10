@@ -6,6 +6,7 @@ import Showreel from "@/components/showreel/showreel";
 import ServiceDropdown from "@/components/service-dropdown/service-dropdown";
 import CountUpOnView from "@/components/count-up-on-view";
 import WorkThumb from "@/components/work-thumb/work-thumb";
+import HowWeWork3d from "@/components/3d-how-we-work";
 
 
 
@@ -296,14 +297,16 @@ export default function Home() {
 
       <div className="section-how">
         <div className="container mx-auto px-5 py-20 max-w-[1720px]">
-          <div className="bg-neutral-900 text-white py-[160px] px-[100px] rounded-xl">
+          <div className="bg-neutral-900 text-white py-[160px] px-[100px] rounded-xl relative overflow-visible">
+
+            <HowWeWork3d />
             
-            <div className="font-mono text-3xl uppercase mb-60 flex justify-between">
+            <div className="font-mono text-3xl uppercase mb-60 mt-[-75vh] flex justify-between relative z-2">
               <div>How We Work</div>
               <div>[03]</div>
             </div>
 
-            <div className="flex">
+            <div className="flex relative z-2">
               <div className="w-[400px]">
                 <div className="font-mono uppercase">[001]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Discover</div>
@@ -312,7 +315,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex justify-end">
+            <div className="flex justify-end relative z-2">
               <div className="w-[400px] text-right">
                 <div className="font-mono uppercase">[002]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Define</div>
@@ -321,7 +324,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex">
+            <div className="flex relative z-2">
               <div className="w-[400px]">
                 <div className="font-mono uppercase">[003]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Design</div>
@@ -330,7 +333,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex justify-end">
+            <div className="flex justify-end relative z-2">
               <div className="w-[400px] text-right">
                 <div className="font-mono uppercase">[004]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Build</div>
@@ -339,7 +342,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex">
+            <div className="flex relative z-2">
               <div className="w-[400px]">
                 <div className="font-mono uppercase">[005]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Launch</div>
@@ -348,7 +351,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex justify-end">
+            <div className="flex justify-end relative z-2">
               <div className="w-[400px] text-right">
                 <div className="font-mono uppercase">[006]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Improve</div>
