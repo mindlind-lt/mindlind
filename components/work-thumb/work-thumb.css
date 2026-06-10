@@ -1,0 +1,26 @@
+.work-thumb-figure img {
+    object-fit: cover;
+    border-radius: 9px;
+
+    display: block;
+    margin: 0;
+}
+
+.work-thumb-content {
+    background: rgb(243, 243, 243);
+    border-radius: 8px;
+    opacity: 1; 
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 20px 25px;
+}
+
+.work-thumb-title {
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+    font-size: 22px;
+    line-height: 1.2;
+}
