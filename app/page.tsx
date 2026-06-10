@@ -237,12 +237,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-span-2">
+            <div className="col-span-2 relative">
 
               <div className="font-mono text-3xl uppercase mb-15">
                 <h2>Featured Works</h2>
               </div>
-
 
               <div className="works-masonry">
 
@@ -284,8 +283,7 @@ export default function Home() {
 
               </div>
 
-
-              <div className="text-red-500">View all</div>
+              <ScrambledText text="[ View all ] " as="a" href="#" className="section-works-link" />
 
             </div>
 
