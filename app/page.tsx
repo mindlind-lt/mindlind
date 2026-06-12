@@ -5,6 +5,7 @@ import Showreel from "@/components/showreel/showreel";
 import ServiceDropdown from "@/components/service-dropdown/service-dropdown";
 import CountUpOnView from "@/components/count-up-on-view";
 import WorkThumb from "@/components/work-thumb/work-thumb";
+import FAQAccordion from "@/components/faq-accordion/faq-accordion";
 
 import SplineMedusa from "@/components/spline-medusa";
 import SplineTorus from "@/components/spline-torus";
@@ -428,7 +429,30 @@ export default function Home() {
               <h2 className="">FAQ</h2>
               <div className="text-primary-500">[08]</div>
             </div>
-            <div className="text-4xl text-center py-20 bg-gray-200">FAQ GOES HERE</div>
+            <FAQAccordion
+              items={[
+                {
+                  question: "What services do you offer?",
+                  answer: "We offer web design, web development, brand strategy, and digital marketing services. Our team specializes in creating conversion-focused interfaces with clear hierarchy and measurable goals."
+                },
+                {
+                  question: "How long does a typical project take?",
+                  answer: "Project timelines vary based on scope. A typical website redesign takes 4-8 weeks, while full brand identity projects can take 6-12 weeks. We provide detailed timelines during the discovery phase."
+                },
+                {
+                  question: "What is your pricing structure?",
+                  answer: "We work on a project-basis with transparent pricing. After our initial discovery call, we provide a detailed scope and quote. We also offer ongoing retainers for long-term partnerships."
+                },
+                {
+                  question: "Do you work with startups?",
+                  answer: "Yes, we love working with startups! We have experience helping early-stage companies establish their brand presence and build scalable digital products that grow with their business."
+                },
+                {
+                  question: "What technologies do you use?",
+                  answer: "We primarily work with Next.js, React, and modern CSS frameworks. For CMS solutions, we use Contentful, Sanity, or custom solutions depending on your needs. We prioritize performance and accessibility."
+                }
+              ]}
+            />
           </div>
 
           <div>
