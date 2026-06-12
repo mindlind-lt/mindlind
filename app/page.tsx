@@ -360,6 +360,15 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="mt-12">
+              <a className="fancy-button" href="#">
+                <img src="/assets/images/icon-phone.png" alt="" />
+                <img src="/assets/images/icon-email.png" alt="" />
+                <img src="/assets/images/cta-icon-1.png" alt="" />
+                <div>Contact manager</div>
+              </a>
+            </div>
+
           </div>          
         </div>
       </div>
