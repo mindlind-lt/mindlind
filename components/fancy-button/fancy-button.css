@@ -1,0 +1,23 @@
+.fancy-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+.fancy-button-icon {
+    width: 55px;
+    height: 55px;
+}
+
+.fancy-button-icon-1 {
+    
+}
+
+.fancy-button-icon-2 {
+    width: 88px;
+    height: 88px;
+}
+
+.fancy-button-icon-3 {
+    
+}
