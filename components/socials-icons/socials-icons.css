@@ -1,6 +1,6 @@
 .socials-icons {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .socials-icons img {
-    width: 20px;
+    width: 30px;
     height: auto;
     display: block;
 }

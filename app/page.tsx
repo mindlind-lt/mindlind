@@ -19,7 +19,7 @@ export default function Home() {
 
       <div className="hero">
 
-        <SplineMedusa />
+        {/* <SplineMedusa /> */}
 
         <div className="container mx-auto px-5 relative">
           <div className="hero-cta">
@@ -301,7 +301,7 @@ export default function Home() {
         <div className="container mx-auto px-5 py-20 max-w-[1720px]">
           <div className="bg-neutral-900 text-white py-[160px] px-[100px] rounded-xl relative overflow-visible">
 
-            <SplineTorus />
+            {/* <SplineTorus /> */}
             
             <div className="font-mono text-3xl uppercase mb-60 mt-[-75vh] flex justify-between relative z-2">
               <div>How We Work</div>

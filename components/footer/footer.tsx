@@ -72,7 +72,14 @@ export default function Footer(){
                                 <SocialsIcons />
                             </div>
 
-                            <div>Contact info</div>
+                            <div className='mb-24 ftr-cinfo'>
+                                <div>
+                                    <a href="#">27 Whitfield Yard, Shoreditch, London E2 7NX</a>
+                                </div>
+                                <div>
+                                    <a href="#">+44 20 3999 1245</a>
+                                </div>
+                            </div>
 
                             <div className='ftr-copyright'>© Mondragon Agency. All Rights Reserved.</div>
 
