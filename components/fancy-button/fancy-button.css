@@ -1,23 +1,84 @@
 .fancy-button {
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background: #000;
+    border-radius: 12px;
+    color: #fff;
+
     display: flex;
     align-items: center;
-    gap: 1rem;
-    
+    justify-content: center;
+    gap: 1rem;    
+
+    height: 84px;
+
+    transition: 0.3s;
+    position: relative;
 }
+
+.fancy-button:hover, .fancy-button:focus {
+    background: #fff;
+    color: #000;
+}
+
 .fancy-button-icon {
-    width: 55px;
-    height: 55px;
+    object-fit: contain;
+    z-index: 1;
+
+    transition: 0.3s;
 }
 
 .fancy-button-icon-1 {
-    
+    aspect-ratio: 1;
+    z-index: 1;
+    position: absolute;
+    top: -32px;
+    left: 32%;
+
+    width: 88px;
+    height: 88px;
+
+    transform: translateX(-50%);
+    transform-origin: 50% 50% 0px;
+}
+
+.fancy-button:hover .fancy-button-icon-1, .fancy-button:focus .fancy-button-icon-1 {
+    margin-left: -20px;
+    margin-top: -10px;
 }
 
 .fancy-button-icon-2 {
-    width: 88px;
-    height: 88px;
+    width: 55px;
+    height: 55px;
+    aspect-ratio: 1;
+    flex: none;
+    position: absolute;
+    bottom: -19px;
+    left: 34%;
+    transform: translateX(-50%);
+    transform-origin: 50% 50% 0px;
+}
+
+.fancy-button:hover .fancy-button-icon-2, .fancy-button:focus .fancy-button-icon-2 {
+    margin-left: -10px;
+    margin-bottom: -10px;
 }
 
 .fancy-button-icon-3 {
-    
+    flex: none;
+    width: auto;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+    width: auto;
+    transform: translateX(-50%);
+    transform-origin: 50% 50% 0px;
+}
+
+.fancy-button:hover .fancy-button-icon-3, .fancy-button:focus .fancy-button-icon-3 {
+    left: 71%;
 }

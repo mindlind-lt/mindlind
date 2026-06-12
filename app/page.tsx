@@ -361,7 +361,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-12">
+            <div className="mt-[160px]">
               <FancyButton />
             </div>
 

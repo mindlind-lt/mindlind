@@ -1,3 +1,5 @@
+import './fancy-button.css';
+
 export default function FancyButton() {
   return (
     <a className="fancy-button" href="#">
