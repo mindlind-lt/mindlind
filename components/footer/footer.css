@@ -1,9 +1,9 @@
 .ftr {
-    padding: 2px;
+    padding: 6px;
 }
 
 .ftr-box {
-    border-radius: 12px;
+    border-radius: 18px;
     color: #fff;
     background-color: var(--foreground);
 
