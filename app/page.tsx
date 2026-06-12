@@ -425,11 +425,12 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-20">
 
           <div>
-            <div className="font-mono text-3xl uppercase pb-15 flex items-center gap-15">
+            <div className="font-mono text-3xl uppercase pb-15 flex justify-between items-center gap-15">
               <h2 className="">FAQ</h2>
               <div className="text-primary-500">[08]</div>
             </div>
             <FAQAccordion
+              className="border-t border-black"
               items={[
                 {
                   question: "What services do you offer?",

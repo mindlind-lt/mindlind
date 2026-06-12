@@ -11,9 +11,10 @@ interface FAQItem {
 
 interface FAQAccordionProps {
   items: FAQItem[];
+  className?: string;
 }
 
-export default function FAQAccordion({ items }: FAQAccordionProps) {
+export default function FAQAccordion({ items, className }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
@@ -21,21 +22,17 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
   };
 
   return (
-    <div className="faq-accordion">
+    <div className={`faq-accordion ${className || ''}`}>
       {items.map((item, index) => (
-        <div key={index} className="faq-item">
+        <div key={index} className={`faq-item ${openIndex === index ? 'open' : ''}`}>
           <button
             onClick={() => toggle(index)}
             className="faq-question"
           >
-            <ChevronDown
-              className={`faq-icon ${openIndex === index ? 'rotate-180' : ''}`}
-            />
-            <span className="faq-question-text font-mono uppercase text-xl font-medium">{item.question}</span>
+            <ChevronDown className="faq-icon" />
+            <span className="faq-question-text font-mono uppercase text-2xl">{item.question}</span>
           </button>
-          <div
-            className={`faq-answer ${openIndex === index ? 'open' : ''}`}
-          >
+          <div className="faq-answer">
             <div>{item.answer}</div>
           </div>
         </div>

@@ -3,7 +3,7 @@
 }
 
 .faq-item {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #d6d8dd;
   position: relative;
 }
 
@@ -14,18 +14,19 @@
 .faq-question {
   width: 100%;
   text-align: left;
-  padding: 1.5rem 0 1.5rem 3rem;
+  padding: 1.5rem 0;
   display: flex;
   align-items: center;
   gap: 1rem;
-  cursor: pointer;
-  transition: color 500ms ease-in-out;
   background: none;
   border: none;
+  
+  cursor: pointer;
+  transition: 500ms;
 }
 
 .faq-question:hover {
-  color: black;
+  padding-left: 2rem;
 }
 
 .faq-question:hover .faq-icon {
@@ -35,22 +36,23 @@
 .faq-icon {
   position: absolute;
   left: 0;
-  transition: all 1000ms ease-out;
+  transition: 500ms;
   opacity: 0;
 }
 
-.faq-icon.rotate-180 {
+.faq-item.open .faq-icon {
   transform: rotate(180deg);
+  opacity: 1;
 }
 
 .faq-answer {
   overflow: hidden;
-  transition: all 1000ms ease-out;
+  transition: 500ms;
   max-height: 0;
   opacity: 0;
 }
 
-.faq-answer.open {
+.faq-item.open .faq-answer {
   max-height: 24rem;
   opacity: 1;
 }
