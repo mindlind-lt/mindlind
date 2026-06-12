@@ -1,0 +1,26 @@
+.socials-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.socials-icons > div {
+    display: flex;
+    align-items: center;
+}
+
+.socials-icons a {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.socials-icons a:hover {
+    opacity: 0.6;
+}
+
+.socials-icons img {
+    width: 20px;
+    height: auto;
+    display: block;
+}
