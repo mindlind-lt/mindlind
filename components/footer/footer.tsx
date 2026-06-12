@@ -2,7 +2,7 @@ export default function Footer(){
 
     return (
         <> 
-            {/* <h1>FOOTER</h1> */}
+            <h1>FOOTER</h1>
         </>
     )
 

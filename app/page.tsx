@@ -18,7 +18,7 @@ export default function Home() {
 
       <div className="hero">
 
-        {/* <SplineMedusa /> */}
+        <SplineMedusa />
 
         <div className="container mx-auto px-5 relative">
           <div className="hero-cta">
@@ -300,7 +300,7 @@ export default function Home() {
         <div className="container mx-auto px-5 py-20 max-w-[1720px]">
           <div className="bg-neutral-900 text-white py-[160px] px-[100px] rounded-xl relative overflow-visible">
 
-            {/* <SplineTorus /> */}
+            <SplineTorus />
             
             <div className="font-mono text-3xl uppercase mb-60 mt-[-75vh] flex justify-between relative z-2">
               <div>How We Work</div>
@@ -397,6 +397,55 @@ export default function Home() {
         <div className="text-4xl text-center py-20 bg-gray-200">PROJECT INFO GOES HERE</div>
 
       </div>
+
+
+
+      {/* Insights section */}
+
+      <div className="container mx-auto px-5 py-20">
+
+        <div className="font-mono text-3xl uppercase pb-15 flex items-center gap-15">
+          <div className="text-primary-500">[07]</div>
+          <h2 className="">Insights</h2>
+          <div className="flex-1 flex justify-end">
+            <ScrambledText text="[ All posts ] " as="a" href="#" />
+          </div>
+        </div>
+
+        <div className="text-4xl text-center py-20 bg-gray-200">BLOG POSTS GO HERE</div>
+
+      </div>
+
+
+
+      {/* Contact section */}
+
+      <div className="container mx-auto px-5 py-20">
+        <div className="grid grid-cols-2 gap-20">
+
+          <div>
+            <div className="font-mono text-3xl uppercase pb-15 flex items-center gap-15">
+              <h2 className="">FAQ</h2>
+              <div className="text-primary-500">[08]</div>
+            </div>
+            <div className="text-4xl text-center py-20 bg-gray-200">FAQ GOES HERE</div>
+          </div>
+
+          <div>
+
+            <div>Start a Project</div>
+            <div>Tell to our manager about the goal. <br />We’ll reply with scope and timeline.</div>
+
+            <div className="text-4xl text-center py-20 bg-gray-200">FORM GOES HERE</div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
 
 
     </>
