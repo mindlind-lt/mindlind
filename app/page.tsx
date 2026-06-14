@@ -6,11 +6,18 @@ import ServiceDropdown from "@/components/service-dropdown/service-dropdown";
 import CountUpOnView from "@/components/count-up-on-view";
 import WorkThumb from "@/components/work-thumb/work-thumb";
 import FAQAccordion from "@/components/faq-accordion/faq-accordion";
+import LogoLoop from '@/components/logo-loop/LogoLoop';
 
 import SplineMedusa from "@/components/spline-medusa";
 import SplineTorus from "@/components/spline-torus";
 import ContactButton from "@/components/contact-button/contact-button";
 
+
+const imageLogos = [
+  { src: "/assets/images/Vbq7Fp6o8KdtjpOPsc8wVaQWxYY.png", alt: "", href: "#" },
+  { src: "/assets/images/Vbq7Fp6o8KdtjpOPsc8wVaQWxYY.png", alt: "", href: "#" },
+  { src: "/assets/images/Vbq7Fp6o8KdtjpOPsc8wVaQWxYY.png", alt: "", href: "#" },
+];
 
 export default function Home() {
   return (
@@ -19,7 +26,7 @@ export default function Home() {
 
       <div className="hero">
 
-        {/* <SplineMedusa /> */}
+        <SplineMedusa />
 
         <div className="container mx-auto px-5 relative">
           <div className="hero-cta">
@@ -301,7 +308,7 @@ export default function Home() {
         <div className="container mx-auto px-5 py-20 max-w-[1720px]">
           <div className="bg-neutral-900 text-white py-[160px] px-[100px] rounded-xl relative overflow-visible">
 
-            {/* <SplineTorus /> */}
+            <SplineTorus />
             
             <div className="font-mono text-3xl uppercase mb-60 mt-[-75vh] flex justify-between relative z-2">
               <div>How We Work</div>
@@ -385,7 +392,7 @@ export default function Home() {
 
           <div className="masonry-item">
             
-            <div>
+            <div className="space-y-1">
               <Image 
                 src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
                 alt=""
@@ -397,8 +404,31 @@ export default function Home() {
                 <div className="font-mono text-8xl">200+</div>
                 <div className="font-mono text-xl uppercase">Worldwide  Clients</div>
               </div>
-              <div className="bg-white rounded-xl">
-                {/* Marquee goes here */}
+              <div className="bg-white rounded-xl py-12 space-y-4 overflow-hidden">
+                <LogoLoop
+                  logos={imageLogos}
+                  speed={30}
+                  direction="right"
+                  logoHeight={60}
+                  gap={60}
+                  hoverSpeed={0}
+                  scaleOnHover
+                  fadeOut
+                  fadeOutColor="#ffffff"
+                  ariaLabel=""
+                />
+                <LogoLoop
+                  logos={imageLogos}
+                  speed={30}
+                  direction="left"
+                  logoHeight={60}
+                  gap={60}
+                  hoverSpeed={0}
+                  scaleOnHover
+                  fadeOut
+                  fadeOutColor="#ffffff"
+                  ariaLabel=""
+                />
               </div>
             </div>
 
