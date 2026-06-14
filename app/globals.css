@@ -255,3 +255,15 @@ body {
 }
 
 
+
+
+.masonry {
+  column-gap: 1.5rem;
+  column-count: 3;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem; 
+  width: 100%;
+}

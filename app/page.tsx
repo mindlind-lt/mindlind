@@ -381,7 +381,30 @@ export default function Home() {
           <div className="flex-1"></div>
         </div>
 
-        <div className="text-4xl text-center py-20 bg-gray-200">MASONRY GOES HERE</div>
+        <div className="masonry">
+
+          <div className="masonry-item">
+            
+            <div>
+              <Image 
+                src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
+                alt=""
+                className="rounded-xl"
+                width={1000}
+                height={500}
+              />
+              <div className="bg-white rounded-xl p-10 space-y-1">
+                <div className="font-mono text-8xl">200+</div>
+                <div className="font-mono text-xl uppercase">Worldwide  Clients</div>
+              </div>
+              <div className="bg-white rounded-xl">
+                {/* Marquee goes here */}
+              </div>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
