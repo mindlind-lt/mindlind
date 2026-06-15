@@ -11,6 +11,7 @@ import LogoLoop from '@/components/logo-loop/LogoLoop';
 import SplineMedusa from "@/components/spline-medusa";
 import SplineTorus from "@/components/spline-torus";
 import ContactButton from "@/components/contact-button/contact-button";
+import ReviewCard from "@/components/review-card/review-card";
 
 
 const imageLogos = [
@@ -382,7 +383,7 @@ export default function Home() {
 
       <div className="container mx-auto px-5 py-20">
 
-        <div className="font-mono text-3xl uppercase pb-15 flex items-center">
+        <div className="font-mono text-3xl uppercase pb-20 flex items-center">
           <div className="text-primary-500 flex-1">[05]</div>
           <h2 className="text-center flex-2">Testimonials</h2>
           <div className="flex-1"></div>
@@ -391,7 +392,6 @@ export default function Home() {
         <div className="masonry">
 
           <div className="masonry-item">
-            
             <div className="space-y-1">
               <Image 
                 src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
@@ -431,7 +431,42 @@ export default function Home() {
                 />
               </div>
             </div>
+          </div>
 
+          <div className="masonry-item">
+            <ReviewCard />
+          </div>
+
+          <div className="masonry-item">
+            <ReviewCard />
+          </div>
+
+          <div className="masonry-item">
+            <ReviewCard />
+          </div>
+
+          <div className="masonry-item">
+            <ReviewCard />
+          </div>
+
+          <div className="masonry-item">
+            <div className="space-y-1">
+                <div className="bg-white rounded-xl p-10 space-y-1 text-right">
+                  <div className="font-mono text-8xl">93%</div>
+                  <div className="font-mono text-xl uppercase">Repeat Clients</div>
+                </div>
+                <div className="bg-white rounded-xl p-10 space-y-1 text-right">
+                  <div className="font-mono text-8xl">100×</div>
+                  <div className="font-mono text-xl uppercase">Increased clients profits</div>
+                </div>
+                <Image 
+                  src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
+                  alt=""
+                  className="rounded-xl"
+                  width={1000}
+                  height={500}
+                />
+            </div>
           </div>
 
         </div>

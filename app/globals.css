@@ -14,8 +14,8 @@
     --primary-800: #075985;
     --primary-900: #0c4a6e;
     --primary-950: #082f49; */
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
+    --background: #F4F4F4;
+    --foreground: #333;
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);
@@ -62,7 +62,7 @@
     --color-primary-800: var(--primary-800);
     --color-primary-900: var(--primary-900);
     --color-primary-950: var(--primary-950);
-    --font-sans: var(--font-sans);
+    --font-sans: var(--font-inter);
     --font-mono: var(--font-space-mono);
     --font-heading: var(--font-sans);
     --color-sidebar-ring: var(--sidebar-ring);
@@ -111,7 +111,7 @@
 } */
 
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-inter);
     background: #F4F4F4;
 }
 
@@ -307,13 +307,13 @@ body {
 }
 
 .masonry {
-  column-gap: 1.5rem;
+  column-gap: 80px;
   column-count: 3;
 }
 
 .masonry-item {
   break-inside: avoid;
-  margin-bottom: 1.5rem; 
+  margin-bottom: 80px; 
   width: 100%;
 }
 
