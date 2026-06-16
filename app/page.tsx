@@ -170,35 +170,35 @@ export default function Home() {
             title="Web Design"
             label="UX/UI, design systems, prototypes."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
-            image="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
+            image="/images/1.jpg"
           />
           <ServiceDropdown
             align="center"
             title="Web Development"
             label="Framer/Next.js, CMS, analytics."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
-            image="/assets/images/6W0vasxI6uWP2E6mj82VIXCUA.jpg"
+            image="/images/2.jpg"
           />
           <ServiceDropdown
             align="right"
             title="Brand Strategy"
             label="Create history and values."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
-            image="/assets/images/CA217Cc8CFDUqJ2Da783rGz8u3w.jpg"
+            image="/images/3.jpg"
           />
           <ServiceDropdown
             align="center"
             title="Brand Strategy"
             label="Create history and values."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
-            image="/assets/images/CA217Cc8CFDUqJ2Da783rGz8u3w.jpg"
+            image="/images/4.jpg"
           />
           <ServiceDropdown
             align="left"
             title="Brand Strategy"
             label="Create history and values."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
-            image="/assets/images/CA217Cc8CFDUqJ2Da783rGz8u3w.jpg"
+            image="/images/5.jpg"
           />
         </div>
 

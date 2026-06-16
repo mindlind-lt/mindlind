@@ -8,7 +8,7 @@ export default function Footer(){
         <div className="ftr"> 
             <div className="ftr-box">
                 <div className="container mx-auto px-5">
-                    <div className="grid grid-cols-3 gap-20">
+                    <div className="grid grid-cols-3 gap-28">
 
                         <div>
 

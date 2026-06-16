@@ -43,7 +43,7 @@
     right: 0;
     left: 0;
 
-    transition: 0.45s linear;
+    transition: 0.3s linear;
 }
 
 .door-button::after {
@@ -60,7 +60,7 @@
     left: 0;
     bottom: 0;
 
-    transition: 0.45s linear;
+    transition: 0.3s linear;
 }
 
 .door-button:hover, .door-button:focus {

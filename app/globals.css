@@ -15,7 +15,7 @@
     --primary-900: #0c4a6e;
     --primary-950: #082f49; */
     --background: #F4F4F4;
-    --foreground: #333;
+    --foreground: #1A1A1A;
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);

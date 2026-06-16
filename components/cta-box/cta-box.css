@@ -1,0 +1,33 @@
+
+.cta-box {
+    background: #fff;
+    border-radius: 8px;
+
+    display: flex;
+    gap: 2px;
+    padding: 2px;
+}
+
+.cta-box-content {
+    color: #fff;
+    background: var(--foreground);
+    border-radius: 8px;
+
+    flex: 2;
+    padding: 25px 30px;
+}
+
+.cta-box-media {
+    background: #F4F4F4;
+    border-radius: 8px;
+
+    flex: 1;
+
+    overflow: hidden;
+
+    video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
