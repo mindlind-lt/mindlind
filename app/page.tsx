@@ -42,8 +42,8 @@ export default function Home() {
               </div>
               <div className="bg-gray-200 hero-cta-box-media">
                 <video 
-                  poster="/assets/F3t96ozC3GZuPhKwdm5VWtBIZwM.png"
-                  src="/assets/PNQxI2Ed9uKXPFfH9IkZlg9f9qU.mp4" 
+                  poster="/images/cta.jpg"
+                  src="/videos/cta.mp4" 
                   autoPlay 
                   loop 
                   muted
