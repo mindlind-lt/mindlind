@@ -114,7 +114,7 @@ export default function Home() {
       <div className="intro py-20">
         <div className="container mx-auto px-5">
           <div className="intro-row">
-            <div className="text-5xl text-justify font-mono font-medium uppercase leading-[1.4]"><span className="text-3xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;From strategy to launch we deliver fast, accessible sites and clear brands with Growth-driven results</div>
+            <div className="text-5xl text-justify font-mono font-medium uppercase leading-[1.4]"><span className="text-3xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.</div>
             <ScrambledText text="[ More about ] " as="a" href="#" className="intro-link" />
           </div>
         </div>
@@ -122,9 +122,9 @@ export default function Home() {
 
 
       <div className="container mx-auto px-5 py-20">
-        <div className="flex gap-24">
+        <div className="flex gap-20">
 
-          <div>
+          <div className="w-[280px]">
             <Image 
               src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
               alt=""
@@ -134,9 +134,11 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex-1 text-md leading-[1.6]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We’re a senior creative digital agency focused on clarity and performance. We align strategy, brand, and web into modular systems that ship on time and scale. Our values are simplicity, accountability and measurable impact. The team is small and senior; every project has a lead for strategy, design and build. We partner long-term, iterating with data to keep products fast.</div>
+          <div className="flex-1 text-md leading-[1.6]">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wir sind eine kreative Digitalagentur mit Fokus auf Klarheit, Performance und Wachstum. Wir verbinden Strategie, Branding und Webentwicklung zu modernen Systemen, die skalieren und nachhaltig funktionieren. Unser Ansatz ist einfach: weniger Komplexität, mehr Wirkung. Jedes Projekt wird mit Präzision gestaltet — von der ersten Idee bis zum finalen Produkt. <b>Schnell. Klar. Effektiv.</b></p>
+          </div>
 
-          <div>
+          <div className="w-[280px]">
             <Image 
               src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
               alt=""
@@ -167,38 +169,31 @@ export default function Home() {
         <div className="services">
           <ServiceDropdown
             align="left"
-            title="Web Design"
+            title="Website"
             label="UX/UI, design systems, prototypes."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
             image="/images/1.jpg"
           />
           <ServiceDropdown
             align="center"
-            title="Web Development"
+            title="Branding"
             label="Framer/Next.js, CMS, analytics."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
             image="/images/2.jpg"
           />
           <ServiceDropdown
             align="right"
-            title="Brand Strategy"
+            title="Content"
             label="Create history and values."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
             image="/images/3.jpg"
           />
           <ServiceDropdown
             align="center"
-            title="Brand Strategy"
+            title="Mobile Experience"
             label="Create history and values."
             text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
             image="/images/4.jpg"
-          />
-          <ServiceDropdown
-            align="left"
-            title="Brand Strategy"
-            label="Create history and values."
-            text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
-            image="/images/5.jpg"
           />
         </div>
 
@@ -209,12 +204,23 @@ export default function Home() {
 
       <div className="section-works">
         <div className="container mx-auto px-5 py-20">
+
+          <div className="grid grid-cols-3 gap-30">
+            <div className="col-span-1">
+              <div className="text-primary-500 font-mono text-3xl uppercase mb-15">[02]</div>
+            </div>
+            <div className="col-span-2">
+              <div className="font-mono text-3xl uppercase mb-15">
+                <h2>AUSGEWÄHLTE PROJEKTE</h2>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-3 gap-30">
 
             <div className="col-span-1">
               <div className="sticky top-6">
-                <div className="text-primary-500 font-mono text-3xl uppercase mb-15">[02]</div>
-                <div className="mb-15">Recent launches with real outcomes. Explore the brief, the system we built, and the impact — each case shows problem → approach → result. Every case lists scope, timeline, stack and KPI movement with before and after.</div>
+                <div className="mb-15">Digitale Produkte mit messbarer Wirkung. Jedes Projekt verbindet Strategie, Design und Entwicklung zu klaren Ergebnissen — mit Fokus auf Performance, Nutzererlebnis und Wachstum.</div>
                 <div className="brag mt-10">
                   <CountUpOnView
                     value={34}
@@ -222,8 +228,8 @@ export default function Home() {
                     suffix="%"
                     className="font-mono uppercase text-8xl tracking-tight"
                   />
-                  <div className="font-mono uppercase text-lg mt-1">Conversion</div>
-                  <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
+                  <div className="font-mono uppercase text-lg mt-1">CONVERSION RATE</div>
+                  <div className="mt-3">Steigerung nach Relaunch und Optimierung der User Journey innerhalb von 90 Tagen.</div>
                 </div>
                 <div className="brag mt-10">
                   <CountUpOnView
@@ -232,27 +238,13 @@ export default function Home() {
                     suffix="%"
                     className="font-mono uppercase text-8xl tracking-tight"
                   />
-                  <div className="font-mono uppercase text-lg mt-1">Conversion</div>
-                  <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
-                </div>
-                <div className="brag mt-10">
-                  <CountUpOnView
-                    value={3.8}
-                    decimals={1}
-                    suffix="×"
-                    className="font-mono uppercase text-8xl tracking-tight"
-                  />
-                  <div className="font-mono uppercase text-lg mt-1">Conversion</div>
-                  <div className="mt-3">Uplift after redesign and new funnel (90 days).</div>
+                  <div className="font-mono uppercase text-lg mt-1">LEAD GENERIERUNG</div>
+                  <div className="mt-3">Mehr Anfragen durch bessere Struktur, schnellere Ladezeiten und klare Kommunikation.</div>
                 </div>
               </div>
             </div>
 
             <div className="col-span-2 relative">
-
-              <div className="font-mono text-3xl uppercase mb-15">
-                <h2>Featured Works</h2>
-              </div>
 
               <div className="works-masonry">
 
@@ -274,7 +266,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="works-masonry-item pt-30">
+                <div className="works-masonry-item pt-40">
                   <WorkThumb
                     href="#"
                     imageSrc="/assets/images/InPA0zF2DdxpZ1VYRLmFHFucyI.jpg"
@@ -294,7 +286,7 @@ export default function Home() {
 
               </div>
 
-              <ScrambledText text="[ View all ] " as="a" href="#" className="section-works-link" />
+              <ScrambledText text="[ Alle Projekte ansehen ] " as="a" href="#" className="section-works-link" />
 
             </div>
 

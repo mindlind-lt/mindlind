@@ -41,27 +41,27 @@ export default function Footer(){
 
                         </div>
 
-                        <div>
-                            <div>3D</div>
+                        <div className='flex items-center justify-center text-3xl'>
+                            <div>3D animation goes here</div>
                         </div>
 
                         <div>
 
                             <div className='mb-12'>
-                                <ul>
-                                    <li>
+                                <ul className='ftr-menu'>
+                                    <li className='ftr-menu-item'>
                                         <a href="/">Home</a>
                                     </li>
-                                    <li>
+                                    <li className='ftr-menu-item'>
                                         <a href="/">Agency</a>
                                     </li>
-                                    <li>
+                                    <li className='ftr-menu-item'>
                                         <a href="/">Projects</a>
                                     </li>
-                                    <li>
+                                    <li className='ftr-menu-item'>
                                         <a href="/">Blog</a>
                                     </li>
-                                    <li>
+                                    <li className='ftr-menu-item'>
                                         <a href="/">Contact</a>
                                     </li>
                                 </ul>

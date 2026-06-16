@@ -3,4 +3,5 @@
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
+    color: var(--color-primary-600);
 }
