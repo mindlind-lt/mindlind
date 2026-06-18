@@ -12,6 +12,7 @@ import SplineMedusa from "@/components/spline-medusa";
 import SplineTorus from "@/components/spline-torus";
 import ContactButton from "@/components/contact-button/contact-button";
 import ReviewCard from "@/components/review-card/review-card";
+import PostThumb from "@/components/post-thumb/post-thumb";
 
 
 const imageLogos = [
@@ -27,7 +28,7 @@ export default function Home() {
 
       <div className="hero">
 
-        <SplineMedusa />
+        {/* <SplineMedusa /> */}
 
         <div className="container mx-auto px-5 relative">
           <div className="hero-cta">
@@ -301,7 +302,7 @@ export default function Home() {
         <div className="container mx-auto px-5 py-20 max-w-[1720px]">
           <div className="bg-neutral-900 text-white py-[160px] px-[100px] rounded-xl relative overflow-visible">
 
-            <SplineTorus />
+            {/* <SplineTorus /> */}
             
             <div className="font-mono text-3xl uppercase mb-60 mt-[-75vh] flex justify-between relative z-2">
               <div>How We Work</div>
@@ -468,7 +469,7 @@ export default function Home() {
 
       {/* Before after section */}
 
-      <div className="container mx-auto px-5 py-20">
+      {/* <div className="container mx-auto px-5 py-20">
 
         <div className="font-mono text-3xl uppercase pb-20 flex justify-between items-center">
           <h2 className="font-medium text-7xl tracking-tight">Before & After</h2>
@@ -477,7 +478,7 @@ export default function Home() {
 
         <div className="text-4xl text-center py-20 bg-gray-200">PROJECT INFO GOES HERE</div>
 
-      </div>
+      </div> */}
 
 
 
@@ -487,13 +488,17 @@ export default function Home() {
 
         <div className="font-mono text-3xl uppercase pb-15 flex items-center gap-15">
           <div className="text-primary-500">[07]</div>
-          <h2 className="">Insights</h2>
+          <h2 className="">ERKENNTNISSE</h2>
           <div className="flex-1 flex justify-end">
-            <ScrambledText text="[ All posts ] " as="a" href="#" />
+            <ScrambledText text="[ ALLE BEITRÄGE ] " as="a" href="#" />
           </div>
         </div>
 
-        <div className="text-4xl text-center py-20 bg-gray-200">BLOG POSTS GO HERE</div>
+        <div className="flex flex-col gap-4">
+          <PostThumb />
+          <PostThumb />
+          <PostThumb />
+        </div>
 
       </div>
 
@@ -550,7 +555,6 @@ export default function Home() {
 
 
       </div>
-
 
 
     </>

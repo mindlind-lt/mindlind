@@ -1,0 +1,49 @@
+.post-thumb {
+    display: flex;
+    gap: 4px;
+
+    transition: 0.3s;
+}
+
+.post-thumb:hover, .post-thumb:focus {
+    opacity: 0.8;
+}
+
+.post-thumb-img {
+    aspect-ratio: 16 / 8;
+    width: 560px;
+    min-width: 560px;
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.post-thumb-more {
+    color: var(--foreground);
+    background: white;
+    border-radius: var(--radius-lg);
+
+    width: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.post-thumb:hover .post-thumb-more, .post-thumb:focus .post-thumb-more {
+    background: var(--foreground);
+    color: #fff;
+}
+
+.post-thumb-more-inner {
+    font-family: var(--font-mono);
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    transform: rotate(-90deg);
+}
