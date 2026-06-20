@@ -8,6 +8,8 @@ interface DoorButtonProps {
   href?: string;
   onClick?: () => void;
   className?: string;
+  fullWidth?: boolean;
+  type?: "button" | "submit" | "reset";
 }
 
 export default function DoorButton({
@@ -18,14 +20,16 @@ export default function DoorButton({
   href = "#",
   onClick,
   className: additionalClassName,
+  fullWidth,
+  type,
 }: DoorButtonProps) {
-  const className = ["door-button", size && `door-button-${size}`, color && `door-button-${color}`, additionalClassName]
+  const className = ["door-button", size && `door-button-${size}`, color && `door-button-${color}`, fullWidth && "door-button-full-width", additionalClassName]
     .filter(Boolean)
     .join(" ");
 
   if (as === "button") {
     return (
-      <button className={className} onClick={onClick}>
+      <button className={className} onClick={onClick} type={type || "button"}>
         <div className="door-button-content">{children}</div>
       </button>
     );

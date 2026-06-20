@@ -78,3 +78,6 @@
     --text-color: #000;
     --bg-color: #fff;
 }
+.door-button-full-width {
+    width: 100%;
+}
