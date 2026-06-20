@@ -18,16 +18,58 @@ export default function ContactForm() {
     });
 
     const data = await response.json();
-    setResult(data.success ? "Success!" : "Error");
+    setResult(data.success ? "Message sent." : "Something went wrong. Please try again.");
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <input type="text" name="name" required/>
-      <input type="email" name="email" required/>
-      <textarea name="message" required></textarea>
-      <button type="submit">Submit</button>
-      <p>{result}</p>
+    <form className="contact-form" onSubmit={onSubmit}>
+      <div className="contact-form-row">
+        <div className="contact-form-field">
+          <label className="contact-form-label" htmlFor="name">Your Name</label>
+          <input
+            className="contact-form-input"
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Michael Johnson"
+            required
+          />
+        </div>
+        <div className="contact-form-field">
+          <label className="contact-form-label" htmlFor="email">Your Email</label>
+          <input
+            className="contact-form-input"
+            id="email"
+            type="email"
+            name="email"
+            placeholder="email@company.com"
+            required
+          />
+        </div>
+      </div>
+
+      <div className="contact-form-field contact-form-field--full">
+        <label className="contact-form-label" htmlFor="message">Message</label>
+        <textarea
+          className="contact-form-textarea"
+          id="message"
+          name="message"
+          placeholder="Your Message"
+          required
+        />
+      </div>
+
+      <div className="contact-form-submit-wrap">
+        <button className="contact-form-submit" type="submit">
+          Send Message
+        </button>
+        {result && <p className="contact-form-result">{result}</p>}
+      </div>
+
+      <div className="contact-form-footer">
+        Before submitting, you agree to our{' '}
+        <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+      </div>
     </form>
   );
 }

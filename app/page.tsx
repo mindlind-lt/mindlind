@@ -558,10 +558,7 @@ export default function Home() {
               </div>
             </div>
 
-
-            <div className="bg-white p-12 rounded-xl">
-              <ContactForm />
-            </div>
+            <ContactForm />
 
           </div>
 
