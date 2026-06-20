@@ -13,6 +13,7 @@ import SplineTorus from "@/components/spline-torus";
 import ContactButton from "@/components/contact-button/contact-button";
 import ReviewCard from "@/components/review-card/review-card";
 import PostThumb from "@/components/post-thumb/post-thumb";
+import ContactForm from "@/components/contact-form/contact-form";
 
 
 const imageLogos = [
@@ -506,7 +507,7 @@ export default function Home() {
 
       {/* Contact section */}
 
-      <div className="container mx-auto px-5 py-20">
+      <div className="section-contact container mx-auto px-5 py-20">
         <div className="grid grid-cols-2 gap-20">
 
           <div>
@@ -541,12 +542,26 @@ export default function Home() {
             />
           </div>
 
-          <div>
+          <div className="section-contact-form">
+            <div className="flex items-end">
+              <div className="flex-1 pb-2 self-stretch">
+                <div className="font-mono text-6xl uppercase pb-4">Start a&nbsp;Project</div>
+                <div className="text-lg">Tell to our manager about the goal. <br />We'll reply with scope and timeline.</div>
+              </div>
+              <div className="flex-1">
+                <Image
+                  src="/images/contact.png"
+                  width={240}
+                  height={250}
+                  alt=""
+                />
+              </div>
+            </div>
 
-            <div>Start a Project</div>
-            <div>Tell to our manager about the goal. <br />We’ll reply with scope and timeline.</div>
 
-            <div className="text-4xl text-center py-20 bg-gray-200">FORM GOES HERE</div>
+            <div className="bg-white p-12 rounded-xl">
+              <ContactForm />
+            </div>
 
           </div>
 

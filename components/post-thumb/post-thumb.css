@@ -6,7 +6,7 @@
 }
 
 .post-thumb:hover, .post-thumb:focus {
-    opacity: 0.8;
+    /* opacity: 0.8; */
 }
 
 .post-thumb-img {
