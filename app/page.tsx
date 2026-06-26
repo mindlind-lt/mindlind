@@ -186,22 +186,22 @@ export default function Home() {
             image="/images/service-branding.jpg"
           />
 
-
-
           <ServiceDropdown
             align="right"
             title="Content"
-            label="Create history and values."
-            text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
-            image="/images/3.jpg"
+            label="Inhalte mit Bedeutung"
+            text="Wir gestalten Inhalte, die Informationen in Erlebnisse verwandeln. Klar, präzise und auf Ihre Marke abgestimmt, damit jede Botschaft nachhaltig wirkt."
+            image="/images/service-content.jpg"
           />
+
           <ServiceDropdown
             align="center"
-            title="Mobile Experience"
-            label="Create history and values."
-            text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
-            image="/images/4.jpg"
+            title="Mobile"
+            label="Mobile Erlebnisse mit Leichtigkeit"
+            text="Wir gestalten mobile Interfaces, die intuitiv, schnell und klar funktionieren. Jede Interaktion wird so aufgebaut, dass Inhalte mühelos erreichbar bleiben und digitale Produkte auf jedem Bildschirm hochwertig wirken."
+            image="/images/service-mobile.jpg"
           />
+
         </div>
 
       </div>
