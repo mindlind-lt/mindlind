@@ -169,20 +169,25 @@ export default function Home() {
         </div>
 
         <div className="services">
+
           <ServiceDropdown
             align="left"
-            title="Website"
-            label="UX/UI, design systems, prototypes."
-            text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
-            image="/images/1.jpg"
+            title="Web Design"
+            label="Digitale Erlebnisse mit Klarheit und Charakter"
+            text="Wir gestalten moderne Websites, die Ästhetik, Funktionalität und Benutzerfreundlichkeit vereinen. Durch durchdachte Strukturen und präzises Design entstehen digitale Erlebnisse, die Vertrauen schaffen und nachhaltig begeistern."
+            image="/images/service-web-design.jpg"
           />
+
           <ServiceDropdown
             align="center"
             title="Branding"
-            label="Framer/Next.js, CMS, analytics."
-            text="We design conversion-focused interfaces with clear hierarchy and measurable goals. Layouts are modular and responsive across breakpoints. Accessibility (AA) and performance budgets guide every screen. Deliverables: wireframes, UI kit, prototypes, and page templates."
-            image="/images/2.jpg"
+            label="Markenidentitäten, die in Erinnerung bleiben"
+            text="Wir entwickeln unverwechselbare Marken, die Strategie, Emotion und visuelle Klarheit miteinander verbinden. So entsteht ein konsistenter Auftritt, der Wiedererkennung schafft und langfristige Beziehungen zu Kunden aufbaut."
+            image="/images/service-branding.jpg"
           />
+
+
+
           <ServiceDropdown
             align="right"
             title="Content"
