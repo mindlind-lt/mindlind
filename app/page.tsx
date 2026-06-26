@@ -207,6 +207,7 @@ export default function Home() {
       </div>
 
 
+
       {/* Featured works section */}
 
       <div className="section-works">
@@ -257,37 +258,28 @@ export default function Home() {
 
                 <div className="works-masonry-item">
                   <WorkThumb
-                    href="#"
-                    imageSrc="/assets/images/DAjLnXaG8IFvDuszXELpqrUw.jpg"
-                    title="White Gate Hotel"
-                    pills={["Website", "Content", "Mobile App"]}
+                    href="https://prince-food.de/"
+                    imageSrc="/images/project-prince.jpg"
+                    title="Prince Food"
+                    pills={["Website", "UX/UI"]}
                   />
                 </div>
 
                 <div className="works-masonry-item">
                   <WorkThumb
-                    href="#"
-                    imageSrc="/assets/images/fiU9sXRKivF0zCNWzaj9LiysgsE.jpg"
-                    title="Urban Outfitters"
-                    pills={["E-commerce", "Brand Strategy", "UX/UI"]}
+                    href="https://factorysl.de/"
+                    imageSrc="/images/project-factorysl.jpg"
+                    title="FactorySL"
+                    pills={["Website", "UX/UI"]}
                   />
                 </div>
 
                 <div className="works-masonry-item pt-40">
                   <WorkThumb
-                    href="#"
-                    imageSrc="/assets/images/InPA0zF2DdxpZ1VYRLmFHFucyI.jpg"
-                    title="Coffee Co."
-                    pills={["Brand Identity", "Website", "Social Media"]}
-                  />
-                </div>
-
-                <div className="works-masonry-item">
-                  <WorkThumb
-                    href="#"
-                    imageSrc="/assets/images/LCtRY0s4liCVk8BVWfpiJA3ROzo.jpg"
-                    title="Green Planet"
-                    pills={["Sustainability", "Web Design", "SEO"]}
+                    href="https://muafaktur.de/"
+                    imageSrc="/images/project-mua.jpg"
+                    title="MUA Faktur"
+                    pills={["Website", "UX/UI"]}
                   />
                 </div>
 
