@@ -506,7 +506,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-4">
           <PostThumb />
-          <PostThumb />
+          <PostThumb align="right" />
           <PostThumb />
         </div>
 

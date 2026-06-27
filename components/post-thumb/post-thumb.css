@@ -5,8 +5,8 @@
     transition: 0.3s;
 }
 
-.post-thumb:hover, .post-thumb:focus {
-    /* opacity: 0.8; */
+.post-thumb-pic {
+    /* flex: 1; */
 }
 
 .post-thumb-img {
@@ -16,6 +16,12 @@
     max-width: 100%;
     height: 100%;
     margin: 0;
+}
+
+.post-thumb-content {
+    border-radius: var(--radius-lg);
+    background: var(--background);
+    padding: 60px;
 }
 
 .post-thumb-more {
