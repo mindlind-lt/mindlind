@@ -262,7 +262,7 @@ export default function Home() {
                 <div className="works-masonry-item">
                   <WorkThumb
                     href="https://prince-food.de/"
-                    imageSrc="/images/project-prince.jpg"
+                    imageSrc="/images/project-prince-1.jpg"
                     title="Prince Food"
                     pills={["Website", "UX/UI"]}
                   />
@@ -271,7 +271,7 @@ export default function Home() {
                 <div className="works-masonry-item">
                   <WorkThumb
                     href="https://factorysl.de/"
-                    imageSrc="/images/project-factorysl.jpg"
+                    imageSrc="/images/project-factorysl-1.jpg"
                     title="FactorySL"
                     pills={["Website", "UX/UI"]}
                   />
@@ -282,6 +282,15 @@ export default function Home() {
                     href="https://muafaktur.de/"
                     imageSrc="/images/project-mua.jpg"
                     title="MUA Faktur"
+                    pills={["Website", "UX/UI"]}
+                  />
+                </div>
+
+                <div className="works-masonry-item">
+                  <WorkThumb
+                    href="#"
+                    imageSrc="/images/project-panda-1.jpg"
+                    title="Panda Travel"
                     pills={["Website", "UX/UI"]}
                   />
                 </div>
