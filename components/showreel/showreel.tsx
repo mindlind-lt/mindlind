@@ -78,7 +78,7 @@ export default function Showreel() {
       {!isPlaying ? (
         <div className="showreel-poster">
           <Image
-            src="/assets/images/bkeTimPti7XlErXV4jwwjfiyBWM.jpg"
+            src="/images/showreel-poster.jpg"
             alt="Showreel"
             fill
             className="object-cover"

@@ -113,6 +113,7 @@ export default function Home() {
       </div>
 
 
+
       <div className="intro py-20">
         <div className="container mx-auto px-5">
           <div className="intro-row">
@@ -121,6 +122,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
 
 
       <div className="container mx-auto px-5 py-20">
@@ -152,6 +154,7 @@ export default function Home() {
 
         </div>
       </div>
+
 
 
       <div className="container mx-auto px-5 py-20">
