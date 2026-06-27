@@ -388,7 +388,7 @@ export default function Home() {
 
         <div className="font-mono text-3xl uppercase pb-20 flex items-center">
           <div className="text-primary-500 flex-1">[05]</div>
-          <h2 className="text-center flex-2">Testimonials</h2>
+          <h2 className="text-center flex-2">Produktion</h2>
           <div className="flex-1"></div>
         </div>
 
