@@ -314,7 +314,7 @@ export default function Home() {
 
             <SplineTorus />
             
-            <div className="font-mono text-3xl uppercase mb-60 mt-[-75vh] flex justify-between relative z-2">
+            <div className="font-mono text-3xl uppercase mb-60 mt-[-95vh] flex justify-between relative z-2">
               <div>How We Work</div>
               <div>[04]</div>
             </div>
