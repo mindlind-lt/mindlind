@@ -1,0 +1,41 @@
+.person-card {
+    background: #fff;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 2px;
+}
+
+.person-card-image {
+    border-radius: 11px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.person-card-content {
+    background: var(--background);
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+}
+
+.person-card-name {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.person-card-whois {
+
+}
+
+.person-card-bio {
+    font-size: 15px;
+    color: var(--muted-foreground);
+}
