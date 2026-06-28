@@ -1,4 +1,5 @@
 import PersonCard from "@/components/person-card/person-card";
+import TeamCarousel from "@/components/team-carousel/team-carousel";
 
 export default function AgencyPage() {
   return (
@@ -52,7 +53,7 @@ export default function AgencyPage() {
             </div>
 
 
-            <div className="flex gap-10">
+            <TeamCarousel>
 
               <PersonCard />
 
@@ -60,7 +61,11 @@ export default function AgencyPage() {
 
               <PersonCard />
 
-            </div>
+              <PersonCard />
+
+              <PersonCard />
+
+            </TeamCarousel>
 
 
         </div>
