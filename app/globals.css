@@ -101,17 +101,6 @@
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
-    --container-xs: 20rem;
-    --container-sm: 24rem;
-    --container-md: 28rem;
-    --container-lg: 32rem;
-    --container-xl: 36rem;
-    --container-2xl: 48rem;
-    --container-3xl: 64rem;
-    --container-4xl: 86rem;
-    --container-5xl: 96rem;
-    --container-6xl: 112rem;
-    --container-7xl: 128rem;
 }
 
 /* @media (prefers-color-scheme: dark) {
