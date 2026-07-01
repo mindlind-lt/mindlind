@@ -4,15 +4,15 @@ import ScrambledText from "@/components/scrambled-text/scrambled-text";
 import Showreel from "@/components/showreel/showreel";
 import ServiceDropdown from "@/components/service-dropdown/service-dropdown";
 import CountUpOnView from "@/components/count-up-on-view";
-import WorkThumb from "@/components/work-thumb/work-thumb";
 import LogoLoop from '@/components/logo-loop/LogoLoop';
+import ContactButton from "@/components/contact-button/contact-button";
+import ReviewCard from "@/components/review-card/review-card";
+import WorkThumb from "@/components/work-thumb/work-thumb";
+import PostThumb from "@/components/post-thumb/post-thumb";
+import SectionContact from "@/components/section-contact/section-contact";
 
 import SplineMedusa from "@/components/spline-medusa";
 import SplineTorus from "@/components/spline-torus";
-import ContactButton from "@/components/contact-button/contact-button";
-import ReviewCard from "@/components/review-card/review-card";
-import PostThumb from "@/components/post-thumb/post-thumb";
-import SectionContact from "@/components/section-contact/section-contact";
 
 
 const imageLogos = [
@@ -301,6 +301,7 @@ export default function Home() {
             </div>
 
           </div>
+
         </div>
       </div>
 
