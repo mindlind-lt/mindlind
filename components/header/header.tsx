@@ -23,7 +23,7 @@ export default function Header() {
         <Link data-label="Home" href="/">Home</Link>
         <Link data-label="Agency" href="/agency">Agency</Link>
         <Link data-label="Projekte" href="/projects">Projekte</Link>
-        <Link data-label="Blog" href="/blog">Blog</Link>
+        {/* <Link data-label="Blog" href="/blog">Blog</Link> */}
         <Link data-label="Contact" href="/contact">Contact</Link>
       </nav>
 

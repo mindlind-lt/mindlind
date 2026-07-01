@@ -1,7 +1,16 @@
+import SectionContact from "@/components/section-contact/section-contact";
+
 export default function ContactPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold">Coming Soon</h1>
-    </main>
+    <>
+    
+      <div className="bg-red-100 py-50 items-center justify-center flex">
+        <h1 className="text-4xl font-bold">INTRO FROM SPLINE</h1>
+      </div>
+
+
+      <SectionContact />
+    
+    </>
   );
 }
