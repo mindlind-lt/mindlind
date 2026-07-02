@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import LenisScroll from "@/components/lenis-scroll";
+import Preloader from "@/components/preloader/preloader";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -32,6 +33,7 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceMono.variable} antialiased`}
     >
       <body>
+        <Preloader />
         <LenisScroll />
         <Header />
 
