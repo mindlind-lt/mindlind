@@ -285,7 +285,7 @@ body {
     text-transform: uppercase;
     font-family: var(--font-mono);
     line-height: 1.1;
-    border-radius: 99px;
+    border-radius: 8px;
     background: #fff;
 
     padding: 4px 6px;
