@@ -1,13 +1,15 @@
 import CtaBox from '../cta-box/cta-box';
 import SocialsIcons from '../socials-icons/socials-icons';
+import SplineFooter from '../spline-footer';
 import './footer.css';
 
 export default function Footer(){
 
     return (
-        <div className="ftr"> 
-            <div className="ftr-box">
-                <div className="container mx-auto px-5">
+        <div className="ftr relative">
+            <div className="ftr-box relative z-10">
+                <SplineFooter />
+                <div className="container mx-auto px-5 relative z-10">
                     <div className="grid grid-cols-3 gap-28">
 
                         <div>
@@ -42,7 +44,7 @@ export default function Footer(){
                         </div>
 
                         <div className='flex items-center justify-center text-3xl'>
-                            <div>3D animation goes here</div>
+
                         </div>
 
                         <div>
