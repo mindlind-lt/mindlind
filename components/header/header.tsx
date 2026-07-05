@@ -14,8 +14,8 @@ export default function Header() {
         <Image 
           src="/images/logo.svg"
           alt="Mindlind"
-          width={30}
-          height={41}
+          width={150}
+          height={28}
         />
       </Link>
 
