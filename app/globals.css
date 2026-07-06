@@ -190,7 +190,7 @@ body {
     }
 }
 
-.hero-cta-footer {
+/* .hero-cta-footer {
     font-family: var(--font-mono);
     font-size: 13px;
     text-transform: uppercase;
@@ -202,7 +202,7 @@ body {
     gap: 20px;
 
     padding: 20px 30px;
-}
+} */
 
 .hero-title {
     font-family: var(--font-mono);
@@ -215,6 +215,19 @@ body {
     bottom: 80px;
     right: 0;
     left: 0;
+}
+
+@media (max-width: 1366px){
+
+    .hero-cta {
+        top: 100px;
+        right: 0px;
+    }
+
+    .hero-title {
+        bottom: 20px;
+    }
+
 }
 
 .hero-title-content {

@@ -52,7 +52,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hero-cta-footer">
+            {/* <div className="hero-cta-footer">
               <div>Liked by 50+&nbsp;founders</div>
               <div className="flex">
                 <Image 
@@ -84,7 +84,7 @@ export default function Home() {
                   className="rounded-full border-1 border-white w-10 h-10 -ml-2"
                 />
               </div>
-            </div>
+            </div> */}
 
           </div>
         </div>

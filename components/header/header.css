@@ -16,11 +16,18 @@
 }
 
 
+.hdr-logo {
+    flex: 1;
+}
+
 
 .hdr-menu {
+    flex: 1;
+
     display: flex;
-    gap: 25px;
+    justify-content: center;
     align-items: center;
+    gap: 25px;
 }
 
 .hdr-menu a {
@@ -34,8 +41,11 @@
   text-transform: uppercase;
 }
 
-
-
+.hdr-burger {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 
