@@ -64,7 +64,20 @@ export default function PageAgency() {
 
 
 
-      <SectionServices />
+      <div className="py-20">
+        <div className="container mx-auto px-5">
+
+          <div className="flex justify-between gap-30">
+            <div className="font-mono text-3xl uppercase mb-15">
+              <h2>Our Packages</h2>
+            </div>
+            <div className="text-primary-500 font-mono text-3xl uppercase mb-15">[03]</div>
+          </div>
+
+          <SectionServices />
+
+        </div>
+      </div>
 
 
 
