@@ -5,7 +5,7 @@ import TeamCarousel from "@/components/team-carousel/team-carousel";
 import SplineAgencyHero from "@/components/spline-agency-hero";
 import SplineAgency2 from "@/components/spline-agency-2";
 
-export default function AgencyPage() {
+export default function PageAgency() {
   return (
     <>
     

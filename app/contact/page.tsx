@@ -1,6 +1,6 @@
 import SectionContact from "@/components/section-contact/section-contact";
 
-export default function ContactPage() {
+export default function PageContact() {
   return (
     <>
     

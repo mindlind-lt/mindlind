@@ -1,7 +1,7 @@
 import WorkThumb from "@/components/work-thumb/work-thumb";
 import SectionContact from "@/components/section-contact/section-contact";
 
-export default function ProjectsPage() {
+export default function PageProjects() {
   return (
     <>
 
