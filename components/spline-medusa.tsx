@@ -1,4 +1,4 @@
-'use client'; // Required for Next.js App Router
+'use client'; 
 
 // import Spline from '@splinetool/react-spline';
 

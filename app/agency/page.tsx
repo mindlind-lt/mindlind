@@ -2,14 +2,15 @@ import PersonCard from "@/components/person-card/person-card";
 import SectionContact from "@/components/section-contact/section-contact";
 import TeamCarousel from "@/components/team-carousel/team-carousel";
 
+import SplineAgencyHero from "@/components/spline-agency-hero";
+import SplineAgency2 from "@/components/spline-agency-2";
+
 export default function AgencyPage() {
   return (
     <>
     
 
-      <div className="bg-red-100 py-50 items-center justify-center flex">
-        <h1 className="text-4xl font-bold">INTRO FROM SPLINE</h1>
-      </div>
+      <SplineAgencyHero />
 
 
 
@@ -31,10 +32,7 @@ export default function AgencyPage() {
       </div>
 
 
-
-      <div className="bg-red-100 py-50 items-center justify-center flex">
-        <h1 className="text-4xl font-bold">SPLINE</h1>
-      </div>
+      <SplineAgency2 />
 
 
 
