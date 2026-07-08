@@ -1,5 +1,6 @@
 import PersonCard from "@/components/person-card/person-card";
 import SectionContact from "@/components/section-contact/section-contact";
+import SectionServices from "@/components/section-services/section-services";
 import TeamCarousel from "@/components/team-carousel/team-carousel";
 
 import SplineAgencyHero from "@/components/spline-agency-hero";
@@ -63,82 +64,7 @@ export default function PageAgency() {
 
 
 
-      <div className="py-20">
-        <div className="container mx-auto px-5">
-
-            <div className="flex justify-between gap-30">
-                <div className="font-mono text-3xl uppercase mb-15">
-                  <h2>Our Packages</h2>
-                </div>
-                <div className="text-primary-500 font-mono text-3xl uppercase mb-15">[03]</div>
-            </div>
-
-            <div className="flex gap-3">
-
-              <div className="bg-neutral-900 rounded-[12px] p-[2px] flex-1 flex flex-col gap-[2px]">
-                <div className="bg-white rounded-[10px] font-mono p-8">
-                  <div className="uppercase text-xl">Starting from</div>
-                  <div className="uppercase text-4xl">$5000/MONTH</div>
-                </div>
-                <div className="text-neutral-900 bg-white rounded-[10px] p-8">
-                  <p className="mb-4">Includes:</p>
-                  <div>+ Scope that adapts</div>
-                  <div>+ Access on demand</div>
-                  <div>+ A dedicated team</div>
-                  <div>+ Cancel anytime</div>
-                  <div>+ Unlimited requests</div>
-                  <div>+ Regular check-ins</div>
-                  <div>+ Priority support</div>
-                  <div>+ Consistent quality</div>
-                  <div className="mt-4">Delivery Time:</div>
-                  <div className=""><b>4 weeks</b></div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-[12px] p-[2px] flex-1 flex flex-col gap-[2px]">
-                <div className="bg-background rounded-[10px] font-mono p-8">
-                  <div className="uppercase text-xl">Starting from</div>
-                  <div className="uppercase text-4xl">$5000/MONTH</div>
-                </div>
-                <div className="text-neutral-900 bg-background rounded-[10px] p-8">
-                  <p className="mb-4">Includes:</p>
-                  <div>+ Scope that adapts</div>
-                  <div>+ Access on demand</div>
-                  <div>+ A dedicated team</div>
-                  <div>+ Cancel anytime</div>
-                  <div>+ Unlimited requests</div>
-                  <div>+ Regular check-ins</div>
-                  <div>+ Priority support</div>
-                  <div>+ Consistent quality</div>
-                  <div className="mt-4">Delivery Time:</div>
-                  <div className=""><b>4 weeks</b></div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-[12px] p-[2px] flex-1 flex flex-col gap-[2px]">
-                <div className="bg-background rounded-[10px] font-mono p-8">
-                  <div className="uppercase text-xl">Starting from</div>
-                  <div className="uppercase text-4xl">$5000/MONTH</div>
-                </div>
-                <div className="text-neutral-900 bg-background rounded-[10px] p-8">
-                  <p className="mb-4">Includes:</p>
-                  <div>+ Scope that adapts</div>
-                  <div>+ Access on demand</div>
-                  <div>+ A dedicated team</div>
-                  <div>+ Cancel anytime</div>
-                  <div>+ Unlimited requests</div>
-                  <div>+ Regular check-ins</div>
-                  <div>+ Priority support</div>
-                  <div>+ Consistent quality</div>
-                  <div className="mt-4">Delivery Time:</div>
-                  <div className=""><b>4 weeks</b></div>
-                </div>
-              </div>
-
-            </div>
-
-        </div>
-      </div>
+      <SectionServices />
 
 
 
