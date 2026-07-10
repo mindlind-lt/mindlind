@@ -7,7 +7,7 @@ import "./section-contact.css";
 
 export default function SectionContact() {
     return (
-      <div className="section-contact container mx-auto px-5 py-20">
+      <div className="section-contact container mx-auto px-8 py-20">
         <div className="grid grid-cols-2 gap-20">
 
           <div>

@@ -6,7 +6,7 @@ export default function PageServices(){
         <>
 
             <div className="pt-[160px] pb-20">
-                <div className="container mx-auto px-5">
+                <div className="container mx-auto px-8">
                     <div className="grid grid-cols-3 gap-20">
                         <div className="col-span-2">
                             <h1 className="text-[120px] tracking-tighter font-bold">Leistungen</h1>
@@ -18,7 +18,7 @@ export default function PageServices(){
             </div>
 
             <div className="py-20">
-                <div className="container mx-auto px-5">
+                <div className="container mx-auto px-8">
 
                     <SectionServices />
 

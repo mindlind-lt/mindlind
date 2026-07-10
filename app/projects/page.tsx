@@ -11,7 +11,7 @@ export default function PageProjects() {
 
 
 
-      <div className="container mx-auto px-5 py-20">
+      <div className="container mx-auto px-8 py-20">
         <div className="works-masonry">
 
           <div className="works-masonry-item">

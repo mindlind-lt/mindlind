@@ -82,6 +82,23 @@
     transition: 0.5s;
 }
 
+@media (max-width: 1280px){
+
+    .service-dropdown {
+        padding: 35px 30px;
+        width: 85%;
+    }
+
+    .service-dropdown-header {
+        gap: 10px;
+    }
+
+    .service-dropdown-title {
+        font-size: 56px;
+    }
+
+}
+
 .service-dropdown-label {
     font-family: var(--font-mono);
     font-size: 14px;

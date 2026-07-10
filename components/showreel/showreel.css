@@ -4,7 +4,14 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   cursor: none;
-  border-radius: 12px;
+}
+
+@media (min-width: 80rem){
+
+  .showreel-container {
+    border-radius: 12px;
+  }
+
 }
 
 .showreel-container.showreel-playing {

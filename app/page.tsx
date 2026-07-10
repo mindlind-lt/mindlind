@@ -30,7 +30,7 @@ export default function Home() {
 
         <SplineMedusa />
 
-        <div className="container mx-auto px-5 relative">
+        <div className="container mx-auto px-8 relative">
           <div className="hero-cta">
 
             <div className="hero-cta-box">
@@ -90,7 +90,7 @@ export default function Home() {
         </div>
 
         <h1 className="hero-title">
-            <div className="container mx-auto px-5">
+            <div className="container mx-auto px-8">
               <div className="hero-title-content">
                 <div className="hero-title-lead">Digital Creative Agency</div>
                 <div className="hero-title-main">
@@ -114,7 +114,7 @@ export default function Home() {
 
 
       <div className="intro py-20">
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-8">
           <div className="intro-row">
             <div className="text-5xl text-justify font-mono font-medium uppercase leading-[1.4]"><span className="text-3xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.</div>
             <ScrambledText text="[ More about ] " as="a" href="#" className="intro-link" />
@@ -124,16 +124,16 @@ export default function Home() {
 
 
 
-      <div className="container mx-auto px-5 py-20">
-        <div className="flex gap-20">
+      <div className="container mx-auto px-8 py-20">
+        <div className="flex flex-col xl:flex-row gap-20">
 
-          <div className="w-[280px]">
+          <div className="w-full xl:w-[280px]">
             <Image 
               src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
               alt=""
               width={380}
               height={150}
-              className="rounded-md"
+              className="rounded-md w-full"
             />
           </div>
 
@@ -141,13 +141,13 @@ export default function Home() {
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wir sind eine kreative Digitalagentur mit Fokus auf Klarheit, Performance und Wachstum. Wir verbinden Strategie, Branding und Webentwicklung zu modernen Systemen, die skalieren und nachhaltig funktionieren. Unser Ansatz ist einfach: weniger Komplexität, mehr Wirkung. Jedes Projekt wird mit Präzision gestaltet — von der ersten Idee bis zum finalen Produkt. <b>Schnell. Klar. Effektiv.</b></p>
           </div>
 
-          <div className="w-[280px]">
+          <div className="hidden xl:block w-full xl:w-[280px]">
             <Image 
               src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
               alt=""
               width={380}
               height={150}
-              className="rounded-md"
+              className="rounded-md w-full"
             />
           </div>
 
@@ -156,14 +156,14 @@ export default function Home() {
 
 
 
-      <div className="container mx-auto px-5 py-20">
+      <div className="container mx-auto xl:px-8 py-20">
         <Showreel />
       </div>
 
 
       {/* Services section */}
 
-      <div className="container mx-auto px-5 py-20">
+      <div className="container mx-auto px-8 py-20">
 
         <div className="font-mono text-3xl uppercase pb-15 flex justify-between items-center">
           <h2>Leisungen</h2>
@@ -213,7 +213,7 @@ export default function Home() {
       {/* Featured works section */}
 
       <div className="section-works">
-        <div className="container mx-auto px-5 py-20">
+        <div className="container mx-auto px-8 py-20">
 
           <div className="grid grid-cols-3 gap-30">
             <div className="col-span-1">
@@ -309,7 +309,7 @@ export default function Home() {
       {/* How we work section */}
 
       <div className="section-how">
-        <div className="container mx-auto px-5 py-20 max-w-[1720px]">
+        <div className="container mx-auto px-8 py-20 max-w-[1720px]">
           <div className="bg-neutral-900 text-white py-[160px] px-[100px] rounded-xl relative overflow-visible">
 
             <SplineTorus />
@@ -384,7 +384,7 @@ export default function Home() {
 
       {/* Testimonials section */}
 
-      <div className="container mx-auto px-5 py-20">
+      <div className="container mx-auto px-8 py-20">
 
         <div className="font-mono text-3xl uppercase pb-20 flex items-center">
           <div className="text-primary-500 flex-1">[05]</div>
@@ -479,7 +479,7 @@ export default function Home() {
 
       {/* Before after section */}
 
-      {/* <div className="container mx-auto px-5 py-20">
+      {/* <div className="container mx-auto px-8 py-20">
 
         <div className="font-mono text-3xl uppercase pb-20 flex justify-between items-center">
           <h2 className="font-medium text-7xl tracking-tight">Before & After</h2>
@@ -494,7 +494,7 @@ export default function Home() {
 
       {/* Insights section */}
 
-      <div className="container mx-auto px-5 py-20">
+      <div className="container mx-auto px-8 py-20">
 
         <div className="font-mono text-3xl uppercase pb-15 flex items-center gap-15">
           <div className="text-primary-500">[07]</div>

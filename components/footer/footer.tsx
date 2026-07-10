@@ -9,7 +9,7 @@ export default function Footer(){
         <div className="ftr relative">
             <div className="ftr-box relative z-10">
                 <SplineFooter />
-                <div className="container mx-auto px-5 relative z-10">
+                <div className="container mx-auto px-8 relative z-10">
                     <div className="grid grid-cols-3 gap-28">
 
                         <div>

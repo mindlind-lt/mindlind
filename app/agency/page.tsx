@@ -16,7 +16,7 @@ export default function PageAgency() {
 
 
       <div className="intro py-20">
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-8">
           <div className="grid grid-cols-[1fr_360px] gap-4">
 
             <div className="intro-row">
@@ -38,7 +38,7 @@ export default function PageAgency() {
 
 
       <div className="py-20 overflow-hidden">
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-8">
 
             <div className="grid grid-cols-3 gap-30">
               <div className="col-span-1">
@@ -65,7 +65,7 @@ export default function PageAgency() {
 
 
       <div className="py-20">
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-8">
 
           <div className="flex justify-between gap-30">
             <div className="font-mono text-3xl uppercase mb-15">
