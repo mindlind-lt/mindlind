@@ -276,7 +276,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="works-masonry-item pt-40">
+                <div className="works-masonry-item lg:pt-40">
                   <WorkThumb
                     href="https://muafaktur.de/"
                     imageSrc="/images/project-mua.jpg"
@@ -310,11 +310,11 @@ export default function Home() {
 
       <div className="section-how">
         <div className="container mx-auto px-8 py-20 max-w-[1720px]">
-          <div className="bg-neutral-900 text-white py-[160px] px-[100px] rounded-xl relative overflow-visible">
+          <div className="bg-neutral-900 text-white py-[80px] xl:py-[160px] px-[60px] xl:px-[100px] rounded-xl relative overflow-visible">
 
             <SplineTorus />
             
-            <div className="font-mono text-3xl uppercase mb-60 mt-[-95vh] flex justify-between relative z-2">
+            <div className="font-mono text-3xl uppercase mb-60 mt-[-90vh] xl:mt-[-95vh] flex justify-between relative z-2">
               <div>How We Work</div>
               <div>[04]</div>
             </div>

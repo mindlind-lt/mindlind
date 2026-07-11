@@ -148,8 +148,8 @@ body {
 .hero-cta {
     position: absolute;
     z-index: 6;
-    top: 150px;
-    right: 10px;
+    top: 100px;
+    right: 0px;
 
     display: flex;
     flex-direction: column;
@@ -212,20 +212,20 @@ body {
     /* mix-blend-mode: difference; */
     position: absolute;
     z-index: 7;
-    bottom: 80px;
+    bottom: 20px;
     right: 0;
     left: 0;
 }
 
-@media (max-width: 1366px){
+@media (min-width: 80rem){
 
     .hero-cta {
-        top: 100px;
-        right: 0px;
+        top: 150px;
+        right: 10px;
     }
 
     .hero-title {
-        bottom: 20px;
+        bottom: 80px;
     }
 
 }
@@ -281,8 +281,14 @@ body {
 }
 
 .works-masonry {
-    column-count: 2;
+    column-count: 1;
     column-gap: 80px;
+}
+
+@media (min-width: 64rem) {
+    .works-masonry {
+        column-count: 2;
+    }
 }
 
 .works-masonry-item {

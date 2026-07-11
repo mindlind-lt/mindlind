@@ -1,0 +1,25 @@
+.spline-torus-container {
+  position: sticky;
+  z-index: 0;
+  height: 60vh;
+  top: 0px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+@media (min-width: 30rem) {
+  .spline-torus-container {
+    height: 70vh;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 48rem) {
+  .spline-torus-container {
+    height: 90vh;
+    left: 5%;
+    right: 5%;
+  }
+}
