@@ -1,0 +1,132 @@
+.section-works-inner {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 64rem) {
+  .section-works-head {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7.5rem;
+  }
+}
+
+.section-works-index {
+  grid-column: span 1 / span 1;
+  color: var(--primary-500);
+  font-family: var(--font-mono);
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 64rem) {
+  .section-works-index {
+    margin-bottom: 3.75rem;
+  }
+}
+
+.section-works-title {
+  grid-column: span 2 / span 2;
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 3.75rem;
+}
+
+@media (min-width: 64rem) {
+  .section-works-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.section-works-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "media"
+    "info";
+  gap: 5rem;
+}
+
+@media (min-width: 48rem) {
+  .section-works-body {
+    grid-template-areas:
+      "info"
+      "media";
+  }
+}
+
+@media (min-width: 64rem) {
+  .section-works-body {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: "info media media";
+  }
+}
+
+@media (min-width: 80rem) {
+  .section-works-body {
+    gap: 7.5rem;
+  }
+}
+
+.section-works-info {
+  grid-area: info;
+}
+
+.section-works-info-sticky {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.section-works-lead {
+  margin-bottom: 3.75rem;
+}
+
+.brag {
+  margin-top: 2.5rem;
+}
+
+.brag-value {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 80rem) {
+  .brag-value {
+    font-size: 6rem;
+  }
+}
+
+.brag-label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-top: 0.25rem;
+}
+
+.brag-desc {
+  margin-top: 0.75rem;
+}
+
+.section-works-media {
+  grid-area: media;
+  position: relative;
+}
+
+@media (min-width: 64rem) {
+  .works-masonry-item--offset {
+    padding-top: 10rem;
+  }
+}
