@@ -127,7 +127,7 @@ export default function Home() {
       <div className="container mx-auto px-8 py-20">
         <div className="flex flex-col xl:flex-row gap-20">
 
-          <div className="w-full xl:w-[280px]">
+          <div className="w-full xl:w-70">
             <Image 
               src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
               alt=""
@@ -141,7 +141,7 @@ export default function Home() {
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wir sind eine kreative Digitalagentur mit Fokus auf Klarheit, Performance und Wachstum. Wir verbinden Strategie, Branding und Webentwicklung zu modernen Systemen, die skalieren und nachhaltig funktionieren. Unser Ansatz ist einfach: weniger Komplexität, mehr Wirkung. Jedes Projekt wird mit Präzision gestaltet — von der ersten Idee bis zum finalen Produkt. <b>Schnell. Klar. Effektiv.</b></p>
           </div>
 
-          <div className="hidden xl:block w-full xl:w-[280px]">
+          <div className="hidden xl:block w-full xl:w-70">
             <Image 
               src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
               alt=""
@@ -309,8 +309,8 @@ export default function Home() {
       {/* How we work section */}
 
       <div className="section-how">
-        <div className="container mx-auto px-8 py-20 max-w-[1720px]">
-          <div className="bg-neutral-900 text-white py-[80px] xl:py-[160px] px-[60px] xl:px-[100px] rounded-xl relative overflow-visible">
+        <div className="container mx-auto px-8 py-20 max-w-430">
+          <div className="bg-neutral-900 text-white py-20 xl:py-40 px-15 xl:px-25 rounded-xl relative overflow-visible">
 
             <SplineTorus />
             
@@ -320,7 +320,7 @@ export default function Home() {
             </div>
 
             <div className="flex relative z-2">
-              <div className="w-[400px]">
+              <div className="w-100">
                 <div className="font-mono uppercase">[001]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Discover</div>
                 <div className="text-neutral-300 mt-10">We align on goals, audience, and constraints. We review analytics and current assets, run stakeholder interviews, and map risks and assumptions. The outcome is shared clarity on what success looks like.</div>
@@ -329,7 +329,7 @@ export default function Home() {
             </div>
 
             <div className="flex justify-end relative z-2">
-              <div className="w-[400px] text-right">
+              <div className="w-100 text-right">
                 <div className="font-mono uppercase">[002]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Define</div>
                 <div className="text-neutral-300 mt-10">We translate goals into scope, timeline, and KPIs. We draft the roadmap, responsibilities, and the measurement plan so every step is testable. Trade-offs are explicit and documented.</div>
@@ -338,7 +338,7 @@ export default function Home() {
             </div>
 
             <div className="flex relative z-2">
-              <div className="w-[400px]">
+              <div className="w-100">
                 <div className="font-mono uppercase">[003]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Design</div>
                 <div className="text-neutral-300 mt-10">We explore concepts, then systematize into a modular UI and brand toolkit. Content structure, accessibility, and motion are specified so the build phase is predictable. Iterations are time-boxed with weekly reviews.</div>
@@ -347,7 +347,7 @@ export default function Home() {
             </div>
 
             <div className="flex justify-end relative z-2">
-              <div className="w-[400px] text-right">
+              <div className="w-100 text-right">
                 <div className="font-mono uppercase">[004]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Build</div>
                 <div className="text-neutral-300 mt-10">We implement production-ready components, CMS schemas and integrations. Performance budgets guide choices; QA runs continuously across devices. Analytics and events are instrumented from day one.</div>
@@ -356,7 +356,7 @@ export default function Home() {
             </div>
 
             <div className="flex relative z-2">
-              <div className="w-[400px]">
+              <div className="w-100">
                 <div className="font-mono uppercase">[005]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Launch</div>
                 <div className="text-neutral-300 mt-10">We ship behind a checklist: QA, Core Web Vitals, redirects, tracking, and security. We monitor the first 72 hours and fix issues fast. Your team gets a short handover and edit training.</div>
@@ -365,7 +365,7 @@ export default function Home() {
             </div>
 
             <div className="flex justify-end relative z-2">
-              <div className="w-[400px] text-right">
+              <div className="w-100 text-right">
                 <div className="font-mono uppercase">[006]</div>
                 <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Improve</div>
                 <div className="text-neutral-300 mt-10">We implement production-ready components, CMS schemas and integrations. Performance budgets guide choices; QA runs continuously across devices. Analytics and events are instrumented from day one.</div>
@@ -373,7 +373,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-[160px]">
+            <div className="mt-40">
               <ContactButton />
             </div>
 
