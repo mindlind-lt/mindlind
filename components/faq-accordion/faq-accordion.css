@@ -25,7 +25,8 @@
   transition: 500ms;
 }
 
-.faq-question:hover {
+.faq-question:hover,
+.faq-item.open .faq-question {
   padding-left: 2rem;
 }
 

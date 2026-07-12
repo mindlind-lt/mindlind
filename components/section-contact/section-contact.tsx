@@ -19,25 +19,37 @@ export default function SectionContact() {
               className="border-t border-black"
               items={[
                 {
-                  question: "What services do you offer?",
-                  answer: "We offer web design, web development, brand strategy, and digital marketing services. Our team specializes in creating conversion-focused interfaces with clear hierarchy and measurable goals."
+                  question: "Welche Leistungen bietet Mindlind an?",
+                  answer: "Wir entwickeln moderne Websites, übernehmen Suchmaschinenoptimierung (SEO), betreuen Google Ads und Instagram Ads und unterstützen Unternehmen beim Aufbau einer starken digitalen Marke. Alle Leistungen werden individuell auf Ihre Ziele abgestimmt."
                 },
                 {
-                  question: "How long does a typical project take?",
-                  answer: "Project timelines vary based on scope. A typical website redesign takes 4-8 weeks, while full brand identity projects can take 6-12 weeks. We provide detailed timelines during the discovery phase."
+                  question: "Wie lange dauert die Erstellung einer Website?",
+                  answer: "Je nach Umfang dauert die Umsetzung in der Regel zwischen zwei und sechs Wochen. Kleinere Projekte können deutlich schneller realisiert werden, größere Unternehmenswebsites benötigen entsprechend mehr Zeit."
                 },
                 {
-                  question: "What is your pricing structure?",
-                  answer: "We work on a project-basis with transparent pricing. After our initial discovery call, we provide a detailed scope and quote. We also offer ongoing retainers for long-term partnerships."
+                  question: "Wann sind erste SEO-Ergebnisse sichtbar?",
+                  answer: "SEO ist eine langfristige Investition. Erste Verbesserungen zeigen sich häufig nach zwei bis vier Monaten, nachhaltige Rankings entwickeln sich in den folgenden Monaten kontinuierlich weiter."
                 },
                 {
-                  question: "Do you work with startups?",
-                  answer: "Yes, we love working with startups! We have experience helping early-stage companies establish their brand presence and build scalable digital products that grow with their business."
+                  question: "Lohnt sich Google Ads für mein Unternehmen?",
+                  answer: "Ja – wenn Kampagnen professionell aufgebaut und kontinuierlich optimiert werden. Google Ads eignet sich besonders, um kurzfristig qualifizierte Anfragen und neue Kunden zu gewinnen."
                 },
                 {
-                  question: "What technologies do you use?",
-                  answer: "We primarily work with Next.js, React, and modern CSS frameworks. For CMS solutions, we use Contentful, Sanity, or custom solutions depending on your needs. We prioritize performance and accessibility."
-                }
+                  question: "Übernehmt ihr auch Instagram Ads und Social Media?",
+                  answer: "Ja. Wir erstellen zielgerichtete Werbekampagnen für Instagram und Facebook, entwickeln Content-Strategien und unterstützen Unternehmen dabei, Reichweite, Markenbekanntheit und Anfragen zu steigern."
+                },
+                {
+                  question: "Was kostet eine Zusammenarbeit mit Mindlind?",
+                  answer: "Die Kosten richten sich nach Umfang und Zielsetzung des Projekts. Nach einem unverbindlichen Erstgespräch erhalten Sie ein transparentes und individuell kalkuliertes Angebot – ohne versteckte Kosten."
+                },
+                {
+                  question: "Betreut ihr Unternehmen auch langfristig?",
+                  answer: "Selbstverständlich. Viele unserer Kunden arbeiten dauerhaft mit uns zusammen – beispielsweise im Bereich SEO, Google Ads, Social Media oder bei der kontinuierlichen Weiterentwicklung ihrer Website."
+                },
+                {
+                  question: "Warum sollte ich mich für Mindlind entscheiden?",
+                  answer: "Wir verbinden Design, Performance und Online-Marketing zu einer"
+                },
               ]}
             />
           </div>

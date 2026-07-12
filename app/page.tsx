@@ -3,16 +3,15 @@ import DoorButton from "@/components/door-button/door-button";
 import ScrambledText from "@/components/scrambled-text/scrambled-text";
 import Showreel from "@/components/showreel/showreel";
 import ServiceDropdown from "@/components/service-dropdown/service-dropdown";
-import CountUpOnView from "@/components/count-up-on-view";
 import LogoLoop from '@/components/logo-loop/LogoLoop';
 import ContactButton from "@/components/contact-button/contact-button";
 import ReviewCard from "@/components/review-card/review-card";
-import WorkThumb from "@/components/work-thumb/work-thumb";
 import PostThumb from "@/components/post-thumb/post-thumb";
 import SectionContact from "@/components/section-contact/section-contact";
 
 import SplineMedusa from "@/components/spline-medusa";
 import SplineTorus from "@/components/spline-torus";
+import SectionFeatWorks from "@/components/section-feat-works/section-feat-works";
 
 
 const imageLogos = [
@@ -212,98 +211,7 @@ export default function Home() {
 
       {/* Featured works section */}
 
-      <div className="section-works">
-        <div className="container mx-auto px-8 py-20">
-
-          <div className="grid grid-cols-3 gap-30">
-            <div className="col-span-1">
-              <div className="text-primary-500 font-mono text-3xl uppercase mb-15">[02]</div>
-            </div>
-            <div className="col-span-2">
-              <div className="font-mono text-3xl uppercase mb-15">
-                <h2>AUSGEWÄHLTE PROJEKTE</h2>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-3 gap-30">
-
-            <div className="col-span-1">
-              <div className="sticky top-6">
-                <div className="mb-15">Digitale Produkte mit messbarer Wirkung. Jedes Projekt verbindet Strategie, Design und Entwicklung zu klaren Ergebnissen — mit Fokus auf Performance, Nutzererlebnis und Wachstum.</div>
-                <div className="brag mt-10">
-                  <CountUpOnView
-                    value={34}
-                    prefix="+"
-                    suffix="%"
-                    className="font-mono uppercase text-8xl tracking-tight"
-                  />
-                  <div className="font-mono uppercase text-lg mt-1">CONVERSION RATE</div>
-                  <div className="mt-3">Steigerung nach Relaunch und Optimierung der User Journey innerhalb von 90 Tagen.</div>
-                </div>
-                <div className="brag mt-10">
-                  <CountUpOnView
-                    value={41}
-                    prefix="+"
-                    suffix="%"
-                    className="font-mono uppercase text-8xl tracking-tight"
-                  />
-                  <div className="font-mono uppercase text-lg mt-1">LEAD GENERIERUNG</div>
-                  <div className="mt-3">Mehr Anfragen durch bessere Struktur, schnellere Ladezeiten und klare Kommunikation.</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-span-2 relative">
-
-              <div className="works-masonry">
-
-                <div className="works-masonry-item">
-                  <WorkThumb
-                    href="https://prince-food.de/"
-                    imageSrc="/images/project-prince-1.jpg"
-                    title="Prince Food"
-                    pills={["Website", "UX/UI"]}
-                  />
-                </div>
-
-                <div className="works-masonry-item">
-                  <WorkThumb
-                    href="https://factorysl.de/"
-                    imageSrc="/images/project-factorysl-1.jpg"
-                    title="FactorySL"
-                    pills={["Website", "UX/UI"]}
-                  />
-                </div>
-
-                <div className="works-masonry-item lg:pt-40">
-                  <WorkThumb
-                    href="https://muafaktur.de/"
-                    imageSrc="/images/project-mua.jpg"
-                    title="MUA Faktur"
-                    pills={["Website", "UX/UI"]}
-                  />
-                </div>
-
-                <div className="works-masonry-item">
-                  <WorkThumb
-                    href="#"
-                    imageSrc="/images/project-panda-1.jpg"
-                    title="Panda Travel"
-                    pills={["Website", "UX/UI"]}
-                  />
-                </div>
-
-              </div>
-
-              <ScrambledText text="[ Alle Projekte ansehen ] " as="a" href="#" className="section-works-link" />
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
+      <SectionFeatWorks />
 
 
       {/* How we work section */}
