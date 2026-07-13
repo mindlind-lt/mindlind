@@ -76,14 +76,14 @@ export default function Footer(){
 
                             <div className='mb-24 ftr-cinfo'>
                                 <div>
-                                    <a href="#">27 Whitfield Yard, Shoreditch, London E2 7NX</a>
+                                    <a href="#">Žirgų g. 18-6, Raudondvario k. LT-14257 Vilnius</a>
                                 </div>
                                 <div>
-                                    <a href="#">+44 20 3999 1245</a>
+                                    <a href="mailto:info@mindlind.de">info@mindlind.de</a>
                                 </div>
                             </div>
 
-                            <div className='ftr-copyright'>© Mondragon Agency. All Rights Reserved.</div>
+                            <div className='ftr-copyright'>© Mindlind Agency. All Rights Reserved.</div>
 
                         </div>
 

@@ -55,8 +55,10 @@ export default function Burger() {
         </nav>
 
         <div className="drawer-contact">
-          <div>27 Whitfield Yard, Shoreditch, London E2 7NX</div>
-          <div>+44 20 3999 1245</div>
+          <div>Žirgų g. 18-6, Raudondvario k. LT-14257 Vilnius</div>
+          <div>
+            <a href="mailto:info@mindlind.de">info@mindlind.de</a>
+          </div>
         </div>
 
         <div className="drawer-socials">
