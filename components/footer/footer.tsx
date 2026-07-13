@@ -70,7 +70,7 @@ export default function Footer(){
                             </div>
 
                             <div className='mb-12'>
-                                <div className='font-mono text-lg uppercase mb-2'>Follow us</div>
+                                <div className='font-mono text-lg uppercase mb-2'>Folgen Sie uns</div>
                                 <SocialsIcons />
                             </div>
 

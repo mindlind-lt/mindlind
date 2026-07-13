@@ -63,7 +63,7 @@ export default function Burger() {
 
         <div className="drawer-socials">
 
-            <h6 className="mb-6">Follow Us</h6>
+            <h6 className="mb-6">Folgen Sie uns</h6>
 
             <div className="drawer-socials-icons">
 
