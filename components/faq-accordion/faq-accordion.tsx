@@ -30,7 +30,7 @@ export default function FAQAccordion({ items, className }: FAQAccordionProps) {
             className="faq-question"
           >
             <ChevronDown className="faq-icon" />
-            <span className="faq-question-text font-mono uppercase text-2xl">{item.question}</span>
+            <span className="faq-question-text font-mono uppercase text-lg">{item.question}</span>
           </button>
           <div className="faq-answer">
             <div>{item.answer}</div>

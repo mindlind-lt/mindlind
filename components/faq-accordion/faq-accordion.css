@@ -15,8 +15,9 @@
   width: 100%;
   text-align: left;
   padding: 1.5rem 0;
+  padding-right: 2em;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 1rem;
   background: none;
   border: none;
@@ -28,6 +29,7 @@
 .faq-question:hover,
 .faq-item.open .faq-question {
   padding-left: 2rem;
+  padding-right: 0;
 }
 
 .faq-question:hover .faq-icon {
@@ -39,6 +41,7 @@
   left: 0;
   transition: 500ms;
   opacity: 0;
+  padding-top: 0.3em;
 }
 
 .faq-item.open .faq-icon {
