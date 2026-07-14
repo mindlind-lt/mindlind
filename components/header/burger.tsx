@@ -59,6 +59,12 @@ export default function Burger() {
           <div>
             <a href="mailto:info@mindlind.de">info@mindlind.de</a>
           </div>
+          <div>
+            <a href="tel:+37067546918">+370 675 46 918</a>
+          </div>
+          <div>
+            <a href="tel:+4917624685516">+49 176 24685516</a>
+          </div>
         </div>
 
         <div className="drawer-socials">
@@ -68,25 +74,7 @@ export default function Burger() {
             <div className="drawer-socials-icons">
 
                 <div>
-                <a href="#" target="_blank">
-                    <img alt="" src="/assets/images/contra-icon.svg" />
-                </a>
-                </div>
-
-                <div>
-                <a href="https://x.com/" target="_blank">
-                    <img alt="" src="/assets/images/x-icon.svg" />
-                </a>
-                </div>
-
-                <div>
-                <a href="https://www.behance.net/" target="_blank">
-                    <img alt="" src="/assets/images/behance-icon.svg" />
-                </a>
-                </div>
-
-                <div>
-                <a href="https://www.instagram.com/" target="_blank">
+                <a href="https://www.instagram.com/mind_lind" target="_blank">
                     <img alt="" src="/assets/images/instagram-icon.svg" />
                 </a>
                 </div>

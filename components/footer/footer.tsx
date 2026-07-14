@@ -81,6 +81,12 @@ export default function Footer(){
                                 <div>
                                     <a href="mailto:info@mindlind.de">info@mindlind.de</a>
                                 </div>
+                                <div>
+                                    <a href="tel:+37067546918">+370 675 46 918</a>
+                                </div>
+                                <div>
+                                    <a href="tel:+4917624685516">+49 176 24685516</a>
+                                </div>
                             </div>
 
                             <div className='ftr-copyright'>© Mindlind Agency. All Rights Reserved.</div>
