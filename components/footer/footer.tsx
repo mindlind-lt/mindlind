@@ -1,6 +1,7 @@
 import CtaBox from '../cta-box/cta-box';
 import SocialsIcons from '../socials-icons/socials-icons';
 import SplineFooter from '../spline-footer';
+import FooterMenu from '../footer-menu/footer-menu';
 import './footer.css';
 
 export default function Footer(){
@@ -50,23 +51,7 @@ export default function Footer(){
                         <div>
 
                             <div className='mb-12'>
-                                <ul className='ftr-menu'>
-                                    <li className='ftr-menu-item'>
-                                        <a href="/">Home</a>
-                                    </li>
-                                    <li className='ftr-menu-item'>
-                                        <a href="/">Agency</a>
-                                    </li>
-                                    <li className='ftr-menu-item'>
-                                        <a href="/">Projects</a>
-                                    </li>
-                                    <li className='ftr-menu-item'>
-                                        <a href="/">Blog</a>
-                                    </li>
-                                    <li className='ftr-menu-item'>
-                                        <a href="/">Contact</a>
-                                    </li>
-                                </ul>
+                                <FooterMenu />
                             </div>
 
                             <div className='mb-12'>
