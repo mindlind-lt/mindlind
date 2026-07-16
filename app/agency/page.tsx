@@ -6,6 +6,7 @@ import TeamCarousel from "@/components/team-carousel/team-carousel";
 // import SplineAgencyHero from "@/components/spline-agency-hero";
 import SplineAgency2 from "@/components/spline-agency-2";
 import AgencyHeader from "@/components/agency-header";
+import GlassCubeHero from "@/components/glass-cube-hero";
 
 export default function PageAgency() {
   return (
@@ -14,7 +15,10 @@ export default function PageAgency() {
 
       {/* <SplineAgencyHero /> */}
 
-      <AgencyHeader />
+      {/* <AgencyHeader /> */}
+
+
+      <GlassCubeHero />
 
 
 
