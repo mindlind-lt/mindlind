@@ -47,7 +47,7 @@ function GlassCube() {
 
   // Scale the cube relative to the viewport so it stays a floating accent
   // on small screens instead of swallowing the whole page.
-  const scale = THREE.MathUtils.clamp(viewport.width / 9, 0.42, 0.72)
+  const scale = THREE.MathUtils.clamp(viewport.width / 9, 0.3, 0.55)
 
   // How long (seconds) it takes the spring to settle. Larger = slower + more
   // pronounced acceleration/deceleration.
@@ -208,7 +208,9 @@ export default function GlassCubeHero() {
     // Wait for fonts so the huge title is measured/rendered correctly.
     const start = () => {
       if (document.fonts?.ready) {
-        document.fonts.ready.then(() => !cancelled && capture())
+        document.fonts.ready.then(() => {
+          if (!cancelled) capture()
+        })
       } else {
         capture()
       }
@@ -235,25 +237,23 @@ export default function GlassCubeHero() {
       {/* ---------------------------------------------------------------- */}
       <div
         ref={contentRef}
-        className="absolute inset-0 flex min-h-screen flex-col justify-between px-6 py-10 md:px-16 md:py-14"
+        className="absolute inset-0 flex min-h-screen flex-col items-center justify-center px-6 py-10 md:px-16 md:py-14"
         style={{ backgroundColor: "transparent", color: "#17130d" }}
       >
-        <header className="flex items-center justify-between text-xs font-medium uppercase tracking-[0.2em]">
+        <header className="absolute top-10 left-6 right-6 flex items-center justify-between text-xs font-medium uppercase tracking-[0.2em] md:left-16 md:right-16 md:top-14">
           <span style={{ color: "#17130d" }}>Refraction Studio</span>
           <span style={{ color: "#6b6355" }}>Est. 2026</span>
         </header>
 
-        <div className="flex flex-1 flex-col justify-center">
-          <h1
-            className="font-mono font-bold leading-[0.85] tracking-tight text-balance"
-            style={{
-              fontSize: "clamp(3rem, 12vw, 15rem)",
-              color: "#17130d",
-            }}
-          >
-            {"Agency"}
-          </h1>
-        </div>
+        <h1
+          className="font-mono font-bold leading-[0.85] tracking-tight text-balance"
+          style={{
+            fontSize: "clamp(3rem, 12vw, 15rem)",
+            color: "#17130d",
+          }}
+        >
+          {"Agency"}
+        </h1>
 
       </div>
 
