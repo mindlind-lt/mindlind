@@ -112,10 +112,12 @@ export default function Home() {
 
 
 
-      <div className="intro py-20">
+      {/* Intro section */}
+
+      <div className="intro py-12 xl:py-20">
         <div className="container mx-auto px-8">
           <div className="intro-row">
-            <div className="text-5xl text-justify font-mono font-medium uppercase leading-[1.4]"><span className="text-3xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.</div>
+            <div className="text-4xl lg:text-5xl text-justify font-mono font-medium uppercase leading-[1.4]"><span className="text-3xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.</div>
             <ScrambledText text="[ More about ] " as="a" href="#" className="intro-link" />
           </div>
         </div>
@@ -123,10 +125,12 @@ export default function Home() {
 
 
 
-      <div className="container mx-auto px-8 py-20">
-        <div className="flex flex-col xl:flex-row gap-20">
+      {/* About section */}
 
-          <div className="w-full xl:w-70">
+      <div className="container mx-auto px-8 py-12 xl:py-20">
+        <div className="flex flex-col lg:flex-row gap-10 xl:gap-20">
+
+          <div className="flex-1">
             <Image 
               src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
               alt=""
@@ -136,18 +140,8 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex-1 text-md leading-[1.6]">
+          <div className="flex-1 text-md leading-[1.6] xl:pr-20">
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wir sind eine kreative Digitalagentur mit Fokus auf Klarheit, Performance und Wachstum. Wir verbinden Strategie, Branding und Webentwicklung zu modernen Systemen, die skalieren und nachhaltig funktionieren. Unser Ansatz ist einfach: weniger Komplexität, mehr Wirkung. Jedes Projekt wird mit Präzision gestaltet — von der ersten Idee bis zum finalen Produkt. <b>Schnell. Klar. Effektiv.</b></p>
-          </div>
-
-          <div className="hidden xl:block w-full xl:w-70">
-            <Image 
-              src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
-              alt=""
-              width={380}
-              height={150}
-              className="rounded-md w-full"
-            />
           </div>
 
         </div>
@@ -155,14 +149,16 @@ export default function Home() {
 
 
 
-      <div className="container mx-auto xl:px-8 py-20">
+      {/* Showreel section */}
+
+      <div className="container mx-auto xl:px-8 py-12 xl:py-20">
         <Showreel />
       </div>
 
 
       {/* Services section */}
 
-      <div className="container mx-auto px-8 py-20">
+      <div className="container mx-auto px-8 py-12 xl:py-20">
 
         <div className="font-mono text-3xl uppercase pb-15 flex justify-between items-center">
           <h2>Leisungen</h2>
@@ -211,16 +207,20 @@ export default function Home() {
 
       {/* Featured works section */}
 
-      <SectionFeatWorks />
+      <div className="section-works relative py-8 xl:py-20">
+        <div className="container px-8 section-works-inner">
+          <SectionFeatWorks />
+        </div>
+      </div>
 
 
       {/* How we work section */}
 
-      <div className="section-how">
-        <div className="container mx-auto px-8 py-20 max-w-430">
-          <div className="bg-neutral-900 text-white py-20 xl:py-40 px-15 xl:px-25 rounded-xl relative overflow-visible">
+      <div className="section-how py-8 xl:py-20">
+        <div className="container mx-auto xl:px-8 max-w-430">
+          <div className="bg-neutral-900 text-white py-20 xl:py-40 px-15 xl:px-25 xl:rounded-xl relative overflow-visible">
 
-            <SplineTorus />
+            <SplineTorus className="opacity-30 xl:opacity-100" />
             
             <div className="font-mono text-3xl uppercase mb-60 mt-[-90vh] xl:mt-[-95vh] flex justify-between relative z-2">
               <div>How We Work</div>

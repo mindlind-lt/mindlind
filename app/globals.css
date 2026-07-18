@@ -254,6 +254,14 @@ body {
     padding-right: 120px;
 }
 
+@media (min-width: 48rem) {
+
+    .intro-row {
+        padding-right: 80px;
+    }
+
+}
+
 .intro-link {
     font-weight: bold;
     transform: rotate(-90deg);
@@ -311,20 +319,25 @@ body {
     padding: 4px 6px;
 }
 
-.section-works {
-    position: relative;
-}
 
 .section-works-link {
     font-weight: bold;
-    transform: rotate(-90deg);
     text-wrap: nowrap;
-
-    position: absolute;
-    z-index: 2;
-    top: 0px;
-    right: -90px;
 }
+
+
+@media (min-width: 80rem){
+
+    .section-works-link {
+        transform: rotate(-90deg);
+        position: absolute;
+        z-index: 2;
+        top: 0px;
+        right: -90px;
+    }
+
+}
+
 
 @media (max-width: 768px){
 

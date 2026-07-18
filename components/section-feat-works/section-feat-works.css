@@ -1,8 +1,6 @@
 .section-works-inner {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -88,10 +86,6 @@
 
 .section-works-lead {
   margin-bottom: 3.75rem;
-}
-
-.brag {
-  margin-top: 2.5rem;
 }
 
 .brag-value {
