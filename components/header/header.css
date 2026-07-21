@@ -27,7 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .hdr-menu a {
@@ -47,7 +47,17 @@
     justify-content: flex-end;
 }
 
+
 @media (min-width: 64rem){
+
+    .hdr-menu {
+        gap: 30px;
+    }
+
+}
+
+
+@media (min-width: 80rem){
 
     .hdr-menu {
         gap: 40px;

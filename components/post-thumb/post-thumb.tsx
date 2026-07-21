@@ -28,14 +28,14 @@ export default function PostThumb({ align = "left" }: PostThumbProps){
                         </div>
 
                         <div className="post-thumb-content">
-                            <h3 className="text-4xl uppercase font-mono mb-5">Fresh Visual Trends in 2026</h3>
+                            <h3 className="post-thumb-title">Fresh Visual Trends in 2026</h3>
                             <div className="text-muted-foreground">In 2026, calm, systemic visuals dominate: strict grids, duo-palettes, mono-typography, and micromotion as feedback. Subtle 3D gradients, material textures.</div>
                         </div>
                     </>
                 ) : (
                     <>
                         <div className="post-thumb-content">
-                            <h3 className="text-4xl uppercase font-mono mb-5">Fresh Visual Trends in 2026</h3>
+                            <h3 className="post-thumb-title">Fresh Visual Trends in 2026</h3>
                             <div className="text-muted-foreground">In 2026, calm, systemic visuals dominate: strict grids, duo-palettes, mono-typography, and micromotion as feedback. Subtle 3D gradients, material textures.</div>
                         </div>
 
