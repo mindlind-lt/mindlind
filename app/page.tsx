@@ -311,8 +311,8 @@ export default function Home() {
                 width={1000}
                 height={500}
               />
-              <div className="bg-white rounded-xl p-10 space-y-1">
-                <div className="font-mono text-8xl">200+</div>
+              <div className="bg-white rounded-xl p-7 xl:p-10 space-y-1">
+                <div className="font-mono text-6xl xl:text-8xl">200+</div>
                 <div className="font-mono text-xl uppercase">Worldwide  Clients</div>
               </div>
               <div className="bg-white rounded-xl py-12 space-y-4 overflow-hidden">
@@ -362,12 +362,12 @@ export default function Home() {
 
           <div className="masonry-item">
             <div className="space-y-1">
-                <div className="bg-white rounded-xl p-10 space-y-1 text-right">
-                  <div className="font-mono text-8xl">93%</div>
+                <div className="bg-white rounded-xl p-7 xl:p-10 space-y-1 text-right">
+                  <div className="font-mono text-6xl xl:text-8xl">93%</div>
                   <div className="font-mono text-xl uppercase">Repeat Clients</div>
                 </div>
-                <div className="bg-white rounded-xl p-10 space-y-1 text-right">
-                  <div className="font-mono text-8xl">100×</div>
+                <div className="bg-white rounded-xl p-7 xl:p-10 space-y-1 text-right">
+                  <div className="font-mono text-6xl xl:text-8xl">100×</div>
                   <div className="font-mono text-xl uppercase">Increased clients profits</div>
                 </div>
                 <Image 

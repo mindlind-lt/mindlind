@@ -352,13 +352,22 @@ body {
   column-count: 3;
 }
 
+@media (min-width: 80rem) {
+
+  .masonry {
+    column-gap: 60px;
+    column-count: 2;
+  }
+
+}
+
 .masonry-item {
   break-inside: avoid;
   margin-bottom: 80px; 
   width: 100%;
 }
 
-.dark {
+/* .dark {
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.205 0 0);
@@ -390,9 +399,9 @@ body {
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
-}
+} */
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
     }
@@ -402,4 +411,4 @@ body {
   html {
     @apply font-sans;
     }
-}
+} */
