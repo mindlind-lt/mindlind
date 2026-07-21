@@ -352,13 +352,13 @@ body {
   column-count: 3;
 }
 
-@media (min-width: 80rem) {
+@media (max-width: 80rem) {
 
   .masonry {
     column-gap: 60px;
     column-count: 2;
   }
-
+  
 }
 
 .masonry-item {

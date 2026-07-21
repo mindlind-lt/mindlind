@@ -8,7 +8,7 @@
   pointer-events: none;
 }
 
-@media (min-width: 30rem) {
+@media (min-width: 64rem) {
   .spline-torus-container {
     height: 70vh;
     left: 0;
@@ -16,7 +16,7 @@
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 80rem) {
   .spline-torus-container {
     height: 90vh;
     left: 5%;
