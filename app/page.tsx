@@ -253,9 +253,9 @@ export default function Home() {
 
       {/* Testimonials section */}
 
-      <div className="container mx-auto px-8 py-20">
+      <div className="container mx-auto px-6 lg:px-8 py-12 lg:py-20">
 
-        <div className="font-mono text-3xl uppercase pb-20 flex items-center">
+        <div className="font-mono text-2xl lg:text-3xl uppercase pb-10 lg:pb-20 flex items-center">
           <div className="text-primary-500 flex-1">[05]</div>
           <h2 className="text-center flex-2">Produktion</h2>
           <div className="flex-1"></div>

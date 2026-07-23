@@ -358,13 +358,30 @@ body {
     column-gap: 60px;
     column-count: 2;
   }
-  
+
+}
+
+@media (max-width: 64rem) {
+
+  .masonry {
+    column-gap: 24px;
+    column-count: 1;
+  }
+
 }
 
 .masonry-item {
   break-inside: avoid;
-  margin-bottom: 80px; 
+  margin-bottom: 80px;
   width: 100%;
+}
+
+@media (max-width: 64rem) {
+
+  .masonry-item {
+    margin-bottom: 24px;
+  }
+
 }
 
 /* .dark {
