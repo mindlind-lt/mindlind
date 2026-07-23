@@ -7,11 +7,11 @@ import "./section-contact.css";
 
 export default function SectionContact() {
     return (
-      <div className="section-contact container mx-auto px-8 py-20">
-        <div className="grid grid-cols-2 gap-20">
+      <div className="section-contact container mx-auto px-6 lg:px-8 py-12 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
 
           <div>
-            <div className="font-mono text-3xl uppercase pb-15 flex justify-between items-center gap-15">
+            <div className="font-mono text-2xl lg:text-3xl uppercase pb-8 lg:pb-15 flex justify-between items-center gap-8 lg:gap-15">
               <h2 className="">FAQ</h2>
               <div className="text-primary-500">[08]</div>
             </div>
@@ -57,14 +57,15 @@ export default function SectionContact() {
           <div className="section-contact-form">
             <div className="flex items-end">
               <div className="flex-1 pb-2 self-stretch">
-                <div className="font-mono text-6xl uppercase pb-4">Start a&nbsp;Project</div>
-                <div className="text-lg">Tell to our manager about the goal. <br />We'll reply with scope and timeline.</div>
+                <div className="font-mono text-4xl lg:text-6xl uppercase pb-4">Start a&nbsp;Project</div>
+                <div className="text-base lg:text-lg">Tell to our manager about the goal. <br />We'll reply with scope and timeline.</div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 hidden sm:block">
                 <Image
                   src="/images/contact.png"
                   width={240}
                   height={250}
+                  className="w-full h-auto"
                   alt=""
                 />
               </div>
