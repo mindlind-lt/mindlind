@@ -82,3 +82,33 @@
 .fancy-button:hover .fancy-button-icon-3, .fancy-button:focus .fancy-button-icon-3 {
     left: 71%;
 }
+
+
+/* Phone: shrink the button + floating icons so they fit and don't spill past
+   the viewport edge (the section wrapper is overflow-visible). */
+@media (max-width: 40rem) {
+    .fancy-button {
+        font-size: 15px;
+        height: 68px;
+        gap: 0.75rem;
+    }
+
+    .fancy-button-icon-1 {
+        width: 56px;
+        height: 56px;
+        top: -22px;
+        left: 15%;
+    }
+
+    .fancy-button-icon-2 {
+        width: 38px;
+        height: 38px;
+        bottom: -14px;
+        left: 50%;
+    }
+
+    .fancy-button-icon-3 {
+        height: 64px;
+        left: 85%;
+    }
+}

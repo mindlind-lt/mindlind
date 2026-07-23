@@ -184,60 +184,60 @@ export default function Home() {
 
       <div className="section-how py-8 xl:py-20">
         <div className="container mx-auto xl:px-8 max-w-430">
-          <div className="bg-neutral-900 text-white py-20 xl:py-40 px-15 xl:px-25 xl:rounded-xl relative overflow-visible">
+          <div className="bg-neutral-900 text-white py-14 px-6 sm:py-20 sm:px-15 xl:py-40 xl:px-25 xl:rounded-xl relative overflow-visible">
 
-            <SplineTorus className="opacity-30 xl:opacity-100" />
+            <SplineTorus className="opacity-100 sm:opacity-30 xl:opacity-100" />
             
-            <div className="font-mono text-3xl uppercase mb-60 mt-[-90vh] xl:mt-[-95vh] flex justify-between relative z-2">
+            <div className="font-mono text-2xl sm:text-3xl uppercase mb-24 sm:mb-60 mt-0 sm:mt-[-90vh] xl:mt-[-95vh] flex justify-between relative z-2">
               <div>How We Work</div>
               <div>[04]</div>
             </div>
 
-            <div className="flex relative z-2">
-              <div className="w-100">
+            <div className="flex relative z-2 mb-24 sm:mb-0">
+              <div className="w-full sm:w-100">
                 <div className="font-mono uppercase">[001]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">ANALYSE</div>
+                <div className="font-mono text-4xl sm:text-7xl uppercase mt-3 tracking-tight">ANALYSE</div>
                 <div className="text-neutral-300 mt-10">Wir starten mit einem klaren Verständnis Ihres Unternehmens, Ihrer Zielgruppe und Ihrer Ziele. Durch Analyse, Wettbewerbsrecherche und Strategie schaffen wir die Grundlage für messbare Ergebnisse.</div>
               </div>
             </div>
 
-            <div className="flex justify-end relative z-2">
-              <div className="w-100 text-right">
+            <div className="flex justify-end relative z-2 mb-24 sm:mb-0">
+              <div className="w-full sm:w-100 text-left sm:text-right">
                 <div className="font-mono uppercase">[002]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">STRATEGIE</div>
+                <div className="font-mono text-4xl sm:text-7xl uppercase mt-3 tracking-tight">STRATEGIE</div>
                 <div className="text-neutral-300 mt-10">Jedes erfolgreiche Projekt beginnt mit einem Plan. Wir entwickeln eine individuelle Strategie für Website, SEO oder Performance Marketing – abgestimmt auf Ihr Unternehmen und Ihre Wachstumsziele.</div>
               </div>
             </div>
 
-            <div className="flex relative z-2">
-              <div className="w-100">
+            <div className="flex relative z-2 mb-24 sm:mb-0">
+              <div className="w-full sm:w-100">
                 <div className="font-mono uppercase">[003]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">UMSETZUNG</div>
+                <div className="font-mono text-4xl sm:text-7xl uppercase mt-3 tracking-tight">UMSETZUNG</div>
                 <div className="text-neutral-300 mt-10">Design, Entwicklung und Marketing greifen nahtlos ineinander. Während der gesamten Umsetzung bleiben Sie eingebunden und erhalten regelmäßige Einblicke in den Fortschritt.</div>
                 <div className="font-mono font-bold text-md tracking-relaxed uppercase text-gray-100 mt-3">1–4 WOCHEN</div>
               </div>
             </div>
 
-            <div className="flex justify-end relative z-2">
-              <div className="w-100 text-right">
+            <div className="flex justify-end relative z-2 mb-24 sm:mb-0">
+              <div className="w-full sm:w-100 text-left sm:text-right">
                 <div className="font-mono uppercase">[004]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">WACHSTUM</div>
+                <div className="font-mono text-4xl sm:text-7xl uppercase mt-3 tracking-tight">WACHSTUM</div>
                 <div className="text-neutral-300 mt-10">Nach dem Launch beginnt die eigentliche Arbeit. Mit SEO, Google Ads, Instagram Ads und kontinuierlicher Optimierung sorgen wir für nachhaltiges Wachstum und mehr qualifizierte Anfragen.</div>
               </div>
             </div>
 
-            <div className="flex relative z-2">
-              <div className="w-100">
+            <div className="flex relative z-2 mb-24 sm:mb-0">
+              <div className="w-full sm:w-100">
                 <div className="font-mono uppercase">[005]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">OPTIMIERUNG</div>
+                <div className="font-mono text-4xl sm:text-7xl uppercase mt-3 tracking-tight">OPTIMIERUNG</div>
                 <div className="text-neutral-300 mt-10">Digitale Projekte sind niemals abgeschlossen. Wir analysieren Daten, testen neue Ansätze und verbessern kontinuierlich Ihre Website, SEO und Werbekampagnen, um langfristig bessere Ergebnisse zu erzielen.</div>
               </div>
             </div>
 
-            <div className="flex justify-end relative z-2">
-              <div className="w-100 text-right">
+            <div className="flex justify-end relative z-2 mb-24 sm:mb-0">
+              <div className="w-full sm:w-100 text-left sm:text-right">
                 <div className="font-mono uppercase">[006]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">PARTNERSCHAFT</div>
+                <div className="font-mono text-4xl sm:text-7xl uppercase mt-3 tracking-tight">PARTNERSCHAFT</div>
                 <div className="text-neutral-300 mt-10">Unser Ziel ist eine langfristige Zusammenarbeit. Wir begleiten Ihr Unternehmen als digitaler Partner und entwickeln Strategien, die mit Ihrem Wachstum Schritt halten – heute, morgen und in Zukunft.</div>
               </div>
             </div>

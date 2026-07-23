@@ -1,11 +1,18 @@
 .spline-torus-container {
-  position: sticky;
+  position: static;
   z-index: 0;
-  height: 60vh;
+  height: 38vh;
   top: 0px;
   left: 0;
   right: 0;
   pointer-events: none;
+}
+
+@media (min-width: 40rem) {
+  .spline-torus-container {
+    position: sticky;
+    height: 60vh;
+  }
 }
 
 @media (min-width: 64rem) {
