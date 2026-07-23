@@ -196,54 +196,49 @@ export default function Home() {
             <div className="flex relative z-2">
               <div className="w-100">
                 <div className="font-mono uppercase">[001]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Discover</div>
-                <div className="text-neutral-300 mt-10">We align on goals, audience, and constraints. We review analytics and current assets, run stakeholder interviews, and map risks and assumptions. The outcome is shared clarity on what success looks like.</div>
-                <div className="font-mono font-bold text-md tracking-relaxed uppercase text-gray-100 mt-3">2–4 days</div>
+                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">ANALYSE</div>
+                <div className="text-neutral-300 mt-10">Wir starten mit einem klaren Verständnis Ihres Unternehmens, Ihrer Zielgruppe und Ihrer Ziele. Durch Analyse, Wettbewerbsrecherche und Strategie schaffen wir die Grundlage für messbare Ergebnisse.</div>
               </div>
             </div>
 
             <div className="flex justify-end relative z-2">
               <div className="w-100 text-right">
                 <div className="font-mono uppercase">[002]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Define</div>
-                <div className="text-neutral-300 mt-10">We translate goals into scope, timeline, and KPIs. We draft the roadmap, responsibilities, and the measurement plan so every step is testable. Trade-offs are explicit and documented.</div>
-                <div className="font-mono font-bold text-md tracking-relaxed uppercase text-gray-100 mt-3">2–4 days</div>
+                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">STRATEGIE</div>
+                <div className="text-neutral-300 mt-10">Jedes erfolgreiche Projekt beginnt mit einem Plan. Wir entwickeln eine individuelle Strategie für Website, SEO oder Performance Marketing – abgestimmt auf Ihr Unternehmen und Ihre Wachstumsziele.</div>
               </div>
             </div>
 
             <div className="flex relative z-2">
               <div className="w-100">
                 <div className="font-mono uppercase">[003]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Design</div>
-                <div className="text-neutral-300 mt-10">We explore concepts, then systematize into a modular UI and brand toolkit. Content structure, accessibility, and motion are specified so the build phase is predictable. Iterations are time-boxed with weekly reviews.</div>
-                <div className="font-mono font-bold text-md tracking-relaxed uppercase text-gray-100 mt-3">1–2 weeks</div>
+                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">UMSETZUNG</div>
+                <div className="text-neutral-300 mt-10">Design, Entwicklung und Marketing greifen nahtlos ineinander. Während der gesamten Umsetzung bleiben Sie eingebunden und erhalten regelmäßige Einblicke in den Fortschritt.</div>
+                <div className="font-mono font-bold text-md tracking-relaxed uppercase text-gray-100 mt-3">1–4 WOCHEN</div>
               </div>
             </div>
 
             <div className="flex justify-end relative z-2">
               <div className="w-100 text-right">
                 <div className="font-mono uppercase">[004]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Build</div>
-                <div className="text-neutral-300 mt-10">We implement production-ready components, CMS schemas and integrations. Performance budgets guide choices; QA runs continuously across devices. Analytics and events are instrumented from day one.</div>
-                <div className="font-mono font-bold text-md tracking-relaxed uppercase text-gray-100 mt-3">1–2 weeks</div>
+                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">WACHSTUM</div>
+                <div className="text-neutral-300 mt-10">Nach dem Launch beginnt die eigentliche Arbeit. Mit SEO, Google Ads, Instagram Ads und kontinuierlicher Optimierung sorgen wir für nachhaltiges Wachstum und mehr qualifizierte Anfragen.</div>
               </div>
             </div>
 
             <div className="flex relative z-2">
               <div className="w-100">
                 <div className="font-mono uppercase">[005]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Launch</div>
-                <div className="text-neutral-300 mt-10">We ship behind a checklist: QA, Core Web Vitals, redirects, tracking, and security. We monitor the first 72 hours and fix issues fast. Your team gets a short handover and edit training.</div>
-                <div className="font-mono font-bold text-md tracking-relaxed uppercase text-gray-100 mt-3">1–2 weeks</div>
+                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">OPTIMIERUNG</div>
+                <div className="text-neutral-300 mt-10">Digitale Projekte sind niemals abgeschlossen. Wir analysieren Daten, testen neue Ansätze und verbessern kontinuierlich Ihre Website, SEO und Werbekampagnen, um langfristig bessere Ergebnisse zu erzielen.</div>
               </div>
             </div>
 
             <div className="flex justify-end relative z-2">
               <div className="w-100 text-right">
                 <div className="font-mono uppercase">[006]</div>
-                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">Improve</div>
-                <div className="text-neutral-300 mt-10">We implement production-ready components, CMS schemas and integrations. Performance budgets guide choices; QA runs continuously across devices. Analytics and events are instrumented from day one.</div>
-                <div className="font-mono font-bold text-md tracking-relaxed uppercase text-gray-100 mt-3">1–2 weeks</div>
+                <div className="font-mono text-7xl uppercase mt-3 tracking-tight">PARTNERSCHAFT</div>
+                <div className="text-neutral-300 mt-10">Unser Ziel ist eine langfristige Zusammenarbeit. Wir begleiten Ihr Unternehmen als digitaler Partner und entwickeln Strategien, die mit Ihrem Wachstum Schritt halten – heute, morgen und in Zukunft.</div>
               </div>
             </div>
 
