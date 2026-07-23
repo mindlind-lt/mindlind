@@ -29,7 +29,7 @@ export default function Home() {
 
         <SplineMedusa />
 
-        <div className="container mx-auto px-8 relative z-10 flex flex-col justify-end gap-10 h-full">
+        <div className="container mx-auto px-5 sm:px-8 relative z-10 flex flex-col justify-end gap-10 h-full">
 
           <div className="hero-cta">
             <div className="hero-cta-box">
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
 
           <h1 className="hero-title">
-              <div className="container mx-auto px-8">
+              <div className="container mx-auto px-5 sm:px-8">
                 <div className="hero-title-content">
                   <div className="hero-title-lead">Digital Creative Agency</div>
                   <div className="hero-title-main">
@@ -81,7 +81,7 @@ export default function Home() {
       {/* Intro section */}
 
       <div className="intro py-12 xl:py-20">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-5 sm:px-8">
           <div className="intro-row">
             <div className="text-4xl lg:text-5xl text-justify font-mono font-medium uppercase leading-[1.4]"><span className="text-3xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.</div>
             <ScrambledText text="[ More about ] " as="a" href="#" className="intro-link" />
@@ -93,7 +93,7 @@ export default function Home() {
 
       {/* About section */}
 
-      <div className="container mx-auto px-8 py-12 xl:py-20">
+      <div className="container mx-auto px-5 sm:px-8 py-12 xl:py-20">
         <div className="flex flex-col lg:flex-row gap-10 xl:gap-20">
 
           <div className="flex-1">
@@ -124,7 +124,7 @@ export default function Home() {
 
       {/* Services section */}
 
-      <div className="container mx-auto px-8 py-12 xl:py-20">
+      <div className="container mx-auto px-5 sm:px-8 py-12 xl:py-20">
 
         <div className="font-mono text-3xl uppercase pb-15 flex justify-between items-center">
           <h2>Leisungen</h2>
@@ -174,7 +174,7 @@ export default function Home() {
       {/* Featured works section */}
 
       <div className="section-works relative py-8 xl:py-20">
-        <div className="container px-8 section-works-inner">
+        <div className="container px-5 sm:px-8 section-works-inner">
           <SectionFeatWorks />
         </div>
       </div>
@@ -253,7 +253,7 @@ export default function Home() {
 
       {/* Testimonials section */}
 
-      <div className="container mx-auto px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container mx-auto px-5 sm:px-8 py-12 lg:py-20">
 
         <div className="font-mono text-2xl lg:text-3xl uppercase pb-10 lg:pb-20 flex items-center">
           <div className="text-primary-500 flex-1">[05]</div>
@@ -348,7 +348,7 @@ export default function Home() {
 
       {/* Before after section */}
 
-      {/* <div className="container mx-auto px-8 py-20">
+      {/* <div className="container mx-auto px-5 sm:px-8 py-20">
 
         <div className="font-mono text-3xl uppercase pb-20 flex justify-between items-center">
           <h2 className="font-medium text-7xl tracking-tight">Before & After</h2>
@@ -363,7 +363,7 @@ export default function Home() {
 
       {/* Insights section */}
 
-      <div className="container mx-auto px-8 py-20">
+      <div className="container mx-auto px-5 sm:px-8 py-20">
 
         <div className="font-mono text-3xl uppercase pb-15 flex items-center gap-15">
           <div className="text-primary-500">[07]</div>

@@ -5,8 +5,21 @@
     transition: 0.3s;
 }
 
-.post-thumb-pic {
+.post-thumb-container {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 4px;
+    display: flex;
+    gap: 4px;
+}
 
+.post-thumb-img-styled {
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
+.post-thumb-text {
+    color: var(--muted-foreground);
 }
 
 .post-thumb-img {
@@ -99,6 +112,22 @@
 
     .post-thumb-more-inner {
         transform: none;
+    }
+
+}
+
+@media (max-width: 40rem){
+
+    .post-thumb-container {
+        flex-direction: column;
+    }
+
+    .post-thumb-img {
+        aspect-ratio: 16 / 8;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: auto;
     }
 
 }

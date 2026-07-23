@@ -13,7 +13,7 @@ export default function PostThumb({ align = "left" }: PostThumbProps){
     return (
         <Link href="#" className="post-thumb">
 
-            <div className="bg-white rounded-lg p-1 flex gap-1">
+            <div className="post-thumb-container">
 
                 {align === "left" ? (
                     <>
@@ -23,20 +23,20 @@ export default function PostThumb({ align = "left" }: PostThumbProps){
                                 width={560}
                                 height={290}
                                 alt=""
-                                className="post-thumb-img object-cover rounded-lg"
+                                className="post-thumb-img post-thumb-img-styled"
                             />
                         </div>
 
                         <div className="post-thumb-content">
                             <h3 className="post-thumb-title">Fresh Visual Trends in 2026</h3>
-                            <div className="text-muted-foreground">In 2026, calm, systemic visuals dominate: strict grids, duo-palettes, mono-typography, and micromotion as feedback. Subtle 3D gradients, material textures.</div>
+                            <div className="post-thumb-text">In 2026, calm, systemic visuals dominate: strict grids, duo-palettes, mono-typography, and micromotion as feedback. Subtle 3D gradients, material textures.</div>
                         </div>
                     </>
                 ) : (
                     <>
                         <div className="post-thumb-content">
                             <h3 className="post-thumb-title">Fresh Visual Trends in 2026</h3>
-                            <div className="text-muted-foreground">In 2026, calm, systemic visuals dominate: strict grids, duo-palettes, mono-typography, and micromotion as feedback. Subtle 3D gradients, material textures.</div>
+                            <div className="post-thumb-text">In 2026, calm, systemic visuals dominate: strict grids, duo-palettes, mono-typography, and micromotion as feedback. Subtle 3D gradients, material textures.</div>
                         </div>
 
                         <div className="post-thumb-pic">
@@ -45,7 +45,7 @@ export default function PostThumb({ align = "left" }: PostThumbProps){
                                 width={560}
                                 height={290}
                                 alt=""
-                                className="post-thumb-img object-cover rounded-lg"
+                                className="post-thumb-img post-thumb-img-styled"
                             />
                         </div>
                     </>
