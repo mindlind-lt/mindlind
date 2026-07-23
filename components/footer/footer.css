@@ -7,11 +7,18 @@
     color: #fff;
     background-color: var(--foreground);
 
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 64px;
+    padding-bottom: 64px;
 
     position: relative;
     overflow: hidden;
+}
+
+@media (min-width: 64rem) {
+    .ftr-box {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 .ftr-brand {
@@ -50,8 +57,14 @@
 }
 
 .ftr-menu-item {
-    font-size: 30px;
+    font-size: 24px;
     text-transform: uppercase;
+}
+
+@media (min-width: 64rem) {
+    .ftr-menu-item {
+        font-size: 30px;
+    }
 }
 
 
@@ -59,11 +72,13 @@
 .ftr-cinfo {
     font-family: var(--font-mono);
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
 
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    word-break: break-word;
 
     a {
         color: #ffffff;
@@ -71,6 +86,12 @@
         &:hover, &:focus {
             color: #ffffff66;
         }
+    }
+}
+
+@media (min-width: 64rem) {
+    .ftr-cinfo {
+        font-size: 20px;
     }
 }
 

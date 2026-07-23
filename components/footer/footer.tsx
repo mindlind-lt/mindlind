@@ -10,8 +10,8 @@ export default function Footer(){
         <div className="ftr relative">
             <div className="ftr-box relative z-10">
                 <SplineFooter />
-                <div className="container mx-auto px-8 relative z-10">
-                    <div className="grid grid-cols-3 gap-28">
+                <div className="container mx-auto px-6 lg:px-8 relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-28">
 
                         <div>
 
@@ -44,7 +44,7 @@ export default function Footer(){
 
                         </div>
 
-                        <div className='flex items-center justify-center text-3xl'>
+                        <div className='hidden lg:flex items-center justify-center text-3xl'>
 
                         </div>
 
