@@ -138,6 +138,11 @@
 
 }
 
+.service-dropdown-expanded .service-dropdown-label {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
 .service-dropdown-text {
     width: 760px;
     max-width: 100%;
@@ -189,4 +194,20 @@
     max-height: 500px;
     opacity: 1;
     padding-top: 24px;
+}
+
+.service-dropdown-text-label {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    margin-bottom: 16px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.5s;
+}
+
+.service-dropdown-expanded .service-dropdown-text-label {
+    opacity: 1;
+    transform: translateY(0);
 }

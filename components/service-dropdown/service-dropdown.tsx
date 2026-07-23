@@ -111,7 +111,10 @@ export default function ServiceDropdown({
             <div className="service-dropdown-title">{title}</div>
             <div className="service-dropdown-label">{label}</div>
           </button>
-          <div className="service-dropdown-text">{text}</div>
+          <div className="service-dropdown-text">
+            <div className="service-dropdown-text-label">{label}</div>
+            {text}
+          </div>
         </div>
       </div>
 
