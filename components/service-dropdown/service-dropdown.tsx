@@ -29,6 +29,7 @@ export default function ServiceDropdown({
   const [imagePos, setImagePos] = useState({ x: 0, y: 0 });
   const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
   const animationRef = useRef<number | null>(null);
+  const [hasHover, setHasHover] = useState(false);
 
   const className = [
     "service-dropdown",
@@ -39,7 +40,7 @@ export default function ServiceDropdown({
     .filter(Boolean)
     .join(" ");
 
-  // Initialize portal root
+  // Initialize portal root and detect hover capability
   useEffect(() => {
     let root = document.getElementById("service-dropdown-portal-root");
     if (!root) {
@@ -48,6 +49,17 @@ export default function ServiceDropdown({
       document.body.appendChild(root);
     }
     setPortalRoot(root);
+
+    // Detect if device has hover capability
+    const mediaQuery = window.matchMedia('(hover: hover)');
+    setHasHover(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setHasHover(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -103,7 +115,7 @@ export default function ServiceDropdown({
         </div>
       </div>
 
-      {image && portalRoot
+      {image && portalRoot && hasHover
         ? createPortal(
             <div
               className={`service-dropdown-image ${isHovering ? "visible" : ""}`}

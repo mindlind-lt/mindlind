@@ -5,12 +5,20 @@
     display: flex;
     flex-direction: column;
     padding: 35px 30px;
-    width: 80%;
+    width: 60%;
 
     position: relative;
     overflow: hidden;
 
     transition: 0.5s;
+}
+
+@media (min-width: 64rem){
+
+    .service-dropdown {
+        width: 80%;
+    }
+
 }
 
 
@@ -64,12 +72,15 @@
 
 .service-dropdown-header {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 10px;
+        flex-direction: row;
+        align-items: center;
 
     transition: 0.5s;
     cursor: pointer;
 }
+
 
 .service-dropdown-title {
     font-family: var(--font-mono);
@@ -112,10 +123,19 @@
     font-family: var(--font-mono);
     font-size: 14px;
     text-transform: uppercase;
-
     text-wrap: nowrap;
 
+    display: none;
+
     transition: 0.5s;
+}
+
+@media (min-width: 64rem){
+
+    .service-dropdown-label {
+        display: block;
+    }
+
 }
 
 .service-dropdown-text {
