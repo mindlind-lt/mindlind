@@ -125,6 +125,7 @@ export default function Home() {
       </div>
 
 
+
       {/* Services section */}
 
       <div className="container mx-auto px-5 sm:px-8 py-12 xl:py-20">
@@ -181,6 +182,7 @@ export default function Home() {
           <SectionFeatWorks />
         </div>
       </div>
+
 
 
       {/* How we work section */}
@@ -252,6 +254,7 @@ export default function Home() {
           </div>          
         </div>
       </div>
+
 
 
       {/* Testimonials section */}
@@ -347,6 +350,7 @@ export default function Home() {
         </div>
 
       </div>
+
 
 
       {/* Before after section */}
