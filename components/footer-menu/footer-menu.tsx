@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/components/progress-bar/progress-link';
 import './footer-menu.css';
 
 export default function FooterMenu() {

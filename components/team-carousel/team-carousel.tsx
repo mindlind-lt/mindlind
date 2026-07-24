@@ -3,12 +3,14 @@
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { cn } from "@/lib/utils";
 
 interface TeamCarouselProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-export default function TeamCarousel({ children }: TeamCarouselProps) {
+export default function TeamCarousel({ children, className }: TeamCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       dragFree: true,
@@ -32,7 +34,7 @@ export default function TeamCarousel({ children }: TeamCarouselProps) {
   });
 
   return (
-    <div ref={emblaRef}>
+    <div ref={emblaRef} className={cn(className)}>
       <div className="flex gap-8">{slides}</div>
     </div>
   );

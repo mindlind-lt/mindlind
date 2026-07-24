@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import Link from "@/components/progress-bar/progress-link";
 
 export default function Burger() {
   const [isOpen, setIsOpen] = useState(false);

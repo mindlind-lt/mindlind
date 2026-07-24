@@ -26,21 +26,24 @@ export default function PageAgency() {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-[1fr_360px] gap-4">
 
-            <div className="intro-row">
+            <div className="intro-row border-4 border-dashed border-red-500">
               <div className="text-4xl font-mono font-medium uppercase leading-[1.4]">
                 <p><span className="text-3xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;From strategy to launch, we plan, design  and build end-to-end – aligning positioning, content, and modular UI into websites that load fast, meet AA accessibility and are easy to edit.</p>
                 <p className="mt-8">Our DNA: clarity over noise, systems over one-offs, speed with accountability.</p>
               </div>
             </div>
 
-            <div className="bg-red-100 py-50 items-center justify-center flex">3D</div>
+            <div className="bg-red-100 py-50 items-center justify-center flex border-4 border-dashed border-red-500">3D</div>
 
           </div>
         </div>
       </div>
 
 
-      <SplineAgency2 />
+
+      <div className="border-4 border-dashed border-red-500">
+        <SplineAgency2 />
+      </div>
 
 
 
@@ -58,7 +61,7 @@ export default function PageAgency() {
               </div>
             </div>
 
-            <TeamCarousel>
+            <TeamCarousel className="border-4 border-dashed border-red-500">
               <PersonCard />
               <PersonCard />
               <PersonCard />

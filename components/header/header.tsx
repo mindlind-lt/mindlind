@@ -1,7 +1,7 @@
 import Burger from "./burger";
 
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/progress-bar/progress-link";
 
 import "./header.css";
 
