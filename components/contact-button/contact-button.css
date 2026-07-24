@@ -79,8 +79,9 @@
     transform-origin: 50% 50% 0px;
 }
 
-.fancy-button:hover .fancy-button-icon-3, .fancy-button:focus .fancy-button-icon-3 {
-    left: 71%;
+.fancy-button:hover .fancy-button-icon-3, 
+.fancy-button:focus .fancy-button-icon-3 {
+    /* left: 71%; */
 }
 
 

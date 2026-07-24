@@ -5,6 +5,12 @@
   padding-bottom: 5rem;
 }
 
+.section-works-head {
+  display: flex;
+  gap: 2rem;
+}
+
+
 @media (min-width: 64rem) {
   .section-works-head {
     display: grid;

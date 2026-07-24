@@ -83,7 +83,10 @@ export default function Home() {
       <div className="intro py-12 xl:py-20">
         <div className="container mx-auto px-5 sm:px-8">
           <div className="intro-row">
-            <div className="text-4xl lg:text-5xl text-justify font-mono font-medium uppercase leading-[1.4]"><span className="text-3xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.</div>
+            <div className="text-2xl sm:text-4xl lg:text-5xl text-justify font-mono font-medium uppercase leading-[1.4] mb-10 sm:mb-0">
+              <span className="text-2xl sm:text-3xl text-primary-500">[01]</span>
+              &nbsp;&nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.
+            </div>
             <ScrambledText text="[ More about ] " as="a" href="#" className="intro-link border-4 border-dashed border-red-500" />
           </div>
         </div>
@@ -365,10 +368,10 @@ export default function Home() {
 
       <div className="container mx-auto px-5 sm:px-8 py-20">
 
-        <div className="font-mono text-3xl uppercase pb-15 flex items-center gap-15">
+        <div className="font-mono text-3xl uppercase pb-10 sm:pb-15   flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-15">
           <div className="text-primary-500">[07]</div>
           <h2 className="">ERKENNTNISSE</h2>
-          <div className="flex-1 flex justify-end">
+          <div className="flex-1 flex sm:justify-end">
             <ScrambledText text="[ ALLE BEITRÄGE ] " as="a" href="#" />
           </div>
         </div>
