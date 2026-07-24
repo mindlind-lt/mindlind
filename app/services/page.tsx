@@ -5,7 +5,7 @@ export default function PageServices(){
     return (
         <>
 
-            <div className="pt-[160px] pb-20">
+            <div className="pt-[160px] pb-20 border-4 border-dashed border-red-500">
                 <div className="container mx-auto px-8">
                     <div className="grid grid-cols-3 gap-20">
                         <div className="col-span-2">

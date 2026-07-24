@@ -5,8 +5,10 @@ export default function PageContact() {
   return (
     <>
     
-      
-      <SplineContactHero />
+      <div className="border-4 border-dashed border-red-500">
+        <SplineContactHero />
+      </div>
+
 
       <div className="absolute top-32 left-0 right-0">
         <div className="container mx-auto px-8">

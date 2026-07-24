@@ -6,13 +6,14 @@ export default function PageProjects() {
   return (
     <>
 
-
-      <SplineProjectsHero />
+      <div className="border-4 border-dashed border-red-500">
+        <SplineProjectsHero />
+      </div>
 
 
 
       <div className="container mx-auto px-8 py-20">
-        <div className="works-masonry">
+        <div className="works-masonry   border-4 border-dashed border-red-500">
 
           <div className="works-masonry-item">
             <WorkThumb
