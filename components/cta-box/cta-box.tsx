@@ -4,7 +4,7 @@ import DoorButton from "../door-button/door-button";
 export default function CtaBox() {
     return (
         <>
-            <div className="cta-box">
+            <div className="cta-box    border-4 border-dashed border-red-500">
 
               <div className="bg-gray-200 cta-box-media">
                 <video 

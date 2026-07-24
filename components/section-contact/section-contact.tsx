@@ -54,7 +54,7 @@ export default function SectionContact() {
             />
           </div>
 
-          <div className="section-contact-form">
+          <div className="section-contact-form    border-4 border-dashed border-red-500">
             <div className="flex items-end">
               <div className="flex-1 pb-2 self-stretch">
                 <div className="font-mono text-4xl lg:text-6xl uppercase pb-4">Start a&nbsp;Project</div>

@@ -31,7 +31,7 @@ export default function Home() {
 
         <div className="container mx-auto px-5 sm:px-8 relative z-10 flex flex-col justify-end gap-10 h-full">
 
-          <div className="hero-cta">
+          <div className="hero-cta border-4 border-dashed border-red-500">
             <div className="hero-cta-box">
               <div className="hero-cta-box-content">
                 <div className="text-xl font-bold uppercase font-mono leading-tight">Start <br />a project</div>
@@ -84,7 +84,7 @@ export default function Home() {
         <div className="container mx-auto px-5 sm:px-8">
           <div className="intro-row">
             <div className="text-4xl lg:text-5xl text-justify font-mono font-medium uppercase leading-[1.4]"><span className="text-3xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.</div>
-            <ScrambledText text="[ More about ] " as="a" href="#" className="intro-link" />
+            <ScrambledText text="[ More about ] " as="a" href="#" className="intro-link border-4 border-dashed border-red-500" />
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@ export default function Home() {
       <div className="container mx-auto px-5 sm:px-8 py-12 xl:py-20">
         <div className="flex flex-col lg:flex-row gap-10 xl:gap-20">
 
-          <div className="flex-1">
+          <div className="flex-1   border-4 border-dashed border-red-500">
             <Image 
               src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
               alt=""
@@ -253,7 +253,7 @@ export default function Home() {
 
       {/* Testimonials section */}
 
-      <div className="container mx-auto px-5 sm:px-8 py-12 lg:py-20">
+      <div className="container mx-auto px-5 sm:px-8 py-12 lg:py-20   border-4 border-dashed border-red-500">
 
         <div className="font-mono text-2xl lg:text-3xl uppercase pb-10 lg:pb-20 flex items-center">
           <div className="text-primary-500 flex-1">[05]</div>
@@ -373,7 +373,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4   border-4 border-dashed border-red-500">
           <PostThumb />
           <PostThumb align="right" />
           <PostThumb />

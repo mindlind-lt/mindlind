@@ -52,7 +52,7 @@ export default function SectionFeatWorks(){
             </div>
           </div>
 
-          <div className="section-works-media">
+          <div className="section-works-media border-4 border-dashed border-red-500">
 
             <div className="works-masonry">
 
@@ -94,7 +94,7 @@ export default function SectionFeatWorks(){
 
             </div>
 
-            <div className="flex justify-center xl:block xl:relative">
+            <div className="flex justify-center xl:block">
               <ScrambledText text="[ Alle Projekte ] " as="a" href="#" className="section-works-link" />
             </div>
 
