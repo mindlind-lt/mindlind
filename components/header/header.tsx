@@ -8,7 +8,9 @@ import "./header.css";
 export default function Header() {
 
   return (
-    <header className="hdr">
+    <>
+
+      <div className="hdr-overlay"></div>
 
       <Link className="hdr-logo" href="/">
         <Image 
@@ -32,6 +34,6 @@ export default function Header() {
         <Burger />
       </div>
 
-    </header>
+    </>
   );
 }
