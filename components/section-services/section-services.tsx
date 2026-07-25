@@ -1,13 +1,13 @@
 export default function SectionServices() {
   return (
-    <div className="flex gap-3">
+    <div className="flex flex-col lg:flex-row gap-3">
 
           <div className="bg-neutral-900 rounded-[12px] p-[2px] flex-1 flex flex-col gap-[2px]">
-            <div className="bg-white rounded-[10px] font-mono p-8">
-              <div className="uppercase text-3xl font-bold">INSTAGRAM ADS</div>
-              <div className="uppercase text-2xl">ab 600 € / Monat</div>
+            <div className="bg-white rounded-[10px] font-mono p-5 sm:p-8">
+              <div className="uppercase text-2xl sm:text-3xl font-bold">INSTAGRAM ADS</div>
+              <div className="uppercase text-lg sm:text-2xl">ab 600 € / Monat</div>
             </div>
-            <div className="flex-1 text-neutral-900 bg-white rounded-[10px] p-8">
+            <div className="flex-1 text-neutral-900 bg-white rounded-[10px] p-5 sm:p-8">
               <p className="mb-4">Enthalten:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Kampagnenstrategie</li>
@@ -18,17 +18,17 @@ export default function SectionServices() {
                 <li>Monatliches Reporting</li>
                 <li>Persönlicher Ansprechpartner</li>
               </ul>
-              <div className="mt-4">Typische Einrichtungszeit:</div>
+              <div className="mt-4 border-t border-neutral-200 pt-4">Typische Einrichtungszeit:</div>
               <div className=""><b>5-7 Werktage</b></div>
             </div>
           </div>
 
           <div className="bg-white rounded-[12px] p-[2px] flex-1 flex flex-col gap-[2px]">
-            <div className="bg-background rounded-[10px] font-mono p-8">
-              <div className="uppercase text-3xl font-bold">SEO</div>
-              <div className="uppercase text-2xl">ab 650 € / Monat</div>
+            <div className="bg-background rounded-[10px] font-mono p-5 sm:p-8">
+              <div className="uppercase text-2xl sm:text-3xl font-bold">SEO</div>
+              <div className="uppercase text-lg sm:text-2xl">ab 650 € / Monat</div>
             </div>
-            <div className="flex-1 text-neutral-900 bg-background rounded-[10px] p-8">
+            <div className="flex-1 text-neutral-900 bg-background rounded-[10px] p-5 sm:p-8">
               <p className="mb-4">Enthalten:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Technisches SEO-Audit</li>
@@ -39,17 +39,17 @@ export default function SectionServices() {
                 <li>Monitoring und Reporting</li>
                 <li>Kontinuierliche Optimierung</li>
               </ul>
-              <div className="mt-4">Erste Ergebnisse:</div>
+              <div className="mt-4 border-t border-neutral-200 pt-4">Erste Ergebnisse:</div>
               <div className=""><b>meist nach 2-4 Monaten</b></div>
             </div>
           </div>
 
           <div className="bg-white rounded-[12px] p-[2px] flex-1 flex flex-col gap-[2px]">
-            <div className="bg-background rounded-[10px] font-mono p-8">
+            <div className="bg-background rounded-[10px] font-mono p-5 sm:p-8">
               <div className="uppercase text-3xl font-bold">GOOGLE ADS</div>
               <div className="uppercase text-2xl">ab 700 € / Monat</div>
             </div>
-            <div className="flex-1 text-neutral-900 bg-background rounded-[10px] p-8">
+            <div className="flex-1 text-neutral-900 bg-background rounded-[10px] p-5 sm:p-8">
               <p className="mb-4">Enthalten:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Analyse von Markt und Wettbewerb</li>
@@ -60,7 +60,7 @@ export default function SectionServices() {
                 <li>Laufende Optimierung</li>
                 <li>Monatliche Leistungsberichte</li>
               </ul>
-              <div className="mt-4">Typische Einrichtungszeit:</div>
+              <div className="mt-4 border-t border-neutral-200 pt-4">Typische Einrichtungszeit:</div>
               <div className=""><b>5-10 Werktage</b></div>
             </div>
           </div>
