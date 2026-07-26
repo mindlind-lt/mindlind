@@ -145,8 +145,10 @@ body {
     z-index: 5;
 }
 
-.hero-cta {
 
+
+
+.hero-cta {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -160,7 +162,7 @@ body {
         top: 150px;
         right: 24px;
 
-        width: 340px;
+        width: 380px;
     }
 
 }
@@ -179,7 +181,7 @@ body {
     border-radius: 8px;
 
     flex: 2;
-    padding: 25px 30px;
+    padding: 22px 26px;
 
     display: flex;
     flex-direction: column;

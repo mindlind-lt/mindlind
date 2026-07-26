@@ -17,10 +17,10 @@ export default function CtaBox() {
               </div>
 
               <div className="cta-box-content">
-                <div className="text-xl font-bold uppercase font-mono leading-tight">Start <br />a project</div>
-                <div className="text-sm mt-3 flex-1">Let's book & talk with our manager</div>
+                <div className="text-xl font-bold uppercase font-mono leading-tight">IHR WACHSTUM BEGINNT HIER</div>
+                <div className="text-sm mt-3 flex-1">Ob Website, SEO oder Performance Marketing – wir begleiten Sie vom ersten Gespräch bis zum langfristigen Erfolg.</div>
                 <div className="mt-3">
-                  <DoorButton color="white" className="w-full">Book a call</DoorButton>
+                  <DoorButton color="white" className="w-full">JETZT ANFRAGEN</DoorButton>
                 </div>
               </div>
 
