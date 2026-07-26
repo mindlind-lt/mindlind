@@ -31,7 +31,7 @@ export default function Home() {
 
         <div className="container mx-auto px-5 sm:px-8 relative z-10 flex flex-col justify-end gap-10 h-full">
 
-          <div className="hero-cta border-4 border-dashed border-red-500">
+          <div className="hero-cta">
             <div className="hero-cta-box">
               <div className="hero-cta-box-content">
                 <div className="text-xl font-bold uppercase font-mono leading-tight">IHR WACHSTUM BEGINNT HIER</div>
