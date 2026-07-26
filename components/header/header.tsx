@@ -14,7 +14,7 @@ export default function Header() {
 
       <Link className="hdr-logo" href="/">
         <Image 
-          src="/images/logo.svg"
+          src="/images/logo-full.png"
           alt="Mindlind"
           width={150}
           height={28}
