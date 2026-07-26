@@ -283,7 +283,7 @@ export default function Home() {
                 width={1000}
                 height={500}
               /> */}
-              <div className="bg-white rounded-xl p-7 xl:p-10 space-y-1">
+              <div className="bg-white rounded-xl p-7 xl:p-10 space-y-1  border-4 border-dashed border-red-500">
                 <div className="font-mono text-6xl xl:text-8xl">200+</div>
                 <div className="font-mono text-xl uppercase">Worldwide  Clients</div>
               </div>
@@ -332,7 +332,7 @@ export default function Home() {
             <ReviewCard />
           </div>
 
-          <div className="masonry-item">
+          <div className="masonry-item  border-4 border-dashed border-red-500">
             <div className="space-y-1">
                 <div className="bg-white rounded-xl p-7 xl:p-10 space-y-1 text-right">
                   <div className="font-mono text-6xl xl:text-8xl">93%</div>
@@ -342,13 +342,13 @@ export default function Home() {
                   <div className="font-mono text-6xl xl:text-8xl">100×</div>
                   <div className="font-mono text-xl uppercase">Increased clients profits</div>
                 </div>
-                <Image 
+                {/* <Image 
                   src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
                   alt=""
                   className="rounded-xl"
                   width={1000}
                   height={500}
-                />
+                /> */}
             </div>
           </div>
 
