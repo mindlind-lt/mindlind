@@ -89,31 +89,49 @@ function GlassCube() {
     <RoundedBox
       ref={ref}
       args={[1.7, 1.7, 1.7]}
-      radius={0.14}
-      smoothness={10}
+      // Slightly rounder bevel gives the edges a wider band to catch the
+      // light streaks — that crisp highlight is what reads as "solid glass".
+      radius={0.17}
+      smoothness={16}
       scale={scale}
       position={[0, 0, 1.6]}
     >
       <MeshTransmissionMaterial
         // real refraction of whatever is behind (the page content plane)
         transmission={1}
-        thickness={1.6}
+        // Thicker slab → more pronounced, believable bending of the content.
+        thickness={2.2}
         roughness={0}
-        ior={1.45}
-        chromaticAberration={0.07}
-        anisotropy={0.25}
-        distortion={0.55}
-        distortionScale={0.4}
-        temporalDistortion={0.12}
-        samples={12}
-        resolution={1024}
+        // Crown-glass IOR (~1.5) instead of 1.45; a touch more refraction.
+        ior={1.5}
+        // Stronger prismatic dispersion so the bevels split light like a
+        // real crystal, but kept clean by the higher sample count below.
+        chromaticAberration={0.14}
+        anisotropy={0.1}
+        anisotropicBlur={0.1}
+        // Solid glass barely warps — drop the liquid-like wobble almost to
+        // zero so it reads as a crystal block, not water.
+        distortion={0.12}
+        distortionScale={0.15}
+        temporalDistortion={0.02}
+        // More samples + resolution = smoother, less grainy refraction and
+        // clean dispersion at the edges.
+        samples={16}
+        resolution={2048}
         backside
-        backsideThickness={0.6}
+        backsideThickness={0.4}
+        backsideResolution={1024}
         clearcoat={1}
         clearcoatRoughness={0}
-        attenuationDistance={5}
-        attenuationColor="#ffffff"
+        // Subtle absorption over depth with a faint cool tint — the classic
+        // green-cyan cast of thick optical glass. Keeps it from looking flat.
+        attenuationDistance={2.2}
+        attenuationColor="#e8f2ee"
         color="#ffffff"
+        // Push the environment reflections so edges and faces pick up the
+        // studio light streaks more strongly.
+        envMapIntensity={1.5}
+        reflectivity={0.6}
       />
     </RoundedBox>
   )
@@ -130,26 +148,69 @@ function Scene({ texture }: { texture: THREE.Texture | null }) {
       <GlassCube />
 
       {/* Local environment (no network fetch) for crisp glass highlights */}
-      <ambientLight intensity={0.6} />
-      <directionalLight position={[3, 4, 5]} intensity={1.2} />
-      <Environment resolution={256}>
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[3, 4, 5]} intensity={1.3} />
+      {/* A second, cooler key from the opposite side adds a clearcoat
+          highlight on the shadowed edge so no face goes fully dead. */}
+      <directionalLight position={[-4, -2, 3]} intensity={0.5} color="#cfe0ff" />
+      <Environment resolution={512}>
+        {/* Soft dark surround so reflections have something to fall off into
+            (pure-white env washes out the sense of a solid object). */}
         <Lightformer
-          intensity={3}
-          position={[0, 3, 4]}
-          scale={[6, 3, 1]}
+          intensity={0.4}
+          position={[0, 0, -8]}
+          scale={[12, 12, 1]}
+          color="#dfe3ea"
+        />
+        {/* Big soft key from above — the broad primary reflection. */}
+        <Lightformer
+          form="rect"
+          intensity={4}
+          position={[0, 4, 4]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={[9, 5, 1]}
+          color="#ffffff"
+        />
+        {/* Bright thin diagonal streaks — the signature elongated glints that
+            sweep across the faces as the cube tumbles and read as glass. */}
+        <Lightformer
+          form="rect"
+          intensity={6}
+          position={[-3, 2, 3]}
+          rotation={[0, 0, Math.PI / 4]}
+          scale={[0.35, 7, 1]}
           color="#ffffff"
         />
         <Lightformer
-          intensity={1.5}
-          position={[-4, -1, 2]}
+          form="rect"
+          intensity={5}
+          position={[3.5, -1, 3]}
+          rotation={[0, 0, -Math.PI / 4]}
+          scale={[0.3, 6, 1]}
+          color="#ffffff"
+        />
+        {/* Warm + cool side fills give the refraction subtle color life. */}
+        <Lightformer
+          form="circle"
+          intensity={2}
+          position={[-5, -2, 1]}
           scale={[4, 4, 1]}
           color="#ffe9d6"
         />
         <Lightformer
-          intensity={1.5}
-          position={[4, 1, -2]}
+          form="circle"
+          intensity={2}
+          position={[5, 1, -2]}
           scale={[4, 4, 1]}
           color="#d6e6ff"
+        />
+        {/* Rim behind the cube separates its silhouette with a bright edge. */}
+        <Lightformer
+          form="ring"
+          intensity={3}
+          position={[0, 0, -5]}
+          scale={[3, 3, 1]}
+          color="#ffffff"
         />
       </Environment>
     </>
