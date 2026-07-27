@@ -224,14 +224,6 @@ body {
 
 }
 
-@media (min-width: 80rem){
-
-    .hero-title {
-        padding-bottom: 80px;
-    }
-
-}
-
 .hero-title-content {
     display: flex;
     flex-direction: column;
@@ -239,7 +231,7 @@ body {
 }
 
 .hero-title-lead {
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .hero-title-main svg {
@@ -248,6 +240,23 @@ body {
     height: auto;
     margin: 0;
 }
+
+@media (min-width: 40rem) {
+
+    .hero-title-lead {
+        font-size: 28px;
+    }
+
+}
+
+@media (min-width: 80rem){
+
+    .hero-title {
+        padding-bottom: 80px;
+    }
+
+}
+
 
 
 /* Intro section */

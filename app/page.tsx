@@ -29,7 +29,7 @@ export default function Home() {
 
         <SplineMedusa />
 
-        <div className="container mx-auto px-5 sm:px-8 relative z-10 flex flex-col justify-end gap-10 h-full">
+        <div className="px-5 sm:px-8 relative z-10 flex flex-col justify-end gap-10 h-full">
 
           <div className="hero-cta">
             <div className="hero-cta-box">
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
 
           <h1 className="hero-title">
-              <div className="container mx-auto px-5 sm:px-8">
+              <div className="container mx-auto">
                 <div className="hero-title-content">
                   <div className="hero-title-lead">Digital Creative Agency</div>
                   <div className="hero-title-main">
