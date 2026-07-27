@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import { useEffect, useRef, useState } from 'react';
+import { cn } from '@/lib/utils';
 
 const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false });
 
@@ -45,8 +46,8 @@ export default function LazySpline({
   }, [shouldLoad]);
 
   return (
-    <div ref={ref} className={className} style={{ width: '100%', height: '100%' }}>
-      {shouldLoad && <Spline scene={scene} className={className} />}
+    <div ref={ref} className={cn('w-full h-full', className)}>
+      {shouldLoad && <Spline scene={scene} />}
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 import ScrambledText from "@/components/scrambled-text/scrambled-text";
 import Showreel from "@/components/showreel/showreel";
@@ -12,6 +11,8 @@ import SectionContact from "@/components/section-contact/section-contact";
 import SplineMedusa from "@/components/spline-medusa";
 import SplineTorus from "@/components/spline-torus";
 import SectionFeatWorks from "@/components/section-feat-works/section-feat-works";
+import SplineCubes from "@/components/spline-cubes";
+// import GlassCubeAbout from "@/components/glass-cube-about";
 
 
 const imageLogos = [
@@ -96,17 +97,15 @@ export default function Home() {
 
       {/* About section */}
 
-      <div className="container mx-auto px-5 sm:px-8 py-12 xl:py-20">
-        <div className="flex flex-col lg:flex-row gap-10 xl:gap-20">
+      <div className="container mx-auto px-5 sm:px-8 pb-10 md:pb-0">
+        <div
+          data-cube-section
+          className="relative flex flex-col md:flex-row items-center lg:gap-10 xl:gap-24"
+        >
 
-          <div className="flex-1   border-4 border-dashed border-red-500">
-            <Image 
-              src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
-              alt=""
-              width={380}
-              height={150}
-              className="rounded-md w-full"
-            />
+          <div className="">
+            {/* <GlassCubeAbout /> */}
+            <SplineCubes className="w-[400px] h-[450px] xl:w-[500px] xl:h-[550px]" />
           </div>
 
           <div className="flex-1 text-md leading-[1.6] xl:pr-20">

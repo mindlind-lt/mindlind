@@ -240,10 +240,6 @@ export default function GlassCubeHero() {
         className="absolute inset-0 flex min-h-screen flex-col items-center justify-center px-6 py-10 md:px-16 md:py-14"
         style={{ backgroundColor: "transparent", color: "#17130d" }}
       >
-        <header className="absolute top-10 left-6 right-6 flex items-center justify-between text-xs font-medium uppercase tracking-[0.2em] md:left-16 md:right-16 md:top-14">
-          <span style={{ color: "#17130d" }}>Refraction Studio</span>
-          <span style={{ color: "#6b6355" }}>Est. 2026</span>
-        </header>
 
         <h1
           className="font-mono font-bold leading-[0.85] tracking-tight text-balance"
