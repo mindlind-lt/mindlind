@@ -159,7 +159,7 @@ function Scene({ texture }: { texture: THREE.Texture | null }) {
 /* -------------------------------------------------------------------------- */
 /*  Public component                                                           */
 /* -------------------------------------------------------------------------- */
-export default function GlassCubeHero() {
+export default function HeroProjects() {
   const contentRef = useRef<HTMLDivElement>(null)
   const [texture, setTexture] = useState<THREE.Texture | null>(null)
 
@@ -242,13 +242,13 @@ export default function GlassCubeHero() {
       >
 
         <h1
-          className="font-mono font-bold leading-[0.85] tracking-tight text-balance"
+          className="font-mono font-bold tracking-tight"
           style={{
             fontSize: "clamp(3rem, 12vw, 15rem)",
             color: "#17130d",
           }}
         >
-          {"Agency"}
+          {"PROJEKTE"}
         </h1>
 
       </div>

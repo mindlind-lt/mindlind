@@ -5,22 +5,14 @@ import TeamCarousel from "@/components/team-carousel/team-carousel";
 
 // import SplineAgencyHero from "@/components/spline-agency-hero";
 import SplineAgency2 from "@/components/spline-agency-2";
-import AgencyHeader from "@/components/agency-header";
-import GlassCubeHero from "@/components/glass-cube-hero";
+import HeroAgency from "@/components/hero-agency";
 
 export default function PageAgency() {
   return (
     <>
-    
-
-      {/* <SplineAgencyHero /> */}
-
-      {/* <AgencyHeader /> */}
 
 
-      <GlassCubeHero />
-
-
+      <HeroAgency />
 
       <div className="intro py-20">
         <div className="container mx-auto px-8">

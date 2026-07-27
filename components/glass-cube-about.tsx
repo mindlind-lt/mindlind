@@ -13,7 +13,7 @@ import * as THREE from "three"
 /**
  * Independent copy of the Agency-page glass cube for the homepage "About"
  * section. It is deliberately self-contained (its own pointer state) so it
- * shares nothing with <GlassCubeHero />. It floats on a transparent canvas
+ * shares nothing with <HeroAgency />. It floats on a transparent canvas
  * with no background.
  *
  * Pointer position is normalized -1..1 relative to the whole About section, so

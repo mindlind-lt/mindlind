@@ -2,15 +2,17 @@ import WorkThumb from "@/components/work-thumb/work-thumb";
 import SectionContact from "@/components/section-contact/section-contact";
 import SplineProjectsHero from "@/components/spline-projects-hero";
 
+import HeroProjects from "@/components/hero-projects";
+
 export default function PageProjects() {
   return (
     <>
 
-      <div className="border-4 border-dashed border-red-500">
+      <HeroProjects />
+
+      {/* <div className="border-4 border-dashed border-red-500">
         <SplineProjectsHero />
-      </div>
-
-
+      </div> */}
 
       <div className="container mx-auto px-8 py-20">
         <div className="works-masonry   border-4 border-dashed border-red-500">

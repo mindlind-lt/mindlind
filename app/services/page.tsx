@@ -1,11 +1,15 @@
 'use client';
 
+import HeroServices from "@/components/hero-services";
 import SectionServices from "@/components/section-services/section-services";
 import SectionContact from "@/components/section-contact/section-contact";
+
 
 export default function PageServices(){
     return (
         <>
+
+            <HeroServices />
 
             <div className="pt-[160px] pb-20 border-4 border-dashed border-red-500 relative">
                 <div className="container mx-auto px-8 relative z-10">
