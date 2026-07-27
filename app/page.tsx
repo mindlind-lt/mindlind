@@ -87,7 +87,7 @@ export default function Home() {
               <span className="text-2xl sm:text-3xl text-primary-500">[01]</span>
               &nbsp;&nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.
             </div>
-            <ScrambledText text="[ More about ] " as="a" href="#" className="intro-link border-4 border-dashed border-red-500" />
+            <ScrambledText text="[ ÜBER UNS ] " as="a" href="#" className="intro-link" />
           </div>
         </div>
       </div>
