@@ -1,8 +1,11 @@
 import WorkThumb from "@/components/work-thumb/work-thumb";
 import SectionContact from "@/components/section-contact/section-contact";
-import SplineProjectsHero from "@/components/spline-projects-hero";
+// import SplineProjectsHero from "@/components/spline-projects-hero";
 
 import HeroProjects from "@/components/hero-projects";
+
+import { GlassObject } from "@/components/canvasui/GlassObject";
+
 
 export default function PageProjects() {
   return (
@@ -55,6 +58,34 @@ export default function PageProjects() {
 
         </div>
       </div>
+
+
+      {/* <GlassObject
+        style={{ width: "100%", height: "500px" }}
+        ior={1.75}
+        thickness={4}
+        roughness={0.25}
+        dispersion={1.5}
+        clearcoat={0.5}
+        tintDensity={2}
+        depth={0.1}
+        bevel={1}
+        environmentIntensity={1}
+        scale={3}
+        xOffset={0}
+        yOffset={0}
+        floatIntensity={1}
+        rotationIntensity={1}
+        floatSpeed={2}
+        fov={55}
+        cameraDistance={4}
+        autoRotate={false}
+        zoom={false}
+        tint=""
+        highlight="#066aff"
+        backgroundImage="/images/project-factorysl-1.jpg"
+      >
+      </GlassObject> */}
 
 
       {/* Contact section */}
