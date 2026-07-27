@@ -277,9 +277,9 @@ export default function Home() {
                 width={1000}
                 height={500}
               /> */}
-              <div className="bg-white rounded-xl p-7 xl:p-10 space-y-1  border-4 border-dashed border-red-500">
-                <div className="font-mono text-6xl xl:text-8xl">200+</div>
-                <div className="font-mono text-xl uppercase">Worldwide  Clients</div>
+              <div className="bg-white rounded-xl p-7 xl:p-10 space-y-1">
+                <div className="font-mono text-6xl xl:text-8xl">147+</div>
+                <div className="font-mono text-xl uppercase">DIGITALE PROJEKTE</div>
               </div>
               <div className="bg-white rounded-xl py-12 space-y-4 overflow-hidden border-4 border-dashed border-red-500">
                 <LogoLoop
@@ -326,15 +326,15 @@ export default function Home() {
             <ReviewCard />
           </div>
 
-          <div className="masonry-item  border-4 border-dashed border-red-500">
+          <div className="masonry-item">
             <div className="space-y-1">
                 <div className="bg-white rounded-xl p-7 xl:p-10 space-y-1 text-right">
-                  <div className="font-mono text-6xl xl:text-8xl">93%</div>
-                  <div className="font-mono text-xl uppercase">Repeat Clients</div>
+                  <div className="font-mono text-6xl xl:text-8xl">70%</div>
+                  <div className="font-mono text-xl uppercase">LANGFRISTIGE KUNDEN</div>
                 </div>
                 <div className="bg-white rounded-xl p-7 xl:p-10 space-y-1 text-right">
-                  <div className="font-mono text-6xl xl:text-8xl">100×</div>
-                  <div className="font-mono text-xl uppercase">Increased clients profits</div>
+                  <div className="font-mono text-6xl xl:text-8xl">100+</div>
+                  <div className="font-mono text-xl uppercase">WEBSITES & KAMPAGNEN</div>
                 </div>
                 {/* <Image 
                   src="/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg"
