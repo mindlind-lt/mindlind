@@ -46,7 +46,7 @@ export default function LazySpline({
   }, [shouldLoad]);
 
   return (
-    <div ref={ref} className={cn('w-full h-full', className)}>
+    <div ref={ref} className={cn('w-full h-full pointer-events-none', className)}>
       {shouldLoad && <Spline scene={scene} />}
     </div>
   );
