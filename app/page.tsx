@@ -5,6 +5,7 @@ import ServiceDropdown from "@/components/service-dropdown/service-dropdown";
 import LogoLoop from '@/components/logo-loop/LogoLoop';
 import ContactButton from "@/components/contact-button/contact-button";
 import ReviewCard from "@/components/review-card/review-card";
+import HoverVideo from "@/components/hover-video/hover-video";
 import PostThumb from "@/components/post-thumb/post-thumb";
 import SectionContact from "@/components/section-contact/section-contact";
 
@@ -310,21 +311,41 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="masonry-item">
+          {/* <div className="masonry-item">
             <ReviewCard />
-          </div>
+          </div> */}
 
           <div className="masonry-item">
-            <ReviewCard />
+            <HoverVideo
+              src="/production/production-1.mp4"
+              poster="/production/production-1.jpg"
+              href="/projects"
+              alt="Produktion showreel"
+              linkLabel="Mehr erfahren"
+            />
           </div>
 
-          <div className="masonry-item">
+          {/* <div className="masonry-item">
             <ReviewCard />
-          </div>
+          </div> */}
 
-          <div className="masonry-item">
+          {/* <div className="masonry-item">
             <ReviewCard />
-          </div>
+          </div> */}
+
+          {/* <div className="masonry-item">
+            <HoverVideo
+              src="/videos/cta.mp4"
+              poster="/images/4.jpg"
+              href="/projects"
+              alt="Produktion showreel"
+              linkLabel="Mehr erfahren"
+            />
+          </div> */}
+
+          {/* <div className="masonry-item">
+            <ReviewCard />
+          </div> */}
 
           <div className="masonry-item">
             <div className="space-y-1">
