@@ -316,7 +316,7 @@ export default function Home() {
               src="/production/production-1.mp4"
               poster="/production/production-1.jpg"
               href="/projects"
-              alt="Produktion showreel"
+              alt=""
               linkLabel="Mehr erfahren"
             />
           </div>
@@ -326,7 +326,17 @@ export default function Home() {
               src="/production/production-2.mp4"
               poster="/production/production-2.jpg"
               href="/projects"
-              alt="Produktion showreel"
+              alt=""
+              linkLabel="Mehr erfahren"
+            />
+          </div>
+
+          <div className="masonry-item">
+            <HoverVideo
+              src="/production/production-3.mp4"
+              poster="/production/production-3.jpg"
+              href="/projects"
+              alt=""
               linkLabel="Mehr erfahren"
             />
           </div>

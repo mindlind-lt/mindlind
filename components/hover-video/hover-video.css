@@ -7,7 +7,7 @@
 
 .hover-video-media {
   position: relative;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   width: 100%;
   overflow: hidden;
   border-radius: 0.75rem;
@@ -106,8 +106,8 @@
 
 .hover-video-lightbox-frame {
   position: relative;
-  width: min(90vw, 90vh, 1000px);
-  aspect-ratio: 1 / 1;
+  width: min(90vw, calc(90vh * 4 / 5), 800px);
+  aspect-ratio: 4 / 5;
   border-radius: 0.75rem;
   overflow: hidden;
   background-color: #000;
