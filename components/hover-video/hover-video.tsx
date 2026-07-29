@@ -213,6 +213,13 @@ export default function HoverVideo({
           playsInline
           preload="none"
         />
+        <img
+          className="hover-video-cover"
+          src={poster}
+          alt={alt}
+          aria-hidden={alt ? undefined : true}
+          draggable={false}
+        />
         <span className="hover-video-play" aria-hidden>
           <Play className="hover-video-play-icon" />
         </span>
