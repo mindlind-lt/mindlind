@@ -341,17 +341,15 @@ export default function Home() {
             />
           </div>
 
-          {/* <div className="masonry-item">
-            <ReviewCard />
-          </div> */}
-
-          {/* <div className="masonry-item">
-            <ReviewCard />
-          </div> */}
-
-          {/* <div className="masonry-item">
-            <ReviewCard />
-          </div> */}
+          <div className="masonry-item">
+            <HoverVideo
+              src="/production/production-4.mp4"
+              poster="/production/production-4.jpg"
+              href="/projects"
+              alt=""
+              linkLabel="Mehr erfahren"
+            />
+          </div>
 
           {/* <div className="masonry-item">
             <ReviewCard />
