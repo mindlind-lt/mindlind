@@ -311,14 +311,20 @@ export default function Home() {
             </div>
           </div>
 
-          {/* <div className="masonry-item">
-            <ReviewCard />
-          </div> */}
-
           <div className="masonry-item">
             <HoverVideo
               src="/production/production-1.mp4"
               poster="/production/production-1.jpg"
+              href="/projects"
+              alt="Produktion showreel"
+              linkLabel="Mehr erfahren"
+            />
+          </div>
+
+          <div className="masonry-item">
+            <HoverVideo
+              src="/production/production-2.mp4"
+              poster="/production/production-2.jpg"
               href="/projects"
               alt="Produktion showreel"
               linkLabel="Mehr erfahren"
@@ -334,13 +340,7 @@ export default function Home() {
           </div> */}
 
           {/* <div className="masonry-item">
-            <HoverVideo
-              src="/videos/cta.mp4"
-              poster="/images/4.jpg"
-              href="/projects"
-              alt="Produktion showreel"
-              linkLabel="Mehr erfahren"
-            />
+            <ReviewCard />
           </div> */}
 
           {/* <div className="masonry-item">
