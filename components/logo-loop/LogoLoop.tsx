@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState, memo, CSSProperties, ReactNode } from 'react';
+import Image from 'next/image';
 import './LogoLoop.css';
 
 const ANIMATION_CONFIG = { SMOOTH_TAU: 0.25, MIN_COPIES: 2, COPY_HEADROOM: 2 };
@@ -210,6 +211,12 @@ export const LogoLoop = memo<LogoLoopProps>(
 
     const isVertical = direction === 'up' || direction === 'down';
 
+    // Logos render at `logoHeight` px tall (width auto). Tell next/image the
+    // approximate rendered slot width so it serves a small optimized image
+    // instead of the full-resolution source. 2x logoHeight comfortably covers
+    // wide logos plus the scale-on-hover zoom; the browser applies DPR itself.
+    const logoImageSizes = useMemo(() => `${Math.ceil(logoHeight * 2)}px`, [logoHeight]);
+
     const targetVelocity = useMemo(() => {
       const magnitude = Math.abs(speed);
       let directionMultiplier: number;
@@ -293,24 +300,46 @@ export const LogoLoop = memo<LogoLoopProps>(
           );
         }
         const isNodeItem = 'node' in item;
-        const content = isNodeItem ? (
-          <span className="logoloop__node" aria-hidden={!!item.href && !item.ariaLabel}>
-            {item.node}
-          </span>
-        ) : (
-          <img
-            src={item.src}
-            srcSet={item.srcSet}
-            sizes={item.sizes}
-            width={item.width}
-            height={item.height}
-            alt={item.alt ?? ''}
-            title={item.title}
-            loading="lazy"
-            decoding="async"
-            draggable={false}
-          />
-        );
+        let content: ReactNode;
+        if (isNodeItem) {
+          content = (
+            <span className="logoloop__node" aria-hidden={!!item.href && !item.ariaLabel}>
+              {item.node}
+            </span>
+          );
+        } else if (item.width && item.height && !item.srcSet) {
+          // Optimize via next/image when intrinsic dimensions are known and the
+          // caller hasn't supplied its own srcSet. Sizing is handled by CSS
+          // (.logoloop__item img { height: var(--logoloop-logoHeight); width: auto }).
+          content = (
+            <Image
+              src={item.src}
+              width={item.width}
+              height={item.height}
+              sizes={logoImageSizes}
+              alt={item.alt ?? ''}
+              title={item.title}
+              loading="lazy"
+              decoding="async"
+              draggable={false}
+            />
+          );
+        } else {
+          content = (
+            <img
+              src={item.src}
+              srcSet={item.srcSet}
+              sizes={item.sizes}
+              width={item.width}
+              height={item.height}
+              alt={item.alt ?? ''}
+              title={item.title}
+              loading="lazy"
+              decoding="async"
+              draggable={false}
+            />
+          );
+        }
         const itemAriaLabel = isNodeItem ? (item.ariaLabel ?? item.title) : (item.alt ?? item.title);
         const itemContent = item.href ? (
           <a
@@ -331,7 +360,7 @@ export const LogoLoop = memo<LogoLoopProps>(
           </li>
         );
       },
-      [renderItem]
+      [renderItem, logoImageSizes]
     );
 
     const logoLists = useMemo(

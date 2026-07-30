@@ -17,20 +17,20 @@ import SplineCubes from "@/components/spline-cubes";
 
 
 const clientLogos1 = [
-  { src: "/images/client-1.png", alt: "", href: "#" },
-  { src: "/images/client-2.png", alt: "", href: "#" },
-  { src: "/images/client-3.png", alt: "", href: "#" },
-  { src: "/images/client-4.png", alt: "", href: "#" },
-  { src: "/images/client-5.png", alt: "", href: "#" },
-  { src: "/images/client-6.png", alt: "", href: "#" },
+  { src: "/images/client-1.png", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-2.png", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-3.png", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-4.png", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-5.png", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-6.png", alt: "", href: "#", width: 1536, height: 1024 },
 ];
 
 const clientLogos2 = [
-  { src: "/images/client-7.png", alt: "", href: "#" },
-  { src: "/images/client-8.png", alt: "", href: "#" },
-  { src: "/images/client-9.png", alt: "", href: "#" },
-  { src: "/images/client-10.png", alt: "", href: "#" },
-  { src: "/images/client-11.png", alt: "", href: "#" },
+  { src: "/images/client-7.png", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-8.png", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-9.png", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-10.png", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-11.png", alt: "", href: "#", width: 1024, height: 1008 },
 ];
 
 export default function Home() {

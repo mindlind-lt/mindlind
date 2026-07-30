@@ -60,6 +60,8 @@ export default function SectionFeatWorks(){
                 <WorkThumb
                   href="https://prince-food.de/"
                   imageSrc="/images/project-prince-1.jpg"
+                  imageWidth={1536}
+                  imageHeight={1024}
                   title="Prince Food"
                   pills={["Website", "UX/UI"]}
                 />
@@ -69,6 +71,8 @@ export default function SectionFeatWorks(){
                 <WorkThumb
                   href="https://factorysl.de/"
                   imageSrc="/images/project-factorysl-1.jpg"
+                  imageWidth={1536}
+                  imageHeight={1024}
                   title="FactorySL"
                   pills={["Website", "UX/UI"]}
                 />
@@ -78,6 +82,8 @@ export default function SectionFeatWorks(){
                 <WorkThumb
                   href="https://muafaktur.de/"
                   imageSrc="/images/project-mua.jpg"
+                  imageWidth={2400}
+                  imageHeight={1680}
                   title="MUA Faktur"
                   pills={["Website", "UX/UI"]}
                 />
@@ -87,6 +93,8 @@ export default function SectionFeatWorks(){
                 <WorkThumb
                   href="#"
                   imageSrc="/images/project-panda-1.jpg"
+                  imageWidth={1448}
+                  imageHeight={1086}
                   title="Panda Travel"
                   pills={["Website", "UX/UI"]}
                 />
