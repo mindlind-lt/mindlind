@@ -19,9 +19,10 @@ export default function PageAgency() {
           <div className="grid grid-cols-[1fr_360px] gap-4">
 
             <div className="intro-row border-4 border-dashed border-red-500">
-              <div className="text-4xl font-mono font-medium uppercase leading-[1.4]">
-                <p><span className="text-3xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;From strategy to launch, we plan, design  and build end-to-end – aligning positioning, content, and modular UI into websites that load fast, meet AA accessibility and are easy to edit.</p>
-                <p className="mt-8">Our DNA: clarity over noise, systems over one-offs, speed with accountability.</p>
+              <div className="text-3xl font-mono font-medium uppercase leading-[1.4]">
+                <p><span className="text-2xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;VON DER ERSTEN IDEE BIS ZUM LAUNCH ENTWICKELN WIR DIGITALE AUFTRITTE, DIE NICHT NUR SICHTBAR SIND, SONDERN VERSTANDEN WERDEN.</p>
+                <p className="mt-5">WIR FORMEN AUS IDEEN KLARE STRUKTUREN, AUS STRUKTUREN STARKE ERLEBNISSE UND AUS ERLEBNISSEN MESSBARE WIRKUNG.</p>
+                <p className="mt-5">UNSER ANSPRUCH: WENIGER ABLENKUNG, MEHR PRÄZISION. WENIGER OBERFLÄCHE, MEHR SUBSTANZ. DIGITAL DESIGN, DAS MITDENKT UND WEITER WÄCHST.</p>
               </div>
             </div>
 
