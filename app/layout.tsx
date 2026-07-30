@@ -3,7 +3,6 @@ import { Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
-import LenisScroll from "@/components/lenis-scroll";
 import Preloader from "@/components/preloader/preloader";
 import PreloadResources from "@/components/preload-resources";
 import TopProgressBar from "@/components/progress-bar/top-progress-bar";
@@ -38,8 +37,7 @@ export default function RootLayout({
         <TopProgressBar />
         <PreloadResources />
         <Preloader />
-        <LenisScroll />
-        
+
         <Header />
 
         {children}
