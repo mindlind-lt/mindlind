@@ -18,7 +18,7 @@ export default function PageAgency() {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-[1fr_360px] gap-4">
 
-            <div className="intro-row border-4 border-dashed border-red-500">
+            <div className="intro-row">
               <div className="text-3xl font-mono font-medium uppercase leading-[1.4]">
                 <p><span className="text-2xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;VON DER ERSTEN IDEE BIS ZUM LAUNCH ENTWICKELN WIR DIGITALE AUFTRITTE, DIE NICHT NUR SICHTBAR SIND, SONDERN VERSTANDEN WERDEN.</p>
                 <p className="mt-5">WIR FORMEN AUS IDEEN KLARE STRUKTUREN, AUS STRUKTUREN STARKE ERLEBNISSE UND AUS ERLEBNISSEN MESSBARE WIRKUNG.</p>
