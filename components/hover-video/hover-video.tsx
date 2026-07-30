@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Play, X } from "lucide-react";
 
@@ -19,6 +20,11 @@ interface HoverVideoProps {
   /** Text for the link below the video. */
   linkLabel?: string;
   className?: string;
+  /**
+   * `sizes` hint for the optimized cover image. Defaults to the homepage
+   * production masonry (3 columns ≥80rem, 2 ≥64rem, 1 below).
+   */
+  sizes?: string;
 }
 
 const prefersReducedMotion = () =>
@@ -32,6 +38,7 @@ export default function HoverVideo({
   alt = "",
   linkLabel = "Learn more",
   className,
+  sizes = "(max-width: 64rem) 100vw, (max-width: 80rem) 50vw, 33vw",
 }: HoverVideoProps) {
   const containerRef = useRef<HTMLButtonElement>(null);
   const previewRef = useRef<HTMLVideoElement>(null);
@@ -202,21 +209,24 @@ export default function HoverVideo({
         onClick={openLightbox}
         aria-label={alt ? `Play video: ${alt}` : "Play video"}
       >
+        {/* No `poster` here: the optimized cover <Image> below overlays the
+            video until playback, so a full-size poster would just double-load. */}
         <video
           ref={previewRef}
           className="hover-video-el"
           src={src}
-          poster={poster}
           aria-hidden
           loop
           muted
           playsInline
           preload="none"
         />
-        <img
+        <Image
           className="hover-video-cover"
           src={poster}
           alt={alt}
+          fill
+          sizes={sizes}
           aria-hidden={alt ? undefined : true}
           draggable={false}
         />
