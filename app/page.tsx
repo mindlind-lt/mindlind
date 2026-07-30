@@ -16,10 +16,21 @@ import SplineCubes from "@/components/spline-cubes";
 // import GlassCubeAbout from "@/components/glass-cube-about";
 
 
-const imageLogos = [
-  { src: "/assets/images/Vbq7Fp6o8KdtjpOPsc8wVaQWxYY.png", alt: "", href: "#" },
-  { src: "/assets/images/Vbq7Fp6o8KdtjpOPsc8wVaQWxYY.png", alt: "", href: "#" },
-  { src: "/assets/images/Vbq7Fp6o8KdtjpOPsc8wVaQWxYY.png", alt: "", href: "#" },
+const clientLogos1 = [
+  { src: "/images/client-1.png", alt: "", href: "#" },
+  { src: "/images/client-2.png", alt: "", href: "#" },
+  { src: "/images/client-3.png", alt: "", href: "#" },
+  { src: "/images/client-4.png", alt: "", href: "#" },
+  { src: "/images/client-5.png", alt: "", href: "#" },
+  { src: "/images/client-6.png", alt: "", href: "#" },
+];
+
+const clientLogos2 = [
+  { src: "/images/client-7.png", alt: "", href: "#" },
+  { src: "/images/client-8.png", alt: "", href: "#" },
+  { src: "/images/client-9.png", alt: "", href: "#" },
+  { src: "/images/client-10.png", alt: "", href: "#" },
+  { src: "/images/client-11.png", alt: "", href: "#" },
 ];
 
 export default function Home() {
@@ -282,12 +293,12 @@ export default function Home() {
                 <div className="font-mono text-6xl xl:text-8xl">147+</div>
                 <div className="font-mono text-xl uppercase">DIGITALE PROJEKTE</div>
               </div>
-              <div className="bg-white rounded-xl py-12 space-y-4 overflow-hidden border-4 border-dashed border-red-500">
+              <div className="bg-white rounded-xl py-12 space-y-5 overflow-hidden">
                 <LogoLoop
-                  logos={imageLogos}
-                  speed={30}
+                  logos={clientLogos1}
+                  speed={24}
                   direction="right"
-                  logoHeight={60}
+                  logoHeight={80}
                   gap={60}
                   hoverSpeed={0}
                   scaleOnHover
@@ -296,10 +307,10 @@ export default function Home() {
                   ariaLabel=""
                 />
                 <LogoLoop
-                  logos={imageLogos}
-                  speed={30}
+                  logos={clientLogos2}
+                  speed={24}
                   direction="left"
-                  logoHeight={60}
+                  logoHeight={80}
                   gap={60}
                   hoverSpeed={0}
                   scaleOnHover
