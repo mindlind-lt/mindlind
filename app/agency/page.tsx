@@ -6,6 +6,7 @@ import TeamCarousel from "@/components/team-carousel/team-carousel";
 // import SplineAgencyHero from "@/components/spline-agency-hero";
 import SplineAgency2 from "@/components/spline-agency-2";
 import HeroAgency from "@/components/hero-agency";
+import ShaderCreature from "@/components/shader-creature";
 
 export default function PageAgency() {
   return (
@@ -14,7 +15,7 @@ export default function PageAgency() {
 
       <HeroAgency />
 
-      <div className="intro py-20">
+      <div className="intro pb-20">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-[1fr_360px] gap-4">
 
@@ -26,7 +27,9 @@ export default function PageAgency() {
               </div>
             </div>
 
-            <div className="bg-red-100 py-50 items-center justify-center flex border-4 border-dashed border-red-500">3D</div>
+            <div className="">
+              <ShaderCreature className="w-full h-full" />
+            </div>
 
           </div>
         </div>
