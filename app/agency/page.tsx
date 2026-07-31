@@ -37,9 +37,9 @@ export default function PageAgency() {
 
 
 
-      <div className="border-4 border-dashed border-red-500">
+      {/* <div className="border-4 border-dashed border-red-500">
         <SplineAgency2 />
-      </div>
+      </div> */}
 
 
 
