@@ -421,11 +421,17 @@ export default function CreatureBlob({ className }: { className?: string }) {
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(45, getAspectRatio(), 0.01, 1000);
-    camera.position.set(0, -2, 6);
+    camera.position.set(0, -2, 7);
     camera.lookAt(0, -1, 0);
     scene.add(camera);
 
     const controls = new OrbitControls(camera, canvas);
+    controls.update();
+    // Only allow horizontal (azimuthal) rotation — lock the vertical angle at
+    // its current value so the initial framing is preserved.
+    const polarAngle = controls.getPolarAngle();
+    controls.minPolarAngle = polarAngle;
+    controls.maxPolarAngle = polarAngle;
 
     const geometry = new THREE.IcosahedronGeometry(1, 32);
 

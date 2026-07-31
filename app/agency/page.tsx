@@ -17,7 +17,7 @@ export default function PageAgency() {
 
       <div className="intro pb-20">
         <div className="container mx-auto px-8">
-          <div className="grid grid-cols-[1fr_360px] gap-4">
+          <div className="grid grid-cols-[1fr_380px] gap-1">
 
             <div className="intro-row">
               <div className="text-3xl font-mono font-medium uppercase leading-[1.4]">
