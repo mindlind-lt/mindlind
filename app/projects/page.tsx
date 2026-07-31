@@ -45,9 +45,9 @@ export default function PageProjects() {
           <div className="works-masonry-item">
             <WorkThumb
               href="/projects/muafaktur"
-              imageSrc="/images/project-mua.jpg"
-              imageWidth={2400}
-              imageHeight={1680}
+              imageSrc="/images/case-mua-2.png"
+              imageWidth={560}
+              imageHeight={560}
               title="MUA Faktur"
               pills={["Website", "UX/UI"]}
             />

@@ -69,7 +69,7 @@ export default function PageCase1() {
       </div>
 
 
-      <div className="container mx-auto px-8 py-15">
+      <div className="px-8 py-15">
         <Image
           src="/images/case-mua-2.png"
           width={1000}
@@ -88,7 +88,7 @@ export default function PageCase1() {
       </div>
 
 
-      <div className="container mx-auto px-8 py-15">
+      <div className="px-8 py-15">
         <div className="flex gap-5">
           <Image
             src="/images/case-mua-3.png"
@@ -117,7 +117,7 @@ export default function PageCase1() {
       </div>
 
 
-      <div className="container mx-auto px-8 py-15">
+      <div className="px-8 py-15">
         <Image
           src="/images/case-mua-5.png"
           width={1000}
@@ -126,6 +126,7 @@ export default function PageCase1() {
           className="w-full rounded-lg"
         />
       </div>
+
 
       <div className="container mx-auto px-8 py-6 mb-20">
         <div className="text-xl space-y-3 max-w-235">
