@@ -44,7 +44,7 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
-              href="https://muafaktur.de/"
+              href="/projects/muafaktur"
               imageSrc="/images/project-mua.jpg"
               imageWidth={2400}
               imageHeight={1680}
