@@ -28,7 +28,7 @@ export default function PageAgency() {
             </div>
 
             <div className="">
-              <ShaderCreature className="w-full h-full" />
+              {/* The component goes here */}
             </div>
 
           </div>
