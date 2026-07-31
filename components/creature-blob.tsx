@@ -413,14 +413,15 @@ export default function CreatureBlob({ className }: { className?: string }) {
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
       powerPreference: 'high-performance',
+      alpha: true,
       canvas,
     });
+    renderer.setClearColor(0x000000, 0);
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x000000);
 
     const camera = new THREE.PerspectiveCamera(45, getAspectRatio(), 0.01, 1000);
-    camera.position.set(0, -2, 8);
+    camera.position.set(0, -2, 6);
     camera.lookAt(0, -1, 0);
     scene.add(camera);
 
@@ -434,6 +435,7 @@ export default function CreatureBlob({ className }: { className?: string }) {
       uniforms: {
         u_time: { value: 0.0 },
       },
+      transparent: true,
     });
 
     const mesh = new THREE.Mesh(geometry, material);
