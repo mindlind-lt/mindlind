@@ -57,10 +57,10 @@ export default function SectionContact() {
           <div className="section-contact-form    border-4 border-dashed border-red-500">
             <div className="flex items-end">
               <div className="flex-1 pb-2 self-stretch">
-                <div className="font-mono text-4xl lg:text-6xl uppercase pb-4">Start a&nbsp;Project</div>
-                <div className="text-base lg:text-lg">Tell to our manager about the goal. <br />We'll reply with scope and timeline.</div>
+                <div className="font-mono text-4xl lg:text-5xl uppercase pb-4">PROJEKT STARTEN</div>
+                <div className="text-sm lg:text-lg">Erzählen Sie uns kurz, worum es geht. Wir melden uns mit einer klaren Einschätzung zu Umfang, Timing und nächsten Schritten.</div>
               </div>
-              <div className="flex-1 hidden sm:block">
+              <div className="flex-1.2 hidden sm:block">
                 <Image
                   src="/images/contact-head.png"
                   width={240}

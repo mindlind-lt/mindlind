@@ -1,7 +1,7 @@
 import "./door-button.css";
 
 interface DoorButtonProps {
-  size?: string;
+  size?: "sm" | "md" | "lg";
   color?: string;
   children: React.ReactNode;
   as?: "a" | "button";
@@ -13,7 +13,7 @@ interface DoorButtonProps {
 }
 
 export default function DoorButton({
-  size,
+  size = "md",
   color,
   children,
   as = "a",

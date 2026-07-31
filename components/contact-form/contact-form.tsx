@@ -29,53 +29,48 @@ export default function ContactForm() {
 
             <div className="contact-form-row">
                 <div className="contact-form-field">
-                <label className="contact-form-label" htmlFor="name">Your Name</label>
+                <label className="contact-form-label" htmlFor="name">IHR NAME</label>
                 <input
                     className="contact-form-input"
                     id="name"
                     type="text"
                     name="name"
-                    placeholder="Michael Johnson"
+                    placeholder="Max Mustermann"
                     required
                 />
                 </div>
                 <div className="contact-form-field">
-                <label className="contact-form-label" htmlFor="email">Your Email</label>
+                <label className="contact-form-label" htmlFor="email">IHRE E-MAIL</label>
                 <input
                     className="contact-form-input"
                     id="email"
                     type="email"
                     name="email"
-                    placeholder="email@company.com"
+                    placeholder="mail@unternehmen.de"
                     required
                 />
                 </div>
             </div>
 
             <div className="contact-form-field contact-form-field--full">
-                <label className="contact-form-label" htmlFor="message">Message</label>
+                <label className="contact-form-label" htmlFor="message">NACHRICHT</label>
                 <textarea
                 className="contact-form-textarea"
                 id="message"
                 name="message"
-                placeholder="Your Message"
+                placeholder="Worum geht es bei Ihrem Projekt?"
                 required
                 />
             </div>
 
             <div className="contact-form-submit-wrap">
-                <DoorButton as="button" fullWidth type="submit">
-                Send Message
-                </DoorButton>
+                <DoorButton as="button" size="lg" fullWidth type="submit">ANFRAGE SENDEN</DoorButton>
                 {result && <p className="contact-form-result">{result}</p>}
             </div>
 
         </div>
 
-        <div className="contact-form-footer">
-        Before submitting, you agree to our{' '}
-        <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
-        </div>
+        <div className="contact-form-footer">Mit dem Absenden akzeptieren Sie unsere{' '} <a href="#">AGB</a> und <a href="#">Datenschutzerklärung</a>.</div>
 
     </form>
   );
