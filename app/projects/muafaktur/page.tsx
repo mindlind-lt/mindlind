@@ -14,7 +14,7 @@ export default function PageCase1() {
         />
       </div>
 
-      <div>
+      <div className="container mx-auto px-8">
         <div>Gradiento</div>
         <div>Pills</div>
       </div>
