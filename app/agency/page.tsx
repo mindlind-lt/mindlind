@@ -6,7 +6,6 @@ import TeamCarousel from "@/components/team-carousel/team-carousel";
 // import SplineAgencyHero from "@/components/spline-agency-hero";
 import SplineAgency2 from "@/components/spline-agency-2";
 import HeroAgency from "@/components/hero-agency";
-import ShaderCreature from "@/components/shader-creature";
 
 export default function PageAgency() {
   return (
