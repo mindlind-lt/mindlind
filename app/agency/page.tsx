@@ -52,7 +52,7 @@ export default function PageAgency() {
               </div>
               <div className="col-span-2">
                 <div className="font-mono text-3xl uppercase mb-15">
-                  <h2>Unsere Team</h2>
+                  <h2>Unser Team</h2>
                 </div>
               </div>
             </div>
