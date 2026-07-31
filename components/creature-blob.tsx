@@ -432,6 +432,9 @@ export default function CreatureBlob({ className }: { className?: string }) {
     const polarAngle = controls.getPolarAngle();
     controls.minPolarAngle = polarAngle;
     controls.maxPolarAngle = polarAngle;
+    // Don't hijack the page scroll (or pan) — only horizontal drag-rotation.
+    controls.enableZoom = false;
+    controls.enablePan = false;
 
     const geometry = new THREE.IcosahedronGeometry(1, 32);
 
