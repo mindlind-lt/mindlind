@@ -57,12 +57,25 @@ export default function PageAgency() {
               </div>
             </div>
 
-            <TeamCarousel className="border-4 border-dashed border-red-500">
-              <PersonCard />
-              <PersonCard />
-              <PersonCard />
-              <PersonCard />
-              <PersonCard />
+            <TeamCarousel className="">
+              <PersonCard
+                imageSrc="/images/team-1.jpg"
+                name="Jan"
+                role="CEO"
+                // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              />
+              <PersonCard
+                imageSrc="/images/team-2.jpg"
+                name="Georgy"
+                role="Director"
+                // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              />
+              <PersonCard
+                imageSrc="/images/team-3.jpg"
+                name="Almaz"
+                role="IT-Spezialist"
+                // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              />
             </TeamCarousel>
 
         </div>
