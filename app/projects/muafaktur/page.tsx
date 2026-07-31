@@ -63,13 +63,72 @@ export default function PageCase1() {
       </div>
 
       <div className="container mx-auto px-8 py-6">
-        <div className="text-xl space-y-3 max-w-[900px]">
+        <div className="text-2xl space-y-3 max-w-[900px]">
           <p>MUA Faktur ist eine Beauty- und Make-up-Marke rund um Oksana Anichuk, eine international ausgezeichnete Make-up-Artistin und Gründerin des Unternehmens. Die Marke verbindet professionelle Make-up-Dienstleistungen, eigene Beauty-Produkte und eine Academy für angehende Make-up-Artists in einem ganzheitlichen Konzept.</p>
+        </div>
+      </div>
+
+
+      <div className="container mx-auto px-8 py-15">
+        <Image
+          src="/images/case-mua-2.png"
+          width={1000}
+          height={600}
+          alt=""
+          className="w-full rounded-lg"
+        />
+      </div>
+
+
+      <div className="container mx-auto px-8 py-6">
+        <div className="text-xl space-y-3 max-w-[900px]">
           <p>Das Besondere an MUA Faktur ist die klare Verbindung aus Persönlichkeit, Expertise und Produktwelt. Oksana Anichuk steht als Gründerin nicht nur für hochwertige Make-up-Arbeit, sondern auch für Erfahrung, Ausbildung und einen starken ästhetischen Anspruch. Das Unternehmen richtet sich an Kundinnen und Kunden, die professionelle Make-up-Services für besondere Anlässe, Events, Produktionen oder internationale Projekte suchen, aber auch an Menschen, die Make-up professionell lernen oder hochwertige Produkte aus einer spezialisierten Beauty-Marke kaufen möchten.</p>
           <p>Für den digitalen Auftritt bestand die zentrale Herausforderung darin, drei unterschiedliche Geschäftsbereiche in einer Website logisch, hochwertig und verständlich zusammenzuführen. Die Website sollte gleichzeitig Beauty-Shop, Academy-Plattform und Service-Präsentation sein — ohne dabei überladen oder unübersichtlich zu wirken.</p>
+        </div>
+      </div>
+
+
+      <div className="container mx-auto px-8 py-15">
+        <div className="flex gap-5">
+          <Image
+            src="/images/case-mua-3.png"
+            width={1000}
+            height={600}
+            alt=""
+            className="w-full rounded-lg"
+          />
+          <Image
+            src="/images/case-mua-4.png"
+            width={1000}
+            height={600}
+            alt=""
+            className="w-full rounded-lg"
+          />
+        </div>
+      </div>
+
+
+      <div className="container mx-auto px-8 py-6">
+        <div className="text-xl space-y-3 max-w-[900px]">
           <p>Der erste Bereich ist der Shop. Hier werden Produkte der eigenen Marke präsentiert und verkauft, darunter Beauty- und Make-up-Produkte aus eigener Produktion. Für diesen Bereich wurde eine klare E-Commerce-Struktur entwickelt, die Produkte hochwertig darstellt, Kaufentscheidungen erleichtert und die Marke nicht wie einen gewöhnlichen Onlineshop wirken lässt, sondern wie eine kuratierte Beauty-Welt.</p>
           <p>Der zweite Bereich ist die Academy. Hier können sich Interessentinnen und Interessenten über Schulungen, Ausbildungen und Make-up-Kurse informieren und direkt passende Termine oder Formate entdecken. Dafür wurde eine Buchungs- und Registrierungssystematik integriert, die den Einstieg in die Ausbildung einfacher macht und die Organisation für das Unternehmen deutlich strukturiert.</p>
           <p>Der dritte Bereich umfasst die professionellen Make-up-Services. MUA Faktur bietet Make-up für Events, Organisationen, private Anlässe, Produktionen und internationale Einsätze an. Dabei kann ein Team von Make-up-Artists gebucht werden, das je nach Projekt auch mobil und international eingesetzt werden kann. Dieser Bereich musste auf der Website so präsentiert werden, dass die Professionalität, Flexibilität und Exklusivität der Leistungen sofort verständlich werden.</p>
+        </div>
+      </div>
+
+
+      <div className="container mx-auto px-8 py-15">
+        <Image
+          src="/images/case-mua-5.png"
+          width={1000}
+          height={600}
+          alt=""
+          className="w-full rounded-lg"
+        />
+      </div>
+
+      <div className="container mx-auto px-8 py-6 mb-20">
+        <div className="text-xl space-y-3 max-w-[900px]">
           <p>Visuell sollte der Auftritt nicht klassisch „Beauty“ oder austauschbar wirken, sondern modern, editorial und hochwertig. Deshalb wurde die Website bewusst als starke Markenwelt gestaltet: mit einer klaren Struktur, großflächigen visuellen Elementen, eleganter Typografie und einer hochwertigen Bildsprache, die Beauty, Fashion und digitale Präzision miteinander verbindet.</p>
           <p>Viele Elemente der Website wurden individuell gestaltet und auf die Marke abgestimmt. Ziel war es, keine Standardlösung zu entwickeln, sondern einen Auftritt, der zur Persönlichkeit von Oksana Anichuk und zur Positionierung von MUA Faktur passt. Die Website sollte sowohl Vertrauen aufbauen als auch Inspiration erzeugen — für Kundinnen, Schüler, Eventpartner und Käufer der Produkte.</p>
           <p>Neben Design und Struktur lag ein besonderer Fokus auf der Nutzerführung. Besucherinnen und Besucher müssen schnell verstehen, welchen Bereich sie suchen: Produkte kaufen, Ausbildung buchen oder Make-up-Services anfragen. Deshalb wurde die Website in klare Sektionen gegliedert, die jeweils einen eigenen Zweck erfüllen, aber trotzdem als einheitliche Marke wahrgenommen werden.</p>
@@ -78,18 +137,17 @@ export default function PageCase1() {
         </div>
       </div>
 
-      <div className="overflow-clip">
+      {/* <div className="overflow-clip">
         <div className="container mx-auto px-8 py-20">
           <ImageCarousel
             slides={[
-              { src: "/images/case-mua-2.png" },
               { src: "/images/case-mua-3.png" },
               { src: "/images/case-mua-4.png" },
               { src: "/images/case-mua-5.png" },
             ]}
           />
         </div>
-      </div>
+      </div> */}
 
     </>
   )
