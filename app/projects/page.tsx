@@ -22,8 +22,19 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
-              href="https://prince-food.de/"
-              imageSrc="/images/project-prince-1.jpg"
+              href="/projects/funkyramen"
+              imageSrc="/images/case-funky-ramen-1.jpg"
+              imageWidth={1536}
+              imageHeight={1024}
+              title="Funky Ramen"
+              pills={["Website", "UX/UI"]}
+            />
+          </div>
+
+          <div className="works-masonry-item">
+            <WorkThumb
+              href="/projects/princefood"
+              imageSrc="/images/case-prince-food-2.jpg"
               imageWidth={1536}
               imageHeight={1024}
               title="Prince Food"

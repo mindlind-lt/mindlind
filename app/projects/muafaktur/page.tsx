@@ -3,7 +3,7 @@ import { ImageCarousel } from "@/components/ui/image-carousel";
 import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 
-export default function PageCase1() {
+export default function PageCaseMua() {
   return (
     <>
 
@@ -57,7 +57,7 @@ export default function PageCase1() {
         </div>
 
         <div className="mt-15">
-          <DoorButton className="w-full">OPEN WEBSITE</DoorButton>
+          <DoorButton className="w-full" href="https://muafaktur.de" target="_blank">OPEN WEBSITE</DoorButton>
         </div>
 
       </div>
