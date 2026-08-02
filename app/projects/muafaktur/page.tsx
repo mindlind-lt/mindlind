@@ -20,7 +20,7 @@ export default function PageCaseMua() {
 
         <div className="grid grid-cols-2">
           <div>
-            <h1 className="text-8xl tracking-tight font-bold -mt-1">MUA FAKTUR</h1>
+            <h1 className="text-8xl tracking-tight font-bold -mt-1 uppercase">MUA FAKTUR</h1>
           </div>
           <div>
             <div className="pills justify-end">
