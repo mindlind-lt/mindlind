@@ -270,7 +270,7 @@ export default function Home() {
 
       {/* Testimonials section */}
 
-      <div className="container mx-auto px-5 sm:px-8 py-12 lg:py-20   border-4 border-dashed border-red-500">
+      <div className="container mx-auto px-5 sm:px-8 py-12 lg:py-20">
 
         <div className="font-mono text-2xl lg:text-3xl uppercase pb-10 lg:pb-20 flex items-center">
           <div className="text-primary-500 flex-1">[05]</div>
@@ -409,7 +409,7 @@ export default function Home() {
 
       {/* Insights section */}
 
-      <div className="container mx-auto px-5 sm:px-8 py-20">
+      {/* <div className="container mx-auto px-5 sm:px-8 py-20">
 
         <div className="font-mono text-3xl uppercase pb-10 sm:pb-15   flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-15">
           <div className="text-primary-500">[07]</div>
@@ -425,7 +425,7 @@ export default function Home() {
           <PostThumb />
         </div>
 
-      </div>
+      </div> */}
 
 
 

@@ -17,8 +17,8 @@ export default function PageProjects() {
         <SplineProjectsHero />
       </div> */}
 
-      <div className="container mx-auto px-8 py-20">
-        <div className="works-masonry   border-4 border-dashed border-red-500">
+      <div className="container mx-auto px-8 pb-20">
+        <div className="works-masonry">
 
           <div className="works-masonry-item">
             <WorkThumb

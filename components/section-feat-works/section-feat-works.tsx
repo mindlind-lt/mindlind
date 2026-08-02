@@ -52,7 +52,7 @@ export default function SectionFeatWorks(){
             </div>
           </div>
 
-          <div className="section-works-media border-4 border-dashed border-red-500">
+          <div className="section-works-media">
 
             <div className="works-masonry">
 
