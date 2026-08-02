@@ -9,7 +9,7 @@ export default function PageCasePrince() {
     <>
 
       <Image 
-        src="/images/case-prince-food-2.jpg"
+        src="/images/case-prince-food-1.jpg"
         width={1000}
         height={600}
         alt=""
@@ -93,14 +93,15 @@ export default function PageCasePrince() {
       </div>
 
 
-      {/* <div className="px-8 py-15">
-        <ParallaxImage
-          src="/images/case-mua-2.png"
-          height="600px"
-          strength={80}
+      <div className="px-8 py-15">
+        <Image
+          src="/images/case-prince-food-2.jpg"
+          width={1000}
+          height={600}
+          alt=""
           className="w-full rounded-lg"
         />
-      </div> */}
+      </div>
 
 
       <div className="container mx-auto px-8 py-15 flex gap-20">
@@ -110,24 +111,24 @@ export default function PageCasePrince() {
       </div>
 
 
-      {/* <div className="px-8 py-15">
+      <div className="px-8 py-15">
         <div className="flex gap-5">
           <Image
-            src="/images/case-mua-3.png"
+            src="/images/case-prince-food-3.jpg"
             width={1000}
             height={600}
             alt=""
             className="w-full rounded-lg"
           />
           <Image
-            src="/images/case-mua-4.png"
+            src="/images/case-prince-food-4.jpg"
             width={1000}
             height={600}
             alt=""
             className="w-full rounded-lg"
           />
         </div>
-      </div> */}
+      </div>
 
 
       <div className="container mx-auto px-8 py-15">
@@ -138,15 +139,15 @@ export default function PageCasePrince() {
       </div>
 
 
-      {/* <div className="px-8 py-15">
+      <div className="px-8 py-15">
         <Image
-          src="/images/case-mua-5.png"
+          src="/images/case-prince-food-5.jpg"
           width={1000}
           height={600}
           alt=""
           className="w-full rounded-lg"
         />
-      </div> */}
+      </div>
 
 
       <div className="container mx-auto px-8 py-15">
