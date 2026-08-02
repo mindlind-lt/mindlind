@@ -15,27 +15,27 @@ export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
   const [isExiting, setIsExiting] = useState(false);
 
+  // Lock page scroll while the overlay is up so momentum-scrolling behind it
+  // (notably iOS Safari) can't reveal the page before the reveal animation.
   useEffect(() => {
+    if (!isLoading) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [isLoading]);
+
+  useEffect(() => {
+    // Hand-maintained list of the above-the-fold hero media the visitor sees
+    // the instant the splash lifts. Keep it to assets rendered as a plain
+    // <img>/<video>/CSS background — preloading a raw path warms the browser
+    // cache for those. Do NOT add `next/image` assets (project thumbs, service
+    // cards, client logos): the browser fetches an optimized `/_next/image?url=…`
+    // URL, so preloading the raw file just double-downloads without helping.
     const assets = [
-      // Images from page.tsx
-      '/assets/pic-1.jpg',
-      '/assets/pic-2.jpg',
-      '/assets/pic-3.jpg',
-      '/assets/pic-4.jpg',
-      '/assets/images/h354KZtk5kmg0VJiEtNwQdpZc.jpg',
-      '/images/cta.jpg',
-      '/images/service-web-design.jpg',
-      '/images/service-branding.jpg',
-      '/images/service-content.jpg',
-      '/images/service-mobile.jpg',
-      '/images/project-prince-1.jpg',
-      '/images/project-factorysl-1.jpg',
-      '/images/project-mua.jpg',
-      '/images/project-panda-1.jpg',
-      // Videos
-      '/videos/cta.mp4',
-      // Logo images
-      '/assets/images/Vbq7Fp6o8KdtjpOPsc8wVaQWxYY.png',
+      '/videos/cta.mp4', // hero video (plain <video>, page.tsx)
+      '/images/cta.jpg', // hero video poster (plain <video poster>, page.tsx)
     ];
 
     let settled = false; // guards against double-exit (StrictMode / races)
@@ -111,7 +111,10 @@ export default function Preloader() {
 
   return (
     <div
-      className={`fixed inset-0 bg-[#F4F4F4] z-[9999] flex items-center justify-center transition-transform duration-1000 ease-in-out ${
+      role="status"
+      aria-live="polite"
+      aria-label="Seite wird geladen"
+      className={`fixed inset-0 bg-[#F4F4F4] z-[9999] flex items-center justify-center transition-transform duration-1000 ease-in-out motion-reduce:transition-none motion-reduce:duration-0 ${
         isExiting ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
