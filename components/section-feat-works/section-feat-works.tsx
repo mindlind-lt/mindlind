@@ -58,8 +58,19 @@ export default function SectionFeatWorks(){
 
               <div className="works-masonry-item">
                 <WorkThumb
-                  href="https://prince-food.de/"
-                  imageSrc="/images/project-prince-1.jpg"
+                  href="/projects/funkyramen"
+                  imageSrc="/images/case-funky-ramen-1.jpg"
+                  imageWidth={1536}
+                  imageHeight={1024}
+                  title="Funky Ramen"
+                  pills={["Website", "UX/UI"]}
+                />
+              </div>
+
+              <div className="works-masonry-item">
+                <WorkThumb
+                  href="/projects/princefood"
+                  imageSrc="/images/case-prince-food-2.jpg"
                   imageWidth={1536}
                   imageHeight={1024}
                   title="Prince Food"
@@ -69,33 +80,11 @@ export default function SectionFeatWorks(){
 
               <div className="works-masonry-item">
                 <WorkThumb
-                  href="https://factorysl.de/"
-                  imageSrc="/images/project-factorysl-1.jpg"
-                  imageWidth={1536}
-                  imageHeight={1024}
-                  title="FactorySL"
-                  pills={["Website", "UX/UI"]}
-                />
-              </div>
-
-              <div className="works-masonry-item works-masonry-item--offset">
-                <WorkThumb
-                  href="https://muafaktur.de/"
-                  imageSrc="/images/project-mua.jpg"
-                  imageWidth={2400}
-                  imageHeight={1680}
+                  href="/projects/muafaktur"
+                  imageSrc="/images/case-mua-2.png"
+                  imageWidth={560}
+                  imageHeight={560}
                   title="MUA Faktur"
-                  pills={["Website", "UX/UI"]}
-                />
-              </div>
-
-              <div className="works-masonry-item">
-                <WorkThumb
-                  href="#"
-                  imageSrc="/images/project-panda-1.jpg"
-                  imageWidth={1448}
-                  imageHeight={1086}
-                  title="Panda Travel"
                   pills={["Website", "UX/UI"]}
                 />
               </div>
