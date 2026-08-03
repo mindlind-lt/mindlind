@@ -115,6 +115,14 @@ body {
     background: #F4F4F4;
 }
 
+/* Remove the browser-default focus outline on every focusable element
+   (links, buttons, inputs, [tabindex], etc.). Intentionally overrides the
+   default accessibility focus ring per design request. */
+*:focus,
+*:focus-visible {
+    outline: none;
+}
+
 .hero {
     position: relative;
     height: 100vh;

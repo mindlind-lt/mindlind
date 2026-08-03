@@ -16,7 +16,7 @@ export default function PageCaseMua() {
         className="w-full"
       />
 
-      <div className="container mx-auto px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
 
         <div className="grid grid-cols-2">
           <div>
@@ -65,7 +65,7 @@ export default function PageCaseMua() {
 
       </div>
 
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-5">
 
         <div className="text-2xl font-medium space-y-3 max-w-250 my-12">
           <p>MUA Faktur ist eine Beauty- und Make-up-Marke rund um Oksana Anichuk — eine international ausgezeichnete Make-up-Artistin und Gründerin des Unternehmens. Die Marke verbindet professionelle Make-up-Dienstleistungen, eigene Beauty-Produkte und eine Academy für angehende Make-up-Artists in einem digitalen Auftritt.</p>
@@ -91,7 +91,7 @@ export default function PageCaseMua() {
       </div>
 
 
-      <div className="container mx-auto px-8 py-15 flex gap-20">
+      <div className="container mx-auto px-5 py-15 flex gap-20">
         <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Started From</h2>
         <div className="text-base space-y-3 flex-2">MUA Faktur startete mit einer starken persönlichen Marke und mehreren Geschäftsbereichen, die digital stärker miteinander verbunden werden sollten. Oksana Anichuk verfügte bereits über professionelle Expertise, eigene Produkte, Ausbildungsformate und Make-up-Services — die Website musste diese Bereiche jedoch so strukturieren, dass sie für Besucherinnen und Besucher sofort verständlich werden.</div>
         <div className="text-base space-y-3 flex-2">Wir begannen damit, die Marke in drei klare Wege zu gliedern: Shop, Academy und Make-up-Services. Jeder Bereich erhielt eine eigene Funktion, eine eigene Nutzerführung und eine klare Conversion-Logik, blieb aber gleichzeitig Teil einer einheitlichen Markenwelt.</div>
@@ -106,7 +106,7 @@ export default function PageCaseMua() {
         />
       </div>
 
-      <div className="container mx-auto px-8 py-15 flex gap-20">
+      <div className="container mx-auto px-5 py-15 flex gap-20">
         <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Challenge / Process</h2>
         <div className="text-base space-y-3 flex-2">Die größte Herausforderung lag in der Balance zwischen Ästhetik und Funktion. Die Website sollte hochwertig und editorial wirken, gleichzeitig aber als praktisches Business-Tool funktionieren. Der Shop musste Produkte klar präsentieren. Die Academy benötigte eine verständliche Buchungs- und Registrierungsstruktur. Der Servicebereich musste Vertrauen, Qualität und die Möglichkeit vermitteln, ein professionelles Make-up-Team für Events, Organisationen und Produktionen anzufragen.</div>
         <div className="text-base space-y-3 flex-2">Wir entwickelten eine individuelle digitale Plattform mit klarer Navigation, hochwertiger visueller Sprache und einer Struktur, die Besucherinnen und Besucher gezielt durch die unterschiedlichen Angebote führt. Statt einzelne Bereiche voneinander zu trennen, verbanden wir Produktverkauf, Ausbildung und Dienstleistung zu einem konsistenten digitalen Erlebnis.</div>
@@ -131,7 +131,7 @@ export default function PageCaseMua() {
         </div>
       </div>
 
-      <div className="container mx-auto px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <div className="text-xl space-y-3 max-w-235">
           <p>Die visuelle Richtung wurde rund um eine moderne Beauty-Ästhetik entwickelt: klare Layouts, hochwertige Produktinszenierung, elegante Typografie und ein fashion-inspirierter Look. Die Website sollte nicht wie ein gewöhnlicher Kosmetikshop wirken, sondern wie eine professionelle Beauty-Plattform mit persönlicher Handschrift.</p>
           <p>Jeder Abschnitt unterstützt die Markenstory: Produkte, Academy und Services werden nicht isoliert dargestellt, sondern als Teile einer größeren Beauty-Welt.</p>
@@ -148,7 +148,7 @@ export default function PageCaseMua() {
         />
       </div>
 
-      <div className="container mx-auto px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <div className="text-xl space-y-3 max-w-235">
           <p>Für die Academy wurde eine klare Buchungs- und Registrierungslogik integriert. Interessentinnen und Interessenten können Ausbildungsformate entdecken, Inhalte besser verstehen und sich gezielt für passende Angebote anmelden.</p>
           <p>Dadurch wird die Website nicht nur zur Präsentationsfläche, sondern zu einem funktionalen System für Anfragen, Registrierungen und langfristiges Wachstum.</p>
@@ -157,13 +157,13 @@ export default function PageCaseMua() {
 
       {/* <div className="bg-red-700 h-20"></div> */}
 
-      <div className="container mx-auto px-8 py-15 flex gap-20">
+      <div className="container mx-auto px-5 py-15 flex gap-20">
         <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Results</h2>
         <div className="text-base space-y-3 flex-2">Das Ergebnis ist eine hochwertige digitale Plattform, die E-Commerce, Ausbildung und professionelle Make-up-Dienstleistungen in einer klaren Struktur verbindet. MUA Faktur kann Produkte präsentieren, Academy-Formate bewerben und Service-Anfragen über eine Website erhalten, die elegant, fokussiert und skalierbar wirkt.</div>
         <div className="text-base space-y-3 flex-2">Die Marke wird nicht mehr über einzelne Angebote dargestellt, sondern über ein konsistentes digitales Ökosystem. Die Website stärkt Vertrauen, verbessert die Orientierung und schafft eine professionelle Grundlage für Produktverkäufe, Kursbuchungen und weiteres Markenwachstum.</div>
       </div>
 
-      <div className="container mx-auto px-8 py-15 flex gap-20">
+      <div className="container mx-auto px-5 py-15 flex gap-20">
         <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Credits</h2>
         <div className="flex-1">
           <div className="border-b border-gray-200 flex gap-20 mb-2 pb-2">
@@ -194,7 +194,7 @@ export default function PageCaseMua() {
       </div>
 
       {/* <div className="overflow-clip">
-        <div className="container mx-auto px-8 py-20">
+        <div className="container mx-auto px-5 py-20">
           <ImageCarousel
             slides={[
               { src: "/images/case-mua-3.png" },

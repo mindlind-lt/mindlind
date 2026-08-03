@@ -47,11 +47,11 @@ export default function Burger() {
       <div className={`drawer ${isActive ? "drawer-active" : ""} ${isReady ? "drawer-active-ready" : ""}`}>
 
         <nav className="drawer-menu">
-          <Link href="/">Home</Link>
-          <Link href="/agency">Agency</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link href="/agency" onClick={() => setIsOpen(false)}>Agency</Link>
+          <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
+          {/* <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link> */}
+          <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
         </nav>
 
         <div className="drawer-contact">

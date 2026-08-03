@@ -16,7 +16,7 @@ export default function PageCasePrince() {
         className="w-full"
       />
 
-      <div className="container mx-auto px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
 
         <div className="grid grid-cols-2">
           <div>
@@ -65,7 +65,7 @@ export default function PageCasePrince() {
       </div>
 
 
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-5">
 
         <div className="text-2xl font-medium space-y-3 max-w-250 my-12">
           <p>Prince Food ist ein großer Lebensmittelproduzent, spezialisiert auf die Herstellung, Verarbeitung und Tiefkühlung von Lebensmitteln für den professionellen B2B-Markt. Das Unternehmen arbeitet mit modernen Produktionsanlagen, großen Förder- und Verarbeitungssystemen sowie klar strukturierten Prozessen für gleichbleibende Qualität.</p>
@@ -86,7 +86,7 @@ export default function PageCasePrince() {
       </div>
 
 
-      <div className="container mx-auto px-8 py-15 flex gap-20">
+      <div className="container mx-auto px-5 py-15 flex gap-20">
         <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Started From</h2>
         <div className="text-base space-y-3 flex-2">Prince Food verfügte bereits über eine starke operative Grundlage: große Produktionsflächen, moderne Technik, eingespielte Abläufe und Erfahrung in der Herstellung tiefgekühlter Lebensmittel. Die Herausforderung bestand darin, diese industrielle Kompetenz digital so darzustellen, dass sie für Geschäftspartner, Kunden und potenzielle Auftraggeber sofort verständlich wird.</div>
         <div className="text-base space-y-3 flex-2">Wir begannen damit, die Marke nicht als gewöhnlichen Lebensmittelanbieter zu betrachten, sondern als professionellen Produktionspartner. Die Website sollte zeigen, dass Prince Food nicht nur Produkte liefert, sondern komplette Produktionsprozesse beherrscht — von der Verarbeitung über die Tiefkühlung bis zur zuverlässigen Bereitstellung für größere Abnehmer.</div>
@@ -104,7 +104,7 @@ export default function PageCasePrince() {
       </div>
 
 
-      <div className="container mx-auto px-8 py-15 flex gap-20">
+      <div className="container mx-auto px-5 py-15 flex gap-20">
         <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Process</h2>
         <div className="text-base space-y-3 flex-2">Die zentrale Aufgabe lag darin, ein eher technisches und industrielles Thema hochwertig, klar und visuell attraktiv zu präsentieren. Lebensmittelproduktion muss Vertrauen erzeugen: Sauberkeit, Struktur, Qualitätssicherung und professionelle Abläufe sind entscheidend. Genau diese Werte mussten auf der Website sichtbar werden.</div>
         <div className="text-base space-y-3 flex-2">Wir entwickelten einen digitalen Auftritt, der die Produktionswelt von Prince Food verständlich und modern inszeniert. Große Produktionsräume, sterile Arbeitsbereiche, Förderbänder, Verpackungsprozesse und tiefgekühlte Produkte wurden als zentrale visuelle Elemente gedacht. Dadurch entsteht ein Auftritt, der sowohl industrielle Stärke als auch Lebensmittelqualität transportiert.</div>
@@ -131,7 +131,7 @@ export default function PageCasePrince() {
       </div>
 
 
-      <div className="container mx-auto px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <div className="text-xl space-y-3 max-w-235">
           <p>Die visuelle Sprache wurde bewusst hochwertig und technisch präzise aufgebaut. Statt einer klassischen Food-Website entstand eine moderne B2B-Präsentation, die Produktionskapazität, Hygiene und Zuverlässigkeit in den Mittelpunkt stellt.</p>
           <p>Kühle Farben, klare Strukturen und starke Produktdetails unterstützen den Eindruck eines Unternehmens, das professionell, skalierbar und prozesssicher arbeitet.</p>
@@ -150,7 +150,7 @@ export default function PageCasePrince() {
       </div>
 
 
-      <div className="container mx-auto px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <div className="text-xl space-y-3 max-w-235">
           <p>Ein besonderer Fokus lag auf der Darstellung der Produktionsprozesse. Prince Food verarbeitet und friert Lebensmittel nicht nur ein, sondern organisiert komplette Abläufe für größere Mengen und professionelle Anforderungen.</p>
           <p>Die Website erklärt diese Prozesse verständlich und macht sichtbar, warum das Unternehmen für B2B-Kunden, Gastronomie, Handel und größere Marken ein relevanter Produktionspartner ist.</p>
@@ -158,14 +158,14 @@ export default function PageCasePrince() {
       </div>
 
 
-      <div className="container mx-auto px-8 py-15 flex gap-20">
+      <div className="container mx-auto px-5 py-15 flex gap-20">
         <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Results</h2>
         <div className="text-base space-y-3 flex-2">Das Ergebnis ist ein klarer und professioneller digitaler Auftritt, der Prince Food als starken Produktionspartner im Bereich tiefgekühlter Lebensmittel positioniert. Die Website vermittelt Vertrauen, zeigt industrielle Kompetenz und macht die Produktionsqualität des Unternehmens sichtbar.</div>
         <div className="text-base space-y-3 flex-2">Prince Food wird dadurch nicht nur als Lieferant einzelner Produkte wahrgenommen, sondern als zuverlässiger Partner für skalierbare Lebensmittelproduktion. Der digitale Auftritt stärkt die Marke, erklärt das Leistungsangebot verständlich und schafft eine professionelle Grundlage für neue Geschäftsanfragen.</div>
       </div>
 
 
-      <div className="container mx-auto px-8 py-15 flex gap-20">
+      <div className="container mx-auto px-5 py-15 flex gap-20">
         <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Credits</h2>
         <div className="flex-1">
           <div className="border-b border-gray-200 flex gap-20 mb-2 pb-2">
