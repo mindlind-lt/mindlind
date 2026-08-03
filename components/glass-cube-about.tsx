@@ -9,6 +9,7 @@ import {
   RoundedBox,
 } from "@react-three/drei"
 import * as THREE from "three"
+import { useRenderActive } from "@/lib/use-render-active"
 
 /**
  * Independent copy of the Agency-page glass cube for the homepage "About"
@@ -163,6 +164,7 @@ export default function GlassCubeAbout() {
   // We measure the cursor against the whole section (see note below) to drive
   // the follow across the section.
   const overlayRef = useRef<HTMLDivElement>(null)
+  const { ref: canvasWrapRef, active } = useRenderActive<HTMLDivElement>()
 
   // Track the pointer normalized against the WHOLE section (the [data-cube-
   // section] row), not just this column — so the cube leans toward the cursor
@@ -191,11 +193,13 @@ export default function GlassCubeAbout() {
           BOX_RATIO) and not clipped, so the cube can spill past the column.
           The canvas is transparent — there is no background. */}
       <div
+        ref={canvasWrapRef}
         className="pointer-events-none absolute z-10"
         style={{ inset: "-30%" }}
       >
         <Canvas
-          dpr={[1, 2]}
+          frameloop={active ? "always" : "never"}
+          dpr={[1, 1.5]}
           camera={{ position: [0, 0, 5], fov: 45 }}
           gl={{ antialias: true, alpha: true }}
         >

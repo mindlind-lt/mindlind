@@ -1,15 +1,12 @@
 'use client';
 
-import dynamic from 'next/dynamic';
-import { useEffect, useRef, useState } from 'react';
-import { cn } from '@/lib/utils';
-
-const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false });
+import SplineScene from './spline-scene';
 
 /**
- * Defers loading a Spline scene (runtime JS + .splinecode download + WebGL
- * context) until the wrapper is within one viewport of being scrolled into
- * view. Use for below-the-fold scenes; keep hero scenes eager.
+ * Defers loading a Spline scene until it is within one viewport of being
+ * scrolled into view, and pauses its render loop while off-screen or in a
+ * backgrounded tab. Use for below-the-fold scenes; keep hero scenes eager
+ * (see SplineScene's `eager` prop).
  */
 export default function LazySpline({
   scene,
@@ -18,36 +15,5 @@ export default function LazySpline({
   scene: string;
   className?: string;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [shouldLoad, setShouldLoad] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el || shouldLoad) return;
-
-    if (!('IntersectionObserver' in window)) {
-      setShouldLoad(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setShouldLoad(true);
-          observer.disconnect();
-        }
-      },
-      // Start loading one full viewport before the scene scrolls into view
-      { rootMargin: '100% 0px' }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [shouldLoad]);
-
-  return (
-    <div ref={ref} className={cn('w-full h-full pointer-events-none', className)}>
-      {shouldLoad && <Spline scene={scene} />}
-    </div>
-  );
+  return <SplineScene scene={scene} className={className} disablePointerEvents />;
 }

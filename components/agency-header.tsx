@@ -12,6 +12,7 @@ import {
   MeshTransmissionMaterial,
 } from '@react-three/drei'
 import * as THREE from 'three'
+import { useRenderActive } from '@/lib/use-render-active'
 
 const INK = '#101114'
 const PLATINUM = '#e9ebee'
@@ -119,13 +120,15 @@ function Scene({ reduced }: { reduced: boolean }) {
 
 export default function AgencyHeader() {
   const reduced = usePrefersReducedMotion()
+  const { ref: headerRef, active } = useRenderActive<HTMLElement>()
   return (
-    <header className="agency-header">
+    <header ref={headerRef} className="agency-header">
       <h1 className="agency-header__title">Agency</h1>
 
       <Canvas
         aria-hidden="true"
-        dpr={[1, 2]}
+        frameloop={active ? 'always' : 'never'}
+        dpr={[1, 1.5]}
         camera={{ position: [0, 0, 10], fov: 35 }}
         gl={{ antialias: true, alpha: true }}
       >

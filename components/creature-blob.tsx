@@ -436,7 +436,9 @@ export default function CreatureBlob({ className }: { className?: string }) {
     controls.enableZoom = false;
     controls.enablePan = false;
 
-    const geometry = new THREE.IcosahedronGeometry(1, 32);
+    // Detail 12 (~2.9k tris) is visually indistinguishable from 32 (~20k) for
+    // this low-frequency noise displacement, at a fraction of the vertex cost.
+    const geometry = new THREE.IcosahedronGeometry(1, 12);
 
     const material = new THREE.ShaderMaterial({
       vertexShader: SIMPLEX_NOISE + VERTEX_SHADER,
@@ -452,16 +454,60 @@ export default function CreatureBlob({ className }: { className?: string }) {
     scene.add(mesh);
 
     const clock = new THREE.Clock();
-    clock.start();
 
+    // Cap the loop to ~30fps and only run it while the canvas is on-screen and
+    // the tab is visible — an off-screen WebGL loop is pure heat with nothing
+    // to show for it.
+    const FRAME_INTERVAL = 1 / 30;
     let frameId = 0;
+    let running = false;
+    let accumulator = 0;
+
     const loop = () => {
+      frameId = requestAnimationFrame(loop);
       const delta = clock.getDelta();
       material.uniforms.u_time.value += delta;
-      renderer.render(scene, camera);
-      frameId = requestAnimationFrame(loop);
+      accumulator += delta;
+      if (accumulator >= FRAME_INTERVAL) {
+        accumulator %= FRAME_INTERVAL;
+        renderer.render(scene, camera);
+      }
     };
-    loop();
+
+    const start = () => {
+      if (running) return;
+      running = true;
+      clock.start();
+      loop();
+    };
+
+    const stop = () => {
+      if (!running) return;
+      running = false;
+      cancelAnimationFrame(frameId);
+      clock.stop();
+    };
+
+    let inView = true;
+    const sync = () => {
+      if (inView && !document.hidden) start();
+      else stop();
+    };
+
+    const observer =
+      'IntersectionObserver' in window
+        ? new IntersectionObserver(
+            (entries) => {
+              inView = entries.some((entry) => entry.isIntersecting);
+              sync();
+            },
+            { rootMargin: '200px' }
+          )
+        : null;
+    observer?.observe(canvas);
+
+    const onVisibility = () => sync();
+    document.addEventListener('visibilitychange', onVisibility);
 
     const update_size = () => {
       renderer.setSize(canvas.offsetWidth, canvas.offsetHeight, false);
@@ -471,9 +517,12 @@ export default function CreatureBlob({ className }: { className?: string }) {
 
     window.addEventListener('resize', update_size);
     update_size();
+    sync();
 
     return () => {
-      cancelAnimationFrame(frameId);
+      stop();
+      observer?.disconnect();
+      document.removeEventListener('visibilitychange', onVisibility);
       window.removeEventListener('resize', update_size);
       controls.dispose();
       geometry.dispose();

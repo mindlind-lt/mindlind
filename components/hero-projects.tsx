@@ -10,6 +10,7 @@ import {
 } from "@react-three/drei"
 import html2canvas from "html2canvas-pro"
 import * as THREE from "three"
+import { useRenderActive } from "@/lib/use-render-active"
 
 /**
  * Shared pointer position (normalized -1..1), updated from window so it works
@@ -116,11 +117,11 @@ function GlassCube() {
         temporalDistortion={0.02}
         // More samples + resolution = smoother, less grainy refraction and
         // clean dispersion at the edges.
-        samples={16}
-        resolution={2048}
+        samples={10}
+        resolution={1024}
         backside
         backsideThickness={0.4}
-        backsideResolution={1024}
+        backsideResolution={512}
         clearcoat={1}
         clearcoatRoughness={0}
         // Subtle absorption over depth with a faint cool tint — the classic
@@ -223,6 +224,7 @@ function Scene({ texture }: { texture: THREE.Texture | null }) {
 export default function HeroProjects() {
   const contentRef = useRef<HTMLDivElement>(null)
   const [texture, setTexture] = useState<THREE.Texture | null>(null)
+  const { ref: canvasWrapRef, active } = useRenderActive<HTMLDivElement>()
 
   // Track pointer globally (canvas overlay ignores pointer events).
   useEffect(() => {
@@ -318,11 +320,13 @@ export default function HeroProjects() {
       {/*  WebGL overlay: the glass cube refracting the captured content   */}
       {/* ---------------------------------------------------------------- */}
       <div
+        ref={canvasWrapRef}
         data-ignore-capture="true"
         className="pointer-events-none absolute inset-0 z-10"
       >
         <Canvas
-          dpr={[1, 2]}
+          frameloop={active ? "always" : "never"}
+          dpr={[1, 1.5]}
           camera={{ position: [0, 0, 5], fov: 45 }}
           gl={{ antialias: true, alpha: true }}
         >
