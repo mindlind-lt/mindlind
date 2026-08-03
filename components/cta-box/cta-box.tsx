@@ -10,9 +10,10 @@ export default function CtaBox() {
                 <video 
                 poster="/images/cta.jpg"
                   src="/videos/cta.mp4" 
-                  autoPlay 
-                  loop 
+                  autoPlay
+                  loop
                   muted
+                  playsInline
                 ></video>
               </div>
 
