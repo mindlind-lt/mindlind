@@ -56,7 +56,7 @@ export default function PageProjects() {
           <div className="works-masonry-item">
             <WorkThumb
               href="/projects/mondent"
-              imageSrc="/images/case-mua-2.png"
+              imageSrc="/images/case-mondent-1.png"
               imageWidth={560}
               imageHeight={560}
               title="MUA Faktur"
