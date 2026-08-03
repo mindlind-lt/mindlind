@@ -292,13 +292,13 @@ export default function HeroContact() {
   }, [])
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section className="relative min-h-screen portrait:min-h-[70svh] w-full overflow-hidden">
       {/* ---------------------------------------------------------------- */}
       {/*  Real DOM content (SEO-friendly, fully crawlable)                */}
       {/* ---------------------------------------------------------------- */}
       <div
         ref={contentRef}
-        className="absolute inset-0 flex min-h-screen flex-col items-center justify-center px-6 py-10 md:px-16 md:py-14"
+        className="absolute inset-0 flex min-h-screen portrait:min-h-[70svh] flex-col items-center justify-center px-6 py-10 md:px-16 md:py-14"
         style={{ backgroundColor: "transparent", color: "#17130d" }}
       >
 

@@ -46,8 +46,8 @@ export default function SectionServices() {
 
           <div className="bg-white rounded-[12px] p-[2px] flex-1 flex flex-col gap-[2px]">
             <div className="bg-background rounded-[10px] font-mono p-5 sm:p-8">
-              <div className="uppercase text-3xl font-bold">GOOGLE ADS</div>
-              <div className="uppercase text-2xl">ab 700 € / Monat</div>
+              <div className="uppercase text-2xl sm:text-3xl font-bold">GOOGLE ADS</div>
+              <div className="uppercase text-lg sm:text-2xl">ab 700 € / Monat</div>
             </div>
             <div className="flex-1 text-neutral-900 bg-background rounded-[10px] p-5 sm:p-8">
               <p className="mb-4">Enthalten:</p>

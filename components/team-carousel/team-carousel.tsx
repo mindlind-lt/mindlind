@@ -25,7 +25,7 @@ export default function TeamCarousel({ children, className }: TeamCarouselProps)
   const slides = React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {
       return (
-        <div className="flex-shrink-0 w-[480px]">
+        <div className="flex-shrink-0 w-[78vw] sm:w-[380px] lg:w-[480px]">
           {child}
         </div>
       );
@@ -35,7 +35,7 @@ export default function TeamCarousel({ children, className }: TeamCarouselProps)
 
   return (
     <div ref={emblaRef} className={cn(className)}>
-      <div className="flex gap-8">{slides}</div>
+      <div className="flex gap-4 sm:gap-8">{slides}</div>
     </div>
   );
 }
