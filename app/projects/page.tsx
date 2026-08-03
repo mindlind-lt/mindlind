@@ -59,7 +59,7 @@ export default function PageProjects() {
               imageSrc="/images/case-mondent-1.png"
               imageWidth={560}
               imageHeight={560}
-              title="MUA Faktur"
+              title="Mondent"
               pills={["Website", "UX/UI"]}
             />
           </div>
