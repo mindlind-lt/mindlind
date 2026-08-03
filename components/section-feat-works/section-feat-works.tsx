@@ -10,7 +10,7 @@ export default function SectionFeatWorks(){
       <>
 
         <div className="section-works-head">
-          <div className="section-works-index">[02]</div>
+          <div className="section-works-index">[03]</div>
           <div className="section-works-title">
             <h2>AUSGEWÄHLTE PROJEKTE</h2>
           </div>

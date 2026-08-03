@@ -100,7 +100,32 @@
 
     text-wrap: nowrap;
 
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+
     transition: 0.5s;
+}
+
+.service-dropdown-plus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.5s;
+}
+
+.service-dropdown-expanded .service-dropdown-plus {
+    transform: rotate(45deg);
+}
+
+/* The plus stands in for the label on screens where the label is hidden */
+@media (min-width: 64rem){
+
+    .service-dropdown-plus {
+        display: none;
+    }
+
 }
 
 @media (min-width: 48rem){

@@ -108,7 +108,23 @@ export default function ServiceDropdown({
       >
         <div className="service-dropdown-content">
           <button className="service-dropdown-header">
-            <div className="service-dropdown-title">{title}</div>
+            <div className="service-dropdown-title">
+              {title}
+              <span className="service-dropdown-plus" aria-hidden="true">
+                <svg
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </span>
+            </div>
             <div className="service-dropdown-label">{label}</div>
           </button>
           <div className="service-dropdown-text">
