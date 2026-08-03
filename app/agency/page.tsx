@@ -20,7 +20,7 @@ export default function PageAgency() {
         <div className="container mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8 lg:gap-1">
 
-            <div className="intro-row order-1 lg:order-2">
+            <div className="intro-row flex items-center">
               <div className="text-xl sm:text-2xl lg:text-3xl font-mono font-medium uppercase leading-[1.4]">
                 <p><span className="text-lg sm:text-xl lg:text-2xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;VON DER ERSTEN IDEE BIS ZUM LAUNCH ENTWICKELN WIR DIGITALE AUFTRITTE, DIE NICHT NUR SICHTBAR SIND, SONDERN VERSTANDEN WERDEN.</p>
                 <p className="mt-5">WIR FORMEN AUS IDEEN KLARE STRUKTUREN, AUS STRUKTUREN STARKE ERLEBNISSE UND AUS ERLEBNISSEN MESSBARE WIRKUNG.</p>
@@ -28,7 +28,7 @@ export default function PageAgency() {
               </div>
             </div>
 
-            <div className="order-2 lg:order-1 h-[380px] lg:h-auto">
+            <div className="h-[380px] lg:h-auto">
               <CreatureBlob />
             </div>
 
