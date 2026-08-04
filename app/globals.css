@@ -126,7 +126,14 @@ body {
 .hero {
     position: relative;
     height: 100vh;
-    max-height: 760px;
+}
+
+@media (orientation: portrait) {
+
+    .hero {
+        max-height: 720px;
+    }
+
 }
 
 .hero::before {
@@ -254,14 +261,6 @@ body {
 
     .hero-title-lead {
         font-size: 28px;
-    }
-
-}
-
-@media (min-width: 80rem){
-
-    .hero-title {
-        padding-bottom: 80px;
     }
 
 }
