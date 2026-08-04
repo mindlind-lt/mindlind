@@ -58,7 +58,18 @@ export default function SectionFeatWorks(){
 
               <div className="works-masonry-item">
                 <WorkThumb
-                  href="/projects/funkyramen"
+                  href="/projects/funky-coffee"
+                  imageSrc="/images/case-funky-coffee-1.png"
+                  imageWidth={1536}
+                  imageHeight={1024}
+                  title="Funky Coffee"
+                  pills={["Website", "UX/UI"]}
+                />
+              </div>
+
+              <div className="works-masonry-item">
+                <WorkThumb
+                  href="/projects/funky-ramen"
                   imageSrc="/images/case-funky-ramen-1.jpg"
                   imageWidth={1536}
                   imageHeight={1024}

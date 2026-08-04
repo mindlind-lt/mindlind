@@ -22,7 +22,18 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
-              href="/projects/funkyramen"
+              href="/projects/funky-coffee"
+              imageSrc="/images/case-funky-coffee-1.png"
+              imageWidth={1536}
+              imageHeight={1024}
+              title="Funky Coffee"
+              pills={["Website", "UX/UI"]}
+            />
+          </div>
+
+          <div className="works-masonry-item">
+            <WorkThumb
+              href="/projects/funky-ramen"
               imageSrc="/images/case-funky-ramen-1.jpg"
               imageWidth={1536}
               imageHeight={1024}
@@ -60,6 +71,61 @@ export default function PageProjects() {
               imageWidth={560}
               imageHeight={560}
               title="Mondent"
+              pills={["Website", "UX/UI"]}
+            />
+          </div>
+
+          <div className="works-masonry-item">
+            <WorkThumb
+              href="/projects/autosl"
+              imageSrc="/images/case-autosl-1.jpg"
+              imageWidth={560}
+              imageHeight={560}
+              title="AutoSL"
+              pills={["Website", "UX/UI"]}
+            />
+          </div>
+
+          <div className="works-masonry-item">
+            <WorkThumb
+              href="/projects/luxfloor"
+              imageSrc="/images/case-luxfloor-1.png"
+              imageWidth={560}
+              imageHeight={560}
+              title="LuxFloor"
+              pills={["Website", "UX/UI"]}
+            />
+          </div>
+
+          <div className="works-masonry-item">
+            <WorkThumb
+              href="/projects/panda-travel"
+              imageSrc="/images/case-pandatravel-1.png"
+              imageWidth={560}
+              imageHeight={560}
+              title="Panda Travel"
+              pills={["Website", "UX/UI"]}
+            />
+          </div>
+
+          <div className="works-masonry-item">
+            <WorkThumb
+              href="/projects/factorysl"
+              imageSrc="/images/case-factorysl-1.jpg"
+              imageWidth={560}
+              imageHeight={560}
+              title="Factory SL"
+              pills={["Website", "UX/UI"]}
+            />
+          </div>
+
+          <div className="works-masonry-item">
+            <WorkThumb
+              href="/projects/onlysmile"
+              imageSrc="/images/case-onlysmile-1.png"
+              imageWidth={560}
+              imageHeight={560}
+              title="OnlySmile"
               pills={["Website", "UX/UI"]}
             />
           </div>
