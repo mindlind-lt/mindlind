@@ -86,6 +86,7 @@ export default function PageCasePrince() {
       </div>
 
 
+      {/* Started from */}
       <div className="container mx-auto px-5 py-15 flex gap-20">
         <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Started From</h2>
         <div className="text-base space-y-3 flex-2">Prince Food verfügte bereits über eine starke operative Grundlage: große Produktionsflächen, moderne Technik, eingespielte Abläufe und Erfahrung in der Herstellung tiefgekühlter Lebensmittel. Die Herausforderung bestand darin, diese industrielle Kompetenz digital so darzustellen, dass sie für Geschäftspartner, Kunden und potenzielle Auftraggeber sofort verständlich wird.</div>
@@ -104,6 +105,7 @@ export default function PageCasePrince() {
       </div>
 
 
+      {/* Process */}
       <div className="container mx-auto px-5 py-15 flex gap-20">
         <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Process</h2>
         <div className="text-base space-y-3 flex-2">Die zentrale Aufgabe lag darin, ein eher technisches und industrielles Thema hochwertig, klar und visuell attraktiv zu präsentieren. Lebensmittelproduktion muss Vertrauen erzeugen: Sauberkeit, Struktur, Qualitätssicherung und professionelle Abläufe sind entscheidend. Genau diese Werte mussten auf der Website sichtbar werden.</div>
