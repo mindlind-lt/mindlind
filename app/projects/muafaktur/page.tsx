@@ -72,9 +72,9 @@ export default function PageCaseMua() {
           <p>Die Herausforderung bestand darin, drei unterschiedliche Geschäftsbereiche klar, hochwertig und verständlich zusammenzuführen. Wir entwickelten eine Website, auf der Nutzerinnen und Nutzer Beauty-Produkte entdecken, Ausbildungsformate buchen und professionelle Make-up-Services für Events, Produktionen und internationale Projekte anfragen können.</p>
         </div>
 
-        <div className="bg-white rounded-xl flex items-center gap-25 my-15 pl-15 pr-28 py-10">
+        <div className="bg-white rounded-xl flex items-center gap-25 my-15 pl-15 pr-30 py-10">
           <div className="flex-1">
-            <div className="flex items-center justify-center py-10 px-5 min-h-[200px]">
+            <div className="flex items-center justify-center py-10 px-5 min-h-50">
               <Image 
                 src="/images/case-mua-logo.svg"
                 width={200}

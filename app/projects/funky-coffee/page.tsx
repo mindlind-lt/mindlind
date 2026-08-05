@@ -61,7 +61,7 @@ export default function PageCaseFunkyCoffee() {
         </div>
 
         <div className="mt-15">
-          <DoorButton className="w-full" href="http://funky-coffee.de/" target="_blank">OPEN WEBSITE</DoorButton>
+          <DoorButton className="w-full" href="https://funky-coffee.de/" target="_blank">OPEN WEBSITE</DoorButton>
         </div>
 
       </div>
@@ -80,9 +80,9 @@ export default function PageCaseFunkyCoffee() {
 
       {/* About client */}
       <div className="container mx-auto px-5">
-        <div className="bg-white rounded-xl flex items-center gap-25 my-15 pl-15 pr-28 py-10">
+        <div className="bg-white rounded-xl flex items-center gap-25 my-15 pl-15 pr-30 py-10">
           <div className="flex-1">
-            <div className="flex items-center justify-center py-10 px-5 min-h-[200px]">
+            <div className="flex items-center justify-center py-10 px-5 min-h-50">
               <Image 
                 src="/images/case-funky-coffee-logo.svg"
                 alt=""
@@ -175,6 +175,9 @@ export default function PageCaseFunkyCoffee() {
           <p>Diese Nähe zur Herstellung sollte auf der Website sichtbar werden. Funky Coffee wirkt dadurch nicht wie ein austauschbares Café, sondern wie ein familiärer Ort mit eigener Handschrift.</p>
         </div>
       </div>
+
+
+      <Separator />
 
 
       <div className="container mx-auto px-5 py-15 flex gap-20">
