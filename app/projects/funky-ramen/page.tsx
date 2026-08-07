@@ -100,7 +100,7 @@ export default function PageCaseFunky() {
 
       {/* Started from */}
       <div className="container mx-auto px-5 py-15 flex gap-20">
-        <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Started From</h2>
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Started From</h2>
         <div className="text-base space-y-3 flex-2">Funky Ramen startete mit einem klaren gastronomischen Konzept: Ramen nach japanischer Inspiration, eigene kreative Rezepturen und eine Atmosphäre, die sich deutlich von klassischen Restaurants unterscheidet. Die Marke sollte nicht nur über das Essen funktionieren, sondern über ein gesamtes Erlebnis aus Geschmack, Design, Musik, Anime-Stimmung und urbaner Energie.</div>
         <div className="text-base space-y-3 flex-2">Wir begannen damit, die wichtigsten Stärken des Restaurants herauszuarbeiten: intensive Brühen, kreative Ramen-Sorten, warme große Rollen und ein Innenraum, der Gäste in eine japanisch inspirierte, fast filmische Welt bringt. Diese Elemente wurden zur Grundlage für die digitale Struktur und visuelle Richtung der Website.</div>
       </div>
@@ -119,7 +119,7 @@ export default function PageCaseFunky() {
 
       {/* Process */}
       <div className="container mx-auto px-5 py-15 flex gap-20">
-        <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Process</h2>
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Process</h2>
         <div className="text-base space-y-3 flex-2">Die Herausforderung bestand darin, Funky Ramen nicht wie ein gewöhnliches Restaurant zu präsentieren. Die Website sollte Appetit machen, aber gleichzeitig die besondere Atmosphäre des Ortes transportieren. Dafür musste der digitale Auftritt genauso eigenständig wirken wie das Restaurant selbst: laut genug, um aufzufallen, aber hochwertig genug, um professionell und vertrauenswürdig zu bleiben.</div>
         <div className="text-base space-y-3 flex-2">Wir entwickelten eine visuelle Richtung, die japanische Esskultur mit modernen Fashion-, Anime- und Samurai-Elementen verbindet. Ramen, Sushi, Rollen und visuelle Details wurden nicht nur als Produkte gezeigt, sondern als Teil einer klaren Markenwelt. Die Seite führt Nutzerinnen und Nutzer durch das Konzept, die Speisen und die Atmosphäre des Restaurants, ohne dabei überladen zu wirken.</div>
       </div>
@@ -178,7 +178,7 @@ export default function PageCaseFunky() {
 
 
       <div className="container mx-auto px-5 py-15 flex gap-20">
-        <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Results</h2>
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Results</h2>
         <div className="text-base space-y-3 flex-2">Das Ergebnis ist ein digitaler Auftritt, der Funky Ramen als eigenständiges Restaurantkonzept in Düsseldorf positioniert. Die Website vermittelt Geschmack, Atmosphäre und Markenidentität auf eine visuelle Weise, die neugierig macht und Lust auf einen Besuch erzeugt.</div>
         <div className="text-base space-y-3 flex-2">Funky Ramen wird dadurch nicht nur als Ort für Ramen und warme Rollen wahrgenommen, sondern als modernes japanisch inspiriertes Erlebnis mit eigener Handschrift. Der Auftritt stärkt die Marke, macht das Konzept verständlich und schafft eine starke Grundlage für Sichtbarkeit, Wiedererkennung und neue Gäste.</div>
       </div>

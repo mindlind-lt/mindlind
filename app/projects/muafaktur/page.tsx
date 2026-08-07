@@ -92,7 +92,7 @@ export default function PageCaseMua() {
 
 
       <div className="container mx-auto px-5 py-15 flex gap-20">
-        <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Started From</h2>
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Started From</h2>
         <div className="text-base space-y-3 flex-2">MUA Faktur startete mit einer starken persönlichen Marke und mehreren Geschäftsbereichen, die digital stärker miteinander verbunden werden sollten. Oksana Anichuk verfügte bereits über professionelle Expertise, eigene Produkte, Ausbildungsformate und Make-up-Services — die Website musste diese Bereiche jedoch so strukturieren, dass sie für Besucherinnen und Besucher sofort verständlich werden.</div>
         <div className="text-base space-y-3 flex-2">Wir begannen damit, die Marke in drei klare Wege zu gliedern: Shop, Academy und Make-up-Services. Jeder Bereich erhielt eine eigene Funktion, eine eigene Nutzerführung und eine klare Conversion-Logik, blieb aber gleichzeitig Teil einer einheitlichen Markenwelt.</div>
       </div>
@@ -107,7 +107,7 @@ export default function PageCaseMua() {
       </div>
 
       <div className="container mx-auto px-5 py-15 flex gap-20">
-        <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Challenge / Process</h2>
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Challenge / Process</h2>
         <div className="text-base space-y-3 flex-2">Die größte Herausforderung lag in der Balance zwischen Ästhetik und Funktion. Die Website sollte hochwertig und editorial wirken, gleichzeitig aber als praktisches Business-Tool funktionieren. Der Shop musste Produkte klar präsentieren. Die Academy benötigte eine verständliche Buchungs- und Registrierungsstruktur. Der Servicebereich musste Vertrauen, Qualität und die Möglichkeit vermitteln, ein professionelles Make-up-Team für Events, Organisationen und Produktionen anzufragen.</div>
         <div className="text-base space-y-3 flex-2">Wir entwickelten eine individuelle digitale Plattform mit klarer Navigation, hochwertiger visueller Sprache und einer Struktur, die Besucherinnen und Besucher gezielt durch die unterschiedlichen Angebote führt. Statt einzelne Bereiche voneinander zu trennen, verbanden wir Produktverkauf, Ausbildung und Dienstleistung zu einem konsistenten digitalen Erlebnis.</div>
       </div>
@@ -158,13 +158,13 @@ export default function PageCaseMua() {
       {/* <div className="bg-red-700 h-20"></div> */}
 
       <div className="container mx-auto px-5 py-15 flex gap-20">
-        <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Results</h2>
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Results</h2>
         <div className="text-base space-y-3 flex-2">Das Ergebnis ist eine hochwertige digitale Plattform, die E-Commerce, Ausbildung und professionelle Make-up-Dienstleistungen in einer klaren Struktur verbindet. MUA Faktur kann Produkte präsentieren, Academy-Formate bewerben und Service-Anfragen über eine Website erhalten, die elegant, fokussiert und skalierbar wirkt.</div>
         <div className="text-base space-y-3 flex-2">Die Marke wird nicht mehr über einzelne Angebote dargestellt, sondern über ein konsistentes digitales Ökosystem. Die Website stärkt Vertrauen, verbessert die Orientierung und schafft eine professionelle Grundlage für Produktverkäufe, Kursbuchungen und weiteres Markenwachstum.</div>
       </div>
 
       <div className="container mx-auto px-5 py-15 flex gap-20">
-        <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Credits</h2>
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Credits</h2>
         <div className="flex-1">
           <div className="border-b border-gray-200 flex gap-20 mb-2 pb-2">
             <div className="flex-1 font-medium">Creative Direction</div>

@@ -76,7 +76,7 @@ export default function PageCaseFunkyCoffee() {
         </div>
 
       </div>
-      
+
 
       {/* About client */}
       <div className="container mx-auto px-5">
@@ -100,7 +100,7 @@ export default function PageCaseFunkyCoffee() {
 
       {/* Started from */}
       <div className="container mx-auto px-5 py-15 flex gap-20">
-        <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Started From</h2>
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Started From</h2>
         <div className="text-base space-y-3 flex-2">Funky Coffee startete mit einem klaren Produktfokus und einer starken eigenen Identität. Hochwertiger Kaffee, kreative Getränke, Matcha, japanisch inspirierte Sandwiches und hausgemachte Desserts bilden den Kern des Konzepts. Besonders wichtig war dabei, dass die Produkte nicht beliebig wirken, sondern handgemacht, frisch und persönlich.</div>
         <div className="text-base space-y-3 flex-2">Wir begannen damit, die Marke als kleines, aber eigenständiges Food-Erlebnis zu verstehen. Die Website sollte nicht wie eine einfache Café-Visitenkarte wirken, sondern die Atmosphäre, den Geschmack und den Charakter des Ortes transportieren. Dafür wurde die Seite als emotionaler Onepager aufgebaut, der Besucherinnen und Besucher schnell durch die wichtigsten Bereiche führt.</div>
       </div>
@@ -119,7 +119,7 @@ export default function PageCaseFunkyCoffee() {
 
       {/* Process */}
       <div className="container mx-auto px-5 py-15 flex gap-20">
-        <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Process</h2>
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Process</h2>
         <div className="text-base space-y-3 flex-2">Die zentrale Herausforderung bestand darin, ein relativ kompaktes Café-Konzept digital groß und einprägsam wirken zu lassen. Die Website musste erklären, was Funky Coffee besonders macht, ohne zu textlastig oder überladen zu werden. Kaffee, Sandwiches, Desserts, japanische Einflüsse und der Standort mussten auf einer Seite verständlich und appetitlich präsentiert werden.</div>
         <div className="text-base space-y-3 flex-2">
           <p>Wir entwickelten eine visuelle Richtung, die helle Food-Inszenierung, weiche Farben, japanisch inspirierte Details und eine leichte Anime-Ästhetik verbindet. Die Seite wurde bewusst lebendig gestaltet: mit Animationen, interaktiven Elementen und einer Nutzerführung, die beim Scrollen immer wieder neue visuelle Reize setzt.</p>
@@ -181,7 +181,7 @@ export default function PageCaseFunkyCoffee() {
 
 
       <div className="container mx-auto px-5 py-15 flex gap-20">
-        <h2 className="text-xl font-semibold flex-1 max-w-[200px]">Results</h2>
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Results</h2>
         <div className="text-base space-y-3 flex-2">Das Ergebnis ist ein lebendiger Onepager, der Funky Coffee als eigenständiges Café-Konzept positioniert. Die Website verbindet hochwertigen Kaffee, japanisch inspirierte Sandwiches, hausgemachte Desserts und eine verspielte visuelle Welt in einem klaren digitalen Erlebnis.</div>
         <div className="text-base space-y-3 flex-2">
           <p>Durch Animationen, starke Produktinszenierung und eine einfache Nutzerführung vermittelt der Auftritt nicht nur Informationen, sondern Atmosphäre. Besucherinnen und Besucher verstehen schnell, was Funky Coffee besonders macht, wo sich das Café befindet und warum sich ein Besuch lohnt.</p>
