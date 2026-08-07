@@ -180,6 +180,7 @@ export default function PageCaseFunkyCoffee() {
       <Separator />
 
 
+      {/* Results */}
       <div className="container mx-auto px-5 py-15 flex gap-20">
         <h2 className="text-xl font-semibold flex-1 max-w-50">Results</h2>
         <div className="text-base space-y-3 flex-2">Das Ergebnis ist ein lebendiger Onepager, der Funky Coffee als eigenständiges Café-Konzept positioniert. Die Website verbindet hochwertigen Kaffee, japanisch inspirierte Sandwiches, hausgemachte Desserts und eine verspielte visuelle Welt in einem klaren digitalen Erlebnis.</div>

@@ -160,6 +160,42 @@ export default function PageCaseAutosl() {
       </div>
 
 
+      <div className="px-8 py-15">
+        <Image
+          src="/images/case-autosl-5.jpg"
+          width={1440}
+          height={720}
+          alt=""
+          className="w-full rounded-lg"
+        />
+      </div>
+
+
+      {/* Text 2 */}
+      <div className="container mx-auto px-5 py-15">
+        <div className="text-xl space-y-3 max-w-235">
+          <p>Ein besonderer Fokus lag auf der Verbindung zwischen Fahrzeugpräsentation und technischer Automatisierung. Die Website musste hochwertige Bilder und aktuelle Fahrzeugdaten übernehmen, gleichzeitig aber schnell, stabil und angenehm nutzbar bleiben.</p>
+          <p>Die Integration wurde so umgesetzt, dass AutoSL sein Angebot effizient pflegen kann, während Interessenten eine klare, hochwertige und vertrauenswürdige Übersicht erhalten.</p>
+        </div>
+      </div>
+
+
+      <Separator />
+
+
+      {/* Results */}
+      <div className="container mx-auto px-5 py-15 flex gap-20">
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Results</h2>
+        <div className="text-base space-y-3 flex-2">
+          <p>Das Ergebnis ist ein interaktiver digitaler Showroom, der AutoSL als Premium-Marke im internationalen Luxusautomobilmarkt positioniert. Die Website verbindet exklusive Fahrzeugpräsentation, klare Nutzerführung und eine effiziente technische Anbindung an bestehende Verkaufsprozesse.</p>
+        </div>
+        <div className="text-base space-y-3 flex-2">
+          <p>AutoSL erhält damit eine digitale Plattform, die nicht nur Fahrzeuge zeigt, sondern Vertrauen, Wertigkeit und Expertise vermittelt. Die Marke wird als Zugang zu seltenen Automobilen inszeniert — diskret, hochwertig und technisch sauber umgesetzt.</p>
+        </div>
+      </div>
+
+      <div className="h-20"></div>
+
     </>
   )
 }
