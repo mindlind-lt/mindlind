@@ -8,7 +8,7 @@ export default function CtaBox() {
 
               <div className="bg-gray-200 cta-box-media">
                 <video 
-                poster="/images/cta.jpg"
+                  poster="/images/cta.jpg"
                   src="/videos/cta.mp4" 
                   autoPlay
                   loop
