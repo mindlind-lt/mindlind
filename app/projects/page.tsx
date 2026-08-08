@@ -7,6 +7,11 @@ import HeroProjects from "@/components/hero-projects";
 import { GlassObject } from "@/components/canvasui/GlassObject";
 
 
+// TODO: Cache Components adoption. Refactor this route so this opt-out can be removed.
+// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
+export const instant = false;
+
+
 export default function PageProjects() {
   return (
     <>
