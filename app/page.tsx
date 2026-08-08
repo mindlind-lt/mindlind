@@ -13,6 +13,12 @@ import SplineMedusa from "@/components/spline-medusa";
 import SplineTorus from "@/components/spline-torus";
 import SectionFeatWorks from "@/components/section-feat-works/section-feat-works";
 import SplineCubes from "@/components/spline-cubes";
+import type { Metadata } from "next";
+
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = buildMetadata("/");
+
 
 // import GlassCubeAbout from "@/components/glass-cube-about";
 

@@ -6,6 +6,7 @@ import Footer from "@/components/footer/footer";
 import Preloader from "@/components/preloader/preloader";
 import PreloadResources from "@/components/preload-resources";
 import TopProgressBar from "@/components/progress-bar/top-progress-bar";
+import { siteConfig } from "@/lib/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,8 +20,42 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mindlind Werbeagentur",
-  description: "Unser 360° Ansatz für Projektmanagement umfasst fünf Kernphasen, um herausragende Ergebnisse zu erzielen",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.legalName,
+    // Page titles render as "Leistungen | Mindlind Werbeagentur".
+    template: `%s | ${siteConfig.legalName}`,
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.legalName,
+  authors: [{ name: siteConfig.legalName, url: siteConfig.url }],
+  creator: siteConfig.legalName,
+  publisher: siteConfig.legalName,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    siteName: siteConfig.legalName,
+    title: siteConfig.legalName,
+    description: siteConfig.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.legalName,
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang={siteConfig.lang}
       className={`${inter.variable} ${spaceMono.variable} antialiased`}
     >
       <body>

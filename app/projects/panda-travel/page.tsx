@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = buildMetadata("/projects/panda-travel");
+
 export default function PageCasePandaTravel() {
   return (
     <>

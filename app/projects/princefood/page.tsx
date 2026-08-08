@@ -3,6 +3,12 @@ import { ImageCarousel } from "@/components/ui/image-carousel";
 import { ParallaxImage } from "@/components/ui/parallax-image";
 import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
+import type { Metadata } from "next";
+
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = buildMetadata("/projects/princefood");
+
 
 export default function PageCasePrince() {
   return (

@@ -1,6 +1,12 @@
 import HeroContact from "@/components/hero-contact";
 import SectionContact from "@/components/section-contact/section-contact";
 import SplineContactHero from "@/components/spline-contact-hero";
+import type { Metadata } from "next";
+
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = buildMetadata("/contact");
+
 
 export default function PageContact() {
   return (

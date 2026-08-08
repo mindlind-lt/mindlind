@@ -7,6 +7,12 @@ import TeamCarousel from "@/components/team-carousel/team-carousel";
 import SplineAgency2 from "@/components/spline-agency-2";
 import HeroAgency from "@/components/hero-agency";
 import CreatureBlob from "@/components/creature-blob";
+import type { Metadata } from "next";
+
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = buildMetadata("/agency");
+
 
 export default function PageAgency() {
   return (

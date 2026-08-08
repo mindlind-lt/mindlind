@@ -5,6 +5,12 @@ import SectionContact from "@/components/section-contact/section-contact";
 import HeroProjects from "@/components/hero-projects";
 
 import { GlassObject } from "@/components/canvasui/GlassObject";
+import type { Metadata } from "next";
+
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = buildMetadata("/projects");
+
 
 
 

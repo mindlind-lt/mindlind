@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = buildMetadata("/projects/onlysmile");
+
 export default function PageCaseOnlysmile() {
   return (
     <>
