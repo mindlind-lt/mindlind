@@ -80,17 +80,16 @@ export default function PageCasePandaTravel() {
       </div>
 
 
-
       {/* About client */}
       <div className="container mx-auto px-5">
-        <div className="bg-[#F1E9E1] rounded-xl flex items-center gap-25 my-15 pl-15 pr-30 py-10">
+        <div className="bg-white rounded-xl flex items-center gap-25 my-15 pl-15 pr-30 py-10">
           <div className="flex-1">
             <div className="flex items-center justify-center py-10 px-5 min-h-50">
               <Image 
-                src="/images/case-luxfloor-logo.svg"
+                src="/images/case-pandatravel-logo.png"
                 alt=""
-                width={220}
-                height={120}
+                width={150}
+                height={150}
               />
             </div>
           </div>
@@ -101,6 +100,111 @@ export default function PageCasePandaTravel() {
       </div>
 
 
+      {/* Started from */}
+      <div className="container mx-auto px-5 py-15 flex gap-20">
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Started From</h2>
+        <div className="text-base space-y-3 flex-2">Panda Travel startete mit einem besonderen Konzept: Unternehmerinnen und Unternehmer sollten China nicht nur besuchen, sondern den Handel mit China praktisch verstehen. Dazu gehören Lieferantensuche, Fabrikbesuche, Messebesuche, Verhandlungen, Produktentwicklung, Qualitätsfragen und die organisatorischen Schritte, die vor einem erfolgreichen Import wichtig sind.</div>
+        <div className="text-base space-y-3 flex-2">Wir begannen damit, das komplexe Angebot in eine klare digitale Struktur zu bringen. Die Website musste erklären, für wen die Reisen geeignet sind, welche Vorteile Teilnehmende erhalten und warum Panda Travel nicht einfach ein Reiseanbieter ist, sondern ein professioneller Begleiter für Business, Sourcing und internationale Handelsprozesse.</div>
+      </div>
+
+
+      <div className="px-8 py-15">
+        <Image
+          src="/images/case-pandatravel-2.png"
+          width={1440}
+          height={1440}
+          alt=""
+          className="w-full rounded-lg"
+        />
+      </div>
+
+
+      {/* Process */}
+      <div className="container mx-auto px-5 py-15 flex gap-20">
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Process</h2>
+        <div className="text-base space-y-3 flex-2">
+          <p>Die zentrale Herausforderung bestand darin, ein erklärungsbedürftiges Angebot verständlich und hochwertig zu präsentieren. Business-Reisen nach China verbinden viele Themen: Reiseplanung, Lieferantensuche, Produktion, Logistik, kulturelle Orientierung und wirtschaftliche Entscheidungen. Diese Inhalte mussten so aufgebaut werden, dass Interessenten schnell Vertrauen entwickeln und den konkreten Nutzen erkennen.</p>
+        </div>
+        <div className="text-base space-y-3 flex-2">
+          <p>Wir entwickelten eine individuelle Website mit klarer Nutzerführung, starker visueller Atmosphäre und einer Struktur, die Schritt für Schritt durch das Angebot führt. Dabei wurde China nicht klischeehaft dargestellt, sondern modern, wirtschaftlich, kulturell und visuell vielseitig inszeniert.</p>
+        </div>
+        <div className="text-base space-y-3 flex-2">
+          <p>Ein wichtiger Bestandteil war außerdem die Buchungs- und Kalendersystematik. Interessenten können nachvollziehen, wann neue Reisen geplant sind, welche Formate verfügbar sind und wie sie sich für kommende Gruppenreisen anmelden können.</p>
+        </div>
+      </div>
+
+
+      {/* 2 photos */}
+      <div className="px-8 py-15">
+        <div className="flex gap-5">
+          <div>
+            <Image
+              src="/images/case-pandatravel-3.png"
+              width={1000}
+              height={600}
+              alt=""
+              className="w-full rounded-lg"
+            />
+          </div>
+          <div>
+            <Image
+              src="/images/case-pandatravel-4.png"
+              width={1000}
+              height={600}
+              alt=""
+              className="w-full rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+
+
+      {/* More text */}
+      <div className="container mx-auto px-5 py-15">
+        <div className="text-xl space-y-3 max-w-235">
+          <p>Die visuelle Richtung wurde dunkel, cineastisch und hochwertig entwickelt. Goldene und türkisfarbene Lichtakzente, moderne Metropolen, traditionelle Architekturelemente und atmosphärische Details schaffen eine Markenwelt, die Business, Reise und China-Kompetenz verbindet.</p>
+          <p>Der Auftritt sollte nicht wie ein gewöhnliches Reiseportal wirken, sondern wie ein hochwertiges internationales Business-Erlebnis.</p>
+        </div>
+      </div>
+
+
+      <div className="px-8 py-15">
+        <Image
+          src="/images/case-pandatravel-5.png"
+          width={1440}
+          height={720}
+          alt=""
+          className="w-full rounded-lg"
+        />
+      </div>
+
+
+      {/* Text 2 */}
+      <div className="bg-white">
+        <div className="container mx-auto px-5 py-15">
+          <div className="text-xl space-y-3 max-w-235">
+            <p>Neben dem geschäftlichen Fokus wurde auch die kulturelle Seite Chinas berücksichtigt. Reisen können mit besonderen Stationen verbunden werden — von modernen Städten und Produktionszentren bis hin zu bekannten Sehenswürdigkeiten, traditionellen Orten und eindrucksvollen Landschaften.</p>
+            <p>Dadurch entsteht ein Angebot, das nicht nur geschäftlich relevant ist, sondern auch ein tieferes Verständnis für China vermittelt.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <Separator />
+
+
+      {/* Results */}
+      <div className="container mx-auto px-5 py-15 flex gap-20">
+        <h2 className="text-xl font-semibold flex-1 max-w-50">Results</h2>
+        <div className="text-base space-y-3 flex-2">
+          <p>Das Ergebnis ist ein individueller digitaler Auftritt, der Panda Travel als vertrauenswürdigen Partner für Geschäftsreisen nach China positioniert. Die Website erklärt ein komplexes Angebot klar, schafft Vertrauen und macht den konkreten Nutzen für Unternehmerinnen, Unternehmer und Unternehmen sichtbar.</p>
+        </div>
+        <div className="text-base space-y-3 flex-2">
+          <p>Panda Travel erhält damit nicht nur eine Präsentationsseite, sondern ein funktionales System für Information, Lead-Generierung und Reiseanfragen. Der digitale Auftritt verbindet Business, Sourcing, Logistik und kulturelle Orientierung in einer hochwertigen, interaktiven Markenwelt.</p>
+        </div>
+      </div>
+
+      <div className="h-20"></div>
 
 
     </>

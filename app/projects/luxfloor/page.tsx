@@ -135,6 +135,7 @@ export default function PageCaseLuxfloor() {
       </div>
 
 
+      {/* 2 photos */}
       <div className="px-8 py-15">
         <div className="flex gap-5">
           <div>
