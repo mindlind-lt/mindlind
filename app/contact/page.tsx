@@ -2,10 +2,6 @@ import HeroContact from "@/components/hero-contact";
 import SectionContact from "@/components/section-contact/section-contact";
 import SplineContactHero from "@/components/spline-contact-hero";
 
-// TODO: Cache Components adoption. Refactor this route so this opt-out can be removed.
-// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
-export const instant = false;
-
 export default function PageContact() {
   return (
     <>

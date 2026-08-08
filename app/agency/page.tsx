@@ -8,10 +8,6 @@ import SplineAgency2 from "@/components/spline-agency-2";
 import HeroAgency from "@/components/hero-agency";
 import CreatureBlob from "@/components/creature-blob";
 
-// TODO: Cache Components adoption. Refactor this route so this opt-out can be removed.
-// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
-export const instant = false;
-
 export default function PageAgency() {
   return (
     <>
