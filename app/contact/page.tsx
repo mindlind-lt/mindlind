@@ -1,4 +1,4 @@
-import HeroContact from "@/components/hero-contact";
+import Hero from "@/components/hero";
 import SectionContact from "@/components/section-contact/section-contact";
 import SplineContactHero from "@/components/spline-contact-hero";
 import type { Metadata } from "next";
@@ -16,7 +16,7 @@ export default function PageContact() {
         <SplineContactHero />
       </div> */}
 
-      <HeroContact />
+      <Hero title="KONTAKT" />
 
 
       {/* <div className="absolute top-32 left-0 right-0">

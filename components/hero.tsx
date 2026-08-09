@@ -221,7 +221,12 @@ function Scene({ texture }: { texture: THREE.Texture | null }) {
 /* -------------------------------------------------------------------------- */
 /*  Public component                                                           */
 /* -------------------------------------------------------------------------- */
-export default function HeroProjects() {
+interface HeroProps {
+  /** The page headline, rendered as the section's <h1>. */
+  title: string
+}
+
+export default function Hero({ title }: HeroProps) {
   const contentRef = useRef<HTMLDivElement>(null)
   const [texture, setTexture] = useState<THREE.Texture | null>(null)
   const { ref: canvasWrapRef, active } = useRenderActive<HTMLDivElement>()
@@ -247,7 +252,6 @@ export default function HeroProjects() {
       try {
         const canvas = await html2canvas(el, {
           backgroundColor: "#F4F4F4",
-          // backgroundColor: "#ece7de",
           scale: Math.min(2, window.devicePixelRatio || 1),
           logging: false,
           useCORS: true,
@@ -291,7 +295,8 @@ export default function HeroProjects() {
       clearTimeout(timer)
       window.removeEventListener("resize", onResize)
     }
-  }, [])
+    // Re-capture when the headline changes so the refracted texture matches.
+  }, [title])
 
   return (
     <section className="relative min-h-screen portrait:min-h-[70svh] w-full overflow-hidden">
@@ -303,7 +308,6 @@ export default function HeroProjects() {
         className="absolute inset-0 flex min-h-screen portrait:min-h-[70svh] flex-col items-center justify-center px-6 py-10 md:px-16 md:py-14"
         style={{ backgroundColor: "transparent", color: "#17130d" }}
       >
-
         <h1
           className="font-mono font-bold tracking-tight"
           style={{
@@ -311,9 +315,8 @@ export default function HeroProjects() {
             color: "#17130d",
           }}
         >
-          {"PROJEKTE"}
+          {title}
         </h1>
-
       </div>
 
       {/* ---------------------------------------------------------------- */}

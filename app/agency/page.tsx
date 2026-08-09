@@ -5,7 +5,7 @@ import TeamCarousel from "@/components/team-carousel/team-carousel";
 
 // import SplineAgencyHero from "@/components/spline-agency-hero";
 import SplineAgency2 from "@/components/spline-agency-2";
-import HeroAgency from "@/components/hero-agency";
+import Hero from "@/components/hero";
 import CreatureBlob from "@/components/creature-blob";
 import type { Metadata } from "next";
 
@@ -19,7 +19,7 @@ export default function PageAgency() {
     <>
 
 
-      <HeroAgency />
+      <Hero title="AGENCY" />
 
 
       <div className="intro pb-12 lg:pb-20">

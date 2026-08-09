@@ -1,6 +1,6 @@
 'use client';
 
-import HeroServices from "@/components/hero-services";
+import Hero from "@/components/hero";
 import SectionServices from "@/components/section-services/section-services";
 import SectionContact from "@/components/section-contact/section-contact";
 
@@ -9,7 +9,7 @@ export default function PageServices(){
     return (
         <>
 
-            <HeroServices />
+            <Hero title="LEISTUNGEN" />
 
 
             {/* <div className="pt-[160px] pb-20 border-4 border-dashed border-red-500 relative">

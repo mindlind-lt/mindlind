@@ -2,7 +2,7 @@ import WorkThumb from "@/components/work-thumb/work-thumb";
 import SectionContact from "@/components/section-contact/section-contact";
 // import SplineProjectsHero from "@/components/spline-projects-hero";
 
-import HeroProjects from "@/components/hero-projects";
+import Hero from "@/components/hero";
 
 import { GlassObject } from "@/components/canvasui/GlassObject";
 import type { Metadata } from "next";
@@ -18,7 +18,7 @@ export default function PageProjects() {
   return (
     <>
 
-      <HeroProjects />
+      <Hero title="PROJEKTE" />
 
       {/* <div className="border-4 border-dashed border-red-500">
         <SplineProjectsHero />
