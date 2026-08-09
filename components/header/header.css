@@ -243,6 +243,12 @@
     transition: 0.5s;
 }
 
+/* Focused programmatically on open so screen readers land inside the drawer.
+   It isn't tab-reachable (tabindex="-1"), so there's no indicator to preserve. */
+.drawer:focus {
+    outline: none;
+}
+
 .drawer-active {
     top: 0;
     right: 0;

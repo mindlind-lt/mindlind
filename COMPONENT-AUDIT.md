@@ -177,21 +177,27 @@ Note `preloader.tsx` *also* explicitly blocks first paint on this same file.
 
 ## 3. High — accessibility
 
-### 3.1 Closed mobile drawer stays in the tab order
-`components/header/burger.tsx:47–86` + `components/header/header.css:225–245`
+### 3.1 ~~Closed mobile drawer stays in the tab order~~ — ✅ **FIXED**
 
-The drawer is hidden purely with `width: 0; height: 0; overflow: hidden`. There is no
-`display: none`, `visibility: hidden`, `hidden`, or `inert`. Every link, phone number, and
-the Instagram link inside it remain focusable — a keyboard user tabbing through the header
-falls into an invisible menu. Additionally the drawer has no `role="dialog"`, no focus
-trap, no focus restore, no Escape handler, and no body-scroll lock.
+The drawer was hidden purely with `width: 0; height: 0; overflow: hidden`, so every link
+inside it stayed focusable — a keyboard user tabbing through the header fell into an
+invisible menu. It now carries `inert={!isOpen}`; the prerendered HTML shows
+`inert="" class="drawer"` in the closed state.
 
-### 3.2 Burger button announces nothing
-`components/header/burger.tsx:35–38`
+Also added: Escape to close, body-scroll lock while open, focus into the drawer on open, and
+focus restored to the burger on close (guarded so it only reclaims focus if focus is still
+inside the drawer — `inert` otherwise drops it to `<body>`).
 
-No `type="button"` (it's outside a form so it defaults harmlessly, but it's still wrong),
-no `aria-expanded`, no `aria-controls`, no `aria-label`. Screen-reader users get "Menu,
-button" with no indication of state.
+Deliberately **not** a `role="dialog"`/`aria-modal` with a focus trap. Implemented as a
+disclosure navigation instead: a complete, standard pattern that needs no trap, where a
+half-built trap is worse than none.
+
+### 3.2 ~~Burger button announces nothing~~ — ✅ **FIXED**
+
+Now `type="button" aria-expanded={isOpen} aria-controls="site-drawer"`, so it announces as
+"Menu, button, collapsed/expanded". No `aria-label` was added on purpose: the button already
+has the visible text "Menu" as its accessible name, and an `aria-label` would override it —
+risking a WCAG 2.5.3 label-in-name mismatch for voice-control users.
 
 ### 3.3 Accordion is not an accordion
 `components/faq-accordion/faq-accordion.tsx:26–38`
@@ -408,7 +414,7 @@ text-3xl` div) — grid spacers doing work that belongs in CSS.
 |---|---|---|
 | Behavioural bugs | 4 open, 2 fixed, 1 partial | `spline-scene.tsx`, `section-contact.tsx`, `showreel.tsx` |
 | Performance | 5 open, 2 fixed | `GlassObject.tsx`, `LogoLoop.tsx`, `count-up-on-view.tsx` |
-| Accessibility | 7 | `burger.tsx` drawer, `faq-accordion.tsx`, `service-dropdown.tsx` |
+| Accessibility | 5 open, 2 fixed | `faq-accordion.tsx`, `service-dropdown.tsx`, `hover-video.tsx` |
 | Dead / duplicated code | ~550 lines left | `glass-cube-about.tsx` (211), `agency-header.tsx` (140) |
 | Lint | 7 errors, 7 warnings | `react-hooks/set-state-in-effect` ×4 reported, ×6 real (§5.8) |
 
@@ -418,9 +424,9 @@ text-3xl` div) — grid spacers doing work that belongs in CSS.
 2. ~~Fix the preloader's double-decrement.~~ ✅ §1.1 — per-asset `settled` guard.
 3. ~~Harden the contact form submit.~~ ✅ §1.2 — `try/catch`, pending state, live region, honeypot.
 4. ~~Convert the two per-frame-`setState` rAF loops to direct style writes.~~ ✅ §2.3.
+5. ~~Make the mobile drawer `inert` when closed.~~ ✅ §3.1 + §3.2 — also Escape, scroll lock, focus management.
 
 **Highest leverage remaining, in order:**
 
-5. Make the mobile drawer `inert` when closed (§3.1).
 6. Delete `agency-header.{tsx,css}`, `glass-cube-about.tsx`, `spline-footer.tsx`,
    `spline-agency-hero.tsx`.

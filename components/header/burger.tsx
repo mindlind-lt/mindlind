@@ -8,6 +8,8 @@ export default function Burger() {
   const [isActive, setIsActive] = useState(false);
   const [isReady, setIsReady] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const drawerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -29,12 +31,51 @@ export default function Burger() {
     };
   }, [isOpen]);
 
+  // While the drawer is open: Escape closes it, the page behind it can't scroll,
+  // and focus moves into it. The focus restore on close matters — marking the
+  // drawer `inert` while focus is still inside it drops focus to <body>.
+  useEffect(() => {
+    if (!isOpen) return;
+
+    // Captured up front: both nodes are always rendered, so these stay valid
+    // for the cleanup, and reading `.current` there instead would be stale-prone.
+    const drawer = drawerRef.current;
+    const button = buttonRef.current;
+
+    drawer?.focus({ preventScroll: true });
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+
+      // Only reclaim focus if it's still inside the drawer (or was dropped to
+      // <body> by `inert`). If the user has clicked elsewhere on the page,
+      // yanking focus back to the burger would be worse than leaving it.
+      const focused = document.activeElement;
+      if (!focused || focused === document.body || drawer?.contains(focused)) {
+        button?.focus({ preventScroll: true });
+      }
+    };
+  }, [isOpen]);
+
   return (
     <>
 
       <button
+        ref={buttonRef}
+        type="button"
         className={`burger ${isActive ? "burger-active" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-controls="site-drawer"
       >
         <div className="burger-label">Menu</div>
         <div className="burger-lines">
@@ -44,7 +85,16 @@ export default function Burger() {
         </div>
       </button>
 
-      <div className={`drawer ${isActive ? "drawer-active" : ""} ${isReady ? "drawer-active-ready" : ""}`}>
+      {/* `inert` is what keeps the closed drawer out of the tab order — the CSS
+          only collapses it to width/height 0, which hides it visually but leaves
+          every link inside focusable. */}
+      <div
+        ref={drawerRef}
+        id="site-drawer"
+        tabIndex={-1}
+        inert={!isOpen}
+        className={`drawer ${isActive ? "drawer-active" : ""} ${isReady ? "drawer-active-ready" : ""}`}
+      >
 
         <nav className="drawer-menu">
           <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
