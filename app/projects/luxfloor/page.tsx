@@ -5,7 +5,6 @@ import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 
 import type { Metadata } from "next";
-
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata("/projects/luxfloor");
