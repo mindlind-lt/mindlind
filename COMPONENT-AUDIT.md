@@ -4,8 +4,9 @@ Review of all 50 component files (~6,200 lines). Findings are grouped by severit
 Line references are to the state of the tree at commit `60ee83f`, except where a finding is
 marked ✅ **FIXED** — those describe the change that was made.
 
-**Tool-verified baseline:** `npx eslint components` → **9 errors, 7 warnings**. Those are
-called out inline below and marked _[lint]_.
+**Tool-verified baseline:** `npx eslint components` → **9 errors, 7 warnings** at `60ee83f`,
+**7 errors, 7 warnings** now. Those are called out inline below and marked _[lint]_. The two
+that disappeared were silenced, not fixed — see §5.8.
 
 ---
 
@@ -114,33 +115,24 @@ useEffect(() => {
 (`onLoad={() => …}` is skipped, but an inline object or array is not) turns this into a
 reload-per-render loop.
 
-### 2.3 rAF loops that call `setState` every frame, forever
-`components/showreel/showreel.tsx:41–55` and `components/service-dropdown/service-dropdown.tsx:78–98`
+### 2.3 ~~rAF loops that call `setState` every frame, forever~~ — ✅ **FIXED**
 
-Both follow the same anti-pattern:
+Both components eased a follower element by calling `setState` inside a rAF loop: a full
+React re-render 60×/second to move one absolutely-positioned div, a loop that never
+terminated, and an effect torn down and rebuilt on every `mousemove` because the pointer
+target sat in the dependency array. `service-dropdown` also held the raw pointer position in
+state, so it re-rendered the card *and* its portal on every mousemove before the loop even ran
+— multiplied by one instance per service card.
 
-```tsx
-useEffect(() => {
-  const animate = () => {
-    setCursorPosition(prev => ({ x: prev.x + (target.x - prev.x) * 0.15, … }));
-    id = requestAnimationFrame(animate);
-  };
-  id = requestAnimationFrame(animate);
-  return () => cancelAnimationFrame(id);
-}, [cursorTarget]);          // ← restarts on every mousemove
-```
+Pointer target and eased position now live in refs, and the loop writes `left`/`top` straight
+to the element. Both loops are gated on visibility (`cursorVisible && !isPlaying`, `isHovering`)
+so they stop when nothing is on screen. Zero re-renders per frame; the only remaining renders
+are the hover-state class toggles.
 
-Three compounding problems:
-1. **A full React re-render 60×/second**, for the lifetime of the component, to move one
-   absolutely-positioned div. This should write `element.style.transform` from inside the
-   rAF and never touch state.
-2. **The loop never terminates.** Showreel's runs even when the cursor is nowhere near the
-   section and even when `isPlaying` is true and the cursor is unmounted.
-3. **The effect is torn down and rebuilt on every `mousemove`** because the target position
-   is in the dependency array.
-
-`service-dropdown` has the same shape with `[isHovering, cursorPos]` deps (line 98) — and
-one `ServiceDropdown` instance is rendered per service card, so the cost multiplies.
+Kept `left`/`top` rather than moving to `transform`: both elements already animate `transform`
+from CSS (`showreel.css:57`, `service-dropdown.css:209`) and writing it from JS would clobber
+those keyframes. Compositing them properly means moving the offsets into CSS custom properties
+— a bigger, visual-regression-prone change, and not what made these loops expensive.
 
 ### 2.4 `LogoLoop` rebuilds its ResizeObserver on every render
 `components/logo-loop/LogoLoop.tsx:74` and `:108`
@@ -349,11 +341,16 @@ string with random glyphs, then frame 15 snaps back to the original. The charact
 left-to-right settle of this effect is missing; it currently reads as "flicker garbage, then
 pop". Also fires on `mouseenter` only — no touch or keyboard-focus trigger.
 
-### 5.8 `setState` directly in effect bodies _[7 lint errors]_
+### 5.8 `setState` directly in effect bodies _[lint errors]_
 `react-hooks/set-state-in-effect` fires in: `burger.tsx:14`, `hover-video.tsx:52`,
-`top-progress-bar.tsx:51`, `service-dropdown.tsx:51`, `showreel.tsx:32`,
-`spline-scene.tsx:55`. Each is a cascading render that could be derived state, a lazy
-`useState` initialiser, or a `useSyncExternalStore`.
+`top-progress-bar.tsx:51`, `spline-scene.tsx:55`. Each is a cascading render that could be
+derived state, a lazy `useState` initialiser, or a `useSyncExternalStore`.
+
+⚠️ **`service-dropdown.tsx:55` (`setPortalRoot`) and `showreel.tsx:34` (`setCursorVisible`)
+are no longer reported, but are not fixed.** Both effects are byte-identical to before the
+§2.3 refactor — verified by linting the pre-change files side by side, which still error. The
+rule simply stopped analysing these two components once the rAF loops were rewritten. Treat
+them as open; do not read the drop from 9 errors to 7 as two problems solved.
 
 `hover-video.tsx:52` (`useEffect(() => setMounted(true), [])`) is the classic
 portal-hydration guard — `typeof document !== "undefined"` at the `createPortal` call site
@@ -410,20 +407,20 @@ text-3xl` div) — grid spacers doing work that belongs in CSS.
 | Area | Count | Worst offenders |
 |---|---|---|
 | Behavioural bugs | 4 open, 2 fixed, 1 partial | `spline-scene.tsx`, `section-contact.tsx`, `showreel.tsx` |
-| Performance | 6 open, 1 fixed | `showreel.tsx`, `service-dropdown.tsx`, `LogoLoop.tsx` |
+| Performance | 5 open, 2 fixed | `GlassObject.tsx`, `LogoLoop.tsx`, `count-up-on-view.tsx` |
 | Accessibility | 7 | `burger.tsx` drawer, `faq-accordion.tsx`, `service-dropdown.tsx` |
 | Dead / duplicated code | ~550 lines left | `glass-cube-about.tsx` (211), `agency-header.tsx` (140) |
-| Lint | 9 errors, 7 warnings | `react-hooks/set-state-in-effect` ×6 |
+| Lint | 7 errors, 7 warnings | `react-hooks/set-state-in-effect` ×4 reported, ×6 real (§5.8) |
 
 **Done**
 
 1. ~~Collapse the four hero files into one parameterised component.~~ ✅ §2.1 — `components/hero.tsx`, −1,011 lines.
 2. ~~Fix the preloader's double-decrement.~~ ✅ §1.1 — per-asset `settled` guard.
 3. ~~Harden the contact form submit.~~ ✅ §1.2 — `try/catch`, pending state, live region, honeypot.
+4. ~~Convert the two per-frame-`setState` rAF loops to direct style writes.~~ ✅ §2.3.
 
 **Highest leverage remaining, in order:**
 
-4. Convert the two per-frame-`setState` rAF loops to direct style writes (§2.3).
 5. Make the mobile drawer `inert` when closed (§3.1).
 6. Delete `agency-header.{tsx,css}`, `glass-cube-about.tsx`, `spline-footer.tsx`,
    `spline-agency-hero.tsx`.

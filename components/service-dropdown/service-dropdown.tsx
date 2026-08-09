@@ -25,11 +25,15 @@ export default function ServiceDropdown({
 }: ServiceDropdownProps) {
   const [expanded, setExpanded] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-  const [imagePos, setImagePos] = useState({ x: 0, y: 0 });
   const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
-  const animationRef = useRef<number | null>(null);
   const [hasHover, setHasHover] = useState(false);
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  // Pointer target and the eased position trailing it. Refs, not state: as
+  // state the pointer position re-rendered this card and its portal on every
+  // mousemove, and the eased position did it again on every frame.
+  const cursor = useRef({ x: 0, y: 0 });
+  const imagePos = useRef({ x: 0, y: 0 });
 
   const className = [
     "service-dropdown",
@@ -63,39 +67,41 @@ export default function ServiceDropdown({
   }, []);
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
-    setCursorPos({ x: e.clientX, y: e.clientY });
-    setImagePos({ x: e.clientX, y: e.clientY });
+    // Seed both so the image doesn't trail in from wherever the last hover left it.
+    cursor.current = { x: e.clientX, y: e.clientY };
+    imagePos.current = { x: e.clientX, y: e.clientY };
     setIsHovering(true);
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    setCursorPos({
-      x: e.clientX,
-      y: e.clientY,
-    });
+    cursor.current.x = e.clientX;
+    cursor.current.y = e.clientY;
   };
 
+  // Trail the preview image behind the pointer, writing style directly so the
+  // loop costs nothing in React. Only runs while this card is hovered.
   useEffect(() => {
-    const animate = () => {
-      setImagePos((prev) => {
-        const ease = 0.1;
-        const newX = prev.x + (cursorPos.x - prev.x) * ease;
-        const newY = prev.y + (cursorPos.y - prev.y) * ease;
-        return { x: newX, y: newY };
-      });
-      animationRef.current = requestAnimationFrame(animate);
-    };
+    if (!isHovering) return;
 
-    if (isHovering) {
-      animationRef.current = requestAnimationFrame(animate);
-    }
+    const el = imageRef.current;
+    if (!el) return;
 
-    return () => {
-      if (animationRef.current !== null) {
-        cancelAnimationFrame(animationRef.current);
-      }
+    const write = () => {
+      el.style.left = `${imagePos.current.x}px`;
+      el.style.top = `${imagePos.current.y}px`;
     };
-  }, [isHovering, cursorPos]);
+    write();
+
+    let frame = requestAnimationFrame(function animate() {
+      const ease = 0.1;
+      imagePos.current.x += (cursor.current.x - imagePos.current.x) * ease;
+      imagePos.current.y += (cursor.current.y - imagePos.current.y) * ease;
+      write();
+      frame = requestAnimationFrame(animate);
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [isHovering]);
 
   return (
     <>
@@ -137,12 +143,9 @@ export default function ServiceDropdown({
       {image && portalRoot && hasHover
         ? createPortal(
             <div
+              ref={imageRef}
               className={`service-dropdown-image ${isHovering ? "visible" : ""}`}
-              style={{
-                left: imagePos.x,
-                top: imagePos.y,
-                position: "fixed",
-              }}
+              style={{ position: "fixed" }}
             >
               <Image
                 src={image}

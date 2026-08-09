@@ -7,20 +7,22 @@ import "./showreel.css";
 
 export default function Showreel() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [cursorTarget, setCursorTarget] = useState({ x: 0, y: 0 });
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
   const [cursorVisible, setCursorVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
+
+  // The pointer target and the eased position chasing it both change every
+  // frame and nothing in the tree needs to re-render for either, so they live
+  // in refs and are written straight to the element's style below.
+  const target = useRef({ x: 0, y: 0 });
+  const position = useRef({ x: 0, y: 0 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (containerRef.current) {
-      const rect = containerRef.current.getBoundingClientRect();
-      setCursorTarget({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
-      });
-    }
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    target.current.x = e.clientX - rect.left;
+    target.current.y = e.clientY - rect.top;
   };
 
   const handleClick = () => {
@@ -38,21 +40,27 @@ export default function Showreel() {
     }
   }, [isHovered]);
 
+  // Ease the follow-cursor toward the pointer. Writing style directly keeps
+  // this off the React render path — as state it re-rendered the whole section
+  // 60×/second, and having the target in the deps tore the loop down and
+  // rebuilt it on every single mousemove. The loop now only runs while the
+  // cursor is actually on screen.
   useEffect(() => {
-    let animationFrameId: number;
+    if (!cursorVisible || isPlaying) return;
 
-    const animate = () => {
-      setCursorPosition((prev) => ({
-        x: prev.x + (cursorTarget.x - prev.x) * 0.15,
-        y: prev.y + (cursorTarget.y - prev.y) * 0.15,
-      }));
-      animationFrameId = requestAnimationFrame(animate);
-    };
+    const el = cursorRef.current;
+    if (!el) return;
 
-    animationFrameId = requestAnimationFrame(animate);
+    let frame = requestAnimationFrame(function animate() {
+      position.current.x += (target.current.x - position.current.x) * 0.15;
+      position.current.y += (target.current.y - position.current.y) * 0.15;
+      el.style.left = `${position.current.x}px`;
+      el.style.top = `${position.current.y}px`;
+      frame = requestAnimationFrame(animate);
+    });
 
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [cursorTarget]);
+    return () => cancelAnimationFrame(frame);
+  }, [cursorVisible, isPlaying]);
 
   return (
     <div
@@ -65,11 +73,8 @@ export default function Showreel() {
     >
       {cursorVisible && !isPlaying && (
         <div
+          ref={cursorRef}
           className={`showreel-cursor ${isHovered ? "growing" : "shrinking"}`}
-          style={{
-            left: `${cursorPosition.x}px`,
-            top: `${cursorPosition.y}px`,
-          }}
         >
           <Play className="w-6 h-6 text-black ml-0.6" />
         </div>
