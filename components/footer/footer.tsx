@@ -1,6 +1,5 @@
 import CtaBox from '../cta-box/cta-box';
 import SocialsIcons from '../socials-icons/socials-icons';
-// import SplineFooter from '../spline-footer';
 import FooterMenu from '../footer-menu/footer-menu';
 import './footer.css';
 
@@ -9,8 +8,6 @@ export default function Footer(){
     return (
         <div className="ftr relative">
             <div className="ftr-box relative z-10">
-
-                {/* <SplineFooter /> */}
 
                 <div className="container mx-auto px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-28">

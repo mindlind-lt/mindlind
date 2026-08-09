@@ -1,6 +1,7 @@
 # Component audit — `components/`
 
-Review of all 50 component files (~6,200 lines). Findings are grouped by severity.
+Review of all 50 component files (~6,200 lines); now 43 files / ~4,970 lines after the fixes
+below. Findings are grouped by severity.
 Line references are to the state of the tree at commit `60ee83f`, except where a finding is
 marked ✅ **FIXED** — those describe the change that was made.
 
@@ -247,29 +248,37 @@ already knows better.
 
 ## 4. Medium — dead code and duplication
 
-### 4.1 `agency-header.tsx` + `agency-header.css` are unreferenced
-Zero imports anywhere in `app/` or `components/`. 140 lines of TSX plus a stylesheet plus
-its own r3f `<Canvas>`, `MeshTransmissionMaterial` and lighting rig. Three of its symbols
-are dead even inside the dead file _[lint]_: `Text` (line 7), `INK` (17), `PLATINUM` (18).
+### 4.1 ~~`agency-header.tsx` + `agency-header.css` are unreferenced~~ — ✅ **DELETED**
 
-Its doc comment (lines 32–36) also lies about the code:
+Zero imports anywhere. 140 lines of TSX plus a stylesheet and its own r3f `<Canvas>` and
+lighting rig. Its doc comment also lied about the code — it claimed the headline lived in the
+WebGL scene with an sr-only `<h1>`, when there was no `<Text>` in the scene and line 126 was a
+normal visible heading. Removing it cleared 3 lint warnings.
 
-> The headline lives inside the WebGL scene (not in HTML) … An sr-only `<h1>` in the
-> overlay carries the semantics.
+### 4.2 ~~Other unreferenced or commented-out components~~ — ✅ **DELETED**
 
-There is no `<Text>` in the scene and the `<h1>` at line 126 is a normal visible heading.
+`glass-cube-about.tsx` (211 lines), `spline-footer.tsx`, `spline-agency-hero.tsx` — all three
+had only commented-out imports. Deleted along with the comments that referenced them, so
+nothing points at missing modules.
 
-### 4.2 Other unreferenced or commented-out components
-| File | Status |
-|---|---|
-| `glass-cube-about.tsx` (211 lines) | only import is commented out — `app/page.tsx:23` |
-| `spline-footer.tsx` | only import is commented out — `footer/footer.tsx:3` |
-| `spline-agency-hero.tsx` | only import is commented out — `app/agency/page.tsx:6` |
+### 4.6 Three more dead components — **NEWLY FOUND, still present**
 
-`glass-cube-about.tsx` is a near-copy of the glass-cube code now consolidated in §2.1 — the
-last remaining duplicate of it — with a
-module-level mutable `pointer` (line 23) that would be shared across instances if it were
-ever rendered twice.
+Found while verifying §4.2. These have *live* imports, but their only usage is inside a
+commented-out JSX block, so the import is dead and the component is unreachable:
+
+| File | Lines | Dead usage |
+|---|---|---|
+| `canvasui/GlassObject.tsx` | **1,265** | `app/projects/page.tsx:144` — `{/* <GlassObject … */}` |
+| `spline-agency-2.tsx` | 12 | `app/agency/page.tsx:48` |
+| `spline-contact-hero.tsx` | 12 | `app/contact/page.tsx:16` |
+
+`GlassObject.tsx` is the largest file in the directory and **25% of what remains** — and it is
+not reachable from any route. §2.2 (effect with no dep array) and §5.13 (Draco decoder fetched
+from `gstatic.com`) both describe code that never runs today. Deleting it resolves both and
+drops the component tree by another quarter.
+
+Left in place deliberately: unlike §4.2 these were not on the agreed list, and dropping 1,265
+lines of a vendored 3D library someone imported mid-experiment is the owner's call.
 
 ### 4.3 Eight single-line Spline wrapper files
 `spline-torus`, `spline-medusa`, `spline-cubes`, `spline-footer`, `spline-agency-hero`,
@@ -415,8 +424,8 @@ text-3xl` div) — grid spacers doing work that belongs in CSS.
 | Behavioural bugs | 4 open, 2 fixed, 1 partial | `spline-scene.tsx`, `section-contact.tsx`, `showreel.tsx` |
 | Performance | 5 open, 2 fixed | `GlassObject.tsx`, `LogoLoop.tsx`, `count-up-on-view.tsx` |
 | Accessibility | 5 open, 2 fixed | `faq-accordion.tsx`, `service-dropdown.tsx`, `hover-video.tsx` |
-| Dead / duplicated code | ~550 lines left | `glass-cube-about.tsx` (211), `agency-header.tsx` (140) |
-| Lint | 7 errors, 7 warnings | `react-hooks/set-state-in-effect` ×4 reported, ×6 real (§5.8) |
+| Dead / duplicated code | ~1,290 lines left, all in §4.6 | `canvasui/GlassObject.tsx` (1,265) |
+| Lint | 7 errors, 4 warnings | `react-hooks/set-state-in-effect` ×4 reported, ×6 real (§5.8) |
 
 **Done**
 
@@ -425,8 +434,16 @@ text-3xl` div) — grid spacers doing work that belongs in CSS.
 3. ~~Harden the contact form submit.~~ ✅ §1.2 — `try/catch`, pending state, live region, honeypot.
 4. ~~Convert the two per-frame-`setState` rAF loops to direct style writes.~~ ✅ §2.3.
 5. ~~Make the mobile drawer `inert` when closed.~~ ✅ §3.1 + §3.2 — also Escape, scroll lock, focus management.
+6. ~~Delete `agency-header.{tsx,css}`, `glass-cube-about.tsx`, `spline-footer.tsx`, `spline-agency-hero.tsx`.~~ ✅ §4.1 + §4.2.
+
+All six items done. Across them: **24 files changed, 252 insertions, 1,533 deletions**;
+`components/` went from 6,225 to 4,967 lines (−20%).
 
 **Highest leverage remaining, in order:**
 
-6. Delete `agency-header.{tsx,css}`, `glass-cube-about.tsx`, `spline-footer.tsx`,
-   `spline-agency-hero.tsx`.
+1. Delete the three components found in §4.6 — `GlassObject.tsx` alone is 1,265 unreachable
+   lines and takes §2.2 and §5.13 with it.
+2. Fix the two `ResizeObserver` effects in `LogoLoop` that re-run every render (§2.4).
+3. Give the FAQ accordion real `aria-expanded`/`hidden` semantics (§3.3).
+4. Give `service-dropdown` a keyboard path — its only focusable element does nothing (§3.4).
+5. Rotate the Web3Forms key behind a route handler (§1.3).

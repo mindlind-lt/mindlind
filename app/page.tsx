@@ -20,9 +20,6 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata: Metadata = buildMetadata("/");
 
 
-// import GlassCubeAbout from "@/components/glass-cube-about";
-
-
 const clientLogos1 = [
   { src: "/images/client-1.png", alt: "", href: "#", width: 1536, height: 1024 },
   { src: "/images/client-2.png", alt: "", href: "#", width: 1536, height: 1024 },
@@ -124,7 +121,6 @@ export default function Home() {
         >
 
           <div className="">
-            {/* <GlassCubeAbout /> */}
             <SplineCubes className="w-[400px] h-[450px] xl:w-[500px] xl:h-[550px]" />
           </div>
 
