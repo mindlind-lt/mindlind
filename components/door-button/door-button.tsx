@@ -11,6 +11,8 @@ interface DoorButtonProps {
   fullWidth?: boolean;
   type?: "button" | "submit" | "reset";
   target?: React.HTMLAttributeAnchorTarget;
+  /** Only applies when `as="button"`. */
+  disabled?: boolean;
 }
 
 export default function DoorButton({
@@ -24,6 +26,7 @@ export default function DoorButton({
   fullWidth,
   type,
   target,
+  disabled,
 }: DoorButtonProps) {
   const className = ["door-button", size && `door-button-${size}`, color && `door-button-${color}`, fullWidth && "door-button-full-width", additionalClassName]
     .filter(Boolean)
@@ -31,7 +34,7 @@ export default function DoorButton({
 
   if (as === "button") {
     return (
-      <button className={className} onClick={onClick} type={type || "button"}>
+      <button className={className} onClick={onClick} type={type || "button"} disabled={disabled}>
         <div className="door-button-content">{children}</div>
       </button>
     );

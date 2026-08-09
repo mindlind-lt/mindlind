@@ -79,6 +79,10 @@ font-weight: 500;
   width: 100%;
 }
 
+.contact-form-botcheck {
+  display: none;
+}
+
 .contact-form-result {
   text-align: center;
   font-size: 13px;
@@ -86,6 +90,14 @@ font-weight: 500;
   margin-top: 12px;
   min-height: 20px;
   letter-spacing: 0.05em;
+}
+
+.contact-form-result[data-state="success"] {
+  color: #1b5e20;
+}
+
+.contact-form-result[data-state="error"] {
+  color: #b3261e;
 }
 
 .contact-form-footer {

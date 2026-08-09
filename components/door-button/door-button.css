@@ -71,6 +71,20 @@
     height: 100%;
 }
 
+.door-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* Keep the door panels shut while disabled so it doesn't read as clickable. */
+.door-button:disabled:hover {
+    color: var(--text-color);
+}
+
+.door-button:disabled:hover::before, .door-button:disabled:hover::after {
+    height: 0;
+}
+
 
 
 

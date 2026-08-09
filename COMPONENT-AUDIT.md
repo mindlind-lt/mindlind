@@ -22,27 +22,30 @@ Each asset now carries its own `assetSettled` flag (`preloader.tsx:64–91`); `c
 moved onto the same guarded path as the decrement. Verified against both cache orderings:
 the overlay previously lifted one event early in each, and now waits for both assets.
 
-### 1.2 `<form>` submit has no error handling and can hang forever
-`components/contact-form/contact-form.tsx:11–23`
+### 1.2 ~~`<form>` submit has no error handling and can hang forever~~ — ✅ **FIXED**
 
-`fetch` is un-`try/catch`ed. On any network failure (offline, DNS, CORS, 5xx returning
-non-JSON) the promise rejects, `setResult` never runs, and the user sees a form that
-silently did nothing. Also missing: a pending/disabled state (the form can be submitted
-repeatedly), `event.currentTarget.reset()` on success, and `aria-live` on the result
-message (line 68) so screen readers announce it.
+An un-`try/catch`ed `fetch` meant any network failure left the user looking at a form that
+silently did nothing. Rewritten around a `Status` union: `fetch` is wrapped, `response.json()`
+has its own `.catch` (a failed request can return an HTML error page), success requires
+`response.ok && data.success`, the button disables and relabels while pending, and the form
+resets on success. The result `<p>` is now always rendered with `role="status" aria-live="polite"` —
+previously it was inserted together with its content, which screen readers don't announce.
 
-### 1.3 Web3Forms access key hardcoded in a client component
-`components/contact-form/contact-form.tsx:14`
+Required a `disabled` prop on `DoorButton`, which had none. Messages were also translated to
+German (they were English on a German form — see §5.16).
+
+### 1.3 Web3Forms access key hardcoded in a client component — ⚠️ **PARTLY ADDRESSED**
 
 ```ts
-formData.append("access_key", "d8810d7e-7830-4042-8d07-71a617dfd351");
+const ACCESS_KEY = "d8810d7e-7830-4042-8d07-71a617dfd351";
 ```
 
-This ships in the client bundle and is committed to git. Web3Forms keys are semi-public by
-design, but this one is unrotatable-in-place and unprotected: there is no honeypot field,
-no captcha, and no rate limiting, so the endpoint is trivially spammable straight into the
-agency inbox. Move it to `NEXT_PUBLIC_*` env at minimum, add `botcheck` honeypot, and
-prefer a route handler that keeps the key server-side.
+Still ships in the client bundle and is committed to git. The `botcheck` honeypot is now in
+place, so the endpoint is no longer trivially spammable by naive bots — but there is still no
+captcha and no rate limiting.
+
+**Open decision:** moving the key server-side needs a route handler plus an env var configured
+in hosting. Left undone deliberately — shipping it without the var set breaks the form outright.
 
 ### 1.4 Truncated copy shipped to production
 `components/section-contact/section-contact.tsx:51`
@@ -406,7 +409,7 @@ text-3xl` div) — grid spacers doing work that belongs in CSS.
 
 | Area | Count | Worst offenders |
 |---|---|---|
-| Behavioural bugs | 6 open, 1 fixed | `contact-form.tsx`, `spline-scene.tsx` |
+| Behavioural bugs | 4 open, 2 fixed, 1 partial | `spline-scene.tsx`, `section-contact.tsx`, `showreel.tsx` |
 | Performance | 6 open, 1 fixed | `showreel.tsx`, `service-dropdown.tsx`, `LogoLoop.tsx` |
 | Accessibility | 7 | `burger.tsx` drawer, `faq-accordion.tsx`, `service-dropdown.tsx` |
 | Dead / duplicated code | ~550 lines left | `glass-cube-about.tsx` (211), `agency-header.tsx` (140) |
@@ -416,11 +419,10 @@ text-3xl` div) — grid spacers doing work that belongs in CSS.
 
 1. ~~Collapse the four hero files into one parameterised component.~~ ✅ §2.1 — `components/hero.tsx`, −1,011 lines.
 2. ~~Fix the preloader's double-decrement.~~ ✅ §1.1 — per-asset `settled` guard.
+3. ~~Harden the contact form submit.~~ ✅ §1.2 — `try/catch`, pending state, live region, honeypot.
 
 **Highest leverage remaining, in order:**
 
-3. Wrap the contact form submit in `try/catch` with a pending state (§1.2) — it is the
-   site's only conversion path.
 4. Convert the two per-frame-`setState` rAF loops to direct style writes (§2.3).
 5. Make the mobile drawer `inert` when closed (§3.1).
 6. Delete `agency-header.{tsx,css}`, `glass-cube-about.tsx`, `spline-footer.tsx`,
