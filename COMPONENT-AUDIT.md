@@ -1,7 +1,8 @@
 # Component audit — `components/`
 
 Review of all 50 component files (~6,200 lines). Findings are grouped by severity.
-Line references are to the state of the tree at commit `60ee83f`.
+Line references are to the state of the tree at commit `60ee83f`, except where a finding is
+marked ✅ **FIXED** — those describe the change that was made.
 
 **Tool-verified baseline:** `npx eslint components` → **9 errors, 7 warnings**. Those are
 called out inline below and marked _[lint]_.
@@ -10,21 +11,16 @@ called out inline below and marked _[lint]_.
 
 ## 1. Critical — bugs that change behaviour
 
-### 1.1 Preloader releases the page before assets finish loading
-`components/preloader/preloader.tsx:64–105`
+### 1.1 ~~Preloader releases the page before assets finish loading~~ — ✅ **FIXED**
 
-`markDone` decrements a single shared `remaining` counter, but nothing guarantees it is
-called **once per asset**:
+`markDone` decremented one shared counter that any asset could reach twice — a video fires
+both `loadedmetadata` and `canplaythrough`, a cached image fires `onload` *and* reports
+`complete` synchronously. With 2 assets in the list, either one resolving twice lifted the
+overlay while the other was still downloading.
 
-- The video registers *both* `onloadedmetadata` and `oncanplaythrough` (lines 88–89). A
-  normally-loading video fires both → `remaining` drops by 2 for one asset.
-- The image path calls `done` from `img.onload` *and* again from the `if (img.complete)`
-  safety net (lines 98–103) when the image is warm in cache.
-
-With exactly 2 assets in the list, the video alone can drive `remaining` to 0 and trigger
-`finish()` while `/images/cta.jpg` is still downloading. The preloader therefore does not
-actually do the one thing it exists to do. Fix: gate each asset behind its own
-`settled` boolean before touching the counter.
+Each asset now carries its own `assetSettled` flag (`preloader.tsx:64–91`); `clearTimeout`
+moved onto the same guarded path as the decrement. Verified against both cache orderings:
+the overlay previously lifted one event early in each, and now waits for both assets.
 
 ### 1.2 `<form>` submit has no error handling and can hang forever
 `components/contact-form/contact-form.tsx:11–23`
@@ -92,25 +88,13 @@ keeps watching the detached element and `active` freezes. Use a merged-ref helpe
 
 ## 2. High — performance
 
-### 2.1 `hero-agency` / `hero-services` / `hero-projects` / `hero-contact` are byte-identical
-`components/hero-{agency,services,projects,contact}.tsx` — 338 lines each, **1,352 lines total**
+### 2.1 ~~Four byte-identical hero files~~ — ✅ **FIXED**
 
-`diff` across all four returns exactly two differing lines: the exported function name and
-the `<h1>` string.
-
-```
-224c224
-< export default function HeroAgency() {
-> export default function HeroContact() {
-314c314
-<           {"AGENCY"}
->           {"KONTAKT"}
-```
-
-Everything else — the `ContentPlane`, the spring-damped `GlassCube`, ~90 lines of
-`<Lightformer>` studio rig, the html2canvas capture effect, the pointer listener — is
-copy-pasted 4×. This should be one `<GlassHero title="…" />`. As it stands, every tuning
-change to the glass material has to be made in four files or the pages silently drift apart.
+`hero-{agency,services,projects,contact}.tsx` (338 lines each, 1,352 total) differed only in
+the function name and the `<h1>` string. Collapsed into `components/hero.tsx` taking a
+`title` prop; the four originals are deleted and all four pages updated. **−1,011 lines.**
+The capture effect's deps went `[]` → `[title]` so the refracted texture tracks the headline.
+`tsc --noEmit` and `next build` both clean; all 23 routes still prerender static.
 
 ### 2.2 `useEffect` that runs on every single render
 `components/canvasui/GlassObject.tsx:1243–1245`
@@ -170,12 +154,13 @@ every render, so both effects re-run every render: disconnect + reconstruct two
 dependency values into the array instead of passing the array as one dep.
 
 ### 2.5 `html2canvas` rasterizes the hero on every resize
-`components/hero-*.tsx:283–287`
+`components/hero.tsx:287–291`
 
 A 250 ms-debounced full-DOM rasterization at up to 2× DPR runs on each resize, allocating a
 new `CanvasTexture` each time. `html2canvas-pro` is also a heavyweight dependency to ship
 to four route entrypoints for what is one word of text — an offscreen-canvas `fillText` or a
-pre-baked texture would do the same job for a fraction of the bytes.
+pre-baked texture would do the same job for a fraction of the bytes. (Unaffected by the
+§2.1 fix — the same effect now just lives in one file instead of four.)
 
 ### 2.6 Per-frame `setState` in the counter
 `components/count-up-on-view.tsx:58–69`
@@ -280,7 +265,8 @@ There is no `<Text>` in the scene and the `<h1>` at line 126 is a normal visible
 | `spline-footer.tsx` | only import is commented out — `footer/footer.tsx:3` |
 | `spline-agency-hero.tsx` | only import is commented out — `app/agency/page.tsx:6` |
 
-`glass-cube-about.tsx` is itself a fifth near-copy of the §2.1 glass-cube code, with a
+`glass-cube-about.tsx` is a near-copy of the glass-cube code now consolidated in §2.1 — the
+last remaining duplicate of it — with a
 module-level mutable `pointer` (line 23) that would be shared across instances if it were
 ever rendered twice.
 
@@ -420,17 +406,19 @@ text-3xl` div) — grid spacers doing work that belongs in CSS.
 
 | Area | Count | Worst offenders |
 |---|---|---|
-| Behavioural bugs | 7 | `preloader.tsx`, `contact-form.tsx`, `spline-scene.tsx` |
-| Performance | 7 | 4× duplicated heroes, `showreel.tsx`, `service-dropdown.tsx`, `LogoLoop.tsx` |
+| Behavioural bugs | 6 open, 1 fixed | `contact-form.tsx`, `spline-scene.tsx` |
+| Performance | 6 open, 1 fixed | `showreel.tsx`, `service-dropdown.tsx`, `LogoLoop.tsx` |
 | Accessibility | 7 | `burger.tsx` drawer, `faq-accordion.tsx`, `service-dropdown.tsx` |
-| Dead / duplicated code | ~1,900 lines | `hero-*.tsx` (1,352), `agency-header.tsx` (140), `glass-cube-about.tsx` (211) |
+| Dead / duplicated code | ~550 lines left | `glass-cube-about.tsx` (211), `agency-header.tsx` (140) |
 | Lint | 9 errors, 7 warnings | `react-hooks/set-state-in-effect` ×6 |
 
-**Highest leverage, in order:**
+**Done**
 
-1. Collapse `hero-{agency,services,projects,contact}.tsx` into one parameterised component
-   (−1,000 lines, removes a 4-way drift hazard).
-2. Fix the preloader's double-decrement (§1.1) — it currently doesn't preload.
+1. ~~Collapse the four hero files into one parameterised component.~~ ✅ §2.1 — `components/hero.tsx`, −1,011 lines.
+2. ~~Fix the preloader's double-decrement.~~ ✅ §1.1 — per-asset `settled` guard.
+
+**Highest leverage remaining, in order:**
+
 3. Wrap the contact form submit in `try/catch` with a pending state (§1.2) — it is the
    site's only conversion path.
 4. Convert the two per-frame-`setState` rAF loops to direct style writes (§2.3).

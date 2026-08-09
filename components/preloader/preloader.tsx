@@ -62,8 +62,7 @@ export default function Preloader() {
     }
 
     let remaining = total;
-    const markDone = (assetTimer: ReturnType<typeof setTimeout>) => {
-      clearTimeout(assetTimer);
+    const markDone = () => {
       remaining -= 1;
       if (remaining <= 0 && !settled) {
         // Small settle delay so the last frame paints before we slide away.
@@ -72,11 +71,25 @@ export default function Preloader() {
     };
 
     assets.forEach((asset) => {
-      // Per-asset timeout so a single non-responding asset can't stall the set.
-      const assetTimer = setTimeout(() => markDone(assetTimer), PER_ASSET_TIMEOUT_MS);
-      timers.push(assetTimer);
+      // An asset can report completion more than once — a <video> fires both
+      // `loadedmetadata` and `canplaythrough`, and a cached <img> fires `onload`
+      // *and* reports `complete` synchronously. Without this per-asset guard one
+      // asset decrements the shared counter twice, which is enough on its own to
+      // reach zero and lift the overlay while the others are still in flight.
+      let assetSettled = false;
 
-      const done = () => markDone(assetTimer);
+      // `assetTimer` is referenced before its declaration below, but only from
+      // inside this closure — every caller runs after the timer is assigned.
+      const done = () => {
+        if (assetSettled) return;
+        assetSettled = true;
+        clearTimeout(assetTimer);
+        markDone();
+      };
+
+      // Per-asset timeout so a single non-responding asset can't stall the set.
+      const assetTimer = setTimeout(done, PER_ASSET_TIMEOUT_MS);
+      timers.push(assetTimer);
 
       if (asset.endsWith('.mp4') || asset.endsWith('.webm')) {
         const video = document.createElement('video');
