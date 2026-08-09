@@ -136,7 +136,6 @@ export default function PageCaseFactorysl() {
       </div>
 
 
-
       {/* 2 photos */}
       <div className="px-8 py-15">
         <div className="grid grid-cols-2 gap-5">
