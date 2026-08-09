@@ -1,3 +1,4 @@
+import AmbientVideo from "@/components/ambient-video/ambient-video";
 import DoorButton from "@/components/door-button/door-button";
 import ScrambledText from "@/components/scrambled-text/scrambled-text";
 import Showreel from "@/components/showreel/showreel";
@@ -58,14 +59,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="bg-gray-200 hero-cta-box-media">
-                <video 
-                  poster="/images/cta.jpg"
-                  src="/videos/cta.mp4" 
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                ></video>
+                <AmbientVideo
+                  poster="/images/cta-poster.webp"
+                  src="/videos/cta.mp4"
+                />
               </div>
             </div>
           </div>
@@ -102,7 +99,7 @@ export default function Home() {
         <div className="container mx-auto px-5 sm:px-8">
           <div className="intro-row">
             <div className="text-2xl sm:text-4xl lg:text-5xl text-justify font-mono font-medium uppercase leading-[1.4] mb-10 sm:mb-0">
-              <span className="text-2xl sm:text-3xl text-primary-500">[01]</span>
+              <span className="text-2xl sm:text-3xl text-primary-700">[01]</span>
               &nbsp;&nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.
             </div>
             <ScrambledText text="[ ÜBER UNS ] " as="a" href="#" className="intro-link" />
@@ -147,7 +144,7 @@ export default function Home() {
 
         <div className="font-mono text-3xl uppercase pb-15 flex justify-between items-center">
           <h2>Leisungen</h2>
-          <div className="text-primary-500">[02]</div>
+          <div className="text-primary-700">[02]</div>
         </div>
 
         <div className="services">
@@ -277,7 +274,7 @@ export default function Home() {
       <div className="container mx-auto px-5 sm:px-8 py-12 lg:py-20">
 
         <div className="font-mono text-2xl lg:text-3xl uppercase pb-10 lg:pb-20 flex items-center">
-          <div className="text-primary-500 flex-1">[05]</div>
+          <div className="text-primary-700 flex-1">[05]</div>
           <h2 className="text-center flex-2">Produktion</h2>
           <div className="flex-1"></div>
         </div>
@@ -402,7 +399,7 @@ export default function Home() {
 
         <div className="font-mono text-3xl uppercase pb-20 flex justify-between items-center">
           <h2 className="font-medium text-7xl tracking-tight">Before & After</h2>
-          <div className="text-primary-500">[06]</div>
+          <div className="text-primary-700">[06]</div>
         </div>
 
         <div className="text-4xl text-center py-20 bg-gray-200">PROJECT INFO GOES HERE</div>
@@ -416,7 +413,7 @@ export default function Home() {
       {/* <div className="container mx-auto px-5 sm:px-8 py-20">
 
         <div className="font-mono text-3xl uppercase pb-10 sm:pb-15   flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-15">
-          <div className="text-primary-500">[07]</div>
+          <div className="text-primary-700">[07]</div>
           <h2 className="">ERKENNTNISSE</h2>
           <div className="flex-1 flex sm:justify-end">
             <ScrambledText text="[ ALLE BEITRÄGE ] " as="a" href="#" />

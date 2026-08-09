@@ -124,7 +124,12 @@ export default function Burger() {
             <div className="drawer-socials-icons">
 
                 <div>
-                <a href="https://www.instagram.com/mind_lind" target="_blank">
+                <a
+                    href="https://www.instagram.com/mind_lind"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label="Mindlind auf Instagram"
+                >
                     <img alt="" src="/assets/images/instagram-icon.svg" />
                 </a>
                 </div>

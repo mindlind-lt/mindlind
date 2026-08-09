@@ -29,6 +29,7 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
+              headingLevel="h2"
               href="/projects/funky-coffee"
               imageSrc="/images/case-funky-coffee-1.png"
               imageWidth={1536}
@@ -40,6 +41,7 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
+              headingLevel="h2"
               href="/projects/funky-ramen"
               imageSrc="/images/case-funky-ramen-1.jpg"
               imageWidth={1536}
@@ -51,6 +53,7 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
+              headingLevel="h2"
               href="/projects/princefood"
               imageSrc="/images/case-prince-food-2.jpg"
               imageWidth={1536}
@@ -62,6 +65,7 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
+              headingLevel="h2"
               href="/projects/muafaktur"
               imageSrc="/images/case-mua-2.png"
               imageWidth={560}
@@ -73,6 +77,7 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
+              headingLevel="h2"
               href="/projects/mondent"
               imageSrc="/images/case-mondent-1.png"
               imageWidth={560}
@@ -84,6 +89,7 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
+              headingLevel="h2"
               href="/projects/autosl"
               imageSrc="/images/case-autosl-1.jpg"
               imageWidth={560}
@@ -95,6 +101,7 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
+              headingLevel="h2"
               href="/projects/luxfloor"
               imageSrc="/images/case-luxfloor-1.png"
               imageWidth={560}
@@ -106,6 +113,7 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
+              headingLevel="h2"
               href="/projects/panda-travel"
               imageSrc="/images/case-pandatravel-1.png"
               imageWidth={560}
@@ -117,6 +125,7 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
+              headingLevel="h2"
               href="/projects/factorysl"
               imageSrc="/images/case-factorysl-1.jpg"
               imageWidth={560}
@@ -128,6 +137,7 @@ export default function PageProjects() {
 
           <div className="works-masonry-item">
             <WorkThumb
+              headingLevel="h2"
               href="/projects/onlysmile"
               imageSrc="/images/case-onlysmile-1.png"
               imageWidth={560}

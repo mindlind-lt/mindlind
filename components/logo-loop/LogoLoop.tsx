@@ -291,7 +291,11 @@ export const LogoLoop = memo<LogoLoopProps>(
     }, [effectiveHoverSpeed]);
 
     const renderLogoItem = useCallback(
-      (item: LogoItem, key: string) => {
+      // `inert` marks the duplicated copies of the sequence, which exist only
+      // to make the marquee seamless. Their <ul> is aria-hidden, so anything
+      // focusable inside them would be reachable by keyboard but invisible to
+      // screen readers (axe `aria-hidden-focus`) — take them out of tab order.
+      (item: LogoItem, key: string, inert: boolean) => {
         if (renderItem) {
           return (
             <li className="logoloop__item" key={key} role="listitem">
@@ -348,6 +352,7 @@ export const LogoLoop = memo<LogoLoopProps>(
             aria-label={itemAriaLabel || 'logo link'}
             target="_blank"
             rel="noreferrer noopener"
+            tabIndex={inert ? -1 : undefined}
           >
             {content}
           </a>
@@ -373,7 +378,9 @@ export const LogoLoop = memo<LogoLoopProps>(
             aria-hidden={copyIndex > 0}
             ref={copyIndex === 0 ? seqRef : undefined}
           >
-            {logos.map((item, itemIndex) => renderLogoItem(item, `${copyIndex}-${itemIndex}`))}
+            {logos.map((item, itemIndex) =>
+              renderLogoItem(item, `${copyIndex}-${itemIndex}`, copyIndex > 0)
+            )}
           </ul>
         )),
       [copyCount, logos, renderLogoItem]

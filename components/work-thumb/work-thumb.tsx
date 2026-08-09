@@ -11,9 +11,15 @@ interface WorkThumbProps {
   imageHeight: number
   title: string
   pills: string[]
+  /**
+   * Heading level for the title. Pick the one that follows the nearest
+   * preceding heading so levels never skip (axe `heading-order`): `h3` under a
+   * section `h2`, `h2` when the thumbs sit directly under the page `h1`.
+   */
+  headingLevel?: 'h2' | 'h3' | 'h4'
 }
 
-export default function WorkThumb({ href, imageSrc, imageAlt = '', imageWidth, imageHeight, title, pills }: WorkThumbProps) {
+export default function WorkThumb({ href, imageSrc, imageAlt = '', imageWidth, imageHeight, title, pills, headingLevel: Heading = 'h3' }: WorkThumbProps) {
     return (
         <a className="work-thumb" href={href}>
             <div className="work-thumb-figure">
@@ -27,7 +33,7 @@ export default function WorkThumb({ href, imageSrc, imageAlt = '', imageWidth, i
                 />
             </div>
             <div className="work-thumb-content">
-                <h6 className="work-thumb-title">{title}</h6>
+                <Heading className="work-thumb-title">{title}</Heading>
                 <div className="pills">
                     {pills.map((pill, index) => (
                         <div key={index} className="pills-item">{pill}</div>

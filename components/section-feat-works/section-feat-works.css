@@ -19,7 +19,7 @@
 
 .section-works-index {
   grid-column: span 1 / span 1;
-  color: var(--primary-500);
+  color: var(--primary-700);
   font-family: var(--font-mono);
   font-size: 1.875rem;
   line-height: 2.25rem;

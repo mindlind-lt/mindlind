@@ -33,9 +33,14 @@ export default function Preloader() {
     // cache for those. Do NOT add `next/image` assets (project thumbs, service
     // cards, client logos): the browser fetches an optimized `/_next/image?url=…`
     // URL, so preloading the raw file just double-downloads without helping.
+    // Never wait on a video here. `/videos/cta.mp4` used to be in this list,
+    // and because the clip is ~1.1MB it never finished inside MAX_WAIT_MS on a
+    // throttled mobile connection — so the splash sat on screen for the full
+    // 6s ceiling on every cold load, and LCP was pinned to it. The clip is
+    // decorative and now streams in on its own (see AmbientVideo); only its
+    // poster needs to be warm before the splash lifts.
     const assets = [
-      '/videos/cta.mp4', // hero video (plain <video>, page.tsx)
-      '/images/cta.jpg', // hero video poster (plain <video poster>, page.tsx)
+      '/images/cta-poster.webp', // hero video poster (plain <video poster>, page.tsx)
     ];
 
     let settled = false; // guards against double-exit (StrictMode / races)

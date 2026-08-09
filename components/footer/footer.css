@@ -39,7 +39,7 @@
     gap: 16px;
 
     a {
-        color: #ffffff66;
+        color: #ffffff8a;
         transition: 0.2s;
         &:hover, &:focus {
             color: #ffffff;
@@ -84,7 +84,7 @@
         color: #ffffff;
         transition: 0.2s;
         &:hover, &:focus {
-            color: #ffffff66;
+            color: #ffffff8a;
         }
     }
 }
@@ -97,7 +97,7 @@
 
 .ftr-copyright {
     font-size: 12px;
-    color: #ffffff66;
+    color: #ffffff8a;
 }
 
 

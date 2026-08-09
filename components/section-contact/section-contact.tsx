@@ -13,7 +13,7 @@ export default function SectionContact() {
           <div>
             <div className="font-mono text-2xl lg:text-3xl uppercase pb-8 lg:pb-15 flex justify-between items-center gap-8 lg:gap-15">
               <h2 className="">FAQ</h2>
-              <div className="text-primary-500">[08]</div>
+              <div className="text-primary-700">[08]</div>
             </div>
             <FAQAccordion
               className="border-t border-black"

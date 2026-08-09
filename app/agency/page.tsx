@@ -27,7 +27,7 @@ export default function PageAgency() {
 
             <div className="intro-row flex items-center">
               <div className="text-xl sm:text-2xl lg:text-3xl font-mono font-medium uppercase leading-[1.4]">
-                <p><span className="text-lg sm:text-xl lg:text-2xl text-primary-500">[01]</span>&nbsp;&nbsp;&nbsp;VON DER ERSTEN IDEE BIS ZUM LAUNCH ENTWICKELN WIR DIGITALE AUFTRITTE, DIE NICHT NUR SICHTBAR SIND, SONDERN VERSTANDEN WERDEN.</p>
+                <p><span className="text-lg sm:text-xl lg:text-2xl text-primary-700">[01]</span>&nbsp;&nbsp;&nbsp;VON DER ERSTEN IDEE BIS ZUM LAUNCH ENTWICKELN WIR DIGITALE AUFTRITTE, DIE NICHT NUR SICHTBAR SIND, SONDERN VERSTANDEN WERDEN.</p>
                 <p className="mt-5">WIR FORMEN AUS IDEEN KLARE STRUKTUREN, AUS STRUKTUREN STARKE ERLEBNISSE UND AUS ERLEBNISSEN MESSBARE WIRKUNG.</p>
                 <p className="mt-5">UNSER ANSPRUCH: WENIGER ABLENKUNG, MEHR PRÄZISION. WENIGER OBERFLÄCHE, MEHR SUBSTANZ. DIGITAL DESIGN, DAS MITDENKT UND WEITER WÄCHST.</p>
               </div>
@@ -54,7 +54,7 @@ export default function PageAgency() {
 
             <div className="grid grid-cols-3 gap-4 sm:gap-8 lg:gap-30">
               <div className="col-span-1">
-                <div className="text-primary-500 font-mono text-2xl sm:text-3xl uppercase mb-8 lg:mb-15">[02]</div>
+                <div className="text-primary-700 font-mono text-2xl sm:text-3xl uppercase mb-8 lg:mb-15">[02]</div>
               </div>
               <div className="col-span-2">
                 <div className="font-mono text-2xl sm:text-3xl uppercase mb-8 lg:mb-15">
@@ -96,7 +96,7 @@ export default function PageAgency() {
             <div className="font-mono text-2xl sm:text-3xl uppercase mb-8 lg:mb-15">
               <h2>Our Packages</h2>
             </div>
-            <div className="text-primary-500 font-mono text-2xl sm:text-3xl uppercase mb-8 lg:mb-15">[03]</div>
+            <div className="text-primary-700 font-mono text-2xl sm:text-3xl uppercase mb-8 lg:mb-15">[03]</div>
           </div>
 
           <SectionServices />

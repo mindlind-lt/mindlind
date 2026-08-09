@@ -1,4 +1,5 @@
 import "./cta-box.css";
+import AmbientVideo from "../ambient-video/ambient-video";
 import DoorButton from "../door-button/door-button";
 
 export default function CtaBox() {
@@ -7,14 +8,10 @@ export default function CtaBox() {
             <div className="cta-box">
 
               <div className="bg-gray-200 cta-box-media">
-                <video 
-                  poster="/images/cta.jpg"
-                  src="/videos/cta.mp4" 
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                ></video>
+                <AmbientVideo
+                  poster="/images/cta-poster.webp"
+                  src="/videos/cta.mp4"
+                />
               </div>
 
               <div className="cta-box-content">
