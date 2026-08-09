@@ -17,7 +17,7 @@ export default function PageCaseFactorysl() {
       <ParallaxImage
         src="/images/case-factorysl-5.jpg"
         height="600px"
-        strength={-80}
+        strength={80}
         className="w-full"
       />
 
