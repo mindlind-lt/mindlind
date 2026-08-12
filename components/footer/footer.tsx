@@ -9,9 +9,9 @@ export default function Footer(){
         <div className="ftr relative">
             <div className="ftr-box relative z-10">
 
-                <div className="container mx-auto px-6 lg:px-8 relative z-10">
-                    <div className='ftr-brand mb-12'>
-                        <div className='font-mono uppercase text-md'>Digital Creative Agency</div>
+                <div className="container mx-auto max-w-[900px] px-6 lg:px-8 relative z-10">
+                    <div className='ftr-brand'>
+                        <div className='font-mono uppercase text-2xl'>Digital Creative Agency</div>
                         <div className="mt-4">
                             <svg width="1291" height="210" viewBox="0 0 1291 210" fill="white" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 210V0H48L76.2 199.2H79.8L108 0H156V210H132.6V10.8H129L100.8 210H55.2L27 10.8H23.4V210H0Z"/>
@@ -30,12 +30,15 @@ export default function Footer(){
                 <div className="container mx-auto px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-28">
 
-                        <div>
-
-                            {/* <div>Newsletter</div> */}
+                        <div className='flex flex-col justify-between'>
 
                             <div className='mb-12'>
                                 <CtaBox />
+                            </div>
+
+                            <div className='mb-12 flex-1'>
+                                <div className='font-mono text-lg uppercase mb-5'>Folgen Sie uns</div>
+                                <SocialsIcons color="white" />
                             </div>
 
                             <div className='ftr-links'>
@@ -53,11 +56,6 @@ export default function Footer(){
 
                             <div className='mb-12'>
                                 <FooterMenu />
-                            </div>
-
-                            <div className='mb-12'>
-                                <div className='font-mono text-lg uppercase mb-2'>Folgen Sie uns</div>
-                                <SocialsIcons />
                             </div>
 
                             <div className='mb-24 ftr-cinfo'>
