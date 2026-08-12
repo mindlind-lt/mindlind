@@ -58,11 +58,17 @@ export default function Footer(){
                 </div>
 
                 <div className="container mx-auto px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-28">
+                    {/* Two columns from sm: the orb cell is display:none until lg,
+                        so sm/md lay out as [contact CTA | menu] and only the wide
+                        layout gets the orb between them. */}
+                    {/* gap-28 is 224px of the 960px the container has at the lg
+                        breakpoint itself — it starves the columns until there is
+                        enough width to spend, so the wide gap waits for xl. */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-10 lg:gap-16 xl:gap-28">
 
                         <div className='flex flex-col justify-between'>
 
-                            <div className='mb-12'>
+                            <div className='mb-12 cta-box-wrap'>
                                 <CtaBox />
                             </div>
 
@@ -90,7 +96,7 @@ export default function Footer(){
                                 <FooterMenu />
                             </div>
 
-                            <div className='mb-24 ftr-cinfo'>
+                            <div className='mb-12 lg:mb-24 ftr-cinfo'>
                                 <div>
                                     <a href="#">Žirgų g. 18-6, Raudondvario k. LT-14257 Vilnius</a>
                                 </div>

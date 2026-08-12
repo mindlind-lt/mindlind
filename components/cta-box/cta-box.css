@@ -1,4 +1,11 @@
 
+/* The box does not track the viewport: its column is ~245px at the lg
+   breakpoint but the full ~330px of a phone screen, so viewport media queries
+   would tighten it exactly where it has room. Query the column instead. */
+.cta-box-wrap {
+    container-type: inline-size;
+}
+
 .cta-box {
     background: #fff;
     border-radius: 8px;
@@ -14,7 +21,26 @@
     border-radius: 8px;
 
     flex: 2;
-    padding: 25px 30px;
+
+    /* flex items floor at their content width; without this the long CTA
+       label props the column open and the media panel never gets its share. */
+    min-width: 0;
+
+    padding: 20px 22px;
+}
+
+@media (min-width: 40rem) {
+    .cta-box-content {
+        padding: 25px 30px;
+    }
+}
+
+/* `w-full` already stretches the button, so the side padding buys nothing and
+   only shrinks the room the label has. .door-button is a fixed 40px with
+   overflow:hidden — a wrapped label gets clipped rather than growing the box. */
+.cta-box-content .door-button {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .cta-box-media {
@@ -23,6 +49,11 @@
 
     flex: 1;
 
+    /* Below sm the box spans the full column, and an uncapped third of that is
+       a video panel far taller than it is useful — cap it and hand the width
+       back to the copy. Narrower than the cap at every column-based size. */
+    max-width: 160px;
+
     overflow: hidden;
 
     video {
@@ -30,4 +61,29 @@
         width: 100%;
         height: 100%;
     }
+}
+
+/* Side by side in a narrow column, the media panel takes a third and the copy
+   is left with less than the CTA label needs — .door-button is a fixed 40px
+   with overflow:hidden, so the label does not wrap, it disappears. Stack
+   instead. Kept last: these carry no extra specificity over the rules above. */
+@container (max-width: 300px) {
+
+    .cta-box {
+        flex-direction: column;
+    }
+
+    /* flex:1 / flex:2 resolve against the block axis once stacked, where a
+       0% basis in an auto-height box collapses the panel — size both from
+       their own content instead. */
+    .cta-box-media {
+        flex: none;
+        max-width: none;
+        height: 132px;
+    }
+
+    .cta-box-content {
+        flex: none;
+    }
+
 }

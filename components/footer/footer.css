@@ -24,10 +24,23 @@
 .ftr-brand {
     text-align: center;
     display: block;
-    margin-bottom: 150px;
+    margin-bottom: 64px;
+}
+
+@media (min-width: 40rem) {
+    .ftr-brand {
+        margin-bottom: 100px;
+    }
+}
+
+@media (min-width: 64rem) {
+    .ftr-brand {
+        margin-bottom: 150px;
+    }
 }
 
 .ftr-brand svg {
+    display: block;
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -36,19 +49,33 @@
 
 .ftr-strands {
     position: absolute;
-    top: -30%;
+    top: -80px;
     left: 0;
     right: 0;
-    bottom: 35%;
+
+    /* Proportional insets scale with the footer, and on narrow screens the
+       footer is a ~1200px stacked column — the sweep would smear across all
+       of it and pay for a canvas that tall. Pin a band behind the wordmark
+       instead; hand the percentages back once the columns sit side by side. */
+    height: 560px;
 
     z-index: 0;
     pointer-events: none;
+}
+
+@media (min-width: 64rem) {
+    .ftr-strands {
+        top: -30%;
+        bottom: 35%;
+        height: auto;
+    }
 }
 
 .ftr-links {
     font-size: 12px;
 
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
 
     a {
@@ -91,7 +118,9 @@
     flex-direction: column;
     gap: 16px;
 
-    word-break: break-word;
+    /* The address and the two phone numbers outrun a one-third column on a
+       narrow screen; break the overlong ones rather than push the grid wide. */
+    overflow-wrap: break-word;
 
     a {
         color: #ffffff;
