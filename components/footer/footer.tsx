@@ -50,18 +50,9 @@ export default function Footer(){
                         </div>
 
                         <div className='hidden lg:flex items-center justify-center text-3xl'>
-                            {/* Ghost palette. background stays .ftr-box's colour, NOT the
-                                preset's #070709, so the orb's square canvas blends in. */}
-                            <LoadingOrb
-                                preset="Aurora"
-                                values={{
-                                    background: '#1A1A1A',
-                                    colorBlue: '#C2CBE6',    // rim A
-                                    colorMagenta: '#8893B5', // rim B
-                                    glowA: '#AEB8D8',
-                                    glowB: '#6E7799',
-                                }}
-                            />
+                            {/* background stays .ftr-box's colour, NOT the preset's
+                                #070709, so the orb's square canvas blends in. */}
+                            <LoadingOrb preset="Ghost" values={{ background: '#1A1A1A' }} />
                         </div>
 
                         <div>

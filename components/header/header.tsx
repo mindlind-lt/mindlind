@@ -1,4 +1,5 @@
 import Burger from "./burger";
+import GradualBlur from "@/components/gradual-blur/gradual-blur";
 
 import Image from "next/image";
 import Link from "@/components/progress-bar/progress-link";
@@ -10,7 +11,20 @@ export default function Header() {
   return (
     <>
 
-      <div className="hdr-overlay"></div>
+      {/* Blurred backdrop behind the header. zIndex must land under the header's
+          own z-index: 50, or it would blur the logo and nav instead of the page
+          behind them — `style` is the only prop that can override it, because
+          target="page" forces zIndex + 100. */}
+      <GradualBlur
+        target="page"
+        position="top"
+        height="var(--hdr-height)"
+        strength={2}
+        divCount={6}
+        curve="bezier"
+        opacity={1}
+        style={{ zIndex: 40 }}
+      />
 
       <Link className="hdr-logo" href="/">
         <Image 
