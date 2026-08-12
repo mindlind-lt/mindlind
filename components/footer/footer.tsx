@@ -2,6 +2,7 @@ import CtaBox from '../cta-box/cta-box';
 import SocialsIcons from '../socials-icons/socials-icons';
 import FooterMenu from '../footer-menu/footer-menu';
 import LoadingOrb from '../loading-orb/loading-orb';
+import Strands from '../strands/strands';
 import './footer.css';
 
 export default function Footer(){
@@ -10,10 +11,38 @@ export default function Footer(){
         <div className="ftr relative">
             <div className="ftr-box relative z-10">
 
-                <div className="container mx-auto max-w-[900px] px-6 lg:px-8 relative z-10">
+                <div className="ftr-strands">
+                    <Strands
+                        /* Neon sweep: brand green into cyan, blue, purple, pink.
+                           The shader lerps between neighbours and wraps the last
+                           entry back to the first, so the order mirrors itself —
+                           going straight pink -> green would blend through grey
+                           and leave a dull band that `saturation` can't recover. */
+                        colors={[
+                            '#0FD680', '#00D4FF', '#4C6FFF', '#A855F7',
+                            '#FF2D95', '#A855F7', '#4C6FFF', '#00D4FF'
+                        ]}
+                        count={4}
+                        speed={0.35}
+                        amplitude={0.6}
+                        waviness={0.9}
+                        thickness={0.6}
+                        glow={1.4}
+                        taper={3}
+                        spread={1}
+                        hueShift={0.35}
+                        intensity={0.5}
+                        saturation={1.6}
+                        opacity={0.6}
+                        scale={1}
+                    />
+                </div>
+
+                <div className="container mx-auto max-w-[840px] px-6 lg:px-8 relative z-10 mix-blend-lighten ">
                     <div className='ftr-brand'>
                         {/* <div className='font-mono uppercase text-2xl'>Digital Creative Agency</div> */}
                         <div className="mt-4">
+
                             <svg width="1291" height="210" viewBox="0 0 1291 210" fill="white" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 210V0H48L76.2 199.2H79.8L108 0H156V210H132.6V10.8H129L100.8 210H55.2L27 10.8H23.4V210H0Z"/>
                                 <path d="M174.091 210V186.6H228.091V23.4H174.091V0H307.291V23.4H253.291V186.6H307.291V210H174.091Z"/>

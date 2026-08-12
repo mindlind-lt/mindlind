@@ -24,7 +24,7 @@
 .ftr-brand {
     text-align: center;
     display: block;
-    margin-bottom: 120px;
+    margin-bottom: 150px;
 }
 
 .ftr-brand svg {
@@ -32,6 +32,17 @@
     max-width: 100%;
     height: auto;
     margin: 0;
+}
+
+.ftr-strands {
+    position: absolute;
+    top: -30%;
+    left: 0;
+    right: 0;
+    bottom: 35%;
+
+    z-index: 0;
+    pointer-events: none;
 }
 
 .ftr-links {
