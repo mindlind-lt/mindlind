@@ -5,9 +5,39 @@ import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 import type { Metadata } from "next";
 
-import { buildMetadata } from "@/lib/metadata";
-
-export const metadata: Metadata = buildMetadata("/projects/princefood");
+export const metadata: Metadata = {
+  title: "Prince Food",
+  description:
+    "Digitaler Auftritt für ein Produktionsunternehmen: Vertrauen schaffen, Prozesse sichtbar machen, industrielle Stärke verständlich kommunizieren.",
+  alternates: { canonical: "/projects/princefood" },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/projects/princefood",
+    siteName: "Mindlind Werbeagentur",
+    title: "Prince Food | Mindlind Werbeagentur",
+    description:
+      "Digitaler Auftritt für ein Produktionsunternehmen: Vertrauen schaffen, Prozesse sichtbar machen, industrielle Stärke verständlich kommunizieren.",
+    images: [
+      {
+        url: "/images/case-prince-food-2.jpg",
+        alt: "Prince Food — Mindlind Werbeagentur",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prince Food | Mindlind Werbeagentur",
+    description:
+      "Digitaler Auftritt für ein Produktionsunternehmen: Vertrauen schaffen, Prozesse sichtbar machen, industrielle Stärke verständlich kommunizieren.",
+    images: [
+      {
+        url: "/images/case-prince-food-2.jpg",
+        alt: "Prince Food — Mindlind Werbeagentur",
+      },
+    ],
+  },
+};
 
 
 export default function PageCasePrince() {

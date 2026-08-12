@@ -7,9 +7,27 @@ import Hero from "@/components/hero";
 import { GlassObject } from "@/components/canvasui/GlassObject";
 import type { Metadata } from "next";
 
-import { buildMetadata } from "@/lib/metadata";
-
-export const metadata: Metadata = buildMetadata("/projects");
+export const metadata: Metadata = {
+  title: "Projekte",
+  description:
+    "Ausgewählte Arbeiten: Websites, UX/UI und Markenauftritte für Gastronomie, Beauty, Automotive und Produktion.",
+  alternates: { canonical: "/projects" },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/projects",
+    siteName: "Mindlind Werbeagentur",
+    title: "Projekte | Mindlind Werbeagentur",
+    description:
+      "Ausgewählte Arbeiten: Websites, UX/UI und Markenauftritte für Gastronomie, Beauty, Automotive und Produktion.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projekte | Mindlind Werbeagentur",
+    description:
+      "Ausgewählte Arbeiten: Websites, UX/UI und Markenauftritte für Gastronomie, Beauty, Automotive und Produktion.",
+  },
+};
 
 
 

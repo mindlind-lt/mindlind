@@ -8,9 +8,27 @@ import Hero from "@/components/hero";
 import CreatureBlob from "@/components/creature-blob";
 import type { Metadata } from "next";
 
-import { buildMetadata } from "@/lib/metadata";
-
-export const metadata: Metadata = buildMetadata("/agency");
+export const metadata: Metadata = {
+  title: "Agentur",
+  description:
+    "Das Team hinter Mindlind, unser 360°-Ansatz und wie wir Marken von der Strategie bis zum Launch begleiten.",
+  alternates: { canonical: "/agency" },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/agency",
+    siteName: "Mindlind Werbeagentur",
+    title: "Agentur | Mindlind Werbeagentur",
+    description:
+      "Das Team hinter Mindlind, unser 360°-Ansatz und wie wir Marken von der Strategie bis zum Launch begleiten.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Agentur | Mindlind Werbeagentur",
+    description:
+      "Das Team hinter Mindlind, unser 360°-Ansatz und wie wir Marken von der Strategie bis zum Launch begleiten.",
+  },
+};
 
 
 export default function PageAgency() {

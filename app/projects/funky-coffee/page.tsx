@@ -5,9 +5,39 @@ import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 import type { Metadata } from "next";
 
-import { buildMetadata } from "@/lib/metadata";
-
-export const metadata: Metadata = buildMetadata("/projects/funky-coffee");
+export const metadata: Metadata = {
+  title: "Funky Coffee",
+  description:
+    "Ein Café verkauft nicht nur Kaffee, sondern Atmosphäre. Digitaler Auftritt in heller, luftiger Food-Ästhetik, der Appetit macht.",
+  alternates: { canonical: "/projects/funky-coffee" },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/projects/funky-coffee",
+    siteName: "Mindlind Werbeagentur",
+    title: "Funky Coffee | Mindlind Werbeagentur",
+    description:
+      "Ein Café verkauft nicht nur Kaffee, sondern Atmosphäre. Digitaler Auftritt in heller, luftiger Food-Ästhetik, der Appetit macht.",
+    images: [
+      {
+        url: "/images/case-funky-coffee-1.png",
+        alt: "Funky Coffee — Mindlind Werbeagentur",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Funky Coffee | Mindlind Werbeagentur",
+    description:
+      "Ein Café verkauft nicht nur Kaffee, sondern Atmosphäre. Digitaler Auftritt in heller, luftiger Food-Ästhetik, der Appetit macht.",
+    images: [
+      {
+        url: "/images/case-funky-coffee-1.png",
+        alt: "Funky Coffee — Mindlind Werbeagentur",
+      },
+    ],
+  },
+};
 
 
 export default function PageCaseFunkyCoffee() {

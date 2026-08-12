@@ -3,9 +3,27 @@ import SectionContact from "@/components/section-contact/section-contact";
 import SplineContactHero from "@/components/spline-contact-hero";
 import type { Metadata } from "next";
 
-import { buildMetadata } from "@/lib/metadata";
-
-export const metadata: Metadata = buildMetadata("/contact");
+export const metadata: Metadata = {
+  title: "Kontakt",
+  description:
+    "Projekt im Kopf? Schreiben Sie uns — wir melden uns kurzfristig mit einer ersten Einschätzung.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/contact",
+    siteName: "Mindlind Werbeagentur",
+    title: "Kontakt | Mindlind Werbeagentur",
+    description:
+      "Projekt im Kopf? Schreiben Sie uns — wir melden uns kurzfristig mit einer ersten Einschätzung.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kontakt | Mindlind Werbeagentur",
+    description:
+      "Projekt im Kopf? Schreiben Sie uns — wir melden uns kurzfristig mit einer ersten Einschätzung.",
+  },
+};
 
 
 export default function PageContact() {

@@ -5,8 +5,39 @@ import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/metadata";
-export const metadata: Metadata = buildMetadata("/projects/mondent");
+
+// Placeholder page — `noindex` until the case study is written.
+export const metadata: Metadata = {
+  title: "Mondent",
+  description: "Case Study in Vorbereitung.",
+  alternates: { canonical: "/projects/mondent" },
+  robots: { index: false, follow: true },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/projects/mondent",
+    siteName: "Mindlind Werbeagentur",
+    title: "Mondent | Mindlind Werbeagentur",
+    description: "Case Study in Vorbereitung.",
+    images: [
+      {
+        url: "/images/case-mondent-1.png",
+        alt: "Mondent — Mindlind Werbeagentur",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mondent | Mindlind Werbeagentur",
+    description: "Case Study in Vorbereitung.",
+    images: [
+      {
+        url: "/images/case-mondent-1.png",
+        alt: "Mondent — Mindlind Werbeagentur",
+      },
+    ],
+  },
+};
 
 export default function PageCaseMondent() {
   return (

@@ -5,9 +5,39 @@ import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 import type { Metadata } from "next";
 
-import { buildMetadata } from "@/lib/metadata";
-
-export const metadata: Metadata = buildMetadata("/projects/autosl");
+export const metadata: Metadata = {
+  title: "AutoSL",
+  description:
+    "Luxusfahrzeuge, präsentiert wie ein kuratiertes Sammlerstück statt wie ein Inserat — jedes Fahrzeug als Objekt mit Charakter und Wert.",
+  alternates: { canonical: "/projects/autosl" },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/projects/autosl",
+    siteName: "Mindlind Werbeagentur",
+    title: "AutoSL | Mindlind Werbeagentur",
+    description:
+      "Luxusfahrzeuge, präsentiert wie ein kuratiertes Sammlerstück statt wie ein Inserat — jedes Fahrzeug als Objekt mit Charakter und Wert.",
+    images: [
+      {
+        url: "/images/case-autosl-1.jpg",
+        alt: "AutoSL — Mindlind Werbeagentur",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AutoSL | Mindlind Werbeagentur",
+    description:
+      "Luxusfahrzeuge, präsentiert wie ein kuratiertes Sammlerstück statt wie ein Inserat — jedes Fahrzeug als Objekt mit Charakter und Wert.",
+    images: [
+      {
+        url: "/images/case-autosl-1.jpg",
+        alt: "AutoSL — Mindlind Werbeagentur",
+      },
+    ],
+  },
+};
 
 
 export default function PageCaseAutosl() {

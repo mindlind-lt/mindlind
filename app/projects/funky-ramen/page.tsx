@@ -5,9 +5,39 @@ import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 import type { Metadata } from "next";
 
-import { buildMetadata } from "@/lib/metadata";
-
-export const metadata: Metadata = buildMetadata("/projects/funky-ramen");
+export const metadata: Metadata = {
+  title: "Funky Ramen",
+  description:
+    "Eine digitale Welt, die Geschmack, Atmosphäre und Identität schon vor dem ersten Besuch spürbar macht — Ramen als Markenelement.",
+  alternates: { canonical: "/projects/funky-ramen" },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/projects/funky-ramen",
+    siteName: "Mindlind Werbeagentur",
+    title: "Funky Ramen | Mindlind Werbeagentur",
+    description:
+      "Eine digitale Welt, die Geschmack, Atmosphäre und Identität schon vor dem ersten Besuch spürbar macht — Ramen als Markenelement.",
+    images: [
+      {
+        url: "/images/case-funky-ramen-1.jpg",
+        alt: "Funky Ramen — Mindlind Werbeagentur",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Funky Ramen | Mindlind Werbeagentur",
+    description:
+      "Eine digitale Welt, die Geschmack, Atmosphäre und Identität schon vor dem ersten Besuch spürbar macht — Ramen als Markenelement.",
+    images: [
+      {
+        url: "/images/case-funky-ramen-1.jpg",
+        alt: "Funky Ramen — Mindlind Werbeagentur",
+      },
+    ],
+  },
+};
 
 
 export default function PageCaseFunky() {

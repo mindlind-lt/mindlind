@@ -5,8 +5,39 @@ import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/metadata";
-export const metadata: Metadata = buildMetadata("/projects/onlysmile");
+
+// Placeholder page — `noindex` until the case study is written.
+export const metadata: Metadata = {
+  title: "OnlySmile",
+  description: "Case Study in Vorbereitung.",
+  alternates: { canonical: "/projects/onlysmile" },
+  robots: { index: false, follow: true },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/projects/onlysmile",
+    siteName: "Mindlind Werbeagentur",
+    title: "OnlySmile | Mindlind Werbeagentur",
+    description: "Case Study in Vorbereitung.",
+    images: [
+      {
+        url: "/images/case-onlysmile-1.png",
+        alt: "OnlySmile — Mindlind Werbeagentur",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OnlySmile | Mindlind Werbeagentur",
+    description: "Case Study in Vorbereitung.",
+    images: [
+      {
+        url: "/images/case-onlysmile-1.png",
+        alt: "OnlySmile — Mindlind Werbeagentur",
+      },
+    ],
+  },
+};
 
 export default function PageCaseOnlysmile() {
   return (

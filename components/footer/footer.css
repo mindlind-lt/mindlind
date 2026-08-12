@@ -23,10 +23,11 @@
 
 .ftr-brand {
     display: block;
+    margin-bottom: 40px;
 }
 
 .ftr-brand svg {
-    width: 320px;
+    width: 100%;
     max-width: 100%;
     height: auto;
     margin: 0;

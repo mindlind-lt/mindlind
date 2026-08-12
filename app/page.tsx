@@ -16,9 +16,29 @@ import SectionFeatWorks from "@/components/section-feat-works/section-feat-works
 import SplineCubes from "@/components/spline-cubes";
 import type { Metadata } from "next";
 
-import { buildMetadata } from "@/lib/metadata";
-
-export const metadata: Metadata = buildMetadata("/");
+export const metadata: Metadata = {
+  // The root layout's title template does not apply to the page in its own
+  // segment, so the brand is part of the title here.
+  title: "Mindlind Werbeagentur — Digitale Markenauftritte",
+  description:
+    "Unser 360° Ansatz für Projektmanagement umfasst fünf Kernphasen, um herausragende Ergebnisse zu erzielen.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/",
+    siteName: "Mindlind Werbeagentur",
+    title: "Mindlind Werbeagentur — Digitale Markenauftritte",
+    description:
+      "Unser 360° Ansatz für Projektmanagement umfasst fünf Kernphasen, um herausragende Ergebnisse zu erzielen.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mindlind Werbeagentur — Digitale Markenauftritte",
+    description:
+      "Unser 360° Ansatz für Projektmanagement umfasst fünf Kernphasen, um herausragende Ergebnisse zu erzielen.",
+  },
+};
 
 
 const clientLogos1 = [

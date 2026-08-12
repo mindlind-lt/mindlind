@@ -5,9 +5,39 @@ import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 import type { Metadata } from "next";
 
-import { buildMetadata } from "@/lib/metadata";
-
-export const metadata: Metadata = buildMetadata("/projects/muafaktur");
+export const metadata: Metadata = {
+  title: "MUA Faktur",
+  description:
+    "Beauty-Marke als skalierbares digitales System: Produkte, Academy und Services als Teile einer größeren Markenwelt.",
+  alternates: { canonical: "/projects/muafaktur" },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/projects/muafaktur",
+    siteName: "Mindlind Werbeagentur",
+    title: "MUA Faktur | Mindlind Werbeagentur",
+    description:
+      "Beauty-Marke als skalierbares digitales System: Produkte, Academy und Services als Teile einer größeren Markenwelt.",
+    images: [
+      {
+        url: "/images/case-mua-2.png",
+        alt: "MUA Faktur — Mindlind Werbeagentur",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MUA Faktur | Mindlind Werbeagentur",
+    description:
+      "Beauty-Marke als skalierbares digitales System: Produkte, Academy und Services als Teile einer größeren Markenwelt.",
+    images: [
+      {
+        url: "/images/case-mua-2.png",
+        alt: "MUA Faktur — Mindlind Werbeagentur",
+      },
+    ],
+  },
+};
 
 
 export default function PageCaseMua() {

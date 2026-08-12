@@ -5,9 +5,39 @@ import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = buildMetadata("/projects/factorysl");
+// Placeholder page — `noindex` until the case study is written.
+export const metadata: Metadata = {
+  title: "Factory SL",
+  description: "Case Study in Vorbereitung.",
+  alternates: { canonical: "/projects/factorysl" },
+  robots: { index: false, follow: true },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "/projects/factorysl",
+    siteName: "Mindlind Werbeagentur",
+    title: "Factory SL | Mindlind Werbeagentur",
+    description: "Case Study in Vorbereitung.",
+    images: [
+      {
+        url: "/images/case-factorysl-1.jpg",
+        alt: "Factory SL — Mindlind Werbeagentur",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Factory SL | Mindlind Werbeagentur",
+    description: "Case Study in Vorbereitung.",
+    images: [
+      {
+        url: "/images/case-factorysl-1.jpg",
+        alt: "Factory SL — Mindlind Werbeagentur",
+      },
+    ],
+  },
+};
 
 export default function PageCaseFactorysl() {
   return (
