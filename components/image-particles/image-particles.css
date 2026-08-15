@@ -10,6 +10,10 @@
      section. Pass a `background` via `style` to paint a backdrop instead —
      worth doing with `showImage={false}`, where the gaps show through. */
   background-color: transparent;
+  /* The whole section reads as one painted surface: nothing inside it is
+     selectable, and a text selection dragged across the page skips it. */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .image-particles-canvas {
@@ -29,15 +33,21 @@
   height: 100%;
   object-fit: cover;
   transition: opacity 0.4s ease;
+  pointer-events: none;
+  -webkit-user-drag: none;
 }
 
 .image-particles-ready .image-particles-fallback {
   opacity: 0;
 }
 
+/* Real DOM — it stays in the accessibility tree and in the served HTML — but
+   inert to the pointer, so hover, clicks and drags fall through to the page
+   underneath exactly as they would over the bare canvas. */
 .image-particles-content {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }

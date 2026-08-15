@@ -6,6 +6,7 @@ import Hero from "@/components/hero";
 
 import { GlassObject } from "@/components/canvasui/GlassObject";
 import type { Metadata } from "next";
+import ImageParticles from "@/components/image-particles/image-particles";
 
 export const metadata: Metadata = {
   title: "Projekte",
@@ -36,13 +37,23 @@ export default function PageProjects() {
   return (
     <>
 
-      <Hero title="PROJEKTE" />
+      {/* <Hero title="PROJEKTE" /> */}
+
+      <ImageParticles
+        src="/images/service-content.jpg"
+        alt=""
+        style={{ aspectRatio: "21/9", minHeight: "70svh" }}
+      >
+        <div className="flex h-full items-center justify-center">
+          <h1 className="font-mono text-white text-6xl sm:text-8xl font-bold uppercase">Kontakt</h1>
+        </div>
+      </ImageParticles>
 
       {/* <div className="border-4 border-dashed border-red-500">
         <SplineProjectsHero />
       </div> */}
 
-      <div className="container mx-auto px-5 pb-20">
+      <div className="container mx-auto px-5 py-20 sm:mt-10">
         <div className="works-masonry">
 
           <div className="works-masonry-item">

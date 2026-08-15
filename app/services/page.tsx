@@ -1,15 +1,26 @@
 'use client';
 
-import Hero from "@/components/hero";
+// import Hero from "@/components/hero";
 import SectionServices from "@/components/section-services/section-services";
 import SectionContact from "@/components/section-contact/section-contact";
+import ImageParticles from "@/components/image-particles/image-particles";
 
 
 export default function PageServices(){
     return (
         <>
 
-            <Hero title="LEISTUNGEN" />
+            {/* <Hero title="LEISTUNGEN" /> */}
+
+            <ImageParticles
+                src="/images/service-content.jpg"
+                alt=""
+                style={{ aspectRatio: "21/9", minHeight: "70svh" }}
+            >
+                <div className="flex h-full items-center justify-center">
+                <h1 className="font-mono text-white text-6xl sm:text-8xl font-bold uppercase">LEISTUNGEN</h1>
+                </div>
+            </ImageParticles>
 
 
             {/* <div className="pt-[160px] pb-20 border-4 border-dashed border-red-500 relative">

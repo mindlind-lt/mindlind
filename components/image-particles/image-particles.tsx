@@ -215,7 +215,12 @@ export type ImageParticlesProps = {
     showImage?: boolean;
     /** Opacity of that background image, when shown. */
     imageOpacity?: number;
-    /** Overlay content — headings, buttons — stacked above the canvas. */
+    /**
+     * Overlay content stacked above the canvas. Rendered as real DOM — it is
+     * in the served HTML and the accessibility tree — but it is inert: not
+     * selectable, and transparent to pointer events, so the section behaves
+     * like one painted surface. Interactive controls belong outside it.
+     */
     children?: React.ReactNode;
     className?: string;
     style?: React.CSSProperties;
@@ -676,7 +681,13 @@ export default function ImageParticles({
                 fallback when WebGL2 is unavailable or the effect fails. */}
             {showImage && (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img className="image-particles-fallback" src={src} alt={alt} aria-hidden={!alt} />
+                <img
+                    className="image-particles-fallback"
+                    src={src}
+                    alt={alt}
+                    aria-hidden={!alt}
+                    draggable={false}
+                />
             )}
             {children != null && <div className="image-particles-content">{children}</div>}
         </div>
