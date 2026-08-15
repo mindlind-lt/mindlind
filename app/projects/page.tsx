@@ -120,7 +120,7 @@ export default function PageProjects() {
             <WorkThumb
               headingLevel="h2"
               href="/projects/autosl"
-              imageSrc="/images/case-autosl-1.jpg"
+              imageSrc="/images/case-autosl-1.webp"
               imageWidth={560}
               imageHeight={560}
               title="AutoSL"

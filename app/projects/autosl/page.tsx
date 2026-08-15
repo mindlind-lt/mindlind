@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       "Luxusfahrzeuge, präsentiert wie ein kuratiertes Sammlerstück statt wie ein Inserat — jedes Fahrzeug als Objekt mit Charakter und Wert.",
     images: [
       {
-        url: "/images/case-autosl-1.jpg",
+        url: "/images/case-autosl-1.webp",
         alt: "AutoSL — Mindlind Werbeagentur",
       },
     ],
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Luxusfahrzeuge, präsentiert wie ein kuratiertes Sammlerstück statt wie ein Inserat — jedes Fahrzeug als Objekt mit Charakter und Wert.",
     images: [
       {
-        url: "/images/case-autosl-1.jpg",
+        url: "/images/case-autosl-1.webp",
         alt: "AutoSL — Mindlind Werbeagentur",
       },
     ],
@@ -46,7 +46,7 @@ export default function PageCaseAutosl() {
 
       {/* Hero */}
       <ParallaxImage
-        src="/images/case-autosl-1.jpg"
+        src="/images/case-autosl-1.webp"
         alt=""
         height="750px"
         strength={80}
@@ -123,7 +123,7 @@ export default function PageCaseAutosl() {
           <div className="flex-1">
             <div className="flex items-center justify-center py-10 px-5 min-h-50">
               <Image 
-                src="/images/case-autosl-logo.png"
+                src="/images/case-autosl-logo.webp"
                 alt=""
                 width={320}
                 height={200}
@@ -147,7 +147,7 @@ export default function PageCaseAutosl() {
 
       <div className="container mx-auto px-5 py-15">
         <Image
-          src="/images/case-autosl-2.jpg"
+          src="/images/case-autosl-2.webp"
           width={1440}
           height={600}
           alt=""
@@ -172,14 +172,14 @@ export default function PageCaseAutosl() {
       <div className="px-8 py-15">
         <div className="flex gap-5">
           <Image
-            src="/images/case-autosl-3.jpg"
+            src="/images/case-autosl-3.webp"
             width={1000}
             height={600}
             alt=""
             className="w-full rounded-lg"
           />
           <Image
-            src="/images/case-autosl-4.jpg"
+            src="/images/case-autosl-4.webp"
             width={1000}
             height={600}
             alt=""
@@ -201,14 +201,14 @@ export default function PageCaseAutosl() {
       <div className="px-8 py-15">
         <div className="flex gap-5">
           <Image
-            src="/images/case-autosl-5.jpg"
+            src="/images/case-autosl-5.webp"
             width={1000}
             height={600}
             alt=""
             className="w-full rounded-lg"
           />
           <Image
-            src="/images/case-autosl-6.jpg"
+            src="/images/case-autosl-6.webp"
             width={1000}
             height={600}
             alt=""
