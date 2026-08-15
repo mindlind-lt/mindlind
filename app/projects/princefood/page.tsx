@@ -44,11 +44,13 @@ export default function PageCasePrince() {
   return (
     <>
 
-      <Image 
+      {/* Hero */}
+      <ParallaxImage
         src="/images/case-prince-food-1.jpg"
-        width={1000}
-        height={600}
         alt=""
+        height="750px"
+        strength={80}
+        preload
         className="w-full"
       />
 

@@ -46,7 +46,7 @@ export default function PageCaseLuxfloor() {
       {/* Hero */}
       <ParallaxImage
         src="/images/case-luxfloor-1.png"
-        height="600px"
+        height="750px"
         strength={80}
         className="w-full"
       />

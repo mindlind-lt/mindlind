@@ -47,7 +47,7 @@ export default function PageCaseMondent() {
       <ParallaxImage
         src="/images/case-mondent-3.png"
         alt=""
-        height="600px"
+        height="750px"
         strength={150}
         direction="down"
         preload

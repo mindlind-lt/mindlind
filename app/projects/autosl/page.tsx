@@ -44,11 +44,13 @@ export default function PageCaseAutosl() {
   return (
     <>
 
-      <Image 
+      {/* Hero */}
+      <ParallaxImage
         src="/images/case-autosl-1.jpg"
-        width={1440}
-        height={600}
         alt=""
+        height="750px"
+        strength={80}
+        preload
         className="w-full"
       />
 

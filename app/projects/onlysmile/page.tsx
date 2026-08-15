@@ -47,7 +47,7 @@ export default function PageCaseOnlysmile() {
       <ParallaxImage
         src="/images/case-onlysmile-2.png"
         alt=""
-        height="600px"
+        height="750px"
         strength={150}
         direction="down"
         preload

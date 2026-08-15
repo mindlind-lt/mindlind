@@ -46,7 +46,7 @@ export default function PageCasePandaTravel() {
       {/* Hero */}
       <ParallaxImage
         src="/images/case-pandatravel-1.png"
-        height="600px"
+        height="750px"
         strength={80}
         className="w-full"
       />

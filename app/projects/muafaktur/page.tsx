@@ -44,11 +44,13 @@ export default function PageCaseMua() {
   return (
     <>
 
-      <Image 
+      {/* Hero */}
+      <ParallaxImage
         src="/images/case-mua-1.png"
-        width={1000}
-        height={600}
         alt=""
+        height="750px"
+        strength={80}
+        preload
         className="w-full"
       />
 

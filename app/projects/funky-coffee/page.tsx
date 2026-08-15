@@ -44,11 +44,13 @@ export default function PageCaseFunkyCoffee() {
   return (
     <>
 
-      <Image 
+      {/* Hero */}
+      <ParallaxImage
         src="/images/case-funky-coffee-4.png"
-        width={1440}
-        height={600}
         alt=""
+        height="750px"
+        strength={80}
+        preload
         className="w-full"
       />
 

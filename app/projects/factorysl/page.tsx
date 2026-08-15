@@ -47,7 +47,7 @@ export default function PageCaseFactorysl() {
       <ParallaxImage
         src="/images/case-factorysl-5.jpg"
         alt=""
-        height="600px"
+        height="750px"
         strength={150}
         direction="down"
         preload

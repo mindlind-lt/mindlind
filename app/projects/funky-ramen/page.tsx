@@ -44,11 +44,13 @@ export default function PageCaseFunky() {
   return (
     <>
 
-      <Image 
+      {/* Hero */}
+      <ParallaxImage
         src="/images/case-funky-ramen-1.jpg"
-        width={1600}
-        height={600}
         alt=""
+        height="750px"
+        strength={80}
+        preload
         className="w-full"
       />
 
