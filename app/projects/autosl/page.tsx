@@ -198,14 +198,23 @@ export default function PageCaseAutosl() {
       </div>
 
 
-      <div className="container mx-auto px-5 py-15">
-        <Image
-          src="/images/case-autosl-5.jpg"
-          width={1440}
-          height={720}
-          alt=""
-          className="w-full rounded-lg"
-        />
+      <div className="px-8 py-15">
+        <div className="flex gap-5">
+          <Image
+            src="/images/case-autosl-5.jpg"
+            width={1000}
+            height={600}
+            alt=""
+            className="w-full rounded-lg"
+          />
+          <Image
+            src="/images/case-autosl-6.jpg"
+            width={1000}
+            height={600}
+            alt=""
+            className="w-full rounded-lg"
+          />
+        </div>
       </div>
 
 
