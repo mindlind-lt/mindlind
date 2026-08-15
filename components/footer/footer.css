@@ -65,8 +65,8 @@
 
 @media (min-width: 64rem) {
     .ftr-strands {
-        top: -30%;
-        bottom: 35%;
+        top: -55%;
+        bottom: 0%;
         height: auto;
     }
 }

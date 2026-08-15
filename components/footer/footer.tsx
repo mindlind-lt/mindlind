@@ -13,11 +13,6 @@ export default function Footer(){
 
                 <div className="ftr-strands">
                     <Strands
-                        /* Neon sweep: brand green into cyan, blue, purple, pink.
-                           The shader lerps between neighbours and wraps the last
-                           entry back to the first, so the order mirrors itself —
-                           going straight pink -> green would blend through grey
-                           and leave a dull band that `saturation` can't recover. */
                         colors={[
                             '#0FD680', '#00D4FF', '#4C6FFF', '#A855F7',
                             '#FF2D95', '#A855F7', '#4C6FFF', '#00D4FF'
@@ -38,7 +33,7 @@ export default function Footer(){
                     />
                 </div>
 
-                <div className="container mx-auto max-w-[840px] px-6 lg:px-8 relative z-10 mix-blend-lighten ">
+                <div className="container mx-auto max-w-[840px] px-6 lg:px-8 relative z-10">
                     <div className='ftr-brand'>
                         {/* <div className='font-mono uppercase text-2xl'>Digital Creative Agency</div> */}
                         <div className="mt-4">
@@ -57,13 +52,7 @@ export default function Footer(){
                     </div>
                 </div>
 
-                <div className="container mx-auto px-6 lg:px-8 relative z-10">
-                    {/* Two columns from sm: the orb cell is display:none until lg,
-                        so sm/md lay out as [contact CTA | menu] and only the wide
-                        layout gets the orb between them. */}
-                    {/* gap-28 is 224px of the 960px the container has at the lg
-                        breakpoint itself — it starves the columns until there is
-                        enough width to spend, so the wide gap waits for xl. */}
+                <div className="container mx-auto px-6 lg:px-8 relative z-10 mix-blend-lighten">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-10 lg:gap-16 xl:gap-28">
 
                         <div className='flex flex-col justify-between'>
