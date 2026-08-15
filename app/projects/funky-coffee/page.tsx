@@ -144,7 +144,7 @@ export default function PageCaseFunkyCoffee() {
       </div>
 
 
-      <div className="px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <Image
           src="/images/case-funky-coffee-1.png"
           width={1440}
@@ -195,7 +195,7 @@ export default function PageCaseFunkyCoffee() {
       </div>
 
 
-      <div className="px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <Image
           src="/images/case-funky-coffee-5.png"
           width={1440}

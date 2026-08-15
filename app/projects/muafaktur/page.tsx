@@ -135,7 +135,7 @@ export default function PageCaseMua() {
         <div className="text-base space-y-3 flex-2">Wir begannen damit, die Marke in drei klare Wege zu gliedern: Shop, Academy und Make-up-Services. Jeder Bereich erhielt eine eigene Funktion, eine eigene Nutzerführung und eine klare Conversion-Logik, blieb aber gleichzeitig Teil einer einheitlichen Markenwelt.</div>
       </div>
 
-      <div className="px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <ParallaxImage
           src="/images/case-mua-2.png"
           height="600px"
@@ -176,7 +176,7 @@ export default function PageCaseMua() {
         </div>
       </div>
 
-      <div className="px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <Image
           src="/images/case-mua-5.png"
           width={1000}

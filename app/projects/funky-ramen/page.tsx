@@ -144,7 +144,7 @@ export default function PageCaseFunky() {
       </div>
 
 
-      <div className="px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <Image
           src="/images/case-funky-ramen-2.jpg"
           width={1440}
@@ -192,7 +192,7 @@ export default function PageCaseFunky() {
       </div>
 
 
-      <div className="px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <Image
           src="/images/case-funky-ramen-5.jpg"
           width={1440}

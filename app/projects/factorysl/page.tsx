@@ -140,7 +140,7 @@ export default function PageCaseFactorysl() {
       </div>
 
 
-      <div className="px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <Image
           src="/images/case-factorysl-3.jpg"
           width={1440}

@@ -132,7 +132,7 @@ export default function PageCasePrince() {
       </div>
 
 
-      <div className="px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <Image
           src="/images/case-prince-food-2.jpg"
           width={1000}
@@ -179,7 +179,7 @@ export default function PageCasePrince() {
       </div>
 
 
-      <div className="px-8 py-15">
+      <div className="container mx-auto px-5 py-15">
         <Image
           src="/images/case-prince-food-5.jpg"
           width={1000}
