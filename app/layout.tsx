@@ -7,6 +7,7 @@ import Preloader from "@/components/preloader/preloader";
 import PreloadResources from "@/components/preload-resources";
 import TopProgressBar from "@/components/progress-bar/top-progress-bar";
 import { siteConfig } from "@/lib/site";
+import { organizationSchema } from "@/lib/schema";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -68,6 +69,12 @@ export default function RootLayout({
       lang={siteConfig.lang}
       className={`${inter.variable} ${spaceMono.variable} antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
+        />
+      </head>
       <body>
         <TopProgressBar />
         <PreloadResources />

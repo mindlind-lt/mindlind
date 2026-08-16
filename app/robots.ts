@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { absoluteUrl, routes, siteConfig } from "@/lib/site";
+import { absoluteUrl, routes } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
   // Unpublished routes are already `noindex` via their page metadata; listing
@@ -16,6 +16,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow,
     },
     sitemap: absoluteUrl("/sitemap.xml"),
-    host: siteConfig.url,
   };
 }

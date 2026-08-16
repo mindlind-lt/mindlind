@@ -25,13 +25,16 @@ export default function FAQAccordion({ items, className }: FAQAccordionProps) {
     <div className={`faq-accordion ${className || ''}`}>
       {items.map((item, index) => (
         <div key={index} className={`faq-item ${openIndex === index ? 'open' : ''}`}>
-          <button
-            onClick={() => toggle(index)}
-            className="faq-question"
-          >
-            <ChevronDown className="faq-icon" />
-            <span className="faq-question-text font-mono uppercase text-lg">{item.question}</span>
-          </button>
+          <h3 className="faq-question-heading">
+            <button
+              onClick={() => toggle(index)}
+              className="faq-question"
+              aria-expanded={openIndex === index}
+            >
+              <ChevronDown className="faq-icon" />
+              <span className="faq-question-text font-mono uppercase text-lg">{item.question}</span>
+            </button>
+          </h3>
           <div className="faq-answer">
             <div>{item.answer}</div>
           </div>

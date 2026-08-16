@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { servicesSchema } from "@/lib/schema";
 
 // `app/services/page.tsx` is a Client Component, and Client Components cannot
 // export `metadata` — so the route's metadata lives in this layout instead.
@@ -29,5 +30,13 @@ export default function ServicesLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema()) }}
+      />
+      {children}
+    </>
+  );
 }
