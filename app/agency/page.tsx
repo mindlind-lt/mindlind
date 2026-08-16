@@ -7,6 +7,7 @@ import SplineAgency2 from "@/components/spline-agency-2";
 import Hero from "@/components/hero";
 import CreatureBlob from "@/components/creature-blob";
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Agentur",
@@ -35,6 +36,14 @@ export default function PageAgency() {
   return (
     <>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([{ name: "Agentur", path: "/agency" }]),
+          ),
+        }}
+      />
 
       <Hero title="AGENCY" />
 

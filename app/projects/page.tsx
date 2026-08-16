@@ -7,6 +7,7 @@ import Hero from "@/components/hero";
 import { GlassObject } from "@/components/canvasui/GlassObject";
 import type { Metadata } from "next";
 import ImageParticles from "@/components/image-particles/image-particles";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Projekte",
@@ -36,6 +37,15 @@ export const metadata: Metadata = {
 export default function PageProjects() {
   return (
     <>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([{ name: "Projekte", path: "/projects" }]),
+          ),
+        }}
+      />
 
       {/* <Hero title="PROJEKTE" /> */}
 

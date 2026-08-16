@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { servicesSchema } from "@/lib/schema";
+import { breadcrumbSchema, servicesSchema } from "@/lib/schema";
 
 // `app/services/page.tsx` is a Client Component, and Client Components cannot
 // export `metadata` — so the route's metadata lives in this layout instead.
@@ -35,6 +35,14 @@ export default function ServicesLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([{ name: "Leistungen", path: "/services" }]),
+          ),
+        }}
       />
       {children}
     </>

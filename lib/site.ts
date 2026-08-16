@@ -142,3 +142,13 @@ export const routes = [
 export function absoluteUrl(path: string): string {
   return `${siteConfig.url}${path === "/" ? "" : path}`;
 }
+
+/**
+ * Bump when page content meaningfully changes. Deliberately a constant rather
+ * than `new Date()`: under Cache Components a clock read during prerender is
+ * synchronous IO and fails the build, and a build timestamp would tell
+ * crawlers every page changed on every deploy. Shared by `app/sitemap.ts` and
+ * `lib/schema.ts` so sitemap `lastmod` and schema `dateModified` can't drift
+ * apart.
+ */
+export const LAST_MODIFIED = "2026-08-09T00:00:00.000Z";

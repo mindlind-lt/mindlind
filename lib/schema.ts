@@ -4,7 +4,7 @@
  * metadata — consumed via `<script type="application/ld+json">` in layouts.
  */
 
-import { absoluteUrl, siteConfig } from "@/lib/site";
+import { absoluteUrl, LAST_MODIFIED, siteConfig } from "@/lib/site";
 
 const ORGANIZATION_ID = absoluteUrl("/#organization");
 
@@ -103,5 +103,35 @@ export function servicesSchema() {
         areaServed: ["DE", "LT"],
       },
     ],
+  } as const;
+}
+
+/** `items` in page order, root first — e.g. [{name: "Projekte", path: "/projects"}, {name: "Funky Coffee", path: "/projects/funky-coffee"}]. Home is prepended automatically. */
+export function breadcrumbSchema(items: { name: string; path: string }[]) {
+  const withHome = [{ name: siteConfig.name, path: "/" }, ...items];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: withHome.map((item, index) => ({
+      "@type": "ListItem" as const,
+      position: index + 1,
+      name: item.name,
+      item: absoluteUrl(item.path),
+    })),
+  } as const;
+}
+
+export function caseStudySchema({ path, name }: { path: string; name: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "@id": absoluteUrl(`${path}#work`),
+    name,
+    url: absoluteUrl(path),
+    creator: { "@id": ORGANIZATION_ID },
+    publisher: { "@id": ORGANIZATION_ID },
+    dateModified: LAST_MODIFIED,
+    inLanguage: "de",
   } as const;
 }

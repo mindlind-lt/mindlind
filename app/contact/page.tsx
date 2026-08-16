@@ -3,6 +3,7 @@ import ImageParticles from "@/components/image-particles/image-particles";
 import SectionContact from "@/components/section-contact/section-contact";
 import SplineContactHero from "@/components/spline-contact-hero";
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -30,7 +31,16 @@ export const metadata: Metadata = {
 export default function PageContact() {
   return (
     <>
-    
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([{ name: "Kontakt", path: "/contact" }]),
+          ),
+        }}
+      />
+
       <ImageParticles
         src="/images/service-content.jpg"
         alt=""

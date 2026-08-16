@@ -4,6 +4,7 @@ import { ParallaxImage } from "@/components/ui/parallax-image";
 import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 import type { Metadata } from "next";
+import { breadcrumbSchema, caseStudySchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "AutoSL",
@@ -43,6 +44,26 @@ export const metadata: Metadata = {
 export default function PageCaseAutosl() {
   return (
     <>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Projekte", path: "/projects" },
+              { name: "AutoSL", path: "/projects/autosl" },
+            ]),
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            caseStudySchema({ path: "/projects/autosl", name: "AutoSL" }),
+          ),
+        }}
+      />
 
       {/* Hero */}
       <ParallaxImage
