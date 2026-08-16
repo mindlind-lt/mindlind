@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   // segment, so the brand is part of the title here.
   title: "Mindlind Werbeagentur — Digitale Markenauftritte",
   description:
-    "Unser 360° Ansatz für Projektmanagement umfasst fünf Kernphasen, um herausragende Ergebnisse zu erzielen.",
+    "Mindlind ist eine Werbeagentur für Webdesign, SEO und Performance Marketing. Wir entwickeln digitale Markenauftritte, die sichtbar werden und messbar wachsen.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     siteName: "Mindlind Werbeagentur",
     title: "Mindlind Werbeagentur — Digitale Markenauftritte",
     description:
-      "Unser 360° Ansatz für Projektmanagement umfasst fünf Kernphasen, um herausragende Ergebnisse zu erzielen.",
+      "Mindlind ist eine Werbeagentur für Webdesign, SEO und Performance Marketing. Wir entwickeln digitale Markenauftritte, die sichtbar werden und messbar wachsen.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Mindlind Werbeagentur — Digitale Markenauftritte",
     description:
-      "Unser 360° Ansatz für Projektmanagement umfasst fünf Kernphasen, um herausragende Ergebnisse zu erzielen.",
+      "Mindlind ist eine Werbeagentur für Webdesign, SEO und Performance Marketing. Wir entwickeln digitale Markenauftritte, die sichtbar werden und messbar wachsen.",
   },
 };
 
@@ -90,7 +90,7 @@ export default function Home() {
           <h1 className="hero-title">
               <div className="container mx-auto">
                 <div className="hero-title-content">
-                  <div className="hero-title-lead">Digital Creative Agency</div>
+                  <div className="hero-title-lead">Digitale Kreativagentur</div>
                   <div className="hero-title-main">
                       <svg width="1291" height="210" viewBox="0 0 1291 210" fill="black" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 210V0H48L76.2 199.2H79.8L108 0H156V210H132.6V10.8H129L100.8 210H55.2L27 10.8H23.4V210H0Z"/>

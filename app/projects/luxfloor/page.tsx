@@ -6,19 +6,19 @@ import DoorButton from "@/components/door-button/door-button";
 
 import type { Metadata } from "next";
 
-// Placeholder page — `noindex` until the case study is written.
 export const metadata: Metadata = {
   title: "LuxFloor",
-  description: "Case Study in Vorbereitung.",
+  description:
+    "Website und E-Commerce für LuxFloor — moderner Markenauftritt für hochwertige Bodenbeläge und Interior-Produkte.",
   alternates: { canonical: "/projects/luxfloor" },
-  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: "/projects/luxfloor",
     siteName: "Mindlind Werbeagentur",
     title: "LuxFloor | Mindlind Werbeagentur",
-    description: "Case Study in Vorbereitung.",
+    description:
+      "Website und E-Commerce für LuxFloor — moderner Markenauftritt für hochwertige Bodenbeläge und Interior-Produkte.",
     images: [
       {
         url: "/images/case-luxfloor-1.png",
@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "LuxFloor | Mindlind Werbeagentur",
-    description: "Case Study in Vorbereitung.",
+    description:
+      "Website und E-Commerce für LuxFloor — moderner Markenauftritt für hochwertige Bodenbeläge und Interior-Produkte.",
     images: [
       {
         url: "/images/case-luxfloor-1.png",

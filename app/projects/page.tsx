@@ -45,7 +45,7 @@ export default function PageProjects() {
         style={{ aspectRatio: "21/9", minHeight: "70svh" }}
       >
         <div className="flex h-full items-center justify-center">
-          <h1 className="font-mono text-white text-6xl sm:text-8xl font-bold uppercase">Kontakt</h1>
+          <h1 className="font-mono text-white text-6xl sm:text-8xl font-bold uppercase">Projekte</h1>
         </div>
       </ImageParticles>
 

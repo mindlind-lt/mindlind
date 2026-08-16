@@ -6,19 +6,19 @@ import DoorButton from "@/components/door-button/door-button";
 
 import type { Metadata } from "next";
 
-// Placeholder page — `noindex` until the case study is written.
 export const metadata: Metadata = {
   title: "Panda Travel",
-  description: "Case Study in Vorbereitung.",
+  description:
+    "Website für Panda Travel — digitale Präsenz für Geschäftsreisen, China-Sourcing und Logistiklösungen.",
   alternates: { canonical: "/projects/panda-travel" },
-  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: "/projects/panda-travel",
     siteName: "Mindlind Werbeagentur",
     title: "Panda Travel | Mindlind Werbeagentur",
-    description: "Case Study in Vorbereitung.",
+    description:
+      "Website für Panda Travel — digitale Präsenz für Geschäftsreisen, China-Sourcing und Logistiklösungen.",
     images: [
       {
         url: "/images/case-pandatravel-1.png",
@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Panda Travel | Mindlind Werbeagentur",
-    description: "Case Study in Vorbereitung.",
+    description:
+      "Website für Panda Travel — digitale Präsenz für Geschäftsreisen, China-Sourcing und Logistiklösungen.",
     images: [
       {
         url: "/images/case-pandatravel-1.png",

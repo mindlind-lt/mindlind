@@ -6,19 +6,19 @@ import DoorButton from "@/components/door-button/door-button";
 
 import type { Metadata } from "next";
 
-// Placeholder page — `noindex` until the case study is written.
 export const metadata: Metadata = {
   title: "Factory SL",
-  description: "Case Study in Vorbereitung.",
+  description:
+    "Website für Factory SL — moderner Markenauftritt für Luxus-Detailing und Fahrzeugaufbereitung.",
   alternates: { canonical: "/projects/factorysl" },
-  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: "/projects/factorysl",
     siteName: "Mindlind Werbeagentur",
     title: "Factory SL | Mindlind Werbeagentur",
-    description: "Case Study in Vorbereitung.",
+    description:
+      "Website für Factory SL — moderner Markenauftritt für Luxus-Detailing und Fahrzeugaufbereitung.",
     images: [
       {
         url: "/images/case-factorysl-1.jpg",
@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Factory SL | Mindlind Werbeagentur",
-    description: "Case Study in Vorbereitung.",
+    description:
+      "Website für Factory SL — moderner Markenauftritt für Luxus-Detailing und Fahrzeugaufbereitung.",
     images: [
       {
         url: "/images/case-factorysl-1.jpg",

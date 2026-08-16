@@ -48,7 +48,7 @@ export default function SectionContact() {
                 },
                 {
                   question: "Warum sollte ich mich für Mindlind entscheiden?",
-                  answer: "Wir verbinden Design, Performance und Online-Marketing zu einer"
+                  answer: "Wir verbinden Design, Performance und Online-Marketing zu einer ganzheitlichen Strategie – persönlich betreut, transparent kommuniziert und konsequent auf Ihr Wachstum ausgerichtet."
                 },
               ]}
             />

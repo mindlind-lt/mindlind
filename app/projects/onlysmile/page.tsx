@@ -6,19 +6,19 @@ import DoorButton from "@/components/door-button/door-button";
 
 import type { Metadata } from "next";
 
-// Placeholder page — `noindex` until the case study is written.
 export const metadata: Metadata = {
   title: "OnlySmile",
-  description: "Case Study in Vorbereitung.",
+  description:
+    "Website für OnlySmile — Markenauftritt für professionelles Zahnbleaching und Dental Beauty.",
   alternates: { canonical: "/projects/onlysmile" },
-  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: "/projects/onlysmile",
     siteName: "Mindlind Werbeagentur",
     title: "OnlySmile | Mindlind Werbeagentur",
-    description: "Case Study in Vorbereitung.",
+    description:
+      "Website für OnlySmile — Markenauftritt für professionelles Zahnbleaching und Dental Beauty.",
     images: [
       {
         url: "/images/case-onlysmile-1.png",
@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "OnlySmile | Mindlind Werbeagentur",
-    description: "Case Study in Vorbereitung.",
+    description:
+      "Website für OnlySmile — Markenauftritt für professionelles Zahnbleaching und Dental Beauty.",
     images: [
       {
         url: "/images/case-onlysmile-1.png",

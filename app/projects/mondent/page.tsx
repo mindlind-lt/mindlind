@@ -6,19 +6,19 @@ import DoorButton from "@/components/door-button/door-button";
 
 import type { Metadata } from "next";
 
-// Placeholder page — `noindex` until the case study is written.
 export const metadata: Metadata = {
   title: "Mondent",
-  description: "Case Study in Vorbereitung.",
+  description:
+    "Website und SEO für MonDent, eine der größten Zahnarztpraxen in Düsseldorf — klare digitale Struktur für ein breites Behandlungsspektrum.",
   alternates: { canonical: "/projects/mondent" },
-  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: "/projects/mondent",
     siteName: "Mindlind Werbeagentur",
     title: "Mondent | Mindlind Werbeagentur",
-    description: "Case Study in Vorbereitung.",
+    description:
+      "Website und SEO für MonDent, eine der größten Zahnarztpraxen in Düsseldorf — klare digitale Struktur für ein breites Behandlungsspektrum.",
     images: [
       {
         url: "/images/case-mondent-1.png",
@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mondent | Mindlind Werbeagentur",
-    description: "Case Study in Vorbereitung.",
+    description:
+      "Website und SEO für MonDent, eine der größten Zahnarztpraxen in Düsseldorf — klare digitale Struktur für ein breites Behandlungsspektrum.",
     images: [
       {
         url: "/images/case-mondent-1.png",

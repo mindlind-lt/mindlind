@@ -21,7 +21,7 @@ export const siteConfig = {
     "",
   ),
   description:
-    "Unser 360° Ansatz für Projektmanagement umfasst fünf Kernphasen, um herausragende Ergebnisse zu erzielen.",
+    "Mindlind ist eine Werbeagentur für Webdesign, SEO und Performance Marketing. Wir entwickeln digitale Markenauftritte, die sichtbar werden und messbar wachsen.",
 } as const;
 
 export type RouteMeta = {
@@ -91,37 +91,34 @@ export const routes = [
     changeFrequency: "yearly",
   },
 
-  // Placeholders — "COMING SOON" only. Flip `published` to true once the case
-  // study is written; that adds it to the sitemap and lets crawlers in. Drop
-  // the `robots` block from the page's `metadata` export at the same time.
   {
     path: "/projects/mondent",
-    published: false,
-    priority: 0.3,
+    published: true,
+    priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/luxfloor",
-    published: false,
-    priority: 0.3,
+    published: true,
+    priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/panda-travel",
-    published: false,
-    priority: 0.3,
+    published: true,
+    priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/factorysl",
-    published: false,
-    priority: 0.3,
+    published: true,
+    priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/onlysmile",
-    published: false,
-    priority: 0.3,
+    published: true,
+    priority: 0.6,
     changeFrequency: "yearly",
   },
 

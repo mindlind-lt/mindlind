@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 interface CountUpOnViewProps {
   value: number;
@@ -20,8 +20,21 @@ export default function CountUpOnView({
   className,
 }: CountUpOnViewProps) {
   const elementRef = useRef<HTMLDivElement>(null);
-  const [displayValue, setDisplayValue] = useState(0);
+  // Starts at the real value so the server-rendered HTML (what crawlers and
+  // the first paint see) never shows a bare "0" — a layout effect below
+  // resets it to 0 client-side, before the browser paints, so sighted users
+  // still get the count-up animation with no visible flash.
+  const [displayValue, setDisplayValue] = useState(value);
   const [hasAnimated, setHasAnimated] = useState(false);
+
+  useLayoutEffect(() => {
+    // Runs once, synchronously before the browser paints, so real users
+    // never see the SSR value flash before the count-up animation begins on
+    // scroll-into-view. The IntersectionObserver effect below owns all
+    // subsequent updates to displayValue.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setDisplayValue(0);
+  }, []);
 
   const resolvedDecimals = useMemo(() => {
     if (typeof decimals === "number") {
