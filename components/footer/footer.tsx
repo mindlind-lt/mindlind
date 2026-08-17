@@ -4,6 +4,7 @@ import FooterMenu from '../footer-menu/footer-menu';
 import LoadingOrb from '../loading-orb/loading-orb';
 import Strands from '../strands/strands';
 import './footer.css';
+import Link from 'next/link';
 
 export default function Footer(){
 
@@ -67,8 +68,8 @@ export default function Footer(){
                             </div>
 
                             <div className='ftr-links'>
-                                <a href="#">Terms</a>
-                                <a href="#">Privacy Policy</a>
+                                <Link href="/impressum">Impressum</Link>
+                                <Link href="/datenschutz">Datenschutz</Link>
                             </div>
 
                         </div>

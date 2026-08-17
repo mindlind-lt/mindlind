@@ -1,0 +1,629 @@
+<title>SEO Audit — new.mindlind.de</title>
+<style>
+  :root{
+    --paper:#f6f4ef;
+    --ink:#1c1f24;
+    --ink-soft:#4b5259;
+    --ink-faint:#7a8087;
+    --line:#dedad2;
+    --surface:#ffffff;
+    --surface-2:#efece4;
+    --accent:#1f6f5c;
+    --accent-soft:#e4efe9;
+    --critical:#b3261e;
+    --critical-soft:#fbeae9;
+    --high:#a4620f;
+    --high-soft:#f8eddc;
+    --medium:#8a6d1f;
+    --medium-soft:#f7f0d9;
+    --low:#3c6b7a;
+    --low-soft:#e7eff1;
+    --pass:#2f7a4d;
+    --pass-soft:#e6f2ea;
+    --font-display:"Iowan Old Style","Palatino Linotype","URW Palladio L","Book Antiqua",Georgia,"Times New Roman",serif;
+    --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --font-mono:ui-monospace,"SF Mono","Cascadia Code","Roboto Mono",Consolas,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#14171b;
+      --ink:#ece9e2;
+      --ink-soft:#a7aeb3;
+      --ink-faint:#767c82;
+      --line:#2a2e33;
+      --surface:#1b1f24;
+      --surface-2:#20242a;
+      --accent:#59c0a5;
+      --accent-soft:#1c2b27;
+      --critical:#e5766d;
+      --critical-soft:#2c1917;
+      --high:#e2a468;
+      --high-soft:#2c2314;
+      --medium:#d9bd6a;
+      --medium-soft:#2b2517;
+      --low:#8bc0cf;
+      --low-soft:#182428;
+      --pass:#6ec98d;
+      --pass-soft:#16261c;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#14171b;
+    --ink:#ece9e2;
+    --ink-soft:#a7aeb3;
+    --ink-faint:#767c82;
+    --line:#2a2e33;
+    --surface:#1b1f24;
+    --surface-2:#20242a;
+    --accent:#59c0a5;
+    --accent-soft:#1c2b27;
+    --critical:#e5766d;
+    --critical-soft:#2c1917;
+    --high:#e2a468;
+    --high-soft:#2c2314;
+    --medium:#d9bd6a;
+    --medium-soft:#2b2517;
+    --low:#8bc0cf;
+    --low-soft:#182428;
+    --pass:#6ec98d;
+    --pass-soft:#16261c;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);}
+  a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  .wrap{max-width:920px; margin:0 auto; padding:2.5rem 1.5rem 6rem;}
+
+  /* Masthead */
+  .masthead{border-bottom:1px solid var(--line); padding-bottom:1.75rem; margin-bottom:2.5rem;}
+  .eyebrow{font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint);}
+  h1{
+    font-family:var(--font-display);
+    font-size:2.3rem;
+    font-weight:600;
+    margin:0.35rem 0 0.5rem;
+    text-wrap:balance;
+    letter-spacing:-0.01em;
+  }
+  .masthead-meta{display:flex; flex-wrap:wrap; gap:0.4rem 1.5rem; color:var(--ink-soft); font-size:0.92rem;}
+  .masthead-meta code{font-family:var(--font-mono); background:var(--surface-2); padding:0.1rem 0.4rem; border-radius:3px; font-size:0.85em;}
+
+  h2{
+    font-family:var(--font-display);
+    font-size:1.5rem;
+    font-weight:600;
+    margin:3rem 0 0.9rem;
+    padding-top:0.25rem;
+    border-top:1px solid var(--line);
+    text-wrap:balance;
+  }
+  h2 .num{color:var(--ink-faint); font-weight:400; margin-right:0.5rem;}
+  h3{font-family:var(--font-display); font-size:1.15rem; font-weight:600; margin:1.6rem 0 0.6rem;}
+  p{margin:0 0 0.9rem; max-width:70ch;}
+  .lede{font-size:1.08rem; color:var(--ink-soft); max-width:66ch;}
+
+  /* Scorecard */
+  .scorecard{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:2rem;
+    align-items:center;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:1.75rem;
+    margin:1.5rem 0 2rem;
+  }
+  .score-dial{
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    width:132px; height:132px; border-radius:50%;
+    background:conic-gradient(var(--accent) calc(var(--pct) * 1%), var(--surface-2) 0);
+    position:relative;
+    flex-shrink:0;
+  }
+  .score-dial::after{
+    content:""; position:absolute; inset:10px; border-radius:50%; background:var(--surface);
+  }
+  .score-dial-inner{position:relative; text-align:center;}
+  .score-dial-num{font-family:var(--font-display); font-size:2.1rem; font-weight:600; line-height:1;}
+  .score-dial-max{font-size:0.72rem; color:var(--ink-faint); font-family:var(--font-mono);}
+  .score-table{width:100%; border-collapse:collapse; font-size:0.9rem;}
+  .score-table th{text-align:left; font-weight:600; color:var(--ink-faint); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; padding-bottom:0.5rem; border-bottom:1px solid var(--line);}
+  .score-table td{padding:0.4rem 0.6rem 0.4rem 0; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums;}
+  .score-table tr:last-child td{border-bottom:none;}
+  .score-table td.num{text-align:right; font-family:var(--font-mono);}
+  .bar-track{width:80px; height:6px; background:var(--surface-2); border-radius:3px; overflow:hidden; display:inline-block; vertical-align:middle;}
+  .bar-fill{height:100%; background:var(--accent); border-radius:3px;}
+  .est{color:var(--ink-faint); font-size:0.78em;}
+
+  /* Headline callout */
+  .callout{
+    background:var(--critical-soft);
+    border:1px solid color-mix(in srgb, var(--critical) 35%, transparent);
+    border-left:4px solid var(--critical);
+    border-radius:4px;
+    padding:1.25rem 1.4rem;
+    margin:1.5rem 0 2rem;
+  }
+  .callout .tag{font-family:var(--font-mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--critical); font-weight:600;}
+  .callout h3{margin:0.3rem 0 0.6rem; color:var(--ink);}
+  .callout p{margin-bottom:0.6rem;}
+  .callout p:last-child{margin-bottom:0;}
+
+  /* Finding cards */
+  .finding{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-left:4px solid var(--sev-color, var(--ink-faint));
+    border-radius:4px;
+    padding:1.2rem 1.4rem;
+    margin-bottom:1rem;
+  }
+  .finding.sev-critical{--sev-color:var(--critical);}
+  .finding.sev-high{--sev-color:var(--high);}
+  .finding-head{display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.5rem;}
+  .sev-chip{
+    font-family:var(--font-mono); font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em;
+    padding:0.15rem 0.45rem; border-radius:3px; color:var(--sev-color); background:color-mix(in srgb, var(--sev-color) 14%, transparent);
+  }
+  .finding h4{font-family:var(--font-display); font-size:1.08rem; font-weight:600; margin:0; text-wrap:balance;}
+  .finding-source{font-size:0.76rem; color:var(--ink-faint); font-family:var(--font-mono);}
+  .finding dl{display:grid; grid-template-columns:max-content 1fr; gap:0.3rem 0.9rem; margin:0.8rem 0 0; font-size:0.93rem;}
+  .finding dt{color:var(--ink-faint); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; padding-top:0.15rem; white-space:nowrap;}
+  .finding dd{margin:0; color:var(--ink-soft);}
+  .finding dd code{font-family:var(--font-mono); font-size:0.86em; background:var(--surface-2); padding:0.05rem 0.35rem; border-radius:3px;}
+
+  /* compact table for medium/low */
+  .compact-table{width:100%; border-collapse:collapse; font-size:0.9rem; margin:0.5rem 0 1.5rem;}
+  .compact-table th{text-align:left; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-faint); padding:0.5rem 0.7rem; border-bottom:1px solid var(--line);}
+  .compact-table td{padding:0.6rem 0.7rem; border-bottom:1px solid var(--line); vertical-align:top;}
+  .compact-table tr:hover td{background:var(--surface-2);}
+  .sev-dot{display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:0.4rem; vertical-align:middle;}
+  .sev-dot.medium{background:var(--medium);}
+  .sev-dot.low{background:var(--low);}
+
+  /* action plan */
+  .phase{
+    border:1px solid var(--line); border-radius:4px; margin-bottom:1rem; overflow:hidden;
+  }
+  .phase-head{
+    background:var(--surface-2); padding:0.75rem 1.1rem; display:flex; align-items:baseline; gap:0.7rem; flex-wrap:wrap;
+  }
+  .phase-head .ph-label{font-family:var(--font-mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent); font-weight:700;}
+  .phase-head h4{font-family:var(--font-display); margin:0; font-size:1.05rem;}
+  .phase-head .ph-when{margin-left:auto; font-size:0.8rem; color:var(--ink-faint);}
+  .phase ol{margin:0; padding:0.9rem 1.1rem 0.9rem 2.2rem;}
+  .phase li{margin-bottom:0.55rem; font-size:0.94rem;}
+  .phase li:last-child{margin-bottom:0;}
+  .phase li .dep{color:var(--ink-faint); font-size:0.85em;}
+
+  /* leading indicators */
+  .indicators{list-style:none; margin:0; padding:0; display:grid; gap:0.6rem;}
+  .indicators li{
+    display:grid; grid-template-columns:1.4rem 1fr; gap:0.6rem; align-items:start;
+    background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:0.7rem 0.9rem; font-size:0.92rem;
+  }
+  .indicators li::before{content:"→"; color:var(--accent); font-weight:700;}
+
+  /* appendix accordion */
+  details.appendix{border:1px solid var(--line); border-radius:4px; margin-bottom:0.6rem; background:var(--surface);}
+  details.appendix summary{
+    cursor:pointer; padding:0.85rem 1.1rem; font-family:var(--font-display); font-size:1.02rem; font-weight:600;
+    display:flex; align-items:center; gap:0.6rem; list-style:none;
+  }
+  details.appendix summary::-webkit-details-marker{display:none;}
+  details.appendix summary::before{content:"+"; font-family:var(--font-mono); color:var(--accent); width:1rem; font-weight:700;}
+  details.appendix[open] summary::before{content:"–";}
+  details.appendix .appendix-body{padding:0 1.1rem 1.1rem; font-size:0.92rem; color:var(--ink-soft);}
+  details.appendix .appendix-body ul{margin:0.4rem 0; padding-left:1.2rem;}
+  details.appendix .appendix-body li{margin-bottom:0.4rem;}
+  .metric-row{display:flex; gap:1.5rem; flex-wrap:wrap; margin:0.6rem 0 0.8rem; font-family:var(--font-mono); font-size:0.85rem;}
+  .metric-row span b{display:block; font-family:var(--font-display); font-size:1.1rem; color:var(--ink);}
+
+  .persona-table{width:100%; border-collapse:collapse; font-size:0.88rem; margin:0.5rem 0;}
+  .persona-table th, .persona-table td{padding:0.5rem 0.6rem; border-bottom:1px solid var(--line); text-align:left;}
+  .persona-table td.num{font-family:var(--font-mono); text-align:right; font-variant-numeric:tabular-nums;}
+  .persona-table th.num{text-align:right;}
+
+  footer.report-footer{margin-top:3.5rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--ink-faint); font-size:0.85rem;}
+
+  ::selection{background:var(--accent-soft); color:var(--ink);}
+</style>
+
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="eyebrow">Full-site SEO audit</div>
+    <h1>new.mindlind.de</h1>
+    <div class="masthead-meta">
+      <span>Prepared 2026-08-17</span>
+      <span>Digital creative agency — Webdesign, Branding, SEO, Performance Marketing</span>
+      <span><code>new.mindlind.de</code></span>
+    </div>
+  </div>
+
+  <p class="lede">Nine parallel audits — technical, content quality, schema, sitemap, performance, visual/mobile, GEO (AI search), search experience, and backlinks — converge on one root cause blocking most of the rest: <strong>this site is not yet safely separated from the live production domain it will eventually replace.</strong> Everything below is organized so that gets fixed first.</p>
+
+  <h2><span class="num">01</span>SEO Health Score</h2>
+  <div class="scorecard">
+    <div class="score-dial" style="--pct:48">
+      <div class="score-dial-inner">
+        <div class="score-dial-num">48</div>
+        <div class="score-dial-max">/ 100</div>
+      </div>
+    </div>
+    <table class="score-table">
+      <thead><tr><th>Category</th><th>Weight</th><th class="num">Score</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>Technical SEO</td><td>22%</td><td class="num">58</td><td><span class="bar-track"><span class="bar-fill" style="width:58%"></span></span></td></tr>
+        <tr><td>Content Quality</td><td>23%</td><td class="num">33</td><td><span class="bar-track"><span class="bar-fill" style="width:33%"></span></span></td></tr>
+        <tr><td>On-Page SEO <span class="est">est.</span></td><td>20%</td><td class="num">45</td><td><span class="bar-track"><span class="bar-fill" style="width:45%"></span></span></td></tr>
+        <tr><td>Schema / Structured Data <span class="est">est.</span></td><td>10%</td><td class="num">55</td><td><span class="bar-track"><span class="bar-fill" style="width:55%"></span></span></td></tr>
+        <tr><td>Performance (CWV)</td><td>10%</td><td class="num">65</td><td><span class="bar-track"><span class="bar-fill" style="width:65%"></span></span></td></tr>
+        <tr><td>AI Search Readiness (GEO)</td><td>10%</td><td class="num">47</td><td><span class="bar-track"><span class="bar-fill" style="width:47%"></span></span></td></tr>
+        <tr><td>Images <span class="est">est.</span></td><td>5%</td><td class="num">40</td><td><span class="bar-track"><span class="bar-fill" style="width:40%"></span></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:0.85rem; color:var(--ink-faint); max-width:70ch;">Technical, Content, Performance, and GEO are the sub-agents' own reported scores. On-Page, Schema, and Images (marked <span class="est">est.</span>) are orchestrator composites synthesized from findings, since those audits report structured findings rather than a single 0–100 number. The 48/100 total reflects a site with strong underlying engineering (server-rendered, fast hosting, largely correct schema shape) undermined by a handful of severe, fixable defects — not a fundamentally broken build.</p>
+
+  <div class="callout">
+    <div class="tag">Critical · read this first</div>
+    <h3>The site is telling Google it isn't the real thing</h3>
+    <p>Four independent audits (technical, sitemap, schema, GEO) each surfaced the same defect from different angles: every canonical tag, the sitemap, and every JSON-LD block on <code>new.mindlind.de</code> declares <code>mindlind.de</code> as the authoritative URL. But <code>mindlind.de</code> is <strong>a separate, live WordPress site</strong> — different business name, different registered address (Düsseldorf vs. this site's Vilnius), different logo, different portfolio. Two of the declared canonical targets (<code>/agency</code>, <code>/projects</code>) 404 on that domain; two more resolve only through a redirect to different slugs.</p>
+    <p>Meanwhile <code>new.mindlind.de</code> itself is fully public and indexable (<code>Allow: /</code>, <code>index, follow</code>, no auth wall). Google will either index the staging build directly as an orphan (its own sitemap and <code>llms.txt</code> route crawlers back to the wrong domain), or fold it into a canonical target that doesn't exist — and in the meantime two real business identities are colliding under one schema <code>@id</code>. This is the first thing to resolve; most High-severity findings below are downstream of it.</p>
+  </div>
+
+  <h2><span class="num">02</span>Critical Findings</h2>
+
+  <div class="finding sev-critical">
+    <div class="finding-head">
+      <span class="sev-chip">Critical</span>
+      <h4>Canonical / schema / sitemap all point off-domain to a conflicting live business</h4>
+      <span class="finding-source">technical · sitemap · schema · geo</span>
+    </div>
+    <dl>
+      <dt>Observation</dt><dd>Every tested page's <code>&lt;link rel="canonical"&gt;</code>, JSON-LD <code>@id</code>/<code>url</code>, OG tags, and the 15-URL <code>sitemap.xml</code> reference <code>mindlind.de</code>. <code>robots.txt</code> also declares <code>Sitemap: https://mindlind.de/sitemap.xml</code> — a cross-domain pointer to a different, WordPress-generated sitemap entirely.</dd>
+      <dt>Why it matters</dt><dd>This blocks correct indexing regardless of any other fix — schema enrichment, content rewrites, and GEO citability all inherit whichever domain ends up "real" to Google. It's the dependency root for roughly a third of the findings in this report.</dd>
+      <dt>Falsifiability</dt><dd><code>curl -I https://mindlind.de/agency</code> → 404 (reproduced). <code>curl -I https://mindlind.de/projects</code> → 404 (reproduced). GSC URL Inspection on <code>new.mindlind.de/agency</code> would show "Google-selected canonical" pointing at a 404 if this is live in Search Console.</dd>
+      <dt>Watch</dt><dd>GSC "Duplicate, Google chose different canonical" and "Crawled — currently not indexed" counts for the <code>new.mindlind.de</code> property.</dd>
+    </dl>
+  </div>
+
+  <div class="finding sev-critical">
+    <div class="finding-head">
+      <span class="sev-chip">Critical</span>
+      <h4>Impressum &amp; Datenschutz return 200 but contain no legal content, and aren't linked anywhere</h4>
+      <span class="finding-source">content</span>
+    </div>
+    <dl>
+      <dt>Observation</dt><dd><code>/impressum</code> and <code>/datenschutz</code> resolve successfully but render only header/footer chrome — no Handelsregister/USt-ID, no named data controller, no GDPR disclosures. Neither is linked from any page's navigation or footer that was crawled.</dd>
+      <dt>Why it matters</dt><dd>For a German-language commercial site this is a Telemediengesetz/DDG §5 <em>Impressumspflicht</em> compliance risk independent of the domain issue above — it needs fixing regardless of which host goes to production.</dd>
+      <dt>Falsifiability</dt><dd>Load <code>/impressum</code> in a browser: fewer than ~150 words of substantive legal content (company/register data, USt-ID, responsible person) confirms the gap.</dd>
+      <dt>Watch</dt><dd>Word count on both pages, and presence of a footer link to each from every template.</dd>
+    </dl>
+  </div>
+
+  <div class="finding sev-critical">
+    <div class="finding-head">
+      <span class="sev-chip">Critical</span>
+      <h4>Homepage 3D scene blocks the main thread for 5.5 seconds — severe INP risk</h4>
+      <span class="finding-source">performance</span>
+    </div>
+    <dl>
+      <dt>Observation</dt><dd>A single JS chunk running an embedded Spline 3D scene consumes 7.9s of scripting time from two <code>.splinecode</code> payloads totaling ~11.1MB — ~95% of the homepage's 13.3MB total weight. Lab Total Blocking Time (the standard proxy for INP): <b>5,510ms</b> on the homepage vs. 130ms and 80ms on Services/Projects.</dd>
+      <dt>Why it matters</dt><dd>Any tap or click during/after load queues behind this — real-world INP will land far past "poor" for a meaningful share of visits, on the one page every prospective client lands on first. Notable given the agency's own pitch is performance marketing.</dd>
+      <dt>Falsifiability</dt><dd>Re-run Lighthouse with <code>--blocked-url-patterns="*spline.design*"</code>; TBT should drop by several seconds if this attribution holds.</dd>
+      <dt>Watch</dt><dd><code>bootup-time</code> for the Spline chunk specifically, and homepage TBT on every deploy — set a CI budget (fail &gt;1,000ms).</dd>
+    </dl>
+  </div>
+
+  <div class="finding sev-critical">
+    <div class="finding-head">
+      <span class="sev-chip">Critical</span>
+      <h4>Web Design and Branding — the agency's two flagship services — have zero visible copy on /services</h4>
+      <span class="finding-source">sxo · schema</span>
+    </div>
+    <dl>
+      <dt>Observation</dt><dd>The Service schema on <code>/services</code> lists 5 offerings, but only Instagram Ads, SEO, and Google Ads have a visible price card and body text. "Webdesign"/"Web-Design" and "Branding" appear <em>only</em> inside <code>&lt;meta&gt;</code> and JSON-LD — never once in rendered <code>&lt;body&gt;</code> text.</dd>
+      <dt>Why it matters</dt><dd>Someone searching "Webdesign Agentur" or "Branding Agentur" — almost certainly this agency's highest-value queries — lands on a page that reads to Google, and to the visitor, as a paid-ads retainer page. Persona scoring below quantifies the impact: 18–32/100 for exactly these two buyer types.</dd>
+      <dt>Falsifiability</dt><dd>Raw HTML search on <code>/services</code> body for "Branding"/"Webdesign" outside <code>&lt;head&gt;</code>/<code>&lt;script&gt;</code>: zero matches as of 2026-08-17.</dd>
+      <dt>Watch</dt><dd><code>/services</code> word count (currently 324 total, ~70–90 unique) — target real growth once Web Design/Branding sections ship.</dd>
+    </dl>
+  </div>
+
+  <h2><span class="num">03</span>High-Priority Findings</h2>
+
+  <div class="finding sev-high">
+    <div class="finding-head"><span class="sev-chip">High</span><h4>No Content-Security-Policy or X-Frame-Options; HSTS lacks includeSubDomains/preload</h4><span class="finding-source">technical</span></div>
+    <dl>
+      <dt>Observation</dt><dd>Neither header exists on <code>new.mindlind.de</code> or production <code>mindlind.de</code> — the latter has no security headers at all, including no HSTS.</dd>
+      <dt>Why it matters</dt><dd>No clickjacking protection; increases attack surface for the domain that's actually receiving traffic today.</dd>
+      <dt>Falsifiability</dt><dd><code>curl -sI</code> both hosts, grep for <code>content-security-policy</code> / <code>x-frame-options</code> — both absent, reproduced.</dd>
+      <dt>Watch</dt><dd>securityheaders.com / Mozilla Observatory score for both hosts.</dd>
+    </dl>
+  </div>
+
+  <div class="finding sev-high">
+    <div class="finding-head"><span class="sev-chip">High</span><h4>Identical FAQ block duplicated verbatim across all five main pages</h4><span class="finding-source">content</span></div>
+    <dl>
+      <dt>Observation</dt><dd>The same 7-question FAQ appears character-for-character on Home, Agency, Services, Projects, and Contact — inflating word counts and diluting each page's topical distinctiveness.</dd>
+      <dt>Why it matters</dt><dd>A repeated block across near-identical pages is a templating/low-distinctiveness signal; it's also why <code>/services</code> and <code>/agency</code> look closer to healthy word counts than their actual unique content justifies.</dd>
+      <dt>Falsifiability</dt><dd>Diff extracted FAQ text across the five URLs — byte-identical, confirmed.</dd>
+      <dt>Watch</dt><dd>Unique-to-boilerplate text ratio per page after consolidation.</dd>
+    </dl>
+  </div>
+
+  <div class="finding sev-high">
+    <div class="finding-head"><span class="sev-chip">High</span><h4>Case studies carry zero attributable metrics — headline stats never connect to a named client</h4><span class="finding-source">content · sxo</span></div>
+    <dl>
+      <dt>Observation</dt><dd>The homepage's +34% conversion / +41% leads / 70% retention / 147+ projects stats sit above four project thumbnails with no line connecting a stat to a specific client. The case study pages themselves (183–328 words each) contain zero numbers.</dd>
+      <dt>Why it matters</dt><dd>Neither a human evaluator nor an AI answer engine can produce a verifiable citation like "Mindlind grew [Client]'s conversions 34%" — the strongest proof point on the site is currently unusable as proof.</dd>
+      <dt>Falsifiability</dt><dd>All 4 sampled case studies (of 9 total) checked directly for numeric content: none found.</dd>
+      <dt>Watch</dt><dd>At least one named metric + client attribution shipped per case study within the next content cycle.</dd>
+    </dl>
+  </div>
+
+  <div class="finding sev-high">
+    <div class="finding-head"><span class="sev-chip">High</span><h4>No third-party trust or authority signals anywhere on the site</h4><span class="finding-source">content · geo · sxo</span></div>
+    <dl>
+      <dt>Observation</dt><dd><code>sameAs</code> lists exactly one channel (Instagram). No LinkedIn company page, no testimonials/reviews, no press mentions, no YouTube, no directory listings (Clutch, ProvenExpert). Trust scored 4–10/25 across every persona in the SXO analysis.</dd>
+      <dt>Why it matters</dt><dd>AI answer engines and human evaluators alike lean on cross-source corroboration for lesser-known brands; right now there's nothing to triangulate against beyond the site's own claims.</dd>
+      <dt>Falsifiability</dt><dd>Directory-search checks (DuckDuckGo, low-confidence) returned no Reddit/LinkedIn/press matches for "Mindlind Werbeagentur" — recommend a manual Google/LinkedIn re-check before treating as final.</dd>
+      <dt>Watch</dt><dd>Addition of one verifiable signal: LinkedIn company page in <code>sameAs</code>, a named testimonial, or a directory profile.</dd>
+    </dl>
+  </div>
+
+  <div class="finding sev-high">
+    <div class="finding-head"><span class="sev-chip">High</span><h4>LCP element render-delay dominates load time on every page</h4><span class="finding-source">performance</span></div>
+    <dl>
+      <dt>Observation</dt><dd>TTFB and resource-load are fast everywhere (~300ms), but "element render delay" — the gap between resource-ready and actual paint — is 47–68% of total LCP time on Home, Services, and Projects alike. The LCP elements (hero video poster; a "particles fallback" image) are gated behind client-side mounting.</dd>
+      <dt>Why it matters</dt><dd>Server response isn't the bottleneck; JS execution ahead of paint is — this compounds directly with the Spline finding above.</dd>
+      <dt>Falsifiability</dt><dd>DevTools Performance trace on the "Element Render Delay" phase; if the image paints promptly once its resource is ready, this finding is wrong and effort should redirect to resource optimization instead.</dd>
+      <dt>Watch</dt><dd><code>elementRenderDelay</code> LCP subpart across all three pages — should shrink once render-blocking JS is reduced.</dd>
+    </dl>
+  </div>
+
+  <div class="finding sev-high">
+    <div class="finding-head"><span class="sev-chip">High</span><h4>llms.txt exists and reads well, but every internal link is broken</h4><span class="finding-source">geo</span></div>
+    <dl>
+      <dt>Observation</dt><dd><code>new.mindlind.de/llms.txt</code> is well-formed with a strong, factual summary sentence — but every link in its page list points to <code>mindlind.de/...</code>, including the 404'ing <code>/agency</code>. <code>mindlind.de/llms.txt</code> itself 404s.</dd>
+      <dt>Why it matters</dt><dd>An agentic crawler that fetches this file to navigate the site hits dead ends immediately. (Note: Google Search doesn't consume llms.txt for AI Overviews — this affects direct-fetch LLM agents specifically, not Google's own ranking.)</dd>
+      <dt>Falsifiability</dt><dd><code>curl -s .../llms.txt</code> vs. <code>curl -o /dev/null -w "%{http_code}" mindlind.de/agency</code> → 404, reproduced.</dd>
+      <dt>Watch</dt><dd>Regenerate once the domain decision (Critical #1) is resolved — this is a direct downstream fix, not independent work.</dd>
+    </dl>
+  </div>
+
+  <div class="finding sev-high">
+    <div class="finding-head"><span class="sev-chip">High</span><h4>/projects index is thin — 421 words describing 10 case studies</h4><span class="finding-source">sxo · sitemap</span></div>
+    <dl>
+      <dt>Observation</dt><dd>The only descriptive text for each of the 10 listed projects lives in image <code>alt</code> attributes — invisible to a scanning visitor and low-weight for text relevance.</dd>
+      <dt>Why it matters</dt><dd>A visitor comparing agencies by industry/scope has nothing to scan before clicking into each project individually.</dd>
+      <dt>Falsifiability</dt><dd><code>parse_html.py</code> word count on <code>/projects</code>: 421 across 10 project entries plus the FAQ block.</dd>
+      <dt>Watch</dt><dd>Word count should exceed ~800 with genuine per-project summaries after remediation.</dd>
+    </dl>
+  </div>
+
+  <div class="finding sev-high">
+    <div class="finding-head"><span class="sev-chip">High</span><h4>Nearly all content images have empty alt text</h4><span class="finding-source">geo</span></div>
+    <dl>
+      <dt>Observation</dt><dd>Project hero shots and portfolio thumbnails carry <code>alt=""</code>; only the logo has descriptive alt text.</dd>
+      <dt>Why it matters</dt><dd>Weakens accessibility and any image-grounded retrieval by multimodal answer engines; also the Images category's single largest drag on its composite score.</dd>
+      <dt>Falsifiability</dt><dd>Direct DOM inspection across all crawled pages.</dd>
+      <dt>Watch</dt><dd>% of content <code>&lt;img&gt;</code> elements with non-empty, descriptive alt text.</dd>
+    </dl>
+  </div>
+
+  <h2><span class="num">04</span>Medium-Priority Findings</h2>
+  <div style="overflow-x:auto;">
+  <table class="compact-table">
+    <thead><tr><th></th><th>Finding</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td><span class="sev-dot medium"></span>Medium</td><td>8 render-blocking CSS chunks on the homepage (small individually, adds avoidable round trips before first paint)</td><td>performance</td></tr>
+      <tr><td><span class="sev-dot medium"></span>Medium</td><td>~339KB of unused JavaScript on the homepage on top of the Spline payload</td><td>performance</td></tr>
+      <tr><td><span class="sev-dot medium"></span>Medium</td><td>Organization schema missing <code>logo</code> (wrong image reused for it), <code>priceRange</code>, and <code>geo</code>; case-study <code>CreativeWork</code> nodes missing <code>image</code>/<code>description</code></td><td>schema</td></tr>
+      <tr><td><span class="sev-dot medium"></span>Medium</td><td>Mobile nav links (28px), homepage filter buttons (24px), and CTA buttons (40px) sit below the 44–48px comfort threshold for tap targets</td><td>visual</td></tr>
+      <tr><td><span class="sev-dot medium"></span>Medium</td><td>/services and /projects show only a hero image and title above the fold — no CTA or supporting copy until scrolling</td><td>visual</td></tr>
+      <tr><td><span class="sev-dot medium"></span>Medium</td><td>Mobile menu's close affordance visually degrades on open (label collapses, no rotation transform) — still functional, just unclear</td><td>visual</td></tr>
+      <tr><td><span class="sev-dot medium"></span>Medium</td><td>No IndexNow key/integration — cheap to add, would speed up Bing/Yandex re-crawl around the eventual domain cutover</td><td>technical</td></tr>
+      <tr><td><span class="sev-dot medium"></span>Medium</td><td>All 15 sitemap entries share one identical <code>lastmod</code> timestamp — a build artifact, not real per-page change dates</td><td>sitemap</td></tr>
+      <tr><td><span class="sev-dot medium"></span>Medium</td><td>Dual-country business schema (DE + LT) but German-only content, no hreflang, no language switcher — may be intentional, worth confirming</td><td>technical · geo</td></tr>
+      <tr><td><span class="sev-dot medium"></span>Medium</td><td>No inbound links detectable at free-tier (Common Crawl); expected for a small/new site — re-run with Moz or DataForSEO once budget allows for a real number</td><td>backlinks</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2><span class="num">05</span>Low &amp; Informational</h2>
+  <div style="overflow-x:auto;">
+  <table class="compact-table">
+    <thead><tr><th></th><th>Note</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td><span class="sev-dot low"></span>Info</td><td>No FAQPage schema present anywhere — correct as-is. Google retired FAQ rich results for all sites (2026-05-07); do not add it for SERP benefit.</td><td>schema · content</td></tr>
+      <tr><td><span class="sev-dot low"></span>Low</td><td><code>areaServed</code> uses bare strings ("DE"/"LT") instead of structured <code>Country</code> objects — valid, but ambiguous to non-Google consumers</td><td>schema</td></tr>
+      <tr><td><span class="sev-dot low"></span>Info</td><td>No <code>WebSite</code>/<code>SearchAction</code> entity — not needed today, no on-site search UI exists to back it</td><td>schema</td></tr>
+      <tr><td><span class="sev-dot low"></span>Low</td><td><code>dateModified</code> is identical across all case studies — a deploy timestamp, not a real content-freshness signal</td><td>content · schema</td></tr>
+      <tr><td><span class="sev-dot low"></span>Info</td><td>A stray "2012-04-01" publication-date heuristic on several pages is a false positive from the extraction tooling, not a real signal — non-issue for rankings</td><td>content</td></tr>
+      <tr><td><span class="sev-dot low"></span>Low</td><td>Navigation labels mix English ("Home", "Contact") into an otherwise all-German (<code>lang="de"</code>) site — minor consistency signal</td><td>geo</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2><span class="num">06</span>Prioritized Action Plan</h2>
+
+  <div class="phase">
+    <div class="phase-head"><span class="ph-label">Phase 0</span><h4>Decide the domain strategy — this gates everything else</h4><span class="ph-when">now</span></div>
+    <ol>
+      <li>Choose: is <code>new.mindlind.de</code> becoming production, or is it pre-launch staging for a future cutover to <code>mindlind.de</code>?
+        <ul style="margin-top:0.4rem;">
+          <li><b>Going live as-is:</b> repoint every canonical, JSON-LD <code>@id</code>/<code>url</code>, sitemap <code>&lt;loc&gt;</code>, OG tag, and <code>llms.txt</code> link to <code>new.mindlind.de</code> (or the intended final host) using resolved, non-redirecting paths.</li>
+          <li><b>Still staging:</b> add <code>X-Robots-Tag: noindex</code> and block via <code>robots.txt</code> or Vercel deployment protection until cutover, then flip canonicals and set up 301s from the old WordPress slugs at launch.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head"><span class="ph-label">Phase 1</span><h4>Critical — fix regardless of the domain decision</h4><span class="ph-when">this week</span></div>
+    <ol>
+      <li>Write real legal content for Impressum and Datenschutz; link both from the sitewide footer.</li>
+      <li>Defer/lazy-load the Spline 3D scene behind an intersection observer; compress the <code>.splinecode</code> assets; stop gating the homepage LCP element behind it.</li>
+      <li>Write real body copy and pricing for Web Design and Branding on <code>/services</code> — they already have schema stubs with no matching visible content.</li>
+    </ol>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head"><span class="ph-label">Phase 2</span><h4>High — most depend on the Phase 0 decision</h4><span class="ph-when">within 1 week</span></div>
+    <ol>
+      <li>Regenerate <code>sitemap.xml</code> and JSON-LD <code>@id</code>/<code>url</code> for the correct final host. <span class="dep">depends on Phase 0</span></li>
+      <li>Regenerate <code>llms.txt</code> against the same host. <span class="dep">depends on Phase 0</span></li>
+      <li>Add <code>Content-Security-Policy</code> and <code>X-Frame-Options</code> on both domains; add <code>includeSubDomains; preload</code> to HSTS.</li>
+      <li>Consolidate the duplicated FAQ to one canonical page; link to it from the others instead of repeating it.</li>
+      <li>Attribute the homepage's headline stats to specific named case studies; add at least one quotable metric per case study.</li>
+      <li>Add one real third-party trust signal: LinkedIn company page in <code>sameAs</code>, a named client testimonial, or a directory listing.</li>
+      <li>Add descriptive alt text to project/portfolio images.</li>
+    </ol>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head"><span class="ph-label">Phase 3</span><h4>Medium — optimization</h4><span class="ph-when">within 1 month</span></div>
+    <ol>
+      <li>Add <code>logo</code> (square, ≥112px), <code>priceRange</code>, and <code>geo</code> to the Organization schema; add <code>image</code>/<code>description</code> to each <code>CreativeWork</code> case study.</li>
+      <li>Inline critical CSS, consolidate the render-blocking chunks, and confirm the Spline runtime stays scoped to the homepage only (already true today — don't regress it).</li>
+      <li>Increase mobile tap targets to ≥44px; fix the mobile menu close-icon transform.</li>
+      <li>Add an above-the-fold CTA and supporting copy to <code>/services</code> and <code>/projects</code>.</li>
+      <li>Expand the <code>/projects</code> index with a one-line summary per project, pulled out of alt text into visible body copy.</li>
+      <li>Add an IndexNow key and wire submission into the deploy pipeline ahead of the eventual domain cutover.</li>
+    </ol>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head"><span class="ph-label">Phase 4</span><h4>Low — backlog</h4><span class="ph-when">when convenient</span></div>
+    <ol>
+      <li>Set real per-page <code>lastmod</code>/<code>dateModified</code> values reflecting actual edits, not build time.</li>
+      <li>Convert <code>areaServed</code> to structured <code>Country</code> objects.</li>
+      <li>Confirm whether German-only content is an intentional market-scope decision, or whether Lithuanian-market coverage should be restored with proper hreflang.</li>
+      <li>Once the domain is settled, add a Moz or DataForSEO key and re-run the backlink audit for a real Backlink Health Score.</li>
+    </ol>
+  </div>
+
+  <h2><span class="num">07</span>Leading Indicators to Monitor</h2>
+  <ul class="indicators">
+    <li>GSC "Duplicate, Google chose different canonical" and "Crawled — currently not indexed" counts for <code>new.mindlind.de</code> — the clearest confirmation the domain issue is resolved (or isn't).</li>
+    <li>Homepage Total Blocking Time on every deploy — target a CI budget under 1,000ms; currently 5,510ms.</li>
+    <li><code>/services</code> word count and unique-content ratio — should grow substantially once Web Design/Branding sections ship.</li>
+    <li>securityheaders.com score for both domains after CSP/HSTS changes land.</li>
+    <li>Rich Results Test pass rate and GSC Enhancements coverage once schema targets the correct host.</li>
+    <li>Backlink Health Score, once a Moz or DataForSEO key replaces today's Tier-0 (Common Crawl only) coverage.</li>
+  </ul>
+
+  <h2><span class="num">08</span>Search Experience: Persona Scoring</h2>
+  <p style="max-width:70ch;">The SXO audit scored how well the site currently serves five likely buyer personas (0–100, each built from Relevance / Clarity / Trust / Action sub-scores). The gap is sharpest for exactly the two personas searching the agency's flagship services — direct evidence for the Critical <code>/services</code> content finding above.</p>
+  <div style="overflow-x:auto;">
+  <table class="persona-table">
+    <thead><tr><th>Persona</th><th class="num">Score</th><th>Rating</th></tr></thead>
+    <tbody>
+      <tr><td>Branding-focused founder ("Branding Agentur")</td><td class="num">18/100</td><td>Critical mismatch</td></tr>
+      <tr><td>Web design-focused buyer ("Webdesign Agentur")</td><td class="num">32/100</td><td>Critical mismatch</td></tr>
+      <tr><td>Risk-averse, trust-seeking buyer</td><td class="num">44/100</td><td>Needs work</td></tr>
+      <tr><td>Decision-maker comparing quotes</td><td class="num">46/100</td><td>Needs work</td></tr>
+      <tr><td>SMB owner evaluating agencies (general)</td><td class="num">57/100</td><td>Needs work</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2><span class="num">09</span>Performance Detail</h2>
+  <div style="overflow-x:auto;">
+  <table class="compact-table">
+    <thead><tr><th>Page</th><th>Lab score</th><th>LCP</th><th>TBT (INP proxy)</th><th>CLS</th></tr></thead>
+    <tbody>
+      <tr><td>Home</td><td>54/100</td><td>3.4s</td><td><b>5,510ms</b></td><td>0.0004</td></tr>
+      <tr><td>Services</td><td>89/100</td><td>3.1s</td><td>130ms</td><td>0.0004</td></tr>
+      <tr><td>Projects</td><td>93/100</td><td>2.9s</td><td>80ms</td><td>0.0004</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:0.85rem; color:var(--ink-faint);">Lab measurement via Lighthouse (mobile, throttled), no CrUX field data configured. TBT is used as the standard proxy for INP; CLS is a non-issue across the board.</p>
+
+  <h2><span class="num">10</span>Audit Detail by Discipline</h2>
+
+  <details class="appendix">
+    <summary>Technical SEO — 58/100</summary>
+    <div class="appendix-body">
+      <p>Server-rendered (not an SPA), fast TTFB, clean single-hop redirects, correct mobile viewport config. Above-average structured data coverage. Let down entirely by the crawlability/indexability chain: permissive-but-misdirected robots.txt, canonicals pointing at 404s, and a sitemap that lists the wrong domain's URLs. No IndexNow. No CSP/X-Frame-Options.</p>
+    </div>
+  </details>
+
+  <details class="appendix">
+    <summary>Content Quality &amp; E-E-A-T — 33/100</summary>
+    <div class="appendix-body">
+      <div class="metric-row"><span><b>35</b>Experience</span><span><b>40</b>Expertise</span><span><b>20</b>Authoritativeness</span><span><b>30</b>Trust</span></div>
+      <p>Real team photos and transparent EUR pricing are genuine positives. Undercut by the empty legal pages, the duplicated FAQ inflating apparent depth, and case studies with no verifiable metrics. <code>/services</code> is the thinnest primary page once boilerplate is subtracted (~70–90 unique words).</p>
+    </div>
+  </details>
+
+  <details class="appendix">
+    <summary>Schema Markup</summary>
+    <div class="appendix-body">
+      <p>The dual-country <code>ProfessionalService</code> pattern (one real address, two <code>ContactPoint</code> nodes segmented by <code>areaServed</code>) is textbook-correct. <code>BreadcrumbList</code>, <code>Service</code>/<code>Offer</code>, and <code>CreativeWork</code> are all structurally valid. The one critical issue is external, not structural: the <code>@id</code> this site declares is currently claimed by a different live Organization (different name, address, logo) on <code>mindlind.de</code> — see Critical Finding #1. No deprecated types in use; correctly has no FAQPage.</p>
+    </div>
+  </details>
+
+  <details class="appendix">
+    <summary>Sitemap</summary>
+    <div class="appendix-body">
+      <p>Well-formed XML, 15 URLs, well under any size threshold. 12 of the 15 listed URLs 404 on the domain they declare (<code>mindlind.de</code>). All 15 share one identical <code>lastmod</code> timestamp. Coverage against the crawlable site itself is complete — nothing is missing from the sitemap, it's just pointed at the wrong host.</p>
+    </div>
+  </details>
+
+  <details class="appendix">
+    <summary>Performance / Core Web Vitals — Home 54, Services 89, Projects 93</summary>
+    <div class="appendix-body">
+      <p>See the detail table above. The homepage's 3D scene is the dominant issue by a wide margin; Services and Projects are in comparatively good shape, both scoped correctly (no Spline payload leaks into their bundles).</p>
+    </div>
+  </details>
+
+  <details class="appendix">
+    <summary>Visual &amp; Mobile Rendering</summary>
+    <div class="appendix-body">
+      <p>Homepage above-the-fold is strong on both desktop and mobile: logo, nav, value prop, and primary CTA all visible without scrolling. Services and Projects lack that above-fold clarity. No horizontal scroll, no console errors, no measured layout shift across any page or viewport tested. Screenshots saved to <code>.audit/screenshots/</code>.</p>
+    </div>
+  </details>
+
+  <details class="appendix">
+    <summary>GEO / AI Search Readiness — 47/100</summary>
+    <div class="appendix-body">
+      <div class="metric-row"><span><b>58</b>Citability</span><span><b>65</b>Structural</span><span><b>30</b>Multi-modal</span><span><b>35</b>Authority</span><span><b>40</b>Technical*</span></div>
+      <p>*Technical Accessibility would score ~85 on prerendering/speed/robots alone but is capped by the canonical defect. All major AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) are unblocked — the permissive posture is correct. The FAQ content is already close to ideal Q&amp;A extraction format; it just isn't wrapped in schema, and per current policy, that's fine to leave as-is. Biggest structural gap: the site's best one-sentence definition of itself lives only in meta tags, never in visible body copy that extraction tools actually read.</p>
+    </div>
+  </details>
+
+  <details class="appendix">
+    <summary>Search Experience (SXO)</summary>
+    <div class="appendix-body">
+      <div class="metric-row"><span><b>53</b>Homepage gap score</span><span><b>38</b>Services gap score</span><span><b>57</b>Projects gap score</span></div>
+      <p>Homepage page-type (Service Page with process/portfolio/FAQ) is aligned with what ranks for these keywords among comparable agencies. The gap is depth and trust, not format. <code>/services</code> is the clear outlier — see Critical Finding #4 and the persona table above.</p>
+    </div>
+  </details>
+
+  <details class="appendix">
+    <summary>Backlinks — Tier 0 (Common Crawl only)</summary>
+    <div class="appendix-body">
+      <p>No Moz or Bing Webmaster key configured. Neither <code>new.mindlind.de</code> nor <code>mindlind.de</code> appears in Common Crawl's host graph — consistent with a small or newer site, not necessarily a negative authority signal on its own. No numeric Backlink Health Score is produced at this tier; a Moz or DataForSEO key would unlock referring-domain counts, anchor text, and spam scoring.</p>
+    </div>
+  </details>
+
+  <footer class="report-footer">
+    Business type detected: digital creative agency (Webdesign, Branding, SEO, Performance Marketing) — dual contact points for Germany and Lithuania. No SaaS, e-commerce, publisher, or primary local-service signals strong enough to route this audit differently; if deeper local-pack analysis is wanted given the registered address, a separate <code>/seo local</code> pass can go deeper on GBP/citations.
+  </footer>
+
+</div>

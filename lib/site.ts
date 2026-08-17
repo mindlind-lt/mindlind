@@ -122,14 +122,14 @@ export const routes = [
     changeFrequency: "yearly",
   },
 
-  // Legal pages. Currently render nothing, so they stay out of the index —
-  // flip to `published: true` once they contain the required text.
   {
     path: "/impressum",
-    published: false,
+    published: true,
     priority: 0.1,
     changeFrequency: "yearly",
   },
+  // Datenschutz currently renders nothing, so it stays out of the index —
+  // flip to `published: true` once it contains the required text.
   {
     path: "/datenschutz",
     published: false,
