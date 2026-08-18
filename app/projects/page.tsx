@@ -83,7 +83,7 @@ export default function PageProjects() {
             <WorkThumb
               headingLevel="h2"
               href="/projects/funky-ramen"
-              imageSrc="/images/case-funky-ramen-1.jpg"
+              imageSrc="/images/case-funky-ramen-1.webp"
               imageAlt="Funky Ramen — Website und UX/UI für ein japanisches Restaurant"
               imageWidth={1536}
               imageHeight={1024}

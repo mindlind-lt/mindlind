@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Eine digitale Welt, die Geschmack, Atmosphäre und Identität schon vor dem ersten Besuch spürbar macht — Ramen als Markenelement.",
     images: [
       {
-        url: "/images/case-funky-ramen-1.jpg",
+        url: "/images/case-funky-ramen-1.webp",
         alt: "Funky Ramen — Mindlind Werbeagentur",
       },
     ],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       "Eine digitale Welt, die Geschmack, Atmosphäre und Identität schon vor dem ersten Besuch spürbar macht — Ramen als Markenelement.",
     images: [
       {
-        url: "/images/case-funky-ramen-1.jpg",
+        url: "/images/case-funky-ramen-1.webp",
         alt: "Funky Ramen — Mindlind Werbeagentur",
       },
     ],
@@ -67,7 +67,7 @@ export default function PageCaseFunky() {
 
       {/* Hero */}
       <ParallaxImage
-        src="/images/case-funky-ramen-1.jpg"
+        src="/images/case-funky-ramen-1.webp"
         alt=""
         height="750px"
         strength={80}
@@ -143,7 +143,7 @@ export default function PageCaseFunky() {
           <div className="flex-1">
             <div className="flex items-center justify-center py-10 px-5 min-h-50">
               <Image 
-                src="/images/case-funky-ramen-logo-2.jpg"
+                src="/images/case-funky-ramen-logo-2.webp"
                 alt=""
                 width={200}
                 height={100}
@@ -167,7 +167,7 @@ export default function PageCaseFunky() {
 
       <div className="container mx-auto px-5 py-15">
         <Image
-          src="/images/case-funky-ramen-2.jpg"
+          src="/images/case-funky-ramen-2.webp"
           width={1440}
           height={600}
           alt=""
@@ -187,14 +187,14 @@ export default function PageCaseFunky() {
       <div className="px-8 py-15">
         <div className="flex gap-5">
           <Image
-            src="/images/case-funky-ramen-3.jpg"
+            src="/images/case-funky-ramen-3.webp"
             width={1000}
             height={600}
             alt=""
             className="w-full rounded-lg"
           />
           <Image
-            src="/images/case-funky-ramen-4.jpg"
+            src="/images/case-funky-ramen-4.webp"
             width={1000}
             height={600}
             alt=""
@@ -215,7 +215,7 @@ export default function PageCaseFunky() {
 
       <div className="container mx-auto px-5 py-15">
         <Image
-          src="/images/case-funky-ramen-5.jpg"
+          src="/images/case-funky-ramen-5.webp"
           width={1440}
           height={720}
           alt=""

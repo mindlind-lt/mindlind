@@ -71,7 +71,7 @@ export default function SectionFeatWorks(){
               <div className="works-masonry-item">
                 <WorkThumb
                   href="/projects/funky-ramen"
-                  imageSrc="/images/case-funky-ramen-1.jpg"
+                  imageSrc="/images/case-funky-ramen-1.webp"
                   imageAlt="Funky Ramen — Website und UX/UI für ein japanisches Restaurant"
                   imageWidth={1536}
                   imageHeight={1024}
