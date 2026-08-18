@@ -174,7 +174,7 @@ export default function PageProjects() {
             <WorkThumb
               headingLevel="h2"
               href="/projects/factorysl"
-              imageSrc="/images/case-factorysl-1.jpg"
+              imageSrc="/images/case-factorysl-1.webp"
               imageAlt="Factory SL — Website und UX/UI für Luxus-Detailing und Fahrzeugaufbereitung"
               imageWidth={560}
               imageHeight={560}

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Website für Factory SL — moderner Markenauftritt für Luxus-Detailing und Fahrzeugaufbereitung.",
     images: [
       {
-        url: "/images/case-factorysl-1.jpg",
+        url: "/images/case-factorysl-1.webp",
         alt: "Factory SL — Mindlind Werbeagentur",
       },
     ],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       "Website für Factory SL — moderner Markenauftritt für Luxus-Detailing und Fahrzeugaufbereitung.",
     images: [
       {
-        url: "/images/case-factorysl-1.jpg",
+        url: "/images/case-factorysl-1.webp",
         alt: "Factory SL — Mindlind Werbeagentur",
       },
     ],
@@ -46,7 +46,7 @@ export default function PageCaseFactorysl() {
 
       {/* Hero */}
       <ParallaxImage
-        src="/images/case-factorysl-5.jpg"
+        src="/images/case-factorysl-5.webp"
         alt=""
         height="750px"
         strength={150}
@@ -143,7 +143,7 @@ export default function PageCaseFactorysl() {
 
       <div className="container mx-auto px-5 py-15">
         <Image
-          src="/images/case-factorysl-3.jpg"
+          src="/images/case-factorysl-3.webp"
           width={1440}
           height={1440}
           alt=""
@@ -172,7 +172,7 @@ export default function PageCaseFactorysl() {
         <div className="grid grid-cols-2 gap-5">
           <div>
             <Image
-              src="/images/case-factorysl-2.jpg"
+              src="/images/case-factorysl-2.webp"
               width={600}
               height={600}
               alt=""
@@ -181,7 +181,7 @@ export default function PageCaseFactorysl() {
           </div>
           <div>
             <Image
-              src="/images/case-factorysl-4.jpg"
+              src="/images/case-factorysl-4.webp"
               width={600}
               height={600}
               alt=""
