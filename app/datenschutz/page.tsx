@@ -739,12 +739,12 @@ export default function PagePrivacy() {
             <p>
               Unsere Website{" "}
               <a
-                href="https://mindlind.de"
+                href="https://new.mindlind.de"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
               >
-                https://mindlind.de
+                https://new.mindlind.de
               </a>{" "}
               (im Folgenden „die Website“) verwendet Cookies und ähnliche
               Technologien (der Einfachheit halber werden all diese unter
@@ -809,7 +809,7 @@ export default function PagePrivacy() {
                   Auf dieser Website verwenden wir Werbe-Cookies, um Einblicke
                   in die Kampagnenergebnisse zu erhalten. Dies geschieht
                   basierend auf einem Profil, das wir basierend auf Ihrem
-                  Verhalten auf mindlind.de erstellen. Mit diesen Cookies sind
+                  Verhalten auf new.mindlind.de erstellen. Mit diesen Cookies sind
                   Sie als Website-Besucher mit einer eindeutigen ID verknüpft.
                   Diese Cookies erstellen jedoch kein Profil für Ihr Verhalten
                   und Ihre Interessen, um personalisierte Anzeigen zu

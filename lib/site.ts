@@ -16,7 +16,7 @@ export const siteConfig = {
    * NEXT_PUBLIC_SITE_URL (e.g. a Vercel preview or staging domain) so
    * canonicals and OG URLs don't all point at production.
    */
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://mindlind.de").replace(
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://new.mindlind.de").replace(
     /\/$/,
     "",
   ),
