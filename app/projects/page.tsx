@@ -70,7 +70,7 @@ export default function PageProjects() {
             <WorkThumb
               headingLevel="h2"
               href="/projects/funky-coffee"
-              imageSrc="/images/case-funky-coffee-1.png"
+              imageSrc="/images/case-funky-coffee-1.webp"
               imageAlt="Funky Coffee — Website und UX/UI für ein Coffee-Shop-Konzept"
               imageWidth={1536}
               imageHeight={1024}

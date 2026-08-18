@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Ein Café verkauft nicht nur Kaffee, sondern Atmosphäre. Digitaler Auftritt in heller, luftiger Food-Ästhetik, der Appetit macht.",
     images: [
       {
-        url: "/images/case-funky-coffee-1.png",
+        url: "/images/case-funky-coffee-1.webp",
         alt: "Funky Coffee — Mindlind Werbeagentur",
       },
     ],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       "Ein Café verkauft nicht nur Kaffee, sondern Atmosphäre. Digitaler Auftritt in heller, luftiger Food-Ästhetik, der Appetit macht.",
     images: [
       {
-        url: "/images/case-funky-coffee-1.png",
+        url: "/images/case-funky-coffee-1.webp",
         alt: "Funky Coffee — Mindlind Werbeagentur",
       },
     ],
@@ -67,7 +67,7 @@ export default function PageCaseFunkyCoffee() {
 
       {/* Hero */}
       <ParallaxImage
-        src="/images/case-funky-coffee-4.png"
+        src="/images/case-funky-coffee-4.webp"
         alt=""
         height="750px"
         strength={80}
@@ -167,7 +167,7 @@ export default function PageCaseFunkyCoffee() {
 
       <div className="container mx-auto px-5 py-15">
         <Image
-          src="/images/case-funky-coffee-1.png"
+          src="/images/case-funky-coffee-1.webp"
           width={1440}
           height={600}
           alt=""
@@ -190,14 +190,14 @@ export default function PageCaseFunkyCoffee() {
       <div className="px-8 py-15">
         <div className="flex gap-5">
           <Image
-            src="/images/case-funky-coffee-2.png"
+            src="/images/case-funky-coffee-2.webp"
             width={1000}
             height={600}
             alt=""
             className="w-full rounded-lg"
           />
           <Image
-            src="/images/case-funky-coffee-3.png"
+            src="/images/case-funky-coffee-3.webp"
             width={1000}
             height={600}
             alt=""
@@ -218,7 +218,7 @@ export default function PageCaseFunkyCoffee() {
 
       <div className="container mx-auto px-5 py-15">
         <Image
-          src="/images/case-funky-coffee-5.png"
+          src="/images/case-funky-coffee-5.webp"
           width={1440}
           height={720}
           alt=""
