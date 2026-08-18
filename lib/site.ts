@@ -128,11 +128,9 @@ export const routes = [
     priority: 0.1,
     changeFrequency: "yearly",
   },
-  // Datenschutz currently renders nothing, so it stays out of the index —
-  // flip to `published: true` once it contains the required text.
   {
     path: "/datenschutz",
-    published: false,
+    published: true,
     priority: 0.1,
     changeFrequency: "yearly",
   },
