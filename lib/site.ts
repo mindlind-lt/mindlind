@@ -28,6 +28,13 @@ export type RouteMeta = {
   /** Path as routed, no trailing slash (root is "/"). */
   path: string;
   /**
+   * Link text for `app/llms.txt`. Matches the page's own `metadata.title`
+   * (the un-templated part) so the two can't describe the page differently.
+   */
+  title: string;
+  /** One-line note after the link in `app/llms.txt`. Keep it to a clause. */
+  summary: string;
+  /**
    * `false` keeps the route out of the sitemap and off limits in robots.txt.
    * Use for placeholders and pages with no real content yet — the page's own
    * `metadata` export carries the matching `noindex`.
@@ -38,22 +45,43 @@ export type RouteMeta = {
 };
 
 export const routes = [
-  { path: "/", published: true, priority: 1, changeFrequency: "monthly" },
-  { path: "/agency", published: true, priority: 0.8, changeFrequency: "monthly" },
+  {
+    path: "/",
+    title: "Startseite",
+    summary: "Werbeagentur für Webdesign, SEO und Performance Marketing",
+    published: true,
+    priority: 1,
+    changeFrequency: "monthly",
+  },
+  {
+    path: "/agency",
+    title: "Agentur",
+    summary: "Team, 360°-Ansatz und Ablauf von der Strategie bis zum Launch",
+    published: true,
+    priority: 0.8,
+    changeFrequency: "monthly",
+  },
   {
     path: "/services",
+    title: "Leistungen",
+    summary: "Web-Design, UX/UI, Branding, Entwicklung, SEO und Ads",
     published: true,
     priority: 0.8,
     changeFrequency: "monthly",
   },
   {
     path: "/projects",
+    title: "Projekte",
+    summary:
+      "Ausgewählte Arbeiten aus Gastronomie, Beauty, Automotive und Produktion",
     published: true,
     priority: 0.9,
     changeFrequency: "monthly",
   },
   {
     path: "/contact",
+    title: "Kontakt",
+    summary: "Anfrage stellen und eine erste Einschätzung erhalten",
     published: true,
     priority: 0.7,
     changeFrequency: "yearly",
@@ -62,30 +90,41 @@ export const routes = [
   // Case studies
   {
     path: "/projects/funky-coffee",
+    title: "Funky Coffee",
+    summary:
+      "Case Study — digitaler Auftritt für ein Café in heller Food-Ästhetik",
     published: true,
     priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/funky-ramen",
+    title: "Funky Ramen",
+    summary: "Case Study — Ramen-Restaurant als eigene digitale Markenwelt",
     published: true,
     priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/princefood",
+    title: "Prince Food",
+    summary: "Case Study — Produktionsunternehmen, Prozesse sichtbar gemacht",
     published: true,
     priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/muafaktur",
+    title: "MUA Faktur",
+    summary: "Case Study — Beauty-Marke als skalierbares digitales System",
     published: true,
     priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/autosl",
+    title: "AutoSL",
+    summary: "Case Study — Luxusfahrzeuge kuratiert statt inseriert",
     published: true,
     priority: 0.6,
     changeFrequency: "yearly",
@@ -93,30 +132,42 @@ export const routes = [
 
   {
     path: "/projects/mondent",
+    title: "Mondent",
+    summary:
+      "Case Study — Website und SEO für eine große Zahnarztpraxis in Düsseldorf",
     published: true,
     priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/luxfloor",
+    title: "LuxFloor",
+    summary: "Case Study — Website und E-Commerce für hochwertige Bodenbeläge",
     published: true,
     priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/panda-travel",
+    title: "Panda Travel",
+    summary: "Case Study — Geschäftsreisen, China-Sourcing und Logistik",
     published: true,
     priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/factorysl",
+    title: "Factory SL",
+    summary:
+      "Case Study — Markenauftritt für Luxus-Detailing und Fahrzeugaufbereitung",
     published: true,
     priority: 0.6,
     changeFrequency: "yearly",
   },
   {
     path: "/projects/onlysmile",
+    title: "OnlySmile",
+    summary: "Case Study — Markenauftritt für Zahnbleaching und Dental Beauty",
     published: true,
     priority: 0.6,
     changeFrequency: "yearly",
@@ -124,12 +175,16 @@ export const routes = [
 
   {
     path: "/impressum",
+    title: "Impressum",
+    summary: "Anbieterkennzeichnung der Mindlind Werbeagentur",
     published: true,
     priority: 0.1,
     changeFrequency: "yearly",
   },
   {
     path: "/datenschutz",
+    title: "Datenschutz",
+    summary: "Datenschutzerklärung",
     published: true,
     priority: 0.1,
     changeFrequency: "yearly",
