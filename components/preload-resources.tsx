@@ -17,8 +17,7 @@ export default function PreloadResources() {
 
       {/* The homepage LCP element is the hero CTA video's poster frame. A
           `poster` attribute is only discovered once the parser reaches the
-          <video>, and the preloader overlay is waiting on it too — so hoist it
-          out of the critical path. */}
+          <video>, so hoist it out of the critical path. */}
       <link
         rel="preload"
         as="image"

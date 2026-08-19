@@ -3,7 +3,6 @@ import { Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
-import Preloader from "@/components/preloader/preloader";
 import PreloadResources from "@/components/preload-resources";
 import TopProgressBar from "@/components/progress-bar/top-progress-bar";
 import { siteConfig } from "@/lib/site";
@@ -78,7 +77,6 @@ export default function RootLayout({
       <body>
         <TopProgressBar />
         <PreloadResources />
-        <Preloader />
 
         <Header />
 
