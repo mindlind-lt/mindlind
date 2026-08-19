@@ -6,6 +6,8 @@
     flex-direction: column;
     gap: 4px;
     padding: 2px;
+
+    user-select: none;
 }
 
 .person-card-image {

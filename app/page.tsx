@@ -65,7 +65,7 @@ export default function Home() {
 
       <div className="hero">
 
-        <SplineMedusa />
+        {/* <SplineMedusa /> */}
 
         <div className="px-5 sm:px-8 relative z-10 flex flex-col justify-end gap-10 h-full">
 
