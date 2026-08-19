@@ -92,19 +92,19 @@ export default function PageAgency() {
 
             <TeamCarousel className="">
               <PersonCard
-                imageSrc="/images/team-1.jpg"
+                imageSrc="/images/team-1.webp"
                 name="Jan"
                 role="CEO"
                 // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
               />
               <PersonCard
-                imageSrc="/images/team-2.jpg"
+                imageSrc="/images/team-2.webp"
                 name="Georgy"
                 role="Director"
                 // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
               />
               <PersonCard
-                imageSrc="/images/team-3.jpg"
+                imageSrc="/images/team-3.webp"
                 name="Almaz"
                 role="IT-Spezialist"
                 // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
