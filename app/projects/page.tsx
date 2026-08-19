@@ -148,7 +148,7 @@ export default function PageProjects() {
             <WorkThumb
               headingLevel="h2"
               href="/projects/luxfloor"
-              imageSrc="/images/case-luxfloor-1.png"
+              imageSrc="/images/case-luxfloor-1.webp"
               imageAlt="LuxFloor — Website und UX/UI für hochwertige Bodenbeläge"
               imageWidth={560}
               imageHeight={560}

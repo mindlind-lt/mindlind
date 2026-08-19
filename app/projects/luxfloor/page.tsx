@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Website und E-Commerce für LuxFloor — moderner Markenauftritt für hochwertige Bodenbeläge und Interior-Produkte.",
     images: [
       {
-        url: "/images/case-luxfloor-1.png",
+        url: "/images/case-luxfloor-1.webp",
         alt: "LuxFloor — Mindlind Werbeagentur",
       },
     ],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       "Website und E-Commerce für LuxFloor — moderner Markenauftritt für hochwertige Bodenbeläge und Interior-Produkte.",
     images: [
       {
-        url: "/images/case-luxfloor-1.png",
+        url: "/images/case-luxfloor-1.webp",
         alt: "LuxFloor — Mindlind Werbeagentur",
       },
     ],
@@ -46,7 +46,7 @@ export default function PageCaseLuxfloor() {
 
       {/* Hero */}
       <ParallaxImage
-        src="/images/case-luxfloor-1.png"
+        src="/images/case-luxfloor-1.webp"
         height="750px"
         strength={80}
         className="w-full"
@@ -141,7 +141,7 @@ export default function PageCaseLuxfloor() {
 
       <div className="container mx-auto px-5 py-15">
         <Image
-          src="/images/case-luxfloor-2.png"
+          src="/images/case-luxfloor-2.webp"
           width={1440}
           height={1440}
           alt=""
@@ -170,7 +170,7 @@ export default function PageCaseLuxfloor() {
         <div className="flex gap-5">
           <div>
             <Image
-              src="/images/case-luxfloor-3.png"
+              src="/images/case-luxfloor-3.webp"
               width={1000}
               height={600}
               alt=""
@@ -179,7 +179,7 @@ export default function PageCaseLuxfloor() {
           </div>
           <div>
             <Image
-              src="/images/case-luxfloor-4.png"
+              src="/images/case-luxfloor-4.webp"
               width={1000}
               height={600}
               alt=""
