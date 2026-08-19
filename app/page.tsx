@@ -65,7 +65,7 @@ export default function Home() {
 
       <div className="hero">
 
-        {/* <SplineMedusa /> */}
+        <SplineMedusa />
 
         <div className="px-5 sm:px-8 relative z-10 flex flex-col justify-end gap-10 h-full">
 
@@ -119,8 +119,8 @@ export default function Home() {
         <div className="container mx-auto px-5 sm:px-8">
           <div className="intro-row">
             <div className="text-2xl sm:text-4xl lg:text-5xl text-justify font-mono font-medium uppercase leading-[1.4] mb-10 sm:mb-0">
-              <span className="text-2xl sm:text-3xl text-primary-700">[01]</span>
-              &nbsp;&nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.
+              <span className="text-2xl sm:text-3xl lg:text-3xl text-primary-700">[01]</span>
+              &nbsp;&nbsp;Wir gestalten digitale Erlebnisse, die Marken sichtbar machen und Unternehmen wachsen lassen.
             </div>
             <ScrambledText text="[ ÜBER UNS ] " as="a" href="#" className="intro-link" />
           </div>
@@ -141,7 +141,7 @@ export default function Home() {
             <SplineCubes className="w-[400px] h-[450px] xl:w-[500px] xl:h-[550px]" />
           </div>
 
-          <div className="flex-1 text-md leading-[1.6] xl:pr-20">
+          <div className="flex-1 text-lg leading-[1.7] xl:pr-20">
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wir sind eine kreative Digitalagentur mit Fokus auf Klarheit, Performance und Wachstum. Wir verbinden Strategie, Branding und Webentwicklung zu modernen Systemen, die skalieren und nachhaltig funktionieren. Unser Ansatz ist einfach: weniger Komplexität, mehr Wirkung. Jedes Projekt wird mit Präzision gestaltet — von der ersten Idee bis zum finalen Produkt. <b>Schnell. Klar. Effektiv.</b></p>
           </div>
 
@@ -223,7 +223,7 @@ export default function Home() {
         <div className="container mx-auto xl:px-8 max-w-430">
           <div className="bg-neutral-900 text-white py-14 px-6 sm:py-20 sm:px-15 xl:py-40 xl:px-25 xl:rounded-xl relative overflow-visible">
 
-            <SplineTorus className="opacity-100 sm:opacity-30 xl:opacity-100" />
+            {/* <SplineTorus className="opacity-100 sm:opacity-30 xl:opacity-100" /> */}
             
             <div className="font-mono text-2xl sm:text-3xl uppercase mb-24 sm:mb-60 mt-0 sm:mt-[-90vh] xl:mt-[-95vh] flex justify-between relative z-2">
               <div>How We Work</div>
