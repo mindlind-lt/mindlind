@@ -50,7 +50,7 @@ export default function PageProjects() {
       {/* <Hero title="PROJEKTE" /> */}
 
       <ImageParticles
-        src="/images/service-content.jpg"
+        src="/images/hero-projects.jpg"
         alt=""
         style={{ aspectRatio: "21/9", minHeight: "70svh" }}
       >
