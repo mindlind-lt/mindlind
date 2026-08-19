@@ -18,7 +18,7 @@ export default function CtaBox() {
                 <div className="text-xl font-bold uppercase font-mono leading-tight">IHR WACHSTUM BEGINNT HIER</div>
                 <div className="text-sm mt-3 flex-1">Ob Website, SEO oder Performance Marketing – wir begleiten Sie vom ersten Gespräch bis zum langfristigen Erfolg.</div>
                 <div className="mt-3">
-                  <DoorButton color="white" className="w-full">JETZT ANFRAGEN</DoorButton>
+                  <DoorButton color="white" className="w-full" href="/contact">JETZT ANFRAGEN</DoorButton>
                 </div>
               </div>
 

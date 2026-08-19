@@ -75,7 +75,7 @@ export default function Home() {
                 <div className="text-xl font-bold uppercase font-mono leading-tight">IHR WACHSTUM BEGINNT HIER</div>
                 <div className="text-sm mt-3 flex-1">Ob Website, SEO oder Performance Marketing – wir begleiten Sie vom ersten Gespräch bis zum langfristigen Erfolg.</div>
                 <div className="mt-3">
-                  <DoorButton color="white" className="w-full">JETZT ANFRAGEN</DoorButton>
+                  <DoorButton color="white" className="w-full" href="/contact">JETZT ANFRAGEN</DoorButton>
                 </div>
               </div>
               <div className="bg-gray-200 hero-cta-box-media">
@@ -223,7 +223,7 @@ export default function Home() {
         <div className="container mx-auto xl:px-8 max-w-430">
           <div className="bg-neutral-900 text-white py-14 px-6 sm:py-20 sm:px-15 xl:py-40 xl:px-25 xl:rounded-xl relative overflow-visible">
 
-            {/* <SplineTorus className="opacity-100 sm:opacity-30 xl:opacity-100" /> */}
+            <SplineTorus className="opacity-100 sm:opacity-30 xl:opacity-100" />
             
             <div className="font-mono text-2xl sm:text-3xl uppercase mb-24 sm:mb-60 mt-0 sm:mt-[-90vh] xl:mt-[-95vh] flex justify-between relative z-2">
               <div>How We Work</div>

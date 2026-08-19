@@ -22,6 +22,8 @@
     overflow: hidden;
 
     transition: 0.3s linear;
+    user-select: none;
+    cursor: pointer;
 }
 
 .door-button-content {
@@ -63,7 +65,7 @@
     transition: 0.3s linear;
 }
 
-.door-button:hover, .door-button:focus {
+.door-button:hover {
     color: var(--bg-color);
 }
 
