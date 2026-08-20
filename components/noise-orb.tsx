@@ -220,10 +220,10 @@ void main() {
 // --- animation -------------------------------------------------------------
 
 const FOV = 40;
-// Radius the framing is fitted to: the particle shell (2) plus its wobble and a
-// margin. Matches the original's hand-picked camera distance at 16:9, and pulls
-// back on narrower viewports instead of clipping.
-const FIT_RADIUS = 3.6;
+// Half-height of everything that actually gets drawn: the particle shell
+// (radius 2) plus the upward wobble its vertex shader adds (0.25). The orb
+// itself stays well inside that.
+const CONTENT_RADIUS = 2.25;
 const BACKGROUND_Z = -2;
 
 const ORB_PROGRESS_MIN = 1;
@@ -273,6 +273,11 @@ type NoiseOrbProps = {
   background?: boolean;
   /** Multiplier on every animation rate. */
   speed?: number;
+  /**
+   * Empty space kept around the orb, as a fraction of its radius. `0` fits it
+   * edge to edge on the tighter axis; the original demo framed it at `0.6`.
+   */
+  padding?: number;
 };
 
 export default function NoiseOrb({
@@ -280,14 +285,20 @@ export default function NoiseOrb({
   particleCount = 20000,
   background = true,
   speed = 1,
+  padding = 0.1,
 }: NoiseOrbProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // read from inside the loop so a change doesn't tear down the WebGL context
+  // read these from inside the effect so a change re-frames the shot instead of
+  // tearing down the WebGL context
   const speedRef = useRef(speed);
+  const paddingRef = useRef(padding);
+  const refitRef = useRef<(() => void) | null>(null);
   useEffect(() => {
     speedRef.current = speed;
-  }, [speed]);
+    paddingRef.current = padding;
+    refitRef.current?.();
+  }, [speed, padding]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -373,10 +384,11 @@ export default function NoiseOrb({
       renderer.setSize(width, height, false);
       camera.aspect = aspect;
 
-      // pull back far enough that FIT_RADIUS clears both the vertical and the
+      // pull back far enough that the content clears both the vertical and the
       // horizontal field of view
       const halfFov = THREE.MathUtils.degToRad(FOV) / 2;
-      const distance = FIT_RADIUS / (Math.tan(halfFov) * Math.min(aspect, 1));
+      const fitRadius = CONTENT_RADIUS * (1 + Math.max(paddingRef.current, 0));
+      const distance = fitRadius / (Math.tan(halfFov) * Math.min(aspect, 1));
       camera.position.set(0, 0, distance);
       camera.lookAt(scene.position);
       camera.updateProjectionMatrix();
@@ -445,12 +457,15 @@ export default function NoiseOrb({
     const onVisibility = () => sync();
     document.addEventListener('visibilitychange', onVisibility);
 
-    const resizeObserver = new ResizeObserver(() => {
+    // the loop repaints on its own; a held frame does not
+    const refit = () => {
       resize();
-      // the loop repaints on its own; a held frame does not
       if (reduceMotion) draw(elapsed);
-    });
+    };
+
+    const resizeObserver = new ResizeObserver(refit);
     resizeObserver.observe(canvas);
+    refitRef.current = refit;
 
     resize();
     if (reduceMotion) {
@@ -464,6 +479,7 @@ export default function NoiseOrb({
 
     return () => {
       stop();
+      refitRef.current = null;
       observer?.disconnect();
       resizeObserver.disconnect();
       document.removeEventListener('visibilitychange', onVisibility);

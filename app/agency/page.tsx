@@ -66,7 +66,7 @@ export default function PageAgency() {
 
             <div className="h-[380px] lg:h-auto">
               {/* <CreatureBlob /> */}
-                <NoiseOrb background={false}  />                          
+                <NoiseOrb background={false} padding={0} />                          
                 {/* or: speed={0.6} particleCount={30000} */}
             </div>
 
