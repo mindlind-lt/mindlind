@@ -19,12 +19,15 @@ import './services-hero.css';
 const ZOOM = 3.4;
 
 // Window, in scroll progress, over which each layer leaves. The title goes
-// early — it is the near object, so it passes the camera first — while the
-// horizon holds most of the pin. The end lands just short of 1 so the last of
-// the light is gone by the time the section below has climbed far enough to
-// read, rather than dissolving over content that is already on screen.
-const TITLE_FADE = [0.02, 0.38] as const;
-const FIELD_FADE = [0.42, 0.92] as const;
+// first — it is the near object, so it passes the camera first — and the
+// horizon picks up exactly where it left off.
+//
+// The horizon's end is set by the overlap in the CSS, not by taste: the section
+// below starts rising at 0.30 and covers half the screen by 0.80, so the light
+// has to be gone by roughly then. Fading any later means dissolving over
+// content that is already on screen and readable.
+const TITLE_FADE = [0.02, 0.34] as const;
+const FIELD_FADE = [0.34, 0.85] as const;
 
 // How far the title is thrown toward the viewer before it is gone, and how much
 // it smears on the way out.
@@ -34,9 +37,14 @@ const TITLE_BLUR = 14;
 // Time constant of the follow, in ms. Wheel and trackpad scrolls arrive in
 // coarse jumps; easing toward the scroll position instead of snapping to it is
 // the difference between a slideshow and a camera move. Large enough to smooth
-// a notched wheel, small enough that the horizon never feels detached from the
-// scroll.
-const TAU = 110;
+// a notched wheel, small enough that the horizon never feels detached from it.
+const TAU_FINE = 110;
+
+// A touch scroll is already pixel-continuous and the finger is on the content,
+// so the same damping stops reading as smoothing and starts reading as lag —
+// worst on a fast flick back up, where the horizon keeps moving after the
+// gesture has stopped. Just enough here to absorb event granularity.
+const TAU_COARSE = 30;
 
 const clamp = (v: number, lo: number, hi: number) => Math.min(Math.max(v, lo), hi);
 
@@ -64,6 +72,10 @@ export default function ServicesHero({ title }: { title: string }) {
         // Reduced motion gets the hero as a still image: the track collapses to
         // one screen in CSS, so there is nothing to drive.
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        const tau = window.matchMedia('(pointer: coarse)').matches
+            ? TAU_COARSE
+            : TAU_FINE;
 
         // `target` is where the scroll says we are; `eased` is where the camera
         // has got to. The gap between them is the smoothing.
@@ -102,7 +114,7 @@ export default function ServicesHero({ title }: { title: string }) {
             lastTick = now;
 
             // Frame-rate independent damping: the same easing at 60 and 120Hz.
-            eased += (target - eased) * (1 - Math.exp(-dt / TAU));
+            eased += (target - eased) * (1 - Math.exp(-dt / tau));
 
             // Settled, and no new scroll to chase: stop until something moves.
             if (Math.abs(target - eased) < 0.0005) {
@@ -180,8 +192,8 @@ export default function ServicesHero({ title }: { title: string }) {
                     <div className="services-hero-gradient" />
                 </div>
 
-                <div ref={titleRef} className="services-hero__title">
-                    <h1 className="text-8xl font-mono font-bold tracking-tight uppercase">
+                <div ref={titleRef} className="services-hero__title px-5">
+                    <h1 className="text-[clamp(2.25rem,11vw,6rem)] font-mono font-bold tracking-tight uppercase">
                         {title}
                     </h1>
                 </div>

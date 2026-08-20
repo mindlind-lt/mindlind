@@ -5,14 +5,26 @@
 .services-hero {
     position: relative;
     /* One screen of pinned scroll (the height above the pane), then the pane
-       leaves like any other section. */
-    height: 200svh;
+       leaves like any other section.
+
+       Every length here is `lvh` — the viewport at its LARGEST, i.e. with a
+       mobile URL bar hidden. `svh` would size the pane to the viewport at its
+       smallest, so the moment the bar scrolls away the pane no longer covers
+       the screen and the section below shows in the strip underneath. `dvh`
+       tracks the bar live, which keeps the pane right but changes the pin
+       distance mid-scroll, so progress jumps as the bar moves. `lvh` is the
+       only one of the three that is both gapless and stable; the cost is that
+       a centred title sits ~half a URL bar below the optical centre while the
+       bar is showing. */
+    height: 200lvh;
 
     /* How much of the section below is pulled up into the end of the track. The
        pane is a full screen tall and empty by the time it gets there, so
        without this the horizon dissolves onto a blank screen and the reader
-       scrolls through it to reach anything. */
-    --services-hero-overlap: 45svh;
+       scrolls through it to reach anything. At 70 the section holds most of the
+       screen by the time the light is gone; raising it further starts hiding
+       the effect itself behind the rising content. */
+    --services-hero-overlap: 70lvh;
     margin-bottom: calc(-1 * var(--services-hero-overlap));
 }
 
@@ -38,7 +50,7 @@
     content: "";
     position: absolute;
     inset: auto 0 100% 0;
-    height: 20svh;
+    height: 20lvh;
     background: linear-gradient(transparent, var(--background));
     pointer-events: none;
 }
@@ -46,7 +58,7 @@
 .services-hero__pane {
     position: sticky;
     top: 0;
-    height: 100svh;
+    height: 100lvh;
     overflow: hidden;
 }
 
@@ -80,7 +92,7 @@
 /* Nothing is pinned and nothing moves; the hero is one plain screenful. */
 @media (prefers-reduced-motion: reduce) {
     .services-hero {
-        height: 100svh;
+        height: 100lvh;
         /* Nothing dissolves, so there is nothing to pull the next section over. */
         --services-hero-overlap: 0px;
     }
