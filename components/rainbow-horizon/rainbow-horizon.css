@@ -1,0 +1,13 @@
+.rainbow-horizon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+}
+
+.rainbow-horizon canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

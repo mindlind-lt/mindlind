@@ -1,494 +1,276 @@
 ```html
-<script type="x-shader/x-fragment" id="background-fragment">
+<canvas id="glCanvas"></canvas>
 
-    float hue2rgb(float f1, float f2, float hue) {
-    if (hue < 0.0)
-        hue += 1.0;
-    else if (hue > 1.0)
-        hue -= 1.0;
-    float res;
-    if ((6.0 * hue) < 1.0)
-        res = f1 + (f2 - f1) * 6.0 * hue;
-    else if ((2.0 * hue) < 1.0)
-        res = f2;
-    else if ((3.0 * hue) < 2.0)
-        res = f1 + (f2 - f1) * ((2.0 / 3.0) - hue) * 6.0;
-    else
-        res = f1;
-    return res;
-}
+<div class="container">
+  <h1>Animated Shader: Rainbow Horizon</h1>
+  Lorem ipsum dolor sit amet, at labitur complectitur mei. Tota eloquentiam an sea, nostro electram mea et. Debitis accusata forensibus sed in, no omnium evertitur prodesset eam. Hendrerit torquatos deterruisset no per, eirmod equidem omnesque per ne. Vix appetere percipit cu.
+  <p><button id="fullscreenBtn">⤢ Toggle Fullscreen</button>
+</div>
 
-vec3 hsl2rgb(vec3 hsl) {
-    vec3 rgb;
-    
-    if (hsl.y == 0.0) {
-        rgb = vec3(hsl.z); // Luminance
-    } else {
-        float f2;
-        
-        if (hsl.z < 0.5)
-            f2 = hsl.z * (1.0 + hsl.y);
-        else
-            f2 = hsl.z + hsl.y - hsl.y * hsl.z;
-            
-        float f1 = 2.0 * hsl.z - f2;
-        
-        rgb.r = hue2rgb(f1, f2, hsl.x + (1.0/3.0));
-        rgb.g = hue2rgb(f1, f2, hsl.x);
-        rgb.b = hue2rgb(f1, f2, hsl.x - (1.0/3.0));
-    }   
-    return rgb;
-}
-
-vec3 hsl2rgb(float h, float s, float l) {
-    return hsl2rgb(vec3(h, s, l));
-}
-
-vec3 random3(vec3 c) {
-	float j = 4096.0*sin(dot(c,vec3(17.0, 59.4, 15.0)));
-	vec3 r;
-	r.z = fract(512.0*j);
-	j *= .125;
-	r.x = fract(512.0*j);
-	j *= .125;
-	r.y = fract(512.0*j);
-	return r-0.5;
-}
-
-const float F3 =  0.3333333;
-const float G3 =  0.1666667;
-
-float simplex3d(vec3 p) {
-	 vec3 s = floor(p + dot(p, vec3(F3)));
-	 vec3 x = p - s + dot(s, vec3(G3));
-	 
-	 vec3 e = step(vec3(0.0), x - x.yzx);
-	 vec3 i1 = e*(1.0 - e.zxy);
-	 vec3 i2 = 1.0 - e.zxy*(1.0 - e);
-	 	
-	 vec3 x1 = x - i1 + G3;
-	 vec3 x2 = x - i2 + 2.0*G3;
-	 vec3 x3 = x - 1.0 + 3.0*G3;
-	 
-	 vec4 w, d;
-	 
-	 w.x = dot(x, x);
-	 w.y = dot(x1, x1);
-	 w.z = dot(x2, x2);
-	 w.w = dot(x3, x3);
-	 
-	 w = max(0.6 - w, 0.0);
-	 
-	 d.x = dot(random3(s), x);
-	 d.y = dot(random3(s + i1), x1);
-	 d.z = dot(random3(s + i2), x2);
-	 d.w = dot(random3(s + 1.0), x3);
-	 
-	 w *= w;
-	 w *= w;
-	 d *= w;
-	 
-	 return dot(d, vec4(52.0));
-}
-
-float hash(vec2 p) { return fract(1e4 * sin(17.0 * p.x + p.y * 0.1) * (0.1 + abs(sin(p.y * 13.0 + p.x)))); }
-
-    
-    
-    varying vec2 vUv;
-    uniform float u_progress;
-    uniform float u_time;
-    
-    
- 
-    
-    void main() {    
-
-        float n = simplex3d(vec3(vUv.xy, u_time * 1.0));
-        vec3 color = hsl2rgb(
-            0.0 + n * 0.1,
-            0.0,
-            0.03
-        );
-        
-        float val = hash(vUv + u_time);
-        
-        gl_FragColor = vec4(color + vec3(val / 20.), 1.0);
-    }
-</script>
-<script type="x-shader/x-vertex" id="background-vertex">
-    varying vec2 vUv;
-    uniform float u_time;
-    
-    void main() {
-        vec3 p = position;
-        
-        vec4 mvPosition = modelViewMatrix * vec4(p, 1.0);
-        gl_PointSize = 10.0 * (1.0 / -mvPosition.z);
-        gl_Position = projectionMatrix * mvPosition;
-        
-        vUv = uv;
-    }
-</script>
-
-<script type="x-shader/x-fragment" id="particle-fragment">
-    uniform float u_progress;
-    void main() {
-        gl_FragColor = vec4(0.4, 0.4, 0.4, u_progress);
-    }
-</script>
-<script type="x-shader/x-vertex" id="particle-vertex">
-    uniform float u_time;
-    void main() {
-        vec3 p = position;
-        
-        p.y += 0.25*(sin(p.y * 5.0 + u_time) * 0.5 + 0.5);
-        p.z += 0.05*(sin(p.y * 10.0 + u_time) * 0.5 + 0.5);
-        
-        
-        vec4 mvPosition = modelViewMatrix * vec4(p, 1.0);
-        gl_PointSize = 10.0 * (1.0 / -mvPosition.z);
-        gl_Position = projectionMatrix * mvPosition;
-    }
-</script>
-
-<script type="x-shader/x-fragment" id="fragment">
-    varying vec2 vUv;
-    varying vec3 v_color;
-    varying vec3 v_normal;
-
-    void main() {
-        
-        vec3 light = vec3(0.0);
-        vec3 skyColor = vec3(1.000, 1.000, 0.547);
-        vec3 groundColor = vec3(0.562, 0.275, 0.111);
-        
-        vec3 lightDirection = normalize(vec3(0.0, -1.0, -1.0));
-        light += dot(lightDirection, v_normal);
-        
-        light = mix(skyColor, groundColor, dot(lightDirection, v_normal));
-        
-        gl_FragColor = vec4(light * v_color, 1.0);
-      }
-</script>
-<script type="x-shader/x-vertex" id="vertex">
-    varying vec2 vUv;
-    varying vec3 v_color;
-    varying vec3 v_normal;
-    
-    uniform float u_time;
-    uniform float u_progress;
-    
-    
-    
-    vec3 hsv2rgb(vec3 c)
-{
-    vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
-    vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
-    return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
-}
-    
-    vec4 permute(vec4 x) { return mod(((x * 34.0) + 1.0) * x, 289.0); }
-    vec4 taylorInvSqrt(vec4 r) { return 1.79284291400159 - 0.85373472095314 * r; }
-
-    float snoise(vec3 v) {
-        const vec2 C = vec2(1.0 / 6.0, 1.0 / 3.0);
-        const vec4 D = vec4(0.0, 0.5, 1.0, 2.0);
-
-  // First corner
-  vec3 i = floor(v + dot(v, C.yyy));
-  vec3 x0 = v - i + dot(i, C.xxx);
-
-  // Other corners
-  vec3 g = step(x0.yzx, x0.xyz);
-  vec3 l = 1.0 - g;
-  vec3 i1 = min(g.xyz, l.zxy);
-  vec3 i2 = max(g.xyz, l.zxy);
-
-  //  x0 = x0 - 0. + 0.0 * C
-  vec3 x1 = x0 - i1 + 1.0 * C.xxx;
-  vec3 x2 = x0 - i2 + 2.0 * C.xxx;
-  vec3 x3 = x0 - 1. + 3.0 * C.xxx;
-
-  // Permutations
-  i = mod(i, 289.0);
-  vec4 p = permute(permute(permute(
-        i.z + vec4(0.0, i1.z, i2.z, 1.0))
-      + i.y + vec4(0.0, i1.y, i2.y, 1.0))
-    + i.x + vec4(0.0, i1.x, i2.x, 1.0));
-
-  // Gradients
-  // ( N*N points uniformly over a square, mapped onto an octahedron.)
-  float n_ = 1.0 / 7.0; // N=7
-  vec3 ns = n_ * D.wyz - D.xzx;
-
-  vec4 j = p - 49.0 * floor(p * ns.z * ns.z); //  mod(p,N*N)
-
-  vec4 x_ = floor(j * ns.z);
-  vec4 y_ = floor(j - 7.0 * x_); // mod(j,N)
-
-  vec4 x = x_ * ns.x + ns.yyyy;
-  vec4 y = y_ * ns.x + ns.yyyy;
-  vec4 h = 1.0 - abs(x) - abs(y);
-
-  vec4 b0 = vec4(x.xy, y.xy);
-  vec4 b1 = vec4(x.zw, y.zw);
-
-  vec4 s0 = floor(b0) * 2.0 + 1.0;
-  vec4 s1 = floor(b1) * 2.0 + 1.0;
-  vec4 sh = -step(h, vec4(0.0));
-
-  vec4 a0 = b0.xzyw + s0.xzyw * sh.xxyy;
-  vec4 a1 = b1.xzyw + s1.xzyw * sh.zzww;
-
-  vec3 p0 = vec3(a0.xy, h.x);
-  vec3 p1 = vec3(a0.zw, h.y);
-  vec3 p2 = vec3(a1.xy, h.z);
-  vec3 p3 = vec3(a1.zw, h.w);
-
-  //Normalise gradients
-  vec4 norm = taylorInvSqrt(vec4(dot(p0, p0), dot(p1, p1), dot(p2, p2), dot(p3, p3)));
-  p0 *= norm.x;
-  p1 *= norm.y;
-  p2 *= norm.z;
-  p3 *= norm.w;
-
-  // Mix final noise value
-  vec4 m = max(0.6 - vec4(dot(x0, x0), dot(x1, x1), dot(x2, x2), dot(x3, x3)), 0.0);
-  m = m * m;
-  return 42.0 * dot(m * m, vec4(dot(p0, x0), dot(p1, x1),
-      dot(p2, x2), dot(p3, x3)));
-}
-
-void main() {
-  vUv = uv;
-  float noise = snoise(position * u_progress + u_time / 10.0);
-  vec3 newPos = position * (noise + 0.7);
-    
-  v_color = hsv2rgb(vec3(noise * 0.1 + 0.03, .7, 0.7));
-    
-  v_normal = normal;
-
-  gl_Position = projectionMatrix * modelViewMatrix * vec4(newPos, 1.0);
-}
-
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
 ```
-
 
 ```css
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-body {
-    height: 100vh;
-    width: 100vw;
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #001;
 }
-
 canvas {
-    height: 100%;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#controls {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: #25902950;
+  }
+  &:active {
+    background-color: #00FFFFCC;
+  }
+}
+.btn {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 0, 1);
+}
+#fullscreenBtn {
+  font-size: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  position: absolute;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 0 0 5px #000, 0 0 10px #000;
+  color: #fff;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 50, 0.7))
+		drop-shadow(0 0 15px rgba(0, 0, 0, 0.5))
+		drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+  z-index: 2;
+}
+
+/* Phone User */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+  .container {
+    font-size: 0.8rem;
+  }
+  .btn {
+    font-size: 0.8rem;
+  }
+  #fullscreenBtn {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
 }
 ```
 
+```js
+/*
+Rainbow Horizon
+*/
 
-```javascript
-const fragment = document.querySelector("#fragment").textContent;
-const vertex = document.querySelector("#vertex").textContent;
-const fragmentParticle = document.querySelector("#particle-fragment")
-    .textContent;
-const vertexParticle = document.querySelector("#particle-vertex").textContent;
-
-const backgroundVertex = document.querySelector("#background-vertex")
-    .textContent;
-const backgroundFragment = document.querySelector("#background-fragment")
-    .textContent;
-
-class THREEScene {
-    constructor(container = document.body) {
-        this.container = container;
-
-        this.init();
-    }
-
-    init() {
-        this.setup();
-        this.camera();
-        this.addToScene();
-        this.createParticles();
-        this.createBackground();
-        this.eventListeners();
-        this.render();
-        this.animate();
-    }
-
-    setup() {
-        this.scene = new THREE.Scene();
-        this.renderer = new THREE.WebGLRenderer({ antialias: true });
-        this.renderer.setSize(this.viewport.width, this.viewport.height);
-        this.renderer.setPixelRatio = window.devicePixelRatio;
-        this.container.appendChild(this.renderer.domElement);
-        this.material = new THREE.ShaderMaterial({
-            vertexShader: vertex,
-            fragmentShader: fragment,
-            wireframe: false,
-            uniforms: {
-                u_time: { value: 0 },
-                u_progress: { value: 0 }
-            }
-        });
-
-        this.pointsMaterial = new THREE.ShaderMaterial({
-            vertexShader: vertexParticle,
-            fragmentShader: fragmentParticle,
-            wireframe: false,
-            side: THREE.DoubleSide,
-            transparent: true,
-            uniforms: {
-                u_time: { value: 0 },
-                u_progress: { value: 0 }
-            }
-        });
-        this.clock = new THREE.Clock();
-    }
-
-    camera() {
-        const fov = 40;
-        const near = 0.1;
-        const far = 10000;
-        const aspectRatio = this.viewport.aspectRatio;
-        this.camera = new THREE.PerspectiveCamera(fov, aspectRatio, near, far);
-        //this.camera = new THREE.OrthographicCamera(
-        //  this.viewport.width / -2,
-        //this.viewport.width / 2,
-        //this.viewport.height / 2,
-        //this.viewport.height / -2,
-        //1,
-        //1000
-        //);
-        this.camera.position.set(0, 0, 10);
-        //this.controls = new THREE.OrbitControls(
-        //  this.camera,
-        //this.renderer.domElement
-        //);
-    }
-
-    addToScene() {
-        this.geometry = new THREE.SphereGeometry(1, 162, 162);
-        const sphere = new THREE.Mesh(this.geometry, this.material);
-
-        this.scene.add(sphere);
-    }
-
-    createParticles() {
-        const N = 30000;
-        const position = new Float32Array(N * 3);
-        this.particleGeometry = new THREE.BufferGeometry();
-
-        let inc = Math.PI * (3 - Math.sqrt(5));
-        let offset = 2 / N;
-        let radius = 2;
-
-        for (let i = 0; i < N; i++) {
-            let y = i * offset - 1 + offset / 2;
-            let r = Math.sqrt(1 - y * y);
-            let phi = i * inc;
-
-            position[3 * i] = radius * Math.cos(phi) * r;
-            position[3 * i + 1] = radius * y;
-            position[3 * i + 2] = radius * Math.sin(phi) * r;
-        }
-
-        this.particleGeometry.setAttribute(
-            "position",
-            new THREE.BufferAttribute(position, 3)
-        );
-
-        this.points = new THREE.Points(
-            this.particleGeometry,
-            this.pointsMaterial
-        );
-        this.scene.add(this.points);
-    }
-
-    createBackground() {
-        const geometry = new THREE.PlaneGeometry(100, 15, 16);
-        this.backgroundMaterial = new THREE.ShaderMaterial({
-            vertexShader: backgroundVertex,
-            fragmentShader: backgroundFragment,
-            wireframe: false,
-            uniforms: {
-                u_time: { value: 0 },
-                u_progress: { value: 0 }
-            }
-        });
-
-        const mesh = new THREE.Mesh(geometry, this.backgroundMaterial);
-        mesh.position.z = -2;
-        this.scene.add(mesh);
-    }
-
-    render() {
-        this.camera.lookAt(this.scene.position);
-        this.renderer.render(this.scene, this.camera);
-        this.material.uniforms.u_time.value = this.clock.getElapsedTime();
-        this.pointsMaterial.uniforms.u_time.value = this.clock.getElapsedTime();
-        this.backgroundMaterial.uniforms.u_time.value = this.clock.getElapsedTime();
-        this.points.rotation.y += 0.005;
-
-        requestAnimationFrame(() => {
-            this.render();
-        });
-    }
-
-    animate() {
-        gsap.timeline({
-            repeat: -1,
-            yoyo: true
-        })
-            .to(this.material.uniforms.u_progress, {
-                value: 5,
-                duration: 5,
-                ease: "power3.inOut"
-            })
-            .to(this.material.uniforms.u_progress, {
-                value: 1,
-                duration: 5,
-                ease: "power3.inOut"
-            });
-        gsap.to(this.pointsMaterial.uniforms.u_progress, {
-            value: 0.4,
-            duration: 5,
-            ease: "power3.inOut"
-        });
-    }
-
-    eventListeners() {
-        window.addEventListener("resize", this.onWindowResize.bind(this));
-    }
-
-    onWindowResize() {
-        this.material.uniforms.u_time.value = this.clock.getElapsedTime();
-        this.camera.aspect = this.viewport.aspectRatio;
-        this.camera.updateProjectionMatrix();
-        this.renderer.setSize(this.viewport.width, this.viewport.height);
-    }
-
-    get viewport() {
-        const width = this.container.clientWidth;
-        const height = this.container.clientHeight;
-        const aspectRatio = width / height;
-
-        return {
-            width,
-            height,
-            aspectRatio
-        };
-    }
+const canvas = document.getElementById('glCanvas');
+const gl = canvas.getContext('webgl2');
+if (!gl) {
+    console.error('WebGL 2 not supported');
+    document.body.innerHTML = 'WebGL 2 is not supported in your browser.';
 }
 
-const scene = new THREEScene();
+const vertexShaderSource = `#version 300 es
+in vec4 aPosition;
+void main() {
+    gl_Position = aPosition;
+}`;
+
+const fragmentShaderSource = `#version 300 es
+precision highp float;
+
+uniform vec3 iResolution;
+uniform float iTime;
+uniform vec4 iMouse;
+out vec4 fragColor;
+
+/*--- BEGIN OF SHADERTOY ---*/
+
+vec4 getMainImage(vec2 I) {
+    float t = iTime, i = 0.0, z = 0.0, d, s;
+    vec4 O = vec4(0.0);  // <-- This line was missing
+
+    for(; i++ < 1e2; ) {
+        vec3 p = z * normalize(vec3(I + I, 0) - iResolution.xyy);
+        for(d = 5.; d < 2e2; d += d)
+            p += 0.6 * sin(p.yzx * d - 0.2 * t) / d;
+
+        z += d = 0.005 + max(s = 0.3 - abs(p.y), -s * 0.2) / 4.0;
+        O += (cos(s / 0.07 + p.x + 0.5 * t - vec4(3, 4, 5, 0)) + 1.5) * exp(s / 0.1) / d;
+    }
+
+    return tanh(O * O / 4e8);
+}
+
+vec4 getMainImage2(vec2 o) {
+    float i = 0.0, d = 0.0, s, t = iTime;
+    vec4 color = vec4(0.0);  // Output color (was missing)
+
+    for(; i++ < 1e2;) {
+        vec3 p = d * normalize(vec3(o + o, 0.0) - iResolution.xyy);
+        p.z -= t;
+
+        for(s = 0.1; s < 2.0;) {
+            p -= dot(cos(t + p * s * 16.0), vec3(0.01)) / s;
+            p += sin(p.yzx * 0.9) * 0.3;
+            s *= 1.42;
+        }
+
+        d += s = 0.02 + abs(3.0 - length(p.yx)) * 0.1;
+        color += (1.0 + cos(d + vec4(4, 2, 1, 0))) / s;
+    }
+
+    return tanh(color / 2000.0); 
+}
+
+ 
+/*--- END OF SHADERTOY ---*/
+
+void main() {
+    vec2 fragCoord = gl_FragCoord.xy;
+    vec4 img1 = getMainImage(fragCoord);
+    vec4 img2 = getMainImage2(fragCoord);
+
+    // Blend the two results (choose blend strength)
+    fragColor = mix(img1, img2, 0.3); 
+}
+`;
+
+function createShader(gl, type, source) {
+    const shader = gl.createShader(type);
+    gl.shaderSource(shader, source);
+    gl.compileShader(shader);
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+        console.error('Shader compile error:', gl.getShaderInfoLog(shader));
+        gl.deleteShader(shader);
+        return null;
+    }
+    return shader;
+}
+
+function createProgram(gl, vertexShader, fragmentShader) {
+    const program = gl.createProgram();
+    gl.attachShader(program, vertexShader);
+    gl.attachShader(program, fragmentShader);
+    gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+        console.error('Program link error:', gl.getProgramInfoLog(program));
+        gl.deleteProgram(program);
+        return null;
+    }
+    return program;
+}
+
+const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
+const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
+const program = createProgram(gl, vertexShader, fragmentShader);
+
+const positionAttributeLocation = gl.getAttribLocation(program, 'aPosition');
+const resolutionUniformLocation = gl.getUniformLocation(program, 'iResolution');
+const timeUniformLocation = gl.getUniformLocation(program, 'iTime');
+const mouseUniformLocation = gl.getUniformLocation(program, 'iMouse');
+
+const positionBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+
+gl.useProgram(program);
+
+gl.enableVertexAttribArray(positionAttributeLocation);
+gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
+
+let mouseX = 0, mouseY = 0;
+canvas.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = canvas.height - e.clientY;  // Flip Y coordinate
+});
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    gl.viewport(0, 0, canvas.width, canvas.height);
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();  // Call once to set initial size
+
+function render(time) {
+    gl.uniform3f(resolutionUniformLocation, gl.canvas.width, gl.canvas.height, 1.0);
+    gl.uniform1f(timeUniformLocation, time * 0.001);
+    gl.uniform4f(mouseUniformLocation, mouseX, mouseY, 0.0, 0.0);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+}
+
+requestAnimationFrame(render);
+
+// Fullscreen toggle functionality
+const fullscreenBtn = document.getElementById('fullscreenBtn');
+fullscreenBtn.addEventListener('click', toggleFullScreen);
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
 ```

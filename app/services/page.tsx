@@ -4,7 +4,7 @@
 import SectionServices from "@/components/section-services/section-services";
 import SectionContact from "@/components/section-contact/section-contact";
 import ImageParticles from "@/components/image-particles/image-particles";
-
+import RainbowHorizon from '@/components/rainbow-horizon/rainbow-horizon';
 
 export default function PageServices(){
     return (
@@ -12,7 +12,7 @@ export default function PageServices(){
 
             {/* <Hero title="LEISTUNGEN" /> */}
 
-            <ImageParticles
+            {/* <ImageParticles
                 src="/images/service-content.jpg"
                 alt=""
                 style={{ aspectRatio: "21/9", minHeight: "70svh" }}
@@ -20,7 +20,11 @@ export default function PageServices(){
                 <div className="flex h-full items-center justify-center">
                 <h1 className="font-mono text-white text-6xl sm:text-8xl font-bold uppercase">LEISTUNGEN</h1>
                 </div>
-            </ImageParticles>
+            </ImageParticles> */}
+
+            <div className="h-[100vh]">
+                <RainbowHorizon blend={0.3} speed={1} />
+            </div>
 
 
             {/* <div className="pt-[160px] pb-20 border-4 border-dashed border-red-500 relative">

@@ -122,7 +122,7 @@ export default function PageProjects() {
             <WorkThumb
               headingLevel="h2"
               href="/projects/mondent"
-              imageSrc="/images/case-mondent-1.png"
+              imageSrc="/images/case-mondent-1.webp"
               imageAlt="Mondent — Website und UX/UI für eine Zahnarztpraxis"
               imageWidth={560}
               imageHeight={560}
