@@ -1,13 +1,17 @@
+import { breadcrumbSchema } from "@/lib/schema";
+import type { Metadata } from "next";
+
 import PersonCard from "@/components/person-card/person-card";
 import SectionContact from "@/components/section-contact/section-contact";
 import SectionServices from "@/components/section-services/section-services";
 import TeamCarousel from "@/components/team-carousel/team-carousel";
-
-import SplineAgency2 from "@/components/spline-agency-2";
+// import SplineAgency2 from "@/components/spline-agency-2";
 import Hero from "@/components/hero";
 import CreatureBlob from "@/components/creature-blob";
-import type { Metadata } from "next";
-import { breadcrumbSchema } from "@/lib/schema";
+
+import NoiseOrb from '@/components/noise-orb';
+
+
 
 export const metadata: Metadata = {
   title: "Agentur",
@@ -61,7 +65,9 @@ export default function PageAgency() {
             </div>
 
             <div className="h-[380px] lg:h-auto">
-              <CreatureBlob />
+              {/* <CreatureBlob /> */}
+                <NoiseOrb background={false}  />                          
+                {/* or: speed={0.6} particleCount={30000} */}
             </div>
 
           </div>
@@ -107,6 +113,30 @@ export default function PageAgency() {
                 imageSrc="/images/team-3.webp"
                 name="Almaz"
                 role="IT-Spezialist"
+                // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              />
+              <PersonCard
+                imageSrc="/images/team-4.webp"
+                name="Lera"
+                role="Designer"
+                // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              />
+              <PersonCard
+                imageSrc="/images/team-5.webp"
+                name="Zhenya"
+                role="Der Videograf"
+                // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              />
+              <PersonCard
+                imageSrc="/images/team-6.webp"
+                name="Elena"
+                role="SEO-Spezialist"
+                // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              />
+              <PersonCard
+                imageSrc="/images/team-7.webp"
+                name="Lisaveta"
+                role="Instagram ads"
                 // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
               />
             </TeamCarousel>
