@@ -467,3 +467,18 @@ body {
     @apply font-sans;
     }
 } */
+
+
+
+
+.services-hero-gradient {
+    background: linear-gradient(transparent, #F4F4F4);
+ 
+    position: absolute; 
+    right: 0; 
+    bottom: 0; 
+    left: 0; 
+    height: 25%; 
+
+    display: block;
+}

@@ -22,8 +22,12 @@ export default function PageServices(){
                 </div>
             </ImageParticles> */}
 
-            <div className="h-[100vh]">
+            <div className="h-[100vh] relative">
                 <RainbowHorizon blend={0.3} speed={1} />
+                <div className="services-hero-gradient"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-center">
+                    <h1 className="text-8xl font-mono font-bold tracking-tight uppercase">Leistungen</h1>
+                </div>
             </div>
 
 
