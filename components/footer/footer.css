@@ -49,7 +49,7 @@
 
 .ftr-strands {
     position: absolute;
-    top: -80px;
+    top: -180px;
     left: 0;
     right: 0;
 
@@ -65,7 +65,7 @@
 
 @media (min-width: 64rem) {
     .ftr-strands {
-        top: -55%;
+        top: -65%;
         bottom: 0%;
         height: auto;
     }
