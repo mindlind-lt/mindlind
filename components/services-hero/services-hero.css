@@ -7,6 +7,40 @@
     /* One screen of pinned scroll (the height above the pane), then the pane
        leaves like any other section. */
     height: 200svh;
+
+    /* How much of the section below is pulled up into the end of the track. The
+       pane is a full screen tall and empty by the time it gets there, so
+       without this the horizon dissolves onto a blank screen and the reader
+       scrolls through it to reach anything. */
+    --services-hero-overlap: 45svh;
+    margin-bottom: calc(-1 * var(--services-hero-overlap));
+}
+
+/* Whatever follows the hero rises over the dissolving horizon instead of under
+   it. Both declarations are load-bearing: a sticky pane is a positioned element
+   and would otherwise paint on top of in-flow content, and the page background
+   keeps the last of the horizon from showing through the text. Written as a
+   sibling selector rather than a class on the page so that reordering the page
+   can't silently leave a section hidden behind the pane. */
+.services-hero + * {
+    position: relative;
+    z-index: 1;
+    background: var(--background);
+}
+
+/* An opaque sheet rising over a live shader cuts it with a hard horizontal
+   line. This carries the page background a little way up past the sheet's own
+   top edge, so the two meet in a fade — the same trick the hero plays on its
+   bottom edge, except this one travels with the content. It also does the
+   effect a favour: the horizon reads as being consumed from below as the
+   section climbs, rather than merely being covered up. */
+.services-hero + *::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 100% 0;
+    height: 20svh;
+    background: linear-gradient(transparent, var(--background));
+    pointer-events: none;
 }
 
 .services-hero__pane {
@@ -47,5 +81,13 @@
 @media (prefers-reduced-motion: reduce) {
     .services-hero {
         height: 100svh;
+        /* Nothing dissolves, so there is nothing to pull the next section over. */
+        --services-hero-overlap: 0px;
+    }
+
+    /* Sections meet at their own edges again; a fade hanging above one would
+       just be a grey band over the hero. */
+    .services-hero + *::before {
+        display: none;
     }
 }

@@ -20,11 +20,11 @@ const ZOOM = 3.4;
 
 // Window, in scroll progress, over which each layer leaves. The title goes
 // early — it is the near object, so it passes the camera first — while the
-// horizon holds almost to the end of the pin. Dissolving it any sooner leaves
-// the pane sitting empty on screen for the rest of the scroll; finishing at
-// ~1 means the light is gone exactly as the section below starts to rise.
+// horizon holds most of the pin. The end lands just short of 1 so the last of
+// the light is gone by the time the section below has climbed far enough to
+// read, rather than dissolving over content that is already on screen.
 const TITLE_FADE = [0.02, 0.38] as const;
-const FIELD_FADE = [0.45, 0.98] as const;
+const FIELD_FADE = [0.42, 0.92] as const;
 
 // How far the title is thrown toward the viewer before it is gone, and how much
 // it smears on the way out.
