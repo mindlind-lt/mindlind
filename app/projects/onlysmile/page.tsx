@@ -119,7 +119,7 @@ export default function PageCaseOnlysmile() {
           <div className="w-full lg:flex-1">
             <div className="flex items-center justify-center py-6 px-5 min-h-40 lg:py-10 lg:min-h-50">
               <Image
-                src="/images/case-onlyrooms-logo.avif"
+                src="/images/case-onlysmile-logo.avif"
                 alt=""
                 width={180}
                 height={60}

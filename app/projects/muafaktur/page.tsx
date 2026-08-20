@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Beauty-Marke als skalierbares digitales System: Produkte, Academy und Services als Teile einer größeren Markenwelt.",
     images: [
       {
-        url: "/images/case-mua-2.png",
+        url: "/images/case-mua-2.webp",
         alt: "MUA Faktur — Mindlind Werbeagentur",
       },
     ],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       "Beauty-Marke als skalierbares digitales System: Produkte, Academy und Services als Teile einer größeren Markenwelt.",
     images: [
       {
-        url: "/images/case-mua-2.png",
+        url: "/images/case-mua-2.webp",
         alt: "MUA Faktur — Mindlind Werbeagentur",
       },
     ],
@@ -67,7 +67,7 @@ export default function PageCaseMua() {
 
       {/* Hero */}
       <ParallaxImage
-        src="/images/case-mua-1.png"
+        src="/images/case-mua-1.webp"
         alt=""
         height="clamp(340px, 60vh, 750px)"
         strength={80}
@@ -159,7 +159,7 @@ export default function PageCaseMua() {
 
       <div className="container mx-auto px-5 py-10 lg:py-15">
         <ParallaxImage
-          src="/images/case-mua-2.png"
+          src="/images/case-mua-2.webp"
           height="clamp(300px, 50vh, 600px)"
           strength={80}
           className="w-full rounded-lg"
@@ -175,14 +175,14 @@ export default function PageCaseMua() {
       <div className="px-5 py-10 lg:px-8 lg:py-15">
         <div className="flex flex-col lg:flex-row gap-5">
           <Image
-            src="/images/case-mua-3.png"
+            src="/images/case-mua-3.webp"
             width={1000}
             height={600}
             alt=""
             className="w-full rounded-lg"
           />
           <Image
-            src="/images/case-mua-4.png"
+            src="/images/case-mua-4.webp"
             width={1000}
             height={600}
             alt=""
@@ -200,7 +200,7 @@ export default function PageCaseMua() {
 
       <div className="container mx-auto px-5 py-10 lg:py-15">
         <Image
-          src="/images/case-mua-5.png"
+          src="/images/case-mua-5.webp"
           width={1000}
           height={600}
           alt=""
@@ -257,9 +257,9 @@ export default function PageCaseMua() {
         <div className="container mx-auto px-5 py-12 lg:py-20">
           <ImageCarousel
             slides={[
-              { src: "/images/case-mua-3.png" },
-              { src: "/images/case-mua-4.png" },
-              { src: "/images/case-mua-5.png" },
+              { src: "/images/case-mua-3.webp" },
+              { src: "/images/case-mua-4.webp" },
+              { src: "/images/case-mua-5.webp" },
             ]}
           />
         </div>

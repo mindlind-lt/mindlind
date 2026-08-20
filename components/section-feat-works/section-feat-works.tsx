@@ -95,7 +95,7 @@ export default function SectionFeatWorks(){
               <div className="works-masonry-item">
                 <WorkThumb
                   href="/projects/muafaktur"
-                  imageSrc="/images/case-mua-2.png"
+                  imageSrc="/images/case-mua-2.webp"
                   imageAlt="MUA Faktur — Website und UX/UI für Beauty- und Make-up-Ausbildung"
                   imageWidth={560}
                   imageHeight={560}
