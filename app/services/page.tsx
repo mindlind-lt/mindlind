@@ -4,7 +4,7 @@
 import SectionServices from "@/components/section-services/section-services";
 import SectionContact from "@/components/section-contact/section-contact";
 import ImageParticles from "@/components/image-particles/image-particles";
-import RainbowHorizon from '@/components/rainbow-horizon/rainbow-horizon';
+import ServicesHero from '@/components/services-hero/services-hero';
 
 export default function PageServices(){
     return (
@@ -22,13 +22,8 @@ export default function PageServices(){
                 </div>
             </ImageParticles> */}
 
-            <div className="h-[100vh] relative">
-                <RainbowHorizon blend={0.3} speed={1} />
-                <div className="services-hero-gradient"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-center">
-                    <h1 className="text-8xl font-mono font-bold tracking-tight uppercase">Leistungen</h1>
-                </div>
-            </div>
+            {/* Hero section */}
+            <ServicesHero title="Leistungen" />
 
 
             {/* <div className="pt-[160px] pb-20 border-4 border-dashed border-red-500 relative">

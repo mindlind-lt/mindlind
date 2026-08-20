@@ -1,0 +1,51 @@
+/* Scroll-driven "fly through the horizon" hero.
+   The track is the scroll distance the effect is spread over; the pane is what
+   actually stays on screen while that distance is travelled. */
+
+.services-hero {
+    position: relative;
+    /* One screen of pinned scroll (the height above the pane), then the pane
+       leaves like any other section. */
+    height: 200svh;
+}
+
+.services-hero__pane {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    overflow: hidden;
+}
+
+/* Fades as a whole — the horizon and the gradient that blends it into the page
+   have to leave together, or the gradient is left as a seam over nothing. */
+.services-hero__field {
+    position: absolute;
+    inset: 0;
+}
+
+/* Scaled, not resized: a CSS transform is a compositor upscale of the frame the
+   shader already drew, so flying the horizon at the viewer costs no GPU time on
+   top of the effect itself. */
+.services-hero__zoom {
+    position: absolute;
+    inset: 0;
+    transform-origin: 50% 50%;
+    backface-visibility: hidden;
+}
+
+.services-hero__title {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform-origin: 50% 50%;
+}
+
+/* Nothing is pinned and nothing moves; the hero is one plain screenful. */
+@media (prefers-reduced-motion: reduce) {
+    .services-hero {
+        height: 100svh;
+    }
+}
