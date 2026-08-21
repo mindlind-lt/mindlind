@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Website für Panda Travel — digitale Präsenz für Geschäftsreisen, China-Sourcing und Logistiklösungen.",
     images: [
       {
-        url: "/images/case-pandatravel-1.png",
+        url: "/images/case-pandatravel-1.webp",
         alt: "Panda Travel — Mindlind Werbeagentur",
       },
     ],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       "Website für Panda Travel — digitale Präsenz für Geschäftsreisen, China-Sourcing und Logistiklösungen.",
     images: [
       {
-        url: "/images/case-pandatravel-1.png",
+        url: "/images/case-pandatravel-1.webp",
         alt: "Panda Travel — Mindlind Werbeagentur",
       },
     ],
@@ -46,7 +46,7 @@ export default function PageCasePandaTravel() {
 
       {/* Hero */}
       <ParallaxImage
-        src="/images/case-pandatravel-1.png"
+        src="/images/case-pandatravel-1.webp"
         height="clamp(340px, 60vh, 750px)"
         strength={80}
         className="w-full"
@@ -117,7 +117,7 @@ export default function PageCasePandaTravel() {
           <div className="w-full lg:flex-1">
             <div className="flex items-center justify-center py-6 px-5 min-h-40 lg:py-10 lg:min-h-50">
               <Image
-                src="/images/case-pandatravel-logo.png"
+                src="/images/case-pandatravel-logo.webp"
                 alt=""
                 width={150}
                 height={150}
@@ -142,7 +142,7 @@ export default function PageCasePandaTravel() {
 
       <div className="container mx-auto px-5 py-10 lg:py-15">
         <Image
-          src="/images/case-pandatravel-2.png"
+          src="/images/case-pandatravel-2.webp"
           width={1440}
           height={1440}
           alt=""
@@ -171,7 +171,7 @@ export default function PageCasePandaTravel() {
         <div className="flex flex-col lg:flex-row gap-5">
           <div>
             <Image
-              src="/images/case-pandatravel-3.png"
+              src="/images/case-pandatravel-3.webp"
               width={1000}
               height={600}
               alt=""
@@ -180,7 +180,7 @@ export default function PageCasePandaTravel() {
           </div>
           <div>
             <Image
-              src="/images/case-pandatravel-4.png"
+              src="/images/case-pandatravel-4.webp"
               width={1000}
               height={600}
               alt=""
@@ -202,7 +202,7 @@ export default function PageCasePandaTravel() {
 
       <div className="container mx-auto px-5 py-10 lg:py-15">
         <Image
-          src="/images/case-pandatravel-5.png"
+          src="/images/case-pandatravel-5.webp"
           width={1440}
           height={720}
           alt=""

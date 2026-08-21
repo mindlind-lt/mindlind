@@ -161,7 +161,7 @@ export default function PageProjects() {
             <WorkThumb
               headingLevel="h2"
               href="/projects/panda-travel"
-              imageSrc="/images/case-pandatravel-1.png"
+              imageSrc="/images/case-pandatravel-1.webp"
               imageAlt="Panda Travel — Website und UX/UI für Geschäftsreisen und China-Sourcing"
               imageWidth={560}
               imageHeight={560}
