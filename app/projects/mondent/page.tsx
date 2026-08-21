@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { ImageCarousel } from "@/components/ui/image-carousel";
 import { ParallaxImage } from "@/components/ui/parallax-image";
+import ImageParticles from "@/components/image-particles/image-particles";
 import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 
@@ -45,6 +46,13 @@ export default function PageCaseMondent() {
     <>
 
       {/* Hero */}
+      <ImageParticles
+        src="/images/case-mondent-3.webp"
+        alt=""
+        style={{ aspectRatio: "21/9", minHeight: "70svh" }}
+      />
+
+      {/* Original parallax hero, kept for reference
       <ParallaxImage
         src="/images/case-mondent-3.webp"
         alt=""
@@ -54,6 +62,7 @@ export default function PageCaseMondent() {
         preload
         className="w-full"
       />
+      */}
 
 
       {/* Data */}

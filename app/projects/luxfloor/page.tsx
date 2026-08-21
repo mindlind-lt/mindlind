@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { ImageCarousel } from "@/components/ui/image-carousel";
 import { ParallaxImage } from "@/components/ui/parallax-image";
+import ImageParticles from "@/components/image-particles/image-particles";
 import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 
@@ -45,12 +46,20 @@ export default function PageCaseLuxfloor() {
     <>
 
       {/* Hero */}
+      <ImageParticles
+        src="/images/case-luxfloor-1.webp"
+        alt=""
+        style={{ aspectRatio: "21/9", minHeight: "70svh" }}
+      />
+
+      {/* Original parallax hero, kept for reference
       <ParallaxImage
         src="/images/case-luxfloor-1.webp"
         height="clamp(340px, 60vh, 750px)"
         strength={80}
         className="w-full"
       />
+      */}
 
 
       {/* Data */}

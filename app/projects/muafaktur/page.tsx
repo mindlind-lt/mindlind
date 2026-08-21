@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { ImageCarousel } from "@/components/ui/image-carousel";
 import { ParallaxImage } from "@/components/ui/parallax-image";
+import ImageParticles from "@/components/image-particles/image-particles";
 import Image from "next/image";
 import DoorButton from "@/components/door-button/door-button";
 import type { Metadata } from "next";
@@ -66,6 +67,13 @@ export default function PageCaseMua() {
       />
 
       {/* Hero */}
+      <ImageParticles
+        src="/images/case-mua-1.webp"
+        alt=""
+        style={{ aspectRatio: "21/9", minHeight: "70svh" }}
+      />
+
+      {/* Original parallax hero, kept for reference
       <ParallaxImage
         src="/images/case-mua-1.webp"
         alt=""
@@ -74,6 +82,7 @@ export default function PageCaseMua() {
         preload
         className="w-full"
       />
+      */}
 
       <div className="container mx-auto px-5 py-10 lg:py-15">
 
