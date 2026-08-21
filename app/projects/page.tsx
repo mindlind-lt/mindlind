@@ -187,7 +187,7 @@ export default function PageProjects() {
             <WorkThumb
               headingLevel="h2"
               href="/projects/onlysmile"
-              imageSrc="/images/case-onlysmile-1.png"
+              imageSrc="/images/case-onlysmile-1.webp"
               imageAlt="OnlySmile — Website und UX/UI für professionelles Zahnbleaching"
               imageWidth={560}
               imageHeight={560}

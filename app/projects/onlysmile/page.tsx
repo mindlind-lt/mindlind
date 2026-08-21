@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Website für OnlySmile — Markenauftritt für professionelles Zahnbleaching und Dental Beauty.",
     images: [
       {
-        url: "/images/case-onlysmile-1.png",
+        url: "/images/case-onlysmile-1.webp",
         alt: "OnlySmile — Mindlind Werbeagentur",
       },
     ],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       "Website für OnlySmile — Markenauftritt für professionelles Zahnbleaching und Dental Beauty.",
     images: [
       {
-        url: "/images/case-onlysmile-1.png",
+        url: "/images/case-onlysmile-1.webp",
         alt: "OnlySmile — Mindlind Werbeagentur",
       },
     ],
@@ -46,7 +46,7 @@ export default function PageCaseOnlysmile() {
 
       {/* Hero */}
       <ParallaxImage
-        src="/images/case-onlysmile-2.png"
+        src="/images/case-onlysmile-2.webp"
         alt=""
         height="clamp(340px, 60vh, 750px)"
         strength={150}
@@ -144,7 +144,7 @@ export default function PageCaseOnlysmile() {
 
       <div className="container mx-auto px-5 py-10 lg:py-15">
         <Image
-          src="/images/case-onlysmile-3.png"
+          src="/images/case-onlysmile-3.webp"
           width={1440}
           height={1440}
           alt=""
@@ -173,7 +173,7 @@ export default function PageCaseOnlysmile() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <div>
             <Image
-              src="/images/case-onlysmile-1.png"
+              src="/images/case-onlysmile-1.webp"
               width={800}
               height={800}
               alt=""
@@ -182,7 +182,7 @@ export default function PageCaseOnlysmile() {
           </div>
           <div>
             <Image
-              src="/images/case-onlysmile-2.png"
+              src="/images/case-onlysmile-2.webp"
               width={800}
               height={800}
               alt=""
@@ -204,7 +204,7 @@ export default function PageCaseOnlysmile() {
 
       <div className="container mx-auto px-5 py-10 lg:py-15">
         <Image
-          src="/images/case-onlysmile-4.png"
+          src="/images/case-onlysmile-4.webp"
           width={1440}
           height={720}
           alt=""
