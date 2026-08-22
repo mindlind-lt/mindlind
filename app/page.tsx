@@ -42,11 +42,11 @@ export const metadata: Metadata = {
 
 
 const clientLogos1 = [
-  { src: "/images/client-1.png", alt: "", href: "#", width: 1536, height: 1024 },
-  { src: "/images/client-2.png", alt: "", href: "#", width: 1536, height: 1024 },
-  { src: "/images/client-3.png", alt: "", href: "#", width: 1536, height: 1024 },
-  { src: "/images/client-4.png", alt: "", href: "#", width: 1536, height: 1024 },
-  { src: "/images/client-5.png", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-1.webp", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-2.webp", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-3.webp", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-4.webp", alt: "", href: "#", width: 1536, height: 1024 },
+  { src: "/images/client-5.webp", alt: "", href: "#", width: 1536, height: 1024 },
   { src: "/images/client-6.png", alt: "", href: "#", width: 1536, height: 1024 },
 ];
 
