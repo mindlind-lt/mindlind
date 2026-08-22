@@ -28,7 +28,7 @@ export default function Header() {
 
       <Link className="hdr-logo" href="/">
         <Image 
-          src="/images/logo-full.png"
+          src="/images/logo-full.webp"
           alt="Mindlind"
           width={150}
           height={28}

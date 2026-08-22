@@ -62,7 +62,7 @@ export default function SectionContact() {
               </div>
               <div className="flex-1 sm:flex-[1.2]">
                 <Image
-                  src="/images/contact-head.png"
+                  src="/images/contact-head.webp"
                   width={240}
                   height={250}
                   className="w-full h-auto"

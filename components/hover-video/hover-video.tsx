@@ -11,7 +11,7 @@ import "./hover-video.css";
 interface HoverVideoProps {
   /** Path to the video file (e.g. "/videos/cta.mp4"). */
   src: string;
-  /** Cover image shown before playback (e.g. "/images/cta.jpg"). */
+  /** Cover image shown before playback (e.g. "/images/cta-poster.webp"). */
   poster: string;
   /** Destination for the "learn more" link. */
   href: string;
