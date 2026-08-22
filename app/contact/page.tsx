@@ -1,7 +1,6 @@
 import Hero from "@/components/hero";
 import ImageParticles from "@/components/image-particles/image-particles";
 import SectionContact from "@/components/section-contact/section-contact";
-import SplineContactHero from "@/components/spline-contact-hero";
 import type { Metadata } from "next";
 import { breadcrumbSchema } from "@/lib/schema";
 
