@@ -83,7 +83,7 @@ export default function SectionFeatWorks(){
               <div className="works-masonry-item">
                 <WorkThumb
                   href="/projects/princefood"
-                  imageSrc="/images/case-prince-food-2.jpg"
+                  imageSrc="/images/case-prince-food-2.webp"
                   imageAlt="Prince Food — Website und UX/UI für einen Tiefkühlkost-Hersteller"
                   imageWidth={1536}
                   imageHeight={1024}

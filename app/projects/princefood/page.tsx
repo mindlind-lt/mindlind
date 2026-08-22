@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       "Digitaler Auftritt für ein Produktionsunternehmen: Vertrauen schaffen, Prozesse sichtbar machen, industrielle Stärke verständlich kommunizieren.",
     images: [
       {
-        url: "/images/case-prince-food-2.jpg",
+        url: "/images/case-prince-food-2.webp",
         alt: "Prince Food — Mindlind Werbeagentur",
       },
     ],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       "Digitaler Auftritt für ein Produktionsunternehmen: Vertrauen schaffen, Prozesse sichtbar machen, industrielle Stärke verständlich kommunizieren.",
     images: [
       {
-        url: "/images/case-prince-food-2.jpg",
+        url: "/images/case-prince-food-2.webp",
         alt: "Prince Food — Mindlind Werbeagentur",
       },
     ],
@@ -68,14 +68,14 @@ export default function PageCasePrince() {
 
       {/* Hero */}
       <ImageParticles
-        src="/images/case-prince-food-1.jpg"
+        src="/images/case-prince-food-1.webp"
         alt=""
         style={{ aspectRatio: "21/9", minHeight: "70svh" }}
       />
 
       {/* Original parallax hero, kept for reference
       <ParallaxImage
-        src="/images/case-prince-food-1.jpg"
+        src="/images/case-prince-food-1.webp"
         alt=""
         height="clamp(340px, 60vh, 750px)"
         strength={80}
@@ -164,7 +164,7 @@ export default function PageCasePrince() {
 
       <div className="container mx-auto px-5 py-10 lg:py-15">
         <Image
-          src="/images/case-prince-food-2.jpg"
+          src="/images/case-prince-food-2.webp"
           width={1000}
           height={600}
           alt=""
@@ -184,14 +184,14 @@ export default function PageCasePrince() {
       <div className="px-5 py-10 lg:px-8 lg:py-15">
         <div className="flex flex-col lg:flex-row gap-5">
           <Image
-            src="/images/case-prince-food-3.jpg"
+            src="/images/case-prince-food-3.webp"
             width={1000}
             height={600}
             alt=""
             className="w-full rounded-lg"
           />
           <Image
-            src="/images/case-prince-food-4.jpg"
+            src="/images/case-prince-food-4.webp"
             width={1000}
             height={600}
             alt=""
@@ -211,7 +211,7 @@ export default function PageCasePrince() {
 
       <div className="container mx-auto px-5 py-10 lg:py-15">
         <Image
-          src="/images/case-prince-food-5.jpg"
+          src="/images/case-prince-food-5.webp"
           width={1000}
           height={600}
           alt=""
