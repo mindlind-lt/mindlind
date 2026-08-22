@@ -138,7 +138,7 @@ export default function Home() {
         >
 
           <div className="">
-            <SplineCubes className="w-[400px] h-[450px] xl:w-[500px] xl:h-[550px]" />
+            <SplineCubes className="w-100 h-112.5 xl:w-125 xl:h-137.5" />
           </div>
 
           <div className="flex-1 text-lg leading-[1.7] xl:pr-20">
