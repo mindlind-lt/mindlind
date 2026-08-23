@@ -223,7 +223,7 @@ export default function PageProjects() {
         zoom={false}
         tint=""
         highlight="#066aff"
-        backgroundImage="/images/project-factorysl-1.jpg"
+        backgroundImage="/images/project-factorysl-1.webp"
       >
       </GlassObject> */}
 

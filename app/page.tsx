@@ -174,7 +174,7 @@ export default function Home() {
             title="Web Design"
             label="Digitale Erlebnisse mit Klarheit und Charakter"
             text="Wir gestalten moderne Websites, die Ästhetik, Funktionalität und Benutzerfreundlichkeit vereinen. Durch durchdachte Strukturen und präzises Design entstehen digitale Erlebnisse, die Vertrauen schaffen und nachhaltig begeistern."
-            image="/images/service-web-design.jpg"
+            image="/images/service-web-design.webp"
           />
 
           <ServiceDropdown
@@ -182,7 +182,7 @@ export default function Home() {
             title="Branding"
             label="Markenidentitäten, die in Erinnerung bleiben"
             text="Wir entwickeln unverwechselbare Marken, die Strategie, Emotion und visuelle Klarheit miteinander verbinden. So entsteht ein konsistenter Auftritt, der Wiedererkennung schafft und langfristige Beziehungen zu Kunden aufbaut."
-            image="/images/service-branding.jpg"
+            image="/images/service-branding.webp"
           />
 
           <ServiceDropdown
@@ -190,7 +190,7 @@ export default function Home() {
             title="Content"
             label="Inhalte mit Bedeutung"
             text="Wir gestalten Inhalte, die Informationen in Erlebnisse verwandeln. Klar, präzise und auf Ihre Marke abgestimmt, damit jede Botschaft nachhaltig wirkt."
-            image="/images/service-content.jpg"
+            image="/images/service-content.webp"
           />
 
           <ServiceDropdown
@@ -198,7 +198,7 @@ export default function Home() {
             title="Mobile"
             label="Mobile Erlebnisse mit Leichtigkeit"
             text="Wir gestalten mobile Interfaces, die intuitiv, schnell und klar funktionieren. Jede Interaktion wird so aufgebaut, dass Inhalte mühelos erreichbar bleiben und digitale Produkte auf jedem Bildschirm hochwertig wirken."
-            image="/images/service-mobile.jpg"
+            image="/images/service-mobile.webp"
           />
 
         </div>

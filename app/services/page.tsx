@@ -13,7 +13,7 @@ export default function PageServices(){
             {/* <Hero title="LEISTUNGEN" /> */}
 
             {/* <ImageParticles
-                src="/images/service-content.jpg"
+                src="/images/service-content.webp"
                 alt=""
                 style={{ aspectRatio: "21/9", minHeight: "70svh" }}
             >
