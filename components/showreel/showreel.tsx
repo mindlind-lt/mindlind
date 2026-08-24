@@ -83,7 +83,7 @@ export default function Showreel() {
       {!isPlaying ? (
         <div className="showreel-poster">
           <Image
-            src="/images/showreel-poster.jpg"
+            src="/images/showreel-poster.webp"
             alt="Showreel"
             fill
             className="object-cover"
