@@ -205,7 +205,11 @@ export type ImageParticlesProps = {
     particleSize?: number;
     /** Overall opacity of the particle layer. */
     particleOpacity?: number;
-    /** How hard the noise field pushes the particles around. */
+    /**
+     * How hard the noise field pushes the particles around. The default keeps
+     * the drift gentle enough that the picture stays readable; 1 is the full
+     * dissolve.
+     */
     flow?: number;
     /** How strongly pointer momentum drags particles along. 0 disables it. */
     drag?: number;
@@ -302,9 +306,9 @@ export default function ImageParticles({
     alt = '',
     particles = 200_000,
     particleSize = 4,
-    particleOpacity = 0.5,
-    flow = 1,
-    drag = 1,
+    particleOpacity = 0.35,
+    flow = 0.45,
+    drag = 0.5,
     mouseRadius = 80,
     showImage = true,
     imageOpacity = 1,
