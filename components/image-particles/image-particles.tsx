@@ -307,7 +307,7 @@ export default function ImageParticles({
     particles = 200_000,
     particleSize = 4,
     particleOpacity = 0.35,
-    flow = 0.45,
+    flow = 0.25,
     drag = 0.5,
     mouseRadius = 80,
     showImage = true,
