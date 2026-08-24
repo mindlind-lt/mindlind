@@ -87,6 +87,8 @@
     justify-content: center;
     text-align: center;
     transform-origin: 50% 50%;
+    mix-blend-mode: overlay;
+      color: #04004d;
 }
 
 /* Nothing is pinned and nothing moves; the hero is one plain screenful. */
