@@ -105,7 +105,10 @@ void main() {
   float proximity = u_mouse_r2 / (dist2 + u_mouse_r2);
   vec2  mouseForce = u_mouse_velocity * proximity * 0.08 * u_drag;
 
-  velocity = velocity * 0.98 + noiseForce + mouseForce;
+  // Damping sets the terminal speed: a particle tops out at roughly
+  // force / (1 - damping) px per frame, so this is the main control over
+  // how far anything travels before it dies.
+  velocity = velocity * 0.93 + noiseForce + mouseForce;
   position = position + velocity;
 
   v_posvel   = vec4(position, velocity);
@@ -488,7 +491,7 @@ export default function ImageParticles({
             for (let i = 0; i < count; i++) {
                 const x = Math.random() * width;
                 const y = Math.random() * height;
-                const maxLife = 100 + Math.random() * 300;
+                const maxLife = 80 + Math.random() * 200;
 
                 posvel[i * 4] = x;
                 posvel[i * 4 + 1] = y;
