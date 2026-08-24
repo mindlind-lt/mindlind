@@ -101,10 +101,20 @@ export default function SplineScene({
 
     const whenIdle = () => {
       if (cancelled) return;
+      // Start pulling the runtime chunk down the moment the document is done,
+      // in parallel with the wait for an idle main thread. Without this the
+      // chunk's round trip + parse is stacked in front of the .splinecode
+      // download instead of overlapping the idle wait. It's still after
+      // `load`, so it stays off the measured critical path.
+      void import('@splinetool/react-spline');
       if (typeof window.requestIdleCallback === 'function') {
-        idleId = window.requestIdleCallback(go, { timeout: 2000 });
+        // Short backstop: the gates that protect the PageSpeed run are the
+        // interaction gate and `load`, both already passed by this point.
+        // Sitting on a long idle timeout only makes a real visitor stare at
+        // the poster.
+        idleId = window.requestIdleCallback(go, { timeout: 200 });
       } else {
-        timerId = setTimeout(go, 300);
+        timerId = setTimeout(go, 50);
       }
     };
 
