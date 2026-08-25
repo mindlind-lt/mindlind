@@ -1,276 +1,331 @@
 ```html
-<canvas id="glCanvas"></canvas>
+<h1 class="title">WebGL Kinetic Typography</h1>
+<canvas id="Canvas"></canvas>
 
-<div class="container">
-  <h1>Animated Shader: Rainbow Horizon</h1>
-  Lorem ipsum dolor sit amet, at labitur complectitur mei. Tota eloquentiam an sea, nostro electram mea et. Debitis accusata forensibus sed in, no omnium evertitur prodesset eam. Hendrerit torquatos deterruisset no per, eirmod equidem omnesque per ne. Vix appetere percipit cu.
-  <p><button id="fullscreenBtn">⤢ Toggle Fullscreen</button>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
+<a href="https://greensock.com"><img class="gsap-3-logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-3-logo.svg" width="150" /></a>
 ```
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-body, html {
+* {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: #001;
-}
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
 }
 
-#controls {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  z-index: 1;
-}
-button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 10px;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  &:hover {
-    background-color: #25902950;
-  }
-  &:active {
-    background-color: #00FFFFCC;
-  }
-}
-.btn {
-  background-color: rgba(0, 0, 0, 0.4);
-  border: none;
-  color: rgba(255, 255, 255, 0.4);
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 2rem;
-  margin: 2px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 0, 1);
-}
-#fullscreenBtn {
-  font-size: 20px;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 2rem;
-  position: absolute;
-  width: 100%;
-  font-family: "Roboto", sans-serif;
-  text-shadow: 0 0 5px #000, 0 0 10px #000;
+html {
+  background-color: #000;
+  font-family: 'Muli', sans-serif;
   color: #fff;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 50, 0.7))
-		drop-shadow(0 0 15px rgba(0, 0, 0, 0.5))
-		drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
-  z-index: 2;
 }
 
-/* Phone User */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.25rem;
-  }
-  .container {
-    font-size: 0.8rem;
-  }
-  .btn {
-    font-size: 0.8rem;
-  }
-  #fullscreenBtn {
-    font-size: 0.8rem;
-    padding: 8px 15px;
-  }
+.title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 32px;
+}
+
+#Canvas {
+  display: block;
+  position: absolute;
+  top: calc(50% - 270px);
+  left: calc(50% - 480px);
+  width: 960px;
+  height: 540px;
+  z-index: -1;
+/*   border: 1px solid #f00; */
+}
+
+.gsap-3-logo {
+  width: 20vw;
+  max-width: 150px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
 }
 ```
 
 ```js
-/*
-Rainbow Horizon
-*/
+// load webfont from Google Fonts
+WebFont.load({
+  google: {
+    families: ['Muli:600']
+  },
+  classes: false,
+  active: () => {
+    createCanvas()
+    updateCanvas()
+  }
+})
 
-const canvas = document.getElementById('glCanvas');
-const gl = canvas.getContext('webgl2');
-if (!gl) {
-    console.error('WebGL 2 not supported');
-    document.body.innerHTML = 'WebGL 2 is not supported in your browser.';
+// vertex shader
+const vertexShader = `
+uniform mat4 modelViewMatrix;
+uniform mat4 projectionMatrix;
+uniform float time;
+uniform float index;
+uniform float divisions;
+uniform float tOffsetX;
+uniform vec4 tween;
+attribute vec3 position;
+attribute vec2 uv;
+varying vec2 vUv;
+
+mat2 scale2D(vec2 scale) {
+return mat2(scale.x, 0.0, 0.0, scale.y);
 }
 
-const vertexShaderSource = `#version 300 es
-in vec4 aPosition;
 void main() {
-    gl_Position = aPosition;
-}`;
+vUv = uv;
+vec3 pos = position;
 
-const fragmentShaderSource = `#version 300 es
+float scaleX = tween.x;
+pos.x += tOffsetX;
+pos.xy *= scale2D(vec2(scaleX, 1.0));
+pos.x -= tOffsetX;
+
+gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+}
+`
+
+// fragment shader
+const fragmentShader = `
 precision highp float;
 
-uniform vec3 iResolution;
-uniform float iTime;
-uniform vec4 iMouse;
-out vec4 fragColor;
-
-/*--- BEGIN OF SHADERTOY ---*/
-
-vec4 getMainImage(vec2 I) {
-    float t = iTime, i = 0.0, z = 0.0, d, s;
-    vec4 O = vec4(0.0);  // <-- This line was missing
-
-    for(; i++ < 1e2; ) {
-        vec3 p = z * normalize(vec3(I + I, 0) - iResolution.xyy);
-        for(d = 5.; d < 2e2; d += d)
-            p += 0.6 * sin(p.yzx * d - 0.2 * t) / d;
-
-        z += d = 0.005 + max(s = 0.3 - abs(p.y), -s * 0.2) / 4.0;
-        O += (cos(s / 0.07 + p.x + 0.5 * t - vec4(3, 4, 5, 0)) + 1.5) * exp(s / 0.1) / d;
-    }
-
-    return tanh(O * O / 4e8);
-}
-
-vec4 getMainImage2(vec2 o) {
-    float i = 0.0, d = 0.0, s, t = iTime;
-    vec4 color = vec4(0.0);  // Output color (was missing)
-
-    for(; i++ < 1e2;) {
-        vec3 p = d * normalize(vec3(o + o, 0.0) - iResolution.xyy);
-        p.z -= t;
-
-        for(s = 0.1; s < 2.0;) {
-            p -= dot(cos(t + p * s * 16.0), vec3(0.01)) / s;
-            p += sin(p.yzx * 0.9) * 0.3;
-            s *= 1.42;
-        }
-
-        d += s = 0.02 + abs(3.0 - length(p.yx)) * 0.1;
-        color += (1.0 + cos(d + vec4(4, 2, 1, 0))) / s;
-    }
-
-    return tanh(color / 2000.0); 
-}
-
- 
-/*--- END OF SHADERTOY ---*/
+uniform sampler2D texture;
+uniform float time;
+uniform float index;
+uniform float divisions;
+uniform vec4 tween;
+varying vec2 vUv;
 
 void main() {
-    vec2 fragCoord = gl_FragCoord.xy;
-    vec4 img1 = getMainImage(fragCoord);
-    vec4 img2 = getMainImage2(fragCoord);
+vec2 uv = vUv;
+float startV = index * (1.0 / divisions);
+vec2 tuv = vec2(uv.x, startV + uv.y * (1.0 / divisions));
 
-    // Blend the two results (choose blend strength)
-    fragColor = mix(img1, img2, 0.3); 
+vec4 color = texture2D(texture, tuv);
+
+gl_FragColor = color;
+//gl_FragColor = vec4(vec3(tuv.y), 1.0);
 }
-`;
+`
 
-function createShader(gl, type, source) {
-    const shader = gl.createShader(type);
-    gl.shaderSource(shader, source);
-    gl.compileShader(shader);
-    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-        console.error('Shader compile error:', gl.getShaderInfoLog(shader));
-        gl.deleteShader(shader);
-        return null;
-    }
-    return shader;
+// general settings
+const width = 960
+const height = 540
+const aspectRatio = width / height
+const dpr = Math.min(window.devicePixelRatio, 2)
+const sceneWidth = 2
+const sceneHeight = sceneWidth / aspectRatio
+let scene, camera, renderer
+
+// title settings
+const titleWidth = 2.0
+const titleHeight = 0.5
+const numDivisions = 40
+const titleMeshes = []
+let numMeshes = 0
+
+// animation settings
+const tweens1 = [] // array of tweens for title1
+const tweens2 = [] // array of tweens for title2
+const tweens3 = [] // array of tweens for title3
+
+function createCanvas() {
+  scene = new THREE.Scene()
+
+  camera = new THREE.OrthographicCamera(
+    -sceneWidth / 2,
+    sceneWidth / 2,
+    sceneHeight / 2,
+    -sceneHeight / 2,
+    0.01,
+    1000
+  )
+  camera.position.set(0, 0, 1)
+
+  renderer = new THREE.WebGLRenderer({
+    antialias: true,
+    alpha: true,
+    canvas: document.getElementById('Canvas')
+  })
+  renderer.setSize(width, height)
+  renderer.setPixelRatio(dpr)
+
+  const texture1 = createFontTexture({
+    width: 1024,
+    height: 256,
+    fontSize: 230,
+    text: 'EXPLORE'
+  })
+
+  const texture2 = createFontTexture({
+    width: 1024,
+    height: 256,
+    fontSize: 230,
+    text: 'CREATE'
+  })
+
+  const texture3 = createFontTexture({
+    width: 1024,
+    height: 256,
+    fontSize: 230,
+    text: 'REPEAT'
+  })
+
+  createTitle({
+    texture: texture1,
+    tweens: tweens1,
+  })
+
+  createTitle({
+    texture: texture2,
+    tweens: tweens2,
+  })
+
+  createTitle({
+    texture: texture3,
+    tweens: tweens3,
+  })
+
+  numMeshes = titleMeshes.length
+
+  animateTitle()
 }
 
-function createProgram(gl, vertexShader, fragmentShader) {
-    const program = gl.createProgram();
-    gl.attachShader(program, vertexShader);
-    gl.attachShader(program, fragmentShader);
-    gl.linkProgram(program);
-    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-        console.error('Program link error:', gl.getProgramInfoLog(program));
-        gl.deleteProgram(program);
-        return null;
-    }
-    return program;
+function createFontTexture(options) {
+  const canvas = document.createElement('canvas')
+  const width = options.width * dpr
+  const height = options.height * dpr
+  canvas.width = width
+  canvas.height = height
+
+  const ctx = canvas.getContext('2d')
+
+  // ctx.fillStyle = 'rgba(255, 0, 0, 0.1)'
+  // ctx.fillRect(0, 0, width, height)
+
+  ctx.font = `600 ${options.fontSize * dpr}px 'Muli'`
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'middle'
+  ctx.fillStyle = '#fff'
+  ctx.fillText(options.text, width / 2, height / 2 + 25)
+
+  const texture = new THREE.CanvasTexture(canvas)
+  texture.minFilter = THREE.LinearFilter
+  texture.magFilter = THREE.LinearFilter
+  texture.format = THREE.RGBAFormat
+  texture.needsUpdate = false
+
+  return texture
 }
 
-const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
-const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
-const program = createProgram(gl, vertexShader, fragmentShader);
+function createTitle(params) {
+  for (let i = 0; i < numDivisions; i++) {
+    const dividedHeight = titleHeight / numDivisions
+    const geometry = new THREE.PlaneBufferGeometry(titleWidth, dividedHeight)
+    geometry.removeAttribute('normal')
 
-const positionAttributeLocation = gl.getAttribLocation(program, 'aPosition');
-const resolutionUniformLocation = gl.getUniformLocation(program, 'iResolution');
-const timeUniformLocation = gl.getUniformLocation(program, 'iTime');
-const mouseUniformLocation = gl.getUniformLocation(program, 'iMouse');
+    const material = new THREE.RawShaderMaterial({
+      uniforms: {
+        texture: { value: params.texture },
+        time: { value: 0 },
+        index: { value: i },
+        divisions: { value: numDivisions },
+        tOffsetX: { value: -1.0 },
+        tween: { value: new THREE.Vector4(0, 0, 1, 1) },
+      },
+      vertexShader,
+      fragmentShader,
+      transparent: true,
+    })
 
-const positionBuffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+    const y = -titleHeight * 0.5 + i * dividedHeight + dividedHeight * 0.5
 
-gl.useProgram(program);
+    const mesh = new THREE.Mesh(geometry, material)
+    mesh.position.y = y
 
-gl.enableVertexAttribArray(positionAttributeLocation);
-gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
-
-let mouseX = 0, mouseY = 0;
-canvas.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = canvas.height - e.clientY;  // Flip Y coordinate
-});
-
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    gl.viewport(0, 0, canvas.width, canvas.height);
-}
-
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();  // Call once to set initial size
-
-function render(time) {
-    gl.uniform3f(resolutionUniformLocation, gl.canvas.width, gl.canvas.height, 1.0);
-    gl.uniform1f(timeUniformLocation, time * 0.001);
-    gl.uniform4f(mouseUniformLocation, mouseX, mouseY, 0.0, 0.0);
-    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-    requestAnimationFrame(render);
-}
-
-requestAnimationFrame(render);
-
-// Fullscreen toggle functionality
-const fullscreenBtn = document.getElementById('fullscreenBtn');
-fullscreenBtn.addEventListener('click', toggleFullScreen);
-
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
+    scene.add(mesh)
+    titleMeshes.push(mesh)
+    params.tweens.push(material.uniforms.tween.value)
   }
 }
+
+function animateTitle() {
+  const tl = gsap.timeline({
+    repeat: -1,
+    defaults: {
+      ease: "power3.inOut",
+      duration: 0.8,
+      stagger: 0.01,
+    }
+  })
+
+  const setTransformOffset = (titleIndex, value) => {
+    const startIndex = titleIndex * numDivisions
+    const endIndex = startIndex + numDivisions
+    for (let i = startIndex; i < endIndex; i++) {
+      titleMeshes[i].material.uniforms.tOffsetX.value = value
+    }
+  }
+
+  tl.to(tweens1, {
+    x: 1.0,
+    onStart: () => {
+      setTransformOffset(0, -1.0)
+    }
+  }, 'start')
+  tl.to(tweens1, {
+    x: 0.0,
+    onStart: () => {
+      setTransformOffset(0, 1.0)
+    }
+  }, 'next1')
+
+  tl.to(tweens2, {
+    x: 1.0,
+    onStart: () => {
+      setTransformOffset(1, -1.0)
+    }
+  }, 'next1')
+  tl.to(tweens2, {
+    x: 0.0,
+    onStart: () => {
+      setTransformOffset(1, 1.0)
+    }
+  }, 'next2')
+
+  tl.to(tweens3, {
+    x: 1.0,
+    onStart: () => {
+      setTransformOffset(2, -1.0)
+    }
+  }, 'next2')
+  tl.to(tweens3, {
+    x: 0.0,
+    onStart: () => {
+      setTransformOffset(2, 1.0)
+    }
+  })
+}
+
+function updateCanvas() {
+  requestAnimationFrame(updateCanvas)
+
+  const time = performance.now() * 0.001
+  for (let i = 0; i < numMeshes; i++) {
+    const mesh = titleMeshes[i]
+    mesh.material.uniforms.time.value = time
+  }
+
+  renderer.render(scene, camera)
+}
 ```
+
+
+
+## External scripts
+* https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js
+* https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/EasePack3.min.js
+* https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js
+* https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js
