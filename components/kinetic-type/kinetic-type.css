@@ -1,0 +1,69 @@
+/* In Tailwind's `components` layer so utility classes on the container —
+   `min-h-[80svh]`, `text-white`, spacing — win over these defaults. Rules in
+   no layer at all would outrank every utility. */
+@layer components {
+  .kinetic-type {
+    position: relative;
+    width: 100%;
+    /* Sensible default so the canvas has something to size to. Override with an
+       inline style or your own class — the canvas follows the container. */
+    min-height: 40svh;
+    overflow: hidden;
+    /* The fallback text sizes off the container, not the viewport, so the
+       component keeps working inside a narrow column. */
+    container-type: inline-size;
+    /* The whole band reads as one painted surface: nothing in it is selectable,
+       and a text selection dragged across the page skips it. */
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .kinetic-type-canvas {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Real text, always in the DOM: it carries the words to screen readers and
+     crawlers, shows while the font and the first frame are still coming, and
+     stays as the permanent fallback when WebGL is unavailable. */
+  .kinetic-type-words {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    font-size: 11cqw;
+    line-height: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  /* All the words share one grid cell — only the first one is ever visible, the
+     rest are transparent but still read out, in order. */
+  .kinetic-type-words > span {
+    grid-area: 1 / 1;
+    text-align: center;
+  }
+
+  .kinetic-type-words > span:not(:first-child) {
+    opacity: 0;
+  }
+
+  .kinetic-type-ready .kinetic-type-words {
+    opacity: 0;
+  }
+
+  /* Real DOM — it stays in the accessibility tree and in the served HTML — but
+     inert to the pointer, so hover, clicks and drags fall through to the page
+     underneath exactly as they would over the bare canvas. */
+  .kinetic-type-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+}

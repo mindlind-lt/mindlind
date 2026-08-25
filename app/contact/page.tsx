@@ -1,5 +1,6 @@
 import Hero from "@/components/hero";
 import ImageParticles from "@/components/image-particles/image-particles";
+import KineticType from "@/components/kinetic-type/kinetic-type";
 import SectionContact from "@/components/section-contact/section-contact";
 import type { Metadata } from "next";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -40,7 +41,18 @@ export default function PageContact() {
         }}
       />
 
-      <ImageParticles
+      {/* Sits under the fixed header, hence the top margin — the canvas fills
+          the container edge to edge, so padding would not move it. */}
+      <KineticType
+        words={["KONTAKT", "CONTACT US", "WORK WITH US"]}
+        hold={2.2}
+        widthFraction={0.55}
+        heightFraction={0.3}
+        className="font-mono font-bold uppercase min-h-[55svh] md:min-h-[80svh]"
+        style={{ marginTop: "var(--hdr-height)" }}
+      />
+
+      {/* <ImageParticles
         src="/images/service-content.webp"
         alt=""
         style={{ aspectRatio: "21/9", minHeight: "70svh" }}
@@ -48,7 +60,7 @@ export default function PageContact() {
         <div className="flex h-full items-center justify-center">
           <h1 className="font-mono text-white text-6xl sm:text-8xl font-bold uppercase">Kontakt</h1>
         </div>
-      </ImageParticles>
+      </ImageParticles> */}
       
 
       <SectionContact />
