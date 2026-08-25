@@ -5,6 +5,8 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import PreloadResources from "@/components/preload-resources";
 import TopProgressBar from "@/components/progress-bar/top-progress-bar";
+import ConsentBanner from "@/components/consent/consent-banner";
+import GoogleAnalytics from "@/components/analytics/google-analytics";
 import { siteConfig } from "@/lib/site";
 import { organizationSchema } from "@/lib/schema";
 
@@ -83,6 +85,13 @@ export default function RootLayout({
         <main>{children}</main>
 
         <Footer />
+
+        {/* Both read the consent cookie in the browser after hydration, so
+            neither makes this layout dynamic under `cacheComponents`.
+            GoogleAnalytics renders nothing at all until NEXT_PUBLIC_GA_ID is
+            set AND the visitor has accepted the Statistik category. */}
+        <ConsentBanner />
+        <GoogleAnalytics />
 
       </body>
     </html>

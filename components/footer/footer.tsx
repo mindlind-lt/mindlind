@@ -1,6 +1,7 @@
 import CtaBox from '../cta-box/cta-box';
 import SocialsIcons from '../socials-icons/socials-icons';
 import FooterMenu from '../footer-menu/footer-menu';
+import ConsentSettingsLink from '../consent/consent-settings-link';
 import LoadingOrb from '../loading-orb/loading-orb';
 import Strands from '../strands/strands';
 import './footer.css';
@@ -70,6 +71,7 @@ export default function Footer(){
                             <div className='ftr-links'>
                                 <Link href="/impressum">Impressum</Link>
                                 <Link href="/datenschutz">Datenschutz</Link>
+                                <ConsentSettingsLink />
                             </div>
 
                         </div>

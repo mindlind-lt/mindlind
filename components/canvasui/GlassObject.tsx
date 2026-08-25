@@ -111,7 +111,13 @@ const DEFAULTS: Required<GlassObjectOptions> = {
   autoRotateSpeed: 2,
   fov: 55,
   cameraDistance: 4,
-  dracoDecoderPath: "https://www.gstatic.com/draco/versioned/decoders/1.5.7/",
+  // Self-hosted from `three/examples/jsm/libs/draco/gltf` (see public/draco).
+  // The upstream default is Google's CDN, which hands the visitor's IP to
+  // gstatic.com on every /projects view — a third-party transfer that would
+  // need consent and would leave the 3D model dark until the visitor gave it.
+  // Serving the decoder first-party removes the legal question entirely and
+  // saves a cross-origin handshake. Re-copy the folder when three is upgraded.
+  dracoDecoderPath: "/draco/gltf/",
   onLoad: null,
   onError: null,
 };

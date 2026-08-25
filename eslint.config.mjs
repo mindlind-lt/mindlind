@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Static assets served as-is. public/draco holds Draco's minified decoder
+    // (vendored from three), which is not ours to lint or fix.
+    "public/**",
   ]),
 ]);
 

@@ -89,15 +89,25 @@ export default function Showreel() {
             className="object-cover"
           />
           <div className="showreel-text">Showreel</div>
+
         </div>
       ) : (
         <div className="showreel-video">
-          <iframe
-            src="https://player.vimeo.com/video/76979871?autoplay=1&title=0&byline=0&portrait=0"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            title="Showreel"
+          {/* TEMPORARY placeholder reel — swap the src for the real showreel
+              export when it lands. Served from /public, so the showreel
+              involves no third party and needs no consent; keep it that way
+              when replacing the file.
+
+              Heads up for whoever swaps it: every clip currently in the repo
+              is portrait 4K (2160x3840) and this frame is locked to 16/9, so
+              `object-fit: cover` is showing a cropped horizontal band. A real
+              landscape export will fill it properly with no CSS change. */}
+          <video
+            src="/production/production-2.mp4"
+            poster="/images/showreel-poster.webp"
+            autoPlay
+            controls
+            playsInline
           />
         </div>
       )}

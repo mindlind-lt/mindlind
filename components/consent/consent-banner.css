@@ -1,0 +1,365 @@
+/* Bottom-left card rather than a full-screen overlay: a backdrop that blocks
+   the page is a cookie wall, and the Impressum has to stay reachable while
+   this is open. The 6px inset matches .ftr's gutter. */
+.consent {
+    /* easeOutQuint — the curve already used by .service-dropdown and the
+       team carousel, so the banner decelerates like the rest of the site. */
+    --consent-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --consent-ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+
+    position: fixed;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    z-index: 100;
+    outline: none;
+
+    /* Grow out of the corner it is anchored to. */
+    transform-origin: bottom center;
+
+    opacity: 1;
+    transform: none;
+    /* `display` is transitioned as a discrete property so the card is still
+       painted while it animates away, then removed from the a11y tree and the
+       tab order once it lands. Without allow-discrete the exit is invisible. */
+    transition:
+        opacity 380ms var(--consent-ease),
+        transform 520ms var(--consent-ease),
+        display 520ms allow-discrete;
+}
+
+.consent[data-open="false"] {
+    display: none;
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+    pointer-events: none;
+    /* Leaving is quicker than arriving: the visitor has already decided and is
+       waiting on the page, not on us. */
+    transition:
+        opacity 180ms ease-in,
+        transform 240ms ease-in,
+        display 240ms allow-discrete;
+}
+
+/* The state the card animates FROM the moment it is first displayed. */
+@starting-style {
+    .consent[data-open="true"] {
+        opacity: 0;
+        transform: translateY(28px) scale(0.96);
+    }
+}
+
+@media (min-width: 40rem) {
+    .consent {
+        transform-origin: bottom left;
+    }
+}
+
+@media (min-width: 40rem) {
+    .consent {
+        right: auto;
+        max-width: 480px;
+    }
+}
+
+.consent-card {
+    background-color: var(--foreground);
+    color: #fff;
+    border-radius: 18px;
+    padding: 24px;
+    /* The second layer can outgrow a short viewport once both categories are
+       expanded; keep the buttons reachable instead of pushing them off-screen. */
+    max-height: calc(100dvh - 12px);
+    overflow-y: auto;
+    box-shadow: 0 18px 50px rgb(0 0 0 / 0.28);
+}
+
+@media (min-width: 40rem) {
+    .consent-card {
+        padding: 28px;
+    }
+}
+
+/* Interior stagger. These are keyframes rather than transitions because
+   `display: none` resets a CSS animation, so each re-open replays them for
+   free — no JS, no state, no re-mount. Offsets stay small (10px) so the card
+   reads as one object settling, not four separate things flying in. */
+@keyframes consent-rise {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.consent[data-open="true"] .consent-title {
+    animation: consent-rise 460ms var(--consent-ease) 40ms both;
+}
+
+.consent[data-open="true"] .consent-intro {
+    animation: consent-rise 460ms var(--consent-ease) 90ms both;
+}
+
+.consent[data-open="true"] .consent-actions {
+    animation: consent-rise 460ms var(--consent-ease) 140ms both;
+}
+
+.consent[data-open="true"] .consent-links {
+    animation: consent-rise 460ms var(--consent-ease) 190ms both;
+}
+
+.consent-title {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+}
+
+.consent-intro {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+    color: rgb(255 255 255 / 0.75);
+}
+
+/* Height animation via grid-template-rows 0fr → 1fr. `height: auto` is not
+   an interpolable value, and the alternatives (interpolate-size / calc-size)
+   are not in Safari yet — this technique is supported everywhere and lets the
+   card size itself to whatever the copy actually measures. */
+.consent-details {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 460ms var(--consent-ease);
+}
+
+.consent-details[data-expanded="true"] {
+    grid-template-rows: 1fr;
+}
+
+.consent-details-clip {
+    overflow: hidden;
+    /* Without this the grid row refuses to shrink below its content height. */
+    min-height: 0;
+}
+
+.consent-categories {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.consent-category {
+    border-top: 1px solid rgb(255 255 255 / 0.12);
+    padding-top: 14px;
+
+    opacity: 0;
+    transform: translateY(6px);
+    transition:
+        opacity 300ms var(--consent-ease-soft),
+        transform 300ms var(--consent-ease-soft);
+}
+
+/* Rows arrive one after another, trailing the panel as it opens. --row is set
+   per row in the component. */
+.consent-details[data-expanded="true"] .consent-category {
+    opacity: 1;
+    transform: none;
+    transition-delay: calc(var(--row, 0) * 65ms + 120ms);
+}
+
+.consent-category-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.consent-category-title {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    letter-spacing: 0.02em;
+}
+
+label.consent-category-title {
+    cursor: pointer;
+}
+
+.consent-always {
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: rgb(255 255 255 / 0.45);
+}
+
+.consent-category-body {
+    font-size: 0.75rem;
+    line-height: 1.55;
+    color: rgb(255 255 255 / 0.6);
+}
+
+/* A real checkbox painted as a switch: keyboard operation, the checked state
+   and the label association all come for free, which a div-with-onClick would
+   have to reimplement badly. */
+.consent-switch {
+    appearance: none;
+    flex: none;
+    width: 40px;
+    height: 22px;
+    border-radius: 999px;
+    background-color: rgb(255 255 255 / 0.2);
+    position: relative;
+    cursor: pointer;
+    transition: background-color 260ms var(--consent-ease-soft);
+}
+
+.consent-switch::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    /* Slight overshoot on the way across — the detail that makes a toggle feel
+       physical rather than like a checkbox in disguise. */
+    transition:
+        transform 420ms cubic-bezier(0.34, 1.56, 0.64, 1),
+        scale 160ms ease;
+}
+
+/* `scale` as its own property so the press squish composes with the translate
+   above instead of fighting it for the transform slot. */
+.consent-switch:active::after {
+    scale: 0.86;
+}
+
+.consent-switch:checked {
+    background-color: var(--primary-500);
+}
+
+.consent-switch:checked::after {
+    transform: translateX(18px);
+}
+
+.consent-switch:focus-visible,
+.consent-btn:focus-visible,
+.consent-links a:focus-visible {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 2px;
+}
+
+.consent-actions {
+    margin-top: 20px;
+    display: grid;
+    gap: 8px;
+}
+
+@media (min-width: 30rem) {
+    .consent-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* The third button spans both columns so accept and reject always sit side
+       by side at identical width — equal prominence is the legal requirement,
+       not a style preference. */
+    .consent-actions .consent-btn-quiet {
+        grid-column: 1 / -1;
+    }
+}
+
+.consent-btn {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    padding: 12px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition:
+        transform 320ms var(--consent-ease),
+        box-shadow 320ms var(--consent-ease),
+        opacity 200ms ease,
+        background-color 200ms ease;
+}
+
+.consent-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.25);
+}
+
+/* Snap back fast on press — a slow depress feels laggy where a slow release
+   feels smooth. */
+.consent-btn:active {
+    transform: translateY(0) scale(0.975);
+    box-shadow: none;
+    transition-duration: 90ms;
+}
+
+.consent-btn-accept {
+    background-color: var(--primary-500);
+    color: var(--foreground);
+}
+
+/* Same size, same shape, same contrast class as accept. */
+.consent-btn-reject {
+    background-color: #fff;
+    color: var(--foreground);
+}
+
+.consent-btn-quiet {
+    background-color: transparent;
+    border-color: rgb(255 255 255 / 0.3);
+    color: #fff;
+}
+
+.consent-links {
+    margin-top: 16px;
+    display: flex;
+    gap: 20px;
+    font-size: 0.75rem;
+}
+
+.consent-links a {
+    color: rgb(255 255 255 / 0.6);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 200ms ease, text-underline-offset 200ms var(--consent-ease);
+}
+
+.consent-links a:hover {
+    color: #fff;
+    text-underline-offset: 5px;
+}
+
+/* Everything above is decoration. Honour the system setting and cut it all —
+   the dialog still opens, closes and expands, just instantly. */
+@media (prefers-reduced-motion: reduce) {
+    .consent,
+    .consent[data-open="false"],
+    .consent-details,
+    .consent-category,
+    .consent-switch,
+    .consent-switch::after,
+    .consent-btn,
+    .consent-links a {
+        transition-duration: 1ms;
+        transition-delay: 0ms;
+    }
+
+    .consent[data-open="true"] .consent-title,
+    .consent[data-open="true"] .consent-intro,
+    .consent[data-open="true"] .consent-actions,
+    .consent[data-open="true"] .consent-links {
+        animation: none;
+    }
+
+    .consent-btn:hover,
+    .consent-btn:active {
+        transform: none;
+    }
+}

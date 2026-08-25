@@ -6,6 +6,7 @@ import type { Application } from '@splinetool/runtime';
 import { cn } from '@/lib/utils';
 import { useRenderActive } from '@/lib/use-render-active';
 import { useFirstInteraction } from '@/lib/use-first-interaction';
+import { useConsentFor } from '@/lib/consent';
 
 const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false });
 
@@ -73,6 +74,16 @@ export default function SplineScene({
   // Nothing downloads until the visitor has actually done something.
   const interacted = useFirstInteraction();
 
+  // Scenes are fetched from prod.spline.design, so loading one transmits the
+  // visitor's IP to a third country. Until "Externe Medien" is accepted the
+  // scene stays unloaded and the `poster` below simply remains visible — every
+  // caller already passes one, so a declining visitor sees the still frame
+  // rather than an empty slot. No in-place "activate" button here on purpose:
+  // these scenes are decorative and several are pointer-events:none, so six
+  // little consent buttons scattered over the page would be noise. The banner
+  // and the footer link are the consent surface.
+  const mediaAllowed = useConsentFor('externalMedia');
+
   // Whether frames should actually be drawn (near viewport + tab visible).
   const { ref: activeRef, active } = useRenderActive<HTMLDivElement>();
 
@@ -82,14 +93,14 @@ export default function SplineScene({
   const liveActiveRef = useRef(active);
   liveActiveRef.current = active;
 
-  const shouldLoad = interacted && idle && nearViewport;
+  const shouldLoad = mediaAllowed && interacted && idle && nearViewport;
   const origin = sceneOrigin(scene);
 
   // Once the visitor engages, wait for the document to finish loading and then
   // for a gap in the main thread before pulling anything in. `timeout` is the
   // backstop for a page that never truly goes idle.
   useEffect(() => {
-    if (!interacted || idle) return;
+    if (!mediaAllowed || !interacted || idle) return;
 
     let cancelled = false;
     let idleId: number | undefined;
@@ -130,7 +141,7 @@ export default function SplineScene({
       if (idleId !== undefined) window.cancelIdleCallback?.(idleId);
       if (timerId !== undefined) clearTimeout(timerId);
     };
-  }, [interacted, idle]);
+  }, [mediaAllowed, interacted, idle]);
 
   // Proximity gating for below-the-fold scenes. Runs independently of the
   // interaction gate so a scene the visitor has already scrolled to starts the
@@ -185,7 +196,7 @@ export default function SplineScene({
           instead of stacking on top of the scene download. Rendered here
           rather than in <head> so it costs nothing on a run that never
           interacts; React hoists it. */}
-      {interacted && !loaded && origin && (
+      {mediaAllowed && interacted && !loaded && origin && (
         <link rel="preconnect" href={origin} crossOrigin="anonymous" />
       )}
       {poster && (

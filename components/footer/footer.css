@@ -78,9 +78,13 @@
     flex-wrap: wrap;
     gap: 16px;
 
-    a {
+    /* The consent link is a <button> — it opens a dialog rather than
+       navigating — but it belongs to this row visually, so it inherits the
+       same treatment as the two <a>s beside it. */
+    a, button {
         color: #ffffff8a;
         transition: 0.2s;
+        cursor: pointer;
         &:hover, &:focus {
             color: #ffffff;
         }

@@ -26,7 +26,7 @@ export default function PageImprint() {
     <LegalPage title="Impressum" path="/impressum">
       <section>
         <h2 className="font-mono text-xl uppercase mb-4">
-          Angaben gemäß § 5 TMG
+          Angaben gemäß § 5 DDG
         </h2>
         <p>
           Mindlind MB
