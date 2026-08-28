@@ -19,23 +19,24 @@ import { serviceSections, type ServiceSection } from "@/lib/services";
  */
 function ServicesSection({ section }: { section: ServiceSection }) {
     return (
-        <div className="pb-20 bg-background relative z-5">
+        <div className="pb-12 lg:pb-20 bg-background relative z-5">
             <div className="container mx-auto px-5">
 
                 <UnderlinedHeader>
                     <span>{section.number} /</span> {section.title}
                 </UnderlinedHeader>
 
-                <div className="grid grid-cols-2 py-12 gap-[120px]">
+                <div className="grid grid-cols-1 py-8 gap-10 lg:grid-cols-2 lg:py-12 lg:gap-[120px]">
 
                     {/* Grid items stretch to the row height by default, which leaves a
                         sticky child no room to travel. self-start shrinks the column to its
-                        content so it can actually stick. */}
-                    <div className="self-start sticky top-(--hdr-height)">
+                        content so it can actually stick. Stacked, there is no second column
+                        to scroll past it, so it only sticks once the grid splits. */}
+                    <div className="self-start lg:sticky lg:top-(--hdr-height)">
                         {/* AmbientVideo holds off on fetching until the clip is near the
                             viewport and pauses it once it leaves, so four portrait loops
                             don't all download during the initial page load. */}
-                        <div className="aspect-square overflow-hidden rounded-lg bg-gray-200">
+                        <div className="aspect-square overflow-hidden rounded-lg bg-gray-200 mx-auto w-full max-w-md lg:max-w-none">
                             <AmbientVideo
                                 src={section.video}
                                 poster={section.poster}
@@ -44,7 +45,7 @@ function ServicesSection({ section }: { section: ServiceSection }) {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-10">
+                    <div className="flex flex-col gap-8 lg:gap-10">
 
                         {section.groups.map((group, index) => (
                             <Fragment key={group.number}>
@@ -52,8 +53,8 @@ function ServicesSection({ section }: { section: ServiceSection }) {
                                 {/* Rules go between groups, not after the last one. */}
                                 {index > 0 && <Separator className="bg-black" />}
 
-                                <div className="text-2xl tracking-tight font-medium">
-                                    <h3 className="text-4xl mb-5">{group.title}</h3>
+                                <div className="text-xl lg:text-2xl tracking-tight font-medium">
+                                    <h3 className="text-3xl lg:text-4xl mb-3 lg:mb-5">{group.title}</h3>
                                     {group.items.map((item) => (
                                         <div key={item}>{item}</div>
                                     ))}
