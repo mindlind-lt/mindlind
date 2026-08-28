@@ -5,43 +5,72 @@ import SectionServices from "@/components/section-services/section-services";
 import SectionContact from "@/components/section-contact/section-contact";
 import ImageParticles from "@/components/image-particles/image-particles";
 import ServicesHero from '@/components/services-hero/services-hero';
+import UnderlinedHeader from '@/components/underlined-header/underlined-header';
+import { Fragment } from "react";
+
+import { Separator } from "@/components/ui/separator";
+import { serviceSections, type ServiceSection } from "@/lib/services";
+
+/**
+ * One numbered section: the header, a media column that stays put, and the
+ * groups of services scrolling past it.
+ */
+function ServicesSection({ section }: { section: ServiceSection }) {
+    return (
+        <div className="pb-20 bg-background relative z-5">
+            <div className="container mx-auto px-5">
+
+                <UnderlinedHeader>
+                    <span>{section.number} /</span> {section.title}
+                </UnderlinedHeader>
+
+                <div className="grid grid-cols-2 py-12 gap-20">
+
+                    {/* Grid items stretch to the row height by default, which leaves a
+                        sticky child no room to travel. self-start shrinks the column to its
+                        content so it can actually stick. */}
+                    <div className="self-start sticky top-[calc(var(--hdr-height)_+_2rem)]">
+                        <div className="bg-red-500">Image or video coming soon</div>
+                    </div>
+
+                    <div className="flex flex-col gap-10">
+
+                        {section.groups.map((group, index) => (
+                            <Fragment key={group.number}>
+
+                                {/* Rules go between groups, not after the last one. */}
+                                {index > 0 && <Separator className="bg-black" />}
+
+                                <div className="text-2xl tracking-tight font-medium">
+                                    <h3 className="text-5xl mb-5">
+                                        {group.number} / {group.title}
+                                    </h3>
+                                    {group.items.map((item) => (
+                                        <div key={item}>{item}</div>
+                                    ))}
+                                </div>
+
+                            </Fragment>
+                        ))}
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    );
+}
 
 export default function PageServices(){
     return (
         <>
 
-            {/* <Hero title="LEISTUNGEN" /> */}
-
-            {/* <ImageParticles
-                src="/images/service-content.webp"
-                alt=""
-                style={{ aspectRatio: "21/9", minHeight: "70svh" }}
-            >
-                <div className="flex h-full items-center justify-center">
-                <h1 className="font-mono text-white text-6xl sm:text-8xl font-bold uppercase">LEISTUNGEN</h1>
-                </div>
-            </ImageParticles> */}
-
-            {/* Hero section */}
             <ServicesHero title="Leistungen" />
 
-
-            {/* <div className="pt-[160px] pb-20 border-4 border-dashed border-red-500 relative">
-                <div className="container mx-auto px-5 relative z-10">
-                    <h1 className="text-[120px] tracking-tighter font-bold">Leistungen</h1>
-                    <div className="text-3xl mt-6">Unsere Lösungen werden individuell an Ziele, Branche und Wachstumstempo angepasst.</div>
-                </div>
-            </div> */}
-
-
-            <div className="py-20">
-                <div className="container mx-auto px-5">
-
-                    <SectionServices />
-
-                </div>
-            </div>
-
+            {serviceSections.map((section) => (
+                <ServicesSection key={section.number} section={section} />
+            ))}
 
             <SectionContact />
 
