@@ -8,6 +8,8 @@ import ServicesHero from '@/components/services-hero/services-hero';
 import UnderlinedHeader from '@/components/underlined-header/underlined-header';
 import { Fragment } from "react";
 
+import AmbientVideo from "@/components/ambient-video/ambient-video";
+
 import { Separator } from "@/components/ui/separator";
 import { serviceSections, type ServiceSection } from "@/lib/services";
 
@@ -24,13 +26,22 @@ function ServicesSection({ section }: { section: ServiceSection }) {
                     <span>{section.number} /</span> {section.title}
                 </UnderlinedHeader>
 
-                <div className="grid grid-cols-2 py-12 gap-20">
+                <div className="grid grid-cols-2 py-12 gap-[120px]">
 
                     {/* Grid items stretch to the row height by default, which leaves a
                         sticky child no room to travel. self-start shrinks the column to its
                         content so it can actually stick. */}
-                    <div className="self-start sticky top-[calc(var(--hdr-height)_+_2rem)]">
-                        <div className="bg-red-500">Image or video coming soon</div>
+                    <div className="self-start sticky top-(--hdr-height)">
+                        {/* AmbientVideo holds off on fetching until the clip is near the
+                            viewport and pauses it once it leaves, so four portrait loops
+                            don't all download during the initial page load. */}
+                        <div className="aspect-square overflow-hidden rounded-lg bg-gray-200">
+                            <AmbientVideo
+                                src={section.video}
+                                poster={section.poster}
+                                className="h-full w-full object-cover"
+                            />
+                        </div>
                     </div>
 
                     <div className="flex flex-col gap-10">
@@ -42,9 +53,7 @@ function ServicesSection({ section }: { section: ServiceSection }) {
                                 {index > 0 && <Separator className="bg-black" />}
 
                                 <div className="text-2xl tracking-tight font-medium">
-                                    <h3 className="text-5xl mb-5">
-                                        {group.number} / {group.title}
-                                    </h3>
+                                    <h3 className="text-4xl mb-5">{group.title}</h3>
                                     {group.items.map((item) => (
                                         <div key={item}>{item}</div>
                                     ))}

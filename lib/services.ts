@@ -1,15 +1,18 @@
 /**
- * The Leistungen page content: four sections, fourteen numbered groups, and
- * the individual services under each. Rendered by `app/services/page.tsx`.
+ * The Leistungen page content: four sections, fourteen groups, and the
+ * individual services under each. Rendered by `app/services/page.tsx`.
  *
- * Sections and groups keep their own display numbers rather than deriving them
- * from array position, so a group can be reordered or dropped without silently
- * renumbering everything after it — the numbers are part of the copy the
- * client signed off on.
+ * Only the section number is shown on the page, and it is stored rather than
+ * derived from array position so a section can be reordered without silently
+ * renumbering the others — it is part of the copy the client signed off on.
  */
 
 export type ServiceGroup = {
-    /** Two-digit label shown before the group title, e.g. "03". */
+    /**
+     * Position in the source document ("01"–"14"). Not rendered — the page
+     * numbers sections only — but kept as a stable key and so a group can be
+     * traced back to the client's list.
+     */
     number: string;
     title: string;
     items: readonly string[];
@@ -19,6 +22,10 @@ export type ServiceSection = {
     /** Two-digit label shown before the section title in the page header. */
     number: string;
     title: string;
+    /** Looping clip in the sticky column beside the section's groups. */
+    video: string;
+    /** First frame of `video`, held until the clip is fetched and playing. */
+    poster: string;
     groups: readonly ServiceGroup[];
 };
 
@@ -26,6 +33,8 @@ export const serviceSections: readonly ServiceSection[] = [
     {
         number: "01",
         title: "Strategie, Marke & Design",
+        video: "/services/services-01.mp4",
+        poster: "/images/services-01-poster.webp",
         groups: [
             {
                 number: "01",
@@ -124,6 +133,8 @@ export const serviceSections: readonly ServiceSection[] = [
     {
         number: "02",
         title: "Websites, Systeme & Development",
+        video: "/services/services-02.mp4",
+        poster: "/images/services-02-poster.webp",
         groups: [
             {
                 number: "05",
@@ -232,6 +243,8 @@ export const serviceSections: readonly ServiceSection[] = [
     {
         number: "03",
         title: "Sichtbarkeit, Marketing & Content",
+        video: "/services/services-03.mp4",
+        poster: "/images/services-03-poster.webp",
         groups: [
             {
                 number: "09",
@@ -334,6 +347,8 @@ export const serviceSections: readonly ServiceSection[] = [
     {
         number: "04",
         title: "AI, Motion & Automation",
+        video: "/services/services-04.mp4",
+        poster: "/images/services-04-poster.webp",
         groups: [
             {
                 number: "13",
