@@ -11,11 +11,11 @@
 export default function PreloadResources() {
   return (
     <>
-      {/* No preconnect to prod.spline.design here on purpose: Spline scenes now
-          wait for the visitor's first gesture (see lib/use-first-interaction),
-          so an eager preconnect would sit unused through the whole load — a
-          wasted handshake that Lighthouse flags. SplineScene opens the
-          connection itself the moment its gate unlocks. */}
+      {/* No hint for the Spline scenes on purpose. They are served from our own
+          origin now (public/scenes, see scripts/sync-spline-assets.mjs), so
+          there is no third-party handshake left to warm up — and preloading the
+          scenes themselves would defeat the point of gating them behind the
+          visitor's first gesture (see lib/use-first-interaction). */}
 
       {/* The homepage LCP element is the hero CTA video's poster frame. A
           `poster` attribute is only discovered once the parser reaches the

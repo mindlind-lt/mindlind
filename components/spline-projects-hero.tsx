@@ -1,12 +1,13 @@
 'use client';
 
 import SplineScene from './spline-scene';
+import { SPLINE_SCENES } from '@/lib/spline-scenes';
 
 export default function SplineProjectsHero() {
   return (
     <SplineScene
       eager
-      scene="https://prod.spline.design/zCxRO74obPaANH83/scene.splinecode"
+      scene={SPLINE_SCENES['projects-hero']}
     />
   );
 }

@@ -102,7 +102,7 @@ export default function PageCasePandaTravel() {
         </div>
 
         {/* <div className="mt-10 lg:mt-15">
-          <DoorButton className="w-full" href="https://lux-floor.de/" target="_blank">OPEN WEBSITE</DoorButton>
+          <DoorButton className="w-full" href="#">OPEN WEBSITE</DoorButton>
         </div> */}
 
       </div>

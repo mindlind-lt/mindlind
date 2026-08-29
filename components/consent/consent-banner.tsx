@@ -21,7 +21,7 @@ import './consent-banner.css';
  *  - "Alle ablehnen" sits on the FIRST layer, same size and same visual weight
  *    as "Alle akzeptieren". Burying reject one level down behind a grey text
  *    link is the single most-cited dark pattern in DSK decisions.
- *  - Nothing is pre-ticked; both optional categories start off.
+ *  - Nothing is pre-ticked; the optional category starts off.
  *  - No backdrop and no focus trap. A cookie wall is unlawful, and Impressum
  *    and Datenschutz have to stay reachable while the banner is open — so the
  *    banner is a card the visitor can simply ignore and scroll past, and the
@@ -43,21 +43,14 @@ const CATEGORIES: readonly CategoryCopy[] = [
     body:
       'Google Analytics 4 (Google Ireland Limited, Irland). Misst anonymisiert, welche Seiten aufgerufen werden, damit wir die Website verbessern können. Setzt Cookies auf Ihrem Endgerät und überträgt Daten an Google, auch in die USA.',
   },
-  {
-    id: 'externalMedia',
-    title: 'Externe Medien',
-    body:
-      'Interaktive 3D-Szenen von Spline (Spline, Inc., USA). Beim Laden der Szenen wird Ihre IP-Adresse an Spline übertragen. Ohne Ihre Einwilligung zeigen wir stattdessen ein Vorschaubild.',
-  },
 ];
 
 export default function ConsentBanner() {
   const { ready, decision, settingsOpen } = useConsent();
-  // Both default to off. Pre-ticked boxes are not consent (EuGH C-673/17,
+  // Defaults to off. Pre-ticked boxes are not consent (EuGH C-673/17,
   // "Planet49"), so this is the one initial value the component may have.
   const [choices, setChoices] = useState<ConsentChoices>({
     statistics: false,
-    externalMedia: false,
   });
   const [detailsShown, setDetailsShown] = useState(false);
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -78,7 +71,6 @@ export default function ConsentBanner() {
     if (settingsOpen) {
       setChoices({
         statistics: decision?.statistics === true,
-        externalMedia: decision?.externalMedia === true,
       });
     }
   }
@@ -123,7 +115,7 @@ export default function ConsentBanner() {
 
         <p id="consent-intro" className="consent-intro">
           Wir setzen technisch notwendige Cookies ein, damit diese Website
-          funktioniert. Statistik- und Mediendienste nutzen wir nur mit Ihrer
+          funktioniert. Statistik-Dienste nutzen wir nur mit Ihrer
           Einwilligung. Dabei können Daten an Anbieter in den USA übermittelt
           werden — mit „Alle akzeptieren“ willigen Sie zugleich gemäß Art. 49
           Abs. 1 lit. a DSGVO in diese Übermittlung ein. Sie können Ihre

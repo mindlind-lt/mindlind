@@ -129,7 +129,7 @@ export default function PageCaseAutosl() {
         </div>
 
         <div className="mt-10 lg:mt-15">
-          <DoorButton className="w-full" href="https://funky-coffee.de/" target="_blank">OPEN WEBSITE</DoorButton>
+          <DoorButton className="w-full" href="#">OPEN WEBSITE</DoorButton>{/* TODO: real client URL */}
         </div>
 
       </div>

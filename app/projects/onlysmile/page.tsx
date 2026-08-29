@@ -105,7 +105,7 @@ export default function PageCaseOnlysmile() {
         </div>
 
         {/* <div className="mt-10 lg:mt-15">
-          <DoorButton className="w-full" href="https://mondent.de/" target="_blank">OPEN WEBSITE</DoorButton>
+          <DoorButton className="w-full" href="#">OPEN WEBSITE</DoorButton>
         </div> */}
 
       </div>

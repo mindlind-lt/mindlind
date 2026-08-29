@@ -33,8 +33,17 @@ export const CONSENT_VERSION = 1;
  * "Notwendig" is not in this list on purpose: strictly necessary storage needs
  * no consent under § 25 Abs. 2 Nr. 2 TDDDG, so there is nothing to record and
  * nothing to toggle.
+ *
+ * `externalMedia` used to sit here for the Spline 3D scenes. The scenes are
+ * self-hosted now (see scripts/sync-spline-assets.mjs), so rendering one
+ * contacts nobody and there is nothing left to ask about. CONSENT_VERSION is
+ * deliberately NOT bumped for that removal: the services behind `statistics`
+ * did not change, so an existing decision about it stays valid, and a stored
+ * `externalMedia` flag is simply ignored on read. Re-prompting everyone would
+ * cost goodwill for no gain — dropping a recipient can only improve a
+ * visitor's position.
  */
-export const OPTIONAL_CATEGORIES = ['statistics', 'externalMedia'] as const;
+export const OPTIONAL_CATEGORIES = ['statistics'] as const;
 
 export type OptionalCategory = (typeof OPTIONAL_CATEGORIES)[number];
 
@@ -91,7 +100,6 @@ function readCookie(): ConsentDecision | null {
       v: CONSENT_VERSION,
       ts: typeof record.ts === 'string' ? record.ts : new Date().toISOString(),
       statistics: record.statistics === true,
-      externalMedia: record.externalMedia === true,
     };
   } catch {
     return null;
@@ -163,7 +171,6 @@ export function saveConsent(choices: ConsentChoices) {
     v: CONSENT_VERSION,
     ts: new Date().toISOString(),
     statistics: choices.statistics,
-    externalMedia: choices.externalMedia,
   };
 
   writeCookie(decision);
@@ -185,11 +192,11 @@ export function saveConsent(choices: ConsentChoices) {
 }
 
 export function acceptAll() {
-  saveConsent({ statistics: true, externalMedia: true });
+  saveConsent({ statistics: true });
 }
 
 export function rejectAll() {
-  saveConsent({ statistics: false, externalMedia: false });
+  saveConsent({ statistics: false });
 }
 
 export function openConsentSettings() {

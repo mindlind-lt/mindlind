@@ -57,13 +57,13 @@ export const metadata: Metadata = {
  *     Confirm in the Vercel dashboard; if not accepted, accept it or soften the
  *     sentence.
  *
- *  3. GOOGLE AVV + GA4 NOT LIVE (section 8) — NEXT_PUBLIC_GA_ID is unset, so
- *     nothing described in section 8 currently runs. Google's Data Processing
+ *  3. GOOGLE AVV + GA4 NOT LIVE (section 7) — NEXT_PUBLIC_GA_ID is unset, so
+ *     nothing described in section 7 currently runs. Google's Data Processing
  *     Terms are accepted when the GA property is created, which has not
- *     happened yet. Section 8 and the GA measurement ID must go live in the
+ *     happened yet. Section 7 and the GA measurement ID must go live in the
  *     same deploy.
  *
- *  4. GA4 IP WORDING (section 8) — "IP-Anonymisierung aktiviert" and "gekürzte
+ *  4. GA4 IP WORDING (section 7) — "IP-Anonymisierung aktiviert" and "gekürzte
  *     IP-Adresse" are Universal Analytics vocabulary. GA4 drops the full IP by
  *     design and the `anonymize_ip` parameter we pass is effectively a no-op.
  *     The claim is defensible but imprecise; a lawyer may want it reworded to
@@ -79,44 +79,36 @@ export const metadata: Metadata = {
  *     erforderlich" because Vercel's actual retention period is not documented
  *     anywhere reachable. A concrete number is better if you can obtain one.
  *
- *  7. ART. 49 ABS. 1 LIT. A AS A ROUTINE BASIS (sections 7 and 10) — consent
- *     is used as the transfer mechanism for Spline on every page view. The
- *     EDPB's position (Guidelines 2/2018) is that Art. 49 derogations must be
- *     occasional and non-repetitive, not the standing basis for an ongoing
- *     transfer. Widely used this way for consent-gated embeds, but contested.
- *     Self-hosting the .splinecode files would remove the transfer altogether
- *     and is the cleaner fix.
- *
- *  8. WHICH ePRIVACY LAW APPLIES — this page cites the German TDDDG throughout
+ *  7. WHICH ePRIVACY LAW APPLIES — this page cites the German TDDDG throughout
  *     because the site is German-language and targets Germany. The controller
  *     is established in Lithuania, and ePrivacy is implemented nationally, so
  *     Lithuanian law may govern instead. GDPR articles are unaffected either
  *     way. Worth a lawyer's opinion.
  *
- *  9. LEAD SUPERVISORY AUTHORITY (section 3) — VDAI is named on the assumption
+ *  8. LEAD SUPERVISORY AUTHORITY (section 3) — VDAI is named on the assumption
  *     that the main establishment is Lithuania. If the central administration
  *     is actually in Germany, the competent authority differs. VDAI's street
  *     address is deliberately omitted rather than risk printing a stale one.
  *
- * 10. VERTRETUNGSBERECHTIGTER (section 1) — "Georgy Cheplagin" was carried over
+ *  9. VERTRETUNGSBERECHTIGTER (section 1) — "Georgy Cheplagin" was carried over
  *     from the previous version of this file. It is NOT in the Impressum, which
  *     § 5 DDG requires for a legal entity. Confirm the name and add it there
  *     too (the Impressum is also missing a registration number and VAT ID).
  *
- * 11. RETENTION FOR ENQUIRIES (section 6) — refers to commercial and tax
+ * 10. RETENTION FOR ENQUIRIES (section 6) — refers to commercial and tax
  *     retention periods without naming a jurisdiction, since the controller is
  *     Lithuanian while the site targets Germany. Name the concrete periods once
  *     that is settled.
  *
- * 12. NO DPO SECTION — omitted rather than asserting a Datenschutzbeauftragter
+ * 11. NO DPO SECTION — omitted rather than asserting a Datenschutzbeauftragter
  *     exists or is unnecessary. Whether Art. 37 DSGVO / § 38 BDSG require one
  *     depends on headcount and processing activities. Add a section if needed.
  *
- * 13. SCOPE — the page names new.mindlind.de. Update when the redesign moves to
+ * 12. SCOPE — the page names new.mindlind.de. Update when the redesign moves to
  *     the apex domain, and note that the old WordPress site at mindlind.de is a
  *     separate service on different hosting with its own policy.
  *
- * 14. STAND — the date below is manual. Bump it whenever this page changes.
+ * 13. STAND — the date below is manual. Bump it whenever this page changes.
  * ---------------------------------------------------------------------------
  */
 
@@ -126,7 +118,7 @@ export default function PagePrivacy() {
   return (
     <LegalPage title="Datenschutz" path="/datenschutz">
       <section>
-        {/* UNVERIFIED #13 — scope is new.mindlind.de. Update on the move to the
+        {/* UNVERIFIED #12 — scope is new.mindlind.de. Update on the move to the
             apex domain; the old WordPress site at mindlind.de is separate. */}
         <p>
           Diese Datenschutzerklärung informiert Sie darüber, welche
@@ -145,7 +137,7 @@ export default function PagePrivacy() {
           Verantwortlich für die Datenverarbeitung auf dieser Website im Sinne
           von Art. 4 Nr. 7 DSGVO ist:
         </p>
-        {/* UNVERIFIED #10 — Vertretungsberechtigter carried over from the old file;
+        {/* UNVERIFIED #9 — Vertretungsberechtigter carried over from the old file;
             not present in the Impressum, where § 5 DDG requires it. */}
         <p className="mb-4">
           Mindlind MB
@@ -193,8 +185,9 @@ export default function PagePrivacy() {
           </li>
           <li>
             Ohne Ihre Einwilligung wird beim Aufruf dieser Seiten{" "}
-            <strong>kein Drittanbieter kontaktiert</strong>. Schriftarten und
-            alle Medien liefern wir von unserem eigenen Server aus.
+            <strong>kein Drittanbieter kontaktiert</strong>. Schriftarten,
+            Bilder, Videos und die interaktiven 3D-Szenen liefern wir von
+            unserem eigenen Server aus.
           </li>
           <li>
             Wir erstellen <strong>keine Nutzerprofile</strong>, betreiben kein
@@ -250,7 +243,7 @@ export default function PagePrivacy() {
             Widerruf erfolgten Verarbeitung bleibt unberührt.
           </li>
         </ul>
-        {/* UNVERIFIED #9 — VDAI assumes the main establishment is Lithuania.
+        {/* UNVERIFIED #8 — VDAI assumes the main establishment is Lithuania.
             Street address omitted on purpose. */}
         <p>
           Außerdem haben Sie das Recht, sich bei einer Datenschutz-
@@ -336,7 +329,7 @@ export default function PagePrivacy() {
         <h2 className="font-mono text-xl uppercase mb-4">
           5. Einwilligung und Cookies
         </h2>
-        {/* UNVERIFIED #8 — cites the German TDDDG; the controller is established in
+        {/* UNVERIFIED #7 — cites the German TDDDG; the controller is established in
             Lithuania, so national ePrivacy law may differ. */}
         <p className="mb-4">
           Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert
@@ -383,15 +376,11 @@ export default function PagePrivacy() {
         <p className="mb-4">
           Alle übrigen Dienste aktivieren wir erst, nachdem Sie im
           Einwilligungsbanner zugestimmt haben. Vorher werden sie weder
-          geladen noch kontaktiert. Wir unterscheiden zwei Kategorien:
+          geladen noch kontaktiert. Es gibt genau eine solche Kategorie:
         </p>
         <ul className="list-disc pl-5 space-y-2 mb-4">
           <li>
-            <strong>Statistik</strong> — Google Analytics 4 (Abschnitt 8)
-          </li>
-          <li>
-            <strong>Externe Medien</strong> — interaktive 3D-Szenen von Spline
-            (Abschnitt 7)
+            <strong>Statistik</strong> — Google Analytics 4 (Abschnitt 7)
           </li>
         </ul>
         <p className="mb-4">
@@ -462,7 +451,7 @@ export default function PagePrivacy() {
         </p>
 
         <h3 className="font-semibold mb-2">Speicherdauer</h3>
-        {/* UNVERIFIED #11 — no jurisdiction named for the retention periods. */}
+        {/* UNVERIFIED #10 — no jurisdiction named for the retention periods. */}
         <p>
           Wir löschen Ihre Anfrage, sobald sie abschließend bearbeitet ist und
           der Löschung keine gesetzlichen Aufbewahrungspflichten
@@ -475,59 +464,7 @@ export default function PagePrivacy() {
       {/* 7 */}
       <section>
         <h2 className="font-mono text-xl uppercase mb-4">
-          7. Externe Medien: Spline
-        </h2>
-        <p className="mb-4">
-          Auf einigen Seiten binden wir interaktive 3D-Szenen ein, die wir mit
-          Spline erstellt haben. Anbieter ist die Spline, Inc., 651 N Broad
-          St, Suite 206, Middletown, DE 19709, USA.
-        </p>
-        <p className="mb-4">
-          Diese Szenen werden von Servern des Anbieters in den USA geladen.
-          Dabei wird Ihre IP-Adresse an Spline übertragen; technisch ist die
-          Übertragung erforderlich, damit die Inhalte an Ihren Browser
-          ausgeliefert werden können. Wir haben keinen Einfluss darauf, ob und
-          in welchem Umfang Spline diese Daten darüber hinaus verarbeitet.
-        </p>
-        <p className="mb-4">
-          <strong>
-            Ohne Ihre Einwilligung werden die Szenen nicht geladen und es
-            findet keinerlei Verbindung zu Spline statt.
-          </strong>{" "}
-          Stattdessen zeigen wir an dieser Stelle ein Standbild, das von
-          unserem eigenen Server stammt. Die Website ist ohne diese Inhalte
-          uneingeschränkt nutzbar.
-        </p>
-        {/* UNVERIFIED #7 — Art. 49 Abs. 1 lit. a as a standing basis for a
-            per-page-view transfer is contested (EDPB Guidelines 2/2018).
-            Self-hosting the .splinecode files would remove the transfer. */}
-        <p>
-          Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a
-          DSGVO und § 25 Abs. 1 TDDDG. Da für die USA kein
-          Angemessenheitsbeschluss vorliegt, der diesen Anbieter erfasst,
-          willigen Sie mit der Aktivierung zugleich nach Art. 49 Abs. 1 lit. a
-          DSGVO in die Übermittlung Ihrer Daten in die USA ein. Mögliche
-          Risiken bestehen darin, dass US-Behörden unter Umständen auf diese
-          Daten zugreifen können und Ihnen dagegen kein mit der EU
-          vergleichbarer Rechtsschutz zur Verfügung steht. Ihre Einwilligung
-          ist jederzeit widerrufbar (Abschnitt 5). Weitere Informationen finden
-          Sie in der{" "}
-          <a
-            href="https://spline.design/privacy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            Datenschutzerklärung von Spline
-          </a>
-          .
-        </p>
-      </section>
-
-      {/* 8 */}
-      <section>
-        <h2 className="font-mono text-xl uppercase mb-4">
-          8. Webanalyse: Google Analytics 4
+          7. Webanalyse: Google Analytics 4
         </h2>
         {/* UNVERIFIED #3 — GA4 is not live yet (NEXT_PUBLIC_GA_ID unset). This
             section and the measurement ID must ship in the same deploy. */}
@@ -567,8 +504,10 @@ export default function PagePrivacy() {
           Auftragsverarbeitung nach Art. 28 DSGVO. Eine Übermittlung an die
           Google LLC in den USA kann nicht ausgeschlossen werden; die Google
           LLC ist nach dem EU-U.S. Data Privacy Framework zertifiziert,
-          ergänzend gelten Standardvertragsklauseln. Auch hier gilt der
-          Hinweis auf mögliche behördliche Zugriffe aus Abschnitt 7.
+          ergänzend gelten Standardvertragsklauseln. Mögliche Risiken einer
+          solchen Übermittlung bestehen darin, dass US-Behörden unter
+          Umständen auf diese Daten zugreifen können und Ihnen dagegen kein
+          mit der EU vergleichbarer Rechtsschutz zur Verfügung steht.
         </p>
         <p>
           Ihre Einwilligung können Sie jederzeit widerrufen (Abschnitt 5);
@@ -587,26 +526,33 @@ export default function PagePrivacy() {
         </p>
       </section>
 
-      {/* 9 */}
+      {/* 8 */}
       <section>
         <h2 className="font-mono text-xl uppercase mb-4">
-          9. Schriftarten, Bilder und Videos
+          8. Schriftarten, Bilder und Videos
         </h2>
+        <p className="mb-4">
+          Sämtliche Schriftarten, Bilder, Videos und interaktiven 3D-Szenen
+          dieser Website liefern wir von unserem eigenen Server aus. Es werden
+          insbesondere <strong>keine Google Fonts</strong> und keine anderen
+          externen Schriftarten-, Bild- oder Video-Dienste zur Laufzeit
+          nachgeladen. Beim Aufruf dieser Seiten wird deshalb keine Verbindung
+          zu Google oder einem anderen Drittanbieter hergestellt und Ihre
+          IP-Adresse nicht an solche Anbieter übermittelt.
+        </p>
         <p>
-          Sämtliche Schriftarten, Bilder und Videos dieser Website liefern wir
-          von unserem eigenen Server aus. Es werden insbesondere{" "}
-          <strong>keine Google Fonts</strong> und keine anderen externen
-          Schriftarten-, Bild- oder Video-Dienste zur Laufzeit nachgeladen.
-          Beim Aufruf dieser Seiten wird deshalb keine Verbindung zu Google
-          oder einem anderen Drittanbieter hergestellt und Ihre IP-Adresse
-          nicht an solche Anbieter übermittelt.
+          Das gilt ausdrücklich auch für die 3D-Szenen: Sie wurden mit der
+          Software Spline erstellt, werden aber als Datei auf unserem eigenen
+          Server vorgehalten und von dort ausgeliefert. Eine Verbindung zu
+          Servern von Spline findet beim Besuch dieser Website zu keinem
+          Zeitpunkt statt.
         </p>
       </section>
 
-      {/* 10 */}
+      {/* 9 */}
       <section>
         <h2 className="font-mono text-xl uppercase mb-4">
-          10. Empfänger und Übermittlung in Drittländer
+          9. Empfänger und Übermittlung in Drittländer
         </h2>
         <p className="mb-4">
           Personenbezogene Daten geben wir nur weiter, soweit dies für die
@@ -620,8 +566,8 @@ export default function PagePrivacy() {
             (Abschnitt 6),
           </li>
           <li>
-            die in den Abschnitten 7 und 8 genannten Anbieter — und diese nur,
-            wenn Sie eingewilligt haben.
+            der in Abschnitt 7 genannte Anbieter — und dieser nur, wenn Sie
+            eingewilligt haben.
           </li>
         </ul>
         <p>
@@ -634,10 +580,10 @@ export default function PagePrivacy() {
         </p>
       </section>
 
-      {/* 11 */}
+      {/* 10 */}
       <section>
         <h2 className="font-mono text-xl uppercase mb-4">
-          11. Datensicherheit
+          10. Datensicherheit
         </h2>
         <p>
           Diese Website nutzt aus Sicherheitsgründen eine
@@ -649,10 +595,10 @@ export default function PagePrivacy() {
         </p>
       </section>
 
-      {/* 12 */}
+      {/* 11 */}
       <section>
         <h2 className="font-mono text-xl uppercase mb-4">
-          12. Änderungen dieser Datenschutzerklärung
+          11. Änderungen dieser Datenschutzerklärung
         </h2>
         <p>
           Wir passen diese Datenschutzerklärung an, sobald sich die
@@ -661,7 +607,7 @@ export default function PagePrivacy() {
           für die wir eine Einwilligung benötigen, fragen wir Ihre
           Einwilligung erneut ab.
         </p>
-        {/* UNVERIFIED #14 — manual date; bump it whenever this page changes. */}
+        {/* UNVERIFIED #13 — manual date; bump it whenever this page changes. */}
         <p className="mt-4 text-sm text-gray-500">Stand: {STAND}</p>
       </section>
     </LegalPage>

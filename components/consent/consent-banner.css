@@ -67,7 +67,7 @@
     color: #fff;
     border-radius: 18px;
     padding: 24px;
-    /* The second layer can outgrow a short viewport once both categories are
+    /* The second layer can outgrow a short viewport once the categories are
        expanded; keep the buttons reachable instead of pushing them off-screen. */
     max-height: calc(100dvh - 12px);
     overflow-y: auto;
