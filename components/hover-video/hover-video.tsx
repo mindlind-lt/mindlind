@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Play, X } from "lucide-react";
 
+import { lockPageScroll } from "@/lib/smooth-scroll";
+
 import "./hover-video.css";
 
 interface HoverVideoProps {
@@ -188,12 +190,11 @@ export default function HoverVideo({
       if (event.key === "Escape") closeLightbox();
     };
 
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    const unlockScroll = lockPageScroll();
     window.addEventListener("keydown", onKey);
 
     return () => {
-      document.body.style.overflow = previousOverflow;
+      unlockScroll();
       window.removeEventListener("keydown", onKey);
     };
   }, [lightboxOpen, closeLightbox]);

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "@/components/progress-bar/progress-link";
+import { lockPageScroll } from "@/lib/smooth-scroll";
 
 export default function Burger() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,12 +49,11 @@ export default function Burger() {
       if (event.key === "Escape") setIsOpen(false);
     };
 
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    const unlockScroll = lockPageScroll();
     window.addEventListener("keydown", onKeyDown);
 
     return () => {
-      document.body.style.overflow = previousOverflow;
+      unlockScroll();
       window.removeEventListener("keydown", onKeyDown);
 
       // Only reclaim focus if it's still inside the drawer (or was dropped to

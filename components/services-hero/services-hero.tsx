@@ -34,11 +34,15 @@ const FIELD_FADE = [0.34, 0.85] as const;
 const TITLE_ZOOM = 0.85;
 const TITLE_BLUR = 14;
 
-// Time constant of the follow, in ms. Wheel and trackpad scrolls arrive in
-// coarse jumps; easing toward the scroll position instead of snapping to it is
-// the difference between a slideshow and a camera move. Large enough to smooth
-// a notched wheel, small enough that the horizon never feels detached from it.
-const TAU_FINE = 110;
+// Time constant of the follow, in ms. This used to carry all of the smoothing
+// — wheel and trackpad scrolls arrive in coarse jumps, and easing toward the
+// scroll position instead of snapping to it is the difference between a
+// slideshow and a camera move. <SmoothScroll /> now eases the page position
+// itself, so the jumps are gone before they get here and the old 110ms only
+// stacks a second lag on top of the first, leaving the horizon visibly trailing
+// the page. What is left absorbs the frame of latency between Lenis writing the
+// scroll position and this effect reading it back.
+const TAU_FINE = 40;
 
 // A touch scroll is already pixel-continuous and the finger is on the content,
 // so the same damping stops reading as smoothing and starts reading as lag —
