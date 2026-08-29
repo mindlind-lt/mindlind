@@ -77,7 +77,6 @@ const SCENES = [
   { slug: "agency-2", id: "kxUSZ5qeo7bMShUO", note: "agency page" },
   { slug: "cubes", id: "pTGhXiLspT3Mjuvr", note: "services" },
   { slug: "projects-hero", id: "zCxRO74obPaANH83", note: "projects hero" },
-  { slug: "contact-hero", id: "OQED0R2V1xBSvF36", note: "contact hero" },
   { slug: "torus", id: "o7n-fvcgPIbHv08W", note: "decorative torus" },
 ];
 

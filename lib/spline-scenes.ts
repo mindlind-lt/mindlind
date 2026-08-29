@@ -14,8 +14,6 @@ export const SPLINE_SCENES = {
   'cubes': '/scenes/cubes-111cea77.splinecode',
   /** projects hero */
   'projects-hero': '/scenes/projects-hero-95df70fa.splinecode',
-  /** contact hero */
-  'contact-hero': '/scenes/contact-hero-dc4a0fbc.splinecode',
   /** decorative torus */
   'torus': '/scenes/torus-86fa248d.splinecode',
 } as const;
