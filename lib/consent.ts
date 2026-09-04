@@ -5,13 +5,12 @@ import { useSyncExternalStore } from 'react';
 /**
  * Consent state for § 25 TDDDG (ex-TTDSG) and Art. 6 Abs. 1 lit. a DSGVO.
  *
- * Everything here is deliberately client-side. Reading the cookie on the
- * server (`cookies()` from next/headers) opts the route out of the static
- * prerender under `cacheComponents: true` — the documented fix is a
- * <Suspense> boundary that streams the dynamic part at request time, which for
- * a purely presentational banner buys nothing and costs the whole site its
- * static shell. So the cookie is read in the browser after hydration and
- * nothing consent-dependent is ever server-rendered.
+ * Everything here is deliberately client-side. The site ships as a static
+ * export (`output: "export"` in next.config.ts), so there is no request-time
+ * server: `cookies()` from next/headers is not available at all, and every
+ * page is one prerendered HTML file shared by every visitor. The cookie is
+ * read in the browser after hydration and nothing consent-dependent is ever
+ * server-rendered.
  *
  * The store is a module-level singleton in the same shape as
  * lib/use-first-interaction.ts: one source of truth shared by the banner, the

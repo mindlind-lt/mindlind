@@ -1,86 +1,37 @@
 import type { NextConfig } from "next";
 
+/**
+ * STATIC EXPORT
+ *
+ * `next build` writes a self-contained site to `out/` — HTML, CSS, JS and
+ * everything from public/ — which is what gets uploaded to the shared host.
+ * There is no Node process in production, so nothing here can run at request
+ * time. The consequences, all of them deliberate:
+ *
+ *  - `cacheComponents` is OFF. It implies PPR, and PPR cannot be enabled in
+ *    export mode ("Invariant: PPR cannot be enabled in export mode"). With
+ *    every route prerendered at build time there is no dynamic half for PPR to
+ *    stream anyway. It also means no `use cache` directive: the generated
+ *    routes use `export const dynamic = "force-static"` instead (app/sitemap.ts,
+ *    app/robots.ts, app/llms.txt/route.ts, app/opengraph-image.tsx).
+ *  - `images.unoptimized` is required: /_next/image is a server endpoint. Every
+ *    <Image> now serves the original file from public/, so keep source images
+ *    reasonably sized.
+ *  - `headers()` is gone. Static hosts serve headers from their own config —
+ *    ours live in `public/.htaccess`, which Apache/LiteSpeed (what shared
+ *    hosting almost always runs) reads from the uploaded directory. That file
+ *    is the direct translation of the headers this block used to return, and
+ *    it is NOT optional: the Spline scenes are brotli streams on disk and are
+ *    unreadable without the Content-Encoding it sets.
+ *
+ * Also unavailable, none of which this site uses: redirects/rewrites, proxy,
+ * ISR, server actions, cookies()/headers(), and route handlers that read the
+ * request.
+ */
 const nextConfig: NextConfig = {
-  cacheComponents: true,
+  output: "export",
   images: {
-    formats: ["image/avif", "image/webp"],
-  },
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-        ],
-      },
-
-      // Self-hosted Spline scenes. The files in public/scenes are brotli
-      // streams on disk, written by `npm run sync:spline`; these headers are
-      // what make them readable.
-      //
-      // Content-Type matters as much as the encoding: .splinecode resolves to
-      // application/octet-stream, which neither Next's compression middleware
-      // nor Vercel's edge will compress — so a scene dropped into public/
-      // naively would ship the same uncompressed 10 MB Spline's own CDN does.
-      // Pre-compressing here sidesteps that entirely and gets brotli quality
-      // 11 rather than whatever an on-the-fly compressor picks. The type we
-      // declare is the one Spline's CDN declares for the same bytes.
-      //
-      // Serving br unconditionally is safe against this project's browser
-      // baseline (Chrome 111+, Safari 16.4+ — see the turbopack note below);
-      // every browser in it accepts brotli over https.
-      //
-      // Verify after deploy:
-      //   curl -sI https://new.mindlind.de/scenes/<file>.splinecode
-      // If Vercel ever strips Content-Encoding, drop the pre-compression from
-      // the sync script and keep the Content-Type line — the type alone is
-      // enough for the edge to compress it.
-      {
-        source: "/scenes/:file+",
-        headers: [
-          { key: "Content-Type", value: "application/json" },
-          { key: "Content-Encoding", value: "br" },
-          { key: "Vary", value: "Accept-Encoding" },
-          // Filenames carry a content hash, so a changed scene is a changed URL.
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
-        ],
-      },
-
-      // Vercel serves everything under public/ as
-      // `public, max-age=0, must-revalidate`, so repeat visitors pay a
-      // revalidation round-trip per asset. (Its own /_next/static output gets
-      // a year + immutable; that treatment does not extend to public/.)
-      //
-      // These filenames are NOT content-hashed, so `immutable` would strand
-      // any image replaced in place. A day of freshness plus a week of
-      // stale-while-revalidate gets most of the benefit and still lets a
-      // swapped file propagate on its own.
-      //
-      // `:path+` (one or more), never `:path*`: public/services and the
-      // /services ROUTE share a prefix, and with `*` the bare `/services`
-      // document matched too — headers run before the filesystem, so the HTML
-      // page silently picked up a day-long cache.
-      {
-        source: "/:dir(images|videos|assets|production|services)/:path+",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=86400, stale-while-revalidate=604800",
-          },
-        ],
-      },
-
-      // Fonts and the Draco/Spline wasm carry their version in the filename or
-      // change only with a dependency bump, so they can be cached hard.
-      {
-        source: "/:dir(fonts|draco|spline-wasm)/:path+",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
-        ],
-      },
-    ];
+    unoptimized: true,
   },
   turbopack: {
     resolveAlias: {

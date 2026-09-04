@@ -2,9 +2,16 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 import { ImageResponse } from "next/og";
-import { cacheLife } from "next/cache";
 
 import { siteConfig } from "@/lib/site";
+
+/**
+ * `output: "export"` prerenders the generated route behind this file at build
+ * time, but it only accepts that opt-in through a route segment config — hence
+ * the explicit `force-static` on this and the other generated routes
+ * (app/sitemap.ts, app/robots.ts, app/llms.txt/route.ts).
+ */
+export const dynamic = "force-static";
 
 export const alt = `${siteConfig.legalName} — ${siteConfig.description}`;
 export const size = { width: 1200, height: 630 };
@@ -18,16 +25,14 @@ const fontPath = (file: string) =>
   path.join(process.cwd(), "public", "fonts", "space-mono", file);
 
 /**
- * Reading the fonts off disk is uncached IO, which would make this route
- * render on demand. Caching it lets the card prerender into the static shell.
+ * Reading the fonts off disk happens once, at build time: `output: "export"`
+ * plus the `force-static` above prerender this card into out/opengraph-image
+ * and nothing re-renders it at request time.
  *
- * Base64 rather than raw bytes: binary doesn't survive the cache boundary
- * intact — a Buffer comes back as a plain object with no `.buffer`.
+ * Base64 rather than raw bytes, kept from when this was a `use cache`
+ * function: it costs nothing and keeps the values plain.
  */
 async function loadFonts() {
-  "use cache";
-  cacheLife("max");
-
   const [regular, bold] = await Promise.all([
     readFile(fontPath("space-mono-v17-latin-regular.ttf")),
     readFile(fontPath("space-mono-v17-latin-700.ttf")),

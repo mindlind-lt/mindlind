@@ -1,0 +1,145 @@
+# ---------------------------------------------------------------------------
+# Apache / LiteSpeed config for the static export.
+#
+# `next build` writes the site to out/ and copies this file along with the rest
+# of public/, so it lands next to index.html on the host and applies to
+# everything below it. It is the replacement for the `headers()` block that
+# used to live in next.config.ts — a static host has no Node process, so
+# response headers can only come from the server's own config.
+#
+# This is NOT optional decoration. Without the /scenes rules the 3D scenes are
+# undecodable, and without the rewrite block every page but the homepage 404s.
+#
+# If the host runs nginx instead (rare for shared hosting, and .htaccess is
+# ignored there), README.md carries the equivalent server block.
+# ---------------------------------------------------------------------------
+
+Options -Indexes
+AddDefaultCharset utf-8
+
+# ---------------------------------------------------------------------------
+# Clean URLs
+#
+# The export writes /agency.html AND a /agency/ directory holding the RSC
+# payloads client-side navigation prefetches. Left alone, Apache sees the
+# directory, redirects /agency -> /agency/, finds no index there and answers
+# 403. So the .html file has to be matched first: mod_rewrite runs ahead of
+# mod_dir in the fixup phase, which is what makes this work.
+#
+# URLs stay extensionless, exactly as they were on the previous host — the
+# canonical tags, sitemap.xml and llms.txt all emit them without a trailing
+# slash, so nothing indexed has to change.
+# ---------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # /agency -> /agency.html (only when that file actually exists)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ /$1.html [L]
+
+  # Strip a trailing slash someone typed or an old link carries, so /agency/
+  # doesn't fall through to the payload directory.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+# ---------------------------------------------------------------------------
+# Self-hosted Spline scenes
+#
+# The files in /scenes are brotli streams on disk, written by
+# `npm run sync:spline`. These headers are what make them readable — a browser
+# handed these bytes without `Content-Encoding: br` cannot parse them and the
+# scene silently fails to load.
+#
+# The Content-Type matters as much as the encoding: .splinecode is an unknown
+# extension, so without this the server sends no usable type and `nosniff`
+# below turns that into a hard failure. application/json is the type Spline's
+# own CDN declares for the same bytes.
+#
+# `no-gzip` keeps mod_deflate from compressing an already-compressed body and
+# overwriting the Content-Encoding we set here.
+#
+# Verify after upload:
+#   curl -sI https://<domain>/scenes/<file>.splinecode
+# Expect: content-type: application/json and content-encoding: br.
+# ---------------------------------------------------------------------------
+<FilesMatch "\.splinecode$">
+  ForceType application/json
+  Header set Content-Encoding "br"
+  Header append Vary "Accept-Encoding"
+  # Filenames carry a content hash, so a changed scene is a changed URL.
+  Header set Cache-Control "public, max-age=31536000, immutable"
+  SetEnv no-gzip 1
+</FilesMatch>
+
+# The Open Graph card is generated to /opengraph-image with no file extension
+# (Next's route name), so nothing tells Apache it is a PNG. Social crawlers
+# reject an image served as text/plain, which would leave every share preview
+# blank.
+<Files "opengraph-image">
+  ForceType image/png
+</Files>
+
+# ---------------------------------------------------------------------------
+# Caching
+# ---------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  # Next's own build output is content-hashed: safe to cache forever.
+  <FilesMatch "\.(js|css|woff2?|ttf|otf|wasm)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # HTML and the RSC payloads next to it must not be cached hard, or a
+  # re-upload leaves visitors on the old build.
+  <FilesMatch "\.(html|txt|xml|json)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Media filenames are NOT content-hashed, so `immutable` would strand any file
+# replaced in place. A day of freshness plus a week of stale-while-revalidate
+# gets most of the benefit and still lets a swapped file propagate on its own.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpe?g|png|gif|webp|avif|svg|ico|mp4|webm|mov)$">
+    Header set Cache-Control "public, max-age=86400, stale-while-revalidate=604800"
+  </FilesMatch>
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Compression
+#
+# Vercel gzipped text responses on the way out; a shared host generally does
+# not unless asked. Without this the HTML, JS and CSS ship uncompressed.
+# ---------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml \
+    application/javascript application/json application/xml \
+    image/svg+xml application/rss+xml
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Security headers (the same three next.config.ts used to send)
+# ---------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# macOS leaves these in any folder it browses; they get swept up by the export.
+<FilesMatch "^\.DS_Store$">
+  Require all denied
+</FilesMatch>
+
+# ---------------------------------------------------------------------------
+# MIME types the host may not know
+# ---------------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType application/wasm .wasm
+  AddType font/woff2 .woff2
+  AddType image/avif .avif
+</IfModule>

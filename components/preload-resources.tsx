@@ -2,11 +2,12 @@
  * Resource hints for the homepage's critical path.
  *
  * These are rendered as plain <link> elements rather than via the
- * `ReactDOM.preload`/`preconnect` helpers the Next docs suggest: under
- * `cacheComponents` those calls did not survive into the prerendered static
- * HTML (the emitted hints were nowhere in the served document), whereas React
- * hoists <link> elements rendered in the tree into <head> reliably. Verify
- * with `curl -s <url> | grep '<link'` after changing anything here.
+ * `ReactDOM.preload`/`preconnect` helpers the Next docs suggest: those calls
+ * did not survive into the prerendered HTML (the emitted hints were nowhere in
+ * the served document), whereas React hoists <link> elements rendered in the
+ * tree into <head> reliably. With `output: "export"` the prerendered HTML is
+ * the only HTML there is, so verify in the built file after changing anything
+ * here: `grep '<link' out/index.html`.
  */
 export default function PreloadResources() {
   return (

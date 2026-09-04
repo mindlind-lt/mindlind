@@ -89,8 +89,9 @@ export default function RootLayout({
 
         <Footer />
 
-        {/* Both read the consent cookie in the browser after hydration, so
-            neither makes this layout dynamic under `cacheComponents`.
+        {/* Both read the consent cookie in the browser after hydration.
+            That is what keeps them compatible with `output: "export"`, which
+            has no request-time server to read a cookie on.
             GoogleAnalytics renders nothing at all until NEXT_PUBLIC_GA_ID is
             set AND the visitor has accepted the Statistik category. */}
         <ConsentBanner />
