@@ -41,7 +41,7 @@ export default function Header() {
         <Link data-label="Leistungen" href="/services">Leistungen</Link>
         <Link data-label="Projekte" href="/projects">Projekte</Link>
         {/* <Link data-label="Blog" href="/blog">Blog</Link> */}
-        <Link data-label="Contact" href="/contact">Contact</Link>
+        <Link data-label="Kontakt" href="/contact">Kontakt</Link>
       </nav>
 
       <div className="hdr-burger">

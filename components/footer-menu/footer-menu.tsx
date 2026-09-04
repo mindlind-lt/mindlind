@@ -17,7 +17,7 @@ export default function FooterMenu() {
                 <Link href="/projects">Projekte</Link>
             </li>
             <li className='ftr-menu-item'>
-                <Link href="/contact">Contact</Link>
+                <Link href="/contact">Kontakt</Link>
             </li>
         </ul>
     );
