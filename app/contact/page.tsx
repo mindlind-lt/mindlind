@@ -1,6 +1,7 @@
 import Hero from "@/components/hero";
 import ImageParticles from "@/components/image-particles/image-particles";
 import KineticType from "@/components/kinetic-type/kinetic-type";
+import ScrollArrow from "@/components/scroll-arrow/scroll-arrow";
 import SectionContact from "@/components/section-contact/section-contact";
 import type { Metadata } from "next";
 
@@ -53,14 +54,26 @@ export default function PageContact() {
           changing the design. */}
       <h1 className="sr-only">Kontakt — Mindlind Werbeagentur</h1>
 
-      <KineticType
-        words={["KONTAKT", "CONTACT US", "WORK WITH US"]}
-        hold={2.2}
-        widthFraction={0.55}
-        heightFraction={0.3}
-        className="font-mono font-bold uppercase min-h-[55svh] md:min-h-[80svh]"
-        style={{ marginTop: "var(--hdr-height)" }}
-      />
+      {/* The heading and the scroll cue share this box. The arrow is a sibling
+          of <KineticType>, not a child: everything inside that component is
+          painted into one WebGL canvas, and anything layered over it would have
+          to fight the canvas for stacking order. The top margin moved up here
+          so the arrow is measured against the hero, not against the header. */}
+      <div className="relative" style={{ marginTop: "var(--hdr-height)" }}>
+        <KineticType
+          words={["KONTAKT", "CONTACT US", "WORK WITH US"]}
+          hold={2.2}
+          widthFraction={0.55}
+          heightFraction={0.3}
+          // The word is width-bound, so a portrait screen shrinks it twice over:
+          // the container is narrow AND the hero above is short. The custom
+          // property gives it back a share of that width — a plain prop could
+          // not, since it is one number for every screen.
+          className="font-mono font-bold uppercase min-h-[80svh] portrait:min-h-[40svh] portrait:[--kinetic-type-width-fraction:0.66]"
+        />
+
+        <ScrollArrow />
+      </div>
 
       {/* <ImageParticles
         src="/images/service-content.webp"

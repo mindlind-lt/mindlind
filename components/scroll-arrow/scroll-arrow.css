@@ -1,0 +1,72 @@
+/* An 8-bit down arrow drifting up and down — the scroll cue in the bottom-right
+   corner of a hero. The sprite is pixel art; the motion under it is not, and
+   glides rather than hopping between whole-block positions.
+
+   Only `transform` is animated, so the whole thing lives on the compositor and
+   costs nothing next to whatever the hero itself is drawing. */
+
+.scroll-arrow {
+    position: absolute;
+    /* Held well inside the page gutter: pinned to the edge the arrow reads as
+       having fallen out of the hero, and it wants room around it to sit as a
+       deliberate mark in the corner. */
+    right: clamp(2rem, 7vw, 7rem);
+    bottom: 1.5rem;
+
+    /* Size of one block of the sprite. This is the only size knob: the arrow's
+       width and height both fall out of it and the grid the component
+       measured, so the blocks stay square whatever the sprite is.
+
+       The floor is what makes this read as pixel art rather than as a small
+       jagged icon — below roughly 11px a block stops looking deliberate. */
+    --scroll-arrow-block: clamp(0.7rem, 2.2vw, 1.75rem);
+
+    /* Decoration, not a control: it must never eat a click meant for the hero
+       underneath, and there is nothing here for a screen reader to read. */
+    pointer-events: none;
+
+    color: var(--foreground);
+}
+
+@media (min-width: 1024px) {
+    .scroll-arrow {
+        bottom: 2rem;
+    }
+}
+
+.scroll-arrow svg {
+    display: block;
+    width: calc(var(--scroll-arrow-cols) * var(--scroll-arrow-block));
+    height: calc(var(--scroll-arrow-rows) * var(--scroll-arrow-block));
+
+    /* The blocks tile edge to edge on whole-number coordinates. Antialiasing
+       them would put a seam of half-covered pixels along every shared edge,
+       which at this scale is visible as a grey grid over the arrow. */
+    shape-rendering: crispEdges;
+
+    animation: scroll-arrow-drift 2.6s ease-in-out infinite;
+}
+
+.scroll-arrow rect {
+    fill: currentColor;
+}
+
+/* One block up and back down again. The travel is measured in blocks so the
+   drift stays in proportion at every size, and it only ever moves the arrow
+   away from the hero's bottom edge — drifting down would carry it over the
+   section below. */
+@keyframes scroll-arrow-drift {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(calc(-1 * var(--scroll-arrow-block)));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-arrow svg {
+        animation: none;
+    }
+}

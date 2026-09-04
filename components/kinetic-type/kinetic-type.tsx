@@ -14,6 +14,8 @@
 // Typography comes from CSS. The font, weight, letter-spacing and colour are
 // read off the container's computed style, so the component is styled with the
 // same classes as any other text on the page (`font-mono font-bold text-black`).
+// How much of the container a word fills is settable from CSS too — see
+// `widthFraction` below — so it can be tuned per breakpoint.
 
 import { useEffect, useRef, type CSSProperties } from 'react';
 import * as THREE from 'three';
@@ -30,6 +32,14 @@ const TEXTURE_FONT_PX = 200;
 
 // A long word at 2x DPR can otherwise run past the driver's max texture size.
 const MAX_TEXTURE_WIDTH = 2048;
+
+/** A fraction from a custom property on the container, or the prop it overrides. */
+function readFraction(styles: CSSStyleDeclaration, property: string, fallback: number) {
+  const raw = styles.getPropertyValue(property).trim();
+  if (!raw) return fallback;
+  const value = Number.parseFloat(raw);
+  return Number.isFinite(value) && value > 0 ? value : fallback;
+}
 
 const VERTEX_SHADER = /* glsl */ `
 attribute float aIndex;
@@ -188,9 +198,16 @@ export type KineticTypeProps = {
   stagger?: number;
   /** Seconds a word sits fully open before the next one takes over. */
   hold?: number;
-  /** Share of the container's width the widest word may take. */
+  /**
+   * Share of the container's width the widest word may take. A prop is a fixed
+   * number and cannot answer a media query, so this is also readable from the
+   * `--kinetic-type-width-fraction` custom property on the container, which
+   * wins when it is set — that is the hook for sizing the word differently on
+   * a narrow screen.
+   */
   widthFraction?: number;
-  /** Share of the container's height a word may take. */
+  /** Share of the container's height a word may take. Overridable the same way,
+   *  via `--kinetic-type-height-fraction`. */
   heightFraction?: number;
   opacity?: number;
   className?: string;
@@ -320,10 +337,17 @@ export default function KineticType({
       camera.right = aspect / 2;
       camera.updateProjectionMatrix();
 
+      // Re-read every layout rather than once at setup, so a fraction set
+      // behind a media query takes effect when that query flips. This runs on
+      // resize only, which is also the moment a media query can have changed.
+      const styles = getComputedStyle(el);
+      const widthShare = readFraction(styles, '--kinetic-type-width-fraction', widthFraction);
+      const heightShare = readFraction(styles, '--kinetic-type-height-fraction', heightFraction);
+
       for (const item of items) {
         // Fit inside the box without distorting the word: whichever of the two
         // limits bites first decides the size.
-        const planeWidth = Math.min(aspect * widthFraction, heightFraction * item.aspect);
+        const planeWidth = Math.min(aspect * widthShare, heightShare * item.aspect);
         item.mesh.scale.set(planeWidth, planeWidth / item.aspect, 1);
       }
     }

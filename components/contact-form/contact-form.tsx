@@ -102,6 +102,8 @@ export default function ContactForm() {
                 aria-hidden="true"
             />
 
+            <div className="contact-form-footer">Mit dem Abesenden akzeptieren Sie unsere <a href="/datenschutz">Datenschutzerklärung</a></div>
+
             <div className="contact-form-submit-wrap">
                 <DoorButton
                     as="button"
@@ -125,8 +127,6 @@ export default function ContactForm() {
             </div>
 
         </div>
-
-        <div className="contact-form-footer">Mit dem Abesenden akzeptieren Sie unsere <a href="/datenschutz">Datenschutzerklärung</a></div>
 
     </form>
   );
