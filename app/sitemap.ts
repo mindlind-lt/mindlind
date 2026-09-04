@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { absoluteUrl, LAST_MODIFIED, routes } from "@/lib/site";
+import { absoluteUrl, lastModified, routes } from "@/lib/site";
 
 /**
  * `output: "export"` prerenders this generated route at build time, but only
@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((route) => route.published)
     .map((route) => ({
       url: absoluteUrl(route.path),
-      lastModified: LAST_MODIFIED,
+      lastModified: lastModified(route.path),
       changeFrequency: route.changeFrequency,
       priority: route.priority,
     }));

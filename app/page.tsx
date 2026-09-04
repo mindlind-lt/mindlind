@@ -163,7 +163,7 @@ export default function Home() {
       <div className="container mx-auto px-5 sm:px-8 py-12 xl:py-20">
 
         <div className="font-mono text-3xl uppercase pb-15 flex justify-between items-center">
-          <h2>Leisungen</h2>
+          <h2>Leistungen</h2>
           <div className="text-primary-700">[02]</div>
         </div>
 

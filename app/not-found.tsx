@@ -1,9 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+// Next emits its own <meta name="robots" content="noindex"> for this route and
+// there is no way to suppress it, so a second tag is unavoidable — the job is
+// to make it agree. Dropping `robots` entirely is worse than setting it: the
+// root layout's `index, follow` is then inherited and the page ships one tag
+// saying noindex and another saying index.
+//
+// `follow: true` is deliberate. The previous `nofollow` told crawlers to
+// ignore the links back into the site, which is the opposite of what a 404
+// page is for.
 export const metadata: Metadata = {
   title: "Seite nicht gefunden",
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function NotFound() {

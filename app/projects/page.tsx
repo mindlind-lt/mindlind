@@ -6,6 +6,8 @@ import Hero from "@/components/hero";
 
 import { GlassObject } from "@/components/canvasui/GlassObject";
 import type { Metadata } from "next";
+
+import { socialCard } from "@/lib/site";
 import ImageParticles from "@/components/image-particles/image-particles";
 import { breadcrumbSchema } from "@/lib/schema";
 
@@ -22,12 +24,14 @@ export const metadata: Metadata = {
     title: "Projekte | Mindlind Werbeagentur",
     description:
       "Ausgewählte Arbeiten: Websites, UX/UI und Markenauftritte für Gastronomie, Beauty, Automotive und Produktion.",
+    images: socialCard(),
   },
   twitter: {
     card: "summary_large_image",
     title: "Projekte | Mindlind Werbeagentur",
     description:
       "Ausgewählte Arbeiten: Websites, UX/UI und Markenauftritte für Gastronomie, Beauty, Automotive und Produktion.",
+    images: socialCard(),
   },
 };
 

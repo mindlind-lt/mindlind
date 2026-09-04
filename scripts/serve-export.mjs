@@ -59,7 +59,7 @@ async function fileAt(candidate) {
   }
 }
 
-/** Mirrors the .htaccess rewrite: /agency -> /agency.html, /agency/ -> /agency. */
+/** Mirrors the .htaccess rewrite: /agency -> /agency.html. */
 async function resolve(pathname) {
   const clean = decodeURIComponent(pathname).replace(/\/+$/, "") || "/";
   const rel = path.normalize(clean).replace(/^(\.\.[/\\])+/, "");
@@ -74,6 +74,17 @@ async function resolve(pathname) {
 
 const server = createServer(async (req, res) => {
   const { pathname } = new URL(req.url, "http://localhost");
+
+  // .htaccess 301s /agency/ to /agency so there is one canonical URL per page.
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    const target = pathname.replace(/\/+$/, "");
+    if (await resolve(target)) {
+      res.writeHead(301, { Location: target });
+      res.end();
+      return;
+    }
+  }
+
   const file = await resolve(pathname);
 
   if (!file) {
@@ -89,6 +100,12 @@ const server = createServer(async (req, res) => {
     "X-Content-Type-Options": "nosniff",
     "Referrer-Policy": "strict-origin-when-cross-origin",
   };
+
+  // Payload files are noindex on the host; nothing but a crawler cares, but
+  // keeping it here means the preview and the host answer the same headers.
+  if (ext === ".txt" && !["llms.txt", "robots.txt"].includes(path.basename(file))) {
+    headers["X-Robots-Tag"] = "noindex";
+  }
 
   if (ext === ".splinecode") {
     headers["Content-Type"] = "application/json";

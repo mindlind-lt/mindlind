@@ -136,6 +136,11 @@ location = /opengraph-image {
 location /_next/static/ {
     add_header Cache-Control "public, max-age=31536000, immutable";
 }
+
+# RSC navigation payloads must not be indexed (see public/.htaccess).
+location ~ "^(?!.*/(llms|robots)\.txt$).*\.txt$" {
+    add_header X-Robots-Tag noindex;
+}
 ```
 
 ### What the static export gives up

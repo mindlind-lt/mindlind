@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+
+import { socialCard } from "@/lib/site";
 import LegalPage from "@/components/legal-page/legal-page";
 
 export const metadata: Metadata = {
@@ -13,11 +15,13 @@ export const metadata: Metadata = {
     siteName: "Mindlind Werbeagentur",
     title: "Impressum | Mindlind Werbeagentur",
     description: "Anbieterkennzeichnung der Mindlind Werbeagentur.",
+    images: socialCard(),
   },
   twitter: {
     card: "summary_large_image",
     title: "Impressum | Mindlind Werbeagentur",
     description: "Anbieterkennzeichnung der Mindlind Werbeagentur.",
+    images: socialCard(),
   },
 };
 

@@ -1,6 +1,8 @@
 import { breadcrumbSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 
+import { socialCard } from "@/lib/site";
+
 import PersonCard from "@/components/person-card/person-card";
 import SectionContact from "@/components/section-contact/section-contact";
 import SectionServices from "@/components/section-services/section-services";
@@ -26,12 +28,14 @@ export const metadata: Metadata = {
     title: "Agentur | Mindlind Werbeagentur",
     description:
       "Das Team hinter Mindlind, unser 360°-Ansatz und wie wir Marken von der Strategie bis zum Launch begleiten.",
+    images: socialCard(),
   },
   twitter: {
     card: "summary_large_image",
     title: "Agentur | Mindlind Werbeagentur",
     description:
       "Das Team hinter Mindlind, unser 360°-Ansatz und wie wir Marken von der Strategie bis zum Launch begleiten.",
+    images: socialCard(),
   },
 };
 

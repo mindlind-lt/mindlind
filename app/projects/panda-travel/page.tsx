@@ -7,6 +7,8 @@ import DoorButton from "@/components/door-button/door-button";
 
 import type { Metadata } from "next";
 
+import { breadcrumbSchema, caseStudySchema } from "@/lib/schema";
+
 export const metadata: Metadata = {
   title: "Panda Travel",
   description:
@@ -44,6 +46,26 @@ export const metadata: Metadata = {
 export default function PageCasePandaTravel() {
   return (
     <>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Projekte", path: "/projects" },
+              { name: "Panda Travel", path: "/projects/panda-travel" },
+            ]),
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            caseStudySchema({ path: "/projects/panda-travel", name: "Panda Travel" }),
+          ),
+        }}
+      />
 
       {/* Hero */}
       <ImageParticles

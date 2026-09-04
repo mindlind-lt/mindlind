@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+
+import { socialCard } from "@/lib/site";
 import LegalPage from "@/components/legal-page/legal-page";
 import ConsentSettingsLink from "@/components/consent/consent-settings-link";
 
@@ -14,11 +16,13 @@ export const metadata: Metadata = {
     siteName: "Mindlind Werbeagentur",
     title: "Datenschutz | Mindlind Werbeagentur",
     description: "Datenschutzerklärung der Mindlind Werbeagentur.",
+    images: socialCard(),
   },
   twitter: {
     card: "summary_large_image",
     title: "Datenschutz | Mindlind Werbeagentur",
     description: "Datenschutzerklärung der Mindlind Werbeagentur.",
+    images: socialCard(),
   },
 };
 

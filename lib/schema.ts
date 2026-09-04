@@ -4,7 +4,7 @@
  * metadata — consumed via `<script type="application/ld+json">` in layouts.
  */
 
-import { absoluteUrl, LAST_MODIFIED, siteConfig } from "@/lib/site";
+import { absoluteUrl, lastModified, siteConfig } from "@/lib/site";
 
 const ORGANIZATION_ID = absoluteUrl("/#organization");
 
@@ -131,7 +131,7 @@ export function caseStudySchema({ path, name }: { path: string; name: string }) 
     url: absoluteUrl(path),
     creator: { "@id": ORGANIZATION_ID },
     publisher: { "@id": ORGANIZATION_ID },
-    dateModified: LAST_MODIFIED,
+    dateModified: lastModified(path),
     inLanguage: "de",
   } as const;
 }

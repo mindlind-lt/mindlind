@@ -7,6 +7,8 @@ import DoorButton from "@/components/door-button/door-button";
 
 import type { Metadata } from "next";
 
+import { breadcrumbSchema, caseStudySchema } from "@/lib/schema";
+
 export const metadata: Metadata = {
   title: "Mondent",
   description:
@@ -44,6 +46,26 @@ export const metadata: Metadata = {
 export default function PageCaseMondent() {
   return (
     <>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Projekte", path: "/projects" },
+              { name: "MonDent", path: "/projects/mondent" },
+            ]),
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            caseStudySchema({ path: "/projects/mondent", name: "MonDent" }),
+          ),
+        }}
+      />
 
       {/* Hero */}
       <ImageParticles

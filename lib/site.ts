@@ -6,6 +6,8 @@
  * each page's own `metadata` export — see any `app/**\/page.tsx`.
  */
 
+import { execFileSync } from "node:child_process";
+
 export const siteConfig = {
   name: "Mindlind",
   legalName: "Mindlind Werbeagentur",
@@ -192,16 +194,85 @@ export const routes = [
 ] as const satisfies readonly RouteMeta[];
 
 /** Absolute URL for a root-relative path. */
+/**
+ * The generated 1200×630 card from `app/opengraph-image.tsx`.
+ *
+ * Next only folds that file-convention image into a page's metadata when the
+ * page does not declare its own `openGraph` object — and metadata merging is
+ * shallow, so a page that sets `openGraph` for the title replaces the whole
+ * inherited object, image included (see "Merging" in the generateMetadata
+ * docs). Six pages hit exactly that and shipped with no `og:image` at all:
+ * every share of /services, /agency, /contact, /projects, /impressum and
+ * /datenschutz rendered as a blank card.
+ *
+ * Setting this on `openGraph.images` and `twitter.images` is the explicit
+ * fix. Pages with a real photograph to show — the case studies — pass their
+ * own image instead.
+ */
+export function socialCard() {
+  return [
+    {
+      url: "/opengraph-image",
+      width: 1200,
+      height: 630,
+      alt: "Mindlind Werbeagentur — Digitale Markenauftritte",
+    },
+  ];
+}
+
 export function absoluteUrl(path: string): string {
   return `${siteConfig.url}${path === "/" ? "" : path}`;
 }
 
 /**
- * Bump when page content meaningfully changes. Deliberately a constant rather
- * than `new Date()`: under Cache Components a clock read during prerender is
- * synchronous IO and fails the build, and a build timestamp would tell
- * crawlers every page changed on every deploy. Shared by `app/sitemap.ts` and
- * `lib/schema.ts` so sitemap `lastmod` and schema `dateModified` can't drift
- * apart.
+ * Fallback `lastmod` for a build with no git history to read (a tarball, a
+ * shallow CI checkout). Only used when `lastModified()` below cannot do
+ * better.
  */
-export const LAST_MODIFIED = "2026-08-09T00:00:00.000Z";
+const FALLBACK_MODIFIED = "2026-08-09T00:00:00.000Z";
+
+const modifiedCache = new Map<string, string>();
+
+/**
+ * `lastmod` for a route, taken from the last commit that touched its
+ * `page.tsx`.
+ *
+ * This used to be one hardcoded constant shared by every URL. Google only
+ * uses `lastmod` while it stays verifiably accurate, and seventeen pages all
+ * claiming the same frozen date is the fastest way to have the signal ignored
+ * for the whole site — it never moved when a page actually changed, and it
+ * would have gone on claiming August 2026 indefinitely.
+ *
+ * Git is the one source that is accurate without anyone maintaining it. It is
+ * read at build time only: `output: "export"` means this runs during
+ * `next build` and the answer is baked into out/sitemap.xml.
+ *
+ * Known limitation: it tracks the route's own file, not the components it
+ * renders, so a redesign that only touches components/ does not move the date.
+ * That errs toward under-reporting changes, which is the safe direction —
+ * an overstated `lastmod` is what destroys the signal.
+ *
+ * Fails open: no git, no history, or a file that was never committed all fall
+ * back to the constant above rather than breaking the build.
+ */
+export function lastModified(routePath: string): string {
+  const cached = modifiedCache.get(routePath);
+  if (cached) return cached;
+
+  const file = `app${routePath === "/" ? "" : routePath}/page.tsx`;
+  let iso = FALLBACK_MODIFIED;
+
+  try {
+    const committed = execFileSync(
+      "git",
+      ["log", "-1", "--format=%cI", "--", file],
+      { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] },
+    ).trim();
+    if (committed) iso = new Date(committed).toISOString();
+  } catch {
+    // No git in the build environment — the fallback is already in place.
+  }
+
+  modifiedCache.set(routePath, iso);
+  return iso;
+}
