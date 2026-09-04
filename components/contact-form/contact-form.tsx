@@ -126,7 +126,7 @@ export default function ContactForm() {
 
         </div>
 
-        <div className="contact-form-footer">Mit dem Absenden akzeptieren Sie unsere{' '} <a href="#">AGB</a> und <a href="#">Datenschutzerklärung</a>.</div>
+        <div className="contact-form-footer">Mit dem Abesenden akzeptieren Sie unsere <a href="/datenschutz">Datenschutzerklärung</a></div>
 
     </form>
   );
