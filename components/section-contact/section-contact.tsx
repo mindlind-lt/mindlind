@@ -10,7 +10,7 @@ export default function SectionContact() {
       <div className="section-contact container mx-auto px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
 
-          <div>
+          <div className="order-2 lg:order-1">
             <div className="font-mono text-2xl lg:text-3xl uppercase pb-8 lg:pb-15 flex justify-between items-center gap-8 lg:gap-15">
               <h2 className="">FAQ</h2>
               <div className="text-primary-700">[08]</div>
@@ -54,7 +54,7 @@ export default function SectionContact() {
             />
           </div>
 
-          <div className="section-contact-form">
+          <div className="section-contact-form order-1 lg:order-2">
             <div className="flex items-end">
               <div className="flex-1 pb-3 self-stretch">
                 <div className="font-mono text-3xl lg:text-5xl uppercase pb-4">PROJEKT STARTEN</div>
