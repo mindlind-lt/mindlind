@@ -106,7 +106,7 @@ export default function Burger() {
         </nav>
 
         <div className="drawer-contact">
-          <div>Žirgų g. 18-6, Raudondvario k. LT-14257 Vilnius</div>
+          {/* <div>Žirgų g. 18-6, Raudondvario k. LT-14257 Vilnius</div> */}
           <div>
             <a href="mailto:info@mindlind.de">info@mindlind.de</a>
           </div>

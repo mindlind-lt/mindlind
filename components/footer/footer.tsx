@@ -89,9 +89,9 @@ export default function Footer(){
                             </div>
 
                             <div className='mb-12 lg:mb-24 ftr-cinfo'>
-                                <div>
+                                {/* <div>
                                     <a href="#">Žirgų g. 18-6, Raudondvario k. LT-14257 Vilnius</a>
-                                </div>
+                                </div> */}
                                 <div>
                                     <a href="mailto:info@mindlind.de">info@mindlind.de</a>
                                 </div>
