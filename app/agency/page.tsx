@@ -104,19 +104,19 @@ export default function PageAgency() {
               <PersonCard
                 imageSrc="/images/team-1.webp"
                 name="Jan"
-                role="CEO"
+                role="Creative Director"
                 // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
               />
               <PersonCard
                 imageSrc="/images/team-2.webp"
                 name="Georgy"
-                role="Director"
+                role="Managing Director"
                 // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
               />
               <PersonCard
                 imageSrc="/images/team-3.webp"
                 name="Almaz"
-                role="IT-Spezialist"
+                role="Webentwickler"
                 // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
               />
               <PersonCard
