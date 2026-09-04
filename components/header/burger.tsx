@@ -100,7 +100,7 @@ export default function Burger() {
           <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
           <Link href="/agency" onClick={() => setIsOpen(false)}>Agency</Link>
           <Link href="/services" onClick={() => setIsOpen(false)}>Leistungen</Link>
-          <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
+          <Link href="/projects" onClick={() => setIsOpen(false)}>Projekte</Link>
           {/* <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link> */}
           <Link href="/contact" onClick={() => setIsOpen(false)}>Kontakt</Link>
         </nav>
