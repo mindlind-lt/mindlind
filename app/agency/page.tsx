@@ -150,7 +150,7 @@ export default function PageAgency() {
 
 
 
-      <div className="py-12 lg:py-20">
+      {/* <div className="py-12 lg:py-20">
         <div className="container mx-auto px-6 sm:px-8">
 
           <div className="flex justify-between gap-8 lg:gap-30">
@@ -163,7 +163,7 @@ export default function PageAgency() {
           <SectionServices />
 
         </div>
-      </div>
+      </div> */}
 
 
 
