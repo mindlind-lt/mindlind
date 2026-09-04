@@ -127,20 +127,20 @@ export default function PageAgency() {
               />
               <PersonCard
                 imageSrc="/images/team-5.webp"
-                name="Zhenya"
-                role="Der Videograf"
+                name="Evgeny"
+                role="Videoproduktion"
                 // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
               />
               <PersonCard
                 imageSrc="/images/team-6.webp"
                 name="Elena"
-                role="SEO-Spezialist"
+                role="Online-Marketing"
                 // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
               />
               <PersonCard
                 imageSrc="/images/team-7.webp"
                 name="Lisaveta"
-                role="Instagram ads"
+                role="Social Media Manager"
                 // bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
               />
             </TeamCarousel>
