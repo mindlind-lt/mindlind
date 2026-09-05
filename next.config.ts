@@ -17,12 +17,14 @@ import type { NextConfig } from "next";
  *  - `images.unoptimized` is required: /_next/image is a server endpoint. Every
  *    <Image> now serves the original file from public/, so keep source images
  *    reasonably sized.
- *  - `headers()` is gone. Static hosts serve headers from their own config —
- *    ours live in `public/.htaccess`, which Apache/LiteSpeed (what shared
- *    hosting almost always runs) reads from the uploaded directory. That file
- *    is the direct translation of the headers this block used to return, and
- *    it is NOT optional: the Spline scenes are brotli streams on disk and are
- *    unreadable without the Content-Encoding it sets.
+ *  - `headers()` no longer runs in production. Static hosts serve headers from
+ *    their own config — ours live in `public/.htaccess`, which Apache/LiteSpeed
+ *    (what shared hosting almost always runs) reads from the uploaded
+ *    directory. That file is the direct translation of the headers this block
+ *    used to return, and it is NOT optional: the Spline scenes are brotli
+ *    streams on disk and are unreadable without the Content-Encoding it sets.
+ *    The one place it still has to run is `next dev`, which serves public/
+ *    itself and never reads .htaccess — see the `headers()` below.
  *
  * Also unavailable, none of which this site uses: redirects/rewrites, proxy,
  * ISR, server actions, cookies()/headers(), and route handlers that read the
@@ -30,6 +32,28 @@ import type { NextConfig } from "next";
  */
 const nextConfig: NextConfig = {
   output: "export",
+  // Dev only. `next dev` serves public/ from its own handler and never sees
+  // public/.htaccess, so without this the .splinecode files reach the browser
+  // as raw brotli and @splinetool/runtime dies parsing them with "Data read,
+  // but end of buffer not reached". `next build` ignores headers() under
+  // `output: "export"` (and warns about it), hence the guard — production gets
+  // the equivalent lines from .htaccess.
+  ...(process.env.NODE_ENV === "development"
+    ? {
+        async headers() {
+          return [
+            {
+              source: "/scenes/:file+",
+              headers: [
+                { key: "Content-Type", value: "application/json" },
+                { key: "Content-Encoding", value: "br" },
+                { key: "Vary", value: "Accept-Encoding" },
+              ],
+            },
+          ];
+        },
+      }
+    : {}),
   images: {
     unoptimized: true,
   },
