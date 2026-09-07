@@ -106,25 +106,25 @@ export default function PageCaseLuxfloor() {
 
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 lg:flex lg:justify-between lg:gap-10">
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">CLIENT</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">KUNDE</div>
             <div className="text-base font-medium">LuxFloor</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">NICHE</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">BRANCHE</div>
             <div className="text-base font-medium">Flooring / Interior / E-Commerce</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">YEAR</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">JAHR</div>
             <div className="text-base font-medium">2024</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">TIMELINE</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">DAUER</div>
             <div className="text-base font-medium">1 Monat</div>
           </div>
         </div>
 
         <div className="mt-10 lg:mt-15">
-          <DoorButton className="w-full" href="https://lux-floor.de/" target="_blank">OPEN WEBSITE</DoorButton>
+          <DoorButton className="w-full" href="https://lux-floor.de/" target="_blank">WEBSITE ÖFFNEN</DoorButton>
         </div>
 
       </div>
@@ -165,7 +165,7 @@ export default function PageCaseLuxfloor() {
 
       {/* Started from */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Started From</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ausgangslage</h2>
         <div className="text-base space-y-3 flex-2">LuxFloor startete mit einem großen Sortiment, starken Produkten und einer klaren Spezialisierung auf hochwertige Bodenbeläge. Die Herausforderung bestand darin, diese Produktvielfalt digital übersichtlich, hochwertig und verkaufsorientiert darzustellen.</div>
         <div className="text-base space-y-3 flex-2">Wir begannen damit, die Website in zwei zentrale Bereiche zu gliedern: eine starke Präsentationsfläche für die Marke und einen leistungsfähigen Shop für das Sortiment. Die Startseite sollte Vertrauen schaffen und die Qualität der Marke vermitteln, während der Shop schnell, logisch und komfortabel durch viele Produkte führt.</div>
       </div>
@@ -184,7 +184,7 @@ export default function PageCaseLuxfloor() {
 
       {/* Process */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Process</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Prozess</h2>
         <div className="text-base space-y-3 flex-2">
           <p>Die zentrale Herausforderung lag in der Kombination aus Design, Produktlogik und technischer Alltagstauglichkeit. Bodenbeläge werden nach Farbe, Material, Oberfläche, Format, Struktur und Einsatzbereich ausgewählt. Deshalb musste der Shop deutlich mehr leisten als eine einfache Produktliste.</p>
         </div>
@@ -250,7 +250,7 @@ export default function PageCaseLuxfloor() {
 
       {/* Results */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Results</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ergebnisse</h2>
         <div className="text-base space-y-3 flex-2">
           <p>Das Ergebnis ist ein hochwertiger digitaler Auftritt, der LuxFloor als moderne, serviceorientierte und exklusive Marke im Bereich Bodenbeläge positioniert. Die Website verbindet eine starke Markenpräsentation mit einem funktionalen Onlineshop, intelligenter Produktstruktur und praktischen Verkaufselementen.</p>
         </div>

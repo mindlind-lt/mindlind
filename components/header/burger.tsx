@@ -77,7 +77,7 @@ export default function Burger() {
         aria-expanded={isOpen}
         aria-controls="site-drawer"
       >
-        <div className="burger-label">Menu</div>
+        <div className="burger-label">Menü</div>
         <div className="burger-lines">
           <div className="burger-line"></div>
           <div className="burger-line"></div>
@@ -97,8 +97,8 @@ export default function Burger() {
       >
 
         <nav className="drawer-menu">
-          <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="/agency" onClick={() => setIsOpen(false)}>Agency</Link>
+          <Link href="/" onClick={() => setIsOpen(false)}>Startseite</Link>
+          <Link href="/agency" onClick={() => setIsOpen(false)}>Agentur</Link>
           <Link href="/services" onClick={() => setIsOpen(false)}>Leistungen</Link>
           <Link href="/projects" onClick={() => setIsOpen(false)}>Projekte</Link>
           {/* <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link> */}

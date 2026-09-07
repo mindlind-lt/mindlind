@@ -107,29 +107,29 @@ export default function PageCaseAutosl() {
 
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 lg:flex lg:justify-between lg:gap-10">
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">CLIENT</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">KUNDE</div>
             <div className="text-base font-medium">AutoSL</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">NICHE</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">BRANCHE</div>
             <div className="text-base font-medium">Luxury Automotive / Collector Cars</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">YEAR</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">JAHR</div>
             <div className="text-base font-medium">2025</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">CLIENT LOCATION</div>
-            <div className="text-base font-medium">GERMANY / INTERNATIONAL</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">STANDORT</div>
+            <div className="text-base font-medium">DEUTSCHLAND / INTERNATIONAL</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">TIMELINE</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">DAUER</div>
             <div className="text-base font-medium">1 Monat</div>
           </div>
         </div>
 
         <div className="mt-10 lg:mt-15">
-          <DoorButton className="w-full" href="#">OPEN WEBSITE</DoorButton>{/* TODO: real client URL */}
+          <DoorButton className="w-full" href="#">WEBSITE ÖFFNEN</DoorButton>{/* TODO: real client URL */}
         </div>
 
       </div>
@@ -170,7 +170,7 @@ export default function PageCaseAutosl() {
 
       {/* Started from */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Started From</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ausgangslage</h2>
         <div className="text-base space-y-3 flex-2">AutoSL startete mit einem außergewöhnlichen Fahrzeugportfolio und einer starken Verbindung zur internationalen Automobil- und Motorsportwelt. Die Marke bewegt sich in einem Markt, in dem Vertrauen, Diskretion, Expertise und visuelle Qualität entscheidend sind.</div>
         <div className="text-base space-y-3 flex-2">Wir begannen damit, die Website nicht als klassische Händlerseite zu denken, sondern als digitalen Luxury-Showroom. Jedes Fahrzeug sollte hochwertig präsentiert werden, ohne die Nutzerführung zu verkomplizieren. Gleichzeitig musste die Plattform technisch so aufgebaut werden, dass neue Fahrzeuge effizient verwaltet und automatisch aktualisiert werden können.</div>
       </div>
@@ -189,7 +189,7 @@ export default function PageCaseAutosl() {
 
       {/* Process */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Process</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Prozess</h2>
         <div className="text-base space-y-3 flex-2">
           <p>Die zentrale Herausforderung bestand darin, Exklusivität und technische Funktionalität miteinander zu verbinden. AutoSL benötigt einen Auftritt, der visuell dem Niveau der Fahrzeuge entspricht, gleichzeitig aber im Alltag als effizientes Verwaltungssystem funktioniert.</p>
           <p>Ein wichtiger Bestandteil des Projekts war die Anbindung an Mobile.de. Neue Fahrzeuge, die im offiziellen Account veröffentlicht werden, können automatisch auf der Website gespiegelt werden — inklusive hochwertiger Bilder, Fahrzeugdaten und aktueller Verfügbarkeit. Dadurch bleibt das Fahrzeugangebot aktuell, ohne doppelte Pflegeprozesse zu erzeugen.</p>
@@ -263,7 +263,7 @@ export default function PageCaseAutosl() {
 
       {/* Results */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Results</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ergebnisse</h2>
         <div className="text-base space-y-3 flex-2">
           <p>Das Ergebnis ist ein interaktiver digitaler Showroom, der AutoSL als Premium-Marke im internationalen Luxusautomobilmarkt positioniert. Die Website verbindet exklusive Fahrzeugpräsentation, klare Nutzerführung und eine effiziente technische Anbindung an bestehende Verkaufsprozesse.</p>
         </div>

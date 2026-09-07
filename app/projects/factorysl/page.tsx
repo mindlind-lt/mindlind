@@ -109,25 +109,25 @@ export default function PageCaseFactorysl() {
 
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 lg:flex lg:justify-between lg:gap-10">
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">CLIENT</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">KUNDE</div>
             <div className="text-base font-medium">Factory SL</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">NICHE</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">BRANCHE</div>
             <div className="text-base font-medium">Luxury Detailing / Automotive Restoration</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">YEAR</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">JAHR</div>
             <div className="text-base font-medium">2024</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">TIMELINE</div>
-            <div className="text-base font-medium">Ongoing</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">DAUER</div>
+            <div className="text-base font-medium">Laufend</div>
           </div>
         </div>
 
         <div className="mt-10 lg:mt-15">
-          <DoorButton className="w-full" href="https://factorysl.de/" target="_blank">OPEN WEBSITE</DoorButton>
+          <DoorButton className="w-full" href="https://factorysl.de/" target="_blank">WEBSITE ÖFFNEN</DoorButton>
         </div>
 
       </div>
@@ -167,7 +167,7 @@ export default function PageCaseFactorysl() {
 
       {/* Started from */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Started From</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ausgangslage</h2>
         <div className="text-base space-y-3 flex-2">Factory SL startete mit einem klaren Qualitätsanspruch und einem sehr spezialisierten Leistungsangebot. Im Mittelpunkt stehen Fahrzeuge, die für ihre Besitzerinnen und Besitzer mehr sind als reine Fortbewegungsmittel: Wertobjekte, Sammlerstücke, emotionale Investments oder seltene Klassiker.</div>
         <div className="text-base space-y-3 flex-2">Wir begannen damit, die Marke nicht als klassische Fahrzeugpflege zu positionieren, sondern als exklusiven Detailing- und Restaurationspartner. Die Website musste zeigen, dass es hier nicht um schnelle Standardleistungen geht, sondern um hochwertige Handarbeit, moderne Technik, professionelle Materialien und einen sehr sorgfältigen Umgang mit jedem Fahrzeug.</div>
       </div>
@@ -186,7 +186,7 @@ export default function PageCaseFactorysl() {
 
       {/* Process */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Process</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Prozess</h2>
         <div className="text-base space-y-3 flex-2">
           <p>Die zentrale Herausforderung bestand darin, ein technisches und handwerklich präzises Angebot emotional und hochwertig zu präsentieren. Leistungen wie Politur, Keramikversiegelung, Paint Protection Film, Vinylfolierung, Innenraumreinigung und Oldtimer-Restaurierung müssen verständlich erklärt werden, ohne ihren Premium-Charakter zu verlieren.</p>
         </div>
@@ -252,7 +252,7 @@ export default function PageCaseFactorysl() {
 
       {/* Results */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Results</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ergebnisse</h2>
         <div className="text-base space-y-3 flex-2">
           <p>Das Ergebnis ist ein hochwertiger digitaler Auftritt, der Factory SL als exklusive Detailing-Adresse in Düsseldorf positioniert. Die Website verbindet starke visuelle Inszenierung, klare Leistungsstruktur, Anfrage- und Buchungslogik sowie echten Content aus dem Unternehmen.</p>
         </div>

@@ -38,7 +38,7 @@ export default function HoverVideo({
   poster,
   href,
   alt = "",
-  linkLabel = "Learn more",
+  linkLabel = "Mehr erfahren",
   className,
   sizes = "(max-width: 64rem) 100vw, (max-width: 80rem) 50vw, 33vw",
 }: HoverVideoProps) {
@@ -208,7 +208,7 @@ export default function HoverVideo({
         onMouseEnter={play}
         onMouseLeave={stop}
         onClick={openLightbox}
-        aria-label={alt ? `Play video: ${alt}` : "Play video"}
+        aria-label={alt ? `Video abspielen: ${alt}` : "Video abspielen"}
       >
         {/* No `poster` here: the optimized cover <Image> below overlays the
             video until playback, so a full-size poster would just double-load. */}
@@ -273,7 +273,7 @@ export default function HoverVideo({
               type="button"
               className="hover-video-lightbox-close"
               onClick={closeLightbox}
-              aria-label="Close video"
+              aria-label="Video schließen"
             >
               <X />
             </button>

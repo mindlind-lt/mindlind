@@ -61,7 +61,7 @@ export default function PageContact() {
           so the arrow is measured against the hero, not against the header. */}
       <div className="relative" style={{ marginTop: "var(--hdr-height)" }}>
         <KineticType
-          words={["KONTAKT", "CONTACT US", "WORK WITH US"]}
+          words={["KONTAKT", "SCHREIBEN SIE UNS", "LASSEN SIE UNS REDEN"]}
           hold={2.2}
           widthFraction={0.55}
           heightFraction={0.3}

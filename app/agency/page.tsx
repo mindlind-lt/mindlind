@@ -53,7 +53,7 @@ export default function PageAgency() {
         }}
       />
 
-      <Hero title="AGENCY" />
+      <Hero title="AGENTUR" />
 
 
       <div className="intro pb-12 lg:pb-20">
@@ -155,7 +155,7 @@ export default function PageAgency() {
 
           <div className="flex justify-between gap-8 lg:gap-30">
             <div className="font-mono text-2xl sm:text-3xl uppercase mb-8 lg:mb-15">
-              <h2>Our Packages</h2>
+              <h2>Unsere Pakete</h2>
             </div>
             <div className="text-primary-700 font-mono text-2xl sm:text-3xl uppercase mb-8 lg:mb-15">[03]</div>
           </div>

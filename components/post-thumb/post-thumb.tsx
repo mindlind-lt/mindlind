@@ -28,15 +28,15 @@ export default function PostThumb({ align = "left" }: PostThumbProps){
                         </div>
 
                         <div className="post-thumb-content">
-                            <h3 className="post-thumb-title">Fresh Visual Trends in 2026</h3>
-                            <div className="post-thumb-text">In 2026, calm, systemic visuals dominate: strict grids, duo-palettes, mono-typography, and micromotion as feedback. Subtle 3D gradients, material textures.</div>
+                            <h3 className="post-thumb-title">Aktuelle Visual-Trends 2026</h3>
+                            <div className="post-thumb-text">2026 dominieren ruhige, systemische Visuals: strenge Raster, Zwei-Farb-Paletten, Mono-Typografie und Mikroanimationen als Feedback. Dazu dezente 3D-Verläufe und materielle Texturen.</div>
                         </div>
                     </>
                 ) : (
                     <>
                         <div className="post-thumb-content">
-                            <h3 className="post-thumb-title">Fresh Visual Trends in 2026</h3>
-                            <div className="post-thumb-text">In 2026, calm, systemic visuals dominate: strict grids, duo-palettes, mono-typography, and micromotion as feedback. Subtle 3D gradients, material textures.</div>
+                            <h3 className="post-thumb-title">Aktuelle Visual-Trends 2026</h3>
+                            <div className="post-thumb-text">2026 dominieren ruhige, systemische Visuals: strenge Raster, Zwei-Farb-Paletten, Mono-Typografie und Mikroanimationen als Feedback. Dazu dezente 3D-Verläufe und materielle Texturen.</div>
                         </div>
 
                         <div className="post-thumb-pic">

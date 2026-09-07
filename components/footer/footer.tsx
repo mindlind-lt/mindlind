@@ -37,7 +37,7 @@ export default function Footer(){
 
                 <div className="container mx-auto max-w-[840px] px-6 lg:px-8 relative z-10">
                     <div className='ftr-brand'>
-                        {/* <div className='font-mono uppercase text-2xl'>Digital Creative Agency</div> */}
+                        {/* <div className='font-mono uppercase text-2xl'>Digitale Kreativagentur</div> */}
                         <div className="mt-4">
 
                             <svg width="1291" height="210" viewBox="0 0 1291 210" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -103,7 +103,7 @@ export default function Footer(){
                                 </div>
                             </div>
 
-                            <div className='ftr-copyright'>© Mindlind Agency. All Rights Reserved.</div>
+                            <div className='ftr-copyright'>© Mindlind Agency. Alle Rechte vorbehalten.</div>
 
                         </div>
 

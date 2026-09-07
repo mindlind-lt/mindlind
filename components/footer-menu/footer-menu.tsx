@@ -5,10 +5,10 @@ export default function FooterMenu() {
     return (
         <ul className='ftr-menu'>
             <li className='ftr-menu-item'>
-                <Link href="/">Home</Link>
+                <Link href="/">Startseite</Link>
             </li>
             <li className='ftr-menu-item'>
-                <Link href="/agency">Agency</Link>
+                <Link href="/agency">Agentur</Link>
             </li>
             <li className='ftr-menu-item'>
                 <Link href="/services">Leistungen</Link>

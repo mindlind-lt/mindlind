@@ -36,8 +36,8 @@ export default function Header() {
       </Link>
 
       <nav className="hdr-menu">
-        <Link data-label="Home" href="/">Home</Link>
-        <Link data-label="Agency" href="/agency">Agency</Link>
+        <Link data-label="Startseite" href="/">Startseite</Link>
+        <Link data-label="Agentur" href="/agency">Agentur</Link>
         <Link data-label="Leistungen" href="/services">Leistungen</Link>
         <Link data-label="Projekte" href="/projects">Projekte</Link>
         {/* <Link data-label="Blog" href="/blog">Blog</Link> */}

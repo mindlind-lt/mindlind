@@ -107,29 +107,29 @@ export default function PageCaseFunkyCoffee() {
 
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 lg:flex lg:justify-between lg:gap-10">
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">CLIENT</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">KUNDE</div>
             <div className="text-base font-medium">Funky Coffee</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">NICHE</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">BRANCHE</div>
             <div className="text-base font-medium">Coffee Shop / Food Concept</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">YEAR</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">JAHR</div>
             <div className="text-base font-medium">2026</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">CLIENT LOCATION</div>
-            <div className="text-base font-medium">GERMANY / INTERNATIONAL</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">STANDORT</div>
+            <div className="text-base font-medium">DEUTSCHLAND / INTERNATIONAL</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">TIMELINE</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">DAUER</div>
             <div className="text-base font-medium">1 Monat</div>
           </div>
         </div>
 
         <div className="mt-10 lg:mt-15">
-          <DoorButton className="w-full" href="https://funky-coffee.de/" target="_blank">OPEN WEBSITE</DoorButton>
+          <DoorButton className="w-full" href="https://funky-coffee.de/" target="_blank">WEBSITE ÖFFNEN</DoorButton>
         </div>
 
       </div>
@@ -169,7 +169,7 @@ export default function PageCaseFunkyCoffee() {
 
       {/* Started from */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Started From</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ausgangslage</h2>
         <div className="text-base space-y-3 flex-2">Funky Coffee startete mit einem klaren Produktfokus und einer starken eigenen Identität. Hochwertiger Kaffee, kreative Getränke, Matcha, japanisch inspirierte Sandwiches und hausgemachte Desserts bilden den Kern des Konzepts. Besonders wichtig war dabei, dass die Produkte nicht beliebig wirken, sondern handgemacht, frisch und persönlich.</div>
         <div className="text-base space-y-3 flex-2">Wir begannen damit, die Marke als kleines, aber eigenständiges Food-Erlebnis zu verstehen. Die Website sollte nicht wie eine einfache Café-Visitenkarte wirken, sondern die Atmosphäre, den Geschmack und den Charakter des Ortes transportieren. Dafür wurde die Seite als emotionaler Onepager aufgebaut, der Besucherinnen und Besucher schnell durch die wichtigsten Bereiche führt.</div>
       </div>
@@ -188,7 +188,7 @@ export default function PageCaseFunkyCoffee() {
 
       {/* Process */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Process</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Prozess</h2>
         <div className="text-base space-y-3 flex-2">Die zentrale Herausforderung bestand darin, ein relativ kompaktes Café-Konzept digital groß und einprägsam wirken zu lassen. Die Website musste erklären, was Funky Coffee besonders macht, ohne zu textlastig oder überladen zu werden. Kaffee, Sandwiches, Desserts, japanische Einflüsse und der Standort mussten auf einer Seite verständlich und appetitlich präsentiert werden.</div>
         <div className="text-base space-y-3 flex-2">
           <p>Wir entwickelten eine visuelle Richtung, die helle Food-Inszenierung, weiche Farben, japanisch inspirierte Details und eine leichte Anime-Ästhetik verbindet. Die Seite wurde bewusst lebendig gestaltet: mit Animationen, interaktiven Elementen und einer Nutzerführung, die beim Scrollen immer wieder neue visuelle Reize setzt.</p>
@@ -251,7 +251,7 @@ export default function PageCaseFunkyCoffee() {
 
       {/* Results */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Results</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ergebnisse</h2>
         <div className="text-base space-y-3 flex-2">Das Ergebnis ist ein lebendiger Onepager, der Funky Coffee als eigenständiges Café-Konzept positioniert. Die Website verbindet hochwertigen Kaffee, japanisch inspirierte Sandwiches, hausgemachte Desserts und eine verspielte visuelle Welt in einem klaren digitalen Erlebnis.</div>
         <div className="text-base space-y-3 flex-2">
           <p>Durch Animationen, starke Produktinszenierung und eine einfache Nutzerführung vermittelt der Auftritt nicht nur Informationen, sondern Atmosphäre. Besucherinnen und Besucher verstehen schnell, was Funky Coffee besonders macht, wo sich das Café befindet und warum sich ein Besuch lohnt.</p>

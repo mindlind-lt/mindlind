@@ -107,29 +107,29 @@ export default function PageCaseFunky() {
 
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 lg:flex lg:justify-between lg:gap-10">
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">CLIENT</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">KUNDE</div>
             <div className="text-base font-medium">Funky Ramen</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">NICHE</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">BRANCHE</div>
             <div className="text-base font-medium">Restaurant / Japanese Food</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">YEAR</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">JAHR</div>
             <div className="text-base font-medium">2025</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">CLIENT LOCATION</div>
-            <div className="text-base font-medium">GERMANY / INTERNATIONAL</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">STANDORT</div>
+            <div className="text-base font-medium">DEUTSCHLAND / INTERNATIONAL</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">TIMELINE</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">DAUER</div>
             <div className="text-base font-medium">1 Monat</div>
           </div>
         </div>
 
         <div className="mt-10 lg:mt-15">
-          <DoorButton className="w-full" href="https://funky-ramen.de/" target="_blank">OPEN WEBSITE</DoorButton>
+          <DoorButton className="w-full" href="https://funky-ramen.de/" target="_blank">WEBSITE ÖFFNEN</DoorButton>
         </div>
 
       </div>
@@ -169,7 +169,7 @@ export default function PageCaseFunky() {
 
       {/* Started from */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Started From</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ausgangslage</h2>
         <div className="text-base space-y-3 flex-2">Funky Ramen startete mit einem klaren gastronomischen Konzept: Ramen nach japanischer Inspiration, eigene kreative Rezepturen und eine Atmosphäre, die sich deutlich von klassischen Restaurants unterscheidet. Die Marke sollte nicht nur über das Essen funktionieren, sondern über ein gesamtes Erlebnis aus Geschmack, Design, Musik, Anime-Stimmung und urbaner Energie.</div>
         <div className="text-base space-y-3 flex-2">Wir begannen damit, die wichtigsten Stärken des Restaurants herauszuarbeiten: intensive Brühen, kreative Ramen-Sorten, warme große Rollen und ein Innenraum, der Gäste in eine japanisch inspirierte, fast filmische Welt bringt. Diese Elemente wurden zur Grundlage für die digitale Struktur und visuelle Richtung der Website.</div>
       </div>
@@ -188,7 +188,7 @@ export default function PageCaseFunky() {
 
       {/* Process */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Process</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Prozess</h2>
         <div className="text-base space-y-3 flex-2">Die Herausforderung bestand darin, Funky Ramen nicht wie ein gewöhnliches Restaurant zu präsentieren. Die Website sollte Appetit machen, aber gleichzeitig die besondere Atmosphäre des Ortes transportieren. Dafür musste der digitale Auftritt genauso eigenständig wirken wie das Restaurant selbst: laut genug, um aufzufallen, aber hochwertig genug, um professionell und vertrauenswürdig zu bleiben.</div>
         <div className="text-base space-y-3 flex-2">Wir entwickelten eine visuelle Richtung, die japanische Esskultur mit modernen Fashion-, Anime- und Samurai-Elementen verbindet. Ramen, Sushi, Rollen und visuelle Details wurden nicht nur als Produkte gezeigt, sondern als Teil einer klaren Markenwelt. Die Seite führt Nutzerinnen und Nutzer durch das Konzept, die Speisen und die Atmosphäre des Restaurants, ohne dabei überladen zu wirken.</div>
       </div>
@@ -247,7 +247,7 @@ export default function PageCaseFunky() {
 
 
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Results</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ergebnisse</h2>
         <div className="text-base space-y-3 flex-2">Das Ergebnis ist ein digitaler Auftritt, der Funky Ramen als eigenständiges Restaurantkonzept in Düsseldorf positioniert. Die Website vermittelt Geschmack, Atmosphäre und Markenidentität auf eine visuelle Weise, die neugierig macht und Lust auf einen Besuch erzeugt.</div>
         <div className="text-base space-y-3 flex-2">Funky Ramen wird dadurch nicht nur als Ort für Ramen und warme Rollen wahrgenommen, sondern als modernes japanisch inspiriertes Erlebnis mit eigener Handschrift. Der Auftritt stärkt die Marke, macht das Konzept verständlich und schafft eine starke Grundlage für Sichtbarkeit, Wiedererkennung und neue Gäste.</div>
       </div>

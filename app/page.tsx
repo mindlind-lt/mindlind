@@ -226,7 +226,7 @@ export default function Home() {
             <SplineTorus className="opacity-100 sm:opacity-30 xl:opacity-100" />
             
             <div className="font-mono text-2xl sm:text-3xl uppercase mb-24 sm:mb-60 mt-0 sm:mt-[-90vh] xl:mt-[-95vh] flex justify-between relative z-2">
-              <div>How We Work</div>
+              <div>So arbeiten wir</div>
               <div>[04]</div>
             </div>
 

@@ -27,7 +27,7 @@ export default function LegalPage({ title, path, children }: LegalPageProps) {
             <li>
               <Link
                 href="/"
-                aria-label="Home"
+                aria-label="Startseite"
                 className="flex items-center hover:text-primary-700 transition-colors"
               >
                 <House className="size-3.5" strokeWidth={2} />

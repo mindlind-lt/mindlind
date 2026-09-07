@@ -106,25 +106,25 @@ export default function PageCasePandaTravel() {
 
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 lg:flex lg:justify-between lg:gap-10">
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">CLIENT</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">KUNDE</div>
             <div className="text-base font-medium">Panda Travel</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">NICHE</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">BRANCHE</div>
             <div className="text-base font-medium">Business Travel / China Sourcing / Logistics</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">YEAR</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">JAHR</div>
             <div className="text-base font-medium">2024</div>
           </div>
           <div>
-            <div className="text-xs uppercase mb-2 lg:mb-5">TIMELINE</div>
+            <div className="text-xs uppercase mb-2 lg:mb-5">DAUER</div>
             <div className="text-base font-medium">1 Monat</div>
           </div>
         </div>
 
         {/* <div className="mt-10 lg:mt-15">
-          <DoorButton className="w-full" href="#">OPEN WEBSITE</DoorButton>
+          <DoorButton className="w-full" href="#">WEBSITE ÖFFNEN</DoorButton>
         </div> */}
 
       </div>
@@ -165,7 +165,7 @@ export default function PageCasePandaTravel() {
 
       {/* Started from */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Started From</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ausgangslage</h2>
         <div className="text-base space-y-3 flex-2">Panda Travel startete mit einem besonderen Konzept: Unternehmerinnen und Unternehmer sollten China nicht nur besuchen, sondern den Handel mit China praktisch verstehen. Dazu gehören Lieferantensuche, Fabrikbesuche, Messebesuche, Verhandlungen, Produktentwicklung, Qualitätsfragen und die organisatorischen Schritte, die vor einem erfolgreichen Import wichtig sind.</div>
         <div className="text-base space-y-3 flex-2">Wir begannen damit, das komplexe Angebot in eine klare digitale Struktur zu bringen. Die Website musste erklären, für wen die Reisen geeignet sind, welche Vorteile Teilnehmende erhalten und warum Panda Travel nicht einfach ein Reiseanbieter ist, sondern ein professioneller Begleiter für Business, Sourcing und internationale Handelsprozesse.</div>
       </div>
@@ -184,7 +184,7 @@ export default function PageCasePandaTravel() {
 
       {/* Process */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Process</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Prozess</h2>
         <div className="text-base space-y-3 flex-2">
           <p>Die zentrale Herausforderung bestand darin, ein erklärungsbedürftiges Angebot verständlich und hochwertig zu präsentieren. Business-Reisen nach China verbinden viele Themen: Reiseplanung, Lieferantensuche, Produktion, Logistik, kulturelle Orientierung und wirtschaftliche Entscheidungen. Diese Inhalte mussten so aufgebaut werden, dass Interessenten schnell Vertrauen entwickeln und den konkreten Nutzen erkennen.</p>
         </div>
@@ -258,7 +258,7 @@ export default function PageCasePandaTravel() {
 
       {/* Results */}
       <div className="container mx-auto px-5 py-10 lg:py-15 flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Results</h2>
+        <h2 className="text-xl font-semibold flex-1 lg:max-w-50">Ergebnisse</h2>
         <div className="text-base space-y-3 flex-2">
           <p>Das Ergebnis ist ein individueller digitaler Auftritt, der Panda Travel als vertrauenswürdigen Partner für Geschäftsreisen nach China positioniert. Die Website erklärt ein komplexes Angebot klar, schafft Vertrauen und macht den konkreten Nutzen für Unternehmerinnen, Unternehmer und Unternehmen sichtbar.</p>
         </div>
