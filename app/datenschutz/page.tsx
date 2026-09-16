@@ -113,10 +113,17 @@ export const metadata: Metadata = {
  *     separate service on different hosting with its own policy.
  *
  * 13. STAND — the date below is manual. Bump it whenever this page changes.
+ *
+ * 14. GTM CONTAINER CONTENTS (section 7) — the GTM container (GTM-TCCBJFML) is
+ *     configured in Google's web UI, not in this repository, so which tags it
+ *     actually fires cannot be checked here. Section 7 assumes it only loads
+ *     Google Analytics. Every other tool added in the container (Meta Pixel,
+ *     Google Ads, Hotjar, ...) needs its own paragraph here, its own line in
+ *     the banner, and — for anything ad-related — its own consent category.
  * ---------------------------------------------------------------------------
  */
 
-const STAND = "August 2026";
+const STAND = "September 2026";
 
 export default function PagePrivacy() {
   return (
@@ -384,7 +391,8 @@ export default function PagePrivacy() {
         </p>
         <ul className="list-disc pl-5 space-y-2 mb-4">
           <li>
-            <strong>Statistik</strong> — Google Analytics 4 (Abschnitt 7)
+            <strong>Statistik</strong> — Google Tag Manager und Google
+            Analytics 4 (Abschnitt 7)
           </li>
         </ul>
         <p className="mb-4">
@@ -404,7 +412,8 @@ export default function PagePrivacy() {
         </p>
         <p>
           Widerrufen Sie die Kategorie „Statistik“, löschen wir die von Google
-          Analytics gesetzten Cookies und laden den Dienst nicht erneut.
+          Analytics gesetzten Cookies und laden weder Google Tag Manager noch
+          Google Analytics erneut.
           Unabhängig davon können Sie Cookies jederzeit in den Einstellungen
           Ihres Browsers löschen oder deren Speicherung generell unterbinden.
         </p>
@@ -468,8 +477,30 @@ export default function PagePrivacy() {
       {/* 7 */}
       <section>
         <h2 className="font-mono text-xl uppercase mb-4">
-          7. Webanalyse: Google Analytics 4
+          7. Webanalyse: Google Tag Manager und Google Analytics 4
         </h2>
+
+        <h3 className="font-semibold mb-2">Google Tag Manager</h3>
+        {/* UNVERIFIED #14 — describes the container as loading only Google
+            Analytics; its real contents live in Google's UI, not this repo. */}
+        <p className="mb-4">
+          Sofern Sie in die Kategorie „Statistik“ eingewilligt haben, nutzen
+          wir den Google Tag Manager der Google Ireland Limited, Gordon House,
+          Barrow Street, Dublin 4, Irland (nachfolgend „Google“). Der Google
+          Tag Manager ist ein Werkzeug, mit dem wir Analyse-Dienste auf
+          unserer Website einbinden und verwalten können. Er selbst setzt
+          keine Cookies und wertet keine Nutzungsdaten aus, sondern lädt
+          lediglich die über ihn eingebundenen Dienste — auf dieser Website
+          ausschließlich Google Analytics 4 (siehe unten). Beim Laden des
+          Google Tag Manager wird jedoch eine Verbindung zu Servern von Google
+          hergestellt, wobei Google Ihre IP-Adresse sowie Angaben zu Browser
+          und Endgerät verarbeitet; eine Übermittlung an die Google LLC in den
+          USA kann dabei nicht ausgeschlossen werden. Für die Rechtsgrundlage
+          und die Drittlandübermittlung gilt das unten zu Google Analytics
+          Gesagte entsprechend.
+        </p>
+
+        <h3 className="font-semibold mb-2">Google Analytics 4</h3>
         {/* UNVERIFIED #3 — GA4 is not live yet (NEXT_PUBLIC_GA_ID unset). This
             section and the measurement ID must ship in the same deploy. */}
         <p className="mb-4">

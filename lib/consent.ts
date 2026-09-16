@@ -25,8 +25,10 @@ export const CONSENT_COOKIE = 'ml_consent';
  * new embed provider). A decision recorded against an older service list is
  * not consent for the current one, so an older version reads back as
  * "undecided" and the banner asks again.
+ *
+ * v2: Google Tag Manager added to `statistics` alongside Google Analytics 4.
  */
-export const CONSENT_VERSION = 1;
+export const CONSENT_VERSION = 2;
 
 /**
  * "Notwendig" is not in this list on purpose: strictly necessary storage needs

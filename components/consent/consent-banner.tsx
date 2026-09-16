@@ -41,7 +41,7 @@ const CATEGORIES: readonly CategoryCopy[] = [
     id: 'statistics',
     title: 'Statistik',
     body:
-      'Google Analytics 4 (Google Ireland Limited, Irland). Misst anonymisiert, welche Seiten aufgerufen werden, damit wir die Website verbessern können. Setzt Cookies auf Ihrem Endgerät und überträgt Daten an Google, auch in die USA.',
+      'Google Tag Manager und Google Analytics 4 (Google Ireland Limited, Irland). Misst anonymisiert, welche Seiten aufgerufen werden, damit wir die Website verbessern können. Setzt Cookies auf Ihrem Endgerät und überträgt Daten an Google, auch in die USA.',
   },
 ];
 

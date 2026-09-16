@@ -8,6 +8,7 @@ import TopProgressBar from "@/components/progress-bar/top-progress-bar";
 import SmoothScroll from "@/components/smooth-scroll/smooth-scroll";
 import ConsentBanner from "@/components/consent/consent-banner";
 import GoogleAnalytics from "@/components/analytics/google-analytics";
+import GoogleTagManager from "@/components/analytics/google-tag-manager";
 import { siteConfig } from "@/lib/site";
 import { organizationSchema } from "@/lib/schema";
 
@@ -89,13 +90,15 @@ export default function RootLayout({
 
         <Footer />
 
-        {/* Both read the consent cookie in the browser after hydration.
+        {/* All three read the consent cookie in the browser after hydration.
             That is what keeps them compatible with `output: "export"`, which
             has no request-time server to read a cookie on.
             GoogleAnalytics renders nothing at all until NEXT_PUBLIC_GA_ID is
-            set AND the visitor has accepted the Statistik category. */}
+            set AND the visitor has accepted the Statistik category;
+            GoogleTagManager waits for the same consent. */}
         <ConsentBanner />
         <GoogleAnalytics />
+        <GoogleTagManager />
 
       </body>
     </html>
