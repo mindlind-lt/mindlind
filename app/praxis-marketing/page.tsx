@@ -2,14 +2,24 @@ import type { Metadata } from "next";
 
 import { socialCard } from "@/lib/site";
 
+import CountUpOnView from "@/components/count-up-on-view";
+import DoorButton from "@/components/door-button/door-button";
+import PersonCard from "@/components/person-card/person-card";
+import SectionContact from "@/components/section-contact/section-contact";
+import TeamCarousel from "@/components/team-carousel/team-carousel";
+import UnderlinedHeader from "@/components/underlined-header/underlined-header";
+import WorkThumb from "@/components/work-thumb/work-thumb";
+
+import "./praxis-marketing.css";
+
 /**
  * Content source: MindLind-Praxismarketing-Content-DE.md (Reihenfolge des
- * UX-Makets "DOCTORS.pdf"). Text is transcribed verbatim; only markup is added.
+ * UX-Makets "DOCTORS.pdf"). Every string on the page is transcribed from it.
  *
- * Two kinds of material from that document are kept as comments rather than
- * rendered, because the document itself marks them as not belonging on the
- * page: the editorial notes in square brackets, and the image briefs. Image
- * slots keep their Alt-Text so it is ready once the assets exist.
+ * The bracketed editorial notes in that document stay as comments: it says at
+ * the top that they are instructions and do not belong on the website. The six
+ * image motifs do not exist as files yet, so each slot renders as a designed
+ * placeholder carrying its brief and alt text (see .praxis-figure).
  */
 
 const DESCRIPTION =
@@ -25,7 +35,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/praxis-marketing" },
   // Matches `published: false` for this route in lib/site.ts, which also keeps
   // it out of sitemap.xml and llms.txt. Flip both together once the page is
-  // designed rather than a raw content transcript.
+  // ready to be indexed.
   robots: { index: false, follow: false },
   openGraph: {
     type: "website",
@@ -44,423 +54,666 @@ export const metadata: Metadata = {
   },
 };
 
+/** Section counter shown in mono beside each section heading, as on /agency. */
+function SectionIndex({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="text-primary-700 font-mono text-2xl sm:text-3xl uppercase">
+      {children}
+    </div>
+  );
+}
+
 export default function LandingPraxis() {
   return (
     <>
-      {/* 01 | Hero */}
-      <section>
-        <p>Online-Marketing für Ärzte</p>
+      {/* ---- 01 | Hero ------------------------------------------------- */}
+      <section className="praxis-hero pb-12 lg:pb-20">
+        <div className="container mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
-        <h1>Praxismarketing, das zu Ihrer Praxis passt.</h1>
+            <div className="flex flex-col gap-6 lg:gap-8">
+              <p className="praxis-eyebrow">Online-Marketing für Ärzte</p>
 
-        <p>
-          Sie möchten bestimmte Behandlungen stärker in den Fokus rücken, Ihre
-          Praxis bekannt machen oder die Online-Terminbuchung erleichtern?
-          MindLind verbindet Website, lokale Sichtbarkeit und Werbung zu einem
-          klaren Auftritt. Damit Patienten verstehen, wofür Ihre Praxis steht,
-          welche Leistungen Sie anbieten und wie sie einen Termin vereinbaren
-          können. Ausgerichtet auf Ihre Fachrichtung, Ihre Ziele und die
-          Kapazitäten Ihres Teams.
-        </p>
+              <h1 className="praxis-h1">
+                Praxismarketing, das zu Ihrer Praxis passt.
+              </h1>
 
-        <a href="/contact">Praxisziele besprechen</a>
+              <p className="praxis-lead">
+                Sie möchten bestimmte Behandlungen stärker in den Fokus rücken,
+                Ihre Praxis bekannt machen oder die Online-Terminbuchung
+                erleichtern? MindLind verbindet Website, lokale Sichtbarkeit und
+                Werbung zu einem klaren Auftritt. Damit Patienten verstehen,
+                wofür Ihre Praxis steht, welche Leistungen Sie anbieten und wie
+                sie einen Termin vereinbaren können. Ausgerichtet auf Ihre
+                Fachrichtung, Ihre Ziele und die Kapazitäten Ihres Teams.
+              </p>
 
-        {/* Bild 01: Praxisinhaberin in einer modernen, glaubwürdigen Praxis.
-            Ruhiges, selbstbewusstes Porträt ohne Werbeinszenierung. Bild rechts
-            neben dem Text, Querformat 5:4.
-            Alt-Text: "Ärztin in einer hellen, modernen Praxis" */}
+              <div>
+                <DoorButton href="/contact">Praxisziele besprechen</DoorButton>
+              </div>
+            </div>
+
+            {/* Bild 01, Querformat 5:4 — Praxisinhaberin in einer modernen,
+                glaubwürdigen Praxis. Ruhiges, selbstbewusstes Porträt ohne
+                Werbeinszenierung. */}
+            <figure className="praxis-figure praxis-figure--5-4">
+              <div className="praxis-figure-inner">
+                <span className="praxis-figure-tag">Bild 01 · 5:4</span>
+                <figcaption className="praxis-figure-note">
+                  Ärztin in einer hellen, modernen Praxis
+                </figcaption>
+              </div>
+            </figure>
+
+          </div>
+        </div>
       </section>
 
-      {/* 02 | Drei kompakte Akzente */}
+      {/* ---- 02 | Drei kompakte Akzente -------------------------------- */}
       {/* [Ersatz für die drei "100+"-Platzhalter. Die Zahlen beschreiben das auf
           dieser Seite erläuterte Vorgehen, keine unbelegten Erfolge oder
           Unternehmenskennzahlen.] */}
-      <section>
-        <ul>
-          <li>
-            <strong>3</strong> <span>Schritte zur Zusammenarbeit</span>
-          </li>
-          <li>
-            <strong>6</strong> <span>Bausteine für Ihren Auftritt</span>
-          </li>
-          <li>
-            <strong>1</strong> <span>Klarer Plan für Ihre Praxis</span>
-          </li>
-        </ul>
+      <section className="pb-12 lg:pb-20">
+        <div className="container mx-auto px-6 sm:px-8">
+          <div className="praxis-stats">
+
+            <div className="praxis-stat">
+              <CountUpOnView value={3} className="praxis-stat-value" />
+              <div className="praxis-stat-label">Schritte zur Zusammenarbeit</div>
+            </div>
+
+            <div className="praxis-stat">
+              <CountUpOnView value={6} className="praxis-stat-value" />
+              <div className="praxis-stat-label">Bausteine für Ihren Auftritt</div>
+            </div>
+
+            <div className="praxis-stat">
+              <CountUpOnView value={1} className="praxis-stat-value" />
+              <div className="praxis-stat-label">Klarer Plan für Ihre Praxis</div>
+            </div>
+
+          </div>
+        </div>
       </section>
 
+      {/* ---- 03 | Drei Leistungskarten --------------------------------- */}
       {/* [Die sechs Bausteine: Website, SEO, Google Ads, Texte, Foto/Video und
           digitale Patientenkommunikation. Die folgenden Karten ordnen ihre
           konkreten Leistungen nach dem Nutzen für die Praxis.] */}
+      <section className="py-12 lg:py-20">
+        <div className="container mx-auto px-6 sm:px-8">
 
-      {/* 03 | Drei Leistungskarten */}
-      <section>
-        <article>
-          <h2>Sichtbar werden</h2>
-          <ul>
-            <li>Suchmaschinenoptimierung</li>
-            <li>Google-Unternehmensprofil</li>
-            <li>Lokale Google-Ads-Kampagnen</li>
-            <li>Seiten für Ihre Behandlungen</li>
-            <li>Inhalte mit regionalem Bezug</li>
-            <li>Auswertung der Auffindbarkeit</li>
-          </ul>
-        </article>
+          <div className="flex justify-between items-start gap-8 pb-8 lg:pb-12">
+            <SectionIndex>[01]</SectionIndex>
+          </div>
 
-        <article>
-          <h2>Vertrauen aufbauen</h2>
-          <ul>
-            <li>Individuelle Praxiswebsite</li>
-            <li>Klare Positionierung</li>
-            <li>Verständliche medizinische Texte</li>
-            <li>Professionelle Praxisfotografie</li>
-            <li>Videos für Praxis und Team</li>
-            <li>Übersichtliche mobile Darstellung</li>
-          </ul>
-        </article>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
 
-        <article>
-          <h2>Kontakt erleichtern</h2>
-          <ul>
-            <li>Einbindung der Online-Terminbuchung</li>
-            <li>Gut erreichbare Kontaktwege</li>
-            <li>Antworten auf häufige Fragen</li>
-            <li>вы Anfrageformulare</li>
-            <li>Klare Hinweise vor dem Termin</li>
-            <li>Analyse der Kontaktwege</li>
-          </ul>
-        </article>
-      </section>
-
-      {/* 04 | Großer Text mit Bild und zwei Akzenten */}
-      <section>
-        <h2>Ihre Praxis ist besonders. Ihr Online-Auftritt sollte zeigen, warum.</h2>
-
-        <p>
-          Welche Schwerpunkte setzen Sie? Wie beraten Sie? Was erwartet
-          Patienten beim ersten Besuch? Wir machen Ihre Praxis online greifbar:
-          mit verständlichen Leistungsseiten, einer klaren Struktur und Bildern,
-          die zu Ihnen passen. So können sich Patienten schon vor dem ersten
-          Anruf orientieren. Gemeinsam legen wir fest, welche Behandlungen und
-          Anliegen im Mittelpunkt stehen sollen.
-        </p>
-
-        <figure>
-          {/* Bild 02: Arzt im aufmerksamen Gespräch mit einer erwachsenen
-              Patientin. Natürliches Licht, zugewandte Haltung, keine Behandlung
-              und keine gestellte Handschlag-Szene. Querformat 5:4.
-              Alt-Text: "Arzt im persönlichen Gespräch mit einer Patientin" */}
-
-          {/* Akzente auf dem Bild. [Diese beiden Aussagen ersetzen die Zahlen auf
-              dem Bild. Keine erfundenen Wachstumswerte ergänzen.] */}
-          <ul>
-            <li>
-              <strong>Klar positioniert</strong>
-              <span>Ihre Schwerpunkte im Fokus</span>
-            </li>
-            <li>
-              <strong>Einfach erreichbar</strong>
-              <span>Direkter Weg zum Termin</span>
-            </li>
-          </ul>
-        </figure>
-      </section>
-
-      {/* 05 | Zwei Textspalten */}
-      <section>
-        <article>
-          <h2>Was Patienten vor dem Termin wissen möchten</h2>
-          <ul>
-            <li>Behandelt diese Praxis mein Anliegen?</li>
-            <li>Welche Erfahrung bringt das Team mit?</li>
-            <li>Was erwartet mich bei der Untersuchung?</li>
-            <li>Wie kann ich einen Termin vereinbaren?</li>
-          </ul>
-        </article>
-
-        <article>
-          <h2>Was Ihr Online-Auftritt dafür leisten muss</h2>
-          <ul>
-            <li>Die passenden Leistungsseiten auffindbar machen</li>
-            <li>Qualifikationen und Schwerpunkte verständlich zeigen</li>
-            <li>Abläufe erklären und offene Fragen beantworten</li>
-            <li>Ohne Umwege zur Kontaktaufnahme führen</li>
-          </ul>
-        </article>
-      </section>
-
-      {/* 06 | Portfolio */}
-      <section>
-        <p>Einblicke in unsere Arbeit</p>
-
-        <h2>So wird medizinische Kompetenz sichtbar.</h2>
-
-        <p>
-          Jede Praxis hat eigene Schwerpunkte. Entsprechend individuell
-          entwickeln wir ihre digitale Präsentation. Entdecken Sie ausgewählte
-          Projekte und die Leistungen dahinter.
-        </p>
-
-        {/* [Die drei sichtbaren Karten bzw. der Slider benötigen echte
-            MindLind-Projekte mit freigegebenen Namen, Leistungsangaben und
-            Screenshots. Keine KI-generierten Praxiswebsites als Referenzen
-            verwenden. Ohne vorhandene Projektseite direkt auf die freigegebene
-            Website verlinken und den Link "Praxiswebsite ansehen" nennen.] */}
-        <ul>
-          <li>
-            <article>
-              <h3>[Name der Praxis]</h3>
-              <p>[Fachrichtung · Ort]</p>
-              <p>[Tatsächlich erbrachte Leistungen, z. B. Webdesign · Texte · SEO]</p>
-              <a href="/projects">Projekt ansehen</a>
+            <article className="praxis-card">
+              <h2 className="praxis-card-head">
+                Sichtbar werden
+                <span className="praxis-card-index">01</span>
+              </h2>
+              <div className="praxis-card-body">
+                <ul className="praxis-card-list">
+                  <li>Suchmaschinenoptimierung</li>
+                  <li>Google-Unternehmensprofil</li>
+                  <li>Lokale Google-Ads-Kampagnen</li>
+                  <li>Seiten für Ihre Behandlungen</li>
+                  <li>Inhalte mit regionalem Bezug</li>
+                  <li>Auswertung der Auffindbarkeit</li>
+                </ul>
+              </div>
             </article>
-          </li>
-        </ul>
+
+            <article className="praxis-card">
+              <h2 className="praxis-card-head">
+                Vertrauen aufbauen
+                <span className="praxis-card-index">02</span>
+              </h2>
+              <div className="praxis-card-body">
+                <ul className="praxis-card-list">
+                  <li>Individuelle Praxiswebsite</li>
+                  <li>Klare Positionierung</li>
+                  <li>Verständliche medizinische Texte</li>
+                  <li>Professionelle Praxisfotografie</li>
+                  <li>Videos für Praxis und Team</li>
+                  <li>Übersichtliche mobile Darstellung</li>
+                </ul>
+              </div>
+            </article>
+
+            <article className="praxis-card">
+              <h2 className="praxis-card-head">
+                Kontakt erleichtern
+                <span className="praxis-card-index">03</span>
+              </h2>
+              <div className="praxis-card-body">
+                <ul className="praxis-card-list">
+                  <li>Einbindung der Online-Terminbuchung</li>
+                  <li>Gut erreichbare Kontaktwege</li>
+                  <li>Antworten auf häufige Fragen</li>
+                  <li>Anfrageformulare</li>
+                  <li>Klare Hinweise vor dem Termin</li>
+                  <li>Analyse der Kontaktwege</li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
       </section>
 
-      {/* 07 | Haltung und Team */}
+      {/* ---- 04 | Großer Text mit Bild und zwei Akzenten --------------- */}
+      <section className="py-12 lg:py-20">
+        <div className="container mx-auto px-6 sm:px-8">
+
+          <div className="pb-8 lg:pb-12">
+            <SectionIndex>[02]</SectionIndex>
+          </div>
+
+          <UnderlinedHeader className="mb-10 lg:mb-16">
+            Ihre Praxis ist besonders. Ihr Online-Auftritt sollte zeigen, warum.
+          </UnderlinedHeader>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+
+            <p className="praxis-lead">
+              Welche Schwerpunkte setzen Sie? Wie beraten Sie? Was erwartet
+              Patienten beim ersten Besuch? Wir machen Ihre Praxis online
+              greifbar: mit verständlichen Leistungsseiten, einer klaren
+              Struktur und Bildern, die zu Ihnen passen. So können sich
+              Patienten schon vor dem ersten Anruf orientieren. Gemeinsam legen
+              wir fest, welche Behandlungen und Anliegen im Mittelpunkt stehen
+              sollen.
+            </p>
+
+            {/* Bild 02, Querformat 5:4 — Arzt im aufmerksamen Gespräch mit einer
+                erwachsenen Patientin. Natürliches Licht, zugewandte Haltung,
+                keine Behandlung und keine gestellte Handschlag-Szene. */}
+            <figure className="praxis-figure praxis-figure--5-4 praxis-figure--accented">
+              <div className="praxis-figure-inner">
+                <span className="praxis-figure-tag">Bild 02 · 5:4</span>
+                <figcaption className="praxis-figure-note">
+                  Arzt im persönlichen Gespräch mit einer Patientin
+                </figcaption>
+              </div>
+
+              {/* [Diese beiden Aussagen ersetzen die Zahlen auf dem Bild. Keine
+                  erfundenen Wachstumswerte ergänzen.] */}
+              <div className="praxis-accents">
+                <div className="praxis-accent">
+                  <div className="praxis-accent-title">Klar positioniert</div>
+                  <div className="praxis-accent-note">Ihre Schwerpunkte im Fokus</div>
+                </div>
+                <div className="praxis-accent">
+                  <div className="praxis-accent-title">Einfach erreichbar</div>
+                  <div className="praxis-accent-note">Direkter Weg zum Termin</div>
+                </div>
+              </div>
+            </figure>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ---- 05 | Zwei Textspalten ------------------------------------- */}
+      <section className="py-12 lg:py-20">
+        <div className="container mx-auto px-6 sm:px-8">
+
+          <div className="pb-8 lg:pb-12">
+            <SectionIndex>[03]</SectionIndex>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
+
+            <div>
+              <h2 className="praxis-h3 mb-6 lg:mb-8">
+                Was Patienten vor dem Termin wissen möchten
+              </h2>
+              <ul>
+                <li className="praxis-pair-item">
+                  <span className="praxis-pair-index">01</span>
+                  <span className="praxis-pair-text">Behandelt diese Praxis mein Anliegen?</span>
+                </li>
+                <li className="praxis-pair-item">
+                  <span className="praxis-pair-index">02</span>
+                  <span className="praxis-pair-text">Welche Erfahrung bringt das Team mit?</span>
+                </li>
+                <li className="praxis-pair-item">
+                  <span className="praxis-pair-index">03</span>
+                  <span className="praxis-pair-text">Was erwartet mich bei der Untersuchung?</span>
+                </li>
+                <li className="praxis-pair-item">
+                  <span className="praxis-pair-index">04</span>
+                  <span className="praxis-pair-text">Wie kann ich einen Termin vereinbaren?</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="praxis-h3 mb-6 lg:mb-8">
+                Was Ihr Online-Auftritt dafür leisten muss
+              </h2>
+              <ul>
+                <li className="praxis-pair-item">
+                  <span className="praxis-pair-index">01</span>
+                  <span className="praxis-pair-text">Die passenden Leistungsseiten auffindbar machen</span>
+                </li>
+                <li className="praxis-pair-item">
+                  <span className="praxis-pair-index">02</span>
+                  <span className="praxis-pair-text">Qualifikationen und Schwerpunkte verständlich zeigen</span>
+                </li>
+                <li className="praxis-pair-item">
+                  <span className="praxis-pair-index">03</span>
+                  <span className="praxis-pair-text">Abläufe erklären und offene Fragen beantworten</span>
+                </li>
+                <li className="praxis-pair-item">
+                  <span className="praxis-pair-index">04</span>
+                  <span className="praxis-pair-text">Ohne Umwege zur Kontaktaufnahme führen</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ---- 06 | Portfolio -------------------------------------------- */}
+      {/* [Die drei sichtbaren Karten bzw. der Slider benötigen echte
+          MindLind-Projekte mit freigegebenen Namen, Leistungsangaben und
+          Screenshots. Keine KI-generierten Praxiswebsites als Referenzen
+          verwenden.] — erfüllt durch die beiden freigegebenen Dentalprojekte,
+          die auch auf /projects laufen. Name, Bild und Leistungen sind von dort
+          übernommen; nichts davon ist für diese Seite erfunden. */}
+      <section className="py-12 lg:py-20">
+        <div className="container mx-auto px-6 sm:px-8">
+
+          <div className="flex justify-between items-start gap-8 pb-8 lg:pb-12">
+            <p className="praxis-eyebrow">Einblicke in unsere Arbeit</p>
+            <SectionIndex>[04]</SectionIndex>
+          </div>
+
+          <UnderlinedHeader className="mb-10 lg:mb-16">
+            So wird medizinische Kompetenz sichtbar.
+          </UnderlinedHeader>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-10 lg:gap-20 items-start">
+
+            <p className="praxis-lead lg:sticky lg:top-(--hdr-height)">
+              Jede Praxis hat eigene Schwerpunkte. Entsprechend individuell
+              entwickeln wir ihre digitale Präsentation. Entdecken Sie
+              ausgewählte Projekte und die Leistungen dahinter.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+              <WorkThumb
+                headingLevel="h3"
+                href="/projects/mondent"
+                imageSrc="/images/case-mondent-1.webp"
+                imageAlt="Mondent — Website und UX/UI für eine Zahnarztpraxis"
+                imageWidth={560}
+                imageHeight={560}
+                title="Mondent"
+                pills={["Website", "UX/UI"]}
+              />
+              <WorkThumb
+                headingLevel="h3"
+                href="/projects/onlysmile"
+                imageSrc="/images/case-onlysmile-1.webp"
+                imageAlt="OnlySmile — Website und UX/UI für professionelles Zahnbleaching"
+                imageWidth={560}
+                imageHeight={560}
+                title="OnlySmile"
+                pills={["Website", "UX/UI"]}
+              />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ---- 07 | Haltung und Team ------------------------------------- */}
       {/* [Dieser Text ersetzt den Referenzblock mit dem fremden Agenturinhaber.
           Das Layout kann bleiben; Name, Porträt, Zitat und Erfahrungsaussagen
           der Referenz werden nicht übernommen.] */}
-      <section>
-        <h2>Ihr Marketing muss auch im Praxisalltag funktionieren.</h2>
+      <section className="py-12 lg:py-20 overflow-hidden">
+        <div className="container mx-auto px-6 sm:px-8">
 
-        <p>
-          Zusätzliche Anfragen helfen Ihrer Praxis dann, wenn sie zu Ihren
-          Leistungen und verfügbaren Terminen passen. Deshalb beginnt unsere
-          Arbeit mit einem Gespräch über Ihren Praxisalltag.
-        </p>
+          <div className="pb-8 lg:pb-12">
+            <SectionIndex>[05]</SectionIndex>
+          </div>
 
-        {/* Hervorgehobene Aussage, ohne Zitatzeichen */}
-        <p>
-          <strong>
-            Welche Patienten möchten Sie erreichen? Und wofür hat Ihre Praxis
-            Kapazität?
-          </strong>
-        </p>
+          <UnderlinedHeader className="mb-10 lg:mb-16">
+            Ihr Marketing muss auch im Praxisalltag funktionieren.
+          </UnderlinedHeader>
 
-        <p>
-          Vielleicht möchten Sie eine neue Sprechstunde etablieren, einen
-          Behandlungsschwerpunkt bekannter machen oder wiederkehrende Fragen
-          schon auf der Website beantworten. Wir übersetzen diese Ziele in
-          konkrete Inhalte und Maßnahmen. Dabei denken wir den gesamten Weg mit:
-          von der ersten Suche über die Information zur Behandlung bis zur
-          Kontaktaufnahme.
-        </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 mb-12 lg:mb-20">
 
-        <figure>
+            <div className="flex flex-col gap-8">
+              <p className="praxis-lead">
+                Zusätzliche Anfragen helfen Ihrer Praxis dann, wenn sie zu Ihren
+                Leistungen und verfügbaren Terminen passen. Deshalb beginnt
+                unsere Arbeit mit einem Gespräch über Ihren Praxisalltag.
+              </p>
+
+              {/* Hervorgehobene Aussage, ohne Zitatzeichen. */}
+              <p className="praxis-statement">
+                Welche Patienten möchten Sie erreichen? Und wofür hat Ihre
+                Praxis Kapazität?
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-8">
+              <p>
+                Vielleicht möchten Sie eine neue Sprechstunde etablieren, einen
+                Behandlungsschwerpunkt bekannter machen oder wiederkehrende
+                Fragen schon auf der Website beantworten. Wir übersetzen diese
+                Ziele in konkrete Inhalte und Maßnahmen. Dabei denken wir den
+                gesamten Weg mit: von der ersten Suche über die Information zur
+                Behandlung bis zur Kontaktaufnahme.
+              </p>
+
+              <p className="praxis-h3">
+                Sie bringen die medizinische Expertise ein. Wir kümmern uns um
+                die digitale Umsetzung.
+              </p>
+
+              <p className="text-sm text-muted-foreground">
+                Medizinische Inhalte stimmen wir mit Ihnen ab. Texte, Bilder und
+                Kontaktwege entwickeln wir als zusammenhängenden Auftritt.
+              </p>
+            </div>
+
+          </div>
+
           {/* [Bild: echtes Foto des MindLind-Teams oder eines tatsächlichen
               Ansprechpartners. Kein generierter Mensch als Mitarbeiter oder
-              Gründer.] */}
-          <figcaption>
-            <strong>MindLind</strong>
-            <span>Das Team hinter Ihrem Praxisauftritt</span>
-          </figcaption>
-        </figure>
+              Gründer.] — erfüllt: dieselben Teamfotos wie auf /agency. */}
+          <figure className="m-0">
+            <figcaption className="font-mono uppercase mb-6 lg:mb-8">
+              <span className="text-2xl sm:text-3xl block">MindLind</span>
+              <span className="text-sm text-muted-foreground">
+                Das Team hinter Ihrem Praxisauftritt
+              </span>
+            </figcaption>
 
-        <p>
-          Sie bringen die medizinische Expertise ein. Wir kümmern uns um die
-          digitale Umsetzung.
-        </p>
+            <TeamCarousel>
+              <PersonCard imageSrc="/images/team-1.webp" name="Jan" role="Creative Director" />
+              <PersonCard imageSrc="/images/team-2.webp" name="Georgy" role="Managing Director" />
+              <PersonCard imageSrc="/images/team-3.webp" name="Almaz" role="Webentwickler" />
+              <PersonCard imageSrc="/images/team-4.webp" name="Lera" role="Designer" />
+              <PersonCard imageSrc="/images/team-5.webp" name="Evgeny" role="Videoproduktion" />
+            </TeamCarousel>
+          </figure>
 
-        <p>
-          Medizinische Inhalte stimmen wir mit Ihnen ab. Texte, Bilder und
-          Kontaktwege entwickeln wir als zusammenhängenden Auftritt.
-        </p>
+        </div>
       </section>
 
-      {/* 08 | Vergleichstabelle */}
-      <section>
-        <h2>Was Ihre Praxis braucht, bestimmt die Maßnahmen.</h2>
+      {/* ---- 08 | Vergleichstabelle ------------------------------------ */}
+      {/* [Bewusster Ersatz für den Vergleich mit "klassischen Agenturen". Keine
+          pauschalen Aussagen über Wettbewerber, garantierten Freigaben,
+          erfundenen Terminkosten oder Gewinnversprechen.] */}
+      <section className="py-12 lg:py-20">
+        <div className="container mx-auto px-6 sm:px-8">
 
-        <p>
-          Wir besprechen zuerst, was sich für Ihre Praxis verbessern soll.
-          Daraus leiten wir ab, welche Inhalte, Kanäle und Kontaktwege sinnvoll
-          sind und woran wir die Entwicklung beurteilen.
-        </p>
+          <div className="pb-8 lg:pb-12">
+            <SectionIndex>[06]</SectionIndex>
+          </div>
 
-        {/* [Bewusster Ersatz für den Vergleich mit "klassischen Agenturen".
-            Keine pauschalen Aussagen über Wettbewerber, garantierten Freigaben,
-            erfundenen Terminkosten oder Gewinnversprechen.] */}
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Ihr Praxisziel</th>
-              <th scope="col">Was wir gemeinsam klären</th>
-              <th scope="col">So setzen wir es um</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Einen Schwerpunkt stärken</th>
-              <td>Welche Behandlungen möchten Sie bekannter machen?</td>
-              <td>Eigene Leistungsseiten und darauf abgestimmte Kampagnen</td>
-            </tr>
-            <tr>
-              <th scope="row">Regional gefunden werden</th>
-              <td>Aus welchem Einzugsgebiet kommen passende Patienten?</td>
-              <td>Lokale SEO, ein gepflegtes Google-Profil und regionale Anzeigen</td>
-            </tr>
-            <tr>
-              <th scope="row">Vertrauen vermitteln</th>
-              <td>Welche Fragen stellen Patienten vor dem ersten Besuch?</td>
-              <td>
-                Verständliche Texte, echte Praxisbilder und klare Informationen
-                zum Ablauf
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Die Anmeldung entlasten</th>
-              <td>Welche Fragen und Terminwünsche lassen sich online abfangen?</td>
-              <td>
-                Gut auffindbare Antworten und eine sinnvoll eingebundene
-                Terminbuchung
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Das Budget gezielt einsetzen</th>
-              <td>Welche Kontaktwege werden genutzt und welche Anfragen passen?</td>
-              <td>Auswertung messbarer Kontakte und Optimierung mit Ihrem Feedback</td>
-            </tr>
-          </tbody>
-        </table>
+          <UnderlinedHeader className="mb-10 lg:mb-16">
+            Was Ihre Praxis braucht, bestimmt die Maßnahmen.
+          </UnderlinedHeader>
 
-        <p>
-          Die Zahlen aus dem Marketing und die Rückmeldung aus Ihrer Praxis
-          gehören zusammen.
-        </p>
+          <p className="praxis-lead max-w-3xl mb-10 lg:mb-14">
+            Wir besprechen zuerst, was sich für Ihre Praxis verbessern soll.
+            Daraus leiten wir ab, welche Inhalte, Kanäle und Kontaktwege
+            sinnvoll sind und woran wir die Entwicklung beurteilen.
+          </p>
+
+          <div className="praxis-table-frame">
+            <table className="praxis-table">
+              <thead>
+                <tr>
+                  <th scope="col">Ihr Praxisziel</th>
+                  <th scope="col">Was wir gemeinsam klären</th>
+                  <th scope="col">So setzen wir es um</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Einen Schwerpunkt stärken</th>
+                  <td data-label="Was wir gemeinsam klären">
+                    Welche Behandlungen möchten Sie bekannter machen?
+                  </td>
+                  <td data-label="So setzen wir es um">
+                    Eigene Leistungsseiten und darauf abgestimmte Kampagnen
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Regional gefunden werden</th>
+                  <td data-label="Was wir gemeinsam klären">
+                    Aus welchem Einzugsgebiet kommen passende Patienten?
+                  </td>
+                  <td data-label="So setzen wir es um">
+                    Lokale SEO, ein gepflegtes Google-Profil und regionale Anzeigen
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Vertrauen vermitteln</th>
+                  <td data-label="Was wir gemeinsam klären">
+                    Welche Fragen stellen Patienten vor dem ersten Besuch?
+                  </td>
+                  <td data-label="So setzen wir es um">
+                    Verständliche Texte, echte Praxisbilder und klare Informationen zum Ablauf
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Die Anmeldung entlasten</th>
+                  <td data-label="Was wir gemeinsam klären">
+                    Welche Fragen und Terminwünsche lassen sich online abfangen?
+                  </td>
+                  <td data-label="So setzen wir es um">
+                    Gut auffindbare Antworten und eine sinnvoll eingebundene Terminbuchung
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Das Budget gezielt einsetzen</th>
+                  <td data-label="Was wir gemeinsam klären">
+                    Welche Kontaktwege werden genutzt und welche Anfragen passen?
+                  </td>
+                  <td data-label="So setzen wir es um">
+                    Auswertung messbarer Kontakte und Optimierung mit Ihrem Feedback
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="font-mono uppercase text-sm mt-8 lg:mt-10">
+            Die Zahlen aus dem Marketing und die Rückmeldung aus Ihrer Praxis
+            gehören zusammen.
+          </p>
+
+        </div>
       </section>
 
-      {/* 09 | Zusammenarbeit in drei Schritten */}
-      <section>
-        <h2>Ein klarer Ablauf. Von der ersten Frage bis zur Umsetzung.</h2>
+      {/* ---- 09 | Zusammenarbeit in drei Schritten --------------------- */}
+      <section className="py-12 lg:py-20">
+        <div className="container mx-auto px-6 sm:px-8">
 
-        <ol>
-          <li>
-            <h3>01 | Praxis und Ziele verstehen</h3>
-            <p>
-              Wir sprechen über Ihre Fachrichtung, Ihre Schwerpunkte und die
-              aktuelle Situation. Möchten Sie eine neue Leistung bekannt machen,
-              eine Praxis eröffnen oder bestehende Abläufe verbessern? Gemeinsam
-              legen wir fest, welches Ziel zuerst angegangen werden soll.
+          <div className="pb-8 lg:pb-12">
+            <SectionIndex>[07]</SectionIndex>
+          </div>
+
+          <UnderlinedHeader className="mb-10 lg:mb-16">
+            Ein klarer Ablauf. Von der ersten Frage bis zur Umsetzung.
+          </UnderlinedHeader>
+
+          <ol className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
+
+            <li>
+              {/* Bild 03, Querformat 3:2 — Ärztin am Laptop in einem ruhigen Büro
+                  innerhalb der Praxis, im konzentrierten Videogespräch. */}
+              <figure className="praxis-figure praxis-figure--3-2 mb-6">
+                <div className="praxis-figure-inner">
+                  <span className="praxis-figure-tag">Bild 03 · 3:2</span>
+                  <figcaption className="praxis-figure-note">
+                    Ärztin bespricht die nächsten Schritte in einem Videogespräch
+                  </figcaption>
+                </div>
+              </figure>
+
+              <div className="praxis-step-number">01</div>
+              <h3 className="praxis-step-title">Praxis und Ziele verstehen</h3>
+              <p className="praxis-step-text">
+                Wir sprechen über Ihre Fachrichtung, Ihre Schwerpunkte und die
+                aktuelle Situation. Möchten Sie eine neue Leistung bekannt
+                machen, eine Praxis eröffnen oder bestehende Abläufe verbessern?
+                Gemeinsam legen wir fest, welches Ziel zuerst angegangen werden
+                soll.
+              </p>
+            </li>
+
+            <li>
+              {/* Bild 04, Querformat 3:2 — Detail einer gemeinsamen Planung am
+                  Tisch: Laptop, Notizen und zwei Personen im Gespräch. Keine
+                  lesbaren Kennzahlen oder Patientendaten. */}
+              <figure className="praxis-figure praxis-figure--3-2 mb-6">
+                <div className="praxis-figure-inner">
+                  <span className="praxis-figure-tag">Bild 04 · 3:2</span>
+                  <figcaption className="praxis-figure-note">
+                    Gemeinsame Planung von Website-Inhalten und Marketingmaßnahmen
+                  </figcaption>
+                </div>
+              </figure>
+
+              <div className="praxis-step-number">02</div>
+              <h3 className="praxis-step-title">Prioritäten festlegen</h3>
+              <p className="praxis-step-text">
+                Wir prüfen Ihren bestehenden Auftritt und zeigen, wo sich
+                Verbesserungen anbieten. Sie erhalten einen Vorschlag mit
+                konkreten Leistungen, Prioritäten und Kosten. So können Sie
+                nachvollziehen, was wir empfehlen und wie die Maßnahmen auf Ihr
+                Ziel einzahlen.
+              </p>
+            </li>
+
+            <li>
+              {/* Bild 05, Querformat 3:2 — Praxisinhaberin und Mitarbeiterin an
+                  der Anmeldung, bei der gemeinsamen Durchsicht am Bildschirm.
+                  Glaubwürdige Arbeitssituation, keine Patientendaten sichtbar. */}
+              <figure className="praxis-figure praxis-figure--3-2 mb-6">
+                <div className="praxis-figure-inner">
+                  <span className="praxis-figure-tag">Bild 05 · 3:2</span>
+                  <figcaption className="praxis-figure-note">
+                    Ärztin und Praxismitarbeiterin besprechen digitale Abläufe an der Anmeldung
+                  </figcaption>
+                </div>
+              </figure>
+
+              <div className="praxis-step-number">03</div>
+              <h3 className="praxis-step-title">Umsetzen und weiterentwickeln</h3>
+              <p className="praxis-step-text">
+                Nach Ihrer Freigabe setzen wir die vereinbarten Maßnahmen um.
+                Medizinische Inhalte stimmen wir mit Ihnen ab. Anhand der
+                verfügbaren Auswertungen und Ihres Feedbacks prüfen wir, was
+                funktioniert und wo wir nachjustieren sollten.
+              </p>
+            </li>
+
+          </ol>
+
+          {/* ["Kostenlos" nur ergänzen, wenn MindLind das Erstgespräch
+              tatsächlich kostenfrei anbietet.] */}
+          <div className="flex flex-col items-start gap-3 mt-12 lg:mt-16">
+            <DoorButton href="/contact">Erstgespräch anfragen</DoorButton>
+            <p className="text-sm text-muted-foreground">
+              Erzählen Sie uns, was Sie mit Ihrer Praxis vorhaben.
             </p>
-            {/* Bild 03: Ärztin am Laptop in einem ruhigen Büro innerhalb der
-                Praxis, im konzentrierten Videogespräch. Querformat 3:2.
-                Alt-Text: "Ärztin bespricht die nächsten Schritte in einem
-                Videogespräch" */}
-          </li>
+          </div>
 
-          <li>
-            <h3>02 | Prioritäten festlegen</h3>
-            <p>
-              Wir prüfen Ihren bestehenden Auftritt und zeigen, wo sich
-              Verbesserungen anbieten. Sie erhalten einen Vorschlag mit
-              konkreten Leistungen, Prioritäten und Kosten. So können Sie
-              nachvollziehen, was wir empfehlen und wie die Maßnahmen auf Ihr
-              Ziel einzahlen.
-            </p>
-            {/* Bild 04: Detail einer gemeinsamen Planung am Tisch: Laptop,
-                Notizen und zwei Personen im Gespräch. Keine lesbaren Kennzahlen
-                oder Patientendaten. Querformat 3:2.
-                Alt-Text: "Gemeinsame Planung von Website-Inhalten und
-                Marketingmaßnahmen" */}
-          </li>
-
-          <li>
-            <h3>03 | Umsetzen und weiterentwickeln</h3>
-            <p>
-              Nach Ihrer Freigabe setzen wir die vereinbarten Maßnahmen um.
-              Medizinische Inhalte stimmen wir mit Ihnen ab. Anhand der
-              verfügbaren Auswertungen und Ihres Feedbacks prüfen wir, was
-              funktioniert und wo wir nachjustieren sollten.
-            </p>
-            {/* Bild 05: Praxisinhaberin und Mitarbeiterin an der Anmeldung, bei
-                der gemeinsamen Durchsicht am Bildschirm. Glaubwürdige
-                Arbeitssituation, keine Patientendaten sichtbar. Querformat 3:2.
-                Alt-Text: "Ärztin und Praxismitarbeiterin besprechen digitale
-                Abläufe an der Anmeldung" */}
-          </li>
-        </ol>
-
-        {/* ["Kostenlos" nur ergänzen, wenn MindLind das Erstgespräch tatsächlich
-            kostenfrei anbietet.] */}
-        <a href="/contact">Erstgespräch anfragen</a>
-        <p>Erzählen Sie uns, was Sie mit Ihrer Praxis vorhaben.</p>
+        </div>
       </section>
 
-      {/* 10 | Local SEO */}
-      <section>
-        <p>Lokale Sichtbarkeit für Ihre Praxis</p>
+      {/* ---- 10 | Local SEO -------------------------------------------- */}
+      <section className="py-12 lg:py-20">
+        <div className="container mx-auto px-6 sm:px-8">
 
-        <h2>Gefunden werden, wenn Patienten in Ihrer Nähe suchen.</h2>
+          <div className="flex justify-between items-start gap-8 pb-8 lg:pb-12">
+            <p className="praxis-eyebrow">Lokale Sichtbarkeit für Ihre Praxis</p>
+            <SectionIndex>[08]</SectionIndex>
+          </div>
 
-        <h3>Ihre Fachrichtung. Ihr Standort. Ihr Leistungsangebot.</h3>
-        <p>
-          Eine Suche nach einem Facharzt beginnt mit einem konkreten Anliegen.
-          Deshalb richten wir Ihre Website auf die Verbindung aus Behandlung und
-          Standort aus. Wer nach Ihrer Leistung in Ihrer Stadt sucht, soll
-          schnell erkennen können, ob Ihre Praxis der richtige Ansprechpartner
-          ist. Dafür braucht es verständliche Inhalte, eine übersichtliche
-          Website und stimmige Standortinformationen.
-        </p>
+          <UnderlinedHeader className="mb-10 lg:mb-16">
+            Gefunden werden, wenn Patienten in Ihrer Nähe suchen.
+          </UnderlinedHeader>
 
-        <h3>Website und Google-Profil gemeinsam verbessern</h3>
-        <p>
-          Wir prüfen Ihr Google-Unternehmensprofil, strukturieren Ihre
-          Leistungsseiten und arbeiten relevante Informationen zu Ihrer Praxis
-          und Ihrem Einzugsgebiet ein. Öffnungszeiten, Kontaktdaten, Leistungen
-          und Bilder sollen ein konsistentes Gesamtbild vermitteln. Dazu kommen
-          technische Verbesserungen und eine sinnvolle interne Verlinkung.
-          Anhand der verfügbaren Such- und Kontaktdaten beobachten wir die
-          Entwicklung und setzen die nächsten Prioritäten.
-        </p>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-10 lg:gap-20 items-start">
 
-        <a href="/contact">Lokale Sichtbarkeit besprechen</a>
+            <div className="flex flex-col gap-10">
 
-        {/* Bild 06: Porträtformat 2:3. Nahaufnahme eines Smartphones in einer
-            Hand vor einer modernen Praxis im städtischen Umfeld. Display
-            außerhalb der Schärfe, keine erfundenen Suchergebnisse oder
-            Bewertungssterne. Medizinischer Bezug durch den unscharfen
-            Praxiseingang.
-            Alt-Text: "Person nutzt ein Smartphone vor einer Praxis in der Stadt" */}
+              <div>
+                <h3 className="praxis-h3 mb-4">
+                  Ihre Fachrichtung. Ihr Standort. Ihr Leistungsangebot.
+                </h3>
+                <p>
+                  Eine Suche nach einem Facharzt beginnt mit einem konkreten
+                  Anliegen. Deshalb richten wir Ihre Website auf die Verbindung
+                  aus Behandlung und Standort aus. Wer nach Ihrer Leistung in
+                  Ihrer Stadt sucht, soll schnell erkennen können, ob Ihre
+                  Praxis der richtige Ansprechpartner ist. Dafür braucht es
+                  verständliche Inhalte, eine übersichtliche Website und
+                  stimmige Standortinformationen.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="praxis-h3 mb-4">
+                  Website und Google-Profil gemeinsam verbessern
+                </h3>
+                <p>
+                  Wir prüfen Ihr Google-Unternehmensprofil, strukturieren Ihre
+                  Leistungsseiten und arbeiten relevante Informationen zu Ihrer
+                  Praxis und Ihrem Einzugsgebiet ein. Öffnungszeiten,
+                  Kontaktdaten, Leistungen und Bilder sollen ein konsistentes
+                  Gesamtbild vermitteln. Dazu kommen technische Verbesserungen
+                  und eine sinnvolle interne Verlinkung. Anhand der verfügbaren
+                  Such- und Kontaktdaten beobachten wir die Entwicklung und
+                  setzen die nächsten Prioritäten.
+                </p>
+              </div>
+
+              <div>
+                <DoorButton href="/contact">Lokale Sichtbarkeit besprechen</DoorButton>
+              </div>
+
+            </div>
+
+            {/* Bild 06, Porträtformat 2:3 — Nahaufnahme eines Smartphones in
+                einer Hand vor einer modernen Praxis im städtischen Umfeld.
+                Display außerhalb der Schärfe, keine erfundenen Suchergebnisse
+                oder Bewertungssterne. */}
+            <figure className="praxis-figure praxis-figure--2-3 lg:sticky lg:top-(--hdr-height)">
+              <div className="praxis-figure-inner">
+                <span className="praxis-figure-tag">Bild 06 · 2:3</span>
+                <figcaption className="praxis-figure-note">
+                  Person nutzt ein Smartphone vor einer Praxis in der Stadt
+                </figcaption>
+              </div>
+            </figure>
+
+          </div>
+        </div>
       </section>
 
-      {/* 11 | Vertiefung unter Local SEO */}
+      {/* ---- 11 | Vertiefung unter Local SEO --------------------------- */}
       {/* [Der Referenzblock enthält eine fremde Case Study mit konkreten
           Erfolgszahlen. Solange kein dokumentierter eigener Fall vorliegt, den
           folgenden vollständig nutzbaren Erklärblock einsetzen. Er nutzt
-          dieselben Text- und Bildflächen, behauptet aber keine Kundenresultate.] */}
-      <section>
-        <p>Von der Suche zum Termin</p>
+          dieselben Text- und Bildflächen, behauptet aber keine Kundenresultate.]
 
-        <h2>Jeder Schritt sollte die nächste Frage beantworten.</h2>
-
-        <p>
-          Ein Patient sucht nach einer Behandlung in seiner Nähe. Ihr
-          Google-Profil zeigt, wo Ihre Praxis liegt und wie sie erreichbar ist.
-          Auf der passenden Leistungsseite erfährt er, was Sie anbieten und wie
-          ein Termin abläuft. Die Kontaktmöglichkeit ist direkt erreichbar.
-          Genau diese Übergänge stimmen wir aufeinander ab, damit aus Interesse
-          eine konkrete Anfrage werden kann.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Die passende Information</strong>
-            <span>Leistungsseiten mit klaren Antworten</span>
-          </li>
-          <li>
-            <strong>Der nächste Schritt</strong>
-            <span>Kontakt und Terminbuchung gut erreichbar</span>
-          </li>
-        </ul>
-
-        {/* [Bild: Detail eines echten, freigegebenen MindLind-Praxisprojekts auf
-            einem Smartphone. Alternativ das Smartphone-Motiv aus Bild 06
-            verwenden. Einen Website-Screenshot nur aus einem tatsächlichen
-            Projekt einsetzen.] */}
-
-        {/* Alternative, sobald ein eigener Referenzfall vorliegt:
+          Alternative, sobald ein eigener Referenzfall vorliegt:
 
             Titelstruktur
             [Praxisname]: [konkretes Projektziel]
@@ -471,69 +724,73 @@ export default function LandingPraxis() {
             [konkretes Ziel]. [Belegbares Ergebnis einschließlich Zeitraum und
             eindeutiger Kennzahl, sofern vorhanden.]
 
-            [Keine Werte aus der fremden Referenz übernehmen. Ein Projekt kann
-            auch ohne Wachstumszahlen überzeugend dargestellt werden: mit einer
-            klaren Ausgangsfrage und sichtbaren Verbesserungen.] */}
+          [Keine Werte aus der fremden Referenz übernehmen. Ein Projekt kann auch
+          ohne Wachstumszahlen überzeugend dargestellt werden: mit einer klaren
+          Ausgangsfrage und sichtbaren Verbesserungen.] */}
+      <section className="pb-12 lg:pb-20">
+        <div className="container mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+
+            <div className="flex flex-col gap-6">
+              <p className="praxis-eyebrow">Von der Suche zum Termin</p>
+
+              <h2 className="praxis-h3">
+                Jeder Schritt sollte die nächste Frage beantworten.
+              </h2>
+
+              <p>
+                Ein Patient sucht nach einer Behandlung in seiner Nähe. Ihr
+                Google-Profil zeigt, wo Ihre Praxis liegt und wie sie erreichbar
+                ist. Auf der passenden Leistungsseite erfährt er, was Sie
+                anbieten und wie ein Termin abläuft. Die Kontaktmöglichkeit ist
+                direkt erreichbar. Genau diese Übergänge stimmen wir aufeinander
+                ab, damit aus Interesse eine konkrete Anfrage werden kann.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="praxis-tile">
+                <div className="praxis-tile-inner">
+                  <div className="praxis-tile-title">Die passende Information</div>
+                  <div className="praxis-tile-note">Leistungsseiten mit klaren Antworten</div>
+                </div>
+              </div>
+              <div className="praxis-tile">
+                <div className="praxis-tile-inner">
+                  <div className="praxis-tile-title">Der nächste Schritt</div>
+                  <div className="praxis-tile-note">Kontakt und Terminbuchung gut erreichbar</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </section>
 
-      {/* 12 | Kontakt */}
-      <section>
-        <h2>Was möchten Sie mit Ihrer Praxis als Nächstes erreichen?</h2>
-
-        <p>
-          Eine neue Website, mehr Sichtbarkeit für einen Schwerpunkt oder
-          einfachere Wege zur Terminbuchung? Erzählen Sie uns kurz von Ihrer
-          Praxis und Ihrem Vorhaben. Wir melden uns, um die nächsten Schritte
-          mit Ihnen zu besprechen.
-        </p>
-
-        <form>
-          <div>
-            <label htmlFor="praxis-name">Ihr Name</label>
-            <input id="praxis-name" name="name" type="text" />
-          </div>
-
-          <div>
-            <label htmlFor="praxis-practice">Name der Praxis</label>
-            <input id="praxis-practice" name="practice" type="text" />
-          </div>
-
-          <div>
-            <label htmlFor="praxis-email">E-Mail-Adresse</label>
-            <input id="praxis-email" name="email" type="email" />
-          </div>
-
-          <div>
-            <label htmlFor="praxis-phone">Telefonnummer (optional)</label>
-            <input id="praxis-phone" name="phone" type="tel" />
-          </div>
-
-          <div>
-            <label htmlFor="praxis-website">Praxiswebsite (optional)</label>
-            <input id="praxis-website" name="website" type="url" />
-          </div>
-
-          <div>
-            <label htmlFor="praxis-message">Was möchten Sie verbessern?</label>
-            <textarea
-              id="praxis-message"
-              name="message"
-              placeholder="Zum Beispiel: Wir möchten unseren neuen Behandlungsschwerpunkt bekannter machen."
-            />
-          </div>
-
-          <button type="submit">Gespräch anfragen</button>
-
-          <p>
+      {/* ---- 12 | Kontakt ---------------------------------------------- */}
+      {/* The FAQ column keeps the agency default: the content document has no
+          praxis FAQ to put there. `items` is ready for one. */}
+      <SectionContact
+        index="[09]"
+        title="Was möchten Sie mit Ihrer Praxis als Nächstes erreichen?"
+        titleClassName="text-xl lg:text-2xl"
+        lead="Eine neue Website, mehr Sichtbarkeit für einen Schwerpunkt oder einfachere Wege zur Terminbuchung? Erzählen Sie uns kurz von Ihrer Praxis und Ihrem Vorhaben. Wir melden uns, um die nächsten Schritte mit Ihnen zu besprechen."
+        extraFields={[
+          { name: "practice", label: "Name der Praxis" },
+          { name: "phone", label: "Telefonnummer (optional)", type: "tel" },
+          { name: "website", label: "Praxiswebsite (optional)", type: "url" },
+        ]}
+        messageLabel="Was möchten Sie verbessern?"
+        messagePlaceholder="Zum Beispiel: Wir möchten unseren neuen Behandlungsschwerpunkt bekannter machen."
+        submitLabel="Gespräch anfragen"
+        successMessage="Ihre Anfrage ist angekommen. Wir melden uns bei Ihnen, um Ihr Vorhaben zu besprechen."
+        privacyNote={
+          <>
             Informationen zum Umgang mit Ihren Angaben finden Sie in unserer{" "}
             <a href="/datenschutz">Datenschutzerklärung</a>.
-          </p>
-        </form>
-
-        {/* Erfolgsmeldung nach dem Absenden (noch keine Absende-Logik):
-            "Ihre Anfrage ist angekommen. Wir melden uns bei Ihnen, um Ihr
-            Vorhaben zu besprechen." */}
-      </section>
+          </>
+        }
+      />
 
       {/* Footer aus dem Content-Dokument. Nicht hier gerendert: das globale
           <Footer /> aus app/layout.tsx umschließt bereits jede Seite.

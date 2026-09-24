@@ -140,3 +140,10 @@ font-weight: 500;
     padding: 20px 48px;
   } */
 }
+/* A row left holding a single field spans the pair instead of sitting in the
+   left half with a hole beside it. Only bites once the row actually splits. */
+@media (min-width: 40rem) {
+  .contact-form-row--single {
+    grid-template-columns: 1fr;
+  }
+}
