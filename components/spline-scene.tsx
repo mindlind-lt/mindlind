@@ -35,8 +35,8 @@ const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false })
  * `npm run sync:spline`) rather than prod.spline.design. That is why there is
  * no consent gate here any more: nothing about rendering a scene contacts a
  * third party, so there is no transfer to consent to. `wasmPath` below keeps
- * the runtime's own unpkg.com / gstatic.com fallbacks pinned to our origin
- * too — see scripts/sync-spline-assets.mjs.
+ * the runtime's own cdn.spline.design / gstatic.com fallbacks pinned to our
+ * origin too — see scripts/sync-spline-assets.mjs.
  */
 export default function SplineScene({
   scene,

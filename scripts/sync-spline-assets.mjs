@@ -26,7 +26,8 @@
  *    `Content-Encoding: br` for this directory so the browser inflates them.
  *    The name carries a hash of the RAW scene so it can be cached immutably
  *    and a re-export automatically busts it.
- *  - public/spline-wasm/ — the Draco decoder (see PINNING below).
+ *  - public/spline-wasm/ — the runtime's wasm engines + the Draco decoder
+ *    (see PINNING below).
  *  - lib/spline-scenes.ts — the generated path manifest the components import.
  *
  * All three are committed. This script is not part of `next build`: it is run
@@ -37,23 +38,34 @@
  *
  * PINNING THE WASM
  *
- * @splinetool/runtime has hardcoded fallbacks to unpkg.com (ui.wasm,
- * navmesh.wasm, process.wasm, boolean.wasm) and to gstatic.com (the Draco
- * decoder). They fire only when a scene actually uses that feature — none of
- * ours do today, which is exactly why this is worth pinning now: with the
- * consent gate gone there would be nothing in front of a US request that a
- * future re-export silently introduces.
+ * @splinetool/runtime loads its optional engines as separate .wasm files and,
+ * left to itself, fetches them from cdn.spline.design (and the Draco decoder
+ * from gstatic.com). Each one is pulled only when a scene actually uses that
+ * feature, so which of them a visitor hits is decided by whatever was last
+ * exported from the Spline editor — not by anything in this repo.
  *
- * The runtime takes ONE `wasmPath` and looks for all of them under it
- * (`${wasmPath}/ui.wasm`, and DRACOLoader.setDecoderPath(`${wasmPath}/`)).
- * We ship only the Draco decoder there — 760 KB, and a compressed mesh is the
- * realistic way a re-export starts needing one of these. The other three are
- * deliberately absent: ui.wasm alone is 6.2 MB of Skia for a feature no scene
- * uses. If a scene ever needs one it will 404 against our own origin, which
- * is a loud, visible failure at the right moment rather than a silent
- * reintroduction of a third-country request. To add them, drop the matching
- * build from `@splinetool/<name>-wasm@<runtime version>` into
- * public/spline-wasm/.
+ * The runtime takes ONE `wasmPath` and resolves all of them under it
+ * (`${wasmPath}/physics.wasm` and friends, and
+ * DRACOLoader.setDecoderPath(`${wasmPath}/`)), which is what components/
+ * spline-scene.tsx passes.
+ *
+ * So we ship ALL of them. This used to ship only the Draco decoder on the
+ * theory that a missing file would 404 "loudly" at the right moment. It does
+ * not fail loudly in any useful sense: the runtime feeds the response body
+ * straight to WebAssembly.instantiate, so a 404 arrives as
+ *
+ *     CompileError: expected magic word 00 61 73 6d, found 3c 21 44 4f
+ *
+ * (that is `<!DO`, the start of the 404 page) and the whole scene dies. The
+ * homepage hero has `globalPhysics.usePhysics` on and needs physics.wasm,
+ * which is exactly how that bit us on the 1.x -> 2.x runtime upgrade.
+ *
+ * They cost nothing until they are used — the browser only requests the ones
+ * a scene needs — and copying them from the installed runtime keeps them in
+ * lockstep with its version, so a `npm update` can never leave a stale engine
+ * behind. The Draco decoder is the one exception: it is not part of the
+ * runtime package, so it comes from three's copy, which is the build the
+ * runtime's own DRACOLoader expects.
  */
 import { createHash } from "node:crypto";
 import { brotliCompressSync, constants as zlibConstants } from "node:zlib";
@@ -63,6 +75,7 @@ import {
   mkdirSync,
   readdirSync,
   rmSync,
+  statSync,
   writeFileSync,
 } from "node:fs";
 import path from "node:path";
@@ -99,6 +112,17 @@ const DRACO_FILES = [
   "draco_decoder.wasm",
   "draco_wasm_wrapper.js",
 ];
+
+/**
+ * The runtime ships its own engines next to its bundle; everything the
+ * `wasmPath` lookup can ask for is whatever .wasm lives in there.
+ */
+const RUNTIME_WASM_SRC = path.join(
+  "node_modules",
+  "@splinetool",
+  "runtime",
+  "build",
+);
 
 const kb = (n) => `${(n / 1024).toFixed(0)} KB`;
 
@@ -173,6 +197,9 @@ async function main() {
   if (!existsSync(DRACO_SRC)) {
     throw new Error(`Draco decoder not found at ${DRACO_SRC} — is three installed?`);
   }
+  if (!existsSync(RUNTIME_WASM_SRC)) {
+    throw new Error(`Runtime build not found at ${RUNTIME_WASM_SRC} — is @splinetool/runtime installed?`);
+  }
 
   console.log("Scenes");
   const entries = [];
@@ -203,10 +230,27 @@ async function main() {
       `  (-${(100 * (1 - compressedTotal / rawTotal)).toFixed(0)}%)`,
   );
 
-  console.log("\nRuntime wasm (Draco decoder)");
-  for (const file of DRACO_FILES) {
-    copyFileSync(path.join(DRACO_SRC, file), path.join(WASM_DIR, file));
-    console.log(`  ${file}`);
+  console.log("\nRuntime wasm");
+  const engines = readdirSync(RUNTIME_WASM_SRC).filter((f) => f.endsWith(".wasm"));
+  if (engines.length === 0) {
+    throw new Error(`No .wasm found in ${RUNTIME_WASM_SRC} — is @splinetool/runtime installed?`);
+  }
+  for (const file of [...engines, ...DRACO_FILES]) {
+    const src = DRACO_FILES.includes(file)
+      ? path.join(DRACO_SRC, file)
+      : path.join(RUNTIME_WASM_SRC, file);
+    copyFileSync(src, path.join(WASM_DIR, file));
+    console.log(`  ${file.padEnd(26)} ${kb(statSync(src).size).padStart(9)}`);
+  }
+
+  // A .wasm left over from an older runtime is worse than useless: the
+  // runtime would happily load a mismatched engine.
+  const expected = new Set([...engines, ...DRACO_FILES]);
+  for (const file of readdirSync(WASM_DIR)) {
+    if (!expected.has(file)) {
+      rmSync(path.join(WASM_DIR, file));
+      console.log(`  pruned ${file}`);
+    }
   }
 
   writeManifest(entries);
