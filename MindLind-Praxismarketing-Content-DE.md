@@ -1,47 +1,21 @@
 ## 01 \| Hero
+
 <!-- Done -->
 
 
 ## 02 \| Drei kompakte Akzente
 
-&#91;Ersatz für die drei „100\+“\-Platzhalter\. Die Zahlen beschreiben das auf dieser Seite erläuterte Vorgehen, keine unbelegten Erfolge oder Unternehmenskennzahlen\.&#93;
+<!-- Done -->
 
-|Zahl|Beschriftung                |
-|----|----------------------------|
-|3   |Schritte zur Zusammenarbeit |
-|6   |Bausteine für Ihren Auftritt|
-|1   |Klarer Plan für Ihre Praxis |
 
-&#91;Die sechs Bausteine: Website, SEO, Google Ads, Texte, Foto/Video und digitale Patientenkommunikation\. Die folgenden Karten ordnen ihre konkreten Leistungen nach dem Nutzen für die Praxis\.&#93;
+
 
 ## 03 \| Drei Leistungskarten
 
-### Sichtbar werden
+<!-- Done -->
 
-- Suchmaschinenoptimierung
-- Google\-Unternehmensprofil
-- Lokale Google\-Ads\-Kampagnen
-- Seiten für Ihre Behandlungen
-- Inhalte mit regionalem Bezug
-- Auswertung der Auffindbarkeit
 
-### Vertrauen aufbauen
 
-- Individuelle Praxiswebsite
-- Klare Positionierung
-- Verständliche medizinische Texte
-- Professionelle Praxisfotografie
-- Videos für Praxis und Team
-- Übersichtliche mobile Darstellung
-
-### Kontakt erleichtern
-
-- Einbindung der Online\-Terminbuchung
-- Gut erreichbare Kontaktwege
-- Antworten auf häufige Fragen
-- вы Anfrageformulare
-- Klare Hinweise vor dem Termin
-- Analyse der Kontaktwege
 
 ## 04 \| Großer Text mit Bild und zwei Akzenten
 

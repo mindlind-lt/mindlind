@@ -276,30 +276,26 @@
 }
 
 
-/* ---- 03 | Service cards, 11 | tiles ------------------------------------ */
+/* ---- 03 | Service columns ----------------------------------------------- */
 
-.praxis-card {
-    background: #fff;
-    border-radius: 12px;
+/* No panels in this one: each column is held together by a coloured title, the
+   rule under it and the hairlines between items — nothing else. The hue lives
+   in --svc so the title and its rule can never drift apart. All three clear
+   4.5:1 as body text on --background (green 4.78, blue 6.25, orange 5.48), so
+   the colour carries meaning without costing legibility. */
 
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+.praxis-svc--visibility { --svc: var(--primary-700); }
+.praxis-svc--trust      { --svc: #0f5f8f; }
+.praxis-svc--contact    { --svc: #a8431a; }
 
-    padding: 3px;
+.praxis-svc-title {
+    color: var(--svc);
+    /* This rule does the job the panel background used to: it gives the column
+       a top edge and ties the hue to the list beneath it. */
+    border-bottom: 2px solid var(--svc);
 
-    /* Equal-height cards across the row: the list panel takes the slack so the
-       three titles stay on one line with each other. */
-    height: 100%;
-}
-
-.praxis-card-head {
-    background: var(--foreground);
-    border-radius: 10px;
-
-    color: #fff;
     font-family: var(--font-mono);
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.15;
     text-transform: uppercase;
 
@@ -308,44 +304,41 @@
     justify-content: space-between;
     gap: 16px;
 
-    padding: 24px 26px;
+    padding-bottom: 16px;
 }
 
-.praxis-card-index {
-    color: var(--primary-500);
+@media (min-width: 64rem) {
+    .praxis-svc-title {
+        font-size: 22px;
+    }
+}
+
+/* Full strength rather than faded — dimming it would drop below the contrast
+   these colours were picked for. Size carries the hierarchy instead. */
+.praxis-svc-index {
     font-size: 13px;
     letter-spacing: 0.1em;
 }
 
-.praxis-card-body {
-    background: var(--background);
-    border-radius: 10px;
+.praxis-svc-list li {
+    border-top: 1px solid rgba(26, 26, 26, 0.14);
 
-    flex: 1;
-    padding: 24px 26px;
-}
-
-.praxis-card-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.praxis-card-list li {
-    border-top: 1px solid #dededd;
-
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.35;
 
-    padding-top: 10px;
+    padding: 15px 0;
 }
 
-.praxis-card-list li:first-child {
+.praxis-svc-list li:first-child {
     border-top: 0;
-    padding-top: 0;
+    padding-top: 20px;
 }
 
-
+@media (min-width: 64rem) {
+    .praxis-svc-list li {
+        font-size: 19px;
+    }
+}
 /* ---- 04 | Accents over the image --------------------------------------- */
 
 /* Sits under the figure on a phone, floats over its lower edge once there is
@@ -375,7 +368,7 @@
 
 /* Stacked, these sit inside the figure's white frame, so a white card would be
    invisible — they take the page colour and read as panels in the frame, the
-   same way .praxis-card-body does. Over the photo they go back to white. */
+   same way .praxis-stat does. Over the photo they go back to white. */
 .praxis-accent {
     background: var(--background);
     border-radius: 10px;

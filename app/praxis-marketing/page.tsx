@@ -144,68 +144,70 @@ export default function LandingPraxis() {
         </div>
       </section>
 
-      {/* ---- 03 | Drei Leistungskarten --------------------------------- */}
+      {/* ---- 03 | Drei Leistungsspalten -------------------------------- */}
       {/* [Die sechs Bausteine: Website, SEO, Google Ads, Texte, Foto/Video und
           digitale Patientenkommunikation. Die folgenden Karten ordnen ihre
-          konkreten Leistungen nach dem Nutzen für die Praxis.] */}
+          konkreten Leistungen nach dem Nutzen für die Praxis.]
+
+          Die Überschrift steht so nicht im Content-Dokument — sie ist aus der
+          Notiz oben und dem Akzent "6 Bausteine für Ihren Auftritt" aus 02
+          abgeleitet und sollte redaktionell bestätigt werden. */}
       <section className="py-12 lg:py-20">
         <div className="container mx-auto px-6 sm:px-8">
 
-          <div className="flex justify-between items-start gap-8 pb-8 lg:pb-12">
+          <div className="pb-8 lg:pb-12">
             <SectionIndex>[01]</SectionIndex>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+          <UnderlinedHeader className="mb-10 lg:mb-16">
+            Sechs Bausteine, geordnet nach dem Nutzen für Ihre Praxis.
+          </UnderlinedHeader>
 
-            <article className="praxis-card">
-              <h2 className="praxis-card-head">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-14">
+
+            <article className="praxis-svc--visibility">
+              <h2 className="praxis-svc-title">
                 Sichtbar werden
-                <span className="praxis-card-index">01</span>
+                <span className="praxis-svc-index">01</span>
               </h2>
-              <div className="praxis-card-body">
-                <ul className="praxis-card-list">
+              <ul className="praxis-svc-list">
                   <li>Suchmaschinenoptimierung</li>
                   <li>Google-Unternehmensprofil</li>
                   <li>Lokale Google-Ads-Kampagnen</li>
                   <li>Seiten für Ihre Behandlungen</li>
                   <li>Inhalte mit regionalem Bezug</li>
                   <li>Auswertung der Auffindbarkeit</li>
-                </ul>
-              </div>
+              </ul>
             </article>
 
-            <article className="praxis-card">
-              <h2 className="praxis-card-head">
+            <article className="praxis-svc--trust">
+              <h2 className="praxis-svc-title">
                 Vertrauen aufbauen
-                <span className="praxis-card-index">02</span>
+                <span className="praxis-svc-index">02</span>
               </h2>
-              <div className="praxis-card-body">
-                <ul className="praxis-card-list">
+              <ul className="praxis-svc-list">
                   <li>Individuelle Praxiswebsite</li>
                   <li>Klare Positionierung</li>
                   <li>Verständliche medizinische Texte</li>
                   <li>Professionelle Praxisfotografie</li>
                   <li>Videos für Praxis und Team</li>
                   <li>Übersichtliche mobile Darstellung</li>
-                </ul>
-              </div>
+              </ul>
             </article>
 
-            <article className="praxis-card">
-              <h2 className="praxis-card-head">
+            <article className="praxis-svc--contact">
+              <h2 className="praxis-svc-title">
                 Kontakt erleichtern
-                <span className="praxis-card-index">03</span>
+                <span className="praxis-svc-index">03</span>
               </h2>
-              <div className="praxis-card-body">
-                <ul className="praxis-card-list">
+              <ul className="praxis-svc-list">
                   <li>Einbindung der Online-Terminbuchung</li>
                   <li>Gut erreichbare Kontaktwege</li>
                   <li>Antworten auf häufige Fragen</li>
                   <li>Anfrageformulare</li>
                   <li>Klare Hinweise vor dem Termin</li>
                   <li>Analyse der Kontaktwege</li>
-                </ul>
-              </div>
+              </ul>
             </article>
 
           </div>
