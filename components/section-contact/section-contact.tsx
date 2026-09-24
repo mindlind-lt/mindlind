@@ -93,12 +93,15 @@ export default function SectionContact({
           </div>
 
           <div className="section-contact-form order-1 lg:order-2">
-            <div className="flex items-end">
+            {/* Side by side, the copy gets half a phone screen — about 136px at
+                320px — and the lead wraps to seven lines beside a decorative
+                image. Stack below sm; from sm up this is the original row. */}
+            <div className="flex flex-col sm:flex-row sm:items-end">
               <div className="flex-1 pb-3 self-stretch">
                 <h2 className={`font-mono uppercase pb-4 ${titleClassName}`}>{title}</h2>
                 <div className="text-sm lg:text-base">{lead}</div>
               </div>
-              <div className="flex-1 sm:flex-[1.2]">
+              <div className="w-1/2 max-w-[180px] self-end sm:w-auto sm:max-w-none sm:self-auto sm:flex-[1.2]">
                 <Image
                   src="/images/contact-head.webp"
                   width={240}

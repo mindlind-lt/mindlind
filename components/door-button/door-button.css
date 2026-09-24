@@ -15,6 +15,10 @@
     position: relative;
     display: inline-flex;
     justify-content: center;
+    /* Without this the label stretches to the full content box and its line box
+       sits at the top of it, so the leftover leading all collects underneath and
+       the text reads high — most visibly at size lg, which has the most slack. */
+    align-items: center;
 
     height: 40px;
     padding: 11px 22px;

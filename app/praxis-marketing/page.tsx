@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 import { socialCard } from "@/lib/site";
 
@@ -89,19 +90,26 @@ export default function LandingPraxis() {
               </p>
 
               <div>
-                <DoorButton href="/contact">Praxisziele besprechen</DoorButton>
+                <DoorButton size="lg" href="/contact">Praxisziele besprechen</DoorButton>
               </div>
             </div>
 
-            {/* Bild 01, Querformat 5:4 — Praxisinhaberin in einer modernen,
-                glaubwürdigen Praxis. Ruhiges, selbstbewusstes Porträt ohne
-                Werbeinszenierung. */}
+            {/* Bild 01 — Praxisinhaberin in einer modernen, glaubwürdigen
+                Praxis. The alt text is the one from the content document. */}
             <figure className="praxis-figure praxis-figure--5-4">
-              <div className="praxis-figure-inner">
-                <span className="praxis-figure-tag">Bild 01 · 5:4</span>
-                <figcaption className="praxis-figure-note">
-                  Ärztin in einer hellen, modernen Praxis
-                </figcaption>
+              <div className="praxis-figure-inner praxis-figure-inner--photo">
+                {/* The page's LCP element: `priority` preloads it instead of
+                    letting it queue behind the rest. `images.unoptimized` is on
+                    for the static export, so this serves the file from public/
+                    as-is — keep any replacement reasonably sized. */}
+                <Image
+                  className="praxis-figure-img"
+                  src="/images/praxis-hero.jpg"
+                  alt="Ärztin in einer hellen, modernen Praxis"
+                  width={1536}
+                  height={1024}
+                  priority
+                />
               </div>
             </figure>
 

@@ -155,6 +155,33 @@
     pointer-events: none;
 }
 
+/* A slot with a real photo in it: no tint, no grid, no padding — the image is
+   the surface. The frame, radius and aspect ratio above still apply, so a
+   placeholder and a filled slot occupy exactly the same space. */
+.praxis-figure-inner--photo {
+    display: block;
+    padding: 0;
+    background: none;
+}
+
+.praxis-figure-inner--photo::before {
+    content: none;
+}
+
+.praxis-figure-img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    /* The source is 3:2 and the slot is 5:4, so the sides are cropped evenly.
+       The subject sits centre-right and survives it; re-check the framing if
+       the file is ever swapped. */
+    object-fit: cover;
+    object-position: center;
+}
+
+
 /* The accent cards in section 04 float over the bottom of the image, which is
    exactly where the caption sits — give the caption room to clear them. */
 @media (min-width: 48rem) {
@@ -323,11 +350,14 @@
 
 /* Sits under the figure on a phone, floats over its lower edge once there is
    room — the overlap is what makes the block read as one composition. */
+/* Stacked under the image on a phone, floating over its lower edge once there
+   is room. The overlap is what makes the block read as one composition, but it
+   needs width the phone does not have. */
 .praxis-accents {
     display: grid;
-    gap: 8px;
+    gap: 3px;
 
-    margin-top: 12px;
+    margin-top: 3px;
 }
 
 @media (min-width: 48rem) {
@@ -338,15 +368,26 @@
         left: 18px;
 
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
         margin-top: 0;
     }
 }
 
+/* Stacked, these sit inside the figure's white frame, so a white card would be
+   invisible — they take the page colour and read as panels in the frame, the
+   same way .praxis-card-body does. Over the photo they go back to white. */
 .praxis-accent {
-    background: #fff;
+    background: var(--background);
     border-radius: 10px;
 
-    padding: 14px 16px;
+    padding: 16px 18px;
+}
+
+@media (min-width: 48rem) {
+    .praxis-accent {
+        background: #fff;
+        padding: 14px 16px;
+    }
 }
 
 .praxis-accent-title {
