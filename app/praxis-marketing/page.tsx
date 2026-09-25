@@ -668,7 +668,7 @@ export default function LandingPraxis() {
       </section>
 
       {/* ---- 10 | Local SEO -------------------------------------------- */}
-      <section className="py-12 lg:py-20">
+      <section className="py-12 lg:py-24 overflow-hidden">
         <div className="container mx-auto px-6 sm:px-8">
 
           <div className="flex justify-between items-start gap-8 pb-8 lg:pb-12">
@@ -676,66 +676,80 @@ export default function LandingPraxis() {
             <SectionIndex>[07]</SectionIndex>
           </div>
 
-          <UnderlinedHeader className="mb-10 lg:mb-16">
+          <UnderlinedHeader className="mb-12 lg:mb-20">
             Gefunden werden, wenn Patienten in Ihrer Nähe suchen.
           </UnderlinedHeader>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] xl:grid-cols-[360px_1fr] gap-10 lg:gap-14 items-start">
+          <div className="praxis-geo">
 
-            {/* Bild 06, Porträtformat 2:3 — Nahaufnahme eines Smartphones in
-                einer Hand vor einer modernen Praxis im städtischen Umfeld.
-                Display außerhalb der Schärfe, keine erfundenen Suchergebnisse
-                oder Bewertungssterne. */}
-            <figure className="praxis-figure praxis-figure--2-3 lg:sticky lg:top-(--hdr-height)">
-              <div className="praxis-figure-inner">
-                <span className="praxis-figure-tag">Bild 06 · 2:3</span>
-                <figcaption className="praxis-figure-note">
-                  Person nutzt ein Smartphone vor einer Praxis in der Stadt
-                </figcaption>
-              </div>
-            </figure>
-
-            <div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
-
-                <div className="praxis-geo-item">
-                  <div className="praxis-geo-num">01</div>
-                  <h3 className="praxis-geo-title">
-                    Ihre Fachrichtung. Ihr Standort. Ihr Leistungsangebot.
-                  </h3>
-                  <p className="praxis-geo-text">
-                    Eine Suche nach einem Facharzt beginnt mit einem konkreten
-                    Anliegen. Deshalb richten wir Ihre Website auf die
-                    Verbindung aus Behandlung und Standort aus. Wer nach Ihrer
-                    Leistung in Ihrer Stadt sucht, soll schnell erkennen können,
-                    ob Ihre Praxis der richtige Ansprechpartner ist. Dafür
-                    braucht es verständliche Inhalte, eine übersichtliche
-                    Website und stimmige Standortinformationen.
-                  </p>
-                </div>
-
-                <div className="praxis-geo-item">
-                  <div className="praxis-geo-num">02</div>
-                  <h3 className="praxis-geo-title">
-                    Website und Google-Profil gemeinsam verbessern
-                  </h3>
-                  <p className="praxis-geo-text">
-                    Wir prüfen Ihr Google-Unternehmensprofil, strukturieren Ihre
-                    Leistungsseiten und arbeiten relevante Informationen zu
-                    Ihrer Praxis und Ihrem Einzugsgebiet ein. Öffnungszeiten,
-                    Kontaktdaten, Leistungen und Bilder sollen ein konsistentes
-                    Gesamtbild vermitteln. Dazu kommen technische Verbesserungen
-                    und eine sinnvolle interne Verlinkung. Anhand der
-                    verfügbaren Such- und Kontaktdaten beobachten wir die
-                    Entwicklung und setzen die nächsten Prioritäten.
-                  </p>
-                </div>
-
+            <div className="praxis-geo-blocks">
+              <div className="praxis-geo-item">
+                <div className="praxis-geo-num">01</div>
+                <h3 className="praxis-geo-title">
+                  Ihre Fachrichtung. Ihr Standort. Ihr Leistungsangebot.
+                </h3>
+                <p className="praxis-geo-text">
+                  Eine Suche nach einem Facharzt beginnt mit einem konkreten
+                  Anliegen. Deshalb richten wir Ihre Website auf die Verbindung
+                  aus Behandlung und Standort aus. Wer nach Ihrer Leistung in
+                  Ihrer Stadt sucht, soll schnell erkennen können, ob Ihre
+                  Praxis der richtige Ansprechpartner ist. Dafür braucht es
+                  verständliche Inhalte, eine übersichtliche Website und
+                  stimmige Standortinformationen.
+                </p>
               </div>
 
-              <div className="mt-10 lg:mt-14">
+              <div className="praxis-geo-item">
+                <div className="praxis-geo-num">02</div>
+                <h3 className="praxis-geo-title">
+                  Website und Google-Profil gemeinsam verbessern
+                </h3>
+                <p className="praxis-geo-text">
+                  Wir prüfen Ihr Google-Unternehmensprofil, strukturieren Ihre
+                  Leistungsseiten und arbeiten relevante Informationen zu Ihrer
+                  Praxis und Ihrem Einzugsgebiet ein. Öffnungszeiten,
+                  Kontaktdaten, Leistungen und Bilder sollen ein konsistentes
+                  Gesamtbild vermitteln. Dazu kommen technische Verbesserungen
+                  und eine sinnvolle interne Verlinkung. Anhand der verfügbaren
+                  Such- und Kontaktdaten beobachten wir die Entwicklung und
+                  setzen die nächsten Prioritäten.
+                </p>
+              </div>
+
+              <div className="praxis-geo-cta">
                 <DoorButton href="/contact">Lokale Sichtbarkeit besprechen</DoorButton>
               </div>
+            </div>
+
+            <div className="praxis-geo-visual">
+              {/* Einzugsgebiet, abstrakt: konzentrische Ringe um die Praxis.
+                  Keine erfundenen Suchergebnisse oder Bewertungssterne — siehe
+                  die Vorgabe zu Bild 06. */}
+              <svg className="praxis-geo-rings" viewBox="0 0 480 480" aria-hidden="true">
+                <circle className="praxis-geo-ring" cx="240" cy="240" r="238" strokeOpacity="0.3" />
+                <circle className="praxis-geo-ring" cx="240" cy="240" r="196" strokeOpacity="0.4" strokeDasharray="3 8" />
+                <circle className="praxis-geo-ring" cx="240" cy="240" r="154" strokeOpacity="0.5" />
+                <circle className="praxis-geo-ring" cx="240" cy="240" r="112" strokeOpacity="0.28" strokeDasharray="2 6" />
+                <circle className="praxis-geo-ring praxis-geo-pulse" cx="240" cy="240" r="218" strokeOpacity="0.6" strokeWidth="2" />
+                {/* Patienten im Einzugsgebiet. */}
+                <circle cx="240" cy="42" r="5" fill="var(--primary-700)" fillOpacity="0.7" />
+                <circle cx="424" cy="300" r="5" fill="var(--primary-700)" fillOpacity="0.55" />
+                <circle cx="66" cy="188" r="5" fill="var(--primary-700)" fillOpacity="0.6" />
+                <circle cx="352" cy="86" r="4" fill="var(--primary-700)" fillOpacity="0.4" />
+                <circle cx="128" cy="404" r="4" fill="var(--primary-700)" fillOpacity="0.4" />
+                <circle cx="396" cy="420" r="3" fill="var(--primary-700)" fillOpacity="0.3" />
+              </svg>
+
+              {/* Bild 06, Porträtformat 2:3 — Nahaufnahme eines Smartphones in
+                  einer Hand vor einer modernen Praxis im städtischen Umfeld. */}
+              <figure className="praxis-figure praxis-figure--2-3 praxis-geo-photo">
+                <div className="praxis-figure-inner">
+                  <span className="praxis-figure-tag">Bild 06 · 2:3</span>
+                  <figcaption className="praxis-figure-note">
+                    Person nutzt ein Smartphone vor einer Praxis in der Stadt
+                  </figcaption>
+                </div>
+              </figure>
             </div>
 
           </div>

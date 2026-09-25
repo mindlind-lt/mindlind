@@ -33,55 +33,14 @@
 
 ## 06 \| Portfolio
 
-**Dachzeile**
-Einblicke in unsere Arbeit
-
-**Überschrift**
-So wird medizinische Kompetenz sichtbar\.
-
-**Einleitung**
-Jede Praxis hat eigene Schwerpunkte\. Entsprechend individuell entwickeln wir ihre digitale Präsentation\. Entdecken Sie ausgewählte Projekte und die Leistungen dahinter\.
-
-**Beschriftung je Projektkarte**
-&#91;Name der Praxis&#93;
-&#91;Fachrichtung · Ort&#93;
-&#91;Tatsächlich erbrachte Leistungen, z\. B\. Webdesign · Texte · SEO&#93;
-
-**Link je Projektkarte**
-Projekt ansehen
-
-&#91;Die drei sichtbaren Karten bzw\. der Slider benötigen echte MindLind\-Projekte mit freigegebenen Namen, Leistungsangaben und Screenshots\. Keine KI\-generierten Praxiswebsites als Referenzen verwenden\. Ohne vorhandene Projektseite direkt auf die freigegebene Website verlinken und den Link „Praxiswebsite ansehen“ nennen\.&#93;
+<!-- Done -->
 
 
 
 
 ## 07 \| Haltung und Team
 
-&#91;Dieser Text ersetzt den Referenzblock mit dem fremden Agenturinhaber\. Das Layout kann bleiben; Name, Porträt, Zitat und Erfahrungsaussagen der Referenz werden nicht übernommen\.&#93;
-
-**Überschrift**
-Ihr Marketing muss auch im Praxisalltag funktionieren\.
-
-**Einleitung**
-Zusätzliche Anfragen helfen Ihrer Praxis dann, wenn sie zu Ihren Leistungen und verfügbaren Terminen passen\. Deshalb beginnt unsere Arbeit mit einem Gespräch über Ihren Praxisalltag\.
-
-**Hervorgehobene Aussage, ohne Zitatzeichen**
-Welche Patienten möchten Sie erreichen? Und wofür hat Ihre Praxis Kapazität?
-
-**Haupttext**
-Vielleicht möchten Sie eine neue Sprechstunde etablieren, einen Behandlungsschwerpunkt bekannter machen oder wiederkehrende Fragen schon auf der Website beantworten\. Wir übersetzen diese Ziele in konkrete Inhalte und Maßnahmen\. Dabei denken wir den gesamten Weg mit: von der ersten Suche über die Information zur Behandlung bis zur Kontaktaufnahme\.
-
-**Bildbeschriftung**
-MindLind
-Das Team hinter Ihrem Praxisauftritt
-
-**Abschlusszeile**
-Sie bringen die medizinische Expertise ein\. Wir kümmern uns um die digitale Umsetzung\.
-
-**Kleine Ergänzung**
-Medizinische Inhalte stimmen wir mit Ihnen ab\. Texte, Bilder und Kontaktwege entwickeln wir als zusammenhängenden Auftritt\.
-
-&#91;Bild: echtes Foto des MindLind\-Teams oder eines tatsächlichen Ansprechpartners\. Kein generierter Mensch als Mitarbeiter oder Gründer\.&#93;
+<!-- Done -->
 
 
 

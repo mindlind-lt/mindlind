@@ -817,43 +817,150 @@
 }
 
 
-/* ---- 10 | Local SEO blocks ---------------------------------------------- */
+/* ---- 10 | Local SEO: radius composition --------------------------------- */
 
-/* Two numbered blocks instead of a run of heading-plus-paragraph pairs: the
-   rule and the numeral give the section a structure you can scan, and the mono
-   subheads match the service columns in 01. */
+/* The section is about catchment area — who is close enough to come. So the
+   visual is a radius: concentric rings with the practice photo at the centre.
+   The content document forbids invented search results or rating stars, so the
+   graphic stays abstract rather than mocking up a listing. */
+.praxis-geo {
+    position: relative;
+}
+
+@media (min-width: 64rem) {
+    .praxis-geo {
+        display: grid;
+        /* Proportional, not a fixed panel: at 1024 a fixed 540px visual left
+           the text column at 356px and the paragraphs ran to 13 lines. */
+        grid-template-columns: 1.25fr 1fr;
+        align-items: center;
+        gap: 64px;
+    }
+}
+
+.praxis-geo-visual {
+    position: relative;
+    aspect-ratio: 1;
+
+    margin: 0 auto;
+    max-width: 480px;
+    width: 100%;
+}
+
+@media (min-width: 64rem) {
+    .praxis-geo-visual {
+        /* Grows with the viewport but stops before it dwarfs the copy. */
+        max-width: 620px;
+        margin-right: 0;
+    }
+}
+
+.praxis-geo-rings {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.praxis-geo-ring {
+    fill: none;
+    stroke: var(--primary-700);
+    stroke-width: 1;
+}
+
+/* The outermost ring breathes, once every six seconds — slow enough to read as
+   a signal rather than a loading spinner. */
+.praxis-geo-pulse {
+    transform-origin: center;
+    animation: praxis-geo-pulse 6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@keyframes praxis-geo-pulse {
+    0%   { transform: scale(0.82); opacity: 0; }
+    35%  { opacity: 0.55; }
+    100% { transform: scale(1.06); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .praxis-geo-pulse {
+        animation: none;
+        opacity: 0.3;
+    }
+}
+
+/* The photo sits at the centre of its own catchment area. Wide enough to carry
+   the composition, narrow enough that the inner rings still read around it. */
+.praxis-geo-photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 54%;
+}
+
+.praxis-geo-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    margin-top: 48px;
+}
+
+@media (min-width: 64rem) {
+    .praxis-geo-blocks {
+        gap: 48px;
+        margin-top: 0;
+    }
+}
+
+/* Both blocks share one left edge, with the numeral in its own rail — the
+   earlier diagonal stagger left the two ragged against each other. */
 .praxis-geo-item {
     border-top: 2px solid var(--foreground);
     padding-top: 18px;
+}
+
+@media (min-width: 40rem) {
+    .praxis-geo-item {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 24px;
+    }
+
+    .praxis-geo-num {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .praxis-geo-title,
+    .praxis-geo-text {
+        grid-column: 2;
+    }
 }
 
 .praxis-geo-num {
     color: var(--primary-700);
 
     font-family: var(--font-mono);
-    font-size: 34px;
-    letter-spacing: -0.02em;
-    line-height: 1;
-}
-
-@media (min-width: 64rem) {
-    .praxis-geo-num {
-        font-size: 42px;
-    }
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    line-height: 1.5;
+    text-transform: uppercase;
 }
 
 .praxis-geo-title {
-    font-family: var(--font-mono);
-    font-size: 17px;
-    line-height: 1.25;
-    text-transform: uppercase;
-
-    margin-top: 14px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 @media (min-width: 64rem) {
     .praxis-geo-title {
-        font-size: 19px;
+        font-size: 26px;
     }
 }
 
@@ -862,8 +969,21 @@
 
     font-size: 16px;
     line-height: 1.6;
+    /* Upper end of a comfortable measure — any wider and the lines get hard to
+       track back; any narrower and these paragraphs run long. */
+    max-width: 64ch;
 
-    margin-top: 14px;
+    margin-top: 12px;
+}
+
+.praxis-geo-cta {
+    margin-top: 8px;
+}
+
+@media (min-width: 40rem) {
+    .praxis-geo-cta {
+        padding-left: calc(2ch + 24px);
+    }
 }
 
 
