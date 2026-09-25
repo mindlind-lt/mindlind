@@ -19,31 +19,10 @@
 
 ## 04 \| Großer Text mit Bild und zwei Akzenten
 
-**Überschrift**
-Ihre Praxis ist besonders\. Ihr Online\-Auftritt sollte zeigen, warum\.
+<!-- Done -->
 
-**Text**
-Welche Schwerpunkte setzen Sie? Wie beraten Sie? Was erwartet Patienten beim ersten Besuch? Wir machen Ihre Praxis online greifbar: mit verständlichen Leistungsseiten, einer klaren Struktur und Bildern, die zu Ihnen passen\. So können sich Patienten schon vor dem ersten Anruf orientieren\. Gemeinsam legen wir fest, welche Behandlungen und Anliegen im Mittelpunkt stehen sollen\.
 
-**Akzent auf dem Bild 1**
-Klar positioniert
 
-**Kleine Zeile**
-Ihre Schwerpunkte im Fokus
-
-**Akzent auf dem Bild 2**
-Einfach erreichbar
-
-**Kleine Zeile**
-Direkter Weg zum Termin
-
-&#91;Diese beiden Aussagen ersetzen die Zahlen auf dem Bild\. Keine erfundenen Wachstumswerte ergänzen\.&#93;
-
-**Bild 02**
-Arzt im aufmerksamen Gespräch mit einer erwachsenen Patientin\. Natürliches Licht, zugewandte Haltung, keine Behandlung und keine gestellte Handschlag\-Szene\. Querformat 5:4\.
-
-**Alt\-Text**
-Arzt im persönlichen Gespräch mit einer Patientin
 
 ## 05 \| Zwei Textspalten
 

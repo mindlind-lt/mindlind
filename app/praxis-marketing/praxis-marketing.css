@@ -182,15 +182,6 @@
 }
 
 
-/* The accent cards in section 04 float over the bottom of the image, which is
-   exactly where the caption sits — give the caption room to clear them. */
-@media (min-width: 48rem) {
-    .praxis-figure--accented .praxis-figure-inner {
-        padding-bottom: 104px;
-    }
-}
-
-
 .praxis-figure-tag {
     position: absolute;
     top: 14px;
@@ -339,63 +330,128 @@
         font-size: 19px;
     }
 }
-/* ---- 04 | Accents over the image --------------------------------------- */
+/* ---- 04 | Two columns, statements floating on the photo ----------------- */
 
-/* Sits under the figure on a phone, floats over its lower edge once there is
-   room — the overlap is what makes the block read as one composition. */
-/* Stacked under the image on a phone, floating over its lower edge once there
-   is room. The overlap is what makes the block read as one composition, but it
-   needs width the phone does not have. */
-.praxis-accents {
-    display: grid;
-    gap: 3px;
+/* Both columns are white boxes: the figure already is one (a 3px frame around
+   the photo), so the copy column takes the same fill and radius with real
+   padding instead of a hairline frame. */
+.praxis-feature-card {
+    background: #fff;
+    border-radius: 12px;
 
-    margin-top: 3px;
+    padding: 28px 24px;
 }
 
-@media (min-width: 48rem) {
-    .praxis-accents {
-        position: absolute;
-        right: 18px;
-        bottom: 18px;
-        left: 18px;
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
-        margin-top: 0;
+@media (min-width: 40rem) {
+    .praxis-feature-card {
+        padding: 40px 36px;
     }
 }
 
-/* Stacked, these sit inside the figure's white frame, so a white card would be
-   invisible — they take the page colour and read as panels in the frame, the
-   same way .praxis-stat does. Over the photo they go back to white. */
-.praxis-accent {
+@media (min-width: 64rem) {
+    .praxis-feature-card {
+        padding: 48px 44px;
+    }
+}
+
+
+/* The heading sits in a column here rather than spanning the page, so it steps
+   down from .underlined-header-title's 72px — at half width that size wraps to
+   six lines. UnderlinedHeader is kept rather than hand-rolled so the section
+   still gets the same draw-in rule as every other heading on the page. */
+.praxis-feature-head .underlined-header-title {
+    font-size: 30px;
+}
+
+@media (min-width: 40rem) {
+    .praxis-feature-head .underlined-header-title {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 64rem) {
+    .praxis-feature-head .underlined-header-title {
+        font-size: 40px;
+    }
+}
+
+/* Side by side the two boxes should match: the figure drops its fixed 3:2 and
+   fills the row height the copy card sets, with the photo covering. */
+@media (min-width: 64rem) {
+    .praxis-feature-media,
+    .praxis-feature-media .praxis-figure-inner {
+        height: 100%;
+    }
+
+    .praxis-feature-media .praxis-figure-inner {
+        aspect-ratio: auto;
+    }
+}
+
+
+/* Below md the photo is too small to carry anything on top of it — a box would
+   cover the thing it is captioning — so the two statements stack underneath as
+   panels. Inside the figure's white frame they take the page colour, otherwise
+   they would be white on white. From md up they float over the image and go
+   back to white. */
+.praxis-float {
     background: var(--background);
     border-radius: 10px;
 
+    margin-top: 3px;
     padding: 16px 18px;
 }
 
 @media (min-width: 48rem) {
-    .praxis-accent {
+    .praxis-float {
         background: #fff;
-        padding: 14px 16px;
+
+        position: absolute;
+        z-index: 2;
+
+        width: min(250px, 54%);
+        margin-top: 0;
+        padding: 16px 18px;
+
+        /* Lifts the box off a busy photo; without it the white sits flat
+           against the bright parts of the image. */
+        box-shadow: 0 18px 40px -22px rgba(26, 26, 26, 0.5);
+    }
+
+    /* Deliberately outside the frame on two edges each, so the boxes read as
+       sitting on top of the photo rather than being part of it. The overhang
+       is kept to 18px: the section's own padding and the column gap absorb it,
+       so nothing reaches the viewport edge. */
+    .praxis-float--top-right {
+        top: -18px;
+        right: -18px;
+    }
+
+    .praxis-float--bottom-left {
+        bottom: -18px;
+        left: -18px;
     }
 }
 
-.praxis-accent-title {
+/* Same two hues section 03 gives "Sichtbar werden" and "Kontakt erleichtern",
+   which are the ideas these two restate. */
+.praxis-float--focus { --accent-hue: var(--primary-700); }
+.praxis-float--reach { --accent-hue: #a8431a; }
+
+.praxis-float-title {
+    color: var(--accent-hue);
+
     font-family: var(--font-mono);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.2;
     text-transform: uppercase;
 }
 
-.praxis-accent-note {
-    color: #55585c;
+.praxis-float-note {
     font-size: 13px;
-    line-height: 1.35;
+    line-height: 1.4;
 
-    margin-top: 4px;
+    margin-top: 5px;
 }
 
 

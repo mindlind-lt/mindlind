@@ -217,49 +217,53 @@ export default function LandingPraxis() {
       {/* ---- 04 | Großer Text mit Bild und zwei Akzenten --------------- */}
       <section className="py-12 lg:py-20">
         <div className="container mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
 
-          <div className="pb-8 lg:pb-12">
-            <SectionIndex>[02]</SectionIndex>
-          </div>
-
-          <UnderlinedHeader className="mb-10 lg:mb-16">
-            Ihre Praxis ist besonders. Ihr Online-Auftritt sollte zeigen, warum.
-          </UnderlinedHeader>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-
-            <p className="praxis-lead">
-              Welche Schwerpunkte setzen Sie? Wie beraten Sie? Was erwartet
-              Patienten beim ersten Besuch? Wir machen Ihre Praxis online
-              greifbar: mit verständlichen Leistungsseiten, einer klaren
-              Struktur und Bildern, die zu Ihnen passen. So können sich
-              Patienten schon vor dem ersten Anruf orientieren. Gemeinsam legen
-              wir fest, welche Behandlungen und Anliegen im Mittelpunkt stehen
-              sollen.
-            </p>
-
-            {/* Bild 02, Querformat 5:4 — Arzt im aufmerksamen Gespräch mit einer
-                erwachsenen Patientin. Natürliches Licht, zugewandte Haltung,
-                keine Behandlung und keine gestellte Handschlag-Szene. */}
-            <figure className="praxis-figure praxis-figure--5-4 praxis-figure--accented">
-              <div className="praxis-figure-inner">
-                <span className="praxis-figure-tag">Bild 02 · 5:4</span>
-                <figcaption className="praxis-figure-note">
-                  Arzt im persönlichen Gespräch mit einer Patientin
-                </figcaption>
+            <div className="praxis-feature-card">
+              <div className="pb-8 lg:pb-10">
+                <SectionIndex>[02]</SectionIndex>
               </div>
 
-              {/* [Diese beiden Aussagen ersetzen die Zahlen auf dem Bild. Keine
-                  erfundenen Wachstumswerte ergänzen.] */}
-              <div className="praxis-accents">
-                <div className="praxis-accent">
-                  <div className="praxis-accent-title">Klar positioniert</div>
-                  <div className="praxis-accent-note">Ihre Schwerpunkte im Fokus</div>
-                </div>
-                <div className="praxis-accent">
-                  <div className="praxis-accent-title">Einfach erreichbar</div>
-                  <div className="praxis-accent-note">Direkter Weg zum Termin</div>
-                </div>
+              <UnderlinedHeader className="praxis-feature-head mb-8 lg:mb-10">
+                Ihre Praxis ist besonders. Ihr Online-Auftritt sollte zeigen, warum.
+              </UnderlinedHeader>
+
+              <p className="praxis-lead">
+                Welche Schwerpunkte setzen Sie? Wie beraten Sie? Was erwartet
+                Patienten beim ersten Besuch? Wir machen Ihre Praxis online
+                greifbar: mit verständlichen Leistungsseiten, einer klaren
+                Struktur und Bildern, die zu Ihnen passen. So können sich
+                Patienten schon vor dem ersten Anruf orientieren. Gemeinsam
+                legen wir fest, welche Behandlungen und Anliegen im Mittelpunkt
+                stehen sollen.
+              </p>
+            </div>
+
+            {/* Bild 02 — Arzt im aufmerksamen Gespräch mit einer erwachsenen
+                Patientin. The file is 3:2, the ratio the brief asks for, so it
+                is shown whole rather than cropped.
+
+                [Diese beiden Aussagen ersetzen die Zahlen auf dem Bild. Keine
+                erfundenen Wachstumswerte ergänzen.] */}
+            <figure className="praxis-figure praxis-figure--3-2 praxis-feature-media">
+              <div className="praxis-figure-inner praxis-figure-inner--photo">
+                <Image
+                  className="praxis-figure-img"
+                  src="/images/praxis-2.jpg"
+                  alt="Arzt im persönlichen Gespräch mit einer Patientin"
+                  width={1536}
+                  height={1024}
+                />
+              </div>
+
+              <div className="praxis-float praxis-float--focus praxis-float--top-right">
+                <div className="praxis-float-title">Klar positioniert</div>
+                <div className="praxis-float-note">Ihre Schwerpunkte im Fokus</div>
+              </div>
+
+              <div className="praxis-float praxis-float--reach praxis-float--bottom-left">
+                <div className="praxis-float-title">Einfach erreichbar</div>
+                <div className="praxis-float-note">Direkter Weg zum Termin</div>
               </div>
             </figure>
 
