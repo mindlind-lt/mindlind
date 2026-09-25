@@ -56,9 +56,21 @@ export const metadata: Metadata = {
 };
 
 /** Section counter shown in mono beside each section heading, as on /agency. */
-function SectionIndex({ children }: { children: React.ReactNode }) {
+function SectionIndex({
+  children,
+  onDark,
+}: {
+  children: React.ReactNode;
+  /** --primary-700 is picked for contrast on the page background and goes muddy
+   *  on the inverted section; --primary-500 is the reverse. */
+  onDark?: boolean;
+}) {
   return (
-    <div className="text-primary-700 font-mono text-2xl sm:text-3xl uppercase">
+    <div
+      className={`font-mono text-2xl sm:text-3xl uppercase ${
+        onDark ? "text-primary-500" : "text-primary-700"
+      }`}
+    >
       {children}
     </div>
   );
@@ -214,10 +226,12 @@ export default function LandingPraxis() {
         </div>
       </section>
 
-      {/* ---- 04 | Großer Text mit Bild und zwei Akzenten --------------- */}
+      {/* ---- 04 | Großer Text mit Bild + 05 | Zwei Textspalten -------- */}
+      {/* Beide Abschnitte teilen sich ein Raster: oben Text und Bild, darunter
+          die zwei Spalten aus 05. Vier Boxen, eine Sektion. */}
       <section className="py-12 lg:py-20">
         <div className="container mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-10 lg:gap-y-12 items-stretch">
 
             <div className="praxis-feature-card">
               <div className="pb-8 lg:pb-10">
@@ -240,8 +254,7 @@ export default function LandingPraxis() {
             </div>
 
             {/* Bild 02 — Arzt im aufmerksamen Gespräch mit einer erwachsenen
-                Patientin. The file is 3:2, the ratio the brief asks for, so it
-                is shown whole rather than cropped.
+                Patientin.
 
                 [Diese beiden Aussagen ersetzen die Zahlen auf dem Bild. Keine
                 erfundenen Wachstumswerte ergänzen.] */}
@@ -267,21 +280,7 @@ export default function LandingPraxis() {
               </div>
             </figure>
 
-          </div>
-        </div>
-      </section>
-
-      {/* ---- 05 | Zwei Textspalten ------------------------------------- */}
-      <section className="py-12 lg:py-20">
-        <div className="container mx-auto px-6 sm:px-8">
-
-          <div className="pb-8 lg:pb-12">
-            <SectionIndex>[03]</SectionIndex>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
-
-            <div>
+            <div className="praxis-feature-card">
               <h2 className="praxis-h3 mb-6 lg:mb-8">
                 Was Patienten vor dem Termin wissen möchten
               </h2>
@@ -305,7 +304,7 @@ export default function LandingPraxis() {
               </ul>
             </div>
 
-            <div>
+            <div className="praxis-feature-card">
               <h2 className="praxis-h3 mb-6 lg:mb-8">
                 Was Ihr Online-Auftritt dafür leisten muss
               </h2>
@@ -345,22 +344,25 @@ export default function LandingPraxis() {
 
           <div className="flex justify-between items-start gap-8 pb-8 lg:pb-12">
             <p className="praxis-eyebrow">Einblicke in unsere Arbeit</p>
-            <SectionIndex>[04]</SectionIndex>
+            <SectionIndex>[03]</SectionIndex>
           </div>
 
           <UnderlinedHeader className="mb-10 lg:mb-16">
             So wird medizinische Kompetenz sichtbar.
           </UnderlinedHeader>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-10 lg:gap-20 items-start">
+          {/* Same split the home page uses in section-feat-works: the intro takes a
+                third, the work takes two. A 1fr_1fr split left each thumb at about
+                a fifth of the viewport. */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 items-start">
 
-            <p className="praxis-lead lg:sticky lg:top-(--hdr-height)">
+            <p className="praxis-lead lg:col-span-1 lg:sticky lg:top-(--hdr-height)">
               Jede Praxis hat eigene Schwerpunkte. Entsprechend individuell
               entwickeln wir ihre digitale Präsentation. Entdecken Sie
               ausgewählte Projekte und die Leistungen dahinter.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 lg:col-span-2">
               <WorkThumb
                 headingLevel="h3"
                 href="/projects/mondent"
@@ -387,39 +389,36 @@ export default function LandingPraxis() {
         </div>
       </section>
 
-      {/* ---- 07 | Haltung und Team ------------------------------------- */}
+      {/* ---- 07 | Haltung -------------------------------------------- */}
       {/* [Dieser Text ersetzt den Referenzblock mit dem fremden Agenturinhaber.
           Das Layout kann bleiben; Name, Porträt, Zitat und Erfahrungsaussagen
           der Referenz werden nicht übernommen.] */}
-      <section className="py-12 lg:py-20 overflow-hidden">
+      <section className="praxis-invert py-16 lg:py-28 overflow-hidden">
         <div className="container mx-auto px-6 sm:px-8">
 
           <div className="pb-8 lg:pb-12">
-            <SectionIndex>[05]</SectionIndex>
+            <SectionIndex onDark>[04]</SectionIndex>
           </div>
 
-          <UnderlinedHeader className="mb-10 lg:mb-16">
+          <UnderlinedHeader className="mb-10 lg:mb-14">
             Ihr Marketing muss auch im Praxisalltag funktionieren.
           </UnderlinedHeader>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 mb-12 lg:mb-20">
+          <p className="praxis-lead max-w-3xl">
+            Zusätzliche Anfragen helfen Ihrer Praxis dann, wenn sie zu Ihren
+            Leistungen und verfügbaren Terminen passen. Deshalb beginnt unsere
+            Arbeit mit einem Gespräch über Ihren Praxisalltag.
+          </p>
 
-            <div className="flex flex-col gap-8">
+          {/* Hervorgehobene Aussage, ohne Zitatzeichen. */}
+          <p className="praxis-statement-xl">
+            Welche Patienten möchten Sie erreichen? Und wofür hat Ihre Praxis
+            Kapazität?
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-16">
+            <div className="lg:col-start-2 lg:col-span-2">
               <p className="praxis-lead">
-                Zusätzliche Anfragen helfen Ihrer Praxis dann, wenn sie zu Ihren
-                Leistungen und verfügbaren Terminen passen. Deshalb beginnt
-                unsere Arbeit mit einem Gespräch über Ihren Praxisalltag.
-              </p>
-
-              {/* Hervorgehobene Aussage, ohne Zitatzeichen. */}
-              <p className="praxis-statement">
-                Welche Patienten möchten Sie erreichen? Und wofür hat Ihre
-                Praxis Kapazität?
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-8">
-              <p>
                 Vielleicht möchten Sie eine neue Sprechstunde etablieren, einen
                 Behandlungsschwerpunkt bekannter machen oder wiederkehrende
                 Fragen schon auf der Website beantworten. Wir übersetzen diese
@@ -427,30 +426,32 @@ export default function LandingPraxis() {
                 gesamten Weg mit: von der ersten Suche über die Information zur
                 Behandlung bis zur Kontaktaufnahme.
               </p>
-
-              <p className="praxis-h3">
-                Sie bringen die medizinische Expertise ein. Wir kümmern uns um
-                die digitale Umsetzung.
-              </p>
-
-              <p className="text-sm text-muted-foreground">
-                Medizinische Inhalte stimmen wir mit Ihnen ab. Texte, Bilder und
-                Kontaktwege entwickeln wir als zusammenhängenden Auftritt.
-              </p>
             </div>
-
           </div>
 
-          {/* [Bild: echtes Foto des MindLind-Teams oder eines tatsächlichen
-              Ansprechpartners. Kein generierter Mensch als Mitarbeiter oder
-              Gründer.] — erfüllt: dieselben Teamfotos wie auf /agency. */}
-          <figure className="m-0">
-            <figcaption className="font-mono uppercase mb-6 lg:mb-8">
-              <span className="text-2xl sm:text-3xl block">MindLind</span>
-              <span className="text-sm text-muted-foreground">
-                Das Team hinter Ihrem Praxisauftritt
-              </span>
-            </figcaption>
+        </div>
+      </section>
+
+      {/* ---- 07b | Team ------------------------------------------------ */}
+      {/* [Bild: echtes Foto des MindLind-Teams oder eines tatsächlichen
+          Ansprechpartners. Kein generierter Mensch als Mitarbeiter oder
+          Gründer.] — erfüllt: dieselben Teamfotos wie auf /agency.
+
+          Bildbeschriftung, Abschlusszeile und Ergänzung stehen im
+          Content-Dokument in dieser Reihenfolge direkt hintereinander. */}
+      <section className="py-12 lg:py-20 overflow-hidden">
+        <div className="container mx-auto px-6 sm:px-8">
+
+          <figure className="m-0 mb-12 lg:mb-16">
+            <div className="flex justify-between items-start gap-8 mb-6 lg:mb-8">
+              <figcaption className="font-mono uppercase">
+                <span className="text-2xl sm:text-3xl block">MindLind</span>
+                <span className="text-sm text-muted-foreground">
+                  Das Team hinter Ihrem Praxisauftritt
+                </span>
+              </figcaption>
+              <SectionIndex>[05]</SectionIndex>
+            </div>
 
             <TeamCarousel>
               <PersonCard imageSrc="/images/team-1.webp" name="Jan" role="Creative Director" />
@@ -460,6 +461,17 @@ export default function LandingPraxis() {
               <PersonCard imageSrc="/images/team-5.webp" name="Evgeny" role="Videoproduktion" />
             </TeamCarousel>
           </figure>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-0 lg:gap-16 items-center">
+            <p className="praxis-closing">
+              Sie bringen die medizinische Expertise ein. Wir kümmern uns um die
+              digitale Umsetzung.
+            </p>
+            <p className="praxis-closing-note">
+              Medizinische Inhalte stimmen wir mit Ihnen ab. Texte, Bilder und
+              Kontaktwege entwickeln wir als zusammenhängenden Auftritt.
+            </p>
+          </div>
 
         </div>
       </section>

@@ -26,19 +26,10 @@
 
 ## 05 \| Zwei Textspalten
 
-### Was Patienten vor dem Termin wissen möchten
+<!-- Done -->
 
-- Behandelt diese Praxis mein Anliegen?
-- Welche Erfahrung bringt das Team mit?
-- Was erwartet mich bei der Untersuchung?
-- Wie kann ich einen Termin vereinbaren?
 
-### Was Ihr Online\-Auftritt dafür leisten muss
 
-- Die passenden Leistungsseiten auffindbar machen
-- Qualifikationen und Schwerpunkte verständlich zeigen
-- Abläufe erklären und offene Fragen beantworten
-- Ohne Umwege zur Kontaktaufnahme führen
 
 ## 06 \| Portfolio
 
@@ -60,6 +51,9 @@ Jede Praxis hat eigene Schwerpunkte\. Entsprechend individuell entwickeln wir ih
 Projekt ansehen
 
 &#91;Die drei sichtbaren Karten bzw\. der Slider benötigen echte MindLind\-Projekte mit freigegebenen Namen, Leistungsangaben und Screenshots\. Keine KI\-generierten Praxiswebsites als Referenzen verwenden\. Ohne vorhandene Projektseite direkt auf die freigegebene Website verlinken und den Link „Praxiswebsite ansehen“ nennen\.&#93;
+
+
+
 
 ## 07 \| Haltung und Team
 
@@ -88,6 +82,8 @@ Sie bringen die medizinische Expertise ein\. Wir kümmern uns um die digitale Um
 Medizinische Inhalte stimmen wir mit Ihnen ab\. Texte, Bilder und Kontaktwege entwickeln wir als zusammenhängenden Auftritt\.
 
 &#91;Bild: echtes Foto des MindLind\-Teams oder eines tatsächlichen Ansprechpartners\. Kein generierter Mensch als Mitarbeiter oder Gründer\.&#93;
+
+
 
 ## 08 \| Vergleichstabelle
 
