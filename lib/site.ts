@@ -75,7 +75,7 @@ export const routes = [
     path: "/praxis-marketing",
     title: "Praxismarketing für Ärzte",
     summary:
-      "Website, lokale Sichtbarkeit und Google Ads für Arztpraxen",
+      "Websites, lokale SEO und Google Ads für Ärzte und Praxen",
     // Content is in place, but the page is still an unstyled transcript of
     // MindLind-Praxismarketing-Content-DE.md. Flip to `true` once it is
     // designed, and drop the matching `noindex` in its `metadata` export.

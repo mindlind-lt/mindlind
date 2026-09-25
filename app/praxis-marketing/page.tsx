@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import { breadcrumbSchema } from "@/lib/schema";
+
 import { socialCard } from "@/lib/site";
 
 import CountUpOnView from "@/components/count-up-on-view";
@@ -79,6 +81,19 @@ function SectionIndex({
 export default function LandingPraxis() {
   return (
     <>
+      {/* Same breadcrumb JSON-LD every other top-level page emits. The
+          name matches this route's title in lib/site.ts. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Praxismarketing für Ärzte", path: "/praxis-marketing" },
+            ]),
+          ),
+        }}
+      />
+
       {/* ---- 01 | Hero ------------------------------------------------- */}
       <section className="praxis-hero pb-12 lg:pb-20">
         <div className="container mx-auto px-6 sm:px-8">
@@ -392,46 +407,40 @@ export default function LandingPraxis() {
       {/* ---- 07 | Haltung -------------------------------------------- */}
       {/* [Dieser Text ersetzt den Referenzblock mit dem fremden Agenturinhaber.
           Das Layout kann bleiben; Name, Porträt, Zitat und Erfahrungsaussagen
-          der Referenz werden nicht übernommen.] */}
+          der Referenz werden nicht übernommen.]
+
+          Reihenfolge wie im Content-Dokument: Einleitung, hervorgehobene
+          Aussage, Haupttext. */}
       <section className="praxis-invert py-16 lg:py-28">
         <div className="container mx-auto px-6 sm:px-8">
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1.45fr_1fr] gap-10 lg:gap-20 items-start">
-
-            {/* The heading holds its place while the supporting column scrolls
-                past it — the two are one thought, not a stack. */}
-            <div className="lg:sticky lg:top-(--hdr-height)">
-              <div className="pb-8 lg:pb-10">
-                <SectionIndex onDark>[04]</SectionIndex>
-              </div>
-
-              <UnderlinedHeader>
-                Ihr Marketing muss auch im Praxisalltag funktionieren.
-              </UnderlinedHeader>
-            </div>
-
-            <div className="praxis-invert-body">
-              <p>
-                Zusätzliche Anfragen helfen Ihrer Praxis dann, wenn sie zu Ihren
-                Leistungen und verfügbaren Terminen passen. Deshalb beginnt
-                unsere Arbeit mit einem Gespräch über Ihren Praxisalltag.
-              </p>
-              <p>
-                Vielleicht möchten Sie eine neue Sprechstunde etablieren, einen
-                Behandlungsschwerpunkt bekannter machen oder wiederkehrende
-                Fragen schon auf der Website beantworten. Wir übersetzen diese
-                Ziele in konkrete Inhalte und Maßnahmen. Dabei denken wir den
-                gesamten Weg mit: von der ersten Suche über die Information zur
-                Behandlung bis zur Kontaktaufnahme.
-              </p>
-            </div>
-
+          <div className="pb-8 lg:pb-12">
+            <SectionIndex onDark>[04]</SectionIndex>
           </div>
+
+          <UnderlinedHeader>
+            Ihr Marketing muss auch im Praxisalltag funktionieren.
+          </UnderlinedHeader>
+
+          <p className="praxis-invert-intro">
+            Zusätzliche Anfragen helfen Ihrer Praxis dann, wenn sie zu Ihren
+            Leistungen und verfügbaren Terminen passen. Deshalb beginnt unsere
+            Arbeit mit einem Gespräch über Ihren Praxisalltag.
+          </p>
 
           {/* Hervorgehobene Aussage, ohne Zitatzeichen. */}
           <p className="praxis-ask">
             <span>Welche Patienten möchten Sie erreichen?</span>
             <span>Und wofür hat Ihre Praxis Kapazität?</span>
+          </p>
+
+          <p className="praxis-invert-note">
+            Vielleicht möchten Sie eine neue Sprechstunde etablieren, einen
+            Behandlungsschwerpunkt bekannter machen oder wiederkehrende Fragen
+            schon auf der Website beantworten. Wir übersetzen diese Ziele in
+            konkrete Inhalte und Maßnahmen. Dabei denken wir den gesamten Weg
+            mit: von der ersten Suche über die Information zur Behandlung bis
+            zur Kontaktaufnahme.
           </p>
 
         </div>

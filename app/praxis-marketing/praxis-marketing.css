@@ -529,7 +529,12 @@
 
 /* The page is one continuous light field top to bottom, so this section takes
    the whole band dark. Full width, so it registers while scrolling instead of
-   reading as one more card in the stack. */
+   reading as one more card in the stack.
+
+   Laid out as three horizontal bands — heading, question, explanation — each
+   the full width of the container. An earlier two-column version squeezed the
+   paragraphs into a 457px column, where they ran to eight lines, and left the
+   section with three competing alignments. */
 .praxis-invert {
     position: relative;
     overflow: hidden;
@@ -561,85 +566,71 @@
     background: rgba(255, 255, 255, 0.4);
 }
 
-/* At .underlined-header-title's full 72px this heading broke to four lines in
-   its column. Stepped down here — the column is also wider — so it lands on
-   two or three. */
+/* Full width now, so it can carry more size than it could in a column. */
 .praxis-invert .underlined-header-title {
-    font-size: 32px;
+    font-size: 36px;
 }
 
 @media (min-width: 40rem) {
     .praxis-invert .underlined-header-title {
-        font-size: 42px;
+        font-size: 48px;
     }
 }
 
 @media (min-width: 64rem) {
     .praxis-invert .underlined-header-title {
-        font-size: 52px;
+        font-size: 64px;
     }
 }
 
-
-/* The supporting column. Two paragraphs, divided by a rule rather than spacing
-   alone, so the column reads as one object against the empty field beside it.
-   #bfbfbf is white at 72% over this fill: 9.46:1. */
-.praxis-invert-body p {
+/* #bfbfbf is white at 72% over this fill: 9.46:1. */
+.praxis-invert-intro {
     color: #bfbfbf;
 
-    font-size: 16px;
-    line-height: 1.65;
-}
-
-@media (min-width: 64rem) {
-    .praxis-invert-body p {
-        font-size: 18px;
-    }
-}
-
-.praxis-invert-body p + p {
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    font-size: 18px;
+    line-height: 1.55;
+    /* A real measure instead of a narrow column — this paragraph went from
+       four lines to three, and reads as one block rather than a sliver. */
+    max-width: 62ch;
 
     margin-top: 28px;
-    padding-top: 28px;
 }
 
 @media (min-width: 64rem) {
-    .praxis-invert-body p + p {
-        margin-top: 36px;
-        padding-top: 36px;
+    .praxis-invert-intro {
+        font-size: 21px;
+        margin-top: 40px;
     }
 }
 
 /* The content document asks for this line emphasised and without quote marks.
    It is two questions, so each takes its own line and the second takes the
-   brand green — which is unusable on the light page (1.74:1) and reaches
-   9.08:1 here. Scale and colour do the work punctuation would have. */
+   brand green — unusable on the light page at 1.74:1, but 9.08:1 here. */
 .praxis-ask {
     border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 
     font-family: var(--font-mono);
     font-size: 22px;
     line-height: 1.25;
     text-transform: uppercase;
-    text-wrap: balance;
 
-    margin-top: 48px;
-    padding-top: 40px;
+    margin: 40px 0;
+    padding: 36px 0;
 }
 
 @media (min-width: 40rem) {
     .praxis-ask {
-        font-size: 32px;
+        font-size: 30px;
     }
 }
 
 @media (min-width: 64rem) {
     .praxis-ask {
-        font-size: 46px;
+        font-size: 44px;
 
-        margin-top: 88px;
-        padding-top: 64px;
+        margin: 64px 0;
+        padding: 56px 0;
     }
 }
 
@@ -650,6 +641,24 @@
 .praxis-ask span + span {
     color: var(--primary-500);
     margin-top: 6px;
+}
+
+/* Set in two columns rather than one long run: same words, half the column
+   height, and it stops the band ending on a wall of text. */
+.praxis-invert-note {
+    color: #bfbfbf;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+@media (min-width: 64rem) {
+    .praxis-invert-note {
+        column-count: 2;
+        column-gap: 72px;
+
+        font-size: 17px;
+    }
 }
 
 
