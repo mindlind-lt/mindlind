@@ -528,9 +528,8 @@
 /* ---- 07 | Inverted section ---------------------------------------------- */
 
 /* The page is one continuous light field top to bottom, so this section takes
-   the whole band dark rather than putting a dark card inside a light section.
-   Full width, so it registers while scrolling instead of reading as one more
-   card in the stack. */
+   the whole band dark. Full width, so it registers while scrolling instead of
+   reading as one more card in the stack. */
 .praxis-invert {
     position: relative;
     overflow: hidden;
@@ -557,47 +556,102 @@
     position: relative;
 }
 
-/* UnderlinedHeader draws its rule with a black ::after, which is invisible
-   here — see underlined-header.css. */
+/* UnderlinedHeader draws its rule with a black ::after, invisible here. */
 .praxis-invert .underlined-header::after {
     background: rgba(255, 255, 255, 0.4);
 }
 
-/* #bfbfbf is white at 72% over this fill: 9.46:1, comfortably AA. */
-.praxis-invert .praxis-lead {
-    color: #bfbfbf;
-}
-
-/* The content document asks for this line emphasised and without quote marks,
-   so the weight comes from scale and the inverted field, not punctuation. */
-.praxis-statement-xl {
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-
-    font-family: var(--font-mono);
-    font-size: 24px;
-    line-height: 1.3;
-    text-transform: uppercase;
-    text-wrap: balance;
-
-    margin: 32px 0;
-    padding: 32px 0;
+/* At .underlined-header-title's full 72px this heading broke to four lines in
+   its column. Stepped down here — the column is also wider — so it lands on
+   two or three. */
+.praxis-invert .underlined-header-title {
+    font-size: 32px;
 }
 
 @media (min-width: 40rem) {
-    .praxis-statement-xl {
+    .praxis-invert .underlined-header-title {
+        font-size: 42px;
+    }
+}
+
+@media (min-width: 64rem) {
+    .praxis-invert .underlined-header-title {
+        font-size: 52px;
+    }
+}
+
+
+/* The supporting column. Two paragraphs, divided by a rule rather than spacing
+   alone, so the column reads as one object against the empty field beside it.
+   #bfbfbf is white at 72% over this fill: 9.46:1. */
+.praxis-invert-body p {
+    color: #bfbfbf;
+
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+@media (min-width: 64rem) {
+    .praxis-invert-body p {
+        font-size: 18px;
+    }
+}
+
+.praxis-invert-body p + p {
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+
+    margin-top: 28px;
+    padding-top: 28px;
+}
+
+@media (min-width: 64rem) {
+    .praxis-invert-body p + p {
+        margin-top: 36px;
+        padding-top: 36px;
+    }
+}
+
+/* The content document asks for this line emphasised and without quote marks.
+   It is two questions, so each takes its own line and the second takes the
+   brand green — which is unusable on the light page (1.74:1) and reaches
+   9.08:1 here. Scale and colour do the work punctuation would have. */
+.praxis-ask {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+    font-family: var(--font-mono);
+    font-size: 22px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    text-wrap: balance;
+
+    margin-top: 48px;
+    padding-top: 40px;
+}
+
+@media (min-width: 40rem) {
+    .praxis-ask {
         font-size: 32px;
     }
 }
 
 @media (min-width: 64rem) {
-    .praxis-statement-xl {
-        font-size: 44px;
+    .praxis-ask {
+        font-size: 46px;
 
-        margin: 56px 0;
-        padding: 48px 0;
+        margin-top: 88px;
+        padding-top: 64px;
     }
 }
+
+.praxis-ask span {
+    display: block;
+}
+
+.praxis-ask span + span {
+    color: var(--primary-500);
+    margin-top: 6px;
+}
+
 
 /* ---- 07 | Closing row --------------------------------------------------- */
 
@@ -760,6 +814,56 @@
     line-height: 1.55;
 
     margin-top: 12px;
+}
+
+
+/* ---- 10 | Local SEO blocks ---------------------------------------------- */
+
+/* Two numbered blocks instead of a run of heading-plus-paragraph pairs: the
+   rule and the numeral give the section a structure you can scan, and the mono
+   subheads match the service columns in 01. */
+.praxis-geo-item {
+    border-top: 2px solid var(--foreground);
+    padding-top: 18px;
+}
+
+.praxis-geo-num {
+    color: var(--primary-700);
+
+    font-family: var(--font-mono);
+    font-size: 34px;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+@media (min-width: 64rem) {
+    .praxis-geo-num {
+        font-size: 42px;
+    }
+}
+
+.praxis-geo-title {
+    font-family: var(--font-mono);
+    font-size: 17px;
+    line-height: 1.25;
+    text-transform: uppercase;
+
+    margin-top: 14px;
+}
+
+@media (min-width: 64rem) {
+    .praxis-geo-title {
+        font-size: 19px;
+    }
+}
+
+.praxis-geo-text {
+    color: #46494c;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    margin-top: 14px;
 }
 
 

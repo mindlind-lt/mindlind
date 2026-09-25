@@ -393,32 +393,30 @@ export default function LandingPraxis() {
       {/* [Dieser Text ersetzt den Referenzblock mit dem fremden Agenturinhaber.
           Das Layout kann bleiben; Name, Porträt, Zitat und Erfahrungsaussagen
           der Referenz werden nicht übernommen.] */}
-      <section className="praxis-invert py-16 lg:py-28 overflow-hidden">
+      <section className="praxis-invert py-16 lg:py-28">
         <div className="container mx-auto px-6 sm:px-8">
 
-          <div className="pb-8 lg:pb-12">
-            <SectionIndex onDark>[04]</SectionIndex>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-[1.45fr_1fr] gap-10 lg:gap-20 items-start">
 
-          <UnderlinedHeader className="mb-10 lg:mb-14">
-            Ihr Marketing muss auch im Praxisalltag funktionieren.
-          </UnderlinedHeader>
+            {/* The heading holds its place while the supporting column scrolls
+                past it — the two are one thought, not a stack. */}
+            <div className="lg:sticky lg:top-(--hdr-height)">
+              <div className="pb-8 lg:pb-10">
+                <SectionIndex onDark>[04]</SectionIndex>
+              </div>
 
-          <p className="praxis-lead max-w-3xl">
-            Zusätzliche Anfragen helfen Ihrer Praxis dann, wenn sie zu Ihren
-            Leistungen und verfügbaren Terminen passen. Deshalb beginnt unsere
-            Arbeit mit einem Gespräch über Ihren Praxisalltag.
-          </p>
+              <UnderlinedHeader>
+                Ihr Marketing muss auch im Praxisalltag funktionieren.
+              </UnderlinedHeader>
+            </div>
 
-          {/* Hervorgehobene Aussage, ohne Zitatzeichen. */}
-          <p className="praxis-statement-xl">
-            Welche Patienten möchten Sie erreichen? Und wofür hat Ihre Praxis
-            Kapazität?
-          </p>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-16">
-            <div className="lg:col-start-2 lg:col-span-2">
-              <p className="praxis-lead">
+            <div className="praxis-invert-body">
+              <p>
+                Zusätzliche Anfragen helfen Ihrer Praxis dann, wenn sie zu Ihren
+                Leistungen und verfügbaren Terminen passen. Deshalb beginnt
+                unsere Arbeit mit einem Gespräch über Ihren Praxisalltag.
+              </p>
+              <p>
                 Vielleicht möchten Sie eine neue Sprechstunde etablieren, einen
                 Behandlungsschwerpunkt bekannter machen oder wiederkehrende
                 Fragen schon auf der Website beantworten. Wir übersetzen diese
@@ -427,7 +425,14 @@ export default function LandingPraxis() {
                 Behandlung bis zur Kontaktaufnahme.
               </p>
             </div>
+
           </div>
+
+          {/* Hervorgehobene Aussage, ohne Zitatzeichen. */}
+          <p className="praxis-ask">
+            <span>Welche Patienten möchten Sie erreichen?</span>
+            <span>Und wofür hat Ihre Praxis Kapazität?</span>
+          </p>
 
         </div>
       </section>
@@ -668,53 +673,14 @@ export default function LandingPraxis() {
 
           <div className="flex justify-between items-start gap-8 pb-8 lg:pb-12">
             <p className="praxis-eyebrow">Lokale Sichtbarkeit für Ihre Praxis</p>
-            <SectionIndex>[08]</SectionIndex>
+            <SectionIndex>[07]</SectionIndex>
           </div>
 
           <UnderlinedHeader className="mb-10 lg:mb-16">
             Gefunden werden, wenn Patienten in Ihrer Nähe suchen.
           </UnderlinedHeader>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-10 lg:gap-20 items-start">
-
-            <div className="flex flex-col gap-10">
-
-              <div>
-                <h3 className="praxis-h3 mb-4">
-                  Ihre Fachrichtung. Ihr Standort. Ihr Leistungsangebot.
-                </h3>
-                <p>
-                  Eine Suche nach einem Facharzt beginnt mit einem konkreten
-                  Anliegen. Deshalb richten wir Ihre Website auf die Verbindung
-                  aus Behandlung und Standort aus. Wer nach Ihrer Leistung in
-                  Ihrer Stadt sucht, soll schnell erkennen können, ob Ihre
-                  Praxis der richtige Ansprechpartner ist. Dafür braucht es
-                  verständliche Inhalte, eine übersichtliche Website und
-                  stimmige Standortinformationen.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="praxis-h3 mb-4">
-                  Website und Google-Profil gemeinsam verbessern
-                </h3>
-                <p>
-                  Wir prüfen Ihr Google-Unternehmensprofil, strukturieren Ihre
-                  Leistungsseiten und arbeiten relevante Informationen zu Ihrer
-                  Praxis und Ihrem Einzugsgebiet ein. Öffnungszeiten,
-                  Kontaktdaten, Leistungen und Bilder sollen ein konsistentes
-                  Gesamtbild vermitteln. Dazu kommen technische Verbesserungen
-                  und eine sinnvolle interne Verlinkung. Anhand der verfügbaren
-                  Such- und Kontaktdaten beobachten wir die Entwicklung und
-                  setzen die nächsten Prioritäten.
-                </p>
-              </div>
-
-              <div>
-                <DoorButton href="/contact">Lokale Sichtbarkeit besprechen</DoorButton>
-              </div>
-
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] xl:grid-cols-[360px_1fr] gap-10 lg:gap-14 items-start">
 
             {/* Bild 06, Porträtformat 2:3 — Nahaufnahme eines Smartphones in
                 einer Hand vor einer modernen Praxis im städtischen Umfeld.
@@ -728,6 +694,49 @@ export default function LandingPraxis() {
                 </figcaption>
               </div>
             </figure>
+
+            <div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
+
+                <div className="praxis-geo-item">
+                  <div className="praxis-geo-num">01</div>
+                  <h3 className="praxis-geo-title">
+                    Ihre Fachrichtung. Ihr Standort. Ihr Leistungsangebot.
+                  </h3>
+                  <p className="praxis-geo-text">
+                    Eine Suche nach einem Facharzt beginnt mit einem konkreten
+                    Anliegen. Deshalb richten wir Ihre Website auf die
+                    Verbindung aus Behandlung und Standort aus. Wer nach Ihrer
+                    Leistung in Ihrer Stadt sucht, soll schnell erkennen können,
+                    ob Ihre Praxis der richtige Ansprechpartner ist. Dafür
+                    braucht es verständliche Inhalte, eine übersichtliche
+                    Website und stimmige Standortinformationen.
+                  </p>
+                </div>
+
+                <div className="praxis-geo-item">
+                  <div className="praxis-geo-num">02</div>
+                  <h3 className="praxis-geo-title">
+                    Website und Google-Profil gemeinsam verbessern
+                  </h3>
+                  <p className="praxis-geo-text">
+                    Wir prüfen Ihr Google-Unternehmensprofil, strukturieren Ihre
+                    Leistungsseiten und arbeiten relevante Informationen zu
+                    Ihrer Praxis und Ihrem Einzugsgebiet ein. Öffnungszeiten,
+                    Kontaktdaten, Leistungen und Bilder sollen ein konsistentes
+                    Gesamtbild vermitteln. Dazu kommen technische Verbesserungen
+                    und eine sinnvolle interne Verlinkung. Anhand der
+                    verfügbaren Such- und Kontaktdaten beobachten wir die
+                    Entwicklung und setzen die nächsten Prioritäten.
+                  </p>
+                </div>
+
+              </div>
+
+              <div className="mt-10 lg:mt-14">
+                <DoorButton href="/contact">Lokale Sichtbarkeit besprechen</DoorButton>
+              </div>
+            </div>
 
           </div>
         </div>
