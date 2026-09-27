@@ -5,9 +5,9 @@ import { breadcrumbSchema } from "@/lib/schema";
 
 import { socialCard } from "@/lib/site";
 
-import CountUpOnView from "@/components/count-up-on-view";
 import DoorButton from "@/components/door-button/door-button";
 import PersonCard from "@/components/person-card/person-card";
+import PraxisMotion from "@/components/praxis-motion/praxis-motion";
 import SectionContact from "@/components/section-contact/section-contact";
 import TeamCarousel from "@/components/team-carousel/team-carousel";
 import UnderlinedHeader from "@/components/underlined-header/underlined-header";
@@ -94,19 +94,25 @@ export default function LandingPraxis() {
         }}
       />
 
+      {/* Every timeline on this page, in one client island. The page itself
+          stays a server component. */}
+      <PraxisMotion />
+
       {/* ---- 01 | Hero ------------------------------------------------- */}
       <section className="praxis-hero pb-12 lg:pb-20">
         <div className="container mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
             <div className="flex flex-col gap-6 lg:gap-8">
-              <p className="praxis-eyebrow">Online-Marketing für Ärzte</p>
+              <p className="praxis-eyebrow praxis-enter" data-praxis-anim="hero-eyebrow">
+                Online-Marketing für Ärzte
+              </p>
 
-              <h1 className="praxis-h1">
+              <h1 className="praxis-h1 praxis-enter" data-praxis-anim="hero-title">
                 Praxismarketing, das zu Ihrer Praxis passt.
               </h1>
 
-              <p className="praxis-lead">
+              <p className="praxis-lead praxis-enter" data-praxis-anim="hero-lead">
                 Sie möchten bestimmte Behandlungen stärker in den Fokus rücken,
                 Ihre Praxis bekannt machen oder die Online-Terminbuchung
                 erleichtern? MindLind verbindet Website, lokale Sichtbarkeit und
@@ -116,14 +122,14 @@ export default function LandingPraxis() {
                 Fachrichtung, Ihre Ziele und die Kapazitäten Ihres Teams.
               </p>
 
-              <div>
+              <div className="praxis-enter" data-praxis-anim="hero-cta">
                 <DoorButton size="lg" href="/contact">Praxisziele besprechen</DoorButton>
               </div>
             </div>
 
             {/* Bild 01 — Praxisinhaberin in einer modernen, glaubwürdigen
                 Praxis. The alt text is the one from the content document. */}
-            <figure className="praxis-figure praxis-figure--5-4">
+            <figure className="praxis-figure praxis-figure--5-4" data-praxis-anim="hero-figure">
               <div className="praxis-figure-inner praxis-figure-inner--photo">
                 {/* The page's LCP element: `priority` preloads it instead of
                     letting it queue behind the rest. `images.unoptimized` is on
@@ -152,18 +158,18 @@ export default function LandingPraxis() {
         <div className="container mx-auto px-6 sm:px-8">
           <div className="praxis-stats">
 
-            <div className="praxis-stat">
-              <CountUpOnView value={3} className="praxis-stat-value" />
+            <div className="praxis-stat praxis-enter">
+              <div className="praxis-stat-value" data-praxis-count>{3}</div>
               <div className="praxis-stat-label">Schritte zur Zusammenarbeit</div>
             </div>
 
-            <div className="praxis-stat">
-              <CountUpOnView value={6} className="praxis-stat-value" />
+            <div className="praxis-stat praxis-enter">
+              <div className="praxis-stat-value" data-praxis-count>{6}</div>
               <div className="praxis-stat-label">Bausteine für Ihren Auftritt</div>
             </div>
 
-            <div className="praxis-stat">
-              <CountUpOnView value={1} className="praxis-stat-value" />
+            <div className="praxis-stat praxis-enter">
+              <div className="praxis-stat-value" data-praxis-count>{1}</div>
               <div className="praxis-stat-label">Klarer Plan für Ihre Praxis</div>
             </div>
 
@@ -192,7 +198,7 @@ export default function LandingPraxis() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-14">
 
-            <article className="praxis-svc--visibility">
+            <article className="praxis-svc praxis-svc--visibility">
               <h2 className="praxis-svc-title">
                 Sichtbar werden
                 <span className="praxis-svc-index">01</span>
@@ -207,7 +213,7 @@ export default function LandingPraxis() {
               </ul>
             </article>
 
-            <article className="praxis-svc--trust">
+            <article className="praxis-svc praxis-svc--trust">
               <h2 className="praxis-svc-title">
                 Vertrauen aufbauen
                 <span className="praxis-svc-index">02</span>
@@ -222,7 +228,7 @@ export default function LandingPraxis() {
               </ul>
             </article>
 
-            <article className="praxis-svc--contact">
+            <article className="praxis-svc praxis-svc--contact">
               <h2 className="praxis-svc-title">
                 Kontakt erleichtern
                 <span className="praxis-svc-index">03</span>
@@ -377,7 +383,10 @@ export default function LandingPraxis() {
               ausgewählte Projekte und die Leistungen dahinter.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 lg:col-span-2">
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 lg:col-span-2"
+              data-praxis-anim="works"
+            >
               <WorkThumb
                 headingLevel="h3"
                 href="/projects/mondent"
@@ -412,6 +421,11 @@ export default function LandingPraxis() {
           Reihenfolge wie im Content-Dokument: Einleitung, hervorgehobene
           Aussage, Haupttext. */}
       <section className="praxis-invert py-16 lg:py-28">
+        {/* Faded out against the scroll as the band comes in — see
+            .praxis-invert-curtain and components/praxis-motion. Purely the
+            transition into the dark section; it carries no content. */}
+        <div className="praxis-invert-curtain" aria-hidden="true" />
+
         <div className="container mx-auto px-6 sm:px-8">
 
           <div className="pb-8 lg:pb-12">
@@ -590,7 +604,10 @@ export default function LandingPraxis() {
             Ein klarer Ablauf. Von der ersten Frage bis zur Umsetzung.
           </UnderlinedHeader>
 
-          <ol className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
+          <ol
+            className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12"
+            data-praxis-anim="steps"
+          >
 
             <li>
               {/* Bild 03, Querformat 3:2 — Ärztin am Laptop in einem ruhigen Büro
@@ -604,7 +621,12 @@ export default function LandingPraxis() {
                 </div>
               </figure>
 
-              <div className="praxis-step-number">01</div>
+              <div className="praxis-step-head">
+                <div className="praxis-step-number">01</div>
+                <span className="praxis-step-rule" aria-hidden="true">
+                  <span className="praxis-step-rule-fill" />
+                </span>
+              </div>
               <h3 className="praxis-step-title">Praxis und Ziele verstehen</h3>
               <p className="praxis-step-text">
                 Wir sprechen über Ihre Fachrichtung, Ihre Schwerpunkte und die
@@ -628,7 +650,12 @@ export default function LandingPraxis() {
                 </div>
               </figure>
 
-              <div className="praxis-step-number">02</div>
+              <div className="praxis-step-head">
+                <div className="praxis-step-number">02</div>
+                <span className="praxis-step-rule" aria-hidden="true">
+                  <span className="praxis-step-rule-fill" />
+                </span>
+              </div>
               <h3 className="praxis-step-title">Prioritäten festlegen</h3>
               <p className="praxis-step-text">
                 Wir prüfen Ihren bestehenden Auftritt und zeigen, wo sich
@@ -652,7 +679,12 @@ export default function LandingPraxis() {
                 </div>
               </figure>
 
-              <div className="praxis-step-number">03</div>
+              <div className="praxis-step-head">
+                <div className="praxis-step-number">03</div>
+                <span className="praxis-step-rule" aria-hidden="true">
+                  <span className="praxis-step-rule-fill" />
+                </span>
+              </div>
               <h3 className="praxis-step-title">Umsetzen und weiterentwickeln</h3>
               <p className="praxis-step-text">
                 Nach Ihrer Freigabe setzen wir die vereinbarten Maßnahmen um.
@@ -741,12 +773,12 @@ export default function LandingPraxis() {
                 <circle className="praxis-geo-ring" cx="240" cy="240" r="112" strokeOpacity="0.28" strokeDasharray="2 6" />
                 <circle className="praxis-geo-ring praxis-geo-pulse" cx="240" cy="240" r="218" strokeOpacity="0.6" strokeWidth="2" />
                 {/* Patienten im Einzugsgebiet. */}
-                <circle cx="240" cy="42" r="5" fill="var(--primary-700)" fillOpacity="0.7" />
-                <circle cx="424" cy="300" r="5" fill="var(--primary-700)" fillOpacity="0.55" />
-                <circle cx="66" cy="188" r="5" fill="var(--primary-700)" fillOpacity="0.6" />
-                <circle cx="352" cy="86" r="4" fill="var(--primary-700)" fillOpacity="0.4" />
-                <circle cx="128" cy="404" r="4" fill="var(--primary-700)" fillOpacity="0.4" />
-                <circle cx="396" cy="420" r="3" fill="var(--primary-700)" fillOpacity="0.3" />
+                <circle className="praxis-geo-dot" cx="240" cy="42" r="5" fill="var(--primary-700)" fillOpacity="0.7" />
+                <circle className="praxis-geo-dot" cx="424" cy="300" r="5" fill="var(--primary-700)" fillOpacity="0.55" />
+                <circle className="praxis-geo-dot" cx="66" cy="188" r="5" fill="var(--primary-700)" fillOpacity="0.6" />
+                <circle className="praxis-geo-dot" cx="352" cy="86" r="4" fill="var(--primary-700)" fillOpacity="0.4" />
+                <circle className="praxis-geo-dot" cx="128" cy="404" r="4" fill="var(--primary-700)" fillOpacity="0.4" />
+                <circle className="praxis-geo-dot" cx="396" cy="420" r="3" fill="var(--primary-700)" fillOpacity="0.3" />
               </svg>
 
               {/* Bild 06, Porträtformat 2:3 — Nahaufnahme eines Smartphones in
@@ -789,7 +821,7 @@ export default function LandingPraxis() {
         <div className="container mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6" data-praxis-anim="tiles-copy">
               <p className="praxis-eyebrow">Von der Suche zum Termin</p>
 
               <h2 className="praxis-h3">
@@ -806,7 +838,7 @@ export default function LandingPraxis() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" data-praxis-anim="tiles">
               <div className="praxis-tile">
                 <div className="praxis-tile-inner">
                   <div className="praxis-tile-title">Die passende Information</div>

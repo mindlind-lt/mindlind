@@ -97,6 +97,32 @@
 }
 
 
+/* ---- Motion ------------------------------------------------------------- */
+
+/* The page's scroll animation lives in components/praxis-motion. Almost all of
+   it sets its own starting state in JS, which is invisible because the section
+   is still below the fold when it does. The hero and the three accents under it
+   are not: an effect runs after the browser has painted, so a from-state set in
+   JS would show them finished for a frame and then yank them away. Those carry
+   .praxis-enter and start hidden here instead.
+
+   Consequently this is the one class on the page that must be reset for anything
+   that will not run the script — see the two queries at the bottom of the file. */
+.praxis-enter {
+    opacity: 0;
+}
+
+/* SplitText's own line wrappers (`mask: "lines"`), so a line can rise into place
+   from behind its own edge. The wrapper is `overflow: clip` and these headings
+   are set at a line-height near 1, so without the pad the tails of g, j and y
+   are sliced off the moment the line lands; the negative margin hands the space
+   back to the layout, leaving the spacing between lines as it was. */
+.praxis-line-mask {
+    padding-bottom: 0.14em;
+    margin-bottom: -0.14em;
+}
+
+
 /* ---- Image slots -------------------------------------------------------- */
 
 /* The six motifs in the content document do not exist as files yet, so the slot
@@ -309,6 +335,27 @@
 .praxis-svc-index {
     font-size: 13px;
     letter-spacing: 0.1em;
+}
+
+/* The column has no other hover state, so the index is the one thing that
+   answers the pointer: it steps up towards the rule it sits on. A transition
+   rather than a GSAP tween because it has nothing to do with the scroll — the
+   scroll timelines never touch this element, so the two cannot collide. */
+@media (hover: hover) {
+    .praxis-svc-index {
+        display: inline-block;
+        transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .praxis-svc:hover .praxis-svc-index {
+        transform: translateY(-3px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .praxis-svc-index {
+        transition: none;
+    }
 }
 
 .praxis-svc-list li {
@@ -541,6 +588,28 @@
 
     background: var(--foreground);
     color: #fff;
+}
+
+/* The transition into the band: a layer in the page colour over the whole
+   section, faded out against the scroll (components/praxis-motion), so the band
+   arrives the colour of everything above it and darkens as it is read instead of
+   meeting the page on a hard line. It covers the content as well as the ground,
+   which is the point — this section's type is white, and white on a light field
+   is unreadable, so the words come up with the dark behind them.
+
+   Transparent by default, so a page that never runs the script — or one under
+   reduced motion, where the fade is never built — simply shows the band. The
+   `> ` is there to outrank `.praxis-invert > *` below, which would otherwise win
+   on source order and make this `position: relative`. */
+.praxis-invert > .praxis-invert-curtain {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+
+    background: var(--background);
+    opacity: 0;
+
+    pointer-events: none;
 }
 
 /* Brand glow, kept faint: depth, not a gradient. */
@@ -801,6 +870,82 @@
 
 /* ---- 09 | Three steps --------------------------------------------------- */
 
+/* The number and the rule that runs from it to the next step share a row, so the
+   rule is always on the number's centre line whatever the image above it does to
+   the column height. */
+.praxis-step-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Reaches across the grid gap into the next column, which is the whole reason it
+   reads as a connector between the steps rather than three underlines. The gap
+   has to be repeated here because a negative margin cannot ask the grid what its
+   `gap-10`/`lg:gap-12` came to — keep --praxis-step-gap in step with the classes
+   on the <ol> in page.tsx. Zero below md, where the steps stack and there is no
+   gap to cross: the overhang would push the page sideways instead. */
+.praxis-step-rule {
+    --praxis-step-gap: 0px;
+
+    background: rgba(26, 26, 26, 0.14);
+    border-radius: 1px;
+
+    position: relative;
+    overflow: hidden;
+
+    flex: 1;
+    height: 2px;
+    margin-right: calc(-1 * var(--praxis-step-gap));
+}
+
+/* Drawn on scroll rather than on enter — see components/praxis-motion, which
+   staggers the three inside one scrubbed range so the line advances from step to
+   step as the section is read. scaleX rather than width, so it runs on the
+   compositor; the track is full width from the start for anything measuring. */
+.praxis-step-rule-fill {
+    background: var(--primary-700);
+
+    position: absolute;
+    inset: 0;
+
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+
+/* Nothing draws the fill without JS, and nothing draws it under reduced motion
+   either — components/praxis-motion builds no timelines at all there. Both
+   cases get the finished line rather than an empty track. */
+@media (prefers-reduced-motion: reduce) {
+    .praxis-step-rule-fill {
+        transform: none;
+    }
+}
+
+@media (scripting: none) {
+    .praxis-step-rule-fill {
+        transform: none;
+    }
+}
+
+/* The last step has no next column to reach, so it keeps its rule inside the
+   grid rather than hanging it off the right edge of the page. */
+li:last-child .praxis-step-rule {
+    margin-right: 0;
+}
+
+@media (min-width: 48rem) {
+    .praxis-step-rule {
+        --praxis-step-gap: 40px;
+    }
+}
+
+@media (min-width: 64rem) {
+    .praxis-step-rule {
+        --praxis-step-gap: 48px;
+    }
+}
+
 .praxis-step-number {
     color: var(--primary-700);
     font-family: var(--font-mono);
@@ -880,21 +1025,27 @@
 }
 
 /* The outermost ring breathes, once every six seconds — slow enough to read as
-   a signal rather than a loading spinner. */
-.praxis-geo-pulse {
-    transform-origin: center;
-    animation: praxis-geo-pulse 6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
+   a signal rather than a loading spinner. The loop moved to
+   components/praxis-motion, on the same six seconds and the same curve, because
+   two things about it are not a keyframe's to decide: it may only start once the
+   rings have finished drawing themselves in, and it idles while the section is
+   off screen rather than animating a graphic nobody is looking at.
 
-@keyframes praxis-geo-pulse {
-    0%   { transform: scale(0.82); opacity: 0; }
-    35%  { opacity: 0.55; }
-    100% { transform: scale(1.06); opacity: 0; }
+   So it starts invisible and GSAP fades it through each cycle. The two queries
+   below are the cases where that never happens, and there it rests as one more
+   ring at a lower strength. */
+.praxis-geo-pulse {
+    opacity: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
     .praxis-geo-pulse {
-        animation: none;
+        opacity: 0.3;
+    }
+}
+
+@media (scripting: none) {
+    .praxis-geo-pulse {
         opacity: 0.3;
     }
 }
@@ -1027,4 +1178,23 @@
     line-height: 1.45;
 
     margin-top: 8px;
+}
+
+
+/* ---- Motion: the two ways out ------------------------------------------- */
+
+/* No motion: the page arrives finished. components/praxis-motion builds nothing
+   at all under this query, so every .praxis-enter element would otherwise be
+   left at the opacity it starts hidden with. */
+@media (prefers-reduced-motion: reduce) {
+    .praxis-enter {
+        opacity: 1;
+    }
+}
+
+/* Nothing to reveal them without JS either. */
+@media (scripting: none) {
+    .praxis-enter {
+        opacity: 1;
+    }
 }
