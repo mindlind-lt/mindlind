@@ -11,6 +11,11 @@
    header itself — /contact solves the same problem with a margin. */
 .praxis-hero {
     padding-top: calc(var(--hdr-height) + 24px);
+
+    /* The positioned ancestor <ParticleWave className="particle-wave--behind" />
+       fills. No overflow clip is needed: the wave is inset:0, so it cannot
+       reach past the section in the first place. */
+    position: relative;
 }
 
 @media (min-width: 64rem) {
@@ -19,6 +24,48 @@
     }
 }
 
+
+/* The hero wave is full strength across the top, where nothing sits on it, and
+   fades down the section so the lead paragraph keeps a clean surface to read
+   against. Without this the dots run straight through the body copy: the h1 is
+   heavy enough to stay legible over them, 16px text is not.
+
+   It also runs the last stop to fully transparent, so the wave dissolves into
+   the page instead of being cut off flat at the section boundary.
+
+   Drop this rule to get the wave at full strength everywhere. */
+.praxis-hero-wave {
+    /* Phones stack the hero, so the copy runs the full width and the whole
+       column sits on the wave — a percentage fade like the desktop one below
+       leaves dots through every line of the lead. Here the wave is strong only
+       in the band above the text, drops to a faint texture over the copy, and
+       is gone by the end of the section. The first two stops are in px because
+       they have to land in the same place whatever the hero grows to. */
+    mask-image: linear-gradient(
+        to bottom,
+        rgb(0 0 0 / 0.6) 0,
+        rgb(0 0 0 / 0.24) 210px,
+        rgb(0 0 0 / 0.13) 45%,
+        rgb(0 0 0 / 0) 100%
+    );
+}
+
+@media (min-width: 64rem) {
+    .praxis-hero-wave {
+        /* Two columns from here up: the copy only occupies the left half, so
+           the wave can stay at full strength across the top and fade more
+           gently — the dots that remain are mostly beside the text, not under
+           it. */
+        mask-image: linear-gradient(
+            to bottom,
+            rgb(0 0 0) 0%,
+            rgb(0 0 0) 26%,
+            rgb(0 0 0 / 0.28) 52%,
+            rgb(0 0 0 / 0.1) 78%,
+            rgb(0 0 0 / 0) 100%
+        );
+    }
+}
 
 /* Small mono label over a heading ("Online-Marketing für Ärzte"). --primary-700
    rather than -500 because this is text on a light surface: the brighter green
@@ -68,6 +115,22 @@
 @media (min-width: 64rem) {
     .praxis-h1 {
         font-size: 64px;
+    }
+}
+
+/* Readability: cap the measure of the full-bleed section headings.
+   At 72px across the full 1216px container a title runs to roughly 45
+   characters a line, and the eye has to travel the whole width back to find the
+   start of the next one. Capping it turns each title into a compact block that
+   is taken in at a glance. It only applies from 64rem up — below that the
+   viewport is already the limit, and a cap there would just force ragged
+   two-word lines.
+
+   `ch` rather than px so the cap tracks the font size through the breakpoints.
+   Not applied to .praxis-feature-head, which already sits in a narrow card. */
+@media (min-width: 64rem) {
+    .praxis-section-head .underlined-header-title {
+        max-width: 22ch;
     }
 }
 
@@ -712,20 +775,23 @@
     margin-top: 6px;
 }
 
-/* Set in two columns rather than one long run: same words, half the column
-   height, and it stops the band ending on a wall of text. */
+/* Was set in two columns to keep the band from ending on a wall of text. That
+   halved the height but made a single continuous paragraph read down the left
+   column and then back up to the top of the right one, which is the one thing
+   worth avoiding in a short passage of body copy. One column, capped at a
+   comfortable measure, gets the same result without the jump: the text no
+   longer spans the full width either way. */
 .praxis-invert-note {
     color: #bfbfbf;
 
     font-size: 16px;
     line-height: 1.7;
+
+    max-width: 62ch;
 }
 
 @media (min-width: 64rem) {
     .praxis-invert-note {
-        column-count: 2;
-        column-gap: 72px;
-
         font-size: 17px;
     }
 }
@@ -964,8 +1030,11 @@ li:last-child .praxis-step-rule {
 }
 
 .praxis-step-text {
-    font-size: 15px;
-    line-height: 1.55;
+    /* 16/1.65 rather than 15/1.55: this is the smallest run of real sentences on
+       the page, and it sits in a narrow column where short lines make a tight
+       leading feel tighter still. */
+    font-size: 16px;
+    line-height: 1.65;
 
     margin-top: 12px;
 }

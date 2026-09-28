@@ -108,9 +108,11 @@ export const metadata: Metadata = {
  *     exists or is unnecessary. Whether Art. 37 DSGVO / § 38 BDSG require one
  *     depends on headcount and processing activities. Add a section if needed.
  *
- * 12. SCOPE — the page names new.mindlind.de. Update when the redesign moves to
- *     the apex domain, and note that the old WordPress site at mindlind.de is a
- *     separate service on different hosting with its own policy.
+ * 12. SCOPE — the page names mindlind.de, the apex domain this site now serves
+ *     from. The temporary new.mindlind.de subdomain it was written against is
+ *     retired. If the old WordPress site still answers anywhere (a subdomain, a
+ *     parked host), that is a separate service with its own policy and needs
+ *     its own line here.
  *
  * 13. STAND — the date below is manual. Bump it whenever this page changes.
  *
@@ -129,13 +131,13 @@ export default function PagePrivacy() {
   return (
     <LegalPage title="Datenschutz" path="/datenschutz">
       <section>
-        {/* UNVERIFIED #12 — scope is new.mindlind.de. Update on the move to the
-            apex domain; the old WordPress site at mindlind.de is separate. */}
+        {/* UNVERIFIED #12 — scope is the apex domain mindlind.de. If the old
+            WordPress site still answers anywhere, it is separate. */}
         <p>
           Diese Datenschutzerklärung informiert Sie darüber, welche
           personenbezogenen Daten wir beim Besuch dieser Website verarbeiten,
           zu welchem Zweck und auf welcher Rechtsgrundlage. Sie gilt für die
-          Website unter <strong>new.mindlind.de</strong>.
+          Website unter <strong>mindlind.de</strong>.
         </p>
       </section>
 

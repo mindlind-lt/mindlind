@@ -18,7 +18,7 @@ export const siteConfig = {
    * NEXT_PUBLIC_SITE_URL (e.g. a Vercel preview or staging domain) so
    * canonicals and OG URLs don't all point at production.
    */
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://new.mindlind.de").replace(
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://mindlind.de").replace(
     /\/$/,
     "",
   ),
@@ -76,10 +76,7 @@ export const routes = [
     title: "Praxismarketing für Ärzte",
     summary:
       "Websites, lokale SEO und Google Ads für Ärzte und Praxen",
-    // Content is in place, but the page is still an unstyled transcript of
-    // MindLind-Praxismarketing-Content-DE.md. Flip to `true` once it is
-    // designed, and drop the matching `noindex` in its `metadata` export.
-    published: false,
+    published: true,
     priority: 0.8,
     changeFrequency: "monthly",
   },

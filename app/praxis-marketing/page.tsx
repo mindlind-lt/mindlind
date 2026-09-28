@@ -6,6 +6,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { socialCard } from "@/lib/site";
 
 import DoorButton from "@/components/door-button/door-button";
+import ParticleWave from "@/components/particle-wave/particle-wave";
 import PersonCard from "@/components/person-card/person-card";
 import PraxisMotion from "@/components/praxis-motion/praxis-motion";
 import SectionContact from "@/components/section-contact/section-contact";
@@ -36,10 +37,6 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: "/praxis-marketing" },
-  // Matches `published: false` for this route in lib/site.ts, which also keeps
-  // it out of sitemap.xml and llms.txt. Flip both together once the page is
-  // ready to be indexed.
-  robots: { index: false, follow: false },
   openGraph: {
     type: "website",
     locale: "de_DE",
@@ -100,7 +97,11 @@ export default function LandingPraxis() {
 
       {/* ---- 01 | Hero ------------------------------------------------- */}
       <section className="praxis-hero pb-12 lg:pb-20">
-        <div className="container mx-auto px-6 sm:px-8">
+        {/* Background layer. `praxis-hero` is the positioned ancestor it fills
+            (see praxis-marketing.css); the container below sits above it. */}
+        <ParticleWave className="particle-wave--behind praxis-hero-wave" />
+
+        <div className="container relative z-10 mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
             <div className="flex flex-col gap-6 lg:gap-8">
@@ -192,7 +193,7 @@ export default function LandingPraxis() {
             <SectionIndex>[01]</SectionIndex>
           </div>
 
-          <UnderlinedHeader className="mb-10 lg:mb-16">
+          <UnderlinedHeader className="praxis-section-head mb-10 lg:mb-16">
             Sechs Bausteine, geordnet nach dem Nutzen für Ihre Praxis.
           </UnderlinedHeader>
 
@@ -368,7 +369,7 @@ export default function LandingPraxis() {
             <SectionIndex>[03]</SectionIndex>
           </div>
 
-          <UnderlinedHeader className="mb-10 lg:mb-16">
+          <UnderlinedHeader className="praxis-section-head mb-10 lg:mb-16">
             So wird medizinische Kompetenz sichtbar.
           </UnderlinedHeader>
 
@@ -432,7 +433,7 @@ export default function LandingPraxis() {
             <SectionIndex onDark>[04]</SectionIndex>
           </div>
 
-          <UnderlinedHeader>
+          <UnderlinedHeader className="praxis-section-head">
             Ihr Marketing muss auch im Praxisalltag funktionieren.
           </UnderlinedHeader>
 
@@ -515,7 +516,7 @@ export default function LandingPraxis() {
             <SectionIndex>[06]</SectionIndex>
           </div>
 
-          <UnderlinedHeader className="mb-10 lg:mb-16">
+          <UnderlinedHeader className="praxis-section-head mb-10 lg:mb-16">
             Was Ihre Praxis braucht, bestimmt die Maßnahmen.
           </UnderlinedHeader>
 
@@ -600,7 +601,7 @@ export default function LandingPraxis() {
             <SectionIndex>[07]</SectionIndex>
           </div>
 
-          <UnderlinedHeader className="mb-10 lg:mb-16">
+          <UnderlinedHeader className="praxis-section-head mb-10 lg:mb-16">
             Ein klarer Ablauf. Von der ersten Frage bis zur Umsetzung.
           </UnderlinedHeader>
 
@@ -717,7 +718,7 @@ export default function LandingPraxis() {
             <SectionIndex>[07]</SectionIndex>
           </div>
 
-          <UnderlinedHeader className="mb-12 lg:mb-20">
+          <UnderlinedHeader className="praxis-section-head mb-12 lg:mb-20">
             Gefunden werden, wenn Patienten in Ihrer Nähe suchen.
           </UnderlinedHeader>
 
