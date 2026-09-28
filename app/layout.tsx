@@ -5,7 +5,6 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import PreloadResources from "@/components/preload-resources";
 import TopProgressBar from "@/components/progress-bar/top-progress-bar";
-import SmoothScroll from "@/components/smooth-scroll/smooth-scroll";
 import ConsentBanner from "@/components/consent/consent-banner";
 import GoogleAnalytics from "@/components/analytics/google-analytics";
 import GoogleTagManager from "@/components/analytics/google-tag-manager";
@@ -79,8 +78,6 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {/* Renders nothing; it eases the page's scroll position. */}
-        <SmoothScroll />
         <TopProgressBar />
         <PreloadResources />
 

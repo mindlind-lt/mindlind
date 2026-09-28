@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Play, X } from "lucide-react";
 
-import { lockPageScroll } from "@/lib/smooth-scroll";
+import { lockPageScroll } from "@/lib/scroll-lock";
 
 import "./hover-video.css";
 

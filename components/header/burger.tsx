@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "@/components/progress-bar/progress-link";
-import { lockPageScroll } from "@/lib/smooth-scroll";
+import { lockPageScroll } from "@/lib/scroll-lock";
 
 export default function Burger() {
   const [isOpen, setIsOpen] = useState(false);
