@@ -12,9 +12,9 @@
 .praxis-hero {
     padding-top: calc(var(--hdr-height) + 24px);
 
-    /* The positioned ancestor <ParticleWave className="particle-wave--behind" />
-       fills. No overflow clip is needed: the wave is inset:0, so it cannot
-       reach past the section in the first place. */
+    /* The positioned ancestor <DnaHelix className="dna-helix--behind" /> fills.
+       No overflow clip is needed: the helix is inset:0, so it cannot reach past
+       the section in the first place. */
     position: relative;
 }
 
@@ -25,22 +25,22 @@
 }
 
 
-/* The hero wave is full strength across the top, where nothing sits on it, and
+/* The hero helix is full strength across the top, where nothing sits on it, and
    fades down the section so the lead paragraph keeps a clean surface to read
-   against. Without this the dots run straight through the body copy: the h1 is
-   heavy enough to stay legible over them, 16px text is not.
+   against. Without this the particles run straight through the body copy: the h1
+   is heavy enough to stay legible over them, 16px text is not.
 
-   It also runs the last stop to fully transparent, so the wave dissolves into
+   It also runs the last stop to fully transparent, so the helix dissolves into
    the page instead of being cut off flat at the section boundary.
 
-   Drop this rule to get the wave at full strength everywhere. */
-.praxis-hero-wave {
+   Drop this rule to get the helix at full strength everywhere. */
+.praxis-hero-dna {
     /* Phones stack the hero, so the copy runs the full width and the whole
-       column sits on the wave — a percentage fade like the desktop one below
-       leaves dots through every line of the lead. Here the wave is strong only
-       in the band above the text, drops to a faint texture over the copy, and
-       is gone by the end of the section. The first two stops are in px because
-       they have to land in the same place whatever the hero grows to. */
+       column sits on the helix — a percentage fade like the desktop one below
+       leaves particles through every line of the lead. Here it is strong only in
+       the band above the text, drops to a faint texture over the copy, and is
+       gone by the end of the section. The first two stops are in px because they
+       have to land in the same place whatever the hero grows to. */
     mask-image: linear-gradient(
         to bottom,
         rgb(0 0 0 / 0.6) 0,
@@ -51,11 +51,10 @@
 }
 
 @media (min-width: 64rem) {
-    .praxis-hero-wave {
+    .praxis-hero-dna {
         /* Two columns from here up: the copy only occupies the left half, so
-           the wave can stay at full strength across the top and fade more
-           gently — the dots that remain are mostly beside the text, not under
-           it. */
+           the helix can stay at full strength across the top and fade more
+           gently — what remains is mostly beside the text, not under it. */
         mask-image: linear-gradient(
             to bottom,
             rgb(0 0 0) 0%,
@@ -65,6 +64,39 @@
             rgb(0 0 0 / 0) 100%
         );
     }
+}
+
+
+/* Section 06, "Was Ihre Praxis braucht" — where the wave went when the hero took
+   the helix. */
+.praxis-needs {
+    /* The positioned ancestor <ParticleWave className="particle-wave--behind" />
+       fills, as .praxis-hero is for the helix. */
+    position: relative;
+}
+
+/* Unlike the hero, this section's content runs the full width at every size, so
+   there is no half of the section the wave can own. It is strongest behind the
+   index and the heading, thins out over the lead, and is gone by the table —
+   which is opaque white anyway (see .praxis-table-frame) and hides whatever is
+   left behind it. The px stops are the ones that have to land on the heading and
+   the lead; the section's own height varies with how the table wraps.
+
+   The first stop is transparent, which the hero's equivalent is not, and that is
+   the one difference that matters. The hero sits at the top of the document, so
+   the wave being at full strength on its first row is a seam nobody can see. In
+   the middle of a page it is a band sliced off flat against the section above —
+   so this one fades in as well as out, and the wave's dense horizon rows land
+   just inside the section instead of on its edge. */
+.praxis-needs-wave {
+    mask-image: linear-gradient(
+        to bottom,
+        rgb(0 0 0 / 0) 0,
+        rgb(0 0 0 / 0.42) 150px,
+        rgb(0 0 0 / 0.2) 300px,
+        rgb(0 0 0 / 0.07) 470px,
+        rgb(0 0 0 / 0) 100%
+    );
 }
 
 /* Small mono label over a heading ("Online-Marketing für Ärzte"). --primary-700

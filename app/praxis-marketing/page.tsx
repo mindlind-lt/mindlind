@@ -5,6 +5,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 
 import { socialCard } from "@/lib/site";
 
+import DnaHelix from "@/components/dna-helix/dna-helix";
 import DoorButton from "@/components/door-button/door-button";
 import ParticleWave from "@/components/particle-wave/particle-wave";
 import PersonCard from "@/components/person-card/person-card";
@@ -98,8 +99,16 @@ export default function LandingPraxis() {
       {/* ---- 01 | Hero ------------------------------------------------- */}
       <section className="praxis-hero pb-12 lg:pb-20">
         {/* Background layer. `praxis-hero` is the positioned ancestor it fills
-            (see praxis-marketing.css); the container below sits above it. */}
-        <ParticleWave className="particle-wave--behind praxis-hero-wave" />
+            (see praxis-marketing.css); the container below sits above it.
+
+            `crop` rather than the component's default `contain`: this hero is
+            far taller than the helix's 3:2 composition, especially on phones
+            where the copy stacks, so fitting the whole thing inside would shrink
+            it to a narrow band stranded in the middle of the section — and the
+            mask is at its weakest exactly there. Cropping keeps the particles at
+            their own scale and lets the section show the part of the helix that
+            fits. */}
+        <DnaHelix className="dna-helix--behind praxis-hero-dna" fit="crop" />
 
         <div className="container relative z-10 mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
@@ -509,8 +518,12 @@ export default function LandingPraxis() {
       {/* [Bewusster Ersatz für den Vergleich mit "klassischen Agenturen". Keine
           pauschalen Aussagen über Wettbewerber, garantierten Freigaben,
           erfundenen Terminkosten oder Gewinnversprechen.] */}
-      <section className="py-12 lg:py-20">
-        <div className="container mx-auto px-6 sm:px-8">
+      <section className="praxis-needs py-12 lg:py-20">
+        {/* Background layer, as the hero used to have. `praxis-needs` is the
+            positioned ancestor it fills; the container below sits above it. */}
+        <ParticleWave className="particle-wave--behind praxis-needs-wave" />
+
+        <div className="container relative z-10 mx-auto px-6 sm:px-8">
 
           <div className="pb-8 lg:pb-12">
             <SectionIndex>[06]</SectionIndex>
