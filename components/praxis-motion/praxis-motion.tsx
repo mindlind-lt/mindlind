@@ -233,8 +233,9 @@ export default function PraxisMotion() {
 
         // ---- 06 | Work thumbs --------------------------------------------
         //
-        // Again no `y`: the desktop context parallaxes these against the
-        // sticky intro column beside them.
+        // No `y`, unlike the blocks above: these are the only cards on the page
+        // that stay put once revealed, so bringing them in on a vertical offset
+        // would be the only movement they ever make.
         gsap.from('[data-praxis-anim="works"] .work-thumb', {
           opacity: 0,
           scale: 0.97,
@@ -491,8 +492,8 @@ export default function PraxisMotion() {
       // is re-anchored to the scroll position silently, with nothing to replay.
       //
       // Below 64rem the layouts these depend on do not exist — the statements
-      // stack under the photo instead of floating on it, and the works intro is
-      // not sticky — and a phone has no spare frames for it anyway.
+      // stack under the photo instead of floating on it — and a phone has no
+      // spare frames for it anyway.
       mm.add("(min-width: 64rem)", () => {
         // The hero photo drifts up as the page leaves, a little slower than
         // the column of text beside it.
@@ -530,29 +531,9 @@ export default function PraxisMotion() {
           { y: 32, ease: "none", scrollTrigger: floatTrigger }
         );
 
-        // The intro beside these is `position: sticky`, so giving the two
-        // thumbs different rates is what makes the column read as held while
-        // the work moves past it.
-        gsap.utils
-          .toArray<HTMLElement>('[data-praxis-anim="works"] .work-thumb')
-          .forEach((thumb, i) => {
-            const travel = 30 + i * 30;
-
-            gsap.fromTo(
-              thumb,
-              { y: travel },
-              {
-                y: -travel,
-                ease: "none",
-                scrollTrigger: {
-                  trigger: '[data-praxis-anim="works"]',
-                  start: "top bottom",
-                  end: "bottom top",
-                  scrub: true,
-                },
-              }
-            );
-          });
+        // The work thumbs used to drift here too, at two different rates, to
+        // play against the sticky intro column beside them. Removed on request:
+        // they now hold their place and only the one-shot reveal above plays.
       });
     });
 
