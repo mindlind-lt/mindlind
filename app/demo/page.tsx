@@ -1,69 +1,34 @@
 import type { Metadata } from "next";
-import DnaCapsule from "@/components/dna-capsule/dna-capsule";
-import DnaHelix from "@/components/dna-helix/dna-helix";
+import WorkThumb from "@/components/work-thumb/work-thumb";
 
-export const metadata: Metadata = {
-  title: "Demo",
-  // A scratch page for trying components out — keep it out of search.
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = { title: "Demo", robots: { index: false, follow: false } };
 
-const COPY =
-  "Wir entwickeln digitale Produkte, die Praxen und Kliniken sichtbar machen. Von der Positionierung über die Marke bis zur Website — alles aus einer Hand, messbar und ohne Streuverlust.";
+const THUMBS = [
+  ["funky-coffee", "case-funky-coffee-1", "case-funky-coffee-2", "Funky Coffee"],
+  ["mondent", "case-mondent-1", "case-mondent-2", "Mondent"],
+  ["luxfloor", "case-luxfloor-1", "case-luxfloor-2", "LuxFloor"],
+  ["panda-travel", "case-pandatravel-1", "case-pandatravel-3", "Panda Travel"],
+] as const;
 
 export default function DemoPage() {
   return (
-    <main>
-      {/* On its own: a full-width band. */}
-      <DnaCapsule />
-
-      <div className="px-10">
-        {/* Over the content, bending it. */}
-        <section className="relative h-[560px] border border-dashed border-neutral-300">
-          <div className="p-12">
-            <h2 className="text-4xl font-bold">Über dem Inhalt, mit Refraktion</h2>
-            <p className="mt-6 max-w-3xl text-lg">{COPY}</p>
-            <p className="mt-4 max-w-3xl text-lg">{COPY}</p>
-            <p className="mt-4 max-w-3xl text-lg">{COPY}</p>
-          </div>
-          <DnaCapsule className="dna-capsule--overlay" refractPage backdrop="#F4F4F4" />
-        </section>
-
-        {/* Over the content without it: the pill covers what it crosses. */}
-        <section className="relative mt-6 h-[560px] border border-dashed border-neutral-300">
-          <div className="p-12">
-            <h2 className="text-4xl font-bold">Ohne Refraktion</h2>
-            <p className="mt-6 max-w-3xl text-lg">{COPY}</p>
-            <p className="mt-4 max-w-3xl text-lg">{COPY}</p>
-            <p className="mt-4 max-w-3xl text-lg">{COPY}</p>
-          </div>
-          <DnaCapsule className="dna-capsule--overlay" />
-        </section>
-
-        {/* Behind it — the content needs a z-index above 0. */}
-        <section className="relative mt-6 h-[560px] border border-dashed border-neutral-300">
-          <div className="relative z-10 max-w-md p-12">
-            <h2 className="text-4xl font-bold">Hinter dem Inhalt</h2>
-            <p className="mt-6 text-lg">{COPY}</p>
-          </div>
-          <DnaCapsule className="dna-capsule--behind" />
-        </section>
-
-        {/* Parked in a corner, pulled in so it fills the smaller box — the shape
-            the praxis-marketing page uses. */}
-        <section className="relative mt-6 h-[560px] border border-dashed border-neutral-300">
-          <div className="max-w-md p-12">
-            <h2 className="text-4xl font-bold">In der Ecke</h2>
-            <p className="mt-6 text-lg">{COPY}</p>
-          </div>
-          <DnaCapsule
-            className="absolute right-0 top-0 h-[420px] w-[420px]"
-            distance={3.6}
+    <main className="px-8 py-10">
+      <div className="grid grid-cols-4 gap-4">
+        {THUMBS.map(([slug, base, hover, title]) => (
+          <WorkThumb
+            key={slug}
+            headingLevel="h2"
+            href={`/projects/${slug}`}
+            imageSrc={`/images/${base}.webp`}
+            hoverImageSrc={`/images/${hover}.webp`}
+            imageAlt={title}
+            imageWidth={560}
+            imageHeight={560}
+            title={title}
+            pills={["Website", "UX/UI"]}
           />
-        </section>
+        ))}
       </div>
-
-      <DnaHelix />
     </main>
   );
 }

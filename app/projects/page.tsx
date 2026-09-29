@@ -75,6 +75,7 @@ export default function PageProjects() {
               headingLevel="h2"
               href="/projects/funky-coffee"
               imageSrc="/images/case-funky-coffee-1.webp"
+              hoverImageSrc="/images/case-funky-coffee-2.webp"
               imageAlt="Funky Coffee — Website und UX/UI für ein Coffee-Shop-Konzept"
               imageWidth={1536}
               imageHeight={1024}
@@ -88,6 +89,7 @@ export default function PageProjects() {
               headingLevel="h2"
               href="/projects/funky-ramen"
               imageSrc="/images/case-funky-ramen-1.webp"
+              hoverImageSrc="/images/case-funky-ramen-2.webp"
               imageAlt="Funky Ramen — Website und UX/UI für ein japanisches Restaurant"
               imageWidth={1536}
               imageHeight={1024}
@@ -101,6 +103,7 @@ export default function PageProjects() {
               headingLevel="h2"
               href="/projects/princefood"
               imageSrc="/images/case-prince-food-2.webp"
+              hoverImageSrc="/images/case-prince-food-3.webp"
               imageAlt="Prince Food — Website und UX/UI für einen Tiefkühlkost-Hersteller"
               imageWidth={1536}
               imageHeight={1024}
@@ -114,6 +117,7 @@ export default function PageProjects() {
               headingLevel="h2"
               href="/projects/muafaktur"
               imageSrc="/images/case-mua-2.webp"
+              hoverImageSrc="/images/case-mua-3.webp"
               imageAlt="MUA Faktur — Website und UX/UI für Beauty- und Make-up-Ausbildung"
               imageWidth={560}
               imageHeight={560}
@@ -127,6 +131,7 @@ export default function PageProjects() {
               headingLevel="h2"
               href="/projects/mondent"
               imageSrc="/images/case-mondent-1.webp"
+              hoverImageSrc="/images/case-mondent-2.webp"
               imageAlt="Mondent — Website und UX/UI für eine Zahnarztpraxis"
               imageWidth={560}
               imageHeight={560}
@@ -140,6 +145,7 @@ export default function PageProjects() {
               headingLevel="h2"
               href="/projects/autosl"
               imageSrc="/images/case-autosl-1.webp"
+              hoverImageSrc="/images/case-autosl-2.webp"
               imageAlt="AutoSL — Website und UX/UI für einen Sammlerfahrzeug-Händler"
               imageWidth={560}
               imageHeight={560}
@@ -153,6 +159,7 @@ export default function PageProjects() {
               headingLevel="h2"
               href="/projects/luxfloor"
               imageSrc="/images/case-luxfloor-1.webp"
+              hoverImageSrc="/images/case-luxfloor-2.webp"
               imageAlt="LuxFloor — Website und UX/UI für hochwertige Bodenbeläge"
               imageWidth={560}
               imageHeight={560}
@@ -166,6 +173,7 @@ export default function PageProjects() {
               headingLevel="h2"
               href="/projects/panda-travel"
               imageSrc="/images/case-pandatravel-1.webp"
+              hoverImageSrc="/images/case-pandatravel-3.webp"
               imageAlt="Panda Travel — Website und UX/UI für Geschäftsreisen und China-Sourcing"
               imageWidth={560}
               imageHeight={560}
@@ -179,6 +187,7 @@ export default function PageProjects() {
               headingLevel="h2"
               href="/projects/factorysl"
               imageSrc="/images/case-factorysl-1.webp"
+              hoverImageSrc="/images/case-factorysl-4.webp"
               imageAlt="Factory SL — Website und UX/UI für Luxus-Detailing und Fahrzeugaufbereitung"
               imageWidth={560}
               imageHeight={560}
@@ -192,6 +201,7 @@ export default function PageProjects() {
               headingLevel="h2"
               href="/projects/onlysmile"
               imageSrc="/images/case-onlysmile-1.webp"
+              hoverImageSrc="/images/case-onlysmile-2.webp"
               imageAlt="OnlySmile — Website und UX/UI für professionelles Zahnbleaching"
               imageWidth={560}
               imageHeight={560}

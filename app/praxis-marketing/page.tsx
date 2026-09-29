@@ -419,6 +419,7 @@ export default function LandingPraxis() {
                 headingLevel="h3"
                 href="/projects/mondent"
                 imageSrc="/images/case-mondent-1.webp"
+                hoverImageSrc="/images/case-mondent-2.webp"
                 imageAlt="Mondent — Website und UX/UI für eine Zahnarztpraxis"
                 imageWidth={560}
                 imageHeight={560}
@@ -429,6 +430,7 @@ export default function LandingPraxis() {
                 headingLevel="h3"
                 href="/projects/onlysmile"
                 imageSrc="/images/case-onlysmile-1.webp"
+                hoverImageSrc="/images/case-onlysmile-2.webp"
                 imageAlt="OnlySmile — Website und UX/UI für professionelles Zahnbleaching"
                 imageWidth={560}
                 imageHeight={560}

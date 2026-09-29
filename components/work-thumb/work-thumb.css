@@ -26,6 +26,52 @@
     margin: 0;
 }
 
+/* The second image, shown while the card is hovered or focused.
+
+   It is a background image, not a second <img>, and the url is declared only
+   inside the :hover and :focus-visible rules below. That is what keeps it from
+   being downloaded until it is about to be seen: a rendered <img> — even at
+   `opacity: 0` — is fetched as soon as it nears the viewport, which on
+   /projects would be ten extra case shots, about 3.5 MB, and every byte of it
+   wasted on a phone that cannot hover in the first place. Hence also the
+   `hover: hover` query: no pointer, no second image, ever.
+
+   This is the fallback path now: where the morph runs it is switched off (see
+   [data-morph] below), and it is what a phone, a keyboard-only browser without
+   WebGL, or someone with motion turned down gets instead. The swap is a
+   straight cut in that case — the declaration is gone the instant the pointer
+   leaves, so there is nothing left to fade out. */
+.work-thumb-swap {
+    position: absolute;
+    inset: 0;
+    border-radius: 9px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Outside the hover query on purpose: tabbing to a card is as deliberate as
+   pointing at it, and it only ever loads the one card that has focus. */
+.work-thumb:focus-visible .work-thumb-swap {
+    background-image: var(--work-thumb-swap);
+}
+
+/* When components/work-thumb/thumb-morph takes the card over it sets this, and
+   the plain swap steps aside — otherwise the second image would appear instantly
+   underneath the morph that is still drawing it. The morph only claims a card
+   when there is a pointer, motion is allowed and WebGL is available, so
+   everywhere else these rules are still what runs. */
+.work-thumb[data-morph="on"] .work-thumb-swap {
+    display: none;
+}
+
+@media (hover: hover) {
+    .work-thumb:hover .work-thumb-swap {
+        background-image: var(--work-thumb-swap);
+    }
+}
+
 .work-thumb-content {
     background: rgb(243, 243, 243);
     border-radius: 8px;

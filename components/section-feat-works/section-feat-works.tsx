@@ -60,6 +60,7 @@ export default function SectionFeatWorks(){
                 <WorkThumb
                   href="/projects/funky-coffee"
                   imageSrc="/images/case-funky-coffee-1.webp"
+                  hoverImageSrc="/images/case-funky-coffee-2.webp"
                   imageAlt="Funky Coffee — Website und UX/UI für ein Coffee-Shop-Konzept"
                   imageWidth={1536}
                   imageHeight={1024}
@@ -72,6 +73,7 @@ export default function SectionFeatWorks(){
                 <WorkThumb
                   href="/projects/funky-ramen"
                   imageSrc="/images/case-funky-ramen-1.webp"
+                  hoverImageSrc="/images/case-funky-ramen-2.webp"
                   imageAlt="Funky Ramen — Website und UX/UI für ein japanisches Restaurant"
                   imageWidth={1536}
                   imageHeight={1024}
@@ -84,6 +86,7 @@ export default function SectionFeatWorks(){
                 <WorkThumb
                   href="/projects/princefood"
                   imageSrc="/images/case-prince-food-2.webp"
+                  hoverImageSrc="/images/case-prince-food-3.webp"
                   imageAlt="Prince Food — Website und UX/UI für einen Tiefkühlkost-Hersteller"
                   imageWidth={1536}
                   imageHeight={1024}
@@ -96,6 +99,7 @@ export default function SectionFeatWorks(){
                 <WorkThumb
                   href="/projects/muafaktur"
                   imageSrc="/images/case-mua-2.webp"
+                  hoverImageSrc="/images/case-mua-3.webp"
                   imageAlt="MUA Faktur — Website und UX/UI für Beauty- und Make-up-Ausbildung"
                   imageWidth={560}
                   imageHeight={560}
