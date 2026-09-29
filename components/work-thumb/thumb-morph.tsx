@@ -215,9 +215,6 @@ export default function ThumbMorph({ src, hoverSrc }: ThumbMorphProps) {
 
     card.dataset.morph = 'on';
 
-    // TEMP HARNESS — ?morph=<0..1> pins the transition so it can be screenshotted.
-    const forced = new URLSearchParams(window.location.search).get('morph');
-
     let hovered = false;
     let progress = 0;
     let frame = 0;
@@ -286,7 +283,6 @@ export default function ThumbMorph({ src, hoverSrc }: ThumbMorphProps) {
 
       const target = hovered ? 1 : 0;
       progress += (target - progress) * (1 - Math.exp((-delta / 1000) * RATE));
-      if (forced !== null) progress = Number(forced); // TEMP HARNESS
 
       if (!hovered && progress < 0.002) {
         // Settled back on the first image: hand the card over to the plain
@@ -437,7 +433,6 @@ export default function ThumbMorph({ src, hoverSrc }: ThumbMorphProps) {
       if (gl) start();
     };
 
-    if (forced !== null) enter(); // TEMP HARNESS
     card.addEventListener('pointerenter', enter);
     card.addEventListener('pointerleave', leave);
     // Keyboard parity: the stylesheet's swap is switched off while this is on.
