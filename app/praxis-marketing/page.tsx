@@ -5,6 +5,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 
 import { socialCard } from "@/lib/site";
 
+import DnaCapsule from "@/components/dna-capsule/dna-capsule";
 import DnaHelix from "@/components/dna-helix/dna-helix";
 import DoorButton from "@/components/door-button/door-button";
 import ParticleWave from "@/components/particle-wave/particle-wave";
@@ -371,7 +372,9 @@ export default function LandingPraxis() {
           die auch auf /projects laufen. Name, Bild und Leistungen sind von dort
           übernommen; nichts davon ist für diese Seite erfunden. */}
       <section className="py-12 lg:py-20">
-        <div className="container mx-auto px-6 sm:px-8">
+        {/* `relative` for the pill below, which is positioned against this box so
+            its right edge lands on the container's own content edge. */}
+        <div className="container relative mx-auto px-6 sm:px-8">
 
           <div className="flex justify-between items-start gap-8 pb-8 lg:pb-12">
             <p className="praxis-eyebrow">Einblicke in unsere Arbeit</p>
@@ -381,6 +384,21 @@ export default function LandingPraxis() {
           <UnderlinedHeader className="praxis-section-head mb-10 lg:mb-16">
             So wird medizinische Kompetenz sichtbar.
           </UnderlinedHeader>
+
+          {/* The heading is capped at 22ch, so from lg up the top right of this
+              section is empty apart from the index — which is where the pill
+              goes. It is laid over the content rather than behind it and
+              refracts what it crosses (the rule, the index, the end of the
+              heading) instead of hiding it; `backdrop` is the page background,
+              which stands in for the parts of the capture this container does
+              not paint itself. Last in the DOM and z-indexed above the static
+              content around it. See .praxis-works-pill for the box. */}
+          <DnaCapsule
+            className="praxis-works-pill"
+            refractPage
+            backdrop="#F4F4F4"
+            distance={3.6}
+          />
 
           {/* Same split the home page uses in section-feat-works: the intro takes a
                 third, the work takes two. A 1fr_1fr split left each thumb at about

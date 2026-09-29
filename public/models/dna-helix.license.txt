@@ -1,0 +1,22 @@
+dna-helix.glb
+=============
+
+"DNA VR Interactive Animation" by nilantunes
+https://sketchfab.com/3d-models/dna-vr-interactive-animation-c9a926f139044470ad3fb053c66ad71e
+
+Licence: CC BY 4.0 — http://creativecommons.org/licenses/by/4.0/
+
+CC BY requires attribution wherever this model is published, so the credit above
+has to appear somewhere the visitor can reach it (an imprint, a credits page, or
+a caption near the object) on any page that renders it.
+
+Changes from the file downloaded from Sketchfab, all of them lossless for what
+`components/dna-capsule` draws:
+
+  * the "Take 001" animation clip removed — it was never played
+  * TEXCOORD_0 removed — the model ships no textures and both materials are
+    overridden in the component
+  * indices re-encoded as UNSIGNED_SHORT (38,632 vertices, so 32-bit indices
+    were twice the width needed)
+
+Positions and normals are byte-for-byte the original. 2,639,156 -> 1,657,512 bytes.

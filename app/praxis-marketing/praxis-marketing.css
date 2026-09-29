@@ -1299,3 +1299,43 @@ li:last-child .praxis-step-rule {
         opacity: 1;
     }
 }
+
+
+/* Section 03, "So wird medizinische Kompetenz sichtbar." — the glass pill in the
+   top right corner of the section, over the empty half the 22ch heading leaves.
+
+   Positioned against .container rather than the <section>, so its right edge
+   lands on the same line the content does at every width instead of drifting out
+   with the page gutters. The negative top lifts it level with the index row.
+
+   Below lg the layout is one column: the heading runs the full width, the index
+   sits alone on the right, and there is no empty half for the pill to occupy —
+   it would land on the heading. So it is not rendered at all there, which also
+   spares phones the refraction capture and a second WebGL context. */
+.praxis-works-pill {
+    display: none;
+}
+
+@media (min-width: 64rem) {
+    .praxis-works-pill {
+        display: block;
+        position: absolute;
+        top: -28px;
+        right: 32px;
+        /* Sized to the gap between the heading's right edge and the container's,
+           down to just past the rule under the heading. The pill is scaled to
+           its box by the component; `distance` on the element is what fills it. */
+        width: 520px;
+        height: 440px;
+        /* Over the static content around it — the rule, the index, the end of
+           the heading — which it bends rather than hides. */
+        z-index: 2;
+    }
+}
+
+@media (min-width: 80rem) {
+    .praxis-works-pill {
+        width: 580px;
+        height: 480px;
+    }
+}

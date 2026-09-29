@@ -1,0 +1,57 @@
+/* In Tailwind's `components` layer so utility classes on the container —
+   height, margins — win over these defaults. Rules in no layer at all would
+   outrank every utility. */
+@layer components {
+  .dna-capsule {
+    position: relative;
+    width: 100%;
+    /* A sensible band. Override with a utility class or an inline height — the
+       canvas follows the container. */
+    height: 100svh;
+    /* No background of its own: the canvas clears to transparent unless the
+       `background` prop says otherwise, so the pill sits on whatever the page
+       puts behind it, and an empty box is what you get without WebGL. */
+    overflow: hidden;
+    /* Inert everywhere, not only in the two layered modifiers below. Nothing in
+       the scene answers the pointer, and an empty box laid over a section would
+       otherwise swallow every click inside its rectangle — the container is
+       hit-testable even with nothing painted in it. The canvas sets this on
+       itself too, because R3F re-enables hit testing inline on its own wrapper
+       and only an inline style can beat that one. */
+    pointer-events: none;
+  }
+
+  /* Both modifiers below lay the pill over the nearest positioned ancestor
+     instead of letting it stand as a band of its own, so that ancestor needs
+     `position: relative`. They differ only in z-index.
+
+     Clicks, drags and text selection pass through to the content either way,
+     and in a hand-positioned pill too — see `pointer-events` on the base class.
+
+     For a pill that sits in one corner rather than filling the section, skip
+     these and pass your own utilities — `absolute right-0 top-0 h-[420px]
+     w-[420px]`. Utilities outrank this layer, so they win. */
+  .dna-capsule--behind,
+  .dna-capsule--overlay {
+    position: absolute;
+    inset: 0;
+    height: auto;
+  }
+
+  /* Behind the section's content, which then needs a z-index above 0. */
+  .dna-capsule--behind {
+    z-index: 0;
+  }
+
+  /* In front of it. By default the pill is opaque where it is drawn — the glass
+     refracts the flat `backdrop` colour — so it hides what it covers. Pass
+     `refractPage` and it bends the content underneath instead, which is what
+     you want over anything worth reading. */
+  .dna-capsule--overlay {
+    z-index: 10;
+  }
+
+  .dna-capsule canvas {
+    display: block;
+  }
+}
