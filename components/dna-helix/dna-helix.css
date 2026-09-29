@@ -1,0 +1,38 @@
+/* In Tailwind's `components` layer so utility classes on the container — height,
+   margins — win over these defaults. Rules in no layer at all would outrank
+   every utility. */
+@layer components {
+  .dna-helix {
+    position: relative;
+    width: 100%;
+    /* The demo filled the window; this is the closest an embeddable band gets.
+       Override with a utility class or an inline height — the canvas follows the
+       container. */
+    height: 100svh;
+    /* No background of its own — the canvas clears to transparent and the
+       particles are dark, so the helix sits on whatever the page puts behind
+       it, and an empty box is what you get without WebGL. */
+    overflow: hidden;
+  }
+
+  /* Layer the helix behind a section's own content instead of letting it stand
+     as a band of its own: it fills the nearest positioned ancestor, so that
+     ancestor needs `position: relative` and its content a z-index above 0. */
+  .dna-helix--behind {
+    position: absolute;
+    inset: 0;
+    height: auto;
+    z-index: 0;
+    /* Inert to the pointer: clicks, drags and text selection over the content
+       fall through exactly as they would without it. */
+    pointer-events: none;
+  }
+
+  .dna-helix-canvas {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
