@@ -49,6 +49,7 @@ export default function SplineScene({
   style,
   eager = false,
   immediate = false,
+  critical = false,
   poster,
   posterFit = 'cover',
   disablePointerEvents = false,
@@ -60,6 +61,8 @@ export default function SplineScene({
   eager?: boolean;
   /** Start on mount, without waiting for interaction, document load or idle. */
   immediate?: boolean;
+  /** Let the initial page splash wait for this scene to finish or fail. */
+  critical?: boolean;
   /**
    * Still frame (export one from Spline) shown in place of the scene until it
    * has loaded, then cross-faded out. Without it the slot is blank until the
@@ -76,7 +79,8 @@ export default function SplineScene({
   const appRef = useRef<Application | null>(null);
   const [nearViewport, setNearViewport] = useState(eager);
   const [idle, setIdle] = useState(false);
-  const [loaded, setLoaded] = useState(false);
+  const [loadState, setLoadState] = useState<'loading' | 'ready' | 'error'>('loading');
+  const loaded = loadState === 'ready';
 
   // Deferred scenes wait until the visitor has actually done something.
   const interacted = useFirstInteraction();
@@ -207,7 +211,7 @@ export default function SplineScene({
         }
 
         appRef.current = app;
-        setLoaded(true);
+        setLoadState('ready');
         // Apply the CURRENT visibility, not the value captured before loading.
         if (liveActiveRef.current) app.play();
         else app.stop();
@@ -215,7 +219,10 @@ export default function SplineScene({
         app?.dispose();
         app = null;
         // Keep any poster visible if either the runtime or scene fails.
-        if (!cancelled) console.error(`SplineScene: failed to load ${scene}`, error);
+        if (!cancelled) {
+          setLoadState('error');
+          console.error(`SplineScene: failed to load ${scene}`, error);
+        }
       } finally {
         initializing = false;
       }
@@ -224,7 +231,7 @@ export default function SplineScene({
     return () => {
       cancelled = true;
       appRef.current = null;
-      setLoaded(false);
+      setLoadState('loading');
       // An in-flight load disposes itself once it settles. Disposing here
       // would tear down the renderer while the runtime is still using it.
       if (!initializing) {
@@ -245,6 +252,8 @@ export default function SplineScene({
 
   return (
     <div
+      data-critical-asset={critical ? 'scene' : undefined}
+      data-load-state={loadState}
       ref={(node) => {
         loadRef.current = node;
         activeRef.current = node;

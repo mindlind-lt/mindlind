@@ -5,6 +5,7 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import PreloadResources from "@/components/preload-resources";
 import TopProgressBar from "@/components/progress-bar/top-progress-bar";
+import PagePreloader from "@/components/page-preloader/page-preloader";
 import ConsentBanner from "@/components/consent/consent-banner";
 import GoogleAnalytics from "@/components/analytics/google-analytics";
 import GoogleTagManager from "@/components/analytics/google-tag-manager";
@@ -78,22 +79,27 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <PagePreloader />
+        <noscript><style>{`.page-preloader { display: none !important; }`}</style></noscript>
         <TopProgressBar />
         <PreloadResources />
 
-        <Header />
+        <div id="site-content">
+          <Header />
 
-        <main>{children}</main>
+          <main tabIndex={-1}>{children}</main>
 
-        <Footer />
+          <Footer />
 
-        {/* All three read the consent cookie in the browser after hydration.
+          <ConsentBanner />
+        </div>
+
+        {/* These read the consent cookie in the browser after hydration.
             That is what keeps them compatible with `output: "export"`, which
             has no request-time server to read a cookie on.
             GoogleAnalytics renders nothing at all until NEXT_PUBLIC_GA_ID is
             set AND the visitor has accepted the Statistik category;
             GoogleTagManager waits for the same consent. */}
-        <ConsentBanner />
         <GoogleAnalytics />
         <GoogleTagManager />
 

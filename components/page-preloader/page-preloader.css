@@ -1,0 +1,97 @@
+.page-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #eae9f4 0%, var(--background) 65%);
+  /* Also fail open if the client bundle never hydrates. */
+  animation: preloader-failsafe 0s 12s forwards;
+  transition: opacity 450ms ease, visibility 450ms;
+}
+
+.page-preloader[data-state='leaving'] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.page-preloader__symbol {
+  position: relative;
+  width: clamp(64px, 7vw, 88px);
+  aspect-ratio: 1;
+  perspective: 400px;
+  transition: transform 450ms ease;
+}
+
+.page-preloader__symbol > span {
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: 46% 54% 51% 49%;
+  background: conic-gradient(from 45deg, #83c9de, #b39de3, #eebed7, #a9bdeb, #83c9de);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: preloader-orbit 3.6s cubic-bezier(.45, 0, .55, 1) infinite;
+}
+
+.page-preloader__symbol > span:nth-child(2) {
+  inset: 12%;
+  animation-delay: -.4s;
+  animation-direction: reverse;
+  opacity: .7;
+}
+
+.page-preloader__symbol > span:nth-child(3) {
+  inset: 25%;
+  animation-delay: -.8s;
+  opacity: .45;
+}
+
+.page-preloader[data-state='leaving'] .page-preloader__symbol {
+  transform: scale(.9);
+}
+
+/* Keep a keyboard escape hatch without adding visible interface chrome. */
+.page-preloader__skip {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.page-preloader__skip:focus-visible {
+  right: 24px;
+  bottom: 24px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  clip-path: none;
+  color: var(--foreground);
+  background: var(--background);
+  border-radius: 4px;
+  outline: 1px solid #a9a0cb;
+  outline-offset: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@keyframes preloader-orbit {
+  0% { transform: rotateX(25deg) rotateY(-30deg) rotateZ(0deg); }
+  50% { transform: rotateX(-30deg) rotateY(35deg) rotateZ(180deg); }
+  100% { transform: rotateX(25deg) rotateY(-30deg) rotateZ(360deg); }
+}
+
+@keyframes preloader-failsafe {
+  to { visibility: hidden; pointer-events: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-preloader { transition: opacity 120ms, visibility 120ms; }
+  .page-preloader__symbol { transition: none; }
+  .page-preloader__symbol > span { animation: none; transform: rotate(-25deg); }
+  .page-preloader[data-state='leaving'] .page-preloader__symbol { transform: none; }
+}
