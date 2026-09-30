@@ -9,24 +9,22 @@ import { SPLINE_WASM_PATH } from '@/lib/spline-scenes';
 
 /**
  * A single wrapper around a Spline scene that:
- *  - holds back the runtime + .splinecode + WebGL context until ALL of these
+ *  - by default, holds back the runtime + .splinecode + WebGL context until ALL of these
  *    are true: the visitor has interacted with the page at all, the document
  *    has finished loading, the main thread has gone idle, and (for below-the-
- *    fold scenes) the scene is within one viewport of being scrolled to; and
+ *    fold scenes) the scene is within one viewport of being scrolled to;
+ *  - lets a primary hero opt into `immediate` loading during hydration; and
  *  - pauses the scene's render loop (Spline's stop()) whenever it scrolls
  *    off-screen or the tab is backgrounded, resuming it (play()) on return.
  *
  * Pausing in place avoids the download/flash of unmounting, so a scrolled-past
  * hero costs ~zero GPU until it comes back into view.
  *
- * Note on `eager`: it does NOT mean "load during hydration". These scenes are
- * multi-megabyte .splinecode payloads plus a WebGL context, and starting them
- * anywhere near page load puts all of that on the critical path — on mobile
- * the homepage hero alone was pushing LCP past 6s and TBT past 30s, and
- * PageSpeed scored it accordingly. `eager` only means "this one is above the
- * fold, so don't also wait for a scroll into view"; the interaction gate still
- * applies. See lib/use-first-interaction.ts for why the gate is a gesture and
- * not a timer. Pair `eager` with `poster` so the hero isn't empty meanwhile.
+ * `eager` only bypasses the proximity gate. `immediate` additionally bypasses
+ * interaction, document load and idle waits. Medusa uses both so visitors see
+ * the homepage scene without having to touch the page. Its component preloads
+ * the scene from HTML to overlap that download with the runtime import.
+ * Other scenes retain their deferred loading to avoid competing with the hero.
  *
  * Scenes are served from our own origin (public/scenes, written by
  * `npm run sync:spline`) rather than prod.spline.design. That is why there is
@@ -50,6 +48,7 @@ export default function SplineScene({
   className,
   style,
   eager = false,
+  immediate = false,
   poster,
   posterFit = 'cover',
   disablePointerEvents = false,
@@ -59,10 +58,12 @@ export default function SplineScene({
   style?: CSSProperties;
   /** Above the fold: don't wait to be scrolled into view. */
   eager?: boolean;
+  /** Start on mount, without waiting for interaction, document load or idle. */
+  immediate?: boolean;
   /**
    * Still frame (export one from Spline) shown in place of the scene until it
    * has loaded, then cross-faded out. Without it the slot is blank until the
-   * visitor interacts.
+   * scene is ready.
    */
   poster?: string;
   /** How the poster fills the slot. `contain` suits a single floating object. */
@@ -77,7 +78,7 @@ export default function SplineScene({
   const [idle, setIdle] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
-  // Nothing downloads until the visitor has actually done something.
+  // Deferred scenes wait until the visitor has actually done something.
   const interacted = useFirstInteraction();
 
   // Whether frames should actually be drawn (near viewport + tab visible).
@@ -87,15 +88,17 @@ export default function SplineScene({
   // Application was created, once the network download completes) reads the
   // CURRENT visibility instead of a stale closure value.
   const liveActiveRef = useRef(active);
-  liveActiveRef.current = active;
+  useEffect(() => {
+    liveActiveRef.current = active;
+  }, [active]);
 
-  const shouldLoad = interacted && idle && nearViewport;
+  const shouldLoad = nearViewport && (immediate || (interacted && idle));
 
   // Once the visitor engages, wait for the document to finish loading and then
   // for a gap in the main thread before pulling anything in. `timeout` is the
   // backstop for a page that never truly goes idle.
   useEffect(() => {
-    if (!interacted || idle) return;
+    if (immediate || !interacted || idle) return;
 
     let cancelled = false;
     let idleId: number | undefined;
@@ -136,7 +139,7 @@ export default function SplineScene({
       if (idleId !== undefined) window.cancelIdleCallback?.(idleId);
       if (timerId !== undefined) clearTimeout(timerId);
     };
-  }, [interacted, idle]);
+  }, [immediate, interacted, idle]);
 
   // Proximity gating for below-the-fold scenes. Runs independently of the
   // interaction gate so a scene the visitor has already scrolled to starts the
@@ -146,8 +149,8 @@ export default function SplineScene({
     const el = loadRef.current;
     if (!el) return;
     if (!('IntersectionObserver' in window)) {
-      setNearViewport(true);
-      return;
+      const frame = requestAnimationFrame(() => setNearViewport(true));
+      return () => cancelAnimationFrame(frame);
     }
     const observer = new IntersectionObserver(
       (entries) => {
@@ -175,50 +178,59 @@ export default function SplineScene({
 
     let cancelled = false;
     let app: Application | null = null;
+    let initializing = true;
 
     void (async () => {
-      const { Application } = await import('@splinetool/runtime');
-      if (cancelled) return;
-
-      app = new Application(canvas, {
-        // Pin the backend: see the note at the top of this file.
-        renderer: 'webgl',
-        // What react-spline's `renderOnDemand: true` mapped to.
-        renderMode: 'auto',
-        wasmPath: SPLINE_WASM_PATH,
-      });
-
       try {
-        await app.load(scene);
+        const { Application } = await import('@splinetool/runtime');
+        if (cancelled) return;
+
+        app = new Application(canvas, {
+          // Pin the backend: see the note at the top of this file.
+          renderer: 'webgl',
+          // What react-spline's `renderOnDemand: true` mapped to.
+          renderMode: 'auto',
+          wasmPath: SPLINE_WASM_PATH,
+        });
+
+        // Match the hero's anonymous fetch preload so it is reused rather
+        // than downloading the scene again after the runtime has loaded.
+        await app.load(scene, undefined, {
+          mode: 'cors',
+          credentials: 'same-origin',
+        });
+
+        if (cancelled) {
+          app.dispose();
+          app = null;
+          return;
+        }
+
+        appRef.current = app;
+        setLoaded(true);
+        // Apply the CURRENT visibility, not the value captured before loading.
+        if (liveActiveRef.current) app.play();
+        else app.stop();
       } catch (error) {
-        app.dispose();
+        app?.dispose();
         app = null;
-        // A scene that fails to load leaves the poster in place, which is a
-        // better outcome for a marketing page than an error boundary.
-        console.error(`SplineScene: failed to load ${scene}`, error);
-        return;
+        // Keep any poster visible if either the runtime or scene fails.
+        if (!cancelled) console.error(`SplineScene: failed to load ${scene}`, error);
+      } finally {
+        initializing = false;
       }
-
-      if (cancelled) {
-        app.dispose();
-        app = null;
-        return;
-      }
-
-      appRef.current = app;
-      setLoaded(true);
-      // Apply the CURRENT visibility, not the value captured when the effect
-      // ran — the scene may have scrolled into view while it was downloading.
-      if (liveActiveRef.current) app.play();
-      else app.stop();
     })();
 
     return () => {
       cancelled = true;
       appRef.current = null;
       setLoaded(false);
-      app?.dispose();
-      app = null;
+      // An in-flight load disposes itself once it settles. Disposing here
+      // would tear down the renderer while the runtime is still using it.
+      if (!initializing) {
+        app?.dispose();
+        app = null;
+      }
     };
   }, [shouldLoad, scene]);
 

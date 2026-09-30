@@ -12,11 +12,8 @@
 export default function PreloadResources() {
   return (
     <>
-      {/* No hint for the Spline scenes on purpose. They are served from our own
-          origin now (public/scenes, see scripts/sync-spline-assets.mjs), so
-          there is no third-party handshake left to warm up — and preloading the
-          scenes themselves would defeat the point of gating them behind the
-          visitor's first gesture (see lib/use-first-interaction). */}
+      {/* SplineMedusa owns its scene preload so it only appears on the
+          homepage. Other scenes remain gated behind the first interaction. */}
 
       {/* The homepage LCP element is the hero CTA video's poster frame. A
           `poster` attribute is only discovered once the parser reaches the
