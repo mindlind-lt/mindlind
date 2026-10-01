@@ -433,6 +433,25 @@ export default function PraxisMotion() {
           },
         });
 
+        // The whole radius turns with the scroll for as long as it is on
+        // screen, so the dashed rings and the patients around the practice
+        // orbit it. Rotating the <svg> rather than the circles keeps it clear
+        // of the scale and DrawSVG tweens the rings already carry.
+        gsap.fromTo(
+          ".praxis-geo-rings",
+          { rotation: -40 },
+          {
+            rotation: 80,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".praxis-geo-visual",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.8,
+            },
+          }
+        );
+
         gsap.utils.toArray<HTMLElement>(".praxis-geo-item").forEach((item) => {
           const tl = gsap.timeline({
             scrollTrigger: { trigger: item, start: START },

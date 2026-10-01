@@ -1126,7 +1126,7 @@
         display: grid;
         /* Proportional, not a fixed panel: at 1024 a fixed 540px visual left
            the text column at 356px and the paragraphs ran to 13 lines. */
-        grid-template-columns: 1.25fr 1fr;
+        grid-template-columns: 1.1fr 1fr;
         align-items: center;
         gap: 64px;
     }
@@ -1137,14 +1137,14 @@
     aspect-ratio: 1;
 
     margin: 0 auto;
-    max-width: 480px;
+    max-width: 520px;
     width: 100%;
 }
 
 @media (min-width: 64rem) {
     .praxis-geo-visual {
         /* Grows with the viewport but stops before it dwarfs the copy. */
-        max-width: 620px;
+        max-width: 680px;
         margin-right: 0;
     }
 }
@@ -1190,15 +1190,16 @@
     }
 }
 
-/* The photo sits at the centre of its own catchment area. Wide enough to carry
-   the composition, narrow enough that the inner rings still read around it. */
+/* The photo sits at the centre of its own catchment area. At 62% wide the 2:3
+   photo is 93% of the square tall, so it fills the rings top to bottom and stays
+   just inside the outermost one; the rings read around it at the sides. */
 .praxis-geo-photo {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 54%;
+    width: 62%;
 }
 
 .praxis-geo-blocks {

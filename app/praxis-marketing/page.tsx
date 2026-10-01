@@ -835,7 +835,7 @@ export default function LandingPraxis() {
                     alt="Person nutzt ein Smartphone vor einer Praxis in der Stadt"
                     width={1024}
                     height={1536}
-                    sizes="(min-width: 1024px) 340px, 54vw"
+                    sizes="(min-width: 1024px) 420px, 62vw"
                   />
                 </div>
               </figure>
