@@ -334,27 +334,6 @@ export default function PraxisMotion() {
           );
 
         // ---- 09 | Three steps --------------------------------------------
-        //
-        // The rule beside each number is drawn on scroll rather than on enter,
-        // and the three are staggered inside one scrubbed range, so the line
-        // advances from step to step as the section is read.
-        gsap.fromTo(
-          '[data-praxis-anim="steps"] .praxis-step-rule-fill',
-          { scaleX: 0 },
-          {
-            scaleX: 1,
-            ease: "none",
-            duration: 1,
-            stagger: 0.6,
-            scrollTrigger: {
-              trigger: '[data-praxis-anim="steps"]',
-              start: "top 78%",
-              end: "bottom 70%",
-              scrub: 0.5,
-            },
-          }
-        );
-
         gsap.utils.toArray<HTMLElement>('[data-praxis-anim="steps"] > li').forEach((step, i) => {
           const tl = gsap.timeline({
             scrollTrigger: { trigger: step, start: START },
@@ -362,8 +341,8 @@ export default function PraxisMotion() {
             delay: i * 0.14,
           });
 
-          tl.from(step.querySelector(".praxis-figure"), { opacity: 0, y: 26, duration: 0.9 })
-            .from(step.querySelector(".praxis-step-number"), { opacity: 0, y: 18, duration: 0.7 }, 0.18)
+          tl.from(step, { opacity: 0, y: 26, duration: 0.9 })
+            .from(step.querySelector(".praxis-step-badge"), { opacity: 0, y: 10, duration: 0.6 }, 0.18)
             .from(
               [step.querySelector(".praxis-step-title"), step.querySelector(".praxis-step-text")],
               { opacity: 0, y: 16, duration: 0.7, stagger: 0.08 },
@@ -371,6 +350,14 @@ export default function PraxisMotion() {
             );
 
           addCounter(tl, step.querySelector(".praxis-step-number"), 0.18);
+        });
+
+        gsap.from('[data-praxis-anim="steps-cta"]', {
+          opacity: 0,
+          y: 26,
+          duration: 0.9,
+          ease: EASE,
+          scrollTrigger: { trigger: '[data-praxis-anim="steps-cta"]', start: START },
         });
 
         // ---- 10 | Catchment area -----------------------------------------

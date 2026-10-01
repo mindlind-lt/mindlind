@@ -968,88 +968,76 @@
 
 /* ---- 09 | Three steps --------------------------------------------------- */
 
-/* The number and the rule that runs from it to the next step share a row, so the
-   rule is always on the number's centre line whatever the image above it does to
-   the column height. */
-.praxis-step-head {
+/* Same frame-and-panel family as .praxis-tile: a 3px white frame holding the
+   photo and a panel at the page colour. The <li> is a column so the panels
+   bottom out together whatever the copy length. */
+.praxis-step {
+    background: #fff;
+    border-radius: 12px;
+
     display: flex;
-    align-items: center;
-    gap: 16px;
+    flex-direction: column;
+    gap: 3px;
+
+    padding: 3px;
 }
 
-/* Reaches across the grid gap into the next column, which is the whole reason it
-   reads as a connector between the steps rather than three underlines. The gap
-   has to be repeated here because a negative margin cannot ask the grid what its
-   `gap-10`/`lg:gap-12` came to — keep --praxis-step-gap in step with the classes
-   on the <ol> in page.tsx. Zero below md, where the steps stack and there is no
-   gap to cross: the overhang would push the page sideways instead. */
-.praxis-step-rule {
-    --praxis-step-gap: 0px;
-
-    background: rgba(26, 26, 26, 0.14);
-    border-radius: 1px;
-
-    position: relative;
+.praxis-step-media {
+    border-radius: 10px;
     overflow: hidden;
 
-    flex: 1;
-    height: 2px;
-    margin-right: calc(-1 * var(--praxis-step-gap));
+    aspect-ratio: 3 / 2;
+    margin: 0;
+
+    position: relative;
 }
 
-/* Drawn on scroll rather than on enter — see components/praxis-motion, which
-   staggers the three inside one scrubbed range so the line advances from step to
-   step as the section is read. scaleX rather than width, so it runs on the
-   compositor; the track is full width from the start for anything measuring. */
-.praxis-step-rule-fill {
-    background: var(--primary-700);
+/* Sits on the photo rather than in the copy, so each step reads as numbered at
+   a glance and the panel below starts straight on the title. */
+.praxis-step-badge {
+    background: #fff;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+
+    padding: 8px 12px;
 
     position: absolute;
-    inset: 0;
-
-    transform: scaleX(0);
-    transform-origin: left center;
+    top: 12px;
+    left: 12px;
 }
 
-/* Nothing draws the fill without JS, and nothing draws it under reduced motion
-   either — components/praxis-motion builds no timelines at all there. Both
-   cases get the finished line rather than an empty track. */
-@media (prefers-reduced-motion: reduce) {
-    .praxis-step-rule-fill {
-        transform: none;
-    }
-}
-
-@media (scripting: none) {
-    .praxis-step-rule-fill {
-        transform: none;
-    }
-}
-
-/* The last step has no next column to reach, so it keeps its rule inside the
-   grid rather than hanging it off the right edge of the page. */
-li:last-child .praxis-step-rule {
-    margin-right: 0;
-}
-
-@media (min-width: 48rem) {
-    .praxis-step-rule {
-        --praxis-step-gap: 40px;
-    }
-}
-
-@media (min-width: 64rem) {
-    .praxis-step-rule {
-        --praxis-step-gap: 48px;
-    }
+.praxis-step-label {
+    color: #55585c;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .praxis-step-number {
     color: var(--primary-700);
     font-family: var(--font-mono);
-    font-size: 3rem;
+    font-size: 20px;
+    font-variant-numeric: tabular-nums;
     letter-spacing: -0.02em;
     line-height: 1;
+}
+
+.praxis-step-body {
+    background: var(--background);
+    border-radius: 10px;
+
+    flex: 1;
+    padding: 24px 22px 28px;
+}
+
+@media (min-width: 64rem) {
+    .praxis-step-body {
+        padding: 28px 28px 32px;
+    }
 }
 
 .praxis-step-title {
@@ -1057,8 +1045,6 @@ li:last-child .praxis-step-rule {
     font-weight: 600;
     letter-spacing: -0.02em;
     line-height: 1.2;
-
-    margin-top: 14px;
 }
 
 .praxis-step-text {
@@ -1069,6 +1055,59 @@ li:last-child .praxis-step-rule {
     line-height: 1.65;
 
     margin-top: 12px;
+}
+
+
+/* Closes the row of steps as a fourth, full-width card in the same frame, so
+   the ask reads as the next step rather than a button left under the grid. The
+   panel goes dark — the one place in the section that should pull the eye — with
+   the same green glow the image placeholders use. */
+.praxis-steps-cta {
+    background: #fff;
+    border-radius: 12px;
+
+    padding: 3px;
+}
+
+.praxis-steps-cta-inner {
+    background:
+        radial-gradient(70% 140% at 100% 0%, rgba(15, 214, 128, 0.22), transparent 60%),
+        var(--foreground);
+    border-radius: 10px;
+
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    padding: 28px 22px;
+}
+
+.praxis-steps-cta-title {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+
+    max-width: 22ch;
+}
+
+@media (min-width: 48rem) {
+    .praxis-steps-cta-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+
+        padding: 36px 40px;
+    }
+
+    .praxis-steps-cta-title {
+        font-size: 30px;
+        max-width: 28ch;
+    }
 }
 
 

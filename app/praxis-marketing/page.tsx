@@ -639,104 +639,114 @@ export default function LandingPraxis() {
           </UnderlinedHeader>
 
           <ol
-            className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12"
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6"
             data-praxis-anim="steps"
           >
 
-            <li>
+            <li className="praxis-step">
               {/* Bild 03, Querformat 3:2 — Ärztin am Laptop in einem ruhigen Büro
                   innerhalb der Praxis, im konzentrierten Videogespräch. */}
-              <figure className="praxis-figure praxis-figure--3-2 mb-6">
-                <div className="praxis-figure-inner">
-                  <span className="praxis-figure-tag">Bild 03 · 3:2</span>
-                  <figcaption className="praxis-figure-note">
-                    Ärztin bespricht die nächsten Schritte in einem Videogespräch
-                  </figcaption>
+              <figure className="praxis-step-media">
+                <Image
+                  className="praxis-figure-img"
+                  src="/images/praxis-ablauf-1.jpg"
+                  alt="Ärztin bespricht die nächsten Schritte in einem Videogespräch"
+                  width={1536}
+                  height={1024}
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
+                <div className="praxis-step-badge">
+                  <span className="praxis-step-label">Schritt</span>
+                  <span className="praxis-step-number">01</span>
                 </div>
               </figure>
 
-              <div className="praxis-step-head">
-                <div className="praxis-step-number">01</div>
-                <span className="praxis-step-rule" aria-hidden="true">
-                  <span className="praxis-step-rule-fill" />
-                </span>
+              <div className="praxis-step-body">
+                <h3 className="praxis-step-title">Praxis und Ziele verstehen</h3>
+                <p className="praxis-step-text">
+                  Wir sprechen über Ihre Fachrichtung, Ihre Schwerpunkte und die
+                  aktuelle Situation. Möchten Sie eine neue Leistung bekannt
+                  machen, eine Praxis eröffnen oder bestehende Abläufe verbessern?
+                  Gemeinsam legen wir fest, welches Ziel zuerst angegangen werden
+                  soll.
+                </p>
               </div>
-              <h3 className="praxis-step-title">Praxis und Ziele verstehen</h3>
-              <p className="praxis-step-text">
-                Wir sprechen über Ihre Fachrichtung, Ihre Schwerpunkte und die
-                aktuelle Situation. Möchten Sie eine neue Leistung bekannt
-                machen, eine Praxis eröffnen oder bestehende Abläufe verbessern?
-                Gemeinsam legen wir fest, welches Ziel zuerst angegangen werden
-                soll.
-              </p>
             </li>
 
-            <li>
+            <li className="praxis-step">
               {/* Bild 04, Querformat 3:2 — Detail einer gemeinsamen Planung am
                   Tisch: Laptop, Notizen und zwei Personen im Gespräch. Keine
                   lesbaren Kennzahlen oder Patientendaten. */}
-              <figure className="praxis-figure praxis-figure--3-2 mb-6">
-                <div className="praxis-figure-inner">
-                  <span className="praxis-figure-tag">Bild 04 · 3:2</span>
-                  <figcaption className="praxis-figure-note">
-                    Gemeinsame Planung von Website-Inhalten und Marketingmaßnahmen
-                  </figcaption>
+              <figure className="praxis-step-media">
+                <Image
+                  className="praxis-figure-img"
+                  src="/images/praxis-ablauf-2.jpg"
+                  alt="Gemeinsame Planung von Website-Inhalten und Marketingmaßnahmen"
+                  width={1536}
+                  height={1024}
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
+                <div className="praxis-step-badge">
+                  <span className="praxis-step-label">Schritt</span>
+                  <span className="praxis-step-number">02</span>
                 </div>
               </figure>
 
-              <div className="praxis-step-head">
-                <div className="praxis-step-number">02</div>
-                <span className="praxis-step-rule" aria-hidden="true">
-                  <span className="praxis-step-rule-fill" />
-                </span>
+              <div className="praxis-step-body">
+                <h3 className="praxis-step-title">Prioritäten festlegen</h3>
+                <p className="praxis-step-text">
+                  Wir prüfen Ihren bestehenden Auftritt und zeigen, wo sich
+                  Verbesserungen anbieten. Sie erhalten einen Vorschlag mit
+                  konkreten Leistungen, Prioritäten und Kosten. So können Sie
+                  nachvollziehen, was wir empfehlen und wie die Maßnahmen auf Ihr
+                  Ziel einzahlen.
+                </p>
               </div>
-              <h3 className="praxis-step-title">Prioritäten festlegen</h3>
-              <p className="praxis-step-text">
-                Wir prüfen Ihren bestehenden Auftritt und zeigen, wo sich
-                Verbesserungen anbieten. Sie erhalten einen Vorschlag mit
-                konkreten Leistungen, Prioritäten und Kosten. So können Sie
-                nachvollziehen, was wir empfehlen und wie die Maßnahmen auf Ihr
-                Ziel einzahlen.
-              </p>
             </li>
 
-            <li>
+            <li className="praxis-step">
               {/* Bild 05, Querformat 3:2 — Praxisinhaberin und Mitarbeiterin an
                   der Anmeldung, bei der gemeinsamen Durchsicht am Bildschirm.
                   Glaubwürdige Arbeitssituation, keine Patientendaten sichtbar. */}
-              <figure className="praxis-figure praxis-figure--3-2 mb-6">
-                <div className="praxis-figure-inner">
-                  <span className="praxis-figure-tag">Bild 05 · 3:2</span>
-                  <figcaption className="praxis-figure-note">
-                    Ärztin und Praxismitarbeiterin besprechen digitale Abläufe an der Anmeldung
-                  </figcaption>
+              <figure className="praxis-step-media">
+                <Image
+                  className="praxis-figure-img"
+                  src="/images/praxis-ablauf-3.jpg"
+                  alt="Ärztin und Praxismitarbeiterin besprechen digitale Abläufe an der Anmeldung"
+                  width={1536}
+                  height={1024}
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
+                <div className="praxis-step-badge">
+                  <span className="praxis-step-label">Schritt</span>
+                  <span className="praxis-step-number">03</span>
                 </div>
               </figure>
 
-              <div className="praxis-step-head">
-                <div className="praxis-step-number">03</div>
-                <span className="praxis-step-rule" aria-hidden="true">
-                  <span className="praxis-step-rule-fill" />
-                </span>
+              <div className="praxis-step-body">
+                <h3 className="praxis-step-title">Umsetzen und weiterentwickeln</h3>
+                <p className="praxis-step-text">
+                  Nach Ihrer Freigabe setzen wir die vereinbarten Maßnahmen um.
+                  Medizinische Inhalte stimmen wir mit Ihnen ab. Anhand der
+                  verfügbaren Auswertungen und Ihres Feedbacks prüfen wir, was
+                  funktioniert und wo wir nachjustieren sollten.
+                </p>
               </div>
-              <h3 className="praxis-step-title">Umsetzen und weiterentwickeln</h3>
-              <p className="praxis-step-text">
-                Nach Ihrer Freigabe setzen wir die vereinbarten Maßnahmen um.
-                Medizinische Inhalte stimmen wir mit Ihnen ab. Anhand der
-                verfügbaren Auswertungen und Ihres Feedbacks prüfen wir, was
-                funktioniert und wo wir nachjustieren sollten.
-              </p>
             </li>
 
           </ol>
 
           {/* ["Kostenlos" nur ergänzen, wenn MindLind das Erstgespräch
               tatsächlich kostenfrei anbietet.] */}
-          <div className="flex flex-col items-start gap-3 mt-12 lg:mt-16">
-            <DoorButton href="/contact">Erstgespräch anfragen</DoorButton>
-            <p className="text-sm text-muted-foreground">
-              Erzählen Sie uns, was Sie mit Ihrer Praxis vorhaben.
-            </p>
+          <div className="praxis-steps-cta mt-4 lg:mt-6" data-praxis-anim="steps-cta">
+            <div className="praxis-steps-cta-inner">
+              <p className="praxis-steps-cta-title">
+                Erzählen Sie uns, was Sie mit Ihrer Praxis vorhaben.
+              </p>
+              <DoorButton size="lg" color="white" href="/contact">
+                Erstgespräch anfragen
+              </DoorButton>
+            </div>
           </div>
 
         </div>
