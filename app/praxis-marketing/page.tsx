@@ -828,11 +828,15 @@ export default function LandingPraxis() {
               {/* Bild 06, Porträtformat 2:3 — Nahaufnahme eines Smartphones in
                   einer Hand vor einer modernen Praxis im städtischen Umfeld. */}
               <figure className="praxis-figure praxis-figure--2-3 praxis-geo-photo">
-                <div className="praxis-figure-inner">
-                  <span className="praxis-figure-tag">Bild 06 · 2:3</span>
-                  <figcaption className="praxis-figure-note">
-                    Person nutzt ein Smartphone vor einer Praxis in der Stadt
-                  </figcaption>
+                <div className="praxis-figure-inner praxis-figure-inner--photo">
+                  <Image
+                    className="praxis-figure-img"
+                    src="/images/praxis-6.jpg"
+                    alt="Person nutzt ein Smartphone vor einer Praxis in der Stadt"
+                    width={1024}
+                    height={1536}
+                    sizes="(min-width: 1024px) 340px, 54vw"
+                  />
                 </div>
               </figure>
             </div>
