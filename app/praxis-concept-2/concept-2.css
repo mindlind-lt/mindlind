@@ -1,0 +1,1178 @@
+/* /praxis-concept-2 — "Ruhe".
+
+   Editorial and quiet: the site's page colour, ink and green, plus one serif
+   display face for headlines and a deep practice-green for the single dark
+   band. Everything is prefixed c2- so nothing leaks into the live page. */
+
+.c2 {
+    --c2-ink: var(--foreground);
+    --c2-paper: var(--background);
+    --c2-deep: #0e3b2c;
+    --c2-sage: #dfe9e2;
+    --c2-muted: #5d6360;
+    --c2-serif: var(--font-c2-serif), Georgia, serif;
+    --c2-gutter: 24px;
+
+    color: var(--c2-ink);
+    overflow-x: clip;
+}
+
+@media (min-width: 48rem) { .c2 { --c2-gutter: 40px; } }
+@media (min-width: 80rem) { .c2 { --c2-gutter: 64px; } }
+
+.c2 em {
+    color: var(--primary-700);
+    font-style: italic;
+}
+
+.c2-wrap {
+    margin: 0 auto;
+    max-width: 1520px;
+    padding: 0 var(--c2-gutter);
+}
+
+.c2-section {
+    padding: 96px 0;
+}
+
+@media (min-width: 64rem) {
+    .c2-section { padding: 160px 0; }
+}
+
+/* Mono label: a small counter and a word, the site's own idiom. */
+.c2-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    color: var(--c2-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.c2-label-num {
+    color: var(--primary-700);
+}
+
+.c2-label-num::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 1px;
+    margin-left: 14px;
+    background: currentColor;
+    opacity: 0.6;
+}
+
+.c2-label--dark { color: rgba(255, 255, 255, 0.6); }
+.c2-label--dark .c2-label-num { color: var(--primary-500); }
+
+.c2-h2 {
+    font-family: var(--c2-serif);
+    font-size: clamp(40px, 5.4vw, 88px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+    max-width: 18ch;
+    margin-top: 24px;
+}
+
+.c2-section-head {
+    margin-bottom: 64px;
+}
+
+@media (min-width: 64rem) {
+    .c2-section-head { margin-bottom: 96px; }
+
+    .c2-section-head--split {
+        display: grid;
+        grid-template-columns: 1fr 2.4fr;
+        align-items: start;
+        gap: 48px;
+    }
+
+    .c2-section-head--split .c2-h2 { margin-top: -0.12em; }
+}
+
+.c2-split-line {
+    padding-bottom: 0.06em;
+}
+
+
+/* ---- Hero --------------------------------------------------------------- */
+
+.c2-hero {
+    padding-top: calc(var(--hdr-height) + 32px);
+}
+
+.c2-hero-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    border-top: 1px solid rgba(26, 26, 26, 0.18);
+    padding-top: 14px;
+
+    color: var(--c2-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.c2-hero-meta span:last-child { display: none; }
+@media (min-width: 48rem) { .c2-hero-meta span:last-child { display: inline; } }
+
+.c2-hero-title {
+    font-family: var(--c2-serif);
+    font-size: clamp(58px, 12.4vw, 216px);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 0.9;
+
+    margin-top: 40px;
+}
+
+.c2-line { display: block; }
+
+/* Hand-set line breaks only where the measure is wide enough to hold them;
+   on a phone they would break mid-phrase, so the lines run on. */
+@media (max-width: 47.999rem) {
+    .c2-band-quote .c2-line,
+    .c2-closing-title .c2-line { display: inline; }
+}
+
+/* Third line steps in, the way a typeset title would be set by hand. */
+.c2-hero-title .c2-line:nth-child(2) { padding-left: 0.6em; }
+.c2-hero-title .c2-line:nth-child(3) { padding-left: 1.6em; }
+
+@media (max-width: 47.999rem) {
+    .c2-hero-title .c2-line:nth-child(n) { padding-left: 0; }
+}
+
+.c2-hero-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+
+    margin-top: 40px;
+    padding-bottom: 56px;
+}
+
+@media (min-width: 64rem) {
+    .c2-hero-foot {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: 56px;
+        padding-bottom: 80px;
+    }
+}
+
+.c2-hero-lead {
+    font-size: 18px;
+    line-height: 1.55;
+    max-width: 44ch;
+}
+
+@media (min-width: 64rem) { .c2-hero-lead { font-size: 20px; } }
+
+/* The full-bleed opening picture. 100svh tall so the end state fills the
+   screen exactly while pinned. */
+.c2-reveal {
+    height: 70svh;
+    position: relative;
+}
+
+@media (min-width: 64rem) { .c2-reveal { height: 100svh; } }
+
+.c2-reveal-frame {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    clip-path: inset(4% 6% 4% 6% round 20px);
+}
+
+@media (min-width: 64rem) {
+    .c2-reveal-frame { clip-path: inset(12% 24% 12% 24% round 28px); }
+}
+
+.c2-reveal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: 50% 50%;
+}
+
+.c2-reveal-caption {
+    position: absolute;
+    left: var(--c2-gutter);
+    bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: #fff;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.c2-reveal-caption span:first-child {
+    font-family: var(--c2-serif);
+    font-size: clamp(32px, 4vw, 64px);
+    line-height: 1;
+}
+
+.c2-reveal-caption span:last-child {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+
+/* ---- Accents ------------------------------------------------------------ */
+
+.c2-accents {
+    display: grid;
+    gap: 40px;
+}
+
+@media (min-width: 48rem) {
+    .c2-accents {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+}
+
+.c2-accent {
+    border-top: 1px solid var(--c2-ink);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 16px;
+}
+
+@media (min-width: 48rem) {
+    .c2-accent {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+}
+
+.c2-accents em {
+    font-family: var(--c2-serif);
+    font-size: clamp(120px, 17vw, 300px);
+    letter-spacing: -0.05em;
+    line-height: 0.78;
+}
+
+.c2-accent span {
+    font-size: 18px;
+    line-height: 1.35;
+    max-width: 16ch;
+}
+
+
+/* ---- Statement ---------------------------------------------------------- */
+
+@media (min-width: 64rem) {
+    .c2-statement-grid {
+        display: grid;
+        grid-template-columns: 1fr 2.4fr;
+        gap: 48px;
+    }
+
+    .c2-statement-grid .c2-h2 { margin-top: -0.12em; }
+}
+
+.c2-readout {
+    font-size: clamp(22px, 2.4vw, 36px);
+    letter-spacing: -0.015em;
+    line-height: 1.4;
+    max-width: 34ch;
+
+    margin-top: 48px;
+}
+
+
+/* ---- Questions ---------------------------------------------------------- */
+
+.c2-qa {
+    background: var(--c2-sage);
+}
+
+.c2-qa-stage {
+    display: flex;
+    align-items: center;
+
+    min-height: 100svh;
+    padding: calc(var(--hdr-height) + 16px) 0 48px;
+}
+
+.c2-qa-inner {
+    width: 100%;
+}
+
+.c2-qa-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c2-qa-counter {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+.c2-qa-list {
+    display: grid;
+    margin: 56px 0;
+}
+
+/* All four share one grid cell, so they stack in place and the timeline only
+   swaps which one is visible. */
+.c2-qa-item {
+    grid-area: 1 / 1;
+}
+
+.c2-qa-kicker {
+    color: var(--c2-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.c2-qa-q {
+    font-family: var(--c2-serif);
+    font-size: clamp(44px, 7.4vw, 132px);
+    letter-spacing: -0.03em;
+    line-height: 0.98;
+    max-width: 14ch;
+
+    margin-top: 18px;
+}
+
+.c2-qa-a {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+
+    font-size: clamp(18px, 1.8vw, 26px);
+    line-height: 1.35;
+    max-width: 30ch;
+
+    margin-top: 36px;
+}
+
+@media (min-width: 64rem) {
+    .c2-qa-a {
+        margin-left: auto;
+        margin-top: -1.2em;
+    }
+}
+
+.c2-qa-arrow {
+    color: var(--primary-700);
+    font-size: 1.4em;
+    line-height: 1;
+}
+
+.c2-qa-a-label {
+    display: block;
+
+    color: var(--primary-700);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+.c2-qa-progress {
+    background: rgba(26, 26, 26, 0.12);
+    height: 2px;
+    overflow: hidden;
+}
+
+.c2-qa-progress span {
+    display: block;
+    height: 100%;
+    background: var(--primary-700);
+    transform-origin: left center;
+}
+
+/* Without the script, or with reduced motion, the four simply list. */
+@media (prefers-reduced-motion: reduce), (scripting: none) {
+    .c2-qa-list { gap: 72px; }
+    .c2-qa-item { grid-area: auto; }
+    .c2-qa-a { margin-top: 24px; margin-left: 0; }
+}
+
+
+/* ---- Stacked cards ------------------------------------------------------ */
+
+.c2-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.c2-card {
+    --c2-shade: 0;
+
+    position: sticky;
+    top: calc(var(--hdr-height) + 8px);
+
+    border-radius: 28px;
+    overflow: hidden;
+    transform-origin: 50% 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 48px;
+
+    min-height: min(78svh, 680px);
+    padding: 28px;
+}
+
+@media (min-width: 64rem) {
+    .c2-card {
+        border-radius: 36px;
+        padding: 48px 56px;
+    }
+}
+
+/* The settling card darkens a touch, so the one arriving reads as in front. */
+.c2-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #000;
+    opacity: calc(var(--c2-shade) * 0.35);
+    pointer-events: none;
+}
+
+.c2-card--1 { background: #fff; }
+.c2-card--2 { background: var(--c2-sage); }
+.c2-card--3 { background: var(--c2-deep); color: #fff; }
+
+.c2-card-top {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.c2-card-num {
+    color: var(--primary-700);
+    font-size: 14px;
+}
+
+.c2-card--3 .c2-card-num { color: var(--primary-500); }
+
+.c2-card-body {
+    display: grid;
+    gap: 40px;
+}
+
+@media (min-width: 64rem) {
+    .c2-card-body {
+        grid-template-columns: 1.3fr 1fr;
+        align-items: end;
+        gap: 64px;
+    }
+}
+
+.c2-card-title {
+    font-family: var(--c2-serif);
+    font-size: clamp(52px, 8vw, 140px);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 0.92;
+}
+
+.c2-card-lead {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 30ch;
+    margin-top: 20px;
+    opacity: 0.75;
+}
+
+.c2-card-list li {
+    border-top: 1px solid currentColor;
+    border-color: rgba(26, 26, 26, 0.16);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    font-size: 17px;
+    padding: 14px 0;
+}
+
+.c2-card--3 .c2-card-list li { border-color: rgba(255, 255, 255, 0.18); }
+
+.c2-card-list li::after {
+    content: "→";
+    color: var(--primary-700);
+}
+
+.c2-card--3 .c2-card-list li::after { color: var(--primary-500); }
+
+
+/* ---- Green band --------------------------------------------------------- */
+
+.c2-band {
+    background: var(--c2-deep);
+    color: #fff;
+    padding: 112px 0;
+}
+
+@media (min-width: 64rem) { .c2-band { padding: 176px 0; } }
+
+.c2-band em { color: var(--primary-500); }
+
+.c2-band-intro {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 46ch;
+    margin-top: 32px;
+}
+
+.c2-band-quote {
+    font-family: var(--c2-serif);
+    font-size: clamp(46px, 8.4vw, 150px);
+    letter-spacing: -0.035em;
+    line-height: 0.95;
+
+    margin: 72px 0 88px;
+}
+
+.c2-band-grid {
+    display: grid;
+    gap: 40px;
+}
+
+@media (min-width: 64rem) {
+    .c2-band-grid {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: end;
+        gap: 72px;
+    }
+}
+
+.c2-band-photo {
+    aspect-ratio: 3 / 2;
+    border-radius: 24px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.c2-band-photo img,
+.c2-work-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.c2-band-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 40ch;
+}
+
+
+/* ---- Work --------------------------------------------------------------- */
+
+.c2-works {
+    display: grid;
+    gap: 56px;
+}
+
+@media (min-width: 64rem) {
+    .c2-works {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        padding-bottom: 80px;
+    }
+}
+
+.c2-work {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.c2-work-media {
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.c2-work-media img {
+    transition: filter 0.6s ease;
+}
+
+.c2-work:hover .c2-work-media img {
+    filter: saturate(1.15);
+}
+
+.c2-work-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+
+    margin-top: 20px;
+}
+
+.c2-work-title {
+    font-family: var(--c2-serif);
+    font-size: clamp(36px, 3.6vw, 56px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1;
+
+    background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+    transition: background-size 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.c2-work:hover .c2-work-title { background-size: 100% 1px; }
+
+.c2-work-pills,
+.c2-work-note {
+    color: var(--c2-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.c2-work-note {
+    font-family: inherit;
+    font-size: 16px;
+    letter-spacing: 0;
+    text-transform: none;
+    margin-top: 8px;
+}
+
+
+/* ---- Process ------------------------------------------------------------ */
+
+.c2-steps {
+    background: #fff;
+}
+
+.c2-steps-pin {
+    padding: 96px 0;
+}
+
+.c2-steps-track {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    padding: 0 var(--c2-gutter);
+}
+
+/* Horizontal only when the script will drive it; otherwise the steps stack. */
+@media (min-width: 64rem) and (prefers-reduced-motion: no-preference) and (scripting: enabled) {
+    .c2-steps-pin {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 48px;
+
+        height: 100svh;
+        padding: calc(var(--hdr-height) + 8px) 0 40px;
+    }
+
+    .c2-steps-track {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 40px;
+
+        width: max-content;
+        will-change: transform;
+    }
+
+    .c2-steps-intro,
+    .c2-steps-end {
+        flex: 0 0 min(560px, 40vw);
+    }
+
+    .c2-step {
+        flex: 0 0 min(980px, 62vw);
+    }
+}
+
+.c2-steps-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.c2-steps-hint {
+    display: none;
+    align-items: center;
+    gap: 16px;
+
+    color: var(--c2-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+@media (min-width: 64rem) { .c2-steps-hint { display: flex; } }
+
+.c2-steps-hint-line {
+    flex: 1;
+    max-width: 160px;
+    height: 1px;
+    background: currentColor;
+}
+
+.c2-step {
+    display: grid;
+    gap: 28px;
+}
+
+@media (min-width: 64rem) {
+    .c2-step {
+        grid-template-columns: 1.25fr 1fr;
+        align-items: end;
+        gap: 40px;
+    }
+}
+
+.c2-step-media {
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+@media (min-width: 64rem) {
+    .c2-step-media {
+        aspect-ratio: auto;
+        height: min(64svh, 640px);
+    }
+}
+
+.c2-step-media img {
+    width: 120%;
+    max-width: none;
+    height: 100%;
+    margin-left: -10%;
+    object-fit: cover;
+}
+
+.c2-step-num {
+    display: block;
+
+    color: var(--primary-700);
+    font-family: var(--c2-serif);
+    font-size: clamp(80px, 9vw, 160px);
+    font-style: italic;
+    letter-spacing: -0.04em;
+    line-height: 0.8;
+}
+
+.c2-step-title {
+    font-family: var(--c2-serif);
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+
+    margin-top: 24px;
+}
+
+.c2-step-text {
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 40ch;
+    margin-top: 16px;
+}
+
+.c2-steps-end {
+    background: var(--c2-deep);
+    border-radius: 28px;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+
+    padding: 36px;
+}
+
+.c2-steps-end em { color: var(--primary-500); }
+
+.c2-steps-end-title {
+    font-family: var(--c2-serif);
+    font-size: clamp(38px, 3.6vw, 64px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.c2-steps-progress {
+    display: none;
+    height: 2px;
+    background: rgba(26, 26, 26, 0.1);
+    overflow: hidden;
+}
+
+@media (min-width: 64rem) and (prefers-reduced-motion: no-preference) and (scripting: enabled) {
+    .c2-steps-progress { display: block; }
+}
+
+.c2-steps-progress span {
+    display: block;
+    height: 100%;
+    background: var(--primary-700);
+    transform-origin: left center;
+    transform: scaleX(0);
+}
+
+
+/* ---- Local -------------------------------------------------------------- */
+
+.c2-local-grid {
+    display: grid;
+    gap: 64px;
+}
+
+@media (min-width: 64rem) {
+    .c2-local-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 96px;
+    }
+}
+
+.c2-local-visual {
+    position: relative;
+    aspect-ratio: 1;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.c2-local-orbit {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.c2-orbit-ring {
+    fill: none;
+    stroke: var(--primary-700);
+    stroke-opacity: 0.35;
+}
+
+.c2-orbit-ring--dash { stroke-dasharray: 2 7; stroke-opacity: 0.6; }
+
+.c2-orbit-text {
+    fill: var(--primary-700);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+}
+
+.c2-local-photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 58%;
+    aspect-ratio: 2 / 3;
+    transform: translate(-50%, -50%);
+
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.c2-local-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.c2-local-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.c2-local-item {
+    border-top: 1px solid rgba(26, 26, 26, 0.18);
+    padding-top: 20px;
+}
+
+.c2-local-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.c2-local-item p {
+    color: #3c403e;
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 48ch;
+    margin-top: 10px;
+}
+
+
+/* ---- Goals -------------------------------------------------------------- */
+
+.c2-goal {
+    position: relative;
+    display: grid;
+    gap: 8px;
+    padding: 28px 0;
+}
+
+@media (min-width: 64rem) {
+    .c2-goal {
+        grid-template-columns: 1.2fr 1fr 1fr;
+        align-items: baseline;
+        gap: 48px;
+        padding: 36px 0;
+    }
+}
+
+.c2-goal-rule {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--c2-ink);
+    transform-origin: left center;
+}
+
+.c2-goal--head {
+    display: none;
+
+    color: var(--c2-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0 0 16px;
+}
+
+@media (min-width: 64rem) { .c2-goal--head { display: grid; } }
+
+.c2-goal-name {
+    font-family: var(--c2-serif);
+    font-size: clamp(30px, 3vw, 48px);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    transition: color 0.4s ease, translate 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.c2-goal:hover .c2-goal-name {
+    color: var(--primary-700);
+    /* `translate`, not `transform`: GSAP writes transform on reveal, and a
+       CSS transition on the same property fights it to a standstill. */
+    translate: 12px 0;
+}
+
+.c2-goal-num {
+    color: var(--c2-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    vertical-align: super;
+    margin-right: 12px;
+}
+
+.c2-goal-ask {
+    color: #3c403e;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.c2-goal-how {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.c2-goals-foot {
+    border-top: 1px solid var(--c2-ink);
+    font-family: var(--c2-serif);
+    font-size: clamp(26px, 2.4vw, 40px);
+    font-style: italic;
+    line-height: 1.15;
+    max-width: 30ch;
+    padding-top: 32px;
+}
+
+
+/* ---- Team --------------------------------------------------------------- */
+
+.c2-people {
+    position: relative;
+}
+
+.c2-person {
+    border-top: 1px solid rgba(26, 26, 26, 0.18);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 20px;
+    padding: 18px 0;
+    cursor: default;
+}
+
+.c2-person:last-child { border-bottom: 1px solid rgba(26, 26, 26, 0.18); }
+
+.c2-person-thumb {
+    grid-row: 1 / span 2;
+    width: 64px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.c2-person-name {
+    font-family: var(--c2-serif);
+    font-size: clamp(44px, 8vw, 136px);
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    transition: color 0.4s ease, translate 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.c2-person-role {
+    color: var(--c2-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .c2-person {
+        grid-template-columns: 1fr auto;
+        padding: 8px 0;
+    }
+
+    .c2-person-thumb { display: none; }
+    .c2-person-role { grid-row: 1; grid-column: 2; }
+
+    .c2-people-list:hover .c2-person-name { color: rgba(26, 26, 26, 0.25); }
+    .c2-people-list .c2-person.is-active .c2-person-name {
+        color: var(--primary-700);
+        font-style: italic;
+        translate: 24px 0;
+    }
+}
+
+.c2-people-float {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 260px;
+    aspect-ratio: 3 / 4;
+    margin: -170px 0 0 -130px;
+
+    border-radius: 20px;
+    overflow: hidden;
+    pointer-events: none;
+
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.45);
+}
+
+@media not ((hover: hover) and (pointer: fine)) {
+    .c2-people-float { display: none; }
+}
+
+.c2-people-float-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transform: scale(1.12);
+    transition: opacity 0.35s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.c2-people-float-img.is-shown {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.c2-team-note {
+    color: var(--c2-muted);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 46ch;
+    margin-top: 48px;
+}
+
+
+/* ---- Closing ------------------------------------------------------------ */
+
+.c2-closing {
+    padding: 64px 0 24px;
+}
+
+@media (min-width: 64rem) { .c2-closing { padding: 120px 0 40px; } }
+
+.c2-closing-title {
+    font-family: var(--c2-serif);
+    font-size: clamp(52px, 10vw, 184px);
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+}
+
+.c2-closing-title .c2-line:nth-child(2) { padding-left: 0.8em; }
+@media (max-width: 47.999rem) {
+    .c2-closing-title .c2-line:nth-child(2) { padding-left: 0; }
+}
+
+
+/* ---- Entry states ------------------------------------------------------- */
+
+/* Hidden only when the motion layer will bring them in. */
+@media (prefers-reduced-motion: no-preference) and (scripting: enabled) {
+    .c2-enter,
+    .c2-hero-title {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
