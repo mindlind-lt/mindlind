@@ -41,7 +41,7 @@ interface ContactFormProps {
 
 export default function ContactForm({
   extraFields = [],
-  messageLabel = "NACHRICHT",
+  messageLabel = "Nachricht",
   messagePlaceholder = "Worum geht es bei Ihrem Projekt?",
   submitLabel = "ANFRAGE SENDEN",
   successMessage = DEFAULT_SUCCESS,
@@ -94,7 +94,7 @@ export default function ContactForm({
 
             <div className="contact-form-row">
                 <div className="contact-form-field">
-                <label className="contact-form-label" htmlFor="name">IHR NAME</label>
+                <label className="contact-form-label" htmlFor="name">Ihr Name</label>
                 <input
                     className="contact-form-input"
                     id="name"
@@ -105,7 +105,7 @@ export default function ContactForm({
                 />
                 </div>
                 <div className="contact-form-field">
-                <label className="contact-form-label" htmlFor="email">IHRE E-MAIL</label>
+                <label className="contact-form-label" htmlFor="email">Ihre E-Mail</label>
                 <input
                     className="contact-form-input"
                     id="email"

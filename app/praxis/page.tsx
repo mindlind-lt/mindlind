@@ -944,7 +944,6 @@ export default function LandingPraxis() {
         extraFields={[
           { name: "practice", label: "Name der Praxis" },
           { name: "phone", label: "Telefonnummer (optional)", type: "tel" },
-          { name: "website", label: "Praxiswebsite (optional)", type: "url" },
         ]}
         messageLabel="Was möchten Sie verbessern?"
         messagePlaceholder="Zum Beispiel: Wir möchten unseren neuen Behandlungsschwerpunkt bekannter machen."
