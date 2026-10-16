@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, CalendarDays, ClipboardList, MapPin, PanelsTopLeft, Plus, Stethoscope, UsersRound } from "lucide-react";
 
 import { breadcrumbSchema } from "@/lib/schema";
 
@@ -30,6 +31,15 @@ const DESCRIPTION =
 // The root layout appends "| Mindlind Werbeagentur" to every page title, so the
 // title from the content document is set as absolute to keep it exactly as written.
 const TITLE = "Praxismarketing für Ärzte | Webdesign & SEO | MindLind";
+
+// Original practice-goal copy, presented one example at a time.
+const PRACTICE_GOALS = [
+  ["Einen Schwerpunkt stärken", "Welche Behandlungen möchten Sie bekannter machen?", "Eigene Leistungsseiten und darauf abgestimmte Kampagnen"],
+  ["Regional gefunden werden", "Aus welchem Einzugsgebiet kommen passende Patienten?", "Lokale SEO, ein gepflegtes Google-Profil und regionale Anzeigen"],
+  ["Vertrauen vermitteln", "Welche Fragen stellen Patienten vor dem ersten Besuch?", "Verständliche Texte, echte Praxisbilder und klare Informationen zum Ablauf"],
+  ["Die Anmeldung entlasten", "Welche Fragen und Terminwünsche lassen sich online abfangen?", "Gut auffindbare Antworten und eine sinnvoll eingebundene Terminbuchung"],
+  ["Das Budget gezielt einsetzen", "Welche Kontaktwege werden genutzt und welche Anfragen passen?", "Auswertung messbarer Kontakte und Optimierung mit Ihrem Feedback"],
+];
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -121,17 +131,21 @@ export default function LandingPraxis() {
 
             <div className="flex flex-col gap-6">
               <p className="praxis-eyebrow praxis-enter" data-praxis-anim="hero-eyebrow">
-                Für Arzt- und Zahnarztpraxen
+                Online-Marketing für Ärzte
               </p>
 
               <h1 className="praxis-h1 praxis-enter" data-praxis-anim="hero-title">
-                Damit passende Patienten Ihre Praxis finden.
+                Praxismarketing, das zu Ihrer Praxis passt.
               </h1>
 
               <p className="praxis-lead praxis-enter" data-praxis-anim="hero-lead">
-                Websites, lokale Sichtbarkeit und Google Ads für Ihre Praxis.
-                Damit Patienten Ihre Schwerpunkte verstehen und den Weg zum
-                Termin finden – passend zu den Kapazitäten Ihres Teams.
+                Sie möchten bestimmte Behandlungen stärker in den Fokus rücken,
+                Ihre Praxis bekannt machen oder die Online-Terminbuchung
+                erleichtern? MindLind verbindet Website, lokale Sichtbarkeit und
+                Werbung zu einem klaren Auftritt. Damit Patienten verstehen,
+                wofür Ihre Praxis steht, welche Leistungen Sie anbieten und wie
+                sie einen Termin vereinbaren können. Ausgerichtet auf Ihre
+                Fachrichtung, Ihre Ziele und die Kapazitäten Ihres Teams.
               </p>
 
               <div className="praxis-enter" data-praxis-anim="hero-cta">
@@ -140,7 +154,7 @@ export default function LandingPraxis() {
                   Im Erstgespräch erhalten Sie eine erste Einschätzung, welche
                   Maßnahme zu Ihrem Praxisziel passt und was dafür nötig ist.
                 </p>
-                <div className="praxis-hero-actions">
+                <div className="praxis-hero-actions" data-praxis-cta="hero">
                   <DoorButton size="lg" href="#praxis-kontakt">Erstgespräch anfragen</DoorButton>
                   <a className="praxis-evidence-link" href="#praxis-projekt">Praxisprojekt ansehen <span aria-hidden="true">↓</span></a>
                 </div>
@@ -290,29 +304,66 @@ export default function LandingPraxis() {
 
       <section className="py-12 lg:py-20">
         <div className="container mx-auto px-6 sm:px-8">
-          <Kicker n="02">Leistungen</Kicker>
+          <Kicker n="02">Positionierung</Kicker>
           <UnderlinedHeader className="praxis-section-head mb-10 lg:mb-12">
-            Wo soll sich für Ihre Praxis <span className="praxis-mark">etwas ändern?</span>
+            Ihre Praxis ist besonders. Ihr Online-Auftritt sollte zeigen, <span className="praxis-mark">warum.</span>
           </UnderlinedHeader>
+          <div className="praxis-positioning-copy">
+            <p>Welche Schwerpunkte setzen Sie? Wie beraten Sie? Was erwartet Patienten beim ersten Besuch? Wir machen Ihre Praxis online greifbar: mit verständlichen Leistungsseiten, einer klaren Struktur und Bildern, die zu Ihnen passen.</p>
+            <p>Dafür verbinden wir sechs Bausteine: Website, SEO, Google Ads, Texte, Foto und Video sowie digitale Patientenkommunikation. Geordnet nach dem, was sie für Ihre Praxis leisten:</p>
+          </div>
           <div className="praxis-service-grid">
             <article className="praxis-service praxis-svc--visibility">
-              <p className="praxis-service-context">Sie möchten vor Ort gefunden werden.</p>
-              <h3>Lokale Sichtbarkeit</h3>
-              <p>Ihre Fachrichtung und Behandlungen dort zeigen, wo Patienten in Ihrer Region suchen.</p>
-              <ul><li>Google-Unternehmensprofil</li><li>Leistungsseiten mit Ortsbezug</li><li>Lokale SEO und Google Ads</li></ul>
+              <h3>Sichtbar werden</h3>
+              <ul>
+                <li>Suchmaschinenoptimierung</li>
+                <li>Google-Unternehmensprofil</li>
+                <li>Lokale Google-Ads-Kampagnen</li>
+                <li>Seiten für Ihre Behandlungen</li>
+                <li>Inhalte mit regionalem Bezug</li>
+                <li>Auswertung der Auffindbarkeit</li>
+              </ul>
             </article>
             <article className="praxis-service praxis-svc--trust">
-              <p className="praxis-service-context">Ihr Auftritt passt nicht mehr zu Ihrer Praxis.</p>
-              <h3>Eine klare Praxiswebsite</h3>
-              <p>Leistungen, Team und Abläufe verständlich präsentieren – auch auf dem Smartphone.</p>
-              <ul><li>Struktur, Gestaltung und Umsetzung</li><li>Verständliche medizinische Texte</li><li>Foto und Video für Praxis und Team</li></ul>
+              <h3>Vertrauen aufbauen</h3>
+              <ul>
+                <li>Individuelle Praxiswebsite</li>
+                <li>Klare Positionierung</li>
+                <li>Verständliche medizinische Texte</li>
+                <li>Professionelle Praxisfotografie</li>
+                <li>Videos für Praxis und Team</li>
+                <li>Übersichtliche mobile Darstellung</li>
+              </ul>
             </article>
             <article className="praxis-service praxis-svc--contact">
-              <p className="praxis-service-context">Die Anmeldung beantwortet dieselben Fragen.</p>
-              <h3>Einfacher zum Termin</h3>
-              <p>Wiederkehrende Fragen vorab klären und passende Kontaktwege sichtbar machen.</p>
-              <ul><li>Antworten zu Behandlung und Ablauf</li><li>Einbindung der Online-Terminbuchung</li><li>Kontaktformulare und klare Hinweise</li></ul>
+              <h3>Kontakt erleichtern</h3>
+              <ul>
+                <li>Einbindung der Online-Terminbuchung</li>
+                <li>Gut erreichbare Kontaktwege</li>
+                <li>Antworten auf häufige Fragen</li>
+                <li>Anfrageformulare</li>
+                <li>Klare Hinweise vor dem Termin</li>
+                <li>Analyse der Kontaktwege</li>
+              </ul>
             </article>
+          </div>
+          <div className="praxis-goal-examples" aria-labelledby="praxis-goal-examples-title">
+            <div>
+              <p className="praxis-content-label">Von Ihrem Ziel zur Maßnahme</p>
+              <h3 id="praxis-goal-examples-title">Was Ihre Praxis braucht, bestimmt die Maßnahmen.</h3>
+              <p className="praxis-goal-hint">Wir besprechen zuerst, was sich für Ihre Praxis verbessern soll. Daraus leiten wir ab, welche Inhalte, Kanäle und Kontaktwege sinnvoll sind und woran wir die Entwicklung beurteilen.</p>
+            </div>
+            <div className="praxis-goal-disclosures">
+              {PRACTICE_GOALS.map(([goal, question, measure]) => (
+                <details name="praxis-goal-examples" key={goal}>
+                  <summary><span>{goal}</span><Plus aria-hidden="true" /></summary>
+                  <dl className="praxis-goal-answer">
+                    <div><dt>Was wir gemeinsam klären</dt><dd>{question}</dd></div>
+                    <div><dt>So setzen wir es um</dt><dd>{measure}</dd></div>
+                  </dl>
+                </details>
+              ))}
+            </div>
           </div>
           <div className="praxis-service-bottom">
             <p>Einzelne Verbesserung oder neuer Auftritt: Wir prüfen zuerst, was bereits funktioniert und wo Handlungsbedarf besteht.</p>
@@ -321,14 +372,72 @@ export default function LandingPraxis() {
         </div>
       </section>
 
+      <section className="py-12 lg:py-20" aria-labelledby="praxis-patient-questions-title">
+        <div className="container mx-auto px-6 sm:px-8">
+          <Kicker n="03">Patientenfragen</Kicker>
+          <div className="praxis-detail-heading">
+              <h2 id="praxis-patient-questions-title">Gute Praxiswebsites beantworten Fragen, <span className="praxis-mark">bevor</span> sie gestellt werden.</h2>
+              <p>Patienten sollen sich schon vor dem ersten Anruf orientieren können. Gemeinsam legen wir fest, welche Behandlungen und Anliegen im Mittelpunkt stehen, und richten Inhalte und Struktur an den Fragen aus, die vor einem Termin aufkommen.</p>
+          </div>
+            <dl className="praxis-patient-questions">
+              <div>
+                <dt><span className="praxis-question-marker" aria-hidden="true"><span>01 · Behandlung</span><Stethoscope /></span>Behandelt diese Praxis mein Anliegen?</dt>
+                <dd>Die passenden Leistungsseiten auffindbar machen.</dd>
+              </div>
+              <div>
+                <dt><span className="praxis-question-marker" aria-hidden="true"><span>02 · Vertrauen</span><UsersRound /></span>Welche Erfahrung bringt das Team mit?</dt>
+                <dd>Qualifikationen und Schwerpunkte verständlich zeigen.</dd>
+              </div>
+              <div>
+                <dt><span className="praxis-question-marker" aria-hidden="true"><span>03 · Orientierung</span><ClipboardList /></span>Was erwartet mich bei der Untersuchung?</dt>
+                <dd>Abläufe erklären und offene Fragen beantworten.</dd>
+              </div>
+              <div>
+                <dt><span className="praxis-question-marker" aria-hidden="true"><span>04 · Kontakt</span><CalendarDays /></span>Wie kann ich einen Termin vereinbaren?</dt>
+                <dd>Ohne Umwege zur Kontaktaufnahme führen.</dd>
+              </div>
+            </dl>
+        </div>
+      </section>
+
+      <section className="praxis-local py-12 lg:py-20" aria-labelledby="praxis-local-title">
+        <div className="container mx-auto px-6 sm:px-8">
+          <Kicker n="04">Lokale Sichtbarkeit</Kicker>
+          <div className="praxis-detail-heading">
+              <h2 id="praxis-local-title">Gefunden werden, wenn Patienten in Ihrer <span className="praxis-mark">Nähe</span> suchen.</h2>
+              <p>Eine Suche nach einem Facharzt beginnt mit einem konkreten Anliegen. Deshalb richten wir Ihre Website auf die Verbindung aus Behandlung und Standort aus.</p>
+          </div>
+          <div className="praxis-local-flow">
+            <article className="praxis-local-stage">
+              <div className="praxis-local-symbol" aria-hidden="true"><MapPin /></div>
+              <h3>Ihre Fachrichtung. Ihr Standort. Ihr Leistungsangebot.</h3>
+              <p>Wer nach Ihrer Leistung in Ihrer Stadt sucht, soll schnell erkennen können, ob Ihre Praxis der richtige Ansprechpartner ist.</p>
+              <p>Dafür braucht es verständliche Inhalte, eine übersichtliche Website und stimmige Standortinformationen.</p>
+            </article>
+            <div className="praxis-local-connection" aria-hidden="true"><ArrowRight /></div>
+            <article className="praxis-local-stage">
+              <div className="praxis-local-symbol" aria-hidden="true"><PanelsTopLeft /></div>
+              <h3>Website und Google-Profil gemeinsam verbessern</h3>
+              <p>Wir prüfen Ihr Google-Unternehmensprofil, strukturieren Ihre Leistungsseiten und arbeiten relevante Informationen zu Ihrer Praxis und Ihrem Einzugsgebiet ein.</p>
+              <p>Öffnungszeiten, Kontaktdaten, Leistungen und Bilder sollen ein konsistentes Gesamtbild vermitteln. Dazu kommen technische Verbesserungen und eine sinnvolle interne Verlinkung.</p>
+            </article>
+          </div>
+          <p className="praxis-local-caption">Anhand der verfügbaren Such- und Kontaktdaten beobachten wir die Entwicklung und setzen die nächsten Prioritäten.</p>
+        </div>
+      </section>
+
       <section className="praxis-fit py-12 lg:py-16">
         <div className="container mx-auto px-6 sm:px-8">
-          <p className="praxis-eyebrow">Ihre Kapazität gibt die Richtung vor</p>
+          <p className="praxis-eyebrow">Haltung</p>
           <div className="praxis-fit-grid">
-            <h2>Welche Anfragen passen <span>zu Ihrer Praxis?</span></h2>
             <div>
-              <p>Ein neuer Standort, ein Behandlungsschwerpunkt oder weniger Rückfragen an der Anmeldung: Ihr Ziel entscheidet über die Maßnahmen.</p>
-              <p>Wenn Ihr Kalender voll ist, können Orientierung und Patientenkommunikation wichtiger sein als zusätzliche Reichweite.</p>
+              <h2>Ihr Marketing muss auch im <span>Praxisalltag</span> funktionieren.</h2>
+              <p className="praxis-fit-question">Welche Patienten möchten Sie erreichen?<br />Und wofür hat Ihre Praxis Kapazität?</p>
+            </div>
+            <div>
+              <p>Zusätzliche Anfragen helfen Ihrer Praxis dann, wenn sie zu Ihren Leistungen und verfügbaren Terminen passen. Deshalb beginnt unsere Arbeit mit einem Gespräch über Ihren Praxisalltag.</p>
+              <p>Vielleicht möchten Sie eine neue Sprechstunde etablieren, einen Behandlungsschwerpunkt bekannter machen oder wiederkehrende Fragen schon auf der Website beantworten. Wir übersetzen diese Ziele in konkrete Inhalte und Maßnahmen.</p>
+              <p>Dabei denken wir den gesamten Weg mit: von der ersten Suche über die Information zur Behandlung bis zur Kontaktaufnahme.</p>
               <a href="#praxis-kontakt" className="praxis-evidence-link" data-praxis-cta="fit">Ihr Praxisziel besprechen <span aria-hidden="true">→</span></a>
             </div>
           </div>
@@ -337,20 +446,31 @@ export default function LandingPraxis() {
 
       <section className="py-12 lg:py-20">
         <div className="container mx-auto px-6 sm:px-8">
-          <Kicker n="03">Zusammenarbeit</Kicker>
+          <Kicker n="05">Ablauf</Kicker>
           <UnderlinedHeader className="praxis-section-head mb-10 lg:mb-12">
-            Erst Klarheit. Dann <span className="praxis-mark">Umsetzung.</span>
+            Ein klarer Ablauf. Von der ersten Frage bis zur <span className="praxis-mark">Umsetzung.</span>
           </UnderlinedHeader>
           <ol className="praxis-process">
-            <li><span className="praxis-process-number">01</span><h3>Ziel und Priorität klären</h3><p>Wir besprechen Ihre Praxis, Ihren bestehenden Auftritt und Ihr Ziel.</p><p className="praxis-process-result"><strong>Sie erhalten:</strong> eine erste Einschätzung zum sinnvollen nächsten Schritt.</p></li>
-            <li><span className="praxis-process-number">02</span><h3>Umfang und Kosten festlegen</h3><p>Wir konkretisieren die Maßnahmen und die nötigen Abstimmungen mit Ihrem Team.</p><p className="praxis-process-result"><strong>Sie erhalten:</strong> ein Angebot mit Leistungen, Kosten und Zeitplan zur Freigabe.</p></li>
-            <li><span className="praxis-process-number">03</span><h3>Umsetzen und prüfen</h3><p>Wir gestalten und entwickeln. Medizinische Inhalte geben Sie fachlich frei.</p><p className="praxis-process-result"><strong>Sie erhalten:</strong> die vereinbarte Umsetzung. Weitere Betreuung stimmen wir nach Bedarf ab.</p></li>
+            <li><span className="praxis-process-number">01</span><h3>Ziel und ersten Schritt klären</h3><p>Wir besprechen Ihre Fachrichtung, Ihre Kapazitäten und das, was sich verbessern soll.</p><p className="praxis-process-result">Sie erhalten eine erste Einschätzung, welche Maßnahme sinnvoll ist und welche Informationen wir für ein konkretes Angebot noch benötigen.</p></li>
+            <li><span className="praxis-process-number">02</span><h3>Prioritäten festlegen</h3><p>Wir prüfen Ihren bestehenden Auftritt und zeigen, wo sich Verbesserungen anbieten.</p><p className="praxis-process-result">Sie erhalten einen Vorschlag mit konkreten Leistungen, Prioritäten und Kosten. So können Sie nachvollziehen, was wir empfehlen und wie die Maßnahmen auf Ihr Ziel einzahlen.</p></li>
+            <li><span className="praxis-process-number">03</span><h3>Umsetzen und weiterentwickeln</h3><p>Nach Ihrer Freigabe setzen wir die vereinbarten Maßnahmen um. Medizinische Inhalte stimmen wir mit Ihnen ab.</p><p className="praxis-process-result">Anhand der verfügbaren Auswertungen und Ihres Feedbacks prüfen wir, was funktioniert und wo wir nachjustieren sollten.</p></li>
           </ol>
-          <div className="praxis-steps-cta mt-4 lg:mt-6">
+          <div className="praxis-review-note">
+            <div className="praxis-review-heading">
+              <h3>Nach dem Start: prüfen und weiterentwickeln.</h3>
+              <p>Bei vereinbarter laufender Betreuung.</p>
+            </div>
+            <ol className="praxis-review-steps">
+              <li><span aria-hidden="true">01</span><h4>Daten prüfen</h4><p>Was zeigen die verfügbaren Such- und Kontaktdaten?</p></li>
+              <li><span aria-hidden="true">02</span><h4>Ihr Feedback einordnen</h4><p>Welche Anfragen passen tatsächlich zu Ihrer Praxis?</p></li>
+              <li><span aria-hidden="true">03</span><h4>Gezielt nachjustieren</h4><p>Gemeinsam die nächsten Verbesserungen ableiten.</p></li>
+            </ol>
+          </div>
+          <div className="praxis-steps-cta mt-4 lg:mt-6" data-praxis-cta="process">
             <div className="praxis-steps-cta-inner">
               <div className="praxis-steps-cta-copy">
-                <p className="praxis-steps-cta-title">Klarheit, bevor Sie investieren.</p>
-                <p className="praxis-steps-cta-description">Starten Sie mit Ihrem Anliegen. Ein fertiges Briefing brauchen Sie für das Erstgespräch nicht.</p>
+                <p className="praxis-steps-cta-title">Klarheit, bevor Sie in Maßnahmen investieren.</p>
+                <p className="praxis-steps-cta-description">Im unverbindlichen Erstgespräch klären wir, was zuerst sinnvoll ist und welche Informationen für ein Angebot noch fehlen.</p>
               </div>
               <DoorButton size="lg" color="white" href="#praxis-kontakt">Erstgespräch anfragen</DoorButton>
             </div>
@@ -360,9 +480,9 @@ export default function LandingPraxis() {
 
       <section className="py-12 lg:py-20 overflow-hidden" data-praxis-rail="skip">
         <div className="container mx-auto px-6 sm:px-8">
-          <Kicker n="04" rail={false}>Das Team</Kicker>
+          <Kicker n="06" rail={false}>Das Team</Kicker>
           <UnderlinedHeader className="praxis-section-head mb-10 lg:mb-12">
-            Die Menschen hinter <span className="praxis-mark">Ihrem Auftritt.</span>
+            Das Team hinter <span className="praxis-mark">Ihrem Praxisauftritt.</span>
           </UnderlinedHeader>
           <TeamCarousel>
             <PersonCard imageSrc="/images/team-1.webp" name="Jan" role="Creative Director" />
@@ -372,7 +492,10 @@ export default function LandingPraxis() {
             <PersonCard imageSrc="/images/team-5.webp" name="Evgeny" role="Videoproduktion" />
           </TeamCarousel>
           <div className="praxis-service-bottom">
-            <p>Wir übernehmen Konzeption, Gestaltung und Technik. Sie bringen Ihre medizinische Expertise ein und geben die Inhalte frei.</p>
+            <div className="praxis-team-copy">
+              <p>Sie bringen die medizinische Expertise ein. Wir kümmern uns um die digitale Umsetzung.</p>
+              <p>Medizinische Inhalte stimmen wir mit Ihnen ab. Texte, Bilder und Kontaktwege entwickeln wir als zusammenhängenden Auftritt.</p>
+            </div>
             <Link href="/agency" className="praxis-evidence-link">MindLind kennenlernen <span aria-hidden="true">→</span></Link>
           </div>
         </div>

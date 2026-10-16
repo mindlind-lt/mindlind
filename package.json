@@ -8,6 +8,7 @@
     "start": "node scripts/serve-export.mjs",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
+    "test:contact": "node --experimental-strip-types --test lib/contact-request.test.mjs",
     "audit:legacy-js": "node scripts/check-legacy-js.mjs",
     "sync:spline": "node scripts/sync-spline-assets.mjs"
   },

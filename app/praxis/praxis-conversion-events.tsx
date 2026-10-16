@@ -16,7 +16,7 @@ export default function PraxisConversionEvents() {
     };
     const onClick = (event: MouseEvent) => {
       const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href="#praxis-kontakt"]') : null;
-      if (link) track("praxis_cta_click", { cta_location: link.dataset.praxisCta ?? "page" });
+      if (link) track("praxis_cta_click", { cta_location: link.closest<HTMLElement>("[data-praxis-cta]")?.dataset.praxisCta ?? "page" });
     };
     const onStart = (event: FocusEvent) => {
       if (!started && event.target instanceof Element && event.target.matches("input:not([type=checkbox]),textarea") && event.target.closest("[data-praxis-lead]")) {

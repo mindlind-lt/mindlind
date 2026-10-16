@@ -17,7 +17,7 @@ export default function PraxisContact() {
       <div className="container mx-auto px-6 sm:px-8">
         <div className="praxis-contact-grid">
           <div className="praxis-contact-copy">
-            <p className="praxis-kicker">Etappe 05 · Ihr nächster Schritt</p>
+            <p className="praxis-kicker">Etappe 07 · Ihr nächster Schritt</p>
             <h2 id="praxis-contact-title">Was braucht Ihre Praxis <span className="praxis-mark">als Nächstes?</span></h2>
             <p className="praxis-contact-lead">Sie müssen noch nicht wissen, welche Leistung Sie brauchen. Beschreiben Sie kurz Ihr Ziel – wir klären gemeinsam, wo Sie ansetzen können.</p>
           </div>

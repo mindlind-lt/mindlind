@@ -121,7 +121,7 @@
 /* Matches .underlined-header-title so the page's h1 and its section headers are
    visibly the same typeface at the same weight, one step apart in size. */
 .praxis-h1 {
-    font-size: 40px;
+    font-size: clamp(34px, 10vw, 40px);
     font-weight: 600;
     letter-spacing: -0.05em;
     line-height: 1.02;
@@ -169,15 +169,8 @@
 
 /* ---- Motion ------------------------------------------------------------- */
 
-/* The hero animation lives in ./praxis-motion. Almost all of
-   it sets its own starting state in JS, which is invisible because the section
-   is still below the fold when it does. The hero and the three accents under it
-   are not: an effect runs after the browser has painted, so a from-state set in
-   JS would show them finished for a frame and then yank them away. Those carry
-   .praxis-enter and start hidden here instead.
-
-   Consequently this is the one class on the page that must be reset for anything
-   that will not run the script — see the two queries at the bottom of the file. */
+/* The hero starts hidden until its entrance is ready. Reduced motion and
+   no-script visitors receive the finished state below. */
 .praxis-enter {
     opacity: 0;
 }
@@ -610,35 +603,103 @@
 #praxis-projekt { scroll-margin-top: calc(var(--hdr-height, 92px) + 24px); }
 .praxis-hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 24px; }
 .praxis-hero-actions .door-button { max-width: 100%; height: auto; min-height: 52px; }
+.praxis-positioning-copy { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px 64px; margin-bottom: 40px; }
+.praxis-positioning-copy p { max-width: 56ch; font-size: 17px; line-height: 1.7; }
 .praxis-service-grid, .praxis-process { display: grid; gap: 16px; }
-.praxis-service { padding: 28px 24px; background: #fff; border-radius: 12px; border-top: 3px solid var(--svc); }
-.praxis-service-context { color: #555e58; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+.praxis-service { padding: 32px 24px; background: #fff; border-radius: 12px; border-top: 3px solid var(--svc); }
 .praxis-service h3 { font-size: 25px; font-weight: 600; line-height: 1.15; letter-spacing: -.025em; margin-bottom: 16px; }
-.praxis-service > p:not(.praxis-service-context) { font-size: 16px; line-height: 1.6; }
 .praxis-service ul { margin-top: 24px; display: grid; gap: 12px; font-size: 15px; line-height: 1.5; }
 .praxis-service li { border-top: 1px solid #e2e5e3; padding-top: 12px; }
 .praxis-service-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; padding-top: 28px; }
 .praxis-service-bottom > p { max-width: 62ch; font-size: 16px; line-height: 1.6; flex: 1 1 420px; }
+
+/* Give each idea its own reading space; keep goal-specific depth on demand. */
+.praxis-content-label { color: #37604a; font: 12px/1.5 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
+.praxis-goal-examples { margin-top: 64px; padding-top: 48px; border-top: 1px solid #ccd7cf; display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px 72px; }
+.praxis-goal-examples h3 { max-width: 25ch; font-size: 28px; font-weight: 600; letter-spacing: -.03em; line-height: 1.2; margin-top: 16px; }
+.praxis-goal-hint { max-width: 34ch; margin-top: 20px; color: #526057; font-size: 15px; line-height: 1.6; }
+.praxis-goal-disclosures details { border-bottom: 1px solid #ccd7cf; }
+.praxis-goal-disclosures { min-width: 0; }
+.praxis-goal-disclosures summary { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 88px; padding: 24px 0; font-size: clamp(18px, 1.6vw, 20px); line-height: 1.4; font-weight: 500; list-style: none; cursor: pointer; }
+.praxis-goal-disclosures summary > span { min-width: 0; overflow-wrap: anywhere; hyphens: auto; }
+.praxis-goal-disclosures summary::-webkit-details-marker { display: none; }
+.praxis-goal-disclosures summary svg { flex: none; width: 24px; height: 24px; stroke-width: 1.5; color: #286c4a; }
+.praxis-goal-disclosures details[open] summary svg { transform: rotate(45deg); }
+.praxis-goal-disclosures summary:hover { color: #236844; }
+.praxis-goal-disclosures summary:focus-visible { outline: 2px solid #236844; outline-offset: 5px; border-radius: 4px; }
+.praxis-goal-answer { display: grid; gap: 24px; max-width: 52ch; padding: 8px 0 28px; }
+.praxis-goal-answer dt { color: #37604a; font: 12px/1.5 var(--font-mono); margin-bottom: 8px; }
+.praxis-goal-answer dd { font-size: 16px; line-height: 1.7; color: #414c44; }
+.praxis-detail-heading { display: grid; grid-template-columns: minmax(0, 1fr); align-items: end; gap: 24px 72px; margin-bottom: 40px; }
+.praxis-detail-heading h2 { max-width: 25ch; font-size: clamp(32px, 3.6vw, 46px); font-weight: 600; letter-spacing: -.04em; line-height: 1.1; text-wrap: balance; }
+.praxis-detail-heading > p { max-width: 46ch; font-size: 17px; line-height: 1.7; color: #414c44; }
+.praxis-patient-questions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.praxis-patient-questions > div { padding: 28px; background: #fff; border-radius: 12px; }
+.praxis-patient-questions dt { font-size: 25px; line-height: 1.25; letter-spacing: -.025em; font-weight: 600; }
+.praxis-question-marker { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; color: #37604a; }
+.praxis-question-marker span { font: 12px/1.5 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
+.praxis-question-marker svg { flex: none; width: 28px; height: 28px; stroke-width: 1.5; }
+.praxis-patient-questions dd { max-width: 44ch; margin-top: 20px; font-size: 16px; line-height: 1.7; color: #526057; }
+.praxis-local-flow { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.praxis-local-stage { padding: 32px 28px; border-radius: 12px; background: #e3eee7; }
+.praxis-local-stage:last-child { background: #fff; }
+.praxis-local-symbol { display: grid; place-items: center; width: 64px; height: 64px; border: 1px solid #bbd2c3; border-radius: 50%; margin-bottom: 32px; color: #286c4a; }
+.praxis-local-symbol svg { width: 28px; height: 28px; stroke-width: 1.5; }
+.praxis-local-stage h3 { font-size: clamp(25px, 2.3vw, 30px); line-height: 1.2; letter-spacing: -.03em; font-weight: 600; margin: 16px 0 32px; overflow-wrap: anywhere; }
+.praxis-local-stage > p { max-width: 46ch; font-size: 16px; line-height: 1.75; color: #3f5548; }
+.praxis-local-stage > p + p { margin-top: 24px; }
+.praxis-local-connection { display: grid; place-items: center; color: #548267; min-height: 32px; }
+.praxis-local-connection svg { width: 28px; height: 28px; stroke-width: 1.5; transform: rotate(90deg); }
+.praxis-local-caption { max-width: 64ch; margin: 28px auto 0; text-align: center; color: #526057; font-size: 15px; line-height: 1.7; }
+.praxis-review-note { margin: 56px 0 48px; padding: 40px 0 0; border-top: 1px solid #ccd7cf; }
+.praxis-review-heading { display: grid; gap: 12px 40px; }
+.praxis-review-heading h3 { max-width: 30ch; font-size: 26px; font-weight: 600; line-height: 1.25; letter-spacing: -.025em; }
+.praxis-review-heading > p { font-size: 15px; line-height: 1.6; color: #526057; }
+.praxis-review-steps { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 32px; }
+.praxis-review-steps li > span { display: block; margin-bottom: 16px; font: 12px/1.5 var(--font-mono); color: #37604a; }
+.praxis-review-steps h4 { font-size: 18px; line-height: 1.4; font-weight: 600; }
+.praxis-review-steps p { max-width: 30ch; margin-top: 10px; font-size: 16px; line-height: 1.65; color: #526057; }
+@media (min-width: 48rem) {
+    .praxis-patient-questions { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .praxis-patient-questions > div { padding: 36px; }
+    .praxis-local-flow { grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr); gap: 20px; }
+    .praxis-local-connection svg { transform: none; }
+    .praxis-review-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+}
+@media (min-width: 64rem) {
+    .praxis-positioning-copy { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 56px; }
+    .praxis-service { padding: 36px 32px; }
+    .praxis-goal-examples { margin-top: 80px; padding-top: 64px; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); }
+    .praxis-detail-heading { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); margin-bottom: 56px; }
+    .praxis-patient-questions { gap: 32px; }
+    .praxis-patient-questions > div { padding: 40px; }
+    .praxis-local-stage { padding: 40px; }
+    .praxis-review-heading { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: center; }
+}
+
 .praxis-fit { color: #fff; background: #19251e; }
 .praxis-fit .praxis-eyebrow { color: #9ed7b9; }
 .praxis-fit-grid { display: grid; gap: 28px; margin-top: 24px; }
 .praxis-fit h2 { font-size: clamp(30px, 4vw, 48px); font-weight: 600; line-height: 1.1; letter-spacing: -.03em; max-width: 20ch; }
 .praxis-fit h2 span { color: #9ed7b9; }
 .praxis-fit-grid p { font-size: 17px; line-height: 1.6; color: #e0e9e3; margin-bottom: 16px; }
+.praxis-fit-grid .praxis-fit-question { font-size: 21px; line-height: 1.5; color: #9ed7b9; margin-top: 32px; }
 .praxis-fit .praxis-evidence-link { color: #b6efd0; }
 .praxis-fit .praxis-evidence-link:focus-visible { outline-color: #b6efd0; }
-.praxis-process li { padding: 28px 24px; border-radius: 12px; background: #fff; }
+.praxis-process li { padding: 32px 28px; border-radius: 12px; background: #fff; }
 .praxis-process-number { display: block; font: 18px var(--font-mono); color: #286c4a; margin-bottom: 24px; }
 .praxis-process h3 { font-size: 23px; line-height: 1.2; font-weight: 600; letter-spacing: -.02em; }
 .praxis-process p { font-size: 16px; line-height: 1.6; margin-top: 16px; }
 .praxis-process-result { border-top: 1px solid #dce4df; padding-top: 16px; }
-.praxis-process-result strong { display: block; font-weight: 600; margin-bottom: 4px; }
+.praxis-team-copy { flex: 1 1 440px; max-width: 64ch; }
+.praxis-team-copy p { font-size: 17px; line-height: 1.65; }
+.praxis-team-copy p + p { margin-top: 16px; color: #526057; font-size: 16px; }
 .praxis-contact-shortcut { position: fixed; z-index: 30; left: 16px; right: 16px; bottom: calc(12px + env(safe-area-inset-bottom)); }
 .praxis-contact-shortcut[hidden] { display: none; }
 .praxis-contact-shortcut a { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 52px; padding: 14px 20px; background: #19251e; color: #fff; border: 1px solid #628973; border-radius: 8px; box-shadow: 0 8px 28px #0003; font-size: 15px; font-weight: 600; }
 .praxis-contact-shortcut a:focus-visible { outline: 2px solid #236844; outline-offset: 3px; }
 @media (min-width: 64rem) {
-    .praxis-service-grid, .praxis-process { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .praxis-service-grid, .praxis-process { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
     .praxis-fit-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
     .praxis-contact-shortcut { display: none; }
 }
