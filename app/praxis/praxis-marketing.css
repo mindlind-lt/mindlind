@@ -128,6 +128,28 @@
     flex: none;
 }
 
+.praxis-cta-benefit {
+    max-width: 54ch;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.praxis-cta-benefit strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.praxis-cta-note {
+    max-width: 48ch;
+    margin-top: 12px;
+    color: #525252;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 /* Matches .underlined-header-title so the page's h1 and its section headers are
    visibly the same typeface at the same weight, one step apart in size. */
 .praxis-h1 {
@@ -972,6 +994,26 @@
     line-height: 1.2;
 
     max-width: 22ch;
+}
+
+.praxis-steps-cta-copy {
+    flex: 1;
+    min-width: 0;
+}
+
+.praxis-steps-cta-description {
+    max-width: 50ch;
+    margin-top: 12px;
+    color: rgb(255 255 255 / 0.85);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.praxis-steps-cta-inner .door-button {
+    flex-shrink: 0;
+    max-width: 100%;
+    height: auto;
+    min-height: 52px;
 }
 
 @media (min-width: 48rem) {

@@ -22,7 +22,8 @@ import "./praxis-marketing.css";
 
 /**
  * Content source: MindLind-Praxismarketing-Content-DE.md (Reihenfolge des
- * UX-Makets "DOCTORS.pdf"). Every string on the page is transcribed from it.
+ * UX-Makets "DOCTORS.pdf"). The first-contact copy clarifies the benefit of
+ * the initial conversation and keeps that offer consistent through the form.
  *
  * The bracketed editorial notes in that document stay as comments: it says at
  * the top that they are instructions and do not belong on the website. The six
@@ -123,7 +124,7 @@ export default function LandingPraxis() {
         <div className="container relative z-10 mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
-            <div className="flex flex-col gap-6 lg:gap-8">
+            <div className="flex flex-col gap-6">
               <p className="praxis-eyebrow praxis-enter" data-praxis-anim="hero-eyebrow">
                 Online-Marketing für Ärzte
               </p>
@@ -133,17 +134,22 @@ export default function LandingPraxis() {
               </h1>
 
               <p className="praxis-lead praxis-enter" data-praxis-anim="hero-lead">
-                Sie möchten bestimmte Behandlungen stärker in den Fokus rücken,
-                Ihre Praxis bekannt machen oder die Online-Terminbuchung
-                erleichtern? MindLind verbindet Website, lokale Sichtbarkeit und
-                Werbung zu einem klaren Auftritt. Damit Patienten verstehen,
-                wofür Ihre Praxis steht, welche Leistungen Sie anbieten und wie
-                sie einen Termin vereinbaren können. Ausgerichtet auf Ihre
-                Fachrichtung, Ihre Ziele und die Kapazitäten Ihres Teams.
+                Website, lokale Sichtbarkeit und Werbung – damit passende
+                Patienten Ihre Leistungen finden. Abgestimmt auf Ihre
+                Fachrichtung und die Kapazitäten Ihres Teams.
               </p>
 
               <div className="praxis-enter" data-praxis-anim="hero-cta">
-                <DoorButton size="lg" href="/contact">Praxisziele besprechen</DoorButton>
+                <p className="praxis-cta-benefit">
+                  <strong>Mit einer klaren Priorität starten.</strong>
+                  Im Erstgespräch erhalten Sie eine erste Einschätzung, welche
+                  Maßnahme zu Ihrem Praxisziel passt und was dafür nötig ist.
+                </p>
+                <DoorButton size="lg" href="#praxis-kontakt">Erstgespräch anfragen</DoorButton>
+                <p className="praxis-cta-note">
+                  Unverbindlich. Sie entscheiden danach, ob Sie mit uns
+                  weitergehen möchten.
+                </p>
               </div>
             </div>
 
@@ -691,13 +697,12 @@ export default function LandingPraxis() {
               </figure>
 
               <div className="praxis-step-body">
-                <h3 className="praxis-step-title">Praxis und Ziele verstehen</h3>
+                <h3 className="praxis-step-title">Ziel und ersten Schritt klären</h3>
                 <p className="praxis-step-text">
-                  Wir sprechen über Ihre Fachrichtung, Ihre Schwerpunkte und die
-                  aktuelle Situation. Möchten Sie eine neue Leistung bekannt
-                  machen, eine Praxis eröffnen oder bestehende Abläufe verbessern?
-                  Gemeinsam legen wir fest, welches Ziel zuerst angegangen werden
-                  soll.
+                  Wir besprechen Ihre Fachrichtung, Ihre Kapazitäten und das,
+                  was sich verbessern soll. Sie erhalten eine erste Einschätzung,
+                  welche Maßnahme sinnvoll ist und welche Informationen wir für
+                  ein konkretes Angebot noch benötigen.
                 </p>
               </div>
             </li>
@@ -769,10 +774,16 @@ export default function LandingPraxis() {
               tatsächlich kostenfrei anbietet.] */}
           <div className="praxis-steps-cta mt-4 lg:mt-6" data-praxis-anim="steps-cta">
             <div className="praxis-steps-cta-inner">
-              <p className="praxis-steps-cta-title">
-                Erzählen Sie uns, was Sie mit Ihrer Praxis vorhaben.
-              </p>
-              <DoorButton size="lg" color="white" href="/contact">
+              <div className="praxis-steps-cta-copy">
+                <p className="praxis-steps-cta-title">
+                  Klarheit, bevor Sie in Maßnahmen investieren.
+                </p>
+                <p className="praxis-steps-cta-description">
+                  Im unverbindlichen Erstgespräch klären wir, was zuerst sinnvoll
+                  ist und welche Informationen für ein Angebot noch fehlen.
+                </p>
+              </div>
+              <DoorButton size="lg" color="white" href="#praxis-kontakt">
                 Erstgespräch anfragen
               </DoorButton>
             </div>
@@ -828,7 +839,11 @@ export default function LandingPraxis() {
               </div>
 
               <div className="praxis-geo-cta">
-                <DoorButton href="/contact">Lokale Sichtbarkeit besprechen</DoorButton>
+                <p className="praxis-cta-benefit">
+                  Website oder Google-Profil zuerst? Im Erstgespräch klären wir,
+                  wo Sie für Ihr Praxisziel ansetzen sollten.
+                </p>
+                <DoorButton href="#praxis-kontakt">Erstgespräch anfragen</DoorButton>
               </div>
             </div>
 
@@ -937,18 +952,19 @@ export default function LandingPraxis() {
       {/* The FAQ column keeps the agency default: the content document has no
           praxis FAQ to put there. `items` is ready for one. */}
       <SectionContact
+        formAnchorId="praxis-kontakt"
         index="[09]"
-        title="Was möchten Sie mit Ihrer Praxis als Nächstes erreichen?"
+        title="Ihr nächster Schritt für die Praxis."
         titleClassName="text-xl lg:text-2xl"
-        lead="Eine neue Website, mehr Sichtbarkeit für einen Schwerpunkt oder einfachere Wege zur Terminbuchung? Erzählen Sie uns kurz von Ihrer Praxis und Ihrem Vorhaben. Wir melden uns, um die nächsten Schritte mit Ihnen zu besprechen."
+        lead="Im unverbindlichen Erstgespräch erhalten Sie eine erste Einschätzung: Welche Maßnahme passt zu Ihrem Ziel? Was braucht es für die Umsetzung? Ein paar Sätze zu Ihrer Praxis und Ihrem Anliegen genügen für die Anfrage."
         extraFields={[
           { name: "practice", label: "Name der Praxis" },
           { name: "phone", label: "Telefonnummer (optional)", type: "tel" },
         ]}
         messageLabel="Was möchten Sie verbessern?"
         messagePlaceholder="Zum Beispiel: Wir möchten unseren neuen Behandlungsschwerpunkt bekannter machen."
-        submitLabel="Gespräch anfragen"
-        successMessage="Ihre Anfrage ist angekommen. Wir melden uns bei Ihnen, um Ihr Vorhaben zu besprechen."
+        submitLabel="Erstgespräch anfragen"
+        successMessage="Vielen Dank für Ihre Anfrage. Wir melden uns, um Ihr unverbindliches Erstgespräch abzustimmen. Dabei klären wir Ihr Praxisziel und den nächsten sinnvollen Schritt."
         privacyNote={
           <>
             Informationen zum Umgang mit Ihren Angaben finden Sie in unserer{" "}

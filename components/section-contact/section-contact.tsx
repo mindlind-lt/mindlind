@@ -44,6 +44,8 @@ const DEFAULT_ITEMS: FAQItem[] = [
 ];
 
 interface SectionContactProps {
+  /** Optional hash target for the form and its introduction, after the FAQ in DOM order. */
+  formAnchorId?: string;
   /** FAQ entries beside the form. */
   items?: FAQItem[];
   /** Section counter above the FAQ, in the page's own numbering. */
@@ -65,6 +67,7 @@ interface SectionContactProps {
 }
 
 export default function SectionContact({
+  formAnchorId,
   items = DEFAULT_ITEMS,
   index = "[08]",
   title = "PROJEKT STARTEN",
@@ -92,7 +95,11 @@ export default function SectionContact({
             />
           </div>
 
-          <div className="section-contact-form order-1 lg:order-2">
+          <div
+            id={formAnchorId}
+            tabIndex={formAnchorId ? -1 : undefined}
+            className="section-contact-form order-1 lg:order-2"
+          >
             {/* Side by side, the copy gets half a phone screen — about 136px at
                 320px — and the lead wraps to seven lines beside a decorative
                 image. Stack below sm; from sm up this is the original row. */}
