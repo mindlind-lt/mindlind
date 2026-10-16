@@ -1,0 +1,84 @@
+.praxis-contact-section { padding: 64px 0; background: #eaf3ee; }
+.praxis-contact-grid { display: grid; gap: 32px; scroll-margin-top: calc(var(--hdr-height, 92px) + 24px); }
+.praxis-contact-copy h2 { max-width: 18ch; font-size: clamp(32px, 3.6vw, 48px); font-weight: 600; letter-spacing: -.035em; line-height: 1.08; }
+.praxis-contact-lead { max-width: 48ch; font-size: 17px; line-height: 1.6; margin-top: 24px; }
+.praxis-contact-next { display: grid; gap: 20px; }
+.praxis-contact-next li { display: flex; gap: 16px; align-items: baseline; }
+.praxis-contact-next li > span { font: 13px var(--font-mono); color: #286c4a; }
+.praxis-contact-next strong { font-size: 16px; font-weight: 600; }
+.praxis-contact-next p { margin-top: 4px; color: #4b5750; font-size: 15px; line-height: 1.5; }
+.praxis-contact-team { display: flex; align-items: center; gap: 16px; margin-top: 36px; font-size: 14px; line-height: 1.5; }
+.praxis-contact-avatars { display: flex; flex-shrink: 0; padding-right: 6px; }
+.praxis-contact-avatars img { width: 44px; height: 44px; object-fit: cover; object-position: top; border: 2px solid #eaf3ee; border-radius: 50%; margin-right: -6px; }
+.praxis-contact-direct { margin-top: 28px; display: flex; align-items: flex-start; flex-direction: column; }
+.praxis-contact-direct p { font-size: 14px; color: #4b5750; margin-bottom: 4px; }
+.praxis-contact-direct a { display: inline-flex; gap: 16px; align-items: center; min-height: 44px; font-size: 16px; text-decoration: underline; text-underline-offset: 4px; }
+.praxis-lead-card { scroll-margin-top: calc(var(--hdr-height, 92px) + 24px); background: #fff; border: 1px solid #d8e5dc; border-radius: 16px; padding: 24px; align-self: start; min-width: 0; }
+.praxis-form-heading h3 { font-size: 23px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; }
+.praxis-form-heading > p { color: #525c55; font-size: 14px; margin-top: 8px; margin-bottom: 24px; }
+.praxis-form-fields { display: grid; gap: 22px; border: 0; padding: 0; margin: 0; min-width: 0; }
+.praxis-goals { border: 0; padding: 0; min-width: 0; }
+.praxis-goals legend, .praxis-input-field > label { font-size: 14px; font-weight: 600; line-height: 1.5; }
+.praxis-goals legend { margin-bottom: 10px; }
+.praxis-goals legend span, .praxis-input-field > label span, .praxis-form-details summary span { color: #626b65; font-weight: 400; }
+.praxis-goal-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.praxis-goal { position: relative; display: flex; align-items: center; gap: 8px; cursor: pointer; border: 1px solid #c8d3cc; border-radius: 8px; padding: 12px; min-height: 52px; font-size: 14px; line-height: 1.4; }
+.praxis-goal input { flex: 0 0 16px; width: 16px; height: 16px; accent-color: #236844; }
+.praxis-goal:has(input:checked) { border-color: #236844; background: #e7f4ec; box-shadow: inset 0 0 0 1px #236844; }
+.praxis-goal:has(input:focus-visible) { outline: 2px solid #236844; outline-offset: 3px; }
+.praxis-input-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.praxis-input-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.praxis-input-field input, .praxis-input-field textarea { width: 100%; min-height: 48px; border: 1px solid #a8b5ad; border-radius: 6px; background: #fff; color: #1d2620; font: 16px/1.5 var(--font-sans); padding: 11px 12px; }
+.praxis-input-field textarea { resize: vertical; min-height: 110px; }
+.praxis-input-field input::placeholder, .praxis-input-field textarea::placeholder { color: #6d746f; opacity: 1; }
+.praxis-input-field input:focus, .praxis-input-field textarea:focus { outline: 2px solid #236844; outline-offset: 2px; }
+.praxis-input-field [aria-invalid="true"] { border-color: #a12520; }
+.praxis-field-error { color: #a12520; font-size: 13px; line-height: 1.5; }
+.praxis-field-hint { color: #626b65; font-size: 12px; line-height: 1.5; }
+.praxis-form-details { border-top: 1px solid #e1e7e3; border-bottom: 1px solid #e1e7e3; }
+.praxis-form-details summary { min-height: 48px; padding: 14px 0; font-size: 14px; line-height: 1.5; cursor: pointer; }
+.praxis-optional-fields { display: grid; gap: 18px; padding: 8px 0 20px; }
+.praxis-form-submit { display: flex; justify-content: space-between; align-items: center; gap: 16px; width: 100%; min-height: 56px; padding: 14px 20px; background: #181c19; color: #fff; border-radius: 6px; font-size: 16px; font-weight: 600; line-height: 1.4; cursor: pointer; }
+.praxis-form-submit:hover { background: #23563b; }
+.praxis-form-fields:disabled .praxis-form-submit { opacity: .65; cursor: wait; }
+.praxis-form-fields:disabled input, .praxis-form-fields:disabled textarea { opacity: .65; }
+.praxis-form-reassurance { text-align: center; font-size: 13px; line-height: 1.5; color: #44564a; margin-top: 12px; }
+.praxis-form-privacy { font-size: 12px; line-height: 1.6; color: #626b65; text-align: center; margin-top: 16px; }
+.praxis-form-privacy a, .praxis-form-error a { text-decoration: underline; text-underline-offset: 3px; }
+.praxis-botcheck { display: none; }
+.praxis-form-feedback:empty { display: none; }
+.praxis-form-feedback:focus { outline: 2px solid #236844; outline-offset: 5px; border-radius: 6px; }
+.praxis-form-error { padding: 16px; background: #fff0ed; color: #8c251f; border-radius: 6px; font-size: 14px; line-height: 1.5; margin-bottom: 24px; }
+.praxis-form-error p { margin-top: 6px; }
+.praxis-form-success { padding: 16px 0; }
+.praxis-success-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: #def1e5; color: #236844; font-size: 28px; margin-bottom: 24px; }
+.praxis-form-success h3 { font-size: 28px; line-height: 1.15; font-weight: 600; letter-spacing: -.025em; }
+.praxis-form-success p { font-size: 16px; line-height: 1.6; margin-top: 20px; }
+.praxis-form-success button { margin-top: 20px; cursor: pointer; }
+.praxis-contact-section :is(a, button, summary):focus-visible { outline: 2px solid #236844; outline-offset: 4px; }
+.praxis-faq { display: grid; gap: 28px; border-top: 1px solid #bccfc1; margin-top: 64px; padding-top: 40px; }
+.praxis-faq h2 { font-size: clamp(28px, 3vw, 36px); line-height: 1.1; font-weight: 600; letter-spacing: -.025em; margin-top: 12px; }
+.praxis-faq-items details { border-bottom: 1px solid #bdcdc2; }
+.praxis-faq-items summary { display: flex; justify-content: space-between; gap: 20px; padding: 20px 0; font-size: 17px; line-height: 1.4; font-weight: 500; cursor: pointer; list-style: none; }
+.praxis-faq-items summary::-webkit-details-marker { display: none; }
+.praxis-faq-items summary span { flex-shrink: 0; font-size: 22px; font-weight: 400; }
+.praxis-faq-items details[open] summary span { transform: rotate(45deg); }
+.praxis-faq-items details > p { font-size: 16px; color: #48594e; line-height: 1.6; padding-bottom: 24px; max-width: 70ch; }
+@media (min-width: 40rem) {
+  .praxis-input-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .praxis-lead-card { padding: 32px; }
+}
+@media (min-width: 64rem) {
+  .praxis-contact-section { padding: 80px 0; }
+  .praxis-contact-grid, .praxis-faq { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 64px; }
+  .praxis-contact-grid { row-gap: 32px; align-items: start; }
+  .praxis-contact-copy { grid-column: 1; grid-row: 1; }
+  .praxis-contact-details { grid-column: 1; grid-row: 2; }
+  .praxis-lead-card { grid-column: 2; grid-row: 1 / span 2; }
+  .praxis-faq { margin-top: 80px; }
+}
+@media (max-width: 24rem) {
+  .praxis-lead-card { padding: 18px; }
+  .praxis-goal-options { grid-template-columns: minmax(0, 1fr); }
+  .praxis-contact-team { align-items: flex-start; flex-direction: column; }
+}

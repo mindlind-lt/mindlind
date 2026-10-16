@@ -5,7 +5,7 @@ import { FormEvent, ReactNode, useState } from 'react';
 import "./contact-form.css";
 import DoorButton from "../door-button/door-button";
 
-const ACCESS_KEY = "f468242c-5a67-475c-b609-984b59fa5e28";
+import { submitContact } from "@/lib/contact-request";
 
 type Status = "idle" | "pending" | "success" | "error";
 
@@ -64,23 +64,13 @@ export default function ContactForm({
     // afterwards would throw.
     const form = event.currentTarget;
     const formData = new FormData(form);
-    formData.append("access_key", ACCESS_KEY);
 
     setStatus("pending");
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-
-      // A failing request can return an HTML error page rather than JSON, so a
-      // parse failure has to count as a send failure instead of throwing.
-      const data = await response.json().catch(() => null);
-      const sent = response.ok && data?.success === true;
-
-      if (sent) form.reset();
-      setStatus(sent ? "success" : "error");
+      await submitContact(formData);
+      form.reset();
+      setStatus("success");
     } catch {
       // Network-level failure: offline, DNS, CORS, request aborted.
       setStatus("error");
