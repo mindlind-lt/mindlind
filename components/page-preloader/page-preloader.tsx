@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import './page-preloader.css';
 
 const MAX_WAIT_MS = 10_000;
@@ -35,11 +36,16 @@ function waitForImage(image: HTMLImageElement, signal: AbortSignal) {
 
 /** Initial document loads only; the root layout persists during navigation. */
 export default function PagePreloader() {
+  const pathname = usePathname();
+  // This is an initial-document splash. Visits starting on the practice page stay
+  // usable while assets load, and must not start a splash on later navigation.
+  const [skipPreloader] = useState(() => /^\/praxis\/?$/.test(pathname));
   const [phase, setPhase] = useState<'loading' | 'leaving' | 'done'>('loading');
   const splashRef = useRef<HTMLDivElement>(null);
   const dismissRef = useRef<() => void>(() => {});
 
   useEffect(() => {
+    if (skipPreloader) return;
     const splash = splashRef.current;
     const content = document.getElementById('site-content');
     if (!splash || !content) return;
@@ -147,9 +153,9 @@ export default function PagePreloader() {
       restorePage();
       dismissRef.current = () => {};
     };
-  }, []);
+  }, [skipPreloader]);
 
-  if (phase === 'done') return null;
+  if (skipPreloader || phase === 'done') return null;
 
   return (
     <div

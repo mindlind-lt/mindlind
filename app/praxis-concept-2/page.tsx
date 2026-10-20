@@ -11,10 +11,10 @@ import TeamIndex from "./team-index";
 import "./concept-2.css";
 
 /**
- * Concept 2 — "Ruhe". An editorial take on /praxis-marketing: a serif display
+ * Concept 2 — "Ruhe". An editorial take on /praxis: a serif display
  * face over the site's Inter and Space Mono, long calm scroll passages, and
  * motion that reveals rather than performs. A design concept, so it is kept out
- * of the index; content follows the /praxis-marketing content document and
+ * of the index; content follows the /praxis content document and
  * keeps its rules (no invented figures, ratings, testimonials or people).
  */
 

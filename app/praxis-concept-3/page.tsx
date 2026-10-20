@@ -12,12 +12,12 @@ import GoalPicker from "./goal-picker";
 import "./concept-3.css";
 
 /**
- * Concept 3 — "Der Weg". /praxis-marketing retold as the route a patient takes
+ * Concept 3 — "Der Weg". /praxis retold as the route a patient takes
  * to a practice: searching, getting oriented, building trust, booking. A rail
  * runs down the left of the page and a path draws itself along it as the page
  * is read, lighting each stage as it arrives. Soft, rounded, mint — friendly
  * rather than technical. A design concept, kept out of the index; content and
- * its rules follow the /praxis-marketing content document.
+ * its rules follow the /praxis content document.
  */
 
 export const metadata: Metadata = {

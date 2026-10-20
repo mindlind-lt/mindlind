@@ -18,7 +18,7 @@ import "./concept-4.css";
  * a lens over the hero photograph, headlines that sharpen word by word, a
  * comparison slider, steps that resolve as they are read. Light, glassy,
  * airy. A design concept, kept out of the index; content and its rules follow
- * the /praxis-marketing content document.
+ * the /praxis content document.
  */
 
 export const metadata: Metadata = {

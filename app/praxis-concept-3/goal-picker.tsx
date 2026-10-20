@@ -1,6 +1,6 @@
 "use client";
 
-// The goals table from /praxis-marketing as something to choose from: pick a
+// The goals table from /praxis as something to choose from: pick a
 // goal on the left, the panel on the right shows what gets clarified and how
 // it is done. A tablist, so it works from the keyboard as well as the mouse.
 

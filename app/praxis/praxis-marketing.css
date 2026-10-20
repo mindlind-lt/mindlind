@@ -11,58 +11,11 @@
    header itself — /contact solves the same problem with a margin. */
 .praxis-hero {
     padding-top: calc(var(--hdr-height) + 24px);
-
-    /* The positioned ancestor <DnaHelix className="dna-helix--behind" /> fills.
-       No overflow clip is needed: the helix is inset:0, so it cannot reach past
-       the section in the first place. */
-    position: relative;
 }
 
 @media (min-width: 64rem) {
     .praxis-hero {
         padding-top: calc(var(--hdr-height) + 56px);
-    }
-}
-
-
-/* The hero helix is full strength across the top, where nothing sits on it, and
-   fades down the section so the lead paragraph keeps a clean surface to read
-   against. Without this the particles run straight through the body copy: the h1
-   is heavy enough to stay legible over them, 16px text is not.
-
-   It also runs the last stop to fully transparent, so the helix dissolves into
-   the page instead of being cut off flat at the section boundary.
-
-   Drop this rule to get the helix at full strength everywhere. */
-.praxis-hero-dna {
-    /* Phones stack the hero, so the copy runs the full width and the whole
-       column sits on the helix — a percentage fade like the desktop one below
-       leaves particles through every line of the lead. Here it is strong only in
-       the band above the text, drops to a faint texture over the copy, and is
-       gone by the end of the section. The first two stops are in px because they
-       have to land in the same place whatever the hero grows to. */
-    mask-image: linear-gradient(
-        to bottom,
-        rgb(0 0 0 / 0.6) 0,
-        rgb(0 0 0 / 0.24) 210px,
-        rgb(0 0 0 / 0.13) 45%,
-        rgb(0 0 0 / 0) 100%
-    );
-}
-
-@media (min-width: 64rem) {
-    .praxis-hero-dna {
-        /* Two columns from here up: the copy only occupies the left half, so
-           the helix can stay at full strength across the top and fade more
-           gently — what remains is mostly beside the text, not under it. */
-        mask-image: linear-gradient(
-            to bottom,
-            rgb(0 0 0) 0%,
-            rgb(0 0 0) 26%,
-            rgb(0 0 0 / 0.28) 52%,
-            rgb(0 0 0 / 0.1) 78%,
-            rgb(0 0 0 / 0) 100%
-        );
     }
 }
 
@@ -96,29 +49,32 @@
     flex: none;
 }
 
-.praxis-cta-benefit {
-    max-width: 54ch;
-    margin-bottom: 16px;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.praxis-cta-benefit strong {
+/* Static headings retain the original typography and rules. */
+.praxis-marketing-header::after {
+    content: "";
     display: block;
-    margin-bottom: 6px;
-    font-size: 18px;
+    height: 1px;
+    margin-top: 24px;
+    background: #000;
+}
+
+.praxis-marketing-title {
+    font-size: 40px;
     font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1;
 }
 
-.praxis-cta-note {
-    max-width: 48ch;
-    margin-top: 12px;
-    color: #525252;
-    font-size: 14px;
-    line-height: 1.5;
+@media (min-width: 40rem) {
+    .praxis-marketing-title { font-size: 56px; }
 }
 
-/* Matches .underlined-header-title so the page's h1 and its section headers are
+@media (min-width: 64rem) {
+    .praxis-marketing-header::after { margin-top: 40px; }
+    .praxis-marketing-title { font-size: 72px; }
+}
+
+/* Matches .praxis-marketing-title so the page's h1 and its section headers are
    visibly the same typeface at the same weight, one step apart in size. */
 .praxis-h1 {
     font-size: clamp(34px, 10vw, 40px);
@@ -148,10 +104,25 @@
    viewport is already the limit, and a cap there would just force ragged
    two-word lines.
 
-   `ch` rather than px so the cap tracks the font size through the breakpoints. */
+   `ch` rather than px so the cap tracks the font size through the breakpoints.
+   Not applied to .praxis-feature-head, which already sits in a narrow card. */
 @media (min-width: 64rem) {
-    .praxis-section-head .underlined-header-title {
+    .praxis-section-head .praxis-marketing-title {
         max-width: 22ch;
+    }
+}
+
+/* Section sub-headings: one notch under .praxis-marketing-title, same family. */
+.praxis-h3 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+}
+
+@media (min-width: 64rem) {
+    .praxis-h3 {
+        font-size: 30px;
     }
 }
 
@@ -167,188 +138,801 @@
 }
 
 
-/* ---- Motion ------------------------------------------------------------- */
+/* ---- Image slots -------------------------------------------------------- */
 
-/* The hero starts hidden until its entrance is ready. Reduced motion and
-   no-script visitors receive the finished state below. */
-.praxis-enter {
-    opacity: 0;
-}
-
-/* SplitText's own line wrappers (`mask: "lines"`), so a line can rise into place
-   from behind its own edge. The wrapper is `overflow: clip` and these headings
-   are set at a line-height near 1, so without the pad the tails of g, j and y
-   are sliced off the moment the line lands; the negative margin hands the space
-   back to the layout, leaving the spacing between lines as it was. */
-.praxis-line-mask {
-    padding-bottom: 0.14em;
-    margin-bottom: -0.14em;
-}
-
-
-/* Hero image, with the site's white frame. */
-.praxis-figure { background: #fff; border-radius: 12px; padding: 3px; margin: 0; position: relative; }
-.praxis-figure-inner { border-radius: 10px; overflow: hidden; position: relative; }
-.praxis-figure--5-4 .praxis-figure-inner { aspect-ratio: 5 / 4; }
-.praxis-figure-img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
-
-/* ---- Project evidence --------------------------------------------------- */
-
-.praxis-case {
-    padding: 24px;
-    border-radius: 12px;
+/* The six motifs in the content document do not exist as files yet, so the slot
+   renders as a designed placeholder rather than a broken <img>: same frame and
+   radius a real photo will sit in, carrying the brief and the alt text so the
+   page reads correctly and the gap is obvious. Swapping in next/image later
+   means replacing the inner panel, not the frame. */
+.praxis-figure {
     background: #fff;
+    border-radius: 12px;
+
+    padding: 3px;
+    margin: 0;
+
+    position: relative;
 }
 
-.praxis-case-heading,
-.praxis-case-actions,
-.praxis-related-case {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px 32px;
-}
-
-.praxis-case-heading { margin-bottom: 28px; }
-
-.praxis-case-label {
-    color: #525252;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    line-height: 1.5;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    margin-bottom: 8px;
-}
-
-.praxis-case-title {
-    font-size: clamp(28px, 3vw, 40px);
-    font-weight: 600;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-}
-
-.praxis-case-scope {
-    border-radius: 6px;
-    background: #e3f3ea;
-    color: #24523b;
-    padding: 8px 12px;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.praxis-case-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
-    align-items: start;
-}
-
-.praxis-case-preview {
-    display: block;
+.praxis-figure-inner {
+    border-radius: 10px;
     overflow: hidden;
-    border: 1px solid #e0e3e1;
-    border-radius: 6px;
-}
 
-.praxis-case-preview img {
-    width: 100%;
-    height: auto;
-}
+    position: relative;
 
-.praxis-case-figure figcaption {
+    /* A flat grey box reads as a loading failure. The tint gives the slot a
+       deliberate surface, and the brand green keeps it on the page's palette. */
+    background:
+        radial-gradient(120% 90% at 82% 8%, rgba(15, 214, 128, 0.16), transparent 62%),
+        radial-gradient(80% 70% at 10% 96%, rgba(8, 124, 74, 0.10), transparent 60%),
+        #ebebeb;
+
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 4px 16px;
-    margin-top: 12px;
-    color: #525252;
-    font-size: 12px;
-    line-height: 1.5;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+
+    padding: 22px;
 }
 
-.praxis-case-brief {
-    margin-bottom: 24px;
-    font-size: 18px;
-    line-height: 1.5;
+.praxis-figure--5-4 .praxis-figure-inner { aspect-ratio: 5 / 4; }
+.praxis-figure--3-2 .praxis-figure-inner { aspect-ratio: 3 / 2; }
+.praxis-figure--2-3 .praxis-figure-inner { aspect-ratio: 2 / 3; }
+
+/* Hairline grid over the tint — enough texture that the panel looks designed
+   at full width, invisible enough to ignore. */
+.praxis-figure-inner::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(26, 26, 26, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 26, 26, 0.055) 1px, transparent 1px);
+    background-size: 44px 44px;
+
+    pointer-events: none;
 }
 
-.praxis-case-deliverables {
-    display: grid;
-    gap: 14px;
-    font-size: 15px;
-    line-height: 1.5;
-}
-
-.praxis-case-deliverables li {
-    padding-top: 14px;
-    border-top: 1px solid #e0e3e1;
-}
-
-.praxis-case-deliverables strong {
+/* A slot with a real photo in it: no tint, no grid, no padding — the image is
+   the surface. The frame, radius and aspect ratio above still apply, so a
+   placeholder and a filled slot occupy exactly the same space. */
+.praxis-figure-inner--photo {
     display: block;
-    margin-bottom: 4px;
-    font-weight: 600;
+    padding: 0;
+    background: none;
 }
 
-.praxis-case-actions {
-    justify-content: flex-start;
-    margin-top: 24px;
-    padding-top: 16px;
-    border-top: 1px solid #e0e3e1;
+.praxis-figure-inner--photo::before {
+    content: none;
 }
 
-.praxis-evidence-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    min-height: 44px;
-    max-width: 100%;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.5;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 4px;
+.praxis-figure-img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    /* The source is 3:2 and the slot is 5:4, so the sides are cropped evenly.
+       The subject sits centre-right and survives it; re-check the framing if
+       the file is ever swapped. */
+    object-fit: cover;
+    object-position: center;
 }
 
-.praxis-evidence-link:hover { color: var(--primary-700); }
 
-.praxis-evidence-link:focus-visible,
-.praxis-case-preview:focus-visible {
-    outline: 2px solid var(--primary-700);
-    outline-offset: 4px;
+.praxis-figure-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+
+    background: #fff;
+    border-radius: 8px;
+
+    color: var(--primary-700);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    padding: 6px 8px;
 }
 
-.praxis-related-case {
-    padding: 24px 0;
-    border-bottom: 1px solid #ccc;
-    font-size: 16px;
-    line-height: 1.5;
+.praxis-figure-note {
+    position: relative;
+
+    color: #55585c;
+    font-size: 13px;
+    line-height: 1.45;
+    max-width: 42ch;
 }
 
-.praxis-related-case > div {
-    flex: 1 1 320px;
-    min-width: 0;
+
+/* ---- 02 | Three compact accents ---------------------------------------- */
+
+.praxis-stats {
+    background: #fff;
+    border-radius: 12px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+
+    padding: 3px;
 }
 
-@media (min-width: 64rem) {
-    .praxis-case { padding: 32px; }
-    .praxis-case-grid {
-        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-        gap: 32px;
+@media (min-width: 48rem) {
+    .praxis-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
-@media (max-width: 24rem) {
-    .praxis-case { padding: 16px; }
+.praxis-stat {
+    background: var(--background);
+    border-radius: 10px;
+
+    padding: 28px 26px;
 }
 
-/* The three service areas share the established page palette. */
+@media (min-width: 64rem) {
+    .praxis-stat {
+        padding: 40px 36px;
+    }
+}
+
+/* Same scale as .brag-value in section-feat-works.css, so a number on this page
+   and one on the home page carry the same weight. */
+.praxis-stat-value {
+    font-family: var(--font-mono);
+    font-size: 3.75rem;
+    letter-spacing: -0.025em;
+    line-height: 1;
+}
+
+@media (min-width: 80rem) {
+    .praxis-stat-value {
+        font-size: 5rem;
+    }
+}
+
+.praxis-stat-label {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    line-height: 1.3;
+    text-transform: uppercase;
+
+    margin-top: 14px;
+}
+
+
+/* ---- 03 | Service columns ----------------------------------------------- */
+
+/* No panels in this one: each column is held together by a coloured title, the
+   rule under it and the hairlines between items — nothing else. The hue lives
+   in --svc so the title and its rule can never drift apart. All three clear
+   4.5:1 as body text on --background (green 4.78, blue 6.25, orange 5.48), so
+   the colour carries meaning without costing legibility. */
+
 .praxis-svc--visibility { --svc: var(--primary-700); }
-.praxis-svc--trust { --svc: #0f5f8f; }
-.praxis-svc--contact { --svc: #a8431a; }
+.praxis-svc--trust      { --svc: #0f5f8f; }
+.praxis-svc--contact    { --svc: #a8431a; }
+
+.praxis-svc-title {
+    color: var(--svc);
+    /* This rule does the job the panel background used to: it gives the column
+       a top edge and ties the hue to the list beneath it. */
+    border-bottom: 2px solid var(--svc);
+
+    font-family: var(--font-mono);
+    font-size: 20px;
+    line-height: 1.15;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding-bottom: 16px;
+}
+
+@media (min-width: 64rem) {
+    .praxis-svc-title {
+        font-size: 22px;
+    }
+}
+
+/* Full strength rather than faded — dimming it would drop below the contrast
+   these colours were picked for. Size carries the hierarchy instead. */
+.praxis-svc-index {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+.praxis-svc-list li {
+    border-top: 1px solid rgba(26, 26, 26, 0.14);
+
+    font-size: 18px;
+    line-height: 1.35;
+
+    padding: 15px 0;
+}
+
+.praxis-svc-list li:first-child {
+    border-top: 0;
+    padding-top: 20px;
+}
+
+@media (min-width: 64rem) {
+    .praxis-svc-list li {
+        font-size: 19px;
+    }
+}
+/* ---- 04 | Two columns, statements floating on the photo ----------------- */
+
+/* Both columns are white boxes: the figure already is one (a 3px frame around
+   the photo), so the copy column takes the same fill and radius with real
+   padding instead of a hairline frame. */
+.praxis-feature-card {
+    background: #fff;
+    border-radius: 12px;
+
+    padding: 28px 24px;
+}
+
+@media (min-width: 40rem) {
+    .praxis-feature-card {
+        padding: 40px 36px;
+    }
+}
+
+@media (min-width: 64rem) {
+    .praxis-feature-card {
+        padding: 48px 44px;
+    }
+}
+
+
+/* The heading sits in a column here rather than spanning the page, so it steps
+   down from .praxis-marketing-title's 72px — at half width that size wraps to
+   six lines. The rule keeps the same spacing as the full-width headings. */
+.praxis-feature-head .praxis-marketing-title {
+    font-size: 30px;
+}
+
+@media (min-width: 40rem) {
+    .praxis-feature-head .praxis-marketing-title {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 64rem) {
+    .praxis-feature-head .praxis-marketing-title {
+        font-size: 40px;
+    }
+}
+
+/* Side by side the two boxes should match: the figure drops its fixed 3:2 and
+   fills the row height the copy card sets, with the photo covering. */
+@media (min-width: 64rem) {
+    .praxis-feature-media,
+    .praxis-feature-media .praxis-figure-inner {
+        height: 100%;
+    }
+
+    .praxis-feature-media .praxis-figure-inner {
+        aspect-ratio: auto;
+    }
+}
+
+
+/* The two lower cards carry 42-character titles. .praxis-h3's 30px wraps them
+   to two lines in every card width, so they step down to a size that holds one
+   line: 22px clears the 504px of text width a card has at 1280 and up, and the
+   632px it has while the grid is still one column. */
+.praxis-feature-card .praxis-h3 {
+    font-size: 20px;
+}
+
+@media (min-width: 40rem) {
+    .praxis-feature-card .praxis-h3 {
+        font-size: 22px;
+    }
+}
+
+
+/* Below md the photo is too small to carry anything on top of it — a box would
+   cover the thing it is captioning — so the two statements stack underneath as
+   panels. Inside the figure's white frame they take the page colour, otherwise
+   they would be white on white. From md up they float over the image and go
+   back to white. */
+.praxis-float {
+    background: var(--background);
+    border-radius: 10px;
+
+    margin-top: 3px;
+    padding: 16px 18px;
+}
+
+@media (min-width: 48rem) {
+    .praxis-float {
+        background: #fff;
+
+        position: absolute;
+        z-index: 2;
+
+        width: min(250px, 54%);
+        margin-top: 0;
+        padding: 16px 18px;
+
+        /* Lifts the box off a busy photo; without it the white sits flat
+           against the bright parts of the image. */
+        box-shadow: 0 18px 40px -22px rgba(26, 26, 26, 0.5);
+    }
+
+    /* Deliberately outside the frame on two edges each, so the boxes read as
+       sitting on top of the photo rather than being part of it. The overhang
+       is kept to 18px: the section's own padding and the column gap absorb it,
+       so nothing reaches the viewport edge. */
+    .praxis-float--top-right {
+        top: -18px;
+        right: -18px;
+    }
+
+    .praxis-float--bottom-left {
+        bottom: -18px;
+        left: -18px;
+    }
+}
+
+/* Same two hues section 03 gives "Sichtbar werden" and "Kontakt erleichtern",
+   which are the ideas these two restate. */
+.praxis-float--focus { --accent-hue: var(--primary-700); }
+.praxis-float--reach { --accent-hue: #a8431a; }
+
+.praxis-float-title {
+    color: var(--accent-hue);
+
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.praxis-float-note {
+    font-size: 13px;
+    line-height: 1.4;
+
+    margin-top: 5px;
+}
+
+
+/* ---- 05 | Question / answer pairs -------------------------------------- */
+
+.praxis-pair-item {
+    border-top: 1px solid #cfcfce;
+
+    display: flex;
+    gap: 16px;
+
+    padding: 18px 0;
+}
+
+.praxis-pair-index {
+    color: var(--primary-700);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.6;
+
+    flex: none;
+}
+
+.praxis-pair-text {
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+@media (min-width: 64rem) {
+    .praxis-pair-text {
+        font-size: 19px;
+    }
+}
+
+
+/* ---- 07 | Pull statement ------------------------------------------------ */
+
+/* The content document asks for this one emphasised and without quote marks,
+   so the weight comes from the mono face and the rule beside it. */
+.praxis-statement {
+    border-left: 2px solid var(--primary-500);
+
+    font-family: var(--font-mono);
+    font-size: 20px;
+    line-height: 1.4;
+    text-transform: uppercase;
+
+    padding-left: 22px;
+}
+
+@media (min-width: 64rem) {
+    .praxis-statement {
+        font-size: 26px;
+        padding-left: 30px;
+    }
+}
+
+
+/* ---- 07 | Inverted section ---------------------------------------------- */
+
+/* The page is one continuous light field top to bottom, so this section takes
+   the whole band dark. Full width, so it registers while scrolling instead of
+   reading as one more card in the stack.
+
+   Laid out as three horizontal bands — heading, question, explanation — each
+   the full width of the container. An earlier two-column version squeezed the
+   paragraphs into a 457px column, where they ran to eight lines, and left the
+   section with three competing alignments. */
+.praxis-invert {
+    position: relative;
+    overflow: hidden;
+
+    background: var(--foreground);
+    color: #fff;
+}
+
+/* Brand glow, kept faint: depth, not a gradient. */
+.praxis-invert::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(46% 58% at 90% 4%, rgba(15, 214, 128, 0.24), transparent 62%),
+        radial-gradient(40% 52% at 3% 98%, rgba(15, 214, 128, 0.11), transparent 60%);
+
+    pointer-events: none;
+}
+
+.praxis-invert > * {
+    position: relative;
+}
+
+/* Keep the static heading rule visible on the dark background. */
+.praxis-invert .praxis-marketing-header::after {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Full width now, so it can carry more size than it could in a column. */
+.praxis-invert .praxis-marketing-title {
+    font-size: 36px;
+}
+
+@media (min-width: 40rem) {
+    .praxis-invert .praxis-marketing-title {
+        font-size: 48px;
+    }
+}
+
+@media (min-width: 64rem) {
+    .praxis-invert .praxis-marketing-title {
+        font-size: 64px;
+    }
+}
+
+/* #bfbfbf is white at 72% over this fill: 9.46:1. */
+.praxis-invert-intro {
+    color: #bfbfbf;
+
+    font-size: 18px;
+    line-height: 1.55;
+    /* A real measure instead of a narrow column — this paragraph went from
+       four lines to three, and reads as one block rather than a sliver. */
+    max-width: 62ch;
+
+    margin-top: 28px;
+}
+
+@media (min-width: 64rem) {
+    .praxis-invert-intro {
+        font-size: 21px;
+        margin-top: 40px;
+    }
+}
+
+/* The content document asks for this line emphasised and without quote marks.
+   It is two questions, so each takes its own line and the second takes the
+   brand green — unusable on the light page at 1.74:1, but 9.08:1 here. */
+.praxis-ask {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+    font-family: var(--font-mono);
+    font-size: 22px;
+    line-height: 1.25;
+    text-transform: uppercase;
+
+    margin: 40px 0;
+    padding: 36px 0;
+}
+
+@media (min-width: 40rem) {
+    .praxis-ask {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 64rem) {
+    .praxis-ask {
+        font-size: 44px;
+
+        margin: 64px 0;
+        padding: 56px 0;
+    }
+}
+
+.praxis-ask span {
+    display: block;
+}
+
+.praxis-ask span + span {
+    color: var(--primary-500);
+    margin-top: 6px;
+}
+
+/* Was set in two columns to keep the band from ending on a wall of text. That
+   halved the height but made a single continuous paragraph read down the left
+   column and then back up to the top of the right one, which is the one thing
+   worth avoiding in a short passage of body copy. One column, capped at a
+   comfortable measure, gets the same result without the jump: the text no
+   longer spans the full width either way. */
+.praxis-invert-note {
+    color: #bfbfbf;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    max-width: 62ch;
+}
+
+@media (min-width: 64rem) {
+    .praxis-invert-note {
+        font-size: 17px;
+    }
+}
+
+
+/* ---- 07 | Closing row --------------------------------------------------- */
+
+.praxis-closing {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    text-wrap: balance;
+}
+
+@media (min-width: 64rem) {
+    .praxis-closing {
+        font-size: 32px;
+    }
+}
+
+.praxis-closing-note {
+    border-top: 1px solid rgba(26, 26, 26, 0.14);
+
+    color: #55585c;
+    font-size: 15px;
+    line-height: 1.5;
+
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+@media (min-width: 64rem) {
+    .praxis-closing-note {
+        border-top: 0;
+        border-left: 1px solid rgba(26, 26, 26, 0.14);
+
+        margin-top: 0;
+        padding-top: 0;
+        padding-left: 40px;
+    }
+}
+
+
+/* ---- 08 | Comparison table --------------------------------------------- */
+
+.praxis-table-frame {
+    background: #fff;
+    border-radius: 12px;
+
+    padding: 3px;
+}
+
+.praxis-table {
+    border-collapse: separate;
+    /* Draws the 3px white frame between the panels as well as around them. */
+    border-spacing: 3px;
+
+    width: 100%;
+    text-align: left;
+}
+
+.praxis-table th,
+.praxis-table td {
+    background: var(--background);
+    border-radius: 10px;
+
+    font-weight: 400;
+    padding: 18px 20px;
+    vertical-align: top;
+}
+
+.praxis-table thead th {
+    background: var(--foreground);
+
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.praxis-table tbody th {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    width: 26%;
+}
+
+.praxis-table td {
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+/* Five rows of three columns do not survive a phone. Each row becomes its own
+   stacked card, with the column heading carried down as a label — the header
+   row itself has nothing left to align to, so it goes. */
+@media (max-width: 63.999rem) {
+    .praxis-table,
+    .praxis-table tbody,
+    .praxis-table tr,
+    .praxis-table th,
+    .praxis-table td {
+        display: block;
+        width: auto;
+    }
+
+    .praxis-table thead {
+        display: none;
+    }
+
+    .praxis-table tr {
+        margin-bottom: 3px;
+    }
+
+    .praxis-table tbody th {
+        background: var(--foreground);
+        color: #fff;
+        margin-bottom: 3px;
+        width: auto;
+    }
+
+    .praxis-table td {
+        margin-bottom: 3px;
+    }
+
+    .praxis-table td::before {
+        content: attr(data-label);
+
+        color: var(--primary-700);
+        display: block;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+
+        margin-bottom: 6px;
+    }
+}
+
+
+/* ---- 09 | Three steps --------------------------------------------------- */
+
+/* Same frame-and-panel family as .praxis-tile: a 3px white frame holding the
+   photo and a panel at the page colour. The <li> is a column so the panels
+   bottom out together whatever the copy length. */
+.praxis-step {
+    background: #fff;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    padding: 3px;
+}
+
+.praxis-step-media {
+    border-radius: 10px;
+    overflow: hidden;
+
+    aspect-ratio: 3 / 2;
+    margin: 0;
+
+    position: relative;
+}
+
+/* Sits on the photo rather than in the copy, so each step reads as numbered at
+   a glance and the panel below starts straight on the title. */
+.praxis-step-badge {
+    background: #fff;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+
+    padding: 8px 12px;
+
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.praxis-step-label {
+    color: #55585c;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.praxis-step-number {
+    color: var(--primary-700);
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.praxis-step-body {
+    background: var(--background);
+    border-radius: 10px;
+
+    flex: 1;
+    padding: 24px 22px 28px;
+}
+
+@media (min-width: 64rem) {
+    .praxis-step-body {
+        padding: 28px 28px 32px;
+    }
+}
+
+.praxis-step-title {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.praxis-step-text {
+    /* 16/1.65 rather than 15/1.55: this is the smallest run of real sentences on
+       the page, and it sits in a narrow column where short lines make a tight
+       leading feel tighter still. */
+    font-size: 16px;
+    line-height: 1.65;
+
+    margin-top: 12px;
+}
+
 
 /* Closes the row of steps as a fourth, full-width card in the same frame, so
    the ask reads as the next step rather than a button left under the grid. The
@@ -386,26 +970,6 @@
     max-width: 22ch;
 }
 
-.praxis-steps-cta-copy {
-    flex: 1;
-    min-width: 0;
-}
-
-.praxis-steps-cta-description {
-    max-width: 50ch;
-    margin-top: 12px;
-    color: rgb(255 255 255 / 0.85);
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.praxis-steps-cta-inner .door-button {
-    flex-shrink: 0;
-    max-width: 100%;
-    height: auto;
-    min-height: 52px;
-}
-
 @media (min-width: 48rem) {
     .praxis-steps-cta-inner {
         flex-direction: row;
@@ -423,283 +987,221 @@
 }
 
 
-/* ---- Motion: the two ways out ------------------------------------------- */
+/* ---- 10 | Local SEO: radius composition --------------------------------- */
 
-/* No motion: the page arrives finished. components/praxis-motion builds nothing
-   at all under this query, so every .praxis-enter element would otherwise be
-   left at the opacity it starts hidden with. */
-@media (prefers-reduced-motion: reduce) {
-    .praxis-enter {
-        opacity: 1;
-    }
-}
-
-/* Nothing to reveal them without JS either. */
-@media (scripting: none) {
-    .praxis-enter {
-        opacity: 1;
-    }
-}
-
-
-/* ---- Scroll rail ---------------------------------------------------------
-   A progress path down one side (data-rail-side) of the numbered sections (see ./praxis-rail.tsx and
-   /praxis-concept-3, which it follows). From lg up each section's container
-   is indented by the rail plus a gap, and the rail runs down that gutter.
-   A section marked data-praxis-rail="skip" (the team, whose carousel runs off
-   both edges) is masked out of the rail, so its carousel can run through the
-   gutter uncropped while its text stays aligned with the other sections.
-   Below lg there is no room beside the content, so it is not shown.
-
-   --praxis-rail and --praxis-rail-gap are read by the script and must stay
-   plain px values. */
-
-.praxis-journey {
-    --praxis-rail: 48px;
-    --praxis-rail-gap: 16px;
-
+/* The section is about catchment area — who is close enough to come. So the
+   visual is a radius: concentric rings with the practice photo at the centre.
+   The content document forbids invented search results or rating stars, so the
+   graphic stays abstract rather than mocking up a listing. */
+.praxis-geo {
     position: relative;
 }
 
-.praxis-rail,
-.praxis-rail-stops {
-    display: none;
+@media (min-width: 64rem) {
+    .praxis-geo {
+        display: grid;
+        /* Proportional, not a fixed panel: at 1024 a fixed 540px visual left
+           the text column at 356px and the paragraphs ran to 13 lines. */
+        grid-template-columns: 1.1fr 1fr;
+        align-items: center;
+        gap: 64px;
+    }
+}
+
+.praxis-geo-visual {
+    position: relative;
+    aspect-ratio: 1;
+
+    margin: 0 auto;
+    max-width: 520px;
+    width: 100%;
 }
 
 @media (min-width: 64rem) {
-    .praxis-journey[data-rail-side="left"] > section > .container {
-        padding-left: calc(2rem + var(--praxis-rail) + var(--praxis-rail-gap));
-    }
-
-    .praxis-journey[data-rail-side="right"] > section > .container {
-        padding-right: calc(2rem + var(--praxis-rail) + var(--praxis-rail-gap));
-    }
-
-    /* Keep the rail above the section backgrounds. */
-    .praxis-rail,
-    .praxis-rail-stops {
-        display: block;
-        position: absolute;
-        inset: 0;
-        z-index: 4;
-        pointer-events: none;
-    }
-
-    .praxis-rail {
-        width: 100%;
-        height: 100%;
-        overflow: visible;
+    .praxis-geo-visual {
+        /* Grows with the viewport but stops before it dwarfs the copy. */
+        max-width: 680px;
+        margin-right: 0;
     }
 }
 
-/* One green that reads on the page background and on the dark band alike. */
-.praxis-rail-track,
-.praxis-rail-path {
-    fill: none;
-    stroke-linecap: round;
-}
-
-.praxis-rail-track {
-    stroke: rgba(15, 214, 128, 0.35);
-    stroke-width: 2;
-    stroke-dasharray: 2 9;
-}
-
-.praxis-rail-path {
-    stroke: var(--primary-500);
-    stroke-width: 3;
-}
-
-/* Hidden until the script has put it on the path. */
-.praxis-rail circle { visibility: hidden; }
-
-.praxis-rail-dot { fill: var(--primary-500); stroke: #fff; stroke-width: 3; }
-.praxis-rail-dot-glow { fill: rgba(15, 214, 128, 0.22); }
-
-/* Positioned by the script at its centre; margins rather than a transform,
-   which GSAP owns for the arrival pop. */
-.praxis-stop {
+.praxis-geo-rings {
     position: absolute;
-    width: 34px;
-    height: 34px;
-    margin: -17px 0 0 -17px;
+    inset: 0;
 
-    display: grid;
-    place-items: center;
-
-    background: #fff;
-    border: 2px solid rgba(15, 214, 128, 0.45);
-    border-radius: 50%;
-    color: #5d6360;
-
-    /* The section number, set by the script from the label beside it. */
-    font-family: var(--font-mono);
-    font-size: 12px;
-    line-height: 1;
-
-    transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.5s ease;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
 }
 
-.praxis-stop.is-reached,
-.is-static .praxis-stop {
-    background: var(--primary-700);
-    border-color: var(--primary-500);
-    color: #fff;
-    box-shadow: 0 0 0 6px rgba(15, 214, 128, 0.18);
+.praxis-geo-ring {
+    fill: none;
+    stroke: var(--primary-700);
+    stroke-width: 1;
 }
 
+/* A quiet outer ring keeps the catchment-area illustration complete. */
+.praxis-geo-accent { opacity: 0.3; }
 
+/* The photo sits at the centre of its own catchment area. At 62% wide the 2:3
+   photo is 93% of the square tall, so it fills the rings top to bottom and stays
+   just inside the outermost one; the rings read around it at the sides. */
+.praxis-geo-photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-/* ---- Section labels and headings, after /praxis-concept-3 ----------------
-   A mint pill in Space Mono above each heading ("Etappe 01 · Leistungen"),
-   and the headings in concept 3's tighter display setting with one word
-   picked out by a highlighter stroke. The draw-in rule stays. */
+    width: 62%;
+}
 
-.praxis-kicker {
-    display: inline-block;
+.praxis-geo-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 
-    background: #e3f3ea;
-    border-radius: 999px;
+    margin-top: 48px;
+}
+
+@media (min-width: 64rem) {
+    .praxis-geo-blocks {
+        gap: 48px;
+        margin-top: 0;
+    }
+}
+
+/* Both blocks share one left edge, with the numeral in its own rail — the
+   earlier diagonal stagger left the two ragged against each other. */
+.praxis-geo-item {
+    border-top: 2px solid var(--foreground);
+    padding-top: 18px;
+}
+
+@media (min-width: 40rem) {
+    .praxis-geo-item {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 24px;
+    }
+
+    .praxis-geo-num {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .praxis-geo-title,
+    .praxis-geo-text {
+        grid-column: 2;
+    }
+}
+
+.praxis-geo-num {
     color: var(--primary-700);
 
     font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.1em;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.praxis-geo-title {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+@media (min-width: 64rem) {
+    .praxis-geo-title {
+        font-size: 26px;
+    }
+}
+
+.praxis-geo-text {
+    color: #46494c;
+
+    font-size: 16px;
+    line-height: 1.6;
+    /* Upper end of a comfortable measure — any wider and the lines get hard to
+       track back; any narrower and these paragraphs run long. */
+    max-width: 64ch;
+
+    margin-top: 12px;
+}
+
+.praxis-geo-cta {
+    margin-top: 8px;
+}
+
+@media (min-width: 40rem) {
+    .praxis-geo-cta {
+        padding-left: calc(2ch + 24px);
+    }
+}
+
+
+/* ---- 11 | Tiles --------------------------------------------------------- */
+
+.praxis-tile {
+    background: #fff;
+    border-radius: 12px;
+
+    padding: 3px;
+    height: 100%;
+}
+
+.praxis-tile-inner {
+    background: var(--background);
+    border-radius: 10px;
+
+    height: 100%;
+    padding: 24px 26px;
+}
+
+.praxis-tile-title {
+    font-family: var(--font-mono);
+    font-size: 18px;
     line-height: 1.2;
     text-transform: uppercase;
+}
 
-    margin-bottom: 24px;
-    padding: 7px 14px;
+.praxis-tile-note {
+    color: #55585c;
+    font-size: 15px;
+    line-height: 1.45;
+
+    margin-top: 8px;
+}
+
+
+/* Native team scrolling works with touch, trackpads and a keyboard, and
+   stays available before JavaScript loads. */
+.praxis-marketing-team {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    padding-bottom: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: #628973 #e3eee7;
+}
+
+.praxis-marketing-team > .person-card { flex: 0 0 56vw; min-width: 0; }
+.praxis-marketing-team:focus-visible { outline: 2px solid #236844; outline-offset: 4px; }
+
+@media (min-width: 40rem) {
+    .praxis-marketing-team { gap: 32px; }
+    .praxis-marketing-team > .person-card { flex-basis: 320px; }
 }
 
 @media (min-width: 64rem) {
-    .praxis-kicker { margin-bottom: 32px; }
+    .praxis-marketing-team > .person-card { flex-basis: 400px; }
 }
 
-.praxis-kicker--light {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--primary-500);
-}
-
-.praxis-section-head .underlined-header-title {
-    font-size: clamp(34px, 4.4vw, 68px);
-    letter-spacing: -0.04em;
-    line-height: 1.02;
-}
-
-.praxis-mark {
-    background: linear-gradient(transparent 60%, rgba(15, 214, 128, 0.38) 60%, rgba(15, 214, 128, 0.38) 92%, transparent 92%);
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-}
-
-/* underlined-header.css dims every span in a title; the mark is not that. */
-.underlined-header-title .praxis-mark {
-    opacity: 1;
-}
-
-
-/* A shorter route from the offer and real work to a qualified enquiry. */
-#praxis-projekt { scroll-margin-top: calc(var(--hdr-height, 92px) + 24px); }
-.praxis-hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 24px; }
-.praxis-hero-actions .door-button { max-width: 100%; height: auto; min-height: 52px; }
-.praxis-positioning-copy { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px 64px; margin-bottom: 40px; }
-.praxis-positioning-copy p { max-width: 56ch; font-size: 17px; line-height: 1.7; }
-.praxis-service-grid, .praxis-process { display: grid; gap: 16px; }
-.praxis-service { padding: 32px 24px; background: #fff; border-radius: 12px; border-top: 3px solid var(--svc); }
-.praxis-service h3 { font-size: 25px; font-weight: 600; line-height: 1.15; letter-spacing: -.025em; margin-bottom: 16px; }
-.praxis-service ul { margin-top: 24px; display: grid; gap: 12px; font-size: 15px; line-height: 1.5; }
-.praxis-service li { border-top: 1px solid #e2e5e3; padding-top: 12px; }
-.praxis-service-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; padding-top: 28px; }
-.praxis-service-bottom > p { max-width: 62ch; font-size: 16px; line-height: 1.6; flex: 1 1 420px; }
-
-/* Give each idea its own reading space; keep goal-specific depth on demand. */
-.praxis-content-label { color: #37604a; font: 12px/1.5 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
-.praxis-goal-examples { margin-top: 64px; padding-top: 48px; border-top: 1px solid #ccd7cf; display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px 72px; }
-.praxis-goal-examples h3 { max-width: 25ch; font-size: 28px; font-weight: 600; letter-spacing: -.03em; line-height: 1.2; margin-top: 16px; }
-.praxis-goal-hint { max-width: 34ch; margin-top: 20px; color: #526057; font-size: 15px; line-height: 1.6; }
-.praxis-goal-disclosures details { border-bottom: 1px solid #ccd7cf; }
-.praxis-goal-disclosures { min-width: 0; }
-.praxis-goal-disclosures summary { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 88px; padding: 24px 0; font-size: clamp(18px, 1.6vw, 20px); line-height: 1.4; font-weight: 500; list-style: none; cursor: pointer; }
-.praxis-goal-disclosures summary > span { min-width: 0; overflow-wrap: anywhere; hyphens: auto; }
-.praxis-goal-disclosures summary::-webkit-details-marker { display: none; }
-.praxis-goal-disclosures summary svg { flex: none; width: 24px; height: 24px; stroke-width: 1.5; color: #286c4a; }
-.praxis-goal-disclosures details[open] summary svg { transform: rotate(45deg); }
-.praxis-goal-disclosures summary:hover { color: #236844; }
-.praxis-goal-disclosures summary:focus-visible { outline: 2px solid #236844; outline-offset: 5px; border-radius: 4px; }
-.praxis-goal-answer { display: grid; gap: 24px; max-width: 52ch; padding: 8px 0 28px; }
-.praxis-goal-answer dt { color: #37604a; font: 12px/1.5 var(--font-mono); margin-bottom: 8px; }
-.praxis-goal-answer dd { font-size: 16px; line-height: 1.7; color: #414c44; }
-.praxis-detail-heading { display: grid; grid-template-columns: minmax(0, 1fr); align-items: end; gap: 24px 72px; margin-bottom: 40px; }
-.praxis-detail-heading h2 { max-width: 25ch; font-size: clamp(32px, 3.6vw, 46px); font-weight: 600; letter-spacing: -.04em; line-height: 1.1; text-wrap: balance; }
-.praxis-detail-heading > p { max-width: 46ch; font-size: 17px; line-height: 1.7; color: #414c44; }
-.praxis-patient-questions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
-.praxis-patient-questions > div { padding: 28px; background: #fff; border-radius: 12px; }
-.praxis-patient-questions dt { font-size: 25px; line-height: 1.25; letter-spacing: -.025em; font-weight: 600; }
-.praxis-question-marker { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; color: #37604a; }
-.praxis-question-marker span { font: 12px/1.5 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
-.praxis-question-marker svg { flex: none; width: 28px; height: 28px; stroke-width: 1.5; }
-.praxis-patient-questions dd { max-width: 44ch; margin-top: 20px; font-size: 16px; line-height: 1.7; color: #526057; }
-.praxis-local-flow { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
-.praxis-local-stage { padding: 32px 28px; border-radius: 12px; background: #e3eee7; }
-.praxis-local-stage:last-child { background: #fff; }
-.praxis-local-symbol { display: grid; place-items: center; width: 64px; height: 64px; border: 1px solid #bbd2c3; border-radius: 50%; margin-bottom: 32px; color: #286c4a; }
-.praxis-local-symbol svg { width: 28px; height: 28px; stroke-width: 1.5; }
-.praxis-local-stage h3 { font-size: clamp(25px, 2.3vw, 30px); line-height: 1.2; letter-spacing: -.03em; font-weight: 600; margin: 16px 0 32px; overflow-wrap: anywhere; }
-.praxis-local-stage > p { max-width: 46ch; font-size: 16px; line-height: 1.75; color: #3f5548; }
-.praxis-local-stage > p + p { margin-top: 24px; }
-.praxis-local-connection { display: grid; place-items: center; color: #548267; min-height: 32px; }
-.praxis-local-connection svg { width: 28px; height: 28px; stroke-width: 1.5; transform: rotate(90deg); }
-.praxis-local-caption { max-width: 64ch; margin: 28px auto 0; text-align: center; color: #526057; font-size: 15px; line-height: 1.7; }
-.praxis-review-note { margin: 56px 0 48px; padding: 40px 0 0; border-top: 1px solid #ccd7cf; }
-.praxis-review-heading { display: grid; gap: 12px 40px; }
-.praxis-review-heading h3 { max-width: 30ch; font-size: 26px; font-weight: 600; line-height: 1.25; letter-spacing: -.025em; }
-.praxis-review-heading > p { font-size: 15px; line-height: 1.6; color: #526057; }
-.praxis-review-steps { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 32px; }
-.praxis-review-steps li > span { display: block; margin-bottom: 16px; font: 12px/1.5 var(--font-mono); color: #37604a; }
-.praxis-review-steps h4 { font-size: 18px; line-height: 1.4; font-weight: 600; }
-.praxis-review-steps p { max-width: 30ch; margin-top: 10px; font-size: 16px; line-height: 1.65; color: #526057; }
-@media (min-width: 48rem) {
-    .praxis-patient-questions { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-    .praxis-patient-questions > div { padding: 36px; }
-    .praxis-local-flow { grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr); gap: 20px; }
-    .praxis-local-connection svg { transform: none; }
-    .praxis-review-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
-}
-@media (min-width: 64rem) {
-    .praxis-positioning-copy { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 56px; }
-    .praxis-service { padding: 36px 32px; }
-    .praxis-goal-examples { margin-top: 80px; padding-top: 64px; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); }
-    .praxis-detail-heading { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); margin-bottom: 56px; }
-    .praxis-patient-questions { gap: 32px; }
-    .praxis-patient-questions > div { padding: 40px; }
-    .praxis-local-stage { padding: 40px; }
-    .praxis-review-heading { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: center; }
-}
-
-.praxis-fit { color: #fff; background: #19251e; }
-.praxis-fit .praxis-eyebrow { color: #9ed7b9; }
-.praxis-fit-grid { display: grid; gap: 28px; margin-top: 24px; }
-.praxis-fit h2 { font-size: clamp(30px, 4vw, 48px); font-weight: 600; line-height: 1.1; letter-spacing: -.03em; max-width: 20ch; }
-.praxis-fit h2 span { color: #9ed7b9; }
-.praxis-fit-grid p { font-size: 17px; line-height: 1.6; color: #e0e9e3; margin-bottom: 16px; }
-.praxis-fit-grid .praxis-fit-question { font-size: 21px; line-height: 1.5; color: #9ed7b9; margin-top: 32px; }
-.praxis-fit .praxis-evidence-link { color: #b6efd0; }
-.praxis-fit .praxis-evidence-link:focus-visible { outline-color: #b6efd0; }
-.praxis-process li { padding: 32px 28px; border-radius: 12px; background: #fff; }
-.praxis-process-number { display: block; font: 18px var(--font-mono); color: #286c4a; margin-bottom: 24px; }
-.praxis-process h3 { font-size: 23px; line-height: 1.2; font-weight: 600; letter-spacing: -.02em; }
-.praxis-process p { font-size: 16px; line-height: 1.6; margin-top: 16px; }
-.praxis-process-result { border-top: 1px solid #dce4df; padding-top: 16px; }
-.praxis-team-copy { flex: 1 1 440px; max-width: 64ch; }
-.praxis-team-copy p { font-size: 17px; line-height: 1.65; }
-.praxis-team-copy p + p { margin-top: 16px; color: #526057; font-size: 16px; }
-.praxis-contact-shortcut { position: fixed; z-index: 30; left: 16px; right: 16px; bottom: calc(12px + env(safe-area-inset-bottom)); }
-.praxis-contact-shortcut[hidden] { display: none; }
-.praxis-contact-shortcut a { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 52px; padding: 14px 20px; background: #19251e; color: #fff; border: 1px solid #628973; border-radius: 8px; box-shadow: 0 8px 28px #0003; font-size: 15px; font-weight: 600; }
-.praxis-contact-shortcut a:focus-visible { outline: 2px solid #236844; outline-offset: 3px; }
-@media (min-width: 64rem) {
-    .praxis-service-grid, .praxis-process { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
-    .praxis-fit-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
-    .praxis-contact-shortcut { display: none; }
+/* Keep deliberate button and FAQ feedback, respecting reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    .praxis-marketing-page :is(.door-button, .faq-question, .faq-icon, .faq-answer),
+    .praxis-marketing-page .door-button::before,
+    .praxis-marketing-page .door-button::after { transition: none; }
 }

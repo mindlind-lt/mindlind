@@ -9,6 +9,7 @@ import PagePreloader from "@/components/page-preloader/page-preloader";
 import ConsentBanner from "@/components/consent/consent-banner";
 import GoogleAnalytics from "@/components/analytics/google-analytics";
 import GoogleTagManager from "@/components/analytics/google-tag-manager";
+import ConceptRouteShell from "@/components/concept-route-shell";
 import { siteConfig } from "@/lib/site";
 import { organizationSchema } from "@/lib/schema";
 
@@ -79,30 +80,32 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <PagePreloader />
-        <noscript><style>{`.page-preloader { display: none !important; }`}</style></noscript>
-        <TopProgressBar />
-        <PreloadResources />
+        <ConceptRouteShell standard={
+          <>
+            <PagePreloader />
+            <noscript><style>{`.page-preloader { display: none !important; }`}</style></noscript>
+            <TopProgressBar />
+            <PreloadResources />
 
-        <div id="site-content">
-          <Header />
+            <div id="site-content">
+              <Header />
 
-          <main tabIndex={-1}>{children}</main>
+              <main tabIndex={-1}>{children}</main>
 
-          <Footer />
+              <Footer />
 
-          <ConsentBanner />
-        </div>
+              <ConsentBanner />
+            </div>
 
-        {/* These read the consent cookie in the browser after hydration.
-            That is what keeps them compatible with `output: "export"`, which
-            has no request-time server to read a cookie on.
-            GoogleAnalytics renders nothing at all until NEXT_PUBLIC_GA_ID is
-            set AND the visitor has accepted the Statistik category;
-            GoogleTagManager waits for the same consent. */}
-        <GoogleAnalytics />
-        <GoogleTagManager />
-
+            {/* These read the consent cookie in the browser after hydration.
+                That keeps them compatible with the static export. Neither
+                analytics integration runs before Statistik consent. */}
+            <GoogleAnalytics />
+            <GoogleTagManager />
+          </>
+        }>
+          {children}
+        </ConceptRouteShell>
       </body>
     </html>
   );

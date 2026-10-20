@@ -72,7 +72,7 @@ export const routes = [
     changeFrequency: "monthly",
   },
   {
-    path: "/praxis-marketing",
+    path: "/praxis",
     title: "Praxismarketing für Ärzte",
     summary:
       "Websites, lokale SEO und Google Ads für Ärzte und Praxen",

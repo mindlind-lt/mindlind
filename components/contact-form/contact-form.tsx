@@ -27,7 +27,7 @@ interface ContactFormProps {
   /**
    * Extra inputs between the name/e-mail row and the message box. They pair up
    * into rows the way name and e-mail do, and a trailing odd one spans the row.
-   * Defaults to none — the three-field form every page but /praxis-marketing uses.
+   * Defaults to none — the three-field form every page but /praxis uses.
    */
   extraFields?: ContactFormField[];
   messageLabel?: string;

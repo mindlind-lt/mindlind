@@ -19,7 +19,7 @@ import "./concept-5.css";
  * the page than anywhere else on the site, because forms are where it belongs.
  *
  * A design concept, kept out of the index; content and its rules follow the
- * /praxis-marketing content document.
+ * /praxis content document.
  */
 
 export const metadata: Metadata = {
